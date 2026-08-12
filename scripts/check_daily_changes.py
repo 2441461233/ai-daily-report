@@ -1,0 +1,131 @@
+#!/usr/bin/env python3
+"""Guard the file changes made by the headless daily-report agent.
+
+The agent may add immutable artifacts and update the three derived/state files.
+Anything else is treated as a failed run before GitHub Actions can commit it.
+"""
+
+from __future__ import annotations
+
+import json
+import re
+import subprocess
+import sys
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parent.parent
+MAIN_NAME = re.compile(r"^(\d{4}-\d{2}-\d{2})-(\d+)\.json$")
+WAYTOAGI_NAME = re.compile(r"^waytoagi-(\d{8})\.json$")
+ALLOWED_FILES = {
+    "content/reported.md",
+    "content/waytoagi-consumed.txt",
+    "public/data/reports.json",
+}
+
+
+def status_entries() -> list[tuple[str, str]]:
+    output = subprocess.check_output(
+        ["git", "status", "--porcelain=v1", "--untracked-files=all"],
+        cwd=ROOT,
+        text=True,
+    )
+    entries = []
+    for raw in output.splitlines():
+        if not raw:
+            continue
+        status, path = raw[:2], raw[3:]
+        entries.append((status, path))
+    return entries
+
+
+def fail(messages: list[str]) -> int:
+    print("daily change guard failed:", file=sys.stderr)
+    for message in messages:
+        print(f"  - {message}", file=sys.stderr)
+    return 1
+
+
+def main() -> int:
+    entries = status_entries()
+    if not entries:
+        print("daily change guard: clean tree (idempotent no-op)")
+        return 0
+
+    errors: list[str] = []
+    changed = {path for _status, path in entries}
+    new_artifacts: list[Path] = []
+
+    for status, path in entries:
+        if " -> " in path or "R" in status or "C" in status:
+            errors.append(f"renames/copies are not allowed: {status} {path}")
+            continue
+        if path.startswith("content/artifacts/") and path.endswith(".json"):
+            if status != "??":
+                errors.append(f"existing artifacts are immutable: {status} {path}")
+            else:
+                new_artifacts.append(ROOT / path)
+            continue
+        if path not in ALLOWED_FILES:
+            errors.append(f"agent changed an out-of-scope file: {status} {path}")
+        elif "D" in status:
+            errors.append(f"state/derived file may not be deleted: {status} {path}")
+
+    if not new_artifacts:
+        errors.append("a non-clean run must add at least one artifact")
+    if new_artifacts and "content/reported.md" not in changed:
+        errors.append("new artifacts require a matching content/reported.md update")
+    if new_artifacts and "public/data/reports.json" not in changed:
+        errors.append("new artifacts require a rebuilt public/data/reports.json")
+
+    today = datetime.now(ZoneInfo("Asia/Shanghai")).date().isoformat()
+    main_for_today = False
+    for path in new_artifacts:
+        match = MAIN_NAME.fullmatch(path.name)
+        try:
+            artifact = json.loads(path.read_text("utf-8"))
+        except Exception as exc:
+            errors.append(f"cannot read new artifact {path.name}: {exc}")
+            continue
+        declared = str(artifact.get("date", "")).split()[0]
+        if match:
+            filename_date = match.group(1)
+            if declared != filename_date:
+                errors.append(
+                    f"{path.name} declares {declared!r}, expected {filename_date!r}"
+                )
+            if filename_date == today:
+                main_for_today = True
+        else:
+            attachment_match = WAYTOAGI_NAME.fullmatch(path.name)
+            if not attachment_match:
+                errors.append(f"unexpected artifact filename: {path.name}")
+                continue
+            stamp_date = datetime.strptime(
+                attachment_match.group(1), "%Y%m%d"
+            ).date().isoformat()
+            attach_to = artifact.get("attachTo")
+            if declared != stamp_date or attach_to != stamp_date:
+                errors.append(
+                    f"{path.name} must declare date and attachTo as {stamp_date!r}"
+                )
+
+    existing_today = any(
+        MAIN_NAME.fullmatch(path.name) and path.name.startswith(f"{today}-")
+        for path in (ROOT / "content" / "artifacts").glob("*.json")
+    )
+    if not main_for_today and not existing_today:
+        errors.append(f"run did not create the required Shanghai-date main report for {today}")
+
+    if errors:
+        return fail(errors)
+    print(
+        f"daily change guard passed: {len(new_artifacts)} new artifact(s), "
+        f"{len(entries)} changed file(s)"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

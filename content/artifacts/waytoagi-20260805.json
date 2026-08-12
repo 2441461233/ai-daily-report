@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-05",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-05",
+  "generatedAt": "2026-08-05T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/5 那一期，按原文日期归档。",
+      "items": [
+        {
+          "headline": "Higgsfield 开源 95 分钟 AI 长片《Hell Grind》的全部提示词与制作资料",
+          "summary": "制作成本 50 万美元，曾在戛纳电影市场展映，《华尔街日报》、Variety 和 BBC 都报道过，现在整套提示词和相关资料全部公开。对你的映射：这是目前能公开拿到的、最接近工业级的 AI 长片制作档案——分镜逻辑、角色一致性怎么维持、镜头语言怎么用提示词表达，直接照着拆最快。这条是这批回补里对你价值最高的一条，值得单独排时间读完。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/OQfOwfLWOiiglCk080QchgpCnGC"
+            }
+          ]
+        },
+        {
+          "headline": "卡兹克开源「活人感写作」skill：从义理、考据、辞章三层去掉 AI 味",
+          "summary": "重点在挖出真实观点和处理叙事节奏，而不是换几个同义词。对你的映射：AIMV 的文案和你自己的对外内容都吃这个——AI 味重是当下最快劝退读者的东西。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/GJIawCNNLiPK6xk0d1dcQCjmndd"
+            }
+          ]
+        },
+        {
+          "headline": "抖音 / TikTok 剧情短视频创作 Skill",
+          "summary": "针对平台特性优化，专治「开头不够抓人、节奏太慢、反转生硬」，含可本地运行的剧情创作机制和参考库。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/CfsewaSgKixW8WkMBiJcpF5Knfb"
+            }
+          ]
+        },
+        {
+          "headline": "Skill 上下文瘦身：300 多个 skill 怎么分层管理",
+          "summary": "卡尔的做法是按「高频 / 项目级 / 触发级 / 少用但关键」四层分，控制上下文占用。对你的映射：skill 装多了反而会拖慢 agent 并推高 token 成本，这套分层是目前最实用的解法。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/K2CZwSYS4ibVevkvK2icxaftnIe"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

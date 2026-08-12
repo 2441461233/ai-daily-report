@@ -1,0 +1,255 @@
+{
+  "date": "2026-08-09 星期日",
+  "sections": [
+    {
+      "id": "news",
+      "emoji": "🔥",
+      "title": "AI 重要事件",
+      "items": [
+        {
+          "headline": "OpenAI 正式完成对 Ona（前 Gitpod）收购，Codex 同步上线「额度重置」",
+          "summary": "6 月宣布的收购于 8 月 8 日正式完成交割：OpenAI 把 Ona 的安全云执行与编排能力收入 Codex 体系。Ona 的看家本领是 Firecracker 级 microVM 沙箱 + 每 10 分钟自动 checkpoint + 可部署在客户自有 VPC 的合规护栏——本质是解决了 coding agent 最大的结构性短板：合上电脑，agent 就死了。收购后 Codex（周活已超 500 万）将从「会话型工具」变成「7×24 后台干活的数字员工」，同一天 OpenAI 还送出 Codex 额度可累积的福利。影响：agent 竞争的焦点正式从「模型多聪明」转向「agent 在哪里跑、跑多久、谁管得住」。对你的映射：做一人公司时，「持久执行层」选型（一方 runtime 如 Codex Cloud vs 中立沙箱 E2B/Modal/Daytona）将直接决定你的自动化业务能无人值守到什么程度，值得现在就建立自己的判断。",
+          "expanded": true,
+          "sources": [
+            {
+              "name": "36氪",
+              "url": "https://m.36kr.com/p/3849797002482951"
+            },
+            {
+              "name": "Digital Applied",
+              "url": "https://www.digitalapplied.com/blog/openai-acquires-ona-cloud-execution-long-running-agents-analysis"
+            }
+          ]
+        },
+        {
+          "headline": "宇树科创板发行价 150.8 元，发行市值约 610 亿元，DeepSeek 参与战略配售",
+          "summary": "8 月 6 日公告（财新 8 月 7 日报道）：定价对应 2025 年市盈率 219 倍，募资升至 60.9 亿元；战略配售名单罕见出现 DeepSeek（认购上限 1.55 亿元、锁定 36 个月），与社保基金、腾讯等同台。大模型公司直接绑定制机器人本体，具身智能「大脑+身体」的资本联盟开始成形。",
+          "sources": [
+            {
+              "name": "财新",
+              "url": "https://www.caixin.com/2026-08-07/102472114.html"
+            }
+          ]
+        },
+        {
+          "headline": "Google 双发：开源 DiffusionGemma 文本扩散模型 + Gemini 3.5 Live Translate",
+          "summary": "DiffusionGemma 为 26B 总参/3.8B 激活的 MoE，Apache 2.0 开源，用文本扩散并行生成 256 token 块，专用 GPU 上生成速度最高 4 倍；Gemini 3.5 Live Translate 支持 70+ 语言近实时语音互译并保留说话人语调，已向 Gemini Live API、Meet 和翻译 App 铺开。（聚合信源，建议以 Google 官方博客复核）对你的映射：扩散式文本生成若成主流，本地小模型延迟叙事会被改写，值得跟进。",
+          "sources": [
+            {
+              "name": "Don Vito Codes AI News",
+              "url": "https://www.donvitocodes.com/ai-news"
+            }
+          ]
+        },
+        {
+          "headline": "彭博：OpenAI 首款硬件是「甜甜圈」智能音箱，售价 300-400 美元",
+          "summary": "彭博 8 月 7 日援引匿名信源：设备与 Jony Ive 的 LoveFrom 合作，金属机身含可动部件，语音优先、无屏幕，预计 2027 年发布。价格远超 Amazon Echo 主流档位（40-240 美元），走的是高端 ambient 路线。未经 OpenAI 官方证实，当作早期信号看。",
+          "sources": [
+            {
+              "name": "Prompt AI Learning（转引彭博/财富）",
+              "url": "https://promptailearning.com/ai-news/daily/ai-news-august-8-2026"
+            },
+            {
+              "name": "数据猿",
+              "url": "http://www.datayuan.cn/article/24001.htm"
+            }
+          ]
+        },
+        {
+          "headline": "Cohere 开源首个 agentic 编程模型 North Mini Code",
+          "summary": "Cohere 进军开源代码模型赛道，主打 agentic coding 场景（单一来源，细节待官方文档）。开源 coding 模型几乎每两三周就有「逼近旗舰」的新玩家，旗舰溢价持续承压——对你这种自研项目的 PM 来说，路由到最便宜可用模型的策略收益越来越大。",
+          "sources": [
+            {
+              "name": "Don Vito Codes AI News",
+              "url": "https://www.donvitocodes.com/ai-news"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creator",
+      "emoji": "🎬",
+      "title": "AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "阿里 Wan3.0 开启公测：单段 30 秒 + doc/ppt/pdf 文档直转视频，API 低至 0.3 元/秒",
+          "summary": "8 月 6 日晚公测（48 小时内）：四大升级——单段最长 30 秒、可一镜到底连续运镜，拉齐 Seedance 2.5 的时长水位；首创文档输入（doc/xls/ppt/pdf/md，单文件 100MB/50 页内），上传产品 PPT 配提示词直接出形象片；人像「千人千面」、多参考素材跨镜头不漂移；支持修改画面/剧情/台词的成片编辑。已在阿里云百炼、万相官网、千问创作 PC 端等渠道开放，API 定价 480P/720P/1080P 分别为 0.3/0.6/1.2 元/秒。背景：即梦接 Seedance 2.5、可灵刚拿 30 亿美元融资，国产视频模型本周集体把战场从「生成一个镜头」推向「讲述完整故事」，且开始抢「信息表达载体」这个更大的盘子。对你的映射：「文档直转视频」几乎是为产品经理量身定制——需求文档、汇报 PPT 可以直接变成演示片；0.3 元/秒的价格也让 AIMV 流水线批量试错的成本再打一档，建议今天就用你手头的文档实测一条。",
+          "expanded": true,
+          "sources": [
+            {
+              "name": "量子位",
+              "url": "https://www.qbitai.com/2026/08/467877.html"
+            },
+            {
+              "name": "21世纪经济报道（东方财富转载）",
+              "url": "https://wap.eastmoney.com/a/202608073835005898.html"
+            }
+          ]
+        },
+        {
+          "headline": "Suno 上线音频水印 + 下载限量 + 新社区准则，签约 Musixmatch 做版权歌词检测",
+          "summary": "Suno 宣布引入音频水印/指纹技术、限制批量下载分发的新政策、明确禁止上传版权材料和冒用真人声音肖像，并用 Musixmatch Sentinel 检测生成结果中的受保护歌词。恰逢欧盟 AI Act 机器可读标识义务生效，合规驱动的行业规则正在固化——你发布 AI 音乐/AIMV 时，平台水印和授权链路会直接影响分发，建议保留创作过程证据。",
+          "sources": [
+            {
+              "name": "Digital Music News",
+              "url": "https://www.digitalmusicnews.com/2026/08/06/suno-changes-2026/"
+            },
+            {
+              "name": "Prompt AI Learning",
+              "url": "https://promptailearning.com/ai-news/daily/ai-news-august-8-2026"
+            }
+          ]
+        },
+        {
+          "headline": "AI 音乐授权一周年盘点：三大唱片全部入局、一律 opt-in，但 AI 曲目只有 1-3% 的播放",
+          "summary": "8 月 8 日更新的行业追踪：一年内 ElevenLabs、Udio、Suno、KLAY 与 UMG/Sony/Warner/Merlin/Kobalt 全部签下 opt-in 授权；Suno 现行模型年内将被授权版替换。但 Deezer 7 月数据显示 AI 曲目占日上传量 50%+ 却仅占播放 1-3%（85% 被标记为欺诈流量）。对你的映射：AI 授权收入目前只是「免费的期权」，流媒互动和受众资产仍是创作者基本盘。",
+          "sources": [
+            {
+              "name": "Chartlex",
+              "url": "https://www.chartlex.com/blog/business/ai-music-licensing-deals-tracker-2026"
+            }
+          ]
+        },
+        {
+          "headline": "昆仑万维：AI 短剧平台 ARR 突破 7 亿美元，稳坐海外短剧第一",
+          "summary": "8 月 7 日行业稿披露：截至 6 月底昆仑万维 AI 短剧平台 ARR 破 7 亿美元（3 月底为 5.7 亿），人物一致性、长时序叙事、画面连贯三大难题被宣称攻克，AI 短剧制作成本已从 30-50 万元压到 3-5 万元。对你的映射：AI 短剧是当下付费转化最确定的视频落地场景，创作者侧的工具链和发行渠道红利仍在窗口期。",
+          "sources": [
+            {
+              "name": "兵团胡杨网（新华社系统）",
+              "url": "http://www.huyangnet.cn/content/2026-08/07/content_2059413.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "emoji": "💻",
+      "title": "GitHub Trending",
+      "note": "本期风向：「技能/经验资产化」成为开源主旋律——prime-agent 自我改进、google/skills 官方入场、book-to-skill 把书变技能，都在把专家经验封装成 agent 可继承的资产；同时 agent 治理（微软 toolkit）与全开源语音栈（VibeVoice、pocket-tts）同步升温。",
+      "items": [
+        {
+          "headline": "PrimeIntellect-ai/prime-agent：自我改进的 RLM agent，霸榜第一（日 +2483 星）",
+          "summary": "面向编程工作流和长时程自治任务的 self-improving agent，今日总榜第一。与 EvoMap「经验胶囊」、skills 热潮同频：agent 自己沉淀经验正在成为显学。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/PrimeIntellect-ai/prime-agent"
+            }
+          ]
+        },
+        {
+          "headline": "google/skills：Google 官方下场做 Agent Skills（日 +481 星）",
+          "summary": "Google 产品与技术栈的官方 Agent Skills 仓库。mattpocock/skills（21 万星）之后官方军团入场，skills 正在从社区玩法变成平台级标准配置。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/google/skills"
+            }
+          ]
+        },
+        {
+          "headline": "virgiliojr94/book-to-skill：把任意技术书 PDF 变成 Claude Code 技能（日 +644 星）",
+          "summary": "一键把参考书转成可边学边用的 Claude Code skill。对你的映射：把垂直领域文档（如 AIMV 教程、分镜手册）转成私有技能，是最快的个人知识资产化路径。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/virgiliojr94/book-to-skill"
+            }
+          ]
+        },
+        {
+          "headline": "microsoft/agent-governance-toolkit：覆盖 OWASP Agentic Top 10 的 agent 治理工具箱",
+          "summary": "策略执行、零信任身份、沙箱隔离、可靠性工程一体化。当 agent 开始 7×24 无人值守跑业务，治理层从企业需求变成个人开发者也要补的课。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/microsoft/agent-governance-toolkit"
+            }
+          ]
+        },
+        {
+          "headline": "microsoft/VibeVoice：开源前沿语音 AI（累计 5.2 万星）",
+          "summary": "微软开源语音模型持续霸榜 Python 榜。与下方 pocket-tts 一起看：高质量 TTS/语音栈正在全面开源化，创作者做 AIMV 配音、播客的合规可选项变多。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/microsoft/VibeVoice"
+            }
+          ]
+        },
+        {
+          "headline": "kyutai-labs/pocket-tts：能装进 CPU（和口袋）的 TTS（日 +83 星）",
+          "summary": "Moshi 团队新作，纯 CPU 可跑的轻量 TTS。离线、低成本配音对一人创作者很友好，适合接进本地视频管线。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/kyutai-labs/pocket-tts"
+            }
+          ]
+        },
+        {
+          "headline": "666ghj/MiroFish：中文社区爆款「群体智能引擎，预测万物」（日 +389 星）",
+          "summary": "简洁通用的 swarm intelligence 预测引擎，7 万星中文项目。多 agent 群体预测这一挂，可以当内容选题/趋势判断的实验工具。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/666ghj/MiroFish"
+            }
+          ]
+        },
+        {
+          "headline": "TauricResearch/TradingAgents：多 agent 金融交易框架回流（日 +153 星）",
+          "summary": "9.6 万星老牌多 agent 框架重回日榜。多角色辩论式 agent 分工的架构，对设计多 agent 内容生产流同样有借鉴价值。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/TauricResearch/TradingAgents"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opc",
+      "emoji": "🚀",
+      "title": "AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "凤凰网对话 97 年 CEO 张昊阳：团队不写一行代码、日耗 1000 美元 token，做 agent 经验协议 EvoMap",
+          "summary": "春节期间一人一天提交 161 次代码、上线 18 个功能；从 OpenClaw 插件榜一（Evolver，72 小时 3.6 万下载）到与平台摩擦后自建去中心化协议 EvoMap/GEP「基因胶囊」——一个 agent 学会，百万 agent 继承，已攒 5 万 agent、40 万胶囊资产，即将 close 新融资。对你的映射：两条 OPC 生存法则同时成立——舍得用最好模型换交付速度；以及永远别把命脉押在单一平台的治理善意上。",
+          "sources": [
+            {
+              "name": "凤凰网科技",
+              "url": "https://h5.ifeng.com/c/vivo/v002DVfr4qyXsFl--ls1EHsYAZLtfVCq8T8U2lbGyyjjnM98__"
+            }
+          ]
+        },
+        {
+          "headline": "claude-seo 登上 Python 趋势榜：一人公司的获客侧技能包（日 +99 星）",
+          "summary": "25 个子技能 + 18 个子 agent，覆盖技术 SEO、E-E-A-T、GEO/AEO、外链、本地 SEO 到 PDF/Excel 报告，可直接挂进 Claude Code。产品做出来只是上半场，这类「增长技能包」让一个人也能跑完整的获客工作流。",
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/AgriciDaniel/claude-seo"
+            }
+          ]
+        },
+        {
+          "headline": "Sign in with ChatGPT 扩展至 Airtable/GitLab/HubSpot/Notion/Supabase/Vercel（beta）",
+          "summary": "ChatGPT 身份开始向开发者常用的建站/数据/协作工具渗透（单一来源，8 月 7 日随 GPT-5.6 更新一同披露）。对你的映射：如果 ChatGPT 账号体系成为新分发层，独立产品尽早接入可能比自建账号系统更划算——值得列入观察清单。",
+          "sources": [
+            {
+              "name": "Prompt AI Learning",
+              "url": "https://promptailearning.com/ai-news/daily/ai-news-august-8-2026"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "oneLiner": "📌 今日一句话——agent 的「持久执行」（OpenAI 收编 Ona）与「经验复用」（skills/胶囊霸榜）在基础设施和开源两端同日闭环：你最该做的不是追新模型，而是把自己的工作流沉淀成可继承的 skill 资产；创作侧请今天就用 Wan3.0 的文档直转视频（0.3 元/秒）跑一条 AIMV 样片，顺便给 Suno 水印新政下的发布流程留好证据链。",
+  "generatedAt": "2026-08-09T10:26:00+08:00",
+  "label": "第六期"
+}

@@ -1,0 +1,74 @@
+{
+  "date": "2026-07-28",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-07-28",
+  "generatedAt": "2026-07-28T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 7/28 那一期，按原文日期归档（本期为首次接入后的回补）。",
+      "items": [
+        {
+          "headline": "《欧美微短剧情节灵感库 500》：500 个可拆分、可组合、可本地化改写的情节模板",
+          "summary": "兼顾商业性和类型多样性，模板设计成可拆开重组的形式。对你的映射：AIMV 和 AI 短剧最卡的往往不是画面而是本子，这种量级的结构化情节库是能直接喂给模型当骨架的素材。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/28",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260728"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/MYeXwnT2cixzYWkQNI2cB9gBnVc"
+            }
+          ]
+        },
+        {
+          "headline": "《目前最强的编程 Agent 不是 Fable 5，而是「用 Codex 指挥 ChatGPT Pro」》",
+          "summary": "把 Codex 当协调器去指挥 ChatGPT Pro 干活，核心收益是降低 token 消耗。这类「用便宜的模型做调度、贵的模型只在关键处出手」的搭法，是当下压成本最直接的手段。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/28",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260728"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/RkO2wsdTriUsFHkSuLAcJblrnKd"
+            }
+          ]
+        },
+        {
+          "headline": "《Midjourney V8.2 来了》：提示词理解、参考逻辑与稳定性都有明显提升",
+          "summary": "测评角度看 V8.2 在这三块的变化。放在 Grok Imagine 2.0 和 Seedream 之间做横向比较时值得一看。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/28",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260728"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/U9n7wcXN4ivoddkSJmccRsojnUn"
+            }
+          ]
+        },
+        {
+          "headline": "《Agent 开发指南：技术太多，该怎么学？》",
+          "summary": "梳理 Agent 技术体系，讲清 Prompt、Context、Loop 这些概念到底各自解决什么、怎么设计。和 8/2 那篇《三层工程》互为补充。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/28",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260728"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/DhvRwVv45ifhiZkw4u1cjZInn4g"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

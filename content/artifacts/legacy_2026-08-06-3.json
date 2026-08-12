@@ -1,0 +1,262 @@
+{
+  "date": "2026-08-06 星期四",
+  "generatedAt": "2026-08-06T16:45:00+08:00",
+  "oneLiner": "📌 今日一句话：DeepSeek 官宣涨价预告，国产 API「地板价时代」进入倒计时——本周最该做的两件事：趁涨价前锁定 DeepSeek 额度，并把项目接入多模型网关保持可切换；创作侧 H3 开源到 0.8 元/秒、即梦接进 Maya/Blender，AIMV 的专业管线化窗口已经打开。",
+  "sections": [
+    {
+      "id": "news",
+      "emoji": "🔥",
+      "title": "AI 重要事件",
+      "items": [
+        {
+          "headline": "DeepSeek 官宣涨价预告：API 定价近期整体上调，「预计涨幅较大」",
+          "summary": "8月6日 DeepSeek 在开放平台公告，计划近期整体上调 API 服务定价，覆盖 V4-Flash 与 V4-Pro 两大主力模型的全部计费项（输入/输出/缓存命中与否），具体方案待正式通知。背景：V4-Flash 正式版 7月31日上线后周调用量一度破数万亿 Token、高峰时段超时频发，7 月中旬已先推「峰谷定价」（工作日高峰价格翻倍）；叠加刚重启的 500 亿元第二轮融资，DeepSeek 正从烧钱换规模转向算力可持续。行业意义：国产模型「斩杀线」价格战可能见顶——OpenAI 7月30日刚把 GPT-5.6 Luna 降价 80%，一降一涨之间全球 API 定价进入分层重构期。对你的映射：若你的 side project 或 Agent 工作流重度依赖 DeepSeek，本周宜趁涨价前合理安排充值锁成本，并在架构上经 litellm 这类网关接入多模型路由，避免被单一供应商调价打个措手不及。",
+          "expanded": true,
+          "sources": [
+            {
+              "name": "搜狐科技",
+              "url": "https://m.sohu.com/a/1059415962_118778"
+            },
+            {
+              "name": "新浪科技",
+              "url": "https://k.sina.com.cn/article_7879996043_1d5af328b06802gfuk.html?from=tech"
+            },
+            {
+              "name": "网易科技",
+              "url": "https://www.163.com/dy/article/L3L2968L0519848A.html"
+            }
+          ]
+        },
+        {
+          "headline": "Meta 推出终端编程 Agent「Muse Code」，底层 Muse Spark 1.2 四个月三连发",
+          "summary": "Meta Superintelligence Labs 8月6日发布终端编程 Agent Muse Code，由 Muse Spark 1.2 驱动：原生多模态、1M Token 上下文，API 定价 $1.25/$4.25（每百万输入/输出 Token），可 curl 一键安装，也可走 OpenRouter。扎克伯格给出的 demo 显示其在 Hopper GPU 上 24 小时内发起超 1000 次工具调用、持续做内核优化；官方榜单（Terminal-Bench 2.1、DeepSWE 1.1）上与 Opus 5、GPT-5.6、Grok 4.5、Gemini 3.6 同档互有胜负。背景：Meta 去年 6 月成立超级智能实验室后明显提速，正式挤进 Claude Code、Codex、Grok Build 的终端 Agent 混战。对你的映射：终端 Agent 又多一个明显更便宜的选项，且 Meta 有开源传统、后续权重开放值得期待；搭个人开发环境时值得把 Muse Spark 纳入路由做一轮 A/B 实测。",
+          "expanded": true,
+          "sources": [
+            {
+              "name": "The Register",
+              "url": "https://www.theregister.com/ai-and-ml/2026/08/06/meta-wants-to-get-inside-your-terminal-with-its-new-coding-agent/5283717"
+            }
+          ]
+        },
+        {
+          "headline": "AI 基建新贵 Volta Infra 估值 24 亿美元，彭博称其拿下 Anthropic 百亿美元云合同",
+          "summary": "成立仅 7 个月的 AI 基础设施公司 Volta Infra 以 24 亿美元估值完成 3 亿美元融资（Azora、a16z、Altimeter、NVIDIA 等），并与 Azora 启动 50 亿美元 AI 工厂计划；彭博援引信源称其签下 Anthropic 100 亿美元、为期 6 年的欧洲云计算合同（挪威 Bitdeer 数据中心，133MW，用 Vera Rubin 芯片）。注意：路透表示未能独立证实该合同，Anthropic 拒绝置评。算力军备竞赛仍在加码。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Economic Times（转彭博/路透）",
+              "url": "https://m.economictimes.com/tech/artificial-intelligence/ai-cloud-startup-volta-valued-at-2-4-billion-announces-10-billion-ai-partnership/articleshow/132865234.cms"
+            }
+          ]
+        },
+        {
+          "headline": "进展更新：MiniMax 纳入港股通首日盘中最高涨 22.77%",
+          "summary": "今早第二期播报的 MiniMax 港股通纳入正式落地：8月6日首日盘中涨幅最高 22.77%。财新同日报道其截至 4 月底 ARR 约 4 亿美元、预期年底增至 10 亿美元，当前市值对应 P/ARR 约 32 倍；高盛维持买入但将目标价下调至 800 港元。创作者视角：Hailuo/海螺背后的公司资金与股价都在回暖，平台短期无虞。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "财新网",
+              "url": "https://www.caixin.com/2026-08-06/102471719.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creator",
+      "emoji": "🎬",
+      "title": "AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "即梦AI 接入 Seedance 2.5：首推 Maya/Blender 插件，AI 视频嵌入专业 3D 管线",
+          "summary": "8月5日消息：即梦AI 接入 Seedance 2.5，首次推出 Maya 和 Blender 插件，AI 视频生成能力直接嵌入主流 3D 创作软件，无需在平台与 DCC 工具间来回导片；同步上线智能剪辑模式，可局部修改、替换场景、调整角色外观而不必整段重生成（目前主要为单一来源报道）。对你的映射：「AI 生成 + 专业软件精修」的混合管线正式打通，学一点 Blender 基础操作的回报变高了。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "搜狐",
+              "url": "https://www.sohu.com/a/1059259478_122396381"
+            }
+          ]
+        },
+        {
+          "headline": "Suno 被黑事件泄露源码：数百万首歌抓自 YouTube Music、Deezer、Genius",
+          "summary": "404 Media 获得、The Verge 报道：Suno 2025 年 11 月遭供应链攻击，泄露源码显示其通过抓取 YouTube Music、Deezer、Genius 及播客等平台的数百万首歌曲与歌词训练模型；黑客还称拿到用户邮箱、电话和部分 Stripe 卡数据，Suno 称事件有限且已控制。这给 RIAA 诉讼中「stream ripping 规避版权保护」的 DMCA 指控添了实锤方向——即便「公开音频属合理使用」成立，绕爬本身可能单独违法。对你的映射：Suno 出歌的商用风险持续累积，可对比 Stable Audio 3.0 这类全授权数据方案。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "The Verge",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/903196/ai-music-suno-udio-art-lawsuit"
+            }
+          ]
+        },
+        {
+          "headline": "MiniMax 首次开源视频模型：H3 权重上线 Hugging Face，0.8 元/秒卷到旗舰 1/3 价",
+          "summary": "MiniMax 第三代视频模型 H3（7月31日发布）本周正式开放权重，是其视频模型首次开源；API 定价 0.8 元/秒（2K 分辨率），约为同类旗舰视频模型的 1/3，架构上主打在多模态上下文中统一理解创作意图。对你的映射：本地/私有化视频生成多了一个可自部署、可研究的开放底座，AIMV 管线值得把 H3 纳入与可灵/即梦的 A/B 测试。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "量子位（网易号）",
+              "url": "https://c.m.163.com/news/a/L3JN1GJL0511DSSR.html"
+            },
+            {
+              "name": "Hugging Face",
+              "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3"
+            }
+          ]
+        },
+        {
+          "headline": "欧盟 AI Act 合成内容强制标识义务本周生效（8月2日起）",
+          "summary": "欧盟 AI Act 要求「看起来以假乱真」的 AI 生成图文音视频必须进行机器可读标识，8月2日起生效——合规从公关问题变成工程问题（日志、标识、留存都要做进产品）。时间略早于 24 小时窗口，但本周刚开始执行。对你的映射：面向欧洲用户发布 AI MV/短剧时平台侧大概率强制标识，提前在导出管线里加水印/溯源字段没坏处。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "o16g Briefs",
+              "url": "https://o16g.com/briefs/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "emoji": "💻",
+      "title": "GitHub Trending",
+      "note": "榜单头部与今晨第二期一致（cloudflare/computer、loopx 等已播报，不再重复）；新面孔集中在 Agent 基建四件套——RL 训练（SkyRL）、网关（litellm）、评测（tau2-bench）、安全（strix），外加 ComfyUI 模板与音乐库工具，风向仍是「给 Agent 修管道、给创作者补工具链」。",
+      "items": [
+        {
+          "headline": "sqliteai/waste：NVMe 流式直读权重，RAM 不够也能跑 2.78 万亿参数 Kimi K3",
+          "summary": "无依赖、可嵌入的 C 推理引擎，把激活权重直接从 NVMe 流式传输，绕过内存限制运行完整 Kimi K3。本地跑旗舰开源模型的硬件门槛再降一档，对个人开发者极友好。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/sqliteai/waste"
+            }
+          ]
+        },
+        {
+          "headline": "NovaSky-AI/SkyRL：模块化全栈 LLM 强化学习训练库",
+          "summary": " Berkeley 系 NovaSky 团队的全栈 RL 库，覆盖 LLM/Agent 强化学习训练全流程，想给自有 Agent 做 RL 微调的可以上手。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/NovaSky-AI/SkyRL"
+            }
+          ]
+        },
+        {
+          "headline": "BerriAI/litellm：Rust 内核 AI 网关，一个接口调 100+ LLM",
+          "summary": "统一调用 100+ 模型 API（OpenAI 格式），自带成本追踪、护栏、负载均衡与日志。面对今天 DeepSeek 涨价这类事件，网关层就是个人开发者的「涨价保险」。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/BerriAI/litellm"
+            }
+          ]
+        },
+        {
+          "headline": "sierra-research/tau2-bench：专测「工具-Agent-用户」三方交互的实战 benchmark",
+          "summary": "Sierra 出品的 τ-Bench 新版，评估 Agent 在真实业务里边用工具边与用户协作的能力，比纯刷分更接近产品体验，做 Agent 产品选型可参考。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/sierra-research/tau2-bench"
+            }
+          ]
+        },
+        {
+          "headline": "usestrix/strix：开源 AI 渗透测试 Agent",
+          "summary": "自动发现并修复应用漏洞的 AI 黑客 Agent 上榜。一人公司没有安全团队，这类工具可当低配版渗透测试用。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/usestrix/strix"
+            }
+          ]
+        },
+        {
+          "headline": "Comfy-Org/workflow_templates：ComfyUI 官方模板工作流仓上榜",
+          "summary": "ComfyUI 官方模板库与本体同登 Python 榜，节点式创作工作流热度不减——做 AIMV/视觉管线的创作者可直接套模板起步。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/Comfy-Org/workflow_templates"
+            }
+          ]
+        },
+        {
+          "headline": "anandprtp/Antra：把各平台歌单一键变本地无损音乐库（今日 +104 stars）",
+          "summary": "桌面音乐库构建器：把 Spotify、YouTube Music、Apple Music、Tidal 等链接转成带完整标签的本地 FLAC/ALAC/MP3 曲库。创作者整理 BGM 参考素材的实用小工具。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/anandprtp/Antra"
+            }
+          ]
+        },
+        {
+          "headline": "mpfaffenberger/code_puppy：又一终端 Agentic 编码工具登榜",
+          "summary": "终端里的 Agentic 编码助手，主打轻量上手。终端编程 Agent 赛道的拥挤程度本身已是信号。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/mpfaffenberger/code_puppy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opc",
+      "emoji": "🚀",
+      "title": "AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Karpathy 花 10 美元、2 小时，让 Opus 5 把《指环王》开篇变成可交互 3D 世界",
+          "summary": "Karpathy 给 Opus 5 约 100 万 Token 预算（约 10 美元），要求用 Three.js 把《指环王》开篇做成可观看可交互的三维场景：模型自主读原著、写约 5500 行代码、摆放资产并编排镜头动画，成品可在 karpathy.ai/lotr-movie 体验；短板是模型无法「看见」连续画面自检，只能截图抽查。他称之为「按需生成、短暂存在的 GTA」（8月2-3日，窗口边缘但此前未播报）。对你的映射：「小说→可玩场景」的成本已低到可做玩具级产品验证，叠加视频模型就是互动叙事/AIMV 的雏形。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "新浪财经（智东西）",
+              "url": "https://finance.sina.com.cn/tech/roll/2026-08-03/doc-inikzqsp6056823.shtml"
+            },
+            {
+              "name": "karpathy.ai 成品",
+              "url": "https://karpathy.ai/lotr-movie/"
+            }
+          ]
+        },
+        {
+          "headline": "Claude Code 之父 Boris Cherny：每半年清空一次 claude.md、skills 和 hooks",
+          "summary": "核心观点：harness 保质期只有半年，模型变强后旧约束反而限制发挥，应定期清空重来，让模型自己想办法；公司真正要建的是由知识库、记忆和「图书管理员」组成的大脑。对你的映射：你自己的 Agent 工作流也值得每季度断舍离重审一次，别给新模型套旧枷锁。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "AI前线（BestBlogs 收录）",
+              "url": "https://www.bestblogs.dev/article/3f67a7444a"
+            }
+          ]
+        },
+        {
+          "headline": "YC S2026 新工具 Agent FM：一个群聊监听、指挥你所有的 coding agents",
+          "summary": "不再需要在 Claude Code / Codex 多个窗口间来回切换：Agent 把进度、阻塞、假设和决策汇报到同一个群聊，人直接在对话里回复调度，2 人团队做的「Agent 管理界面」。对你的映射：一人公司同时跑多条 Agent 产线时，调度层正在成为新品类，也是值得借鉴的产品切入点。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Y Combinator",
+              "url": "https://www.ycombinator.com/companies/industry/ai/team"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "label": "第三期·午后增量"
+}

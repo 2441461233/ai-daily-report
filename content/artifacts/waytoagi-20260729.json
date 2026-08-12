@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-29",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-07-29",
+  "generatedAt": "2026-07-29T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 7/29 那一期，按原文日期归档（本期为首次接入后的回补）。",
+      "items": [
+        {
+          "headline": "《半年月活涨 20 倍、ARR 破 4 千万的 OpenCode，如何从「完了」到「火了」》",
+          "summary": "靠多模型选择做差异化，月活从 65 万涨到 1300 万。对你的映射：这是一个「在巨头的正面战场上靠一个具体差异点activate起来」的完整增长复盘，比抽象的方法论有用。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/PSZOw8b94iAbO1kphYOc772Inac"
+            }
+          ]
+        },
+        {
+          "headline": "《烧了一万块 API 后，我找到了同时适用于 Fable 5 和 GPT-5.6 的 AI 工作流》",
+          "summary": "partner-skill 2.0 框架，用 deep_reasoner / fast_worker / arbiter 三层角色做多模型成本控制。跟 7/28 那条「Codex 指挥 ChatGPT Pro」是同一个思路的不同实现。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/X9UYwjAjUiF4kJkrMWjcEWyUnoh"
+            }
+          ]
+        },
+        {
+          "headline": "《别再手动刷 X 了！我给自己的 X 装了个会自己找资料的扫描器，已开源》",
+          "summary": "x-scan Skill：自动扫 X 信息流、筛出 AI 相关内容、存成可进知识库的 Markdown。对你的映射：这跟你这套日报的 X 采集环节是同一件事——现在走的是 follow-builders 的中心 feed（约一天延迟），这个方案是自己抓、可定制关注列表，值得对比。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/Pk7YwOi3qiyI7Okk61RcBHHGnuh"
+            }
+          ]
+        },
+        {
+          "headline": "《我复刻了一条 4000 赞的博客首页，开源首页设计 Skill》",
+          "summary": "拆解高赞动态博客首页的设计逻辑：构图、视频运动、可编辑网页内容怎么整合。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/Xtj6w2xu7ig3YokjWUMcttaJngb"
+            }
+          ]
+        },
+        {
+          "headline": "晚点专访陈冕 66 条语录：LibTV、Lovart、融资、抄袭争议与 AI 应用竞争",
+          "summary": "LibTV 是 LiblibAI 做的一体化 AI 视频创作平台，主打短剧、漫剧、自媒体内容。做 AI 影视方向的话，这份一手访谈值得看创始人怎么判断这条赛道的竞争格局。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/T5r9w5RBdi2OeekRAdjc3znfnBc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,324 @@
+{
+  "date": "2026-08-11 星期二",
+  "label": "第十期",
+  "generatedAt": "2026-08-11T10:45:00+08:00",
+  "oneLiner": "📌 今日一句话：前沿模型同一天在两端同时撕开口子——数学深水区（未发布 Claude 把黎曼零点下界一次推高 25.6 个点到 67.2%）和你的本地桌面（30B Apache-2.0 的 Muse Glimmer 能跑在消费级显卡上）；这周该做的取舍很明确：先把 Muse Glimmer 拉进本地 agent 工作流实测，趁 Ollama/llama.cpp day-0 支持成本为零，同时忍住大额充值，等 8 月 GPT-6 与 Fable 5.1 对打把 API 价格窗口打出来再说。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "Anthropic 未发布研究版 Claude 攻黎曼猜想：零点下界从 41.6% 一次推到 67.2%，全程 1.5 天",
+          "summary": "这是一次公开的「模型能力压力测试」而不是数学宣称：Anthropic 内部一个未发布的研究版 Claude，在 Bun 作者 Jarred Sumner 发起的项目里，用 60 个子 agent、2400 条 shell 命令、3100 万输出 token，探索了约 650 个失败思路后，把黎曼 zeta 函数零点在临界线上的比例下界从 Conrey 1989 年保持的 40.88%（后续小幅优化到约 41.6%）一次性推到 67.2%，并用 Lean 4 完成形式化证明，Conrey 与 Goldston 两位解析数论权威参与了审阅。参照系：这个下界此前 37 年只移动了约 0.8 个百分点，这次一次推进了 25.6 个；Deedy Das 称这是 2013 年张益唐有界素数间隔以来解析数论的最大进展。真正值得记住的细节不是数字，是工作方式——60 个子 agent 并行试思路、650 次失败全部留痕、最后机器证明可复核。对你的映射：「 swarm 式数学研究」这套 60 agent 编排范式，和你做创意生产时的多 agent 分工是同构的；而「模型 + 形式化验证」的组合，意味着高价值知识工作（审计、法务、合规）的自动化拐点比多数人想的近。",
+          "expanded": true,
+          "sources": [
+            {
+              "name": "Anthropic Research",
+              "url": "https://www.anthropic.com/research/riemann-zeta"
+            },
+            {
+              "name": "36氪（英）",
+              "url": "https://eu.36kr.com/en/p/3934278945029505"
+            }
+          ]
+        },
+        {
+          "headline": "Meta Muse Glimmer 30B 开源：Meta 首个 OSI 合规 Apache-2.0 模型，24GB 显卡就能跑 agent",
+          "summary": "Meta 8 月 10 日发布 Muse Glimmer：dense 30B（内含 1.8B ViT 视觉塔），从 Muse Spark 蒸馏，131K 上下文，Apache-2.0 许可证——这是 Meta 第一次用上 OSI 认可的真正开源许可，之前 Llama 的自定义许可一直被开源社区诟病。部署面铺得极满：4bit 量化后不到 20GB，24GB 显存的消费级显卡、M4/M5 Max 都能本地跑；配合 DFlash 投机解码，RTX 5090 上从 74.9 tok/s 提到 233.4 tok/s（3.1 倍）；Ollama 0.32.7、llama.cpp、MLX、vLLM、SGLang、LM Studio 全部 day-0 支持，Together/Fireworks/OpenRouter 同步上线 API。能力定位明确偏 agent：MCP Atlas 75.5、GAIA2 43.3、SWE-Bench Pro 51.2、AIME 2026 94.7，领先 Gemma4-31B 和 Qwen3.6-27B，但 OSWorld 和 TerminalBench 落后——即「调工具强、操作系统弱」。扎克伯格同时预告 Muse Spark 1.2 权重也将开源。对你的映射：本地 agent 工作流的成本账变了——一个能调 MCP、30B 量级、Apache-2.0 可商用的模型白跑在你自己的机器上，高频低危任务（整理、改写、素材初筛）可以全部下放到本地，把 API 预算留给真正需要前沿模型的环节。",
+          "expanded": true,
+          "sources": [
+            {
+              "name": "VentureBeat",
+              "url": "https://venturebeat.com/technology/meta-returns-to-open-source-with-muse-glimmer-an-apache-2-0-licensed-30b-parameter-ai-model-optimized-for-agents-available-now"
+            },
+            {
+              "name": "MarkTechPost",
+              "url": "https://www.marktechpost.com/2026/08/10/meta-ai-releases-muse-glimmer/"
+            }
+          ]
+        },
+        {
+          "headline": "OpenAI 发布 GPT-5.2-Codex：原生 compaction、大重构、Windows 优化，今日起付费用户全平台可用",
+          "summary": "8 月 10 日官宣。四个重点：原生上下文 compaction（长任务不丢线索）、面向大型重构和代码迁移的专项优化、Windows 环境体验改善、以及继前两次之后的第三次网络安全能力跳升。付费 ChatGPT 用户今日起在 Codex 全平台可用，API 将在数周内开放；涉及敏感网络能力的部分走邀请制「可信访问」。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "OpenAI 官网",
+              "url": "https://openai.com/index/introducing-gpt-5-2-codex/"
+            }
+          ]
+        },
+        {
+          "headline": "OpenAI Daybreak 计划落地：拆分 Blue/Red 发布 GPT-5.6-Cyber，挖出 Chrome 两个 0day",
+          "summary": "OpenAI 把网络安全能力拆成防御（Blue）与攻击研究（Red）两条线，首发模型 GPT-5.6-Cyber。关键数据：敏感安全请求的合规完成率 95%，对比 Sol 的 1.5%、Blue 的 2%、上代 5.5-Cyber 的 57.3%；已实战产出——挖出 Chrome V8 引擎两个 0day（CVE-2026-15903 已修复）和某移动操作系统至少 5 个漏洞。这是 OpenAI 首个在 Preparedness 框架里网络能力达到「High」评级的模型，配套 9 月 1 日起强制硬件密钥，合作方包括 Accenture、IBM、CrowdStrike、Cloudflare、Cisco、Palo Alto Networks。官方同时明确切割：该计划与此前的 Hugging Face 入侵事件无关。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "TechCrunch",
+              "url": "https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/"
+            },
+            {
+              "name": "The Decoder",
+              "url": "https://the-decoder.com/openai-launches-gpt-5-6-cyber-to-help-defenders-find-vulnerabilities-before-attackers-do/"
+            }
+          ]
+        },
+        {
+          "headline": "苹果官网短暂确认国行 Apple 智能接入阿里千问，不到 24 小时撤回",
+          "summary": "8 月 8 日苹果官网支持文档首次写明：macOS 26.6 及以上，国行 Apple 智能的 Siri 与写作工具由阿里巴巴千问模型提供服务；不到 24 小时文档被撤回，苹果客服回应称相关功能仍在审批流程中。一次「文档抢跑」把传闻两年的合作基本坐实，剩下的只是监管时间表问题。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "36氪（8/10 报道）",
+              "url": "http://www.36kr.com/p/3933583583673730"
+            },
+            {
+              "name": "36氪（8/8 首发）",
+              "url": "https://m.36kr.com/p/3930992127458695"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "【进展】Seedance 2.5 进入专业交付阶段：华策、柠萌、完美世界已在真实项目里用",
+          "summary": "距火山引擎开放 Seedance 2.5 API（昨天播报）仅一天，落地侧的名单就出来了：华策影视用它做概念 PV，柠萌影视把绿幕/白模参考接进流程，完美世界在验证 3D 资产链路，艾菲奖的内测名单里还有英特尔、阳狮、Leo 这样的品牌与 4A 方。从「发模型」到「进生产线」的间隔缩到了按天计——视频生成在专业影视工业里的采购决策已经发生，现在只是份额问题。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "中国日报网",
+              "url": "https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/sz8srm/stories/WS6a7999f3a310d709c2fc27de.html"
+            },
+            {
+              "name": "北京日报客户端",
+              "url": "https://news.bjd.com.cn/2026/08/10/11909565.shtml"
+            }
+          ]
+        },
+        {
+          "headline": "可灵 Q2 海外收入破 1500 万美元、环比 +38%，首次进入出海 Top20；旧版 API 9/15 停服",
+          "summary": "白鲸出海数据：可灵 2026 Q2 海外收入突破 1500 万美元，环比增长 38%，首次进入出海应用收入 Top20，美国市场占 32%。另一条对存量用户更要紧：ComfyUI 官方文档确认，旧版 Kling V1.5/V1.6/V2.1/V2.1 Master 模型及 Kolors 虚拟试穿 API 将于 9 月 15 日停止服务——工作流里还挂着旧节点的要在这个日期前迁掉。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "白鲸出海（单一来源）",
+              "url": "https://www.baijing.cn/article/56029"
+            },
+            {
+              "name": "ComfyUI 官方文档",
+              "url": "https://docs.comfy.org/zh/tutorials/partner-nodes/kling/kling-3-0"
+            }
+          ]
+        },
+        {
+          "headline": "Pika 推出 API Club：会员制打包 Seedance 2.0、MiniMax H3、可灵、GPT-Image-2.0 多模型折扣",
+          "summary": "歸藏在微博观察到的这个产品动作值得玩味：Pika 自己的模型声量走弱之后，转身做起了「别家模型的分销会员」——交会员费，就能以折扣价调用一篮子主流视频/图像模型。视频生成竞争打到这个阶段，已经开始分化出「造模型」和「卖通道」两种生意；对创作者来说，多模型聚合折扣通道的出现，意味着单模型订阅的性价比要开始重新算了。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "歸藏微博（单一来源）",
+              "url": "https://www.sina.cn/media/6182606334"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "【进展】GPT-6/Astra 爆料加码：10 万亿参数、8 月强行发布、Doug 已在用 Vera Rubin 训练（未经证实）",
+          "summary": "关于下一代 OpenAI 旗舰的爆料进一步具体化：代号 Astra 的 GPT-6 据称 10 万亿参数、OpenAI 内部在 8 月「强行发布」的窗口上推进，Doug（爆料中的内部代号人物）已在用 Vera Rubin 代际的算力训练；另有传言称 Fable 5.1 会以同价策略正面截击。再强调一次：以上全部未经证实，36氪转载与 X 原帖都属爆料性质。对你的映射：不需要信具体数字，只需要信方向——旗舰模型发布节奏正在打乱年度周期，如果你有大额 API 充值或年度订阅决策，把它往后挪到 8 月底发布会尘埃落地之后，是纯收益的对冲。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "36氪",
+              "url": "http://www.36kr.com/p/3932942117682567"
+            },
+            {
+              "name": "ChrisGPT on X",
+              "url": "https://x.com/ChrisGPT/status/2086220662264250764"
+            }
+          ]
+        },
+        {
+          "headline": "Claude Code 负责人 Boris Cherny：提示注入「实践中已基本解决」，Auto 模式 8/14 起默认开启",
+          "summary": "Boris Cherny 在 X 上表态：在 Claude 模型上，提示注入问题在实践中已基本解决（该帖 2864 赞）。配套的新数据支撑这个底气：Anthropic 内部 1053 人测试里，纯人工审核只拦住了 13.6% 的危险操作，而 Auto 模式拦下 89%——8 月 14 日起 Auto 将成为默认。对你的映射：这组数字推翻了一个直觉——「人盯着比机器审安全」在 agent 场景已经不成立；你放手让 agent 自动跑的时候，用模型层的 Auto 审核替代人肉点确认，既省时间也更安全。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Boris Cherny on X",
+              "url": "https://x.com/bcherny/status/2086520950259118464"
+            },
+            {
+              "name": "The Decoder",
+              "url": "https://the-decoder.com/anthropic-sets-claude-code-to-auto-mode-by-default-to-protect-developers-from-bad-approvals/"
+            }
+          ]
+        },
+        {
+          "headline": "swyx：DELETE your skills——囤积的 skill 在吃你的 context，还在互相打架",
+          "summary": "swyx 这篇的观点很反「收藏癖」：skill 装得越多，每个 skill 分到的 context 预算越少，而且多个 skill 之间会互相干扰、触发错误的行为。结论是要像清理依赖一样定期删 skill，只留当下工作流真正在用的。对你的映射：正好对上你自己的使用场景——skill 库不是资产表，是运行时成本；值得每月做一次「这个月真正调用过几次」的盘点，把僵尸 skill 清出去。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "swyx on X",
+              "url": "https://x.com/swyx/status/2086505938144616810"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 长文「不看代码」：最强模型给他凭空加了 700ms 延迟，还承认是 cargo-culting",
+          "summary": "Vercel CEO 这篇 6006 赞的长文讲的是「完全不读代码让 agent 全权开发」的一次失控：最强模型在改动里引入了莫名其妙的 700ms 延迟，追问之下模型承认自己在 cargo-culting（照搬不理解的模式）。文章的价值不在劝退，在于给「vibe coding 不读代码」划了边界——可以不看每一行，但性能、架构关键路径必须保留人工抽查点。对你的映射：你的 agent 工作流里值得预设几个「必须人工看一眼」的锚点（首屏延迟、接口耗时、资源体积），把抽查做成流程而不是凭心情。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Guillermo Rauch on X",
+              "url": "https://x.com/rauchg/status/2086513316265181213"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "MatrAIx：用 83 亿个模拟 persona 给基座模型做「用户评测」，行为符合率 91.5%",
+          "summary": "解决的问题：基座模型评测一直靠固定 benchmark，刷榜容易、和真实用户感受脱节。MatrAIx 的思路是造 83 亿个带 1290 维属性的模拟用户 persona，从中抽出 100 万核心集，在 4 个环境、1010 个任务上跑了 18,189 次试验，评测结果与真实人类行为数据的符合率达到 91.5%。作者阵容包括 Dawn Song、James Zou、Yilun Du 等。对产品意味着什么：模型选型很快可以从「看榜单」变成「在你的目标人群画像上跑模拟用户」——做内容产品的人，第一次有机会在买模型之前先问「这个模型对我的用户群表现如何」。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.04205"
+            }
+          ]
+        },
+        {
+          "headline": "Activity Frames：零模型把录屏「编译」成 agent 记忆，98.4% 保真度 vs LLM 摘要的 66-80%",
+          "summary": "解决的问题：给 agent 加记忆，主流做法是 LLM 摘要，又贵又丢信息。这篇的思路完全不用模型——把屏幕录像的 128,756 帧压缩 86 倍存成结构化的「活动帧」，51 天的记录检索只要 68ms，回放保真度 98.4%（LLM 摘要只有 66-80%），而且重复性任务的回放是零 token 的确定性执行。论文顺带提出两个新指标：Routine Overhead Ratio（常规任务开销比）60-343 倍、可委托重复率约 9%。对产品意味着什么：agent 记忆层未必都要花钱买 token——「录屏 + 确定性回放」这条零模型路线，对个人 agent 和桌面自动化产品是个被低估的方向。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.05784"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "note": "本周期 agent 管理面工具集中冒头——管多个工作 agent 的面板、给 agent 做红队的框架、给 agent 供上下文的基建同时上榜，叠加中文平台数据采集工具回流；纯脚手架类项目开始内卷，agency-agents、prime-agent 等昨日已播报项目继续霸榜，不再重复。",
+      "items": [
+        {
+          "headline": "paperclipai/paperclip —— 管多个工作 agent 的开源面板",
+          "summary": "一个 dashboard 统管多个干活的 agent：看状态、派任务、收结果。agent 从「单兵」变「小队」之后，管理面成了新的缺口，这个项目补的就是这一层。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/paperclipai/paperclip"
+            }
+          ]
+        },
+        {
+          "headline": "semantica-agi/semantica —— 图原生的上下文与可问责 agent 基建",
+          "summary": "用图结构组织 agent 的上下文，并把每步决策挂到图上做到可审计、可追责。agent 进生产环境之后，「它为什么这么干」会从哲学问题变成合规刚需。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/semantica-agi/semantica"
+            }
+          ]
+        },
+        {
+          "headline": "danielmiessler/LifeOS —— 用「爬山法」运营自己生活和工作的 harness",
+          "summary": "Daniel Miessler 把人生目标拆成 agent 可执行的循环：定期评估现状、找出下一步最陡的改进方向、执行、再评估。agent 框架用到自己身上，是这批项目里最个人化的一个。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/danielmiessler/LifeOS"
+            }
+          ]
+        },
+        {
+          "headline": "confident-ai/deepteam —— 给 LLM 和 agent 做红队测试的框架",
+          "summary": "系统化地对自家模型和 agent 发起攻击测试：提示注入、越狱、数据泄露等场景开箱即用。应用层产品上线前的安全自测，正在从可选项变成交付清单里的一项。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/confident-ai/deepteam"
+            }
+          ]
+        },
+        {
+          "headline": "NanmiCoder/MediaCrawler 回流 —— 中文平台爬虫全家桶",
+          "summary": "覆盖小红书、抖音、快手、B 站、微博、贴吧、知乎的中文平台采集工具，本周明显回流。结合榜单整体风向看，是给 agent 和数据管线供料的需求在涨。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/NanmiCoder/MediaCrawler"
+            }
+          ]
+        },
+        {
+          "headline": "ruvnet/RuView —— 用 WiFi 信号做空间感知和生命体征监测，零摄像头",
+          "summary": "把 WiFi 信道状态信息转成人体姿态、存在检测甚至呼吸心率，全程无摄像头无穿戴设备。隐私敏感场景（养老、病房、居家）里，「无摄像头的感知」是一条很巧的路线。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub",
+              "url": "https://github.com/ruvnet/RuView"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "ChatGPT Business Premium 席位上线：$125/月、5 倍用量、取消 5 小时限制，8/20 前 waitlist 每席送 $100",
+          "summary": "OpenAI 给 Business 计划加了一档 Premium 席位：$125/月（年付折合 $100/月），用量为标准席位的 5 倍，取消 5 小时滚动窗口限制、改为每周重置；同一个工作区里 Standard 和 Premium 席位可以混装。8 月 20 日前加入 waitlist，每个席位送 $100 使用额度（每工作区上限 $500）。对你的映射：混装设计就是为一人公司/小团队准备的——只给真正烧算力的那个席位升级，其余留在标准档；如果你有高强度 Codex 使用习惯，8/20 前的 waitlist 额度是白拿的，值得顺手登记。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "OpenAI 官网",
+              "url": "https://openai.com/index/premium-seats-chatgpt-business/"
+            }
+          ]
+        },
+        {
+          "headline": "Replit CEO 上线 HelpPeer：agent 之间的公共知识网络，只有 tell/lookup 两个 API",
+          "summary": "Amjad Masad 亲自发布：HelpPeer 是一个让 agent 互相分享经验的公共网络——agent 用 tell 提交自己踩坑后验证有效的解决方案，别的 agent 用 lookup 查询，设计极简到只有这两个接口。灵感直接来自 OpenAI-Hugging Face 事件中 agent 自发留言板协同的观察：既然 agent 天然会想交换经验，不如给一个干净的正道。对你的映射：这相当于给所有 agent 建了一个「 Stack Overflow 层」——你自己的 agent 工作流遇到反复踩的坑，可以留意这类公共知识层，也想想哪些内部经验值得结构化沉淀下来复用。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Amjad Masad on X",
+              "url": "https://x.com/amasad/status/2086628413322981747"
+            }
+          ]
+        },
+        {
+          "headline": "Linear 的 agent 会给自己提 feature request：做不到就自动开 issue",
+          "summary": "Peter Yang 分享的 Linear 实践：他们内部的 agent 在遇到自己能力边界时，会主动向产品团队提交 feature request——「我做不到这件事，原因是 X，建议加 Y 能力」。产品反馈回路里第一次出现了非人类用户，而且它的反馈质量奇高：每一条都附带失败现场。对你的映射：这是给所有做 agent 产品的人的一个现成范式——把「agent 做不到的事」从失败日志升级成结构化的需求输入，你的产品 roadmap 会自己长出来。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Peter Yang on X",
+              "url": "https://x.com/petergyang/status/2086562291206791482"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

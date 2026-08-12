@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-02",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-02",
+  "generatedAt": "2026-08-02T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/2 那一期，按原文日期归档。",
+      "items": [
+        {
+          "headline": "一文读懂 Agent 的三层工程：Harness、Loop 与 Graph",
+          "summary": "把 agent 工程里三个常被混为一谈的东西拆开：Harness 是运行环境，负责给模型工具、记忆、权限、工作空间和可观测性；Loop 负责让任务能根据证据反复检查、修正、停止；Graph 负责把复杂流程里的分支、并行、审批和人工关口画清楚。对你的映射：你自己搭多 agent 工作流时，这套词汇能帮你判断卡住的到底是哪一层——大部分人以为是模型问题，其实是 Loop 没设停止条件。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/2",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260802"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/ELhwwlAf8ibai2kTzDrcn9Fvnuf"
+            }
+          ]
+        },
+        {
+          "headline": "Luna 降价 80%：用 20 美元的 Plus 榨出接近 100 美元 Pro 的产出",
+          "summary": "讲 Sol 和 Luna 怎么分工——难任务给 Sol，量大的常规活给便宜的 Luna，通过分工优化 token 消耗，以较低订阅成本搭出一个 AI 工作团队。对你的映射：一人公司的单位交付成本就是靠这种搭配压下来的。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/2",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260802"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/I6qlwMLPniZK3pkpHlBc0onpnTM"
+            }
+          ]
+        },
+        {
+          "headline": "Reddit 蓝海帖挖掘：Research SEO 与 GEO 增长机会",
+          "summary": "系统分析 Reddit 平台的 SEO 与地域增长机会，面向出海和内容增长。对你的映射：Reddit 是海外独立开发者验证需求和拿第一批种子用户最常用的地方，这类方法论比投广告更适合零预算起步。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/2",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260802"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/NYMPwf2tyixiSikOmFLcUUkmnyX"
+            }
+          ]
+        },
+        {
+          "headline": "2026 年顶尖 AI 实验室如何构建 RL 智能体：从 RLHF 到 RULER",
+          "summary": "拆解 Anthropic、OpenAI 和 DeepSeek 把系统提示词当作奖励函数的趋势，梳理强化学习在智能体上的演进路径。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/2",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260802"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/GdflwLv3FiyalUkWbB7cWGPVnmc"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

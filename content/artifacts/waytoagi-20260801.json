@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-01",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-01",
+  "generatedAt": "2026-08-01T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/1 那一期，按原文日期归档（本期为首次接入后的回补）。",
+      "items": [
+        {
+          "headline": "《阿k：烧 5 万积分全面测评 MiniMax H3》30 余个案例",
+          "summary": "多场景多模态实测，作者认为它在 UI 动效、产品广告、片头字体、拼贴动画、短剧这几块表现突出。对你的映射：这是选题级的情报——它点名的五个强项里有四个直接落在你的 AIMV / 短视频工作流上。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/1",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260801"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/AYR8wDmPTioxJgktikUcPgu9nlh"
+            }
+          ]
+        },
+        {
+          "headline": "《Codex 进阶指南：作为 Multi-Agent 编排控制平面》",
+          "summary": "讲 Task、Subagent、Worktree、SSH、Handoff、Automation 这些概念在复杂项目里怎么组合使用。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/1",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260801"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/FFsDwOBJVisiPDkZOqlcVj8ZnNc"
+            }
+          ]
+        },
+        {
+          "headline": "YC 开源内部多 Agent 协作框架 QM：每个员工、频道、项目都有独立记忆与沙箱",
+          "summary": "独立的记忆、文件、密钥权限、定时任务和沙箱环境，支持接入多种 agent 框架。注：这个仓库本身已在 8/10 第八期的 GitHub 新星里提到过（12.8k stars），这篇补的是「怎么用、为什么这么设计」。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/1",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260801"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/UFOOwTTJmixn2akLI7ncbwTDnNe"
+            }
+          ]
+        },
+        {
+          "headline": "Sal Khan：软件工程、设计、PM 都在变，AI 机会藏在无聊行业",
+          "summary": "Khan Academy 创始人用真实案例讲 AI 怎么改变工作方式，以及普通人该把精力投向哪。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/1",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260801"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/DH8NwekCxilBdbk1ilmc9zQynac"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

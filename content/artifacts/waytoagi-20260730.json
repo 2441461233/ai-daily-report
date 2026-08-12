@@ -1,0 +1,74 @@
+{
+  "date": "2026-07-30",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-07-30",
+  "generatedAt": "2026-07-30T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 7/30 那一期，按原文日期归档（本期为首次接入后的回补）。",
+      "items": [
+        {
+          "headline": "《一段 Prompt 让你的 Kimi K3 花钱更少、出活更快》",
+          "summary": "专治 K3 反复思考、成本高、出活慢：提前限定本轮只做什么、做到什么程度就停、验收哪些结果、遇到阻塞怎么结束。对你的映射：这四句话的模板可以直接套到任何 agent 的开场，是投入产出比最高的一类优化。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/30",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260730"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/HvvRwq7KGic3HmkGxoEcSqxQnMg"
+            }
+          ]
+        },
+        {
+          "headline": "《写了几十个 Skill，我最常用的是这 3 个》",
+          "summary": "云舒的三个高频 skill：find-top-three 提炼关键问题、dual-agent-collaboration 让两个模型互审、issue-pool 做任务管理。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/30",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260730"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/LvIvw3L7uiUJTxk0W0ecYrIsnDg"
+            }
+          ]
+        },
+        {
+          "headline": "《让 Agent 批量采集网页数据，Scrapling 到底好不好用？》",
+          "summary": "实测 Scrapling + MCP 的方案：能用 HTTP 请求就直接抓、需要渲染时再启动浏览器，目的是减少上下文占用。对你的映射：日报采集里中文站点抓取失败率偏高，这套「先 HTTP 后浏览器」的分级策略正好对症。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/30",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260730"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/LW6pwiRHSiU9IckyqH2clM1FnBb"
+            }
+          ]
+        },
+        {
+          "headline": "《李飞飞：解决机器人领域最难的问题》（a16z 对谈）",
+          "summary": "分析机器人训练成本高、评估周期长的本质困难，并和大模型那条可复制的增长曲线做对比。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/30",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260730"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/DCN8wCs4tiacYvkcywncfXKbneb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

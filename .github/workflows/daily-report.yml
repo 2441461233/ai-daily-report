@@ -1,0 +1,131 @@
+name: Daily AI report
+
+on:
+  # GitHub schedules use UTC. 02:23 UTC is 10:23 in Asia/Shanghai.
+  schedule:
+    - cron: '23 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-ai-report
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      CI: 'true'
+      KIMI_DISABLE_TELEMETRY: '1'
+      KIMI_CODE_HOME: /tmp/kimi-code
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Require Kimi API secret
+        env:
+          KIMI_MODEL_API_KEY: ${{ secrets.KIMI_API_KEY }}
+        run: |
+          if [ -z "$KIMI_MODEL_API_KEY" ]; then
+            echo "::error::Add KIMI_API_KEY in repository Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Install site dependencies
+        run: npm ci
+
+      - name: Install pinned Kimi Code CLI
+        run: npm install --global @moonshot-ai/kimi-code@0.34.0
+
+      - name: Prepare deterministic research inputs
+        run: |
+          node scripts/fetch_builders.mjs > /tmp/ai-builders.json
+          python3 scripts/waytoagi.py > /tmp/waytoagi.txt
+          mkdir -p "$KIMI_CODE_HOME"
+          cp automation/kimi-ci-config.toml "$KIMI_CODE_HOME/config.toml"
+
+      - name: Run the daily-report agent
+        env:
+          KIMI_MODEL_NAME: ${{ vars.KIMI_MODEL || 'kimi-k3' }}
+          KIMI_MODEL_PROVIDER_TYPE: kimi
+          KIMI_MODEL_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          KIMI_MODEL_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.cn/v1' }}
+          KIMI_MODEL_MAX_CONTEXT_SIZE: ${{ vars.KIMI_CONTEXT_SIZE || '262144' }}
+          KIMI_MODEL_CAPABILITIES: thinking
+          KIMI_WEB_SEARCH_BASE_URL: ${{ vars.KIMI_WEB_SEARCH_BASE_URL || 'https://api.moonshot.cn/v1/search' }}
+          KIMI_WEB_SEARCH_API_KEY: ${{ secrets.KIMI_WEB_SEARCH_API_KEY || secrets.KIMI_API_KEY }}
+          KIMI_LOOP_MAX_STEPS_PER_TURN: '240'
+        run: |
+          kimi \
+            --prompt "Read automation/AGENT_TASK.md completely and execute it now. Work autonomously, obey its file scope, finish all required artifact/archive writes, then report the concise run summary it requests. The outer workflow will validate and build after you finish." \
+            --output-format stream-json \
+            | tee "$RUNNER_TEMP/kimi-daily.jsonl"
+
+      - name: Re-run deterministic quality gates
+        run: |
+          python3 scripts/sync_waytoagi_state.py
+          python3 scripts/validate_content.py
+          npm run build
+          python3 scripts/check_daily_changes.py
+
+      - name: Package validated output
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-output
+          retention-days: 3
+          if-no-files-found: error
+          path: |
+            content/artifacts
+            content/reported.md
+            content/waytoagi-consumed.txt
+            public/data/reports.json
+
+  commit:
+    if: github.ref == 'refs/heads/main'
+    needs: generate
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Restore validated output
+        uses: actions/download-artifact@v4
+        with:
+          name: daily-output
+          path: .
+
+      - name: Verify isolated output
+        run: |
+          python3 scripts/validate_content.py
+          python3 scripts/check_daily_changes.py
+
+      - name: Commit generated report
+        run: |
+          git add content/artifacts content/reported.md content/waytoagi-consumed.txt public/data/reports.json
+          if git diff --cached --quiet; then
+            echo "No report changes; this run was an idempotent no-op."
+            exit 0
+          fi
+          git config user.name "ai-daily-report[bot]"
+          git config user.email "2441461233+ai-daily-report[bot]@users.noreply.github.com"
+          report_date="$(TZ=Asia/Shanghai date +%F)"
+          git commit -m "日报更新 ${report_date}"
+          git push origin HEAD:main

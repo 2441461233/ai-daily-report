@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-08",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-08",
+  "generatedAt": "2026-08-08T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/8 那一期，按原文日期归档。",
+      "items": [
+        {
+          "headline": "老金审计提示词：把近 30 天的高频重复劳动挖出来，做成无感自动化",
+          "summary": "一套拿来即用的提示词：让 AI 审计你最近 30 天的操作记录，找出其中高频、重复、规则明确的部分，直接生成对应的自动化方案，目标是把这些劳动从你的日程里无声地抹掉。对个人和小团队来说，这是「先量化自己的时间漏在哪，再决定自动化什么」的标准入口。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/8",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260808"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/GzQ2wSANKimtkxkWOqycH60jnBd"
+            }
+          ]
+        },
+        {
+          "headline": "记忆工程师：Stanford / Microsoft / Anthropic / NVIDIA 都在谈的 agent 记忆方法论",
+          "summary": "一篇把多家一线机构的记忆设计实践串起来的文章，核心观点是 agent 记忆的关键不是「记住一切」，而是选择性保留、压缩和遗忘——记什么、压缩成什么粒度、什么时候主动忘掉，每一项都是独立的工程决策。对搭多 agent 工作流的人来说，这篇可以作为设计记忆层时的检查清单。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/8",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260808"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/PCj7wTswPigE9ukBveicR3Frnzh"
+            }
+          ]
+        },
+        {
+          "headline": "LangChain Managed Deep Agents：托管式智能体是下一阶段的方向",
+          "summary": "LangChain 对 Deep Agents 产品线的判断：开发者不该再自己从零搭 agent 的运行时、状态管理和持久化，托管式智能体平台把这些基础设施收走，让开发者专注在业务逻辑上。和近期 agent 基建工具霸榜 GitHub Trending 是同一个信号的供给侧版本。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/8",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260808"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/PHrZwoc6GijA2IkXryccO06KnFh"
+            }
+          ]
+        },
+        {
+          "headline": "Graph Engineering：Anthropic 的真实落地——百万行代码迁移、Python 转 TypeScript",
+          "summary": "Anthropic 内部用 agent 做大规模代码迁移的工程实录：目标是百万行级别的代码库迁移和 Python 到 TypeScript 的转换，做法是判定器 + 规则手册约束每一步改动、磁盘队列管理任务状态、独立审查者 agent 复核产出、不同角色用不同模型分工。这是少数把「agent 怎么在真实超大代码库里不出事」讲到可复现细节的文章。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/8",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260808"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/RrslwsTiJitt1GkJvF3ckf0Nnvn"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

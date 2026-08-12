@@ -1,0 +1,74 @@
+{
+  "date": "2026-07-31",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-07-31",
+  "generatedAt": "2026-07-31T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 7/31 那一期，按原文日期归档（本期为首次接入后的回补）。",
+      "items": [
+        {
+          "headline": "awplanets/awplanet：开源的 AI 原生 3D 导演工作台",
+          "summary": "把场景编辑、角色骨骼、运镜、分镜整合进一个工作台。对你的映射：AIMV 想做出稳定的镜头语言，纯文生视频很难控，这类「先在 3D 里排好机位再交给模型」的路线是目前可控性最高的做法，值得排时间试。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/31",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260731"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/CjSRwtPg6iZ2hWkfTOpcc2KqnUh"
+            }
+          ]
+        },
+        {
+          "headline": "《【即梦】Seedance 2.5 使用手册》",
+          "summary": "即梦上 Seedance 2.5 全量上线后的实操手册，覆盖视频能力、参考能力与画面效果的变化。注：Seedance 2.5 的 API 发布已在 8/10 第八期播报过，这篇是配套的使用侧文档。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/31",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260731"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/PXmgwhty9i4LRak2yLIcidpZnle"
+            }
+          ]
+        },
+        {
+          "headline": "《质检 Skill 开源：你的 Listing 在亚马逊眼里到底能打几分？》",
+          "summary": "Amazon Listing Doctor，用多套逻辑检查标题、关键词、AI 可发现性。对你的映射：出海电商是一人公司最常见的落点之一，这类「窄而深的诊断工具」本身也是个可复制的产品形态。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/31",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260731"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/Yj9NwpFkVihly4kEIVocjzoCnTb"
+            }
+          ]
+        },
+        {
+          "headline": "开源 awesome-open-llms：全网开源模型汇总 + 7 月开源动态",
+          "summary": "整理了 Kimi-K3、LongCat 等 7 月的开源模型动态。挑本地部署方案时的索引。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/31",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260731"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/E7KewSqVeimQQ8kGDALcVkvhnWg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

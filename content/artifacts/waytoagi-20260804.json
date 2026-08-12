@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-04",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-04",
+  "generatedAt": "2026-08-04T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/4 那一期，按原文日期归档。",
+      "items": [
+        {
+          "headline": "海螺 MiniMax H3 开源实战：7 条广告、9 段大片、4 场戏（附提示词）",
+          "summary": "H3 开源后的实际应用集锦，覆盖产品广告、视频渲染、多视角同步，附完整提示词。对你的映射：比起看参数表，这种带成品和提示词的实战集更能判断一个视频模型到底能不能进你的 AIMV 工作流。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/4",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260804"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/P1YkwgeQGi6KMekyl3Fc2dbGnee"
+            }
+          ]
+        },
+        {
+          "headline": "详解 Claude 的循环工程",
+          "summary": "介绍循环工程的来源、Claude Code 里的四类循环、构建方法以及相应的成本考量。和 8/2 那篇《Agent 三层工程》是一对，这篇把 Loop 那一层讲透。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/4",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260804"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/EANXwfCqzilM2xkTZEQc6Yp0nWd"
+            }
+          ]
+        },
+        {
+          "headline": "Vibe Coding 视觉词典（上篇）：布局、页面结构、导航与常用组件",
+          "summary": "把网页拆成四层讲，涵盖卡片、瀑布流、Bento、分屏、CSS Grid/Flexbox、Hero、Landing Page、Sticky Navbar、Drawer、Tabs、Modal、Toast、表单、Command Palette 各自的适用场景，每个都配了提示词。想用 AI 搭个人网站、作品集、产品页可以直接照着抄。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/4",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260804"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/XBlhwhR6RimU4ukhIzfcJb4OnTh"
+            }
+          ]
+        },
+        {
+          "headline": "乔木开源了一个元 Skill：一句话生成可发布的 Skill",
+          "summary": "这个元 skill 能自动跑完需求收敛、检索、设计、测试、校验、文档、安全检查到发布的整条链路，产出「能被发现、能稳定触发、能通过验证」的技能。对你的映射：你手上工作流里重复的部分，用它固化成 skill 的成本比手写低一个量级。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/4",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260804"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/NkzEw5Fo9igpZhk9W89c0dzynTg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

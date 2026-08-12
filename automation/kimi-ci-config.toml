@@ -1,0 +1,23 @@
+telemetry = false
+default_permission_mode = "auto"
+
+[loop_control]
+max_attempts_per_step = 6
+reserved_context_size = 40000
+
+# The research agent receives untrusted web content. Shell and sub-agents are
+# unnecessary because deterministic collection/build steps run outside the LLM.
+[[permission.rules]]
+decision = "deny"
+pattern = "Bash"
+reason = "CI research agents may not execute shell commands"
+
+[[permission.rules]]
+decision = "deny"
+pattern = "Agent"
+reason = "Keep the CI run inside one permission boundary"
+
+[[permission.rules]]
+decision = "deny"
+pattern = "AgentSwarm"
+reason = "Keep the CI run inside one permission boundary"
