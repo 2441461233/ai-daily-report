@@ -13,8 +13,10 @@
 4. CI 已禁用 Shell 和子 Agent。不得尝试 Bash；确定性采集、状态同步、验证和构建由外层工作流执行。
 5. 如果 WebSearch/FetchURL 不可用、当前日期的核心来源普遍失败，或无法获得真实 URL，必须失败退出，
    不得用模型记忆补写新闻，也不得写空日报或推进消费状态。
-6. 每个主日报必须是一个新文件。文件名为 `content/artifacts/YYYY-MM-DD-N.json`，`N` 取当日
-   已有主日报的下一个序号。不得覆盖已提交 artifact；同一事件不得因任务重跑而重复。
+6. 每个上海自然日只生成一份主日报。若 `content/artifacts/` 已有当天的 `YYYY-MM-DD-N.json`，
+   本轮不得再生成主日报，只处理尚未消费的 WayToAGI 补录；若补录也没有，直接幂等结束。
+   首次生成时文件名为 `content/artifacts/YYYY-MM-DD-N.json`，`N` 取当天历史序号的下一个值。
+   不得覆盖已提交 artifact；同一事件不得因任务重跑而重复。
 7. 写完日报和 `content/reported.md` 后即可结束。外层工作流会同步 WayToAGI 状态、运行验证和构建；
    验证失败则整次运行不提交。不能为了通过验证而删除历史内容或放宽规则。
 

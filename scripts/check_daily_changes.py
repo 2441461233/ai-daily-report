@@ -111,11 +111,15 @@ def main() -> int:
                     f"{path.name} must declare date and attachTo as {stamp_date!r}"
                 )
 
-    existing_today = any(
-        MAIN_NAME.fullmatch(path.name) and path.name.startswith(f"{today}-")
-        for path in (ROOT / "content" / "artifacts").glob("*.json")
-    )
-    if not main_for_today and not existing_today:
+    tracked_today = subprocess.check_output(
+        ["git", "ls-files", f"content/artifacts/{today}-*.json"],
+        cwd=ROOT,
+        text=True,
+    ).splitlines()
+    existing_today = bool(tracked_today)
+    if existing_today and main_for_today:
+        errors.append(f"a committed main report already exists for {today}; retry must be idempotent")
+    if not existing_today and not main_for_today:
         errors.append(f"run did not create the required Shanghai-date main report for {today}")
 
     if errors:

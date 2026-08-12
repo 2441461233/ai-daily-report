@@ -62,11 +62,15 @@ jobs:
           KIMI_MODEL_NAME: ${{ vars.KIMI_MODEL || 'kimi-k3' }}
           KIMI_MODEL_PROVIDER_TYPE: kimi
           KIMI_MODEL_API_KEY: ${{ secrets.KIMI_API_KEY }}
-          KIMI_MODEL_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.cn/v1' }}
-          KIMI_MODEL_MAX_CONTEXT_SIZE: ${{ vars.KIMI_CONTEXT_SIZE || '262144' }}
-          KIMI_MODEL_CAPABILITIES: thinking
-          KIMI_WEB_SEARCH_BASE_URL: ${{ vars.KIMI_WEB_SEARCH_BASE_URL || 'https://api.moonshot.cn/v1/search' }}
+          KIMI_MODEL_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.ai/v1' }}
+          KIMI_MODEL_MAX_CONTEXT_SIZE: ${{ vars.KIMI_CONTEXT_SIZE || '1048576' }}
+          KIMI_MODEL_CAPABILITIES: thinking,always_thinking,image_in,video_in,tool_use
+          KIMI_MODEL_THINKING_EFFORT: max
+          KIMI_MODEL_THINKING_KEEP: all
+          KIMI_WEB_SEARCH_BASE_URL: ${{ vars.KIMI_WEB_SEARCH_BASE_URL || 'https://api.moonshot.ai/v1/search' }}
           KIMI_WEB_SEARCH_API_KEY: ${{ secrets.KIMI_WEB_SEARCH_API_KEY || secrets.KIMI_API_KEY }}
+          KIMI_WEB_FETCH_BASE_URL: ${{ vars.KIMI_WEB_FETCH_BASE_URL || 'https://api.moonshot.ai/v1/fetch' }}
+          KIMI_WEB_FETCH_API_KEY: ${{ secrets.KIMI_WEB_FETCH_API_KEY || secrets.KIMI_API_KEY }}
           KIMI_LOOP_MAX_STEPS_PER_TURN: '240'
         run: |
           kimi \

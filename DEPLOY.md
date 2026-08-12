@@ -15,12 +15,15 @@
 |---|---|---|
 | `KIMI_API_KEY` | 是 | Kimi / Moonshot 开放平台 API Key |
 | `KIMI_WEB_SEARCH_API_KEY` | 否 | 独立搜索 Key；不填时复用 `KIMI_API_KEY` |
+| `KIMI_WEB_FETCH_API_KEY` | 否 | 独立网页读取 Key；不填时复用 `KIMI_API_KEY` |
 
-密钥必须和 API endpoint 属于同一平台。工作流默认使用中国区：
+密钥必须和 API endpoint 属于同一平台。工作流默认使用 K3 官方国际平台：
 
 - 模型：`kimi-k3`
-- API：`https://api.moonshot.cn/v1`
-- 搜索：`https://api.moonshot.cn/v1/search`
+- 上下文：`1048576`（1M），思考强度 `max`
+- API：`https://api.moonshot.ai/v1`
+- 搜索：`https://api.moonshot.ai/v1/search`
+- 网页读取：`https://api.moonshot.ai/v1/fetch`
 
 如 Key 来自其他 Kimi 平台，在同页 **Variables** 新建对应变量覆盖默认值：
 
@@ -29,7 +32,12 @@
 | `KIMI_MODEL` | 模型 ID，例如 `kimi-k2.5` |
 | `KIMI_BASE_URL` | 模型 API 根地址 |
 | `KIMI_WEB_SEARCH_BASE_URL` | WebSearch 服务地址 |
-| `KIMI_CONTEXT_SIZE` | 上下文长度，默认 `262144` |
+| `KIMI_WEB_FETCH_BASE_URL` | FetchURL 服务地址 |
+| `KIMI_CONTEXT_SIZE` | 上下文长度，K3 默认 `1048576` |
+
+若 Key 来自中国区 `platform.moonshot.cn`，把三个 endpoint 变量对应改为
+`https://api.moonshot.cn/v1`、`https://api.moonshot.cn/v1/search` 和
+`https://api.moonshot.cn/v1/fetch`。
 
 仓库 **Settings → Actions → General → Workflow permissions** 需允许 **Read and write permissions**，
 否则日报能生成但无法自动 commit。
