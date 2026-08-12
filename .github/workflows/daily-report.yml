@@ -73,10 +73,11 @@ jobs:
           KIMI_WEB_FETCH_API_KEY: ${{ secrets.KIMI_WEB_FETCH_API_KEY || secrets.KIMI_API_KEY }}
           KIMI_LOOP_MAX_STEPS_PER_TURN: '240'
         run: |
+          set -o pipefail
           kimi \
             --prompt "Read automation/AGENT_TASK.md completely and execute it now. Work autonomously, obey its file scope, finish all required artifact/archive writes, then report the concise run summary it requests. The outer workflow will validate and build after you finish." \
             --output-format stream-json \
-            | tee "$RUNNER_TEMP/kimi-daily.jsonl"
+            2>&1 | tee "$RUNNER_TEMP/kimi-daily.jsonl"
 
       - name: Re-run deterministic quality gates
         run: |
