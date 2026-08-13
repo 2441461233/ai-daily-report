@@ -46,6 +46,16 @@ PLACEHOLDER_HOSTS = {"example.com", "example.net", "example.org", "localhost"}
 PLACEHOLDER_SUFFIXES = (".example", ".invalid", ".localhost", ".test")
 MAIN_FILENAME_RE = re.compile(r"^(?P<date>\d{4}-\d{2}-\d{2})-(?P<sequence>[1-9]\d*)\.json$")
 WAYTOAGI_FILENAME_RE = re.compile(r"^waytoagi-(?P<stamp>\d{8})\.json$")
+WAYTOAGI_LABEL = "WayToAGI 精选"
+WAYTOAGI_SECTION_TITLE = "🧭 WayToAGI 知识库精选"
+WAYTOAGI_MIRROR_TEMPLATE = "https://www.waytoagi.com/zh/blog/news-{}"
+WAYTOAGI_WIKI_PREFIX = "https://waytoagi.feishu.cn/wiki/"
+WAYTOAGI_WIKI_URL_RE = re.compile(
+    r"^https://waytoagi\.feishu\.cn/wiki/[A-Za-z0-9]+$"
+)
+WAYTOAGI_ROLLING_LOG_URL = (
+    "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e"
+)
 MAIN_SECTION_POLICY = (
     ("🔥 AI 重要事件", 3, 5),
     ("🎬 AI 创作 · 视频/音乐/媒体娱乐", 3, 4),
@@ -285,6 +295,98 @@ def validate_generated_at(
         return
     if parsed.utcoffset() is None or not value.endswith("+08:00"):
         errors.add(file, location, "must use an explicit +08:00 offset")
+
+
+def validate_waytoagi_artifact(
+    artifact: dict[str, Any],
+    file: Path,
+    base: str,
+    stamp: str,
+    errors: Errors,
+) -> None:
+    """Apply the stricter source contract for native WayToAGI attachments."""
+    expected_date = datetime.strptime(stamp, "%Y%m%d").date().isoformat()
+    if artifact.get("date") != expected_date:
+        errors.add(file, f"{base}.date", f"must be exactly {expected_date!r}")
+    if artifact.get("attachTo") != expected_date:
+        errors.add(file, f"{base}.attachTo", f"must be exactly {expected_date!r}")
+    if artifact.get("label") != WAYTOAGI_LABEL:
+        errors.add(file, f"{base}.label", f"must be exactly {WAYTOAGI_LABEL!r}")
+
+    sections = artifact.get("sections")
+    if not isinstance(sections, list) or len(sections) != 1:
+        errors.add(file, f"{base}.sections", "WayToAGI artifact must contain exactly one section")
+        return
+    section = sections[0]
+    if not isinstance(section, dict):
+        return
+    if section.get("title") != WAYTOAGI_SECTION_TITLE:
+        errors.add(
+            file,
+            f"{base}.sections[0].title",
+            f"must be exactly {WAYTOAGI_SECTION_TITLE!r}",
+        )
+
+    items = section.get("items")
+    if not isinstance(items, list):
+        return
+    expected_mirror = WAYTOAGI_MIRROR_TEMPLATE.format(stamp)
+    for item_index, item in enumerate(items):
+        if not isinstance(item, dict):
+            continue
+        sources = item.get("sources")
+        if not isinstance(sources, list):
+            continue
+        urls = {
+            source.get("url")
+            for source in sources
+            if isinstance(source, dict) and isinstance(source.get("url"), str)
+        }
+        item_location = f"{base}.sections[0].items[{item_index}].sources"
+        mirror_urls = sorted(
+            url
+            for url in urls
+            if url.startswith("https://www.waytoagi.com/zh/blog/news-")
+        )
+        if mirror_urls != [expected_mirror]:
+            errors.add(
+                file,
+                item_location,
+                f"WayToAGI mirror URL set must be exactly {[expected_mirror]!r}",
+            )
+
+        wiki_urls = sorted(url for url in urls if url.startswith(WAYTOAGI_WIKI_PREFIX))
+        if WAYTOAGI_ROLLING_LOG_URL in wiki_urls:
+            errors.add(
+                file,
+                item_location,
+                "the rolling seven-day log cannot stand in for an item-specific Feishu URL",
+            )
+        specific_urls = [
+            url
+            for url in wiki_urls
+            if url != WAYTOAGI_ROLLING_LOG_URL
+            and WAYTOAGI_WIKI_URL_RE.fullmatch(url)
+        ]
+        if len(specific_urls) != 1:
+            errors.add(
+                file,
+                item_location,
+                "must contain exactly one item-specific WayToAGI Feishu wiki URL",
+            )
+            continue
+        wiki_url = specific_urls[0]
+        ordered_urls = [
+            source.get("url")
+            for source in sources
+            if isinstance(source, dict) and isinstance(source.get("url"), str)
+        ]
+        if ordered_urls != [expected_mirror, wiki_url] or len(sources) != 2:
+            errors.add(
+                file,
+                item_location,
+                "must contain exactly two sources in order: issue mirror, then item-specific Feishu URL",
+            )
 
 
 def validate_current_main_policy(
@@ -556,6 +658,10 @@ def validate_artifact_file(
                 )
             if date is not None and attach_to is not None and date != attach_to:
                 errors.add(file, f"{base}.date", "must match attachTo for WayToAGI artifacts")
+            if match is not None:
+                validate_waytoagi_artifact(
+                    artifact, file, base, match.group("stamp"), errors
+                )
         else:
             match = MAIN_FILENAME_RE.fullmatch(file.name)
             if match is None:

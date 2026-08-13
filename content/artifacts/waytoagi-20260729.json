@@ -6,11 +6,11 @@
   "sections": [
     {
       "title": "🧭 WayToAGI 知识库精选",
-      "note": "来自 WayToAGI 知识库精选 7/29 那一期，按原文日期归档（本期为首次接入后的回补）。",
+      "note": "来自 WayToAGI 知识库精选 7/29，按原文日期归档。",
       "items": [
         {
-          "headline": "《半年月活涨 20 倍、ARR 破 4 千万的 OpenCode，如何从「完了」到「火了」》",
-          "summary": "靠多模型选择做差异化，月活从 65 万涨到 1300 万。对你的映射：这是一个「在巨头的正面战场上靠一个具体差异点activate起来」的完整增长复盘，比抽象的方法论有用。",
+          "headline": "冕神语录",
+          "summary": "晚点今天发了篇对 陈冕 的专访，作者围绕 LibTV、Lovart、融资、抄袭争议和 AI 应用竞争的高能表达整理成 66 条。来一起看看！",
           "expanded": false,
           "sources": [
             {
@@ -19,13 +19,28 @@
             },
             {
               "name": "原文（飞书）",
-              "url": "https://waytoagi.feishu.cn/wiki/PSZOw8b94iAbO1kphYOc772Inac"
+              "url": "https://waytoagi.feishu.cn/wiki/T5r9w5RBdi2OeekRAdjc3znfnBc"
             }
           ]
         },
         {
-          "headline": "《烧了一万块 API 后，我找到了同时适用于 Fable 5 和 GPT-5.6 的 AI 工作流》",
-          "summary": "partner-skill 2.0 框架，用 deep_reasoner / fast_worker / arbiter 三层角色做多模型成本控制。跟 7/28 那条「Codex 指挥 ChatGPT Pro」是同一个思路的不同实现。",
+          "headline": "普通人最该补的5门AI必修课：MD、SVG、HTML、GitHub、Skill",
+          "summary": "冷逸这篇文章适合刚开始学AI的普通用户，尤其是想用AI写方案、做图、做页面、整理资料的人。Markdown 用来把需求写清楚；SVG用来做可修改的图；HTML用来生成网页、演示页和小工具；GitHub 用来找资源、存作品；Skill 用来把重复流程整理成AI能执行的说明书。小白可以从这里开始补基础。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/HFYIwD5Xvi0Ls1kNyAgcZpTInec"
+            }
+          ]
+        },
+        {
+          "headline": "烧了一万块API后，我找到了同时适用于Fable5和GPT5.6的AI工作流",
+          "summary": "怎么让不同模型各干最适合自己的活呢？卡尔把之前的 partner-skill 升级到2.0，拆成了deep_reasoner、fast_worker、arbiter三种身份：一个做深度规划，一个快速执行，一个独立仲裁。不同项目还能分别绑定Fable5、Opus5、GPT 5.6等模型，并用均衡、质量优先、省钱优先三套策略控制成本，把每个Token都花在刀刃上。",
           "expanded": false,
           "sources": [
             {
@@ -39,8 +54,8 @@
           ]
         },
         {
-          "headline": "《别再手动刷 X 了！我给自己的 X 装了个会自己找资料的扫描器，已开源》",
-          "summary": "x-scan Skill：自动扫 X 信息流、筛出 AI 相关内容、存成可进知识库的 Markdown。对你的映射：这跟你这套日报的 X 采集环节是同一件事——现在走的是 follow-builders 的中心 feed（约一天延迟），这个方案是自己抓、可定制关注列表，值得对比。",
+          "headline": "从光年之外裸辞创业，反而找到了本我",
+          "summary": "作者从光年之外裸辞后，两个月写了30万行代码，复盘了长程Agent的真实落地链路：上下文怎么控、Skill/Tool/Memory 怎么服务任务、为什么要用文档协同、为什么评测和真实 user case 比概念更重要。后面还聊到垂直/通用 Agent、一级市场降温、大厂裁员和出海投流。想看一线 AI 创业者怎么自己下场找方向，这篇会带给你启发。",
           "expanded": false,
           "sources": [
             {
@@ -49,13 +64,13 @@
             },
             {
               "name": "原文（飞书）",
-              "url": "https://waytoagi.feishu.cn/wiki/Pk7YwOi3qiyI7Okk61RcBHHGnuh"
+              "url": "https://waytoagi.feishu.cn/wiki/Llp5wTU6OiS64vkMOdFcUcL6nwf"
             }
           ]
         },
         {
-          "headline": "《我复刻了一条 4000 赞的博客首页，开源首页设计 Skill》",
-          "summary": "拆解高赞动态博客首页的设计逻辑：构图、视频运动、可编辑网页内容怎么整合。",
+          "headline": "我复刻了一条 4000 赞的博客首页，开源首页设计 Skill",
+          "summary": "很多人做个人主页、产品首页都会存在一个问题：信息都有，但没记忆点，动效也只是装饰。成峰复刻了一条 4000赞的动态博客首页，核心方法很清晰：先用首图锁住构图，左侧留给标题、按钮和导航，右侧放主体画面；再把首图变成轻微运动的视频；最后用代码把可编辑的网页内容叠上去。最后还把整个流程封装成一个Skill并开源。",
           "expanded": false,
           "sources": [
             {
@@ -69,8 +84,8 @@
           ]
         },
         {
-          "headline": "晚点专访陈冕 66 条语录：LibTV、Lovart、融资、抄袭争议与 AI 应用竞争",
-          "summary": "LibTV 是 LiblibAI 做的一体化 AI 视频创作平台，主打短剧、漫剧、自媒体内容。做 AI 影视方向的话，这份一手访谈值得看创始人怎么判断这条赛道的竞争格局。",
+          "headline": "半年月活涨20倍，ARR破4千万的OpenCode，如何从“完了”到“火了”？",
+          "summary": "做Coding Agent，很多人盯着“哪个模型最强”，但OpenCode的增长提醒我们：选择权本身也能变成产品。OpenCode 不押单一模型，而是把70+模型、价格、上下文和供应商接入整理成可用能力，凭借多模型自由选择的差异化优势快速抢占市场，半年月活从65万冲到1300万。",
           "expanded": false,
           "sources": [
             {
@@ -79,7 +94,37 @@
             },
             {
               "name": "原文（飞书）",
-              "url": "https://waytoagi.feishu.cn/wiki/T5r9w5RBdi2OeekRAdjc3znfnBc"
+              "url": "https://waytoagi.feishu.cn/wiki/PSZOw8b94iAbO1kphYOc772Inac"
+            }
+          ]
+        },
+        {
+          "headline": "为什么今天造大模型的人，一半在学物理",
+          "summary": "现在聊大模型，很多人一头扎进参数、架构和算力。但这篇文章有个很妙的观察：AI核心圈越来越像一份“物理系就业报告”。文章从 Anthropic、Scaling Laws、ImageNet、扩散模型、grokking 等例子切入，拆解了物理训练为什么在今天变得值钱：会把复杂系统压成少数关键变量，会用实验和测量逼出现象，也敢承认理论边界。读完你或许会更理解，大模型正在变成一门研究“人造自然”的实验科学。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/Ld3TwMsQ1iBZUSkHzNGcqmConXc"
+            }
+          ]
+        },
+        {
+          "headline": "别再手动刷X了！我给自己的 X 装了一个会自己找资料的扫描器，开源在了Github。",
+          "summary": "每天在X上刷 AI 信息，最烦的不是看不到好东西，而是刷完就散了：论文、工具、工作流都收藏一堆，回头想找又像大海捞针。作者开源了一个 x-scan Skill，可以让Agent打开独立 Chrome 浏览器扫描X信息流或关键词搜索，按AI相关词初筛，再用Tweet ID去重，最后把作者、正文、数据和链接保存成Markdown，丢进 Obsidian或其他知识库应用。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 7/29",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260729"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/Pk7YwOi3qiyI7Okk61RcBHHGnuh"
             }
           ]
         }

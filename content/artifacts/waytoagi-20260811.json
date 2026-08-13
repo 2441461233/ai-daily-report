@@ -6,15 +6,96 @@
   "sections": [
     {
       "title": "🧭 WayToAGI 知识库精选",
-      "note": "来自 WayToAGI 知识库精选 8/11，按原文日期归档。镜像页正文为 SPA 渲染，本期仅取到首页推荐位条目；飞书原文为虚拟化渲染，抓不到每条独立链接，统一指向近 7 日更新日志原文档，请到 8 月 11 日一节自行点开。",
+      "note": "来自 WayToAGI 知识库精选 8/11，按原文日期归档。",
       "items": [
         {
-          "headline": "《硅谷观察日记｜AI 恐慌退潮》：走访 NYU、CMU、南加大、UCLA、ACCD 后的四点观察",
-          "summary": "作者走访纽约大学、卡内基梅隆、南加大、UCLA、ACCD 后发现，美国高校的 AI 恐慌正在退潮，老师们更关心的是一项作业里哪些步骤能交给 AI、哪些必须学生亲手完成。核心判断：AI 让答案变便宜了，人的判断、过程和责任反而更值钱。对你的映射：教育内容/工具的机会点已从「防作弊」转向「过程可验证」——做能展示学习或创作过程的产品形态，正是 AI 内容时代同样适用的差异化思路。",
+          "headline": "Claude/Codex能跨会话传消息，我重构工作流",
+          "summary": "很多人用Claude/Codex来vibe coding，都会遇到一个很烦的问题。上下文一乱，新想法塞进当前对话会带偏主线，重开一条又要补充背景、重复解释踩过的坑。Claude/Codex能跨会话传消息后，就可以探索所有可行路径还不丢上下文。Codex适合用会话ID精确寻址，Claude Code则更适合按项目、日期、主题搜索历史会话。快来试试！",
           "expanded": false,
           "sources": [
-            { "name": "WayToAGI 精选 8/11", "url": "https://www.waytoagi.com/zh/blog/news-20260811" },
-            { "name": "WayToAGI 近 7 日更新日志（飞书）", "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e" }
+            {
+              "name": "WayToAGI 精选 8/11",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260811"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/AoMvwYVlpiaBtPkm55HcGvxjn2d"
+            }
+          ]
+        },
+        {
+          "headline": "Claude Tag 可能会是下一个现象级 AI 产品。",
+          "summary": "一个月前，Anthropic 在Slack里上线了Claude Tag。阿颖这篇文章把Claude Tag和Claude Code、Codex、OpenClaw放在一起进行了对比，发现Claude Tag或许会是下一个现象级 AI 产品。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/11",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260811"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/OF3IwAy1rip2BKkNGnQcUmITnwf"
+            }
+          ]
+        },
+        {
+          "headline": "Codex Security，开源了！",
+          "summary": "现在用 AI 半天搓个产品上线，已经不稀奇了，但最容易被忽略的往往是安全：权限没收紧、数据库没校验、接口没防护，前期看不出问题，真有流量后就可能变成事故。OpenAI 开源的Codex Security可以直接装成npm包，在项目里扫描漏洞，还会先验证风险、给出位置和修复建议，支持日常检查和深度扫描，也能对比修复前后的结果。产品上线前用它跑一遍，至少能少踩几个安全坑。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/11",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260811"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/Kgu3wTyD3inmRwkmbufcaLzWnWd"
+            }
+          ]
+        },
+        {
+          "headline": "硅谷观察日记｜AI恐慌退潮，分享我走访多所大学后的四点观察",
+          "summary": "作者在走访纽约大学、卡内基梅隆、南加大、UCLA、ACCD后发现，美国高校的 AI 恐慌正在退潮，老师们更关心一项作业里哪些步骤能交给 AI，哪些必须学生亲手完成。AI 让答案变便宜了，人的判断、过程和责任反而更值钱。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/11",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260811"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/FR2WwcGY2iJ0qRkbldLcGokOnxf"
+            }
+          ]
+        },
+        {
+          "headline": "AI 工程师必备的 7 条自改进智能体循环规则",
+          "summary": "智能体会自己写代码、自己改提示词、自己跑循环，看起来越来越聪明；但如果你没先定义什么叫“好”，它很可能只是把分数刷漂亮，真实效果反而变差。来一起看看Google官方的自改进智能体循环是如何避免这一问题的！",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/11",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260811"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/ENInwjmnViH3I4knMO2cmO1PnVg"
+            }
+          ]
+        },
+        {
+          "headline": "从 RAG 到上下文图：9 步路线图",
+          "summary": "这篇文章把从RAG到上下文图的路线拆成 9 步：先找一个RAG答不好的多跳问题，再抽实体和关系、做实体规范化、建正反向边、给边加权并保留来源，最后按路径检索并带引用生成答案。适合做企业知识库、GraphRAG、Agent上下文工程的人看。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/11",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260811"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/XZvOwM99nivQSAkHzsJc261xnhh"
+            }
           ]
         }
       ]

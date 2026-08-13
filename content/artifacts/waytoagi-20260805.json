@@ -6,26 +6,11 @@
   "sections": [
     {
       "title": "🧭 WayToAGI 知识库精选",
-      "note": "来自 WayToAGI 知识库精选 8/5 那一期，按原文日期归档。",
+      "note": "来自 WayToAGI 知识库精选 8/5，按原文日期归档。",
       "items": [
         {
-          "headline": "Higgsfield 开源 95 分钟 AI 长片《Hell Grind》的全部提示词与制作资料",
-          "summary": "制作成本 50 万美元，曾在戛纳电影市场展映，《华尔街日报》、Variety 和 BBC 都报道过，现在整套提示词和相关资料全部公开。对你的映射：这是目前能公开拿到的、最接近工业级的 AI 长片制作档案——分镜逻辑、角色一致性怎么维持、镜头语言怎么用提示词表达，直接照着拆最快。这条是这批回补里对你价值最高的一条，值得单独排时间读完。",
-          "expanded": false,
-          "sources": [
-            {
-              "name": "WayToAGI 精选 8/5",
-              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
-            },
-            {
-              "name": "原文（飞书）",
-              "url": "https://waytoagi.feishu.cn/wiki/OQfOwfLWOiiglCk080QchgpCnGC"
-            }
-          ]
-        },
-        {
-          "headline": "卡兹克开源「活人感写作」skill：从义理、考据、辞章三层去掉 AI 味",
-          "summary": "重点在挖出真实观点和处理叙事节奏，而不是换几个同义词。对你的映射：AIMV 的文案和你自己的对外内容都吃这个——AI 味重是当下最快劝退读者的东西。",
+          "headline": "开源「活人感写作.skill」，只为帮你写出没有AI味的文字。",
+          "summary": "卡兹克开源了他的「活人感写作.skill」，把写作拉回到“义理、考据、辞章”三层：先帮你挖掘真实观点和经历，再处理叙事节奏和AI常见口癖。快来一起试试！",
           "expanded": false,
           "sources": [
             {
@@ -39,8 +24,8 @@
           ]
         },
         {
-          "headline": "抖音 / TikTok 剧情短视频创作 Skill",
-          "summary": "针对平台特性优化，专治「开头不够抓人、节奏太慢、反转生硬」，含可本地运行的剧情创作机制和参考库。",
+          "headline": "抖音/TikTok 剧情短视频创作 Skill",
+          "summary": "市面上的通用写作Agent能写故事，但真正落到抖音剧情时，会出现各种问题：开头不够抓人、节奏太慢、反转生硬、台词不像真人说话，也缺少对达人剧情结构的理解。作者把自己整理的剧情创作机制、检索程序和授权参考库，做成了一套纯本地运行的 Skill。",
           "expanded": false,
           "sources": [
             {
@@ -54,8 +39,8 @@
           ]
         },
         {
-          "headline": "Skill 上下文瘦身：300 多个 skill 怎么分层管理",
-          "summary": "卡尔的做法是按「高频 / 项目级 / 触发级 / 少用但关键」四层分，控制上下文占用。对你的映射：skill 装多了反而会拖慢 agent 并推高 token 成本，这套分层是目前最实用的解法。",
+          "headline": "烧了5亿token后，这是我给codex和claude做Skill上下文瘦身的新技巧！",
+          "summary": "很多人给Agent一路加 Skill，以为能力会越多越强。但卡尔烧了5亿token后发现，300多个Skill每次启动都会先占掉一大截上下文，模型还没干活就被塞满了。他给出一套Skill瘦身方法：按高频、项目级、触发级和少用但关键来分层，把低频能力从全局暴露降到动态加载，适合Codex、Claude重度用户参考。",
           "expanded": false,
           "sources": [
             {
@@ -65,6 +50,51 @@
             {
               "name": "原文（飞书）",
               "url": "https://waytoagi.feishu.cn/wiki/K2CZwSYS4ibVevkvK2icxaftnIe"
+            }
+          ]
+        },
+        {
+          "headline": "Higgsfield 开源了他们95分钟的AI长片《 Hell Grind》所有提示词及相关资料",
+          "summary": "这部作品制作成本为50万美元，曾在戛纳电影市场展映，并获得《华尔街日报》、Variety及BBC新闻的报道。一起来看看他们的制作流程！",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/OQfOwfLWOiiglCk080QchgpCnGC"
+            }
+          ]
+        },
+        {
+          "headline": "Vibe Coding 视觉词典（下篇）：滚动动作、提示加载、视觉风格与高级效果",
+          "summary": "上篇讲清了网页的布局、结构、导航和组件，这篇继续补齐“网页怎么动、怎么反馈、怎么显得更完整”：从滚动出现、视差、进度条、懒加载、骨架屏，到空状态、错误重试、极简/杂志风/玻璃拟态/深色模式，以及 3D、转场、性能和无障碍。读完你会更知道怎么把“把网页做得高级点”拆成具体、可执行、AI能听懂的设计需求。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/NhfOwiWdSiGd23kgTQccLIsinvw"
+            }
+          ]
+        },
+        {
+          "headline": "余一：如何高效 PUA 100 个 Agent 给我卖命~",
+          "summary": "余一把分享了她的高阶 AI 协作思路：用文件夹结构、异步沟通文档、红黄绿灯授权机制，让 AI 自己读资料、做决策、交付PPT/视频等长程任务。更关键的是，她把自己的流程、审美和判断标准压缩成Skill、HTML样本和验收规则，让 AI 越用越像一个懂偏好的执行系统；想从“会用 AI”走到“让 AI 自己干活”，这篇很值得看。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "WayToAGI 精选 8/5",
+              "url": "https://www.waytoagi.com/zh/blog/news-20260805"
+            },
+            {
+              "name": "原文（飞书）",
+              "url": "https://waytoagi.feishu.cn/wiki/VV99wBbamiynOGkkeXUcdPBanEc"
             }
           ]
         }

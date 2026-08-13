@@ -43,7 +43,14 @@
 否则日报能生成但无法自动 commit。
 
 在 **Actions → Daily AI report → Run workflow** 手动跑一次。成功时会新增日报 commit；失败不会写入
-半成品。之后工作流每天 UTC 02:23（上海 10:23）自动运行。GitHub 的 cron 可能延迟几分钟，不保证准点。
+半成品。之后工作流每天 UTC 02:00（上海 10:00）自动运行。GitHub 的 cron 可能延迟几分钟，不保证准点。
+
+工作流会先把 WayToAGI 官方 SSR 镜像的待处理期次完整解析到 `/tmp/waytoagi.json`，并由确定性采集器直接
+生成一对一的 `waytoagi-YYYYMMDD.json` attachment；Agent 不参与改写。每期条数、顺序、标题、摘要和每条
+专属飞书原文 URL 都会经过完整性门禁；任一条缺失或错配时，本轮不会更新消费状态，也不会提交。消费状态
+`content/waytoagi-consumed.txt` 只由已验证 attachment 派生，不需要也不允许手工维护。若上游后来补充或
+修正旧期条目，输入会重新列出该期并刷新对应 WayToAGI attachment；这不会授权覆盖任何主日报。
+采集结果及本轮 WayToAGI 文件清单会在 Agent 启动前做哈希封存，Agent 无法通过同时改输入和产物绕过门禁。
 
 ## 2. 连接 Vercel
 
@@ -69,7 +76,7 @@ Vercel 不需要 Kimi API Key，也不配置 Cron。每次 Daily AI report 推�
 - GitHub **Actions → Daily AI report**：可查看检索/生成日志并手动补跑。
 - Vercel **Deployments**：最新 deployment 应对应日报机器人的 commit。
 - 若当天无 commit，优先看 Daily AI report 日志；质量门会明确报告缺 Secret、来源失败、JSON/URL
-  不合规或 Agent 越界修改。
+  不合规、WayToAGI 归档不完整或 Agent 越界修改。
 
 ## 4. 关闭旧本机任务
 

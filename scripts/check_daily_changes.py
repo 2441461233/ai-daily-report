@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Guard the file changes made by the headless daily-report agent.
 
-The agent may add immutable artifacts and update the three derived/state files.
-Anything else is treated as a failed run before GitHub Actions can commit it.
+The agent may add immutable main reports, add or source-sync validated WayToAGI
+attachments, and update the three derived/state files. Anything else fails the
+run before GitHub Actions can commit it.
 """
 
 from __future__ import annotations
@@ -55,38 +56,48 @@ def main() -> int:
 
     errors: list[str] = []
     changed = {path for _status, path in entries}
-    new_artifacts: list[Path] = []
+    changed_artifacts: list[Path] = []
 
     for status, path in entries:
         if " -> " in path or "R" in status or "C" in status:
             errors.append(f"renames/copies are not allowed: {status} {path}")
             continue
         if path.startswith("content/artifacts/") and path.endswith(".json"):
-            if status != "??":
-                errors.append(f"existing artifacts are immutable: {status} {path}")
+            name = Path(path).name
+            is_waytoagi = WAYTOAGI_NAME.fullmatch(name) is not None
+            if status == "??" or (is_waytoagi and status.strip() == "M"):
+                # Main reports remain immutable. WayToAGI mirrors can publish
+                # additions after an issue first appears, so a validated run may
+                # repair that issue in place. validate_waytoagi_run.py constrains
+                # these edits to the exact structured input fetched this run.
+                changed_artifacts.append(ROOT / path)
             else:
-                new_artifacts.append(ROOT / path)
+                errors.append(f"existing main artifacts are immutable: {status} {path}")
             continue
         if path not in ALLOWED_FILES:
             errors.append(f"agent changed an out-of-scope file: {status} {path}")
         elif "D" in status:
             errors.append(f"state/derived file may not be deleted: {status} {path}")
 
-    if not new_artifacts:
-        errors.append("a non-clean run must add at least one artifact")
-    if new_artifacts and "content/reported.md" not in changed:
+    if not changed_artifacts:
+        errors.append("a non-clean run must add or update at least one artifact")
+    new_artifact_paths = {
+        path for status, path in entries
+        if status == "??" and path.startswith("content/artifacts/") and path.endswith(".json")
+    }
+    if new_artifact_paths and "content/reported.md" not in changed:
         errors.append("new artifacts require a matching content/reported.md update")
-    if new_artifacts and "public/data/reports.json" not in changed:
-        errors.append("new artifacts require a rebuilt public/data/reports.json")
+    if changed_artifacts and "public/data/reports.json" not in changed:
+        errors.append("artifact changes require a rebuilt public/data/reports.json")
 
     today = datetime.now(ZoneInfo("Asia/Shanghai")).date().isoformat()
     main_for_today = False
-    for path in new_artifacts:
+    for path in changed_artifacts:
         match = MAIN_NAME.fullmatch(path.name)
         try:
             artifact = json.loads(path.read_text("utf-8"))
         except Exception as exc:
-            errors.append(f"cannot read new artifact {path.name}: {exc}")
+            errors.append(f"cannot read changed artifact {path.name}: {exc}")
             continue
         declared = str(artifact.get("date", "")).split()[0]
         if match:
@@ -125,7 +136,7 @@ def main() -> int:
     if errors:
         return fail(errors)
     print(
-        f"daily change guard passed: {len(new_artifacts)} new artifact(s), "
+        f"daily change guard passed: {len(changed_artifacts)} changed artifact(s), "
         f"{len(entries)} changed file(s)"
     )
     return 0

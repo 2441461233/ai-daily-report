@@ -8,6 +8,7 @@ and content/links.json backfills URLs for those compressed entries.
 import json
 import re
 import sys
+from copy import deepcopy
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -60,6 +61,7 @@ RULES = [
                     "Opus", "Muse", "Seed", "Om AI", "Stability", "Cloudflare", "Neon", "YC"]),
 ]
 FALLBACK = "其他动态"
+WAYTOAGI_SECTION = "🧭 WayToAGI 知识库精选"
 
 
 def classify(text: str) -> str:
@@ -300,6 +302,43 @@ def apply_attachments(issues: list, attachments: list) -> list:
     return issues
 
 
+def surface_latest_waytoagi(issues: list, attachments: list) -> list:
+    """Also show the newest WayToAGI issue on the site's latest report.
+
+    Attachments remain filed under their original publication date, but the
+    upstream mirror often trails our daily report by a day or two. Without this
+    small latest-view copy, a successful late sync is effectively invisible on
+    the homepage and looks like a failed crawl.
+    """
+    candidates = [
+        (attachment, section)
+        for attachment in attachments
+        for section in attachment.get("sections", [])
+        if section.get("title") == WAYTOAGI_SECTION
+    ]
+    if not issues or not candidates:
+        return issues
+
+    attachment, section = max(
+        candidates,
+        key=lambda pair: (pair[0].get("date", ""), pair[0].get("generatedAt", "")),
+    )
+    latest = issues[-1]
+    if any(item.get("title") == WAYTOAGI_SECTION for item in latest.get("sections", [])):
+        return issues
+
+    surfaced = deepcopy(section)
+    source_date = attachment["date"]
+    month = int(source_date[5:7])
+    day = int(source_date[8:10])
+    surfaced["note"] = (
+        f"WayToAGI 上游最新可用一期为 {month}/{day}，已完整同步 "
+        f"{len(surfaced.get('items', []))} 条；内容同时按原文日期归档。"
+    )
+    latest["sections"].append(surfaced)
+    return issues
+
+
 def main() -> int:
     links_db = json.loads(LINKS_FILE.read_text("utf-8")) if LINKS_FILE.is_file() else {}
 
@@ -328,6 +367,7 @@ def main() -> int:
 
     issues.sort(key=lambda r: (r["date"], r.get("startedAt") or ""))
     issues = apply_attachments(issues, attachments)
+    issues = surface_latest_waytoagi(issues, attachments)
 
     # per-day seq, slugs, global issue numbers, weekday
     seen = {}

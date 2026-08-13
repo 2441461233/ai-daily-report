@@ -13,23 +13,19 @@ NAME = re.compile(r"^waytoagi-(\d{8})\.json$")
 
 
 def main() -> int:
-    existing = set()
-    if STATE.is_file():
-        existing = {line.strip() for line in STATE.read_text("utf-8").splitlines() if line.strip()}
     attached = {
         match.group(1)
         for path in ARTIFACTS.glob("waytoagi-*.json")
         if (match := NAME.fullmatch(path.name))
     }
-    merged = existing | attached
-    rendered = "".join(f"{stamp}\n" for stamp in sorted(merged))
+    rendered = "".join(f"{stamp}\n" for stamp in sorted(attached))
     if not STATE.is_file() or STATE.read_text("utf-8") != rendered:
         temp = STATE.with_suffix(".tmp")
         temp.write_text(rendered, "utf-8")
         temp.replace(STATE)
-        print(f"synced WayToAGI state: {len(merged)} consumed date(s)")
+        print(f"synced WayToAGI state: {len(attached)} consumed date(s)")
     else:
-        print(f"WayToAGI state already current: {len(merged)} consumed date(s)")
+        print(f"WayToAGI state already current: {len(attached)} consumed date(s)")
     return 0
 
 

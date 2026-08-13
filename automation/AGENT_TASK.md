@@ -16,9 +16,12 @@
 6. 每个上海自然日只生成一份主日报。若 `content/artifacts/` 已有当天的 `YYYY-MM-DD-N.json`，
    本轮不得再生成主日报，只处理尚未消费的 WayToAGI 补录；若补录也没有，直接幂等结束。
    首次生成时文件名为 `content/artifacts/YYYY-MM-DD-N.json`，`N` 取当天历史序号的下一个值。
-   不得覆盖已提交 artifact；同一事件不得因任务重跑而重复。
+   不得覆盖已提交的主日报 artifact；同一事件不得因任务重跑而重复。确定性采集器可能已在本轮开始前，
+   为 `/tmp/waytoagi.json` 明确列出的期次新建或刷新 WayToAGI attachment；Agent 不得重写这些文件。
 7. 写完日报和 `content/reported.md` 后即可结束。外层工作流会同步 WayToAGI 状态、运行验证和构建；
    验证失败则整次运行不提交。不能为了通过验证而删除历史内容或放宽规则。
+8. WayToAGI 是确定性采集的完整归档，不适用主日报的语义筛选、跨期去重或条数配额。外层质量门会把
+   `/tmp/waytoagi.json` 与 attachment 逐期逐条核对；任一期不完整时整次运行失败，且不消费、不提交。
 
 ---
 
@@ -78,13 +81,46 @@ InfoQ 中文，以及阿里通义、字节 Seed、腾讯混元、DeepSeek、月�
 
 ### 3.4 WayToAGI 知识库精选
 
-它每天发布但镜像常滞后数日，缺失日期会返回 HTTP 500。外层工作流已把探测结果写到
-`/tmp/waytoagi.txt`，直接用 Read 读取；每行是 `YYYYMMDD<TAB>URL`。对每个 URL 用 FetchURL 取条目并
-经过同样的语义去重。首页是 SPA，不要用
-首页抓正文。内容按**原文日期**单独归档，不能写进今天主 artifact，格式见第 6 节。
+WayToAGI 通常每天发布，但官方镜像可能滞后数日；尚未发布的日期会返回 HTTP 500。镜像期次页是
+**服务端渲染（SSR）的完整 HTML，不是 SPA**。确定性采集器负责发现期次、解析正文，并在 Agent 启动前
+同时写好 `/tmp/waytoagi.json` 与对应 attachment；不要再次 FetchURL 抓镜像或飞书页面，也不要从首页推荐位、
+metadata 或模型记忆补全。
 
-不要直接修改 `content/waytoagi-consumed.txt`。外层工作流只会在 attachment 成功写入后，从 artifact
-文件名确定性地同步消费状态。
+直接用 Read 完整读取 `/tmp/waytoagi.json`。顶层结构是：
+
+```json
+{
+  "schemaVersion": 1,
+  "sourceIndex": "https://www.waytoagi.com/zh/blog",
+  "generatedAt": "2026-08-13T10:00:00+08:00",
+  "issues": [
+    {
+      "stamp": "20260811",
+      "date": "2026-08-11",
+      "sourceUrl": "https://www.waytoagi.com/zh/blog/news-20260811",
+      "sourceItemCount": 6,
+      "items": [
+        {
+          "title": "……",
+          "summary": "……",
+          "url": "https://waytoagi.feishu.cn/wiki/..."
+        }
+      ]
+    }
+  ]
+}
+```
+
+对 `issues` 中每一期，先核对采集器已写好的 attachment，然后把每条标题追加到 `content/reported.md`。
+源中有几条，attachment 就必须有几条，顺序、`headline`、`summary` 和 item-specific 飞书 URL 都与输入逐字
+一致；不得让模型润色、筛选、合并、删减或拆分，也不得把 WayToAGI 条目写入今天的主 artifact。任何不一致
+都应失败退出，不要尝试自行修补或再次抓取。artifact 格式见第 6 节。
+
+不要直接修改 `content/waytoagi-consumed.txt`。消费状态只由已通过完整性门禁的
+`content/artifacts/waytoagi-YYYYMMDD.json` 派生；输入期次缺少 attachment、条数不等、顺序/标题映射错误、
+原文 URL 不匹配或输入本身结构不完整时，必须让质量门失败，整次运行不消费也不提交。上游偶尔会让两个
+不同条目共用同一个飞书 URL；此时仍按两个正文条目分别归档，不能按 URL 去重。不得手工推进、保留
+孤立状态或以 `content/reported.md` 代替 attachment。
 
 ### 3.5 GitHub Trending
 
@@ -155,7 +191,11 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
 
 ## 6. 按原文日期归档（WayToAGI）
 
-每个已消费期次写 `content/artifacts/waytoagi-YYYYMMDD.json`：
+确定性采集器已把 `/tmp/waytoagi.json` 中每个 issue 写成
+`content/artifacts/waytoagi-YYYYMMDD.json`。输入既可能包含尚未归档的新期次，也可能包含已有 attachment、
+但上游后来增加、删除或修正条目的旧期次；采集器只会刷新输入明确列出的对应文件。Agent 必须保持这些文件
+不变，只做读取核对和 `content/reported.md` 归档，不得借机改动其他历史 attachment，更不得覆盖主日报。
+attachment 的 `items` 数量严格等于 `sourceItemCount`，且顺序、标题、摘要和原文 URL 与输入逐条完全一致。
 
 ```json
 {
@@ -183,8 +223,15 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
 }
 ```
 
-每条必须同时保留 WayToAGI 期次页和飞书原文两个来源。`attachTo` 让构建器把它追加到对应日期；目标日
-没有主日报时，它会成为 `补录` 期。
+每条必须同时保留两个来源：第一个是该 issue 的 `sourceUrl`；第二个是该输入 item 的专属飞书 `url`。
+不得把多条内容统一改成近 7 日更新日志 URL，也不得用期次页替代 item-specific 原文 URL；但如果输入中
+两个不同正文条目因上游数据问题恰好共用同一 item URL，仍须分别保留。归档顺序、标题映射和条数
+必须与输入一致；不做语义筛选、去重、合并或删减。`attachTo` 让构建器把它追加到对应日期；目标日没有
+主日报时，它会成为 `补录` 期。
+
+外层完整性门禁会将 `/tmp/waytoagi.json` 和所有新建或刷新的 attachment 逐期逐条比较。只要有一个 issue
+缺失，或任一条的标题、摘要、顺序、来源 URL、计数不一致，就失败退出；不得提交部分归档。门禁通过后，
+外层才从当前 attachment 集合重新派生 `content/waytoagi-consumed.txt`，因此 attachment 是消费状态的唯一真源。
 
 ---
 
@@ -198,7 +245,9 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
 - YYYY-MM-DD | 事件关键词（含关键数字与来源媒体名）
 ```
 
-一行一条，覆盖主日报和本轮 WayToAGI 新增的全部条目。不要粘贴长摘要，但关键词要足够支持下一轮语义去重。
+一行一条，覆盖主日报和本轮 WayToAGI 新增的全部条目。不要粘贴长摘要，但关键词要足够支持主日报下一轮
+语义去重。注意：`content/reported.md` 只用于主日报去重和检索记录，不是 WayToAGI 的消费状态，也不得据此
+跳过 `/tmp/waytoagi.json` 中的任何条目。
 
 ---
 
@@ -207,5 +256,6 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
 - 不得编造新闻、数字、链接、人名；抓不到就不写。
 - 价格、融资、模型参数、榜单等关键事实优先官方来源，并尽量双源交叉验证。
 - 任何来源失败都要在最终运行摘要中说明；全部核心源失败则让任务失败，不推进状态。
+- WayToAGI 输入与 attachment 必须逐期逐条一对一完整匹配；完整性门禁失败时不消费、不提交任何本轮改动。
 - 你结束时的 `git diff` 中不得出现第 0 节允许范围以外的文件。
 - 写入完成后只输出：新增期号、条数、WayToAGI 补录日期、失败来源；不要复述全文。
