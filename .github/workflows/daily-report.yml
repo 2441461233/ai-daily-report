@@ -1,9 +1,9 @@
 name: Daily AI report
 
 on:
-  # GitHub schedules use UTC. 02:23 UTC is 10:23 in Asia/Shanghai.
+  # GitHub schedules use UTC. 02:00 UTC is 10:00 in Asia/Shanghai.
   schedule:
-    - cron: '23 2 * * *'
+    - cron: '0 2 * * *'
   workflow_dispatch:
 
 permissions:
