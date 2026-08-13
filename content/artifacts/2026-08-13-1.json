@@ -1,0 +1,246 @@
+{
+  "date": "2026-08-13 星期四",
+  "label": "第十二期",
+  "generatedAt": "2026-08-13T11:10:00+08:00",
+  "oneLiner": "📌 今日一句话：开源旗舰集中落子——Qwen3.8-2.4T 权重开源、DeepSeek V4 Pro-0813 上线 API，而 Suno 与 BMG 和解把 AI 音乐的合规分发通道又拓宽一格。本周最值得做的两件事：用新权重/新 API 重跑你的成本-质量基线，把创作分发切换进「已授权、可验证」的轨道。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "DeepSeek V4 Pro-0813 上线：API 默认模型已切换，冲上 HN 热榜第一（770+ 分）",
+          "summary": "DeepSeek API 文档确认：deepseek-v4-pro 已更新为 DeepSeek-V4-Pro-0813，调用方式不变、自动指向最新版；deepseek-v4-flash 上月末已更新至 0731 版本，保持着约两周一更的节奏。社区热度同步爆发——相关帖以 770+ 分登上 Hacker News 榜首，OpenRouter 已上架。值得注意的是时点：DeepSeek 上周刚预告「近期整体上调 API 定价、预计涨幅较大」，新版本抢在调价前释出，先锁定口碑再谈价格的意图明显。对你的映射：如果你在用 DeepSeek 跑 agent 或内容流水线，本周就做两件事——用同一组评测任务对比 0731→0813 的质量差，确认是否值得锁版本；同时把 API 用量账单拉出来，按预告的涨幅估算调价后的月成本，提前决定要不要备选 Qwen3.8 开源自托管方案对冲。",
+          "expanded": true,
+          "sources": [
+            { "name": "DeepSeek API 文档", "url": "https://api-docs.deepseek.com/" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        },
+        {
+          "headline": "【进展】阿里兑现承诺：Qwen3.8-2.4T-A95B 旗舰权重开源（2.4T MoE / 激活约 95B），FP8/GGUF 衍生版同日跟进",
+          "summary": "8/4 发布时预告「旗舰下周开源」的 Qwen3.8-2.4T-A95B 已上架 Hugging Face，官方同步放出 FP8 版；unsloth GGUF、AMD Quark MXFP4、多档 NVFP4 量化等社区衍生在 24 小时内出现，HN 相关帖 500+ 分。这是目前参数规模最大的开源权重模型之一，本地/私有部署天花板再次被抬高。",
+          "expanded": false,
+          "sources": [
+            { "name": "Hugging Face（官方权重）", "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B" },
+            { "name": "Hugging Face（FP8 版）", "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8" }
+          ]
+        },
+        {
+          "headline": "Made by Google 2026：Pixel 11 系列 + Pixel Watch 5 发布，Gemini 全面接管硬件体验",
+          "summary": "Google 年度硬件发布会落子：新 Pixel 手机组合与 Pixel Watch 5 登场，官方博客首页已全量切换。The Verge 汇总要点包括端侧离线 Gemini、主动式 AI 建议、地图与健康功能更新（手表含胰岛素抵抗趋势追踪），部分新品涨价 50 美元。Google VP Josh Woodward 同日披露：Android 上 Gemini 已能跨 40+ 主流应用自动执行操作。AI 助手的分发战争已经打到操作系统默认入口层。",
+          "expanded": false,
+          "sources": [
+            { "name": "Google 官方博客", "url": "https://blog.google/" },
+            { "name": "Josh Woodward on X", "url": "https://x.com/joshwoodward/status/2087223960807330234" }
+          ]
+        },
+        {
+          "headline": "Manus 恢复独立运营：Meta 20 亿美元收购案被中国监管阻断后正式拆伙",
+          "summary": "The Verge 8/11 报道，Meta 去年以 20 亿美元收购的 agentic AI 公司 Manus 宣布「回归独立公司运营」，原因是交易被中国方面阻断；Meta 此前已把部分 Manus 工具整合进自家平台。量子位 8/12 晚以「刚刚，Manus恢复独立运营」跟进。跨境 AI 并购的监管否决开始实质改写公司命运，也给 agent 赛道的退出路径加了新的不确定性变量。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" },
+            { "name": "量子位", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "Lovable 完成 4 亿美元 C 轮，估值 133 亿美元：vibe coding 平台进入「经营生意」叙事",
+          "summary": "Lovable 官方博客 8/12 宣布 C 轮融资 4 亿美元，估值 133 亿美元，Menlo Ventures 领投、EQT 管理的 Scaleup Europe Fund 参投，融资口径是「帮助人们经营自己的生意」而非「写代码」。同期其博客还在推「模型无关」与 Cerebras 推理基础设施合作——vibe coding 头部玩家正在从工具转型为小企业操作系统。",
+          "expanded": false,
+          "sources": [
+            { "name": "Lovable 官方博客", "url": "https://lovable.dev/blog" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Suno 与 BMG 达成「全球联盟」：opt-in 授权 + 补偿创作人，并一次性和解既往使用",
+          "summary": "The Verge 8/12 报道，Suno 与全球大型独立音乐公司 BMG 宣布达成全球联盟：共同开发「重塑艺人与粉丝连接方式」的新音乐体验；选择参与的 BMG 艺人与词曲作者权利受保护并获得补偿，协议同时和解了此前对 BMG 录音与词曲版权的使用。这是继三大唱片全部以 opt-in 模式入局（8/9 已报）之后，AI 音乐版权和解潮向独立厂牌阵营的延伸——「既往和解 + 未来 opt-in 分成」已经成为标准模板。对你的映射：AI 音乐/AIMV 的合规发行通道正在快速成型——选工具链时优先用已进入「已和解生态」的平台（Suno 这类），并在作品发布时主动保留授权与披露凭证；反过来，纯灰色训练数据的工具议价能力会持续被压缩，别把流水线押在它们身上。",
+          "expanded": true,
+          "sources": [
+            { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" },
+            { "name": "Music Business Worldwide", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        },
+        {
+          "headline": "【进展】Seedance 2.5 被报道显著强化版权识别：检测到侵权提示会直接拒绝生成",
+          "summary": "The Verge 转引 Deadline 报道称，字节 Seedance 2.5 除长片段生成与可连续剪辑两大升级外，对「基于版权素材生成内容」的提示识别与拒绝能力明显增强。AI 视频头部模型开始把版权合规做成模型级能力，而不只是平台审核——影视二创、明星脸玩法的路会越走越窄。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Verge（转引 Deadline）（单一来源）", "url": "https://www.theverge.com/ai-artificial-intelligence" }
+          ]
+        },
+        {
+          "headline": "Suno 声音克隆工具 Voices 上线 iOS/Android，并向免费用户开放限量版",
+          "summary": "MBW 报道，Suno 把声音克隆工具 Voices 带到移动端：用户录制或上传自己唱歌的音频，即可生成以其声音演唱的新歌；免费用户获得限量额度。声音克隆从「专业功能」下放为「免费漏斗」，配合黑胶、移动端，Suno 正在把创作门槛一层层拆掉。",
+          "expanded": false,
+          "sources": [
+            { "name": "Music Business Worldwide（单一来源）", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        },
+        {
+          "headline": "YouTube 新创作者变现门槛翻倍：2027 年 2 月起需 8000 观看小时（Shorts 需 90 天 2000 万播放）",
+          "summary": "MBW 报道，2027 年 2 月 1 日起新申请 YouTube 合作伙伴计划的创作者需累计约 8000 观看小时（现为 4000 的两倍）或 90 天内 2000 万合格 Shorts 播放。平台在 AI 内容洪水下抬高商业化闸门：存量频道不受影响，但新账号冷启动的变现周期被显著拉长。",
+          "expanded": false,
+          "sources": [
+            { "name": "Music Business Worldwide（单一来源）", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Claude Code 负责人 Boris Cherny：LLM 的 bug 已经从 off-by-one 变成系统设计、UI 可用性和上下文缺失",
+          "summary": "Boris Cherny 观察：模型还在产出 bug，但类型变了——低级语法错误少了，系统设计缺陷、可用性问题、缺全局上下文的错误多了；某些编码已被解决，远非全部。他的对策是对抗式代码审查（adversarial code review），简单到一行 prompt「用动态工作流在 iOS 模拟器里对抗测试每个边界 case」，或用 Claude 内置 /code-review（可选 low/medium 档）。对你的映射：本周把「对抗式自审」作为固定一步加进你的 agent 工作流——不是让模型写得更小心，而是专门派一个 reviewer 角色去找系统设计层面的错。",
+          "expanded": false,
+          "sources": [
+            { "name": "Boris Cherny on X", "url": "https://x.com/bcherny/status/2087284684103537011" }
+          ]
+        },
+        {
+          "headline": "Meta AI 高级总监 Madhu Guru：大钱在「开源权重 × 无聊垂直行业」，选一个 size×domain 组合扎进去",
+          "summary": "Madhu Guru 判断：让开源权重模型在无聊、具体的商业领域做到极致，会非常赚钱——中端市场法律、SMB 零售、企业物流任选，往深里做。大云厂有基础设施，但缺乏把一个行业的模型做到极致的领域深度、草莽劲和意志力，「这就是你的机会」。对你的映射：这与 Qwen3.8-2.4T 开源同日发生并非巧合——可私有部署的旗舰权重 + 一个你懂的垂直行业，就是一人公司今年最清晰的入场公式。",
+          "expanded": false,
+          "sources": [
+            { "name": "Madhu Guru on X", "url": "https://x.com/realmadhuguru/status/2087198985685750013" }
+          ]
+        },
+        {
+          "headline": "Box CEO Aaron Levie：AI agent 落地没有现成工作流可抄，FDE（前置部署工程师）正当时且不会消失",
+          "summary": "Levie 转发并长评一篇 FDE 文章：AI 的本质是把非确定性、快速变化的系统塞进从未被自动化过的工作流——「2026 年你要做一个会计 agent，根本没有既定工作流，因为没人用过这东西，客户自己也说不出要什么」。所以深度定制、持续 eval、跟随模型迭代都是真实且长期存在的工作，「Great time to be an FDE」。对你的映射：一人公司卖「agent 落地服务」比卖标准 SaaS 更贴近当下的真实需求——把你给自己搭的那套工作流产品化，按行业打包出售，是本月就可试的方向。",
+          "expanded": false,
+          "sources": [
+            { "name": "Aaron Levie on X", "url": "https://x.com/levie/status/2087385493684335064" }
+          ]
+        },
+        {
+          "headline": "Pitchfork 给 Tyga 的 AI 专辑打出 0.0 分——20 年来首个零分，评语警告「听一次都是在鼓励行业再犯」",
+          "summary": "The Verge 8/12 报道，Tyga 承认在 80 年代 synth-pop 风专辑《$TARFACE》中使用 AI，Pitchfork 给出 0.0 分——上一次零分还是 2006 年 Jet 的《Shine On》。乐评措辞极重：「哪怕出于好奇听一次，都可能让它盈利、从而鼓励行业再干这种事。」继 Spotify 隔离 AI Persona 之后，评论界开始用评分体系公开处刑 AI slop。对你的映射：做 AI 音乐内容时，「AI 含量」本身已不是卖点而是风险敞口——把真人创作痕迹（演唱、演奏、制作故事）做成可展示资产。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Verge（单一来源）", "url": "https://www.theverge.com/ai-artificial-intelligence" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "中科院紫东太初推出 GMC 核心集剪枝：免训练砍掉 80% token，多模态能力「满血保真」",
+          "summary": "量子位 8/12 收录：中国科学院自动化研究所紫东太初团队提出 GMC 核心集剪枝方法，免训练、开箱即用，在减少约 80% 视觉 token 的情况下保持多模态理解能力不掉。解决什么问题：多模态模型的推理成本大头在视觉 token；对产品的意义：视频理解、多图 agent 这类吃 token 的场景，成本结构有继续下探的空间。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "国产具身智能创纪录：自变量以 30% 成本跑赢 Figure AI 45% 效率，一小时拣 1816 件异形包裹",
+          "summary": "量子位 8/12 报道，自变量机器人的具身模型在异形包裹分拣任务中一小时完成 1816 件，号称以 30% 的成本实现比 Figure AI 高 45% 的效率，关键在于「具身大脑」而非本体。模型路线趋同之后，物理 AI 的胜负手转向任务理解与规划层——这一层恰恰也是 agent 软件人够得着的位置。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "AI 倒查论文 100 年：99.2% 的顶刊文献被检出存在问题（8/11 消息）",
+          "summary": "量子位 8/11 收录：一项用 AI 系统回扫百年顶刊论文的工作显示，99.2% 的顶刊论文都能被找出问题。对做产品的人：文献审计、引用体检是科研工具里罕见的「供给端无限」场景——大学、出版社、药企都是潜在买单方，且 AI 把单次审计成本打到了接近零。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "note": "本期风向：agent 编排与控制面继续霸榜——omnigent 主打「换 harness 不重写」、centaur 把 frontier 级 agentic 基建做成自托管、macro 把团队工作区交给共享 AI 记忆；创作生产链开源化提速（LTX-2 官方推理+LoRA 训练包、ppt-master 原生 PPT、diagram-design 图表 skill 同榜）；14MB 端侧模型 needle 上榜，小模型下沉叙事延续。连日霸榜旧面孔（orca、paperclip、semantica、MediaCrawler、anthropics/skills、OpenMontage、DeepTutor 等）已按存档去重。",
+      "items": [
+        {
+          "headline": "Lightricks/LTX-2：音画同步生成模型 LTX-2 的官方推理 + LoRA 训练包开源（总榜/Python 榜双在榜）",
+          "summary": "LTX-2 是 Lightricks 的音频-视频联合生成模型，这个仓库是官方 Python 推理与 LoRA 微调包。做 AIMV/AI 短片的人可以本地推理并按自己的风格 LoRA 微调——创作工具链里「可私有微调的视频模型」又多一个正经选项。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub Trending", "url": "https://github.com/Lightricks/LTX-2" }
+          ]
+        },
+        {
+          "headline": "omnigent-ai/omnigent：开源 agent 元 harness——编排 Claude Code/Codex/Cursor，换 harness 不用重写",
+          "summary": "定位 meta-harness：统一编排多家 coding agent 与自定义 agent，内置策略执行与沙箱，支持从任意设备实时协作。直击当下痛点——agent 工具每半年一换（Boris Cherny 语），工作流不该跟着陪葬。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub Trending", "url": "https://github.com/omnigent-ai/omnigent" }
+          ]
+        },
+        {
+          "headline": "paradigmxyz/centaur：Paradigm 出品的自托管 agentic 基础设施，「像 Claude Tag 的开源加强版」",
+          "summary": "主打「你拥有的 frontier 级 agentic 基建」：把大厂托管 agent 的能力以开源形态拿回自己手里。与 omnigent 同榜说明一件事——agent 的控制权/可迁移性正在成为开源社区的主战场。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub Trending", "url": "https://github.com/paradigmxyz/centaur" }
+          ]
+        },
+        {
+          "headline": "macro-inc/macro：邮件/聊天/文档/任务/agent/通话/CRM 合一的团队工作区，@-链接 + 共享 AI 记忆",
+          "summary": "把团队所有协作对象用 @ 链接在一起，并配上跨对象的共享 AI 记忆。值得 PM 关注的是它的赌注：AI 时代的协作工具不是「给旧工具加 AI」，而是围绕 AI 可读的记忆层重造整个工作区。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub Trending", "url": "https://github.com/macro-inc/macro" }
+          ]
+        },
+        {
+          "headline": "cathrynlavery/diagram-design：给 Claude Code 的 29 种编辑级图表 skill，自包含 HTML+SVG",
+          "summary": "明确拒绝 Mermaid 风格和阴影堆砌，输出杂志编辑水准的图表。对做内容/写周报/出方案的人是开箱即用的小利器——skill 生态正在从「工程提效」外溢到「表达提效」。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub Trending", "url": "https://github.com/cathrynlavery/diagram-design" }
+          ]
+        },
+        {
+          "headline": "cactus-compute/needle：14MB 端侧基础模型，目标手机/穿戴/智能家居/机器人",
+          "summary": "把基础模型压到 14MB 跑在极小设备上。与上周「中文模型跑进 ESP32-S3」的社区实践同向——端侧智能的可行边界在快速外推，硬件 Zero-Shot 场景的想象力留给做产品的人。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub Trending", "url": "https://github.com/cactus-compute/needle" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Codex 与 ChatGPT 桌面版登陆 Linux（preview）：Ubuntu/Debian/Fedora，含 Chat / Work / Codex",
+          "summary": "OpenAI Codex 负责人 Thibault Sottiaux 宣布 Codex 与 ChatGPT 桌面版正式支持 Linux，The Verge 确认为 preview 版、首批覆盖 Ubuntu/Debian/Fedora，打包 Chat、Work 与 Codex 三件套。Linux 开发机第一次成为 agentic 桌面工具的一等公民。对你的映射：如果你的主力机是 Linux，本周可以把 agentic 工作流从终端 CLI 扩到桌面应用层，实测三件套在本地项目上的衔接是否真比 CLI 顺。",
+          "expanded": false,
+          "sources": [
+            { "name": "Thibault Sottiaux on X", "url": "https://x.com/thsottiaux/status/2087254026232775052" },
+            { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" }
+          ]
+        },
+        {
+          "headline": "Indie Hackers 热帖：花一个月给两个站做 GEO（AI 引用优化），结果零流量——诊断帖引发共鸣",
+          "summary": "一位开发者复盘：按 GEO 最佳实践优化两个网站一个月，来自 AI 引用的流量为零，并给出自己的失败诊断。在「AI 搜索是下一个 SEO」的淘金叙事里，这是一盆难得的冷水：AI 引用优化目前远不是可复制的获客渠道。对你的映射：本周审视你的获客假设——别把预算押在 GEO 课程和工具上，先把传统搜索词（见下条）和社区分发做扎实，让 AI 引用当增量而不是主线。",
+          "expanded": false,
+          "sources": [
+            { "name": "Indie Hackers（单一来源）", "url": "https://www.indiehackers.com/" }
+          ]
+        },
+        {
+          "headline": "SEO 实战案例：一个 $350K 体量高尔夫 App 的 24% 流量来自「what is a calcutta」——为问题排名，而非为产品名排名",
+          "summary": "Indie Hackers 帖子拆解：一个高尔夫赛事 App 近四分之一流量来自一个规则科普词。用户带着问题来，而不是带着产品名来——长尾问题词仍是小团队成本最低的精准流量入口，且在 AI 摘要时代依然成立。对你的映射：本周用 Search Console 找出你所在领域被搜索但没人好好回答的 10 个问题，用 AI 批量产出真正解决问题的页面/短视频，把「问题词 → 产品」的管道先建起来。",
+          "expanded": false,
+          "sources": [
+            { "name": "Indie Hackers（单一来源）", "url": "https://www.indiehackers.com/" }
+          ]
+        }
+      ]
+    }
+  ]
+}

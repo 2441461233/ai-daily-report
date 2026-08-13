@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-11",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-11",
+  "generatedAt": "2026-08-11T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/11，按原文日期归档。镜像页正文为 SPA 渲染，本期仅取到首页推荐位条目；飞书原文为虚拟化渲染，抓不到每条独立链接，统一指向近 7 日更新日志原文档，请到 8 月 11 日一节自行点开。",
+      "items": [
+        {
+          "headline": "《硅谷观察日记｜AI 恐慌退潮》：走访 NYU、CMU、南加大、UCLA、ACCD 后的四点观察",
+          "summary": "作者走访纽约大学、卡内基梅隆、南加大、UCLA、ACCD 后发现，美国高校的 AI 恐慌正在退潮，老师们更关心的是一项作业里哪些步骤能交给 AI、哪些必须学生亲手完成。核心判断：AI 让答案变便宜了，人的判断、过程和责任反而更值钱。对你的映射：教育内容/工具的机会点已从「防作弊」转向「过程可验证」——做能展示学习或创作过程的产品形态，正是 AI 内容时代同样适用的差异化思路。",
+          "expanded": false,
+          "sources": [
+            { "name": "WayToAGI 精选 8/11", "url": "https://www.waytoagi.com/zh/blog/news-20260811" },
+            { "name": "WayToAGI 近 7 日更新日志（飞书）", "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e" }
+          ]
+        }
+      ]
+    }
+  ]
+}

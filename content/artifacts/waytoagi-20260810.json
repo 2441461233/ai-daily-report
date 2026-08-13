@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-10",
+  "label": "WayToAGI 精选",
+  "attachTo": "2026-08-10",
+  "generatedAt": "2026-08-10T23:59:00+08:00",
+  "sections": [
+    {
+      "title": "🧭 WayToAGI 知识库精选",
+      "note": "来自 WayToAGI 知识库精选 8/10，按原文日期归档。镜像页正文为 SPA 渲染，本期仅取到首页推荐位条目；飞书原文为虚拟化渲染，抓不到每条独立链接，统一指向近 7 日更新日志原文档，请到 8 月 10 日一节自行点开。",
+      "items": [
+        {
+          "headline": "WayToAGI 成都新据点 8/14 开园：科梦 OPC 社区落地白鹭湾，继北京亦庄之后第二个线下 OPC 社区",
+          "summary": "WayToAGI 与成都传媒产业集团旗下红星传媒合作打造的成都科梦 OPC 社区，8 月 14 日在白鹭湾开园，已开放报名。这是 WayToAGI 继北京亦庄之后的第二个线下一人公司（OPC）社区。对你的映射：线下 OPC 社区正在从北京向新一线城市复制——如果你在成都或周边，8/14 开园是去面基同行、验证一人公司想法的低成本机会。",
+          "expanded": false,
+          "sources": [
+            { "name": "WayToAGI 精选 8/10", "url": "https://www.waytoagi.com/zh/blog/news-20260810" },
+            { "name": "WayToAGI 近 7 日更新日志（飞书）", "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -202,3 +202,27 @@
 - 2026-08-12 | Vercel Sandbox 出口防火墙转免费：microVM 隔离 + 网络出口管控防 agent 出格（Rauch on X）
 - 2026-08-12 | Indie Hackers：Leave Me Alone 一年 $12.4k 收入、MRR $138、推荐转化 8%（真实小产品基准）
 - 2026-08-12 | Solo-Founder Playbook：$1M ARR 四路径（纯 solo 70% 毛利 / +外包 / 小团队 / 3-6x ARR 出售）（Viblo）
+
+## 2026-08-13（第十二期）
+
+- 2026-08-13 | DeepSeek V4 Pro-0813 上线：API 默认 deepseek-v4-pro 已指向 0813（Flash 上月更 0731），HN 热榜第一 770+ 分、OpenRouter 上架；时值 API 涨价预告窗口（DeepSeek API 文档/HN）
+- 2026-08-13 | 进展：阿里开源 Qwen3.8-2.4T-A95B 旗舰权重（2.4T MoE/激活约 95B），官方 FP8 + unsloth GGUF/AMD Quark 衍生同日跟进，HN 515 分（Hugging Face）
+- 2026-08-13 | Made by Google 2026：Pixel 11 系列 + Pixel Watch 5 发布，端侧离线 Gemini/主动建议/手表胰岛素抵抗趋势，部分新品涨价 50 美元；Gemini 可跨 40+ 应用操作（blog.google/Josh Woodward/The Verge）
+- 2026-08-13 | Manus 恢复独立运营：Meta 20 亿美元收购案被中国监管阻断后拆伙（The Verge 8/11/量子位）
+- 2026-08-13 | Lovable C 轮 4 亿美元、估值 133 亿美元（Menlo Ventures 领投、EQT Scaleup Europe Fund 参投），叙事转向「经营生意」（官方博客 8/12）
+- 2026-08-13 | Suno×BMG 全球联盟：opt-in 授权补偿创作人 + 和解既往使用，独立厂牌阵营入局（The Verge/MBW）
+- 2026-08-13 | 进展：Seedance 2.5 版权识别增强，侵权提示直接拒绝生成（The Verge 转引 Deadline，单一来源）
+- 2026-08-13 | Suno Voices 声音克隆上线 iOS/Android，免费用户限量开放（MBW，单一来源）
+- 2026-08-13 | YouTube 新创作者 YPP 变现门槛 2027/2/1 起翻倍至 8000 观看小时（Shorts 90 天 2000 万）（MBW，单一来源）
+- 2026-08-13 | Boris Cherny：LLM bug 迁移到系统设计/UI/上下文缺失层，推对抗式代码审查与 /code-review 分档（X）
+- 2026-08-13 | Meta Madhu Guru：开源权重×无聊垂直行业（中端法律/SMB 零售/企业物流）是大钱机会（X）
+- 2026-08-13 | Box CEO Levie 长评 FDE：agent 落地无现成工作流，定制/eval/迭代是长期真实工作（X）
+- 2026-08-13 | Pitchfork 给 Tyga AI 专辑《$TARFACE》0.0 分（20 年来首个零分，上次 2006 年 Jet）（The Verge，单一来源）
+- 2026-08-13 | 中科院紫东太初 GMC 核心集剪枝：免训练砍 80% token 保真多模态（量子位 8/12，单一来源）
+- 2026-08-13 | 自变量机器人具身纪录：30% 成本跑赢 Figure AI 45% 效率，1 小时拣 1816 件异形包裹（量子位 8/12，单一来源）
+- 2026-08-13 | AI 倒查百年顶刊论文 99.2% 存在问题（量子位 8/11，单一来源）
+- 2026-08-13 | GitHub Trending：Lightricks/LTX-2（官方推理+LoRA 包）、omnigent（元 harness 可换 Claude Code/Codex/Cursor）、paradigmxyz/centaur（自托管 agentic 基建）、macro-inc/macro（共享 AI 记忆工作区）、cathrynlavery/diagram-design（29 种图表 skill）、cactus-compute/needle（14MB 端侧模型）
+- 2026-08-13 | Codex & ChatGPT 桌面版 Linux preview（Ubuntu/Debian/Fedora，含 Chat/Work/Codex）（Sottiaux/The Verge）
+- 2026-08-13 | Indie Hackers：GEO 优化一个月零结果诊断帖；$350K 高尔夫 App 24% 流量来自问题词「what is a calcutta」
+- 2026-08-13 | WayToAGI 8/10（按原文日期归档）：成都科梦 OPC 社区 8/14 白鹭湾开园（×红星传媒，继北京亦庄后第二个线下 OPC 社区）
+- 2026-08-13 | WayToAGI 8/11（按原文日期归档）：硅谷观察日记——走访 NYU/CMU/USC/UCLA/ACCD，高校 AI 恐慌退潮、过程与判断更值钱
