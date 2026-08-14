@@ -64,6 +64,8 @@ MAIN_SECTION_POLICY = (
     ("💻 GitHub Trending", 4, 6),
     ("🚀 AI 一人公司（OPC）", 2, 3),
 )
+ADDENDUM_KIND = "addendum"
+ADDENDUM_SECTION_TITLE = MAIN_SECTION_POLICY[0][0]
 
 
 class Errors:
@@ -91,11 +93,21 @@ class Stats:
     artifact_files: int = 0
     legacy_files: int = 0
     main_artifacts: int = 0
+    addenda: int = 0
     attachments: int = 0
     sections: int = 0
     artifact_items: int = 0
     reported_issues: int = 0
     reported_items: int = 0
+
+
+@dataclass
+class ArtifactIssue:
+    date: str
+    label: str
+    file: Path
+    sequence: Optional[int]
+    kind: str
 
 
 def nonempty_string(value: Any) -> bool:
@@ -228,6 +240,37 @@ def validate_sources(
         )
 
 
+def validate_priority_ids(
+    value: Any,
+    file: Path,
+    location: str,
+    errors: Errors,
+    *,
+    required: bool = False,
+) -> None:
+    """Validate explicit claims against the deterministic priority feed."""
+    if value is None and not required:
+        return
+    if not isinstance(value, list) or not value:
+        errors.add(
+            file,
+            location,
+            "must be a non-empty array of unique priority candidate ids",
+        )
+        return
+
+    seen: set[str] = set()
+    for index, candidate_id in enumerate(value):
+        item_location = f"{location}[{index}]"
+        if not nonempty_string(candidate_id):
+            errors.add(file, item_location, "must be a non-empty string")
+            continue
+        normalized = candidate_id.strip()
+        if normalized in seen:
+            errors.add(file, item_location, f"duplicate priority id {normalized!r}")
+        seen.add(normalized)
+
+
 def validate_sections(
     value: Any,
     file: Path,
@@ -279,6 +322,12 @@ def validate_sections(
             elif not isinstance(item.get("expanded"), bool):
                 errors.add(file, f"{item_location}.expanded", "must be a boolean")
 
+            validate_priority_ids(
+                item.get("priorityIds"),
+                file,
+                f"{item_location}.priorityIds",
+                errors,
+            )
             validate_sources(item.get("sources"), file, f"{item_location}.sources", errors)
 
 
@@ -451,6 +500,50 @@ def validate_current_main_policy(
         )
 
 
+def validate_addendum_policy(
+    artifact: dict[str, Any], file: Path, base: str, errors: Errors
+) -> None:
+    """Keep same-day corrections small and limited to major missed news."""
+    sections = artifact.get("sections")
+    if not isinstance(sections, list):
+        return
+    if len(sections) != 1:
+        errors.add(
+            file,
+            f"{base}.sections",
+            "addendum must contain exactly one major-events section",
+        )
+        return
+    section = sections[0]
+    if not isinstance(section, dict):
+        return
+    if section.get("title") != ADDENDUM_SECTION_TITLE:
+        errors.add(
+            file,
+            f"{base}.sections[0].title",
+            f"addendum section must be exactly {ADDENDUM_SECTION_TITLE!r}",
+        )
+    items = section.get("items")
+    if isinstance(items, list) and not 1 <= len(items) <= 5:
+        errors.add(
+            file,
+            f"{base}.sections[0].items",
+            f"addendum must contain 1–5 items, found {len(items)}",
+        )
+    if isinstance(items, list):
+        for item_index, item in enumerate(items):
+            if not isinstance(item, dict):
+                continue
+            if "priorityIds" not in item:
+                validate_priority_ids(
+                    None,
+                    file,
+                    f"{base}.sections[0].items[{item_index}].priorityIds",
+                    errors,
+                    required=True,
+                )
+
+
 def parse_reported(errors: Errors, stats: Stats) -> list[ReportedIssue]:
     try:
         text = REPORTED_FILE.read_text(encoding="utf-8")
@@ -602,7 +695,7 @@ def validate_artifact_file(
     reported: list[ReportedIssue],
     errors: Errors,
     stats: Stats,
-) -> Optional[tuple[str, str, Path]]:
+) -> Optional[ArtifactIssue]:
     document = load_json_object(file, errors)
     if document is None:
         return None
@@ -632,13 +725,32 @@ def validate_artifact_file(
     date = validate_artifact_date(artifact.get("date"), file, f"{base}.date", errors)
     has_attach_to = "attachTo" in artifact
     attach_to: Optional[str] = None
+    sequence: Optional[int] = None
+    kind = "main"
     if has_attach_to:
+        if not legacy and "kind" in artifact:
+            errors.add(
+                file,
+                f"{base}.kind",
+                "attachments must not declare report kind",
+            )
         stats.attachments += 1
         attach_to = validate_plain_date(
             artifact.get("attachTo"), file, f"{base}.attachTo", errors
         )
     else:
-        stats.main_artifacts += 1
+        kind_value = artifact.get("kind")
+        if not legacy and "kind" in artifact and kind_value != ADDENDUM_KIND:
+            errors.add(
+                file,
+                f"{base}.kind",
+                "must be omitted for a main report or exactly 'addendum'",
+            )
+        if kind_value == ADDENDUM_KIND:
+            kind = ADDENDUM_KIND
+            stats.addenda += 1
+        else:
+            stats.main_artifacts += 1
 
     if not legacy:
         validate_generated_at(artifact.get("generatedAt"), file, f"{base}.generatedAt", errors)
@@ -668,10 +780,18 @@ def validate_artifact_file(
                 errors.add(
                     file,
                     "$filename",
-                    "current main filename must be YYYY-MM-DD-N.json",
+                    "current report filename must be YYYY-MM-DD-N.json",
                 )
-            elif date is not None and match.group("date") != date:
-                errors.add(file, "$filename", f"filename date does not match {date}")
+            else:
+                sequence = int(match.group("sequence"))
+                if date is not None and match.group("date") != date:
+                    errors.add(file, "$filename", f"filename date does not match {date}")
+                if kind == ADDENDUM_KIND and sequence == 1:
+                    errors.add(
+                        file,
+                        f"{base}.kind",
+                        "the first same-day issue must be a main report, not an addendum",
+                    )
 
     if "label" in artifact and not nonempty_string(artifact.get("label")):
         errors.add(file, f"{base}.label", "must be a non-empty string when present")
@@ -684,11 +804,14 @@ def validate_artifact_file(
         return None
 
     if not legacy:
-        validate_current_main_policy(artifact, file, base, errors)
+        if kind == ADDENDUM_KIND:
+            validate_addendum_policy(artifact, file, base, errors)
+        else:
+            validate_current_main_policy(artifact, file, base, errors)
 
     one_liner = artifact.get("oneLiner")
     if not nonempty_string(one_liner):
-        errors.add(file, f"{base}.oneLiner", "main artifact requires a non-empty string")
+        errors.add(file, f"{base}.oneLiner", "report artifact requires a non-empty string")
 
     label: Optional[str]
     if nonempty_string(artifact.get("label")):
@@ -699,23 +822,30 @@ def validate_artifact_file(
             errors.add(
                 file,
                 f"{base}.label",
-                "main artifact requires a label; legacy label could not be uniquely inferred from reported.md",
+                "report artifact requires a label; legacy label could not be "
+                "uniquely inferred from reported.md",
             )
     else:
         label = None
-        errors.add(file, f"{base}.label", "main artifact requires a non-empty string")
+        errors.add(file, f"{base}.label", "report artifact requires a non-empty string")
 
     if date is None or label is None:
         return None
-    return (date, label, file)
+    return ArtifactIssue(
+        date=date,
+        label=label,
+        file=file,
+        sequence=sequence,
+        kind=kind,
+    )
 
 
 def validate_duplicate_main_issues(
-    records: list[tuple[str, str, Path]], errors: Errors
+    records: list[ArtifactIssue], errors: Errors
 ) -> None:
     grouped: defaultdict[tuple[str, str], list[Path]] = defaultdict(list)
-    for date, label, file in records:
-        grouped[(date, label)].append(file)
+    for record in records:
+        grouped[(record.date, record.label)].append(record.file)
 
     for (date, label), files in grouped.items():
         if len(files) < 2:
@@ -725,22 +855,66 @@ def validate_duplicate_main_issues(
             errors.add(
                 file,
                 "$.date+label",
-                f"duplicate main issue {date} + {label!r} across files: {names}",
+                f"duplicate report issue {date} + {label!r} across files: {names}",
             )
 
 
 def validate_main_archives(
-    records: list[tuple[str, str, Path]],
+    records: list[ArtifactIssue],
     reported: list[ReportedIssue],
     errors: Errors,
 ) -> None:
     archived = {(issue.date, issue.label) for issue in reported}
-    for date, label, file in records:
-        if (date, label) not in archived:
+    for record in records:
+        if (record.date, record.label) not in archived:
             errors.add(
-                file,
+                record.file,
                 "$.date+label",
-                f"main issue {date} + {label!r} is missing from content/reported.md",
+                f"report issue {record.date} + {record.label!r} is missing "
+                "from content/reported.md",
+            )
+
+
+def validate_issue_sequences(
+    records: list[ArtifactIssue],
+    reported: list[ReportedIssue],
+    errors: Errors,
+) -> None:
+    """Tie native filename N to the Nth same-day archive heading.
+
+    This preserves historical multi-main days while making a missing or skipped
+    addendum number impossible to hide behind a plausible timestamp.
+    """
+    ordinals: dict[tuple[str, str], int] = {}
+    per_day: defaultdict[str, int] = defaultdict(int)
+    for issue in reported:
+        per_day[issue.date] += 1
+        ordinals.setdefault((issue.date, issue.label), per_day[issue.date])
+
+    for record in records:
+        if record.sequence is None:
+            continue
+        expected = ordinals.get((record.date, record.label))
+        if expected is not None and record.sequence != expected:
+            errors.add(
+                record.file,
+                "$filename",
+                f"sequence {record.sequence} does not match same-day archive position {expected}",
+            )
+        if record.kind != ADDENDUM_KIND:
+            continue
+        earlier_main = any(
+            candidate.date == record.date
+            and candidate.kind == "main"
+            and candidate.sequence is not None
+            and candidate.sequence < record.sequence
+            for candidate in records
+        )
+        if not earlier_main:
+            errors.add(
+                record.file,
+                "$.kind",
+                "addendum requires an earlier native main report for the same date",
             )
 
 
@@ -753,18 +927,28 @@ def main() -> int:
         errors.add(ARTIFACT_DIR, "$", "artifact directory does not exist")
         artifact_files: list[Path] = []
     else:
+        nested_artifacts = sorted(
+            path for path in ARTIFACT_DIR.rglob("*.json") if path.parent != ARTIFACT_DIR
+        )
+        for nested in nested_artifacts:
+            errors.add(
+                nested,
+                "$filename",
+                "artifact JSON must be directly under content/artifacts",
+            )
         artifact_files = sorted(ARTIFACT_DIR.glob("*.json"))
         if not artifact_files:
             errors.add(ARTIFACT_DIR, "$", "no artifact JSON files found")
 
     stats.artifact_files = len(artifact_files)
-    main_records: list[tuple[str, str, Path]] = []
+    main_records: list[ArtifactIssue] = []
     for file in artifact_files:
         record = validate_artifact_file(file, reported, errors, stats)
         if record is not None:
             main_records.append(record)
     validate_duplicate_main_issues(main_records, errors)
     validate_main_archives(main_records, reported, errors)
+    validate_issue_sequences(main_records, reported, errors)
 
     if errors.messages:
         print(f"content validation failed with {len(errors.messages)} error(s):", file=sys.stderr)
@@ -775,7 +959,8 @@ def main() -> int:
     print(
         "content validation passed: "
         f"{stats.artifact_files} artifact file(s) "
-        f"({stats.main_artifacts} main, {stats.attachments} attachment, "
+        f"({stats.main_artifacts} main, {stats.addenda} addendum, "
+        f"{stats.attachments} attachment, "
         f"{stats.legacy_files} legacy), "
         f"{stats.sections} section(s), {stats.artifact_items} sourced item(s); "
         f"reported.md has {stats.reported_issues} issue(s) and "

@@ -8,6 +8,7 @@ export interface NewsItem {
   summary?: string
   expanded?: boolean
   flag: boolean // 单一来源
+  priorityIds?: string[]
   sources: Source[]
 }
 
@@ -25,6 +26,7 @@ export interface Report {
   seq: number
   issue: number
   rich?: boolean
+  kind?: 'addendum'
   oneLiner?: string
   sections: NewsModule[]
 }

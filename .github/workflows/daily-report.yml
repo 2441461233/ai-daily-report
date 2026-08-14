@@ -1,9 +1,11 @@
 name: Daily AI report
 
 on:
-  # GitHub schedules use UTC. 02:00 UTC is 10:00 in Asia/Shanghai.
+  # GitHub schedules use UTC. Avoid the top-of-hour congestion window.
+  # The second run is an idempotent fallback if GitHub drops the first event.
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '17 2 * * *' # 10:17 Asia/Shanghai
+    - cron: '47 2 * * *' # 10:47 Asia/Shanghai fallback
   workflow_dispatch:
 
 permissions:
@@ -20,6 +22,14 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    outputs:
+      base_sha: ${{ steps.prepare.outputs.base_sha }}
+      collector_now: ${{ steps.prepare.outputs.collector_now }}
+      report_date: ${{ steps.prepare.outputs.report_date }}
+      priority_sha256: ${{ steps.prepare.outputs.priority_sha256 }}
+      builders_sha256: ${{ steps.prepare.outputs.builders_sha256 }}
+      waytoagi_sha256: ${{ steps.prepare.outputs.waytoagi_sha256 }}
+      waytoagi_changed_sha256: ${{ steps.prepare.outputs.waytoagi_changed_sha256 }}
     env:
       CI: 'true'
       KIMI_DISABLE_TELEMETRY: '1'
@@ -28,6 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7.0.1
         with:
+          ref: main
           fetch-depth: 0
 
       - uses: actions/setup-node@v7.0.0
@@ -51,18 +62,51 @@ jobs:
         run: npm install --global @moonshot-ai/kimi-code@0.34.0
 
       - name: Prepare deterministic research inputs
+        id: prepare
         run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/daily-diagnostics"
+          base_sha="$(git rev-parse HEAD)"
+          collector_now="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          report_date="$(TZ=Asia/Shanghai date --date="$collector_now" +%F)"
+          node scripts/fetch_official_priority_sources.mjs --now "$collector_now" \
+            > /tmp/priority-news.json \
+            2> "$RUNNER_TEMP/daily-diagnostics/priority-source.log"
+          test -s /tmp/priority-news.json
+          printf '%s\n' "$report_date" > /tmp/report-date
+          python3 scripts/validate_priority_coverage.py \
+            --input /tmp/priority-news.json \
+            --date "$report_date" \
+            --now "$collector_now" \
+            --input-only
+          sha256sum /tmp/priority-news.json > /tmp/priority-news.json.sha256
+          sha256sum /tmp/report-date >> /tmp/priority-news.json.sha256
           node scripts/fetch_builders.mjs > /tmp/ai-builders.json
+          sha256sum /tmp/ai-builders.json > /tmp/ai-builders.json.sha256
           python3 scripts/waytoagi.py --write-artifacts > /tmp/waytoagi.json
           sha256sum /tmp/waytoagi.json > /tmp/waytoagi.json.sha256
           git status --porcelain=v1 --untracked-files=all \
             | sed -nE 's/^.. (content\/artifacts\/waytoagi-[0-9]{8}\.json)$/\1/p' \
             | sort > /tmp/waytoagi.changed
           sha256sum /tmp/waytoagi.changed >> /tmp/waytoagi.json.sha256
+          priority_sha256="$(sha256sum /tmp/priority-news.json | cut -d ' ' -f 1)"
+          builders_sha256="$(sha256sum /tmp/ai-builders.json | cut -d ' ' -f 1)"
+          waytoagi_sha256="$(sha256sum /tmp/waytoagi.json | cut -d ' ' -f 1)"
+          waytoagi_changed_sha256="$(sha256sum /tmp/waytoagi.changed | cut -d ' ' -f 1)"
+          {
+            printf 'base_sha=%s\n' "$base_sha"
+            printf 'collector_now=%s\n' "$collector_now"
+            printf 'report_date=%s\n' "$report_date"
+            printf 'priority_sha256=%s\n' "$priority_sha256"
+            printf 'builders_sha256=%s\n' "$builders_sha256"
+            printf 'waytoagi_sha256=%s\n' "$waytoagi_sha256"
+            printf 'waytoagi_changed_sha256=%s\n' "$waytoagi_changed_sha256"
+          } >> "$GITHUB_OUTPUT"
           mkdir -p "$KIMI_CODE_HOME"
           cp automation/kimi-ci-config.toml "$KIMI_CODE_HOME/config.toml"
 
       - name: Run the daily-report agent
+        id: agent
         env:
           KIMI_MODEL_NAME: ${{ vars.KIMI_MODEL || 'kimi-k3' }}
           KIMI_MODEL_PROVIDER_TYPE: kimi
@@ -77,23 +121,88 @@ jobs:
           KIMI_WEB_FETCH_BASE_URL: ${{ vars.KIMI_WEB_FETCH_BASE_URL || 'https://api.moonshot.ai/v1/fetch' }}
           KIMI_WEB_FETCH_API_KEY: ${{ secrets.KIMI_WEB_FETCH_API_KEY || secrets.KIMI_API_KEY }}
           KIMI_LOOP_MAX_STEPS_PER_TURN: '240'
+          REPORT_DATE: ${{ steps.prepare.outputs.report_date }}
         run: |
           set -o pipefail
           kimi \
-            --prompt "Read automation/AGENT_TASK.md completely and execute it now. Work autonomously, obey its file scope, finish all required artifact/archive writes, then report the concise run summary it requests. The outer workflow will validate and build after you finish." \
+            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully Read /tmp/report-date, /tmp/priority-news.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. Work autonomously, obey the file scope, cover every required priority candidate, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
             --output-format stream-json \
-            2>&1 | tee "$RUNNER_TEMP/kimi-daily.jsonl"
+            2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/kimi-daily.jsonl"
 
       - name: Re-run deterministic quality gates
+        id: gates
         run: |
-          sha256sum --check /tmp/waytoagi.json.sha256
-          python3 scripts/validate_waytoagi_run.py \
-            --input /tmp/waytoagi.json \
-            --changed-manifest /tmp/waytoagi.changed
-          python3 scripts/sync_waytoagi_state.py
-          python3 scripts/validate_content.py
-          npm run build
-          python3 scripts/check_daily_changes.py
+          set -euo pipefail
+          {
+            unexpected_changes="$RUNNER_TEMP/unexpected-agent-changes.txt"
+            : > "$unexpected_changes"
+            while IFS= read -r -d '' changed_path; do
+              case "$changed_path" in
+                content/reported.md) ;;
+                content/artifacts/*.json)
+                  artifact_tail="${changed_path#content/artifacts/}"
+                  if [[ "$artifact_tail" == */* ]]; then
+                    printf '%s\n' "$changed_path" >> "$unexpected_changes"
+                  fi
+                  ;;
+                *) printf '%s\n' "$changed_path" >> "$unexpected_changes" ;;
+              esac
+            done < <(git status --porcelain=v1 -z --untracked-files=all | while IFS= read -r -d '' entry; do
+              status="${entry:0:2}"
+              changed_path="${entry:3}"
+              if [[ "$status" == *R* || "$status" == *C* ]]; then
+                IFS= read -r -d '' rename_target || true
+                printf '%s\0' "$changed_path" "$rename_target"
+              else
+                printf '%s\0' "$changed_path"
+              fi
+            done)
+            if [ -s "$unexpected_changes" ]; then
+              echo "::error::Agent modified files outside the report allowlist:"
+              sort -u "$unexpected_changes"
+              exit 1
+            fi
+
+            verify_digest() {
+              local input_path="$1"
+              local expected="$2"
+              local label="$3"
+              local actual
+              actual="$(sha256sum "$input_path" | cut -d ' ' -f 1)"
+              if [ "$actual" != "$expected" ]; then
+                echo "::error::${label} changed after the trusted prepare step."
+                exit 1
+              fi
+            }
+            verify_digest /tmp/priority-news.json \
+              "${{ steps.prepare.outputs.priority_sha256 }}" "priority input"
+            verify_digest /tmp/ai-builders.json \
+              "${{ steps.prepare.outputs.builders_sha256 }}" "builders input"
+            verify_digest /tmp/waytoagi.json \
+              "${{ steps.prepare.outputs.waytoagi_sha256 }}" "WayToAGI input"
+            verify_digest /tmp/waytoagi.changed \
+              "${{ steps.prepare.outputs.waytoagi_changed_sha256 }}" "WayToAGI manifest"
+            report_date="${{ steps.prepare.outputs.report_date }}"
+            if [ "$(cat /tmp/report-date)" != "$report_date" ]; then
+              echo "::error::Frozen report date changed after the trusted prepare step."
+              exit 1
+            fi
+            python3 scripts/validate_priority_coverage.py \
+              --input /tmp/priority-news.json \
+              --date "$report_date" \
+              --now "${{ steps.prepare.outputs.collector_now }}"
+            python3 scripts/validate_waytoagi_run.py \
+              --input /tmp/waytoagi.json \
+              --changed-manifest /tmp/waytoagi.changed
+            python3 scripts/sync_waytoagi_state.py
+            python3 scripts/validate_content.py
+            npm run build
+            python3 scripts/check_daily_changes.py --date "$report_date"
+            mkdir -p "$RUNNER_TEMP/daily-evidence"
+            cp /tmp/priority-news.json "$RUNNER_TEMP/daily-evidence/priority-news.json"
+            cp /tmp/waytoagi.json "$RUNNER_TEMP/daily-evidence/waytoagi.json"
+            cp /tmp/waytoagi.changed "$RUNNER_TEMP/daily-evidence/waytoagi.changed"
+          } 2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/quality-gates.log"
 
       - name: Package validated output
         uses: actions/upload-artifact@v7.0.1
@@ -107,6 +216,64 @@ jobs:
             content/waytoagi-consumed.txt
             public/data/reports.json
 
+      - name: Package validated coverage evidence
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: daily-evidence
+          retention-days: 3
+          if-no-files-found: error
+          path: ${{ runner.temp }}/daily-evidence
+
+      - name: Collect run diagnostics
+        if: always()
+        continue-on-error: true
+        env:
+          PREPARE_OUTCOME: ${{ steps.prepare.outcome }}
+          AGENT_OUTCOME: ${{ steps.agent.outcome }}
+          GATES_OUTCOME: ${{ steps.gates.outcome }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/daily-diagnostics"
+          for source in \
+            /tmp/priority-news.json \
+            /tmp/priority-news.json.sha256 \
+            /tmp/report-date \
+            /tmp/ai-builders.json \
+            /tmp/ai-builders.json.sha256 \
+            /tmp/waytoagi.json \
+            /tmp/waytoagi.json.sha256 \
+            /tmp/waytoagi.changed; do
+            if [ -f "$source" ]; then
+              cp "$source" "$RUNNER_TEMP/daily-diagnostics/"
+            fi
+          done
+          {
+            printf 'run_id=%s\n' "$GITHUB_RUN_ID"
+            printf 'run_attempt=%s\n' "$GITHUB_RUN_ATTEMPT"
+            printf 'event_sha=%s\n' "$GITHUB_SHA"
+            printf 'base_sha=%s\n' "${{ steps.prepare.outputs.base_sha }}"
+            printf 'prepare=%s\n' "$PREPARE_OUTCOME"
+            printf 'agent=%s\n' "$AGENT_OUTCOME"
+            printf 'gates=%s\n' "$GATES_OUTCOME"
+          } > "$RUNNER_TEMP/daily-diagnostics/manifest.txt"
+          git status --porcelain=v1 --untracked-files=all \
+            > "$RUNNER_TEMP/daily-diagnostics/git-status.txt"
+          git diff --no-ext-diff > "$RUNNER_TEMP/daily-diagnostics/git-diff.patch"
+          mkdir -p "$RUNNER_TEMP/daily-diagnostics/untracked-artifacts"
+          git ls-files --others --exclude-standard 'content/artifacts/*.json' \
+            | while IFS= read -r artifact; do
+                cp "$artifact" "$RUNNER_TEMP/daily-diagnostics/untracked-artifacts/$(basename "$artifact")"
+              done
+
+      - name: Upload run diagnostics
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: daily-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: error
+          path: ${{ runner.temp }}/daily-diagnostics
+
   commit:
     if: github.ref == 'refs/heads/main'
     needs: generate
@@ -117,7 +284,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7.0.1
         with:
-          ref: ${{ github.sha }}
+          ref: ${{ needs.generate.outputs.base_sha }}
           fetch-depth: 0
 
       - name: Restore validated output
@@ -126,13 +293,54 @@ jobs:
           name: daily-output
           path: .
 
+      - name: Restore validated coverage evidence
+        uses: actions/download-artifact@v8.0.1
+        with:
+          name: daily-evidence
+          path: ${{ runner.temp }}/daily-evidence
+
       - name: Verify isolated output
+        env:
+          COLLECTOR_NOW: ${{ needs.generate.outputs.collector_now }}
+          PRIORITY_SHA256: ${{ needs.generate.outputs.priority_sha256 }}
+          REPORT_DATE: ${{ needs.generate.outputs.report_date }}
+          WAYTOAGI_SHA256: ${{ needs.generate.outputs.waytoagi_sha256 }}
+          WAYTOAGI_CHANGED_SHA256: ${{ needs.generate.outputs.waytoagi_changed_sha256 }}
         run: |
-          python3 -m unittest tests/test_waytoagi.py
+          set -euo pipefail
+          evidence="$RUNNER_TEMP/daily-evidence/priority-news.json"
+          actual_sha256="$(sha256sum "$evidence" | cut -d ' ' -f 1)"
+          if [ "$actual_sha256" != "$PRIORITY_SHA256" ]; then
+            echo "::error::Restored priority evidence does not match the trusted prepare digest."
+            exit 1
+          fi
+          waytoagi_input="$RUNNER_TEMP/daily-evidence/waytoagi.json"
+          waytoagi_manifest="$RUNNER_TEMP/daily-evidence/waytoagi.changed"
+          if [ "$(sha256sum "$waytoagi_input" | cut -d ' ' -f 1)" != "$WAYTOAGI_SHA256" ]; then
+            echo "::error::Restored WayToAGI evidence does not match the trusted prepare digest."
+            exit 1
+          fi
+          if [ "$(sha256sum "$waytoagi_manifest" | cut -d ' ' -f 1)" != "$WAYTOAGI_CHANGED_SHA256" ]; then
+            echo "::error::Restored WayToAGI manifest does not match the trusted prepare digest."
+            exit 1
+          fi
+          python3 -m unittest discover -s tests
+          node --test tests/fetch_official_priority_sources.test.mjs
+          python3 scripts/validate_priority_coverage.py \
+            --input "$evidence" \
+            --date "$REPORT_DATE" \
+            --now "$COLLECTOR_NOW"
+          python3 scripts/validate_waytoagi_run.py \
+            --input "$waytoagi_input" \
+            --changed-manifest "$waytoagi_manifest"
+          python3 scripts/sync_waytoagi_state.py
           python3 scripts/validate_content.py
-          python3 scripts/check_daily_changes.py
+          python3 scripts/build_data.py
+          python3 scripts/check_daily_changes.py --date "$REPORT_DATE"
 
       - name: Commit generated report
+        env:
+          REPORT_DATE: ${{ needs.generate.outputs.report_date }}
         run: |
           git add content/artifacts content/reported.md content/waytoagi-consumed.txt public/data/reports.json
           if git diff --cached --quiet; then
@@ -141,6 +349,5 @@ jobs:
           fi
           git config user.name "ai-daily-report[bot]"
           git config user.email "2441461233+ai-daily-report[bot]@users.noreply.github.com"
-          report_date="$(TZ=Asia/Shanghai date +%F)"
-          git commit -m "日报更新 ${report_date}"
+          git commit -m "日报更新 ${REPORT_DATE}"
           git push origin HEAD:main

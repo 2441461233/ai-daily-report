@@ -1,0 +1,40 @@
+{
+  "date": "2026-08-13 星期四",
+  "kind": "addendum",
+  "label": "第十三期·Grok 4.6 补刊",
+  "generatedAt": "2026-08-13T15:50:36+08:00",
+  "oneLiner": "📌 补刊：Grok 4.6 已正式进入 API 与主流开发者渠道，值得立即纳入长时间 Agent 与产品原型的成本—质量基线测试。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "SpaceXAI 正式发布 Grok 4.6：主打长时间 Agent，500k 上下文，API 输入/输出 $2/$6",
+          "summary": "SpaceXAI 8 月 12 日发布 Grok 4.6，聚焦 coding、agentic tasks 和 knowledge work，并特别强化多步长任务、交互式与视觉项目。官方 API 模型 ID 为 grok-4.6，支持 500k token 上下文、文本/图像输入和无固定文本输出上限；20 万 token 以下的每百万 token 价格为输入 $2、缓存输入 $0.50、输出 $6，并已上线 xAI API、Grok Build、Cursor、OpenRouter、Vercel 和 Cloudflare。对你的映射：用同一组真实代码库长任务和产品原型 prompt，本周直接对比 Grok 4.6 与现用模型的成本、长程稳定性与自测能力。",
+          "expanded": true,
+          "priorityIds": [
+            "spacexai:grok-4-6"
+          ],
+          "sources": [
+            {
+              "name": "SpaceXAI 官方发布",
+              "url": "https://x.ai/news/grok-4-6"
+            },
+            {
+              "name": "SpaceXAI Grok 4.6 开发者文档",
+              "url": "https://docs.x.ai/developers/grok-4-6"
+            },
+            {
+              "name": "SpaceXAI API Release Notes",
+              "url": "https://docs.x.ai/developers/release-notes"
+            },
+            {
+              "name": "Cursor 官方上线公告",
+              "url": "https://cursor.com/blog/grok-4-6"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

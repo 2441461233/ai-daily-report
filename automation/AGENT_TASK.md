@@ -5,19 +5,26 @@
 
 ## 0. 执行契约
 
-1. 全程使用 `Asia/Shanghai` 的日期和时间。先完整阅读 `content/reported.md`，再开始采集。
+1. 全程使用 `Asia/Shanghai` 的日期和时间。工作流启动时已将报告日期冻结到
+   `/tmp/report-date`；即使运行跨越午夜，文件中的日期仍是本轮唯一标准。开始选题前，必须完整读取
+   `content/reported.md`、`/tmp/report-date`、`/tmp/priority-news.json`、`/tmp/ai-builders.json`、
+   `/tmp/waytoagi.json`。任一文件缺失、JSON 损坏或未读完即失败退出。
 2. 只允许修改：
    - `content/artifacts/*.json`
    - `content/reported.md`
+   artifact JSON 必须直接位于 `content/artifacts/` 下，不得新建子目录。
+   `content/reported.md` 仅允许在文件末尾追加，已提交的历史必须保持为完整且逐字相同的前缀。
 3. 不要执行 `git commit`、`git push`，不要改前端或工作流；外层 GitHub Actions 负责验证和提交。
 4. CI 已禁用 Shell 和子 Agent。不得尝试 Bash；确定性采集、状态同步、验证和构建由外层工作流执行。
 5. 如果 WebSearch/FetchURL 不可用、当前日期的核心来源普遍失败，或无法获得真实 URL，必须失败退出，
    不得用模型记忆补写新闻，也不得写空日报或推进消费状态。
-6. 每个上海自然日只生成一份主日报。若 `content/artifacts/` 已有当天的 `YYYY-MM-DD-N.json`，
-   本轮不得再生成主日报，只处理尚未消费的 WayToAGI 补录；若补录也没有，直接幂等结束。
-   首次生成时文件名为 `content/artifacts/YYYY-MM-DD-N.json`，`N` 取当天历史序号的下一个值。
-   不得覆盖已提交的主日报 artifact；同一事件不得因任务重跑而重复。确定性采集器可能已在本轮开始前，
-   为 `/tmp/waytoagi.json` 明确列出的期次新建或刷新 WayToAGI attachment；Agent 不得重写这些文件。
+6. 每个上海自然日只生成一份主日报。若当天主日报已存在，先逐个核对
+   `/tmp/priority-news.json` 的 `required: true` 候选：有未覆盖候选时，必须新建下一个连续序号的
+   `kind: "addendum"` 补刊；全部已覆盖时才可只处理 WayToAGI，若也无补录则幂等结束。
+   首次生成时文件名为 `content/artifacts/YYYY-MM-DD-1.json`；同日补刊使用
+   `YYYY-MM-DD-2.json`、`-3.json` 依次连续编号。不得覆盖任何已提交的主刊或补刊，
+   同一事件不得因重跑重复。确定性采集器可能已在本轮开始前为 `/tmp/waytoagi.json`
+   明确列出的期次新建或刷新 attachment；Agent 不得重写这些文件。
 7. 写完日报和 `content/reported.md` 后即可结束。外层工作流会同步 WayToAGI 状态、运行验证和构建；
    验证失败则整次运行不提交。不能为了通过验证而删除历史内容或放宽规则。
 8. WayToAGI 是确定性采集的完整归档，不适用主日报的语义筛选、跨期去重或条数配额。外层质量门会把
@@ -47,7 +54,8 @@ Evan 是 AI 产品经理，会写代码做项目，目标是做**一人公司（
 1. `content/reported.md` 是语义去重的唯一依据。同一事件即使换了表述也要跳过。
 2. 只有出现新价格、新裁决、新数据、正式发布等**实质性进展**才可再报；headline 前缀写
    `【进展】`，summary 明确相比上次新增了什么。
-3. 默认覆盖过去 24 小时（上海时间昨天 10:00 起）；周一覆盖周末 72 小时。
+3. 普通搜索默认覆盖过去 24 小时（上海时间昨天 10:00 起）；周一覆盖周末 72 小时。
+   官方优先监控固定用 72 小时重叠窗口，依靠稳定 id 和覆盖门禁去重，不得因为超过普通搜索的 24 小时而忽略。
 4. 去重后不足 12 条，可扩展到 48–72 小时，并在条目中注明原始日期。绝不用旧闻凑数。
 5. 写完 artifact 后，把全部新增事件追加到 `content/reported.md`，格式见第 7 节。
 
@@ -56,6 +64,25 @@ Evan 是 AI 产品经理，会写代码做项目，目标是做**一人公司（
 ## 3. 信息采集
 
 独立搜索必须并行进行。优先读取官方发布和原始材料，关键事实尽量用第二个可靠来源交叉验证。
+
+### 3.0 官方重大候选（强制输入）
+
+外层工作流已把官方 news/changelog 的确定性采集结果写到 `/tmp/priority-news.json`。该文件使用
+72 小时重叠窗口；顶层 `sources` 记录直采/备用端点状态，`candidates` 中每条含稳定 `id`、
+`url`、`evidenceUrls`、`matchTerms`、`summary/details` 和 `required`。
+
+- `required: true` 是硬约束。先用稳定 id + 精确证据 URL + 全部匹配词核对 HEAD：
+  更早日期已强覆盖的记为 `already_covered`、不得重复；本轮仍未强覆盖的必须进入今日主刊或补刊的
+  `🔥 AI 重要事件`，普通配额和模型主观排序不能将它淘汰。
+- 对应 item 必须写 `priorityIds: ["完整的 candidate.id"]`；`sources` 至少包含该候选的
+  `url` 或 `evidenceUrls` 之一；`headline + summary` 必须明确出现全部 `matchTerms`。
+- `summary/details` 是采集器从官方发布/release notes 提取的可用事实，可作为初稿上下文；
+  artifact 必须保留 candidate 精确列出的官方证据 URL，并尽量补充第二来源。
+- 采集器可用 Hacker News 发现指向 `x.ai/news/...` 的新链接，但只有在直取该官方文章并核对
+  canonical URL、模型版本与发布日期后才会生成 required candidate；不要把社区标题本身当作证据。
+- 官网入口页返回 403 不等于不可核验。必须沿 candidate 的具体文章、官方 docs/release notes、
+  item-specific 官方 X 或可靠二级报道继续核验，不得因为一个泛用 URL 失败就静默弃收。
+- 若仍无法写出可靠摘要，必须失败并明确报告该 candidate id，禁止把它当成可选新闻跳过。
 
 ### 3.1 X / AI builder 圈（只读公共 feed）
 
@@ -144,6 +171,8 @@ metadata 或模型记忆补全。
 | 6 | `🚀 AI 一人公司（OPC）` | 2–3 | 独立开发者案例、变现路径、Agent 基建与工具链 |
 
 WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节单独写。
+任何 required 官方候选的优先级高于上表普通条数配额：槽位不足时移出低优先级普通项，
+不得删除 required；单刊容量不足时按每份 1–5 条写连续补刊。
 
 板块 3、6 以及 expanded 分析用一句 `对你的映射：……` 结尾，给本周可执行的动作。`oneLiner`
 以 `📌 今日一句话：` 开头，把当天信息浓缩成一个有取舍的行动判断。
@@ -168,6 +197,7 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
           "headline": "一句话标题，含关键数字",
           "summary": "1–3 句正文；深度条目是一段完整分析",
           "expanded": false,
+          "priorityIds": ["lab:model-version"],
           "sources": [
             {"name": "官方来源", "url": "https://example.com/original"},
             {"name": "交叉来源", "url": "https://example.org/report"}
@@ -186,6 +216,39 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
 - 每条必须有非空 `headline`、`summary`、布尔值 `expanded` 和至少一个真实可访问的 HTTP(S) URL。
 - 单一来源且未交叉验证，在该来源 `name` 后加 `（单一来源）`；传闻在 headline 明写「未经证实」。
 - 不得拼 URL、引用搜索结果页或把模型记忆当来源。
+- `priorityIds` 只用于声明官方优先候选；普通条目可省略，声明后必须通过 id + 精确证据 URL + 全部匹配词的覆盖门禁。
+
+### 5.1 同日补刊 artifact
+
+当今日主刊已提交但仍有未覆盖 required 候选时，新建下一个连续文件序号：
+
+```json
+{
+  "date": "2026-08-13 星期四",
+  "kind": "addendum",
+  "label": "第十三期·补刊",
+  "generatedAt": "2026-08-13T12:30:00+08:00",
+  "oneLiner": "📌 补刊：补录已核验的重大发布。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "……",
+          "summary": "……",
+          "expanded": false,
+          "priorityIds": ["lab:model-version"],
+          "sources": [{"name": "官方来源（单一来源）", "url": "https://example.com/release"}]
+        }
+      ]
+    }
+  ]
+}
+```
+
+补刊只能有一个 `🔥 AI 重要事件` 板块、1–5 条，且每条必须声明至少一个未覆盖的
+`priorityIds`。不得拿旧闻、普通新闻或已覆盖候选凑数。文件名中的同日序号与全站中文期号是两套编号；
+`label` 仍从 `reported.md` 最后一期递增，不得复用主刊期号。
 
 ---
 
@@ -248,6 +311,8 @@ attachment 的 `items` 数量严格等于 `sourceItemCount`，且顺序、标题
 一行一条，覆盖主日报和本轮 WayToAGI 新增的全部条目。不要粘贴长摘要，但关键词要足够支持主日报下一轮
 语义去重。注意：`content/reported.md` 只用于主日报去重和检索记录，不是 WayToAGI 的消费状态，也不得据此
 跳过 `/tmp/waytoagi.json` 中的任何条目。
+补刊也必须用独立的同日 heading 追加，且 heading 中的 label 与补刊 artifact 完全一致；
+`reported.md` 本身不算 priority coverage 证据，必须在 artifact item 中完整声明。
 
 ---
 
@@ -256,6 +321,8 @@ attachment 的 `items` 数量严格等于 `sourceItemCount`，且顺序、标题
 - 不得编造新闻、数字、链接、人名；抓不到就不写。
 - 价格、融资、模型参数、榜单等关键事实优先官方来源，并尽量双源交叉验证。
 - 任何来源失败都要在最终运行摘要中说明；全部核心源失败则让任务失败，不推进状态。
+- 收尾前逐个列出 priority `required` 候选的 `covered_today` / `already_covered` 状态；任一 `missing` 都必须失败，不得静默跳过。
 - WayToAGI 输入与 attachment 必须逐期逐条一对一完整匹配；完整性门禁失败时不消费、不提交任何本轮改动。
 - 你结束时的 `git diff` 中不得出现第 0 节允许范围以外的文件。
-- 写入完成后只输出：新增期号、条数、WayToAGI 补录日期、失败来源；不要复述全文。
+- 写入完成后只输出：新增期号、条数、priority required/covered/missing 数、
+  WayToAGI 补录日期、失败来源；不要复述全文。

@@ -26,8 +26,10 @@ jobs:
       - name: Validate content
         run: python3 scripts/validate_content.py
 
-      - name: Test WayToAGI parser
-        run: python3 -m unittest tests/test_waytoagi.py
+      - name: Test deterministic pipelines
+        run: |
+          python3 -m unittest discover -s tests
+          node --test tests/fetch_official_priority_sources.test.mjs
 
       - name: Lint
         run: npm run lint

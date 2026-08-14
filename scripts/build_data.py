@@ -29,6 +29,9 @@ RE_TRAIL_PAREN = re.compile(r"[（(]([^（）()]+)[）)]\s*$")
 RE_LATIN_TOKEN = re.compile(r"[A-Za-z][A-Za-z0-9.+-]{2,}")
 RE_DOMAIN = re.compile(r"^[a-z0-9][a-z0-9.-]*\.(dev|com|net|org|cn|io|ai|fm|so)$", re.I)
 RE_DATEISH = re.compile(r"^\d+[/\d.-]*$")
+RE_NATIVE_ARTIFACT = re.compile(
+    r"^(?P<date>\d{4}-\d{2}-\d{2})-(?P<sequence>[1-9]\d*)\.json$"
+)
 
 MEDIA = {
     "财联社": "财联社", "量子位": "量子位", "新浪财经": "新浪财经", "新浪": "新浪",
@@ -128,11 +131,20 @@ def parse_item(raw: str, links_db: dict) -> dict:
 def parse_reported(md: str, links_db: dict) -> list:
     reports = []
     cur = None
+    sequences = {}
     for raw in md.splitlines():
         line = raw.strip()
         m = RE_HEAD.match(line)
         if m:
-            cur = {"date": m.group(1), "label": m.group(2), "raw_items": [], "rich": False}
+            date = m.group(1)
+            sequences[date] = sequences.get(date, 0) + 1
+            cur = {
+                "date": date,
+                "label": m.group(2),
+                "raw_items": [],
+                "rich": False,
+                "_sequence": sequences[date],
+            }
             reports.append(cur)
             continue
         m = RE_ITEM.match(line)
@@ -171,13 +183,17 @@ def normalize_artifact(a: dict, artifact_name: str) -> Optional[dict]:
                 if x.get("url"):
                     entry["url"] = x["url"]
                 sources.append(entry)
-            items.append({
+            item = {
                 "text": it.get("headline", ""),
                 "summary": it.get("summary", ""),
                 "expanded": bool(it.get("expanded")),
                 "flag": flag,
                 "sources": sources,
-            })
+            }
+            priority_ids = it.get("priorityIds")
+            if isinstance(priority_ids, list) and priority_ids:
+                item["priorityIds"] = priority_ids
+            items.append(item)
         sec = {"title": s.get("title", ""), "items": items}
         if s.get("note"):
             sec["note"] = s["note"]
@@ -190,6 +206,11 @@ def normalize_artifact(a: dict, artifact_name: str) -> Optional[dict]:
         "startedAt": a.get("generatedAt") or f"{date}T00:00:00",
         "rich": True,
     }
+    if a.get("kind") == "addendum":
+        issue["kind"] = "addendum"
+    artifact_match = RE_NATIVE_ARTIFACT.fullmatch(artifact_name)
+    if artifact_match and artifact_match.group("date") == date:
+        issue["_sequence"] = int(artifact_match.group("sequence"))
     if a.get("label"):
         issue["label"] = str(a["label"]).strip()
     if a.get("attachTo"):
@@ -203,6 +224,22 @@ def normalize_artifact(a: dict, artifact_name: str) -> Optional[dict]:
             issue["attachTo"] = target
             issue["date"] = target
     return issue
+
+
+def issue_sort_key(issue: dict) -> tuple:
+    """Sort same-day issues by their durable issue sequence when available."""
+    sequence = issue.get("_sequence")
+    if isinstance(sequence, int):
+        return (issue["date"], 0, sequence, issue.get("startedAt") or "")
+    return (issue["date"], 1, 0, issue.get("startedAt") or "")
+
+
+def attachment_target(day_issues: list) -> dict:
+    """Keep general attachments on a day's main issue, not its addendum."""
+    return next(
+        (issue for issue in reversed(day_issues) if issue.get("kind") != "addendum"),
+        day_issues[-1],
+    )
 
 
 def parse_artifacts() -> list:
@@ -284,7 +321,7 @@ def apply_attachments(issues: list, attachments: list) -> list:
             promoted.append(a)
             by_date.setdefault(a["date"], []).append(a)
             continue
-        target = target_day[-1]  # the day's last issue
+        target = attachment_target(target_day)
         existing = {s["title"]: s for s in target["sections"]}
         for sec in a["sections"]:
             hit = existing.get(sec["title"])
@@ -298,7 +335,7 @@ def apply_attachments(issues: list, attachments: list) -> list:
 
     if promoted:
         issues = issues + promoted
-        issues.sort(key=lambda r: (r["date"], r.get("startedAt") or ""))
+        issues.sort(key=issue_sort_key)
     return issues
 
 
@@ -323,7 +360,10 @@ def surface_latest_waytoagi(issues: list, attachments: list) -> list:
         candidates,
         key=lambda pair: (pair[0].get("date", ""), pair[0].get("generatedAt", "")),
     )
-    latest = issues[-1]
+    latest_date = issues[-1]["date"]
+    latest = attachment_target(
+        [issue for issue in issues if issue["date"] == latest_date]
+    )
     if any(item.get("title") == WAYTOAGI_SECTION for item in latest.get("sections", [])):
         return issues
 
@@ -347,7 +387,7 @@ def main() -> int:
         reported = parse_reported(REPORTED_FILE.read_text("utf-8"), links_db)
 
     artifacts = parse_artifacts()
-    artifacts.sort(key=lambda r: (r["date"], r["startedAt"]))
+    artifacts.sort(key=issue_sort_key)
 
     attachments = [a for a in artifacts if a.get("attachTo")]
     artifacts = [a for a in artifacts if not a.get("attachTo")]
@@ -358,6 +398,9 @@ def main() -> int:
         label, matched = match_label(a, reported)
         if matched is not None:
             replaced_ids.add(id(matched))
+            # Legacy artifact names did not encode a sequence. Preserve the
+            # matching archive heading's position so they cannot reorder a day.
+            a.setdefault("_sequence", matched.get("_sequence"))
         a["label"] = label
         issues.append(a)
     for r in reported:
@@ -365,7 +408,7 @@ def main() -> int:
             r["oneLiner"] = ""
             issues.append(r)
 
-    issues.sort(key=lambda r: (r["date"], r.get("startedAt") or ""))
+    issues.sort(key=issue_sort_key)
     issues = apply_attachments(issues, attachments)
     issues = surface_latest_waytoagi(issues, attachments)
 
@@ -381,6 +424,7 @@ def main() -> int:
         r["weekday"] = WEEKDAYS[dt.weekday()]
         r.pop("raw_items", None)
         r.pop("startedAt", None)
+        r.pop("_sequence", None)
 
     OUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     payload = {

@@ -6,12 +6,14 @@ Agent 任务书和自动化工作流全部在同一个仓库内，不依赖 Evan
 ## 工作方式
 
 ```text
-每天 10:00（Asia/Shanghai / UTC 02:00）
+每天 10:17（Asia/Shanghai / UTC 02:17）主运行，10:47 幂等兜底
   → GitHub Actions 启动 Kimi Code Agent
+  → 直采官方 news/changelog，生成强制重大候选清单
   → 确定性采集 WayToAGI，并直接写入完整 attachment 与 /tmp/waytoagi.json
   → 并行检索、核验主日报并语义去重
   → 写入 content/artifacts/*.json
-  → 校验结构、来源 URL、WayToAGI 逐条完整性、不可变历史和改动范围
+  → 强制核对每条重大候选的 id + 官方证据 URL + 版本匹配词
+  → 校验结构、WayToAGI 逐条完整性、不可变历史和改动范围
   → 生成 public/data/reports.json
   → 自动 commit / push
   → Vercel 收到 push 后构建并发布
@@ -29,10 +31,12 @@ content/reported.md                   跨期语义去重档案
 content/waytoagi-consumed.txt         由 WayToAGI attachment 严格派生的消费状态
 scripts/build_data.py                 将仓内内容编译为前端数据
 scripts/validate_content.py           内容 schema / URL / 重复校验
+scripts/fetch_official_priority_sources.mjs  官方重大发布直采与备用路径
+scripts/validate_priority_coverage.py 重大候选的输入与入刊覆盖门禁
 scripts/validate_waytoagi_run.py      WayToAGI 源数据与 attachment 逐条完整性门禁
 scripts/check_daily_changes.py        限制云端 Agent 的可写范围
 scripts/fetch_builders.mjs            公共 AI builder / podcast feed
-tests/test_waytoagi.py                SSR 解析、去重与上游刷新回归测试
+tests/                               官方源、覆盖门禁、补刊与 WayToAGI 回归测试
 .github/workflows/daily-report.yml    每日无人值守任务
 .github/workflows/ci.yml              每次提交的构建质量门
 ```
@@ -68,9 +72,15 @@ attachment 都不会被消费或提交。
 若上游后来补充或修正旧期条目，结构化输入会重新列出该期，并只重写对应 WayToAGI attachment；主日报仍
 不可覆盖。`content/waytoagi-consumed.txt` 只由已验证的 `waytoagi-YYYYMMDD.json` 派生，不能手工推进。
 
+官方优先采集用 72 小时重叠窗口，并为每个旗舰模型发布生成稳定 id、官方证据和版本匹配词。
+比如 `x.ai/news` 入口返回 403 时，采集器会改用官方 API release notes；HN 只用于发现精确的
+`x.ai/news/...` 链接，必须再直取具体官方文章并核对 canonical URL、模型版本和日期才会升级为
+required candidate。任一 required 候选未在当日主刊或补刊中完整覆盖，
+工作流都会明确失败；不会再以「页面打不开」为由静默弃收。
+
 ## 首次上线
 
 仓库推到 GitHub 后，还需要一次性添加 Kimi Secret 并连接 Vercel。完整步骤见 [DEPLOY.md](DEPLOY.md)。
 
-自动任务也可以在 GitHub 的 **Actions → Daily AI report → Run workflow** 手动补跑；文件命名、内容去重和
-改动范围检查让同日重跑保持幂等。
+自动任务也可以在 GitHub 的 **Actions → Daily AI report → Run workflow** 手动补跑。若发现未覆盖的强制候选，
+同日重跑会新建连续编号的小型补刊；若候选均已覆盖，才保持幂等。主刊与已提交补刊均不可覆盖。
