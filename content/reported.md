@@ -325,3 +325,25 @@
 ## 2026-08-13（第十三期·Grok 4.6 补刊）
 
 - 2026-08-13 | SpaceXAI 官方发布 Grok 4.6：长时间 Agent、500k 上下文，API 输入/输出 $2/$6
+
+## 2026-08-14（第十四期）
+
+- 2026-08-14 | Google 发布 Gemini 3.7 Flash：FrontierCode 43.6%/DeepSWE 65.3%/AA 56，$0.75/$3.75，API+AI Studio+Antigravity，距 3.6 仅三周（DeepMind/The Decoder/Axios/彭博）
+- 2026-08-14 | 进展：DeepSeek V4 Pro 转正式版 + Harness v0.1 MIT 开源（一切皆插件/Cordis/dsh）+ API 涨价落地缓存命中 6 倍（The Decoder/GitHub/量子位）
+- 2026-08-14 | Ilya SSI 首个模型曝光，方向持续学习（量子位，单一来源，未经官方证实细节）
+- 2026-08-14 | Claude Cowork 进驻 Chrome 扩展：skills/plugins/connectors 进浏览器、会话跨端同步，Max/Team 先行 Pro 随后（Claude 官方 X/The Decoder）
+- 2026-08-14 | 蚂蚁 inclusionAI 发布 Ling 3.0 Flash：124B 以下最聪明开源模型 AA 38、幻觉率 97%→44%、MIT、HF/DeepInfra（The Decoder，单一来源）
+- 2026-08-14 | Suno Studio 2.0：聊天式 DAW（Premier）、MIDI 导入/分轨分离/automation、32-bit/48kHz 无限多轨导出、插件生成暂免积分（The Decoder/MBW）
+- 2026-08-14 | Spotify×Kobalt：AI 粉丝二创翻唱/remix 授权首个 UMG 体系外版权方（MBW，单一来源）
+- 2026-08-14 | 进展：Ticketmaster 上线 Gemini connected app；Woodward 官宣 14 家新集成（OpenTable/Wix/Zocdoc/iHeartRadio/Pandora 等）（MBW/X）
+- 2026-08-14 | 360 纳米大片流水线×《知识就是力量》发布「知力·纳米」科普科幻 AI 大片创作平台（量子位，单一来源）
+- 2026-08-14 | Ramp 数据：Fable 5 仅占 Anthropic 售出 token 6%，前沿模型付费意愿触顶（The Decoder，单一来源）
+- 2026-08-14 | Aaron Levie：DeepSeek/Grok 新模型低价跳升=Jevons 悖论，模型路由与优化层最受益（X）
+- 2026-08-14 | Peter Yang：语音正成为 agent 编排层、个人电脑迁往云端、信任是分水岭（X）
+- 2026-08-14 | Madhu Guru：AI 产品最大 alpha 在应用层，前 0.1% builder 更重要（X）
+- 2026-08-14 | Claude 扫清 2000 阶以下哈达玛矩阵，AI 批量清空数学待解列表（量子位，单一来源）
+- 2026-08-14 | Mistral OCR 4.1：原生段落级 bounding box、结构化块标签、六项精度提升（Mistral 文档/HN）
+- 2026-08-14 | GitHub Trending：NVIDIA-NeMo/Switchyard（LLM 路由代理）、kepano/obsidian-skills、altic-dev/FluidVoice、hugohe3/ppt-master、index-tts/index-tts（2.5 五语零样本克隆）、lightningpixel/modly
+- 2026-08-14 | Garry Tan GBrain v0.45.6.0：17 新 brain skills、兼容 Codex/Claude Code、记忆 agent 应独立运行（X）
+- 2026-08-14 | Launch HN：Bullet（YC S26）更快 coding agent CLI，三档模型路由+定向检索+并行工具调用，免费（codewithbullet.com/HN）
+- 2026-08-14 | 端侧 Agent 芯片 Acrab 融资 4.8 亿美元、首颗芯片量产（量子位，单一来源）

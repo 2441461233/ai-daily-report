@@ -1,0 +1,240 @@
+{
+  "date": "2026-08-14 星期五",
+  "label": "第十四期",
+  "generatedAt": "2026-08-14T14:45:00+08:00",
+  "oneLiner": "📌 今日一句话：Google 三周一款 Flash 把「够用模型」的价格打穿、DeepSeek 一边开源 Harness 一边把缓存价抬 6 倍——模型层加速 commodity 化，护城河继续向应用层与合规分发通道移动；本周动作：用 Gemini 3.7 Flash / Ling 3.0 Flash 重跑一次成本-质量基线，并把音乐二创管线切进 Spotify 已授权生态。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "Google 发布 Gemini 3.7 Flash：三周迭代一次，$0.75/$3.75 定价下代码能力反超 Claude Sonnet 5",
+          "summary": "Google 8/13 发布 Gemini 3.7 Flash，距上代 3.6 Flash 仅三周，官方归因于「算法层面的改进」并继续维持 $0.75/$3.75（每百万 token 输入/输出）的现价——较 3.6 Flash 发布价低 50%。Google DeepMind 官方数据：Artificial Analysis 智能指数 56（3.6 Flash 为 52），FrontierCode 43.6%（vs Claude Sonnet 5 42.7%、GPT-5.6 Terra 41.3%），DeepSWE 65.3%、Terminal-bench 2.1 85.8%，与 GPT-5.6 Terra 互有胜负。模型已上线 Gemini API、AI Studio 与 Antigravity；Axios 与彭博均指出这是在旗舰 Pro 系列延迟背景下先用 workhorse 模型抢市场。对你的映射：主力模型的「价格-性能甜点位」正在以月为单位下移——本周用同一组真实编码/agent 任务对比 3.7 Flash 与你现用模型，若质量持平，直接把高频流水线（摘要、审核、初稿）切过去，按现行定价成本可再降一档；同时别把架构绑死在单一旗舰模型上。",
+          "expanded": true,
+          "sources": [
+            { "name": "Google DeepMind 官方模型页", "url": "https://deepmind.google/models/gemini/" },
+            { "name": "The Decoder", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "【进展】DeepSeek 三连：V4 Pro 转正式版、agent 框架 Harness v0.1 以 MIT 开源、API 涨价落地缓存命中涨至 6 倍",
+          "summary": "继昨日 0813 版本上线后，The Decoder 报道 DeepSeek V4 Pro 正式脱离测试阶段；同步把 agent harness 软件 DeepSeek Harness（dsh）v0.1 以 MIT 许可开源——官方仓库确认其「一切皆插件」架构、基于 Cordis，npx @deepseek-ai/dsh web 即可启动 Web UI，目前为开发者预览且可能有破坏性变更。上月预告的 API 涨价同步落地：缓存命中价格涨至现行 6 倍，对反复读同一批文件的 agent 工作流冲击最大。量子位实测文标题直言「我原谅它涨价了」。",
+          "expanded": false,
+          "sources": [
+            { "name": "DeepSeek Harness 官方仓库", "url": "https://github.com/deepseek-ai/deepseek-harness" },
+            { "name": "The Decoder", "url": "https://the-decoder.com/" },
+            { "name": "量子位", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "Ilya Sutskever 的 SSI 首个模型曝光，方向直指持续学习（未经官方证实细节）",
+          "summary": "量子位 8/13 晚以「刚刚！Ilya首个模型曝光了」报道：SSI 成立后的首个模型浮出水面，首剑劈向持续学习（continual learning）。官方尚未放出完整技术细节，持续学习若被突破，意味着模型可在部署后持续吸收新知而非冻结于训练截止日——这是当前所有大模型的硬约束之一。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "Claude Cowork 进驻 Chrome 扩展：skills、plugins、connectors 首次跑进浏览器，会话跨端同步",
+          "summary": "Anthropic 官方账号宣布：Chrome 扩展侧栏现在运行与桌面/网页/移动版相同的完整 Claude Cowork 会话，skills 与 connectors 直接在浏览器内可用，会话跟随账号而非设备，可在标签页与其他端之间接续；Max 与 Team 用户今日可用，Pro 数周内跟进。官方同时提醒网页隐藏指令（提示注入）风险，建议勿用于银行与健康数据。浏览器正在从「agent 的信息源」变成「agent 的完整工作台」。",
+          "expanded": false,
+          "sources": [
+            { "name": "Claude 官方 X", "url": "https://x.com/claudeai/status/2087635262390026525" },
+            { "name": "The Decoder", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "蚂蚁 inclusionAI 发布 Ling 3.0 Flash：同尺寸最聪明开源模型，幻觉率 97%→44%，MIT 许可",
+          "summary": "The Decoder 报道：蚂蚁集团 inclusionAI 发布 Ling 3.0 Flash，Artificial Analysis 智能指数 38 分，与 Qwen3.6 27B 持平但激活参数更少，是 124B 总参数以下最聪明的开源模型（榜首仍为 DeepSeek V4 Flash 的 52 分）；AA Omniscience 幻觉率从上代 97% 降至 44%，agentic 任务（t3-Bench Banking 等）明显提升。模型以 MIT 许可发布，权重上 Hugging Face，API 经 inclusionAI 与 DeepInfra 提供，按 token 计价为同能力档最低。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder（单一来源）", "url": "https://the-decoder.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Suno Studio 2.0：把 DAW 变成可以聊天的「乐队队友」，MIDI 导入 + 分轨分离 + 无限多轨导出",
+          "summary": "Suno 发布 Studio 2.0，将 AI 音乐平台升级为聊天驱动的 DAW：Premier 订阅用户可用自然语言让 Studio 生成乐器、人声乃至自定义插件（插件生成暂不消耗积分）；新增 MIDI 导入/录制/编辑、stem 分离、automation 曲线，以及 32-bit/48kHz 无限制多轨导出。The Decoder 指出这与 CEO Mikey Shulman 此前为遏制 AI 歌曲灌水的下载限量政策形成张力——Suno 显然在赌付费专业用户不会去刷流媒体。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder", "url": "https://the-decoder.com/" },
+            { "name": "Music Business Worldwide", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        },
+        {
+          "headline": "Spotify 与 Kobalt 签约：AI「粉丝二创」翻唱/remix 工具首次走出 UMG 体系",
+          "summary": "MBW 报道，继 Universal 与 Merlin 之后，Spotify 与版权管理公司 Kobalt 达成协议，为其 AI 驱动的粉丝自制翻唱与 remix 工具取得授权——这是该工具首个 UMG 体系之外的音乐版权方。平台的 AI 二创授权拼图正从唱片公司扩展到词曲版权侧，创作者的合规二创通道再宽一格。",
+          "expanded": false,
+          "sources": [
+            { "name": "Music Business Worldwide（单一来源）", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        },
+        {
+          "headline": "【进展】Ticketmaster 上线 Gemini 内 connected app，Google 同日官宣 14 家新应用集成",
+          "summary": "MBW 报道 Ticketmaster 在 Gemini 中推出 connected app，合格赛事会根据粉丝的相关搜索自动浮现、活动方无需额外开发——距 Gemini App 破 10 亿月活（8/12 已报）仅一天。Google VP Josh Woodward 同日官宣新一波集成正在铺开，名单含 OpenTable、Ticketmaster、Wix、Zocdoc、iHeartRadio、Pandora、Granola、Otter 等 14 家，并公开招募合作方。Gemini 的应用内分发入口开始从演示走向真实交易场景。",
+          "expanded": false,
+          "sources": [
+            { "name": "Music Business Worldwide", "url": "https://www.musicbusinessworldwide.com/" },
+            { "name": "Josh Woodward on X", "url": "https://x.com/joshwoodward/status/2087751559606407615" }
+          ]
+        },
+        {
+          "headline": "360 纳米大片流水线联手《知识就是力量》推出「知力·纳米」科普科幻 AI 大片创作平台",
+          "summary": "量子位报道，360 科技集团与《知识就是力量》杂志社发布「知力·纳米」科普科幻 AI 大片创作平台，并同步举行 AI 创作交流活动。传统科普出版机构开始把 AI 视频流水线引入内容生产，科普/科幻短片是 AI 影视落地阻力较小的切口。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Ramp 数据：Fable 5 仅占 Anthropic 售出 token 的 6%，企业为前沿智能付费的意愿触顶",
+          "summary": "The Decoder 援引 Ramp 数据：被视为市场最强的 Anthropic Fable 5 只占其售出 token 的 6%——企业不是买不起，而是性能提升换不成可感知的日常价值时就不愿升级。这与 Google 三周一款平价 Flash、DeepSeek 涨价仍被原谅形成互文：「够用且便宜」正在吃掉「最强但贵」。对你的映射：给自己的 AI 功能做定价时，按客户能感知的任务价值分层（基础档跑平价模型、增值档才用旗舰），而不是全量押注最强模型；你的成本结构也该照此重构。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder（单一来源）", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "Box CEO Aaron Levie：DeepSeek 与 Grok 同日跳升是 Jevons 悖论现场，最大赢家是模型路由层",
+          "summary": "Levie 长评：DeepSeek 与 Grok 的新模型以极低价格实现能力大跳，企业想交给 agent 的用例（扫代码库查安全、审全部文档、处理大量工作流）远多于当前预算能覆盖的——AI 越便宜，需求越加速。他点名的结构性机会在应用层：模型选择越多、越分化，能按任务路由与优化的那一层越值钱。对你的映射：一人公司不必自训模型，把「按任务自动选模型 + 控制成本」做成产品卖点（哪怕先是自己工作流里的一套路由脚本），正是本周 DeepSeek 涨价 + Flash 降价同时发生时最该建的能力。",
+          "expanded": false,
+          "sources": [
+            { "name": "Aaron Levie on X", "url": "https://x.com/levie/status/2087719356763672917" }
+          ]
+        },
+        {
+          "headline": "Peter Yang：语音正在成为 agent 的编排层，个人电脑将迁往云端，信任是分水岭",
+          "summary": "Peter Yang 新文判断：我们用电脑的方式将从「键鼠手动操作」转向「用语音指挥云端 agent」——语音成为编排层、个人计算迁往云端、信任（而非能力）成为产品分水岭。对你的映射：给你正在做的工具加一个语音指令入口（哪怕只是全局热键 + 听写转 agent 指令），是本周即可验证的低成本实验；本地听写方案已成熟（见今日 GitHub 榜 FluidVoice）。",
+          "expanded": false,
+          "sources": [
+            { "name": "Peter Yang on X", "url": "https://x.com/petergyang/status/2087547168764862495" }
+          ]
+        },
+        {
+          "headline": "Meta AI 高级总监 Madhu Guru：未来几年 AI 产品最大的 alpha 在应用层，0.1% 的 builder 比以往更值钱",
+          "summary": "Madhu Guru 判断：模型会持续更便宜、更强、更本地化，差异化来自对具体用户工作流的深度理解和围绕它重新设计体验的想象力；能 build AI 产品的人即将暴涨，因此成为前 0.1% 的 builder 更重要。对你的映射：别再卷「接入更多模型」，选一个你真正懂的工作流（比如 AIMV 的某个环节），把这周新出的便宜模型能力嵌进去做深一层的体验重构。",
+          "expanded": false,
+          "sources": [
+            { "name": "Madhu Guru on X", "url": "https://x.com/realmadhuguru/status/2087553833098723547" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Claude 扫清 2000 阶以下哈达玛矩阵：AI 开始系统性清空数学待解列表",
+          "summary": "量子位报道，Claude 一举解决了 2000 阶以下的哈达玛矩阵（Hadamard matrix）存在性问题，评论称「AI 开始清空数学待解列表」。继上周 Anthropic 研究版 Claude 攻黎曼猜想零点下界（8/11 已报）之后，AI-for-math 正从单点突破走向批量清扫；对产品的意义在于：组合设计、编码理论等依赖此类构造的工程领域，可能很快能直接调用「AI 数学构造器」。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "Mistral 发布 OCR 4.1：原生段落级 bounding box，专攻密集批注页面",
+          "summary": "Mistral 8/13 发布 OCR 4.1，为其 Document AI 栈的最新 OCR 服务：原生段落级 bounding box 提取、结构化块标签，官方称在六个维度提升精度，重点改善密集、带批注页面的识别。文档智能是 agent 读合同、发票、论文的底层管道，结构化坐标让下游引用与校对可直接落回原文位置。",
+          "expanded": false,
+          "sources": [
+            { "name": "Mistral 官方文档", "url": "https://docs.mistral.ai/" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "note": "本周期风向：一条线把模型塞进本地工作流（FluidVoice 本地听写、modly 本地图转 3D、14MB 端侧模型 needle 连续在榜），另一条线给云端 agent 修管道（Switchyard 做模型路由、Obsidian 官方与 Anthropic 官方 skills 双双在榜）——本地私有化与 agent 基建是本周期开源的两个重心。",
+      "items": [
+        {
+          "headline": "NVIDIA-NeMo/Switchyard：Rust 写的 LLM 流量路由代理，让 Claude Code/Codex 原生说 OpenAI/Anthropic API 却跑任意后端",
+          "summary": "NVIDIA NeMo 出品的 Rust 代理：在 OpenAI Chat、Anthropic Messages、OpenAI Responses 三种格式间互译，支持随机分流 A/B、LLM 分类器路由、按信号升级强模型等策略，配 Prometheus 指标。指向它，coding agent 就能在 vLLM、NIM、Ollama 或 OpenRouter 后端间自由切换——正是 Levie 所说的「路由层」的开源基建。目前 pre-alpha，Apache-2.0。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/NVIDIA-NeMo/Switchyard" }
+          ]
+        },
+        {
+          "headline": "kepano/obsidian-skills：Obsidian CEO 官方出品的 agent skills 包，教 agent 操作 Markdown/Bases/JSON Canvas",
+          "summary": "Obsidian CEO kepano 发布的官方 skills：遵循 Agent Skills 规范，Claude Code、Codex、OpenCode 均可一键安装，涵盖 Obsidian Flavored Markdown、Bases 数据库视图、JSON Canvas、Obsidian CLI 操作，外加 defuddle 网页正文提取省 token。个人知识库与 agent 的官方级打通，知识工作者的 agent 化又近一步。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/kepano/obsidian-skills" }
+          ]
+        },
+        {
+          "headline": "altic-dev/FluidVoice：macOS 本地听写，GPLv3 开源的 Wispr Flow 平替",
+          "summary": "macOS 开源听写应用：本地跑 Parakeet/Nemotron/Whisper 等 STT 模型，可选全本地的 Fluid Intelligence 增强模型做智能排版，支持全局热键、命令模式（语音操控 Mac）、写作模式（任意文本框内改写）；brew install --cask fluidvoice 即可，Windows/iOS 排队中。语音入口工具的本地化样本，呼应 Peter Yang 的「语音编排层」判断。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/altic-dev/FluidVoice" }
+          ]
+        },
+        {
+          "headline": "hugohe3/ppt-master：中文开发者的「原生 PPTX」生成 skill，从文档直出可继续编辑的真 PowerPoint",
+          "summary": "金融背景的 Hugo He 独立开发：以 skill 形式跑在任意 agent 工具内，把 PDF/DOCX/网页素材生成含原生形状、母版、数据图表、动画甚至配音讲稿的 .pptx——不是图片拼贴而是可继续编辑的 PowerPoint 对象；MIT 许可，数据不出本机，推荐 Kimi K3/Claude 驱动。「一个 CPA 用 Python + agent 能走多远」的活样本。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/hugohe3/ppt-master" }
+          ]
+        },
+        {
+          "headline": "index-tts/index-tts：B 站 IndexTTS-2.5 上榜，零样本声音克隆支持中英日西阿五语",
+          "summary": "B 站开源的工业级零样本 TTS：8/10 发布的 2.5 版支持中/英/日/西/阿，细粒度情绪控制（参考音频/情绪向量/文本描述三种方式）、语速 0.5x–2.0x、拼音/音素发音纠正，RTX 4090 上 RTF 约 0.2，支持 vLLM 生产部署。对 AI 配音、AIMV 有声内容管线的创作者直接可用；注意其采用 bilibili 自定义模型许可。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/index-tts/index-tts" }
+          ]
+        },
+        {
+          "headline": "lightningpixel/modly：完全本地 GPU 的图片转 3D 桌面应用，自带 agent 可调的 CLI",
+          "summary": "开源桌面应用（Win/Linux/Apple Silicon）：图片直转 3D mesh，全程本地 GPU，通过扩展机制接入 Hunyuan3D 2 Mini、TripoSG、Trellis2 GGUF 等模型；内置 stdlib CLI 让 agent 脚本无需 UI 即可批量生成。AI 视频/游戏素材管线的本地化一环，MIT 许可。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/lightningpixel/modly" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Garry Tan 的 GBrain 更新 v0.45.6.0：17 个新 brain skills，并明确「记忆 agent 应独立于主 coding agent 运行」",
+          "summary": "YC CEO Garry Tan 的个人 AGI 项目 GBrain（自带 git 仓库做记忆与自定义 skills 的个人 AI）发布 v0.45.6.0，新增 17 个经其数十万 markdown 文件实测的 brain skills，现已兼容 Codex 与 Claude Code。他同时给出架构建议：GBrain 应作为独立 agent 运行，而非塞进主 coding agent。对你的映射：把自己的笔记/素材库做成一个独立的「记忆 agent」（git 仓库 + skills），与 coding agent 分工而非合体——这个模式本周就有官方参考实现可抄。",
+          "expanded": false,
+          "sources": [
+            { "name": "Garry Tan on X", "url": "https://x.com/garrytan/status/2087594114372259890" },
+            { "name": "Garry Tan on X（架构说明）", "url": "https://x.com/garrytan/status/2087597829065945249" }
+          ]
+        },
+        {
+          "headline": "Launch HN：Bullet（YC S26）——为速度重写的 coding agent CLI，免费公测",
+          "summary": "Bullet 针对「模型够快、harness 太重」的痛点：模型路由（fast/deep/reason 三档按需升级）、定向检索只读相关代码而非嵌入整个仓库、独立工具调用并行执行并拦截死循环；CLI 已上 macOS/Linux（npm install -g @trybullet/cli），免费且无需 key 起步。对你的映射：它公开的三档路由思路本身就是一套可复用的降本模板——即使不换工具，也可以在自己调的 agent 流水线里照做「简单任务先走便宜模型、按需升级」。",
+          "expanded": false,
+          "sources": [
+            { "name": "Bullet 官网", "url": "https://codewithbullet.com/" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        },
+        {
+          "headline": "端侧 Agent 芯片创企 Acrab 获 4.8 亿美元融资，首颗 AI 芯片已量产",
+          "summary": "量子位报道，主打端侧算力的 Agent 芯片新贵 Acrab 冲出重围，拿下 4.8 亿美元融资，首颗 AI 芯片已进入量产。端侧推理成本若被打下来，本地 agent（今日榜单的 FluidVoice、modly 一类）的体验天花板会继续抬高。对你的映射：做产品时把「端侧可运行」作为架构预留项——模型与算力都在向本地迁移，纯云方案的成本与隐私叙事会被持续挤压。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        }
+      ]
+    }
+  ]
+}
