@@ -34,6 +34,7 @@ jobs:
       CI: 'true'
       KIMI_DISABLE_TELEMETRY: '1'
       KIMI_CODE_HOME: /tmp/kimi-code
+      PYTHONDONTWRITEBYTECODE: '1'
 
     steps:
       - uses: actions/checkout@v7.0.1
@@ -281,6 +282,8 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v7.0.1
         with:
