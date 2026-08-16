@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-14T14:45:00+08:00",
-  "count": 23,
+  "generatedAt": "2026-08-16T11:45:00+08:00",
+  "count": 24,
   "reports": [
     {
       "date": "2026-07-28",
@@ -4468,6 +4468,60 @@
               ]
             }
           ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "开源之后，MiniMax H3 拥有了 300 个分身",
+              "summary": "Mini Max H3开源之后，社区已经把它拆成了“300 个分身”：压缩到消费级显卡能跑、重写Mac原生推理、做 NVIDIA/AMD加速，还摸索出“本地低成本打样，云端高质量成片”的新流程。这篇适合AI视频创作者、ComfyUI 玩家和Agent工作流开发者看。里面不仅有长视频续写、单帧图像编辑、独立音频生成这些冷门玩法，还展示了H3被接进自动化制片系统后的可能性。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/12",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260812"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RN0HwuIxDiTdFfkrOJPcmewpn8e"
+                }
+              ]
+            },
+            {
+              "text": "Wan3.0众测！一次直出30秒，甩链接也能直接出视频",
+              "summary": "这篇是 WaytoAGI 众测团对Wan3.0的实测复盘，30位创作者做了90+案例，覆盖短漫剧、广告片、产品演示、UI 动效、MV、数字空间和影视叙事。最值得看的不是单条样片，而是它已经能把30秒叙事、网页/Word/PDF/Excel 输入、多参考图、人物微表情、角色一致性和视听协同放进真实流程里。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/12",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260812"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/QmppwJonui3GsjkE0bncfKPdn8f"
+                }
+              ]
+            },
+            {
+              "text": "Stripe创始人：AI时代，创业还需要“小步快跑”吗？丨YC",
+              "summary": "Stripe创始人Patrick在这期YC的播客上输出了很多对AI创业过程中的反思。面对一群正在考虑退学、用 AI 创业的学生。大家最关心的是：AI 能替人做多少事？过去那套“小步快跑”的创业方法还管用吗？ Patrick 的答案是：AI 确实让新公司出现得更快、收入来得更早，但学什么、做什么、什么时候推出产品，仍要靠创业者自己判断。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/12",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260812"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/D2fSwVarFicLf9kjayEcIzusnbo"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/12，按原文日期归档。"
         }
       ],
       "rich": true,
@@ -4840,6 +4894,108 @@
               ]
             }
           ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "陈言：分享一下我在小红书做自媒体的选题工作流",
+              "summary": "陈言分享了他在小红书做自媒体的选题工作流，不是那种抄话题和复刻账号的。他靠这个方法获得了稳定的广告客户与合作机会。来一起看看！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/IS1iwIrwriJcqYkrvyacACaUnqg"
+                }
+              ]
+            },
+            {
+              "text": "这个封装了我3年实测经验的AI提示词案例网站，今天正式免费开放",
+              "summary": "卡尔把维护了3年的案例库开放了出来，里面有上千条AI视频、前端、Agent 生成记录，还用Seedance 2.0 Fast、MiniMax H3、Wan 3.0跑了136个case，覆盖多素材 MV、文生视频、图生Vlog等场景。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RJNbw1hDhiZqjIkJGGxcltf3nhe"
+                }
+              ]
+            },
+            {
+              "text": "DeepSeek Harness 上线：一切皆为插件，一切皆是可能",
+              "summary": "DeepSeek Harness 的 开发者预览版上线，并开源。以 “一切皆插件” 为核心设计理念，框架本身不写死能力，模型、工具、调度循环、UI 都可以通过插件自由替换重组。它拥有PTC、创造模式等多种工作范式，可以降低多步任务的上下文消耗，还能直接生成专属的智能体预设。完整会话日志、多级沙箱与权限审批筑牢了安全底线，还兼容MCP和已有的钩子脚本。多套 SDK 覆盖不同开发场景，对想要深度改造、搭建私有 Agent 的开发者极具参考价值。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RO06w0R0Iivq3WkGv0ycIsI1noe"
+                }
+              ]
+            },
+            {
+              "text": "如何让 34 个 AI Agent 主动干活丨Greg Isenberg",
+              "summary": "很多人一听“34 个 AI Agent”，第一反应可能是：这得多会折腾工具啊。其实这篇最值得看的点，反而不是 Agent 数量，而是 Allie K. Miller 怎么把它们变成一支会主动推进工作的“小团队”。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/C9k2wmDY7ip4aMkYC8Zca3pLnYd"
+                }
+              ]
+            },
+            {
+              "text": "保姆级教程，Codex 接入 DeepSeek V4 Pro 和 Grok 4.6，6 种方法全整理",
+              "summary": "DeepSeek V4 Pro 正式版发布了，Grok 4.6 也来了。苍何整理了这篇从 0 到 1 的保姆级教程，把DeepSeek V4 Pro和Grok 4.6接入Codex和WorkBuddy的方法做了个非常细致的分享。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/WZyqwFI5mivtvvkKFWhcZjCfnIu"
+                }
+              ]
+            },
+            {
+              "text": "DeepSeek-V4-Pro 正式版上线",
+              "summary": "DeepSeek V4 Pro 正式版已同步在 APP、网页端和 API 更新上线。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/CXAGwKXMLi4XNOkE8vSc6vpDnGb"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/13，按原文日期归档。"
         }
       ],
       "rich": true,
@@ -5254,108 +5410,6 @@
               ]
             }
           ]
-        },
-        {
-          "title": "🧭 WayToAGI 知识库精选",
-          "items": [
-            {
-              "text": "Claude/Codex能跨会话传消息，我重构工作流",
-              "summary": "很多人用Claude/Codex来vibe coding，都会遇到一个很烦的问题。上下文一乱，新想法塞进当前对话会带偏主线，重开一条又要补充背景、重复解释踩过的坑。Claude/Codex能跨会话传消息后，就可以探索所有可行路径还不丢上下文。Codex适合用会话ID精确寻址，Claude Code则更适合按项目、日期、主题搜索历史会话。快来试试！",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "WayToAGI 精选 8/11",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260811"
-                },
-                {
-                  "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/AoMvwYVlpiaBtPkm55HcGvxjn2d"
-                }
-              ]
-            },
-            {
-              "text": "Claude Tag 可能会是下一个现象级 AI 产品。",
-              "summary": "一个月前，Anthropic 在Slack里上线了Claude Tag。阿颖这篇文章把Claude Tag和Claude Code、Codex、OpenClaw放在一起进行了对比，发现Claude Tag或许会是下一个现象级 AI 产品。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "WayToAGI 精选 8/11",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260811"
-                },
-                {
-                  "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/OF3IwAy1rip2BKkNGnQcUmITnwf"
-                }
-              ]
-            },
-            {
-              "text": "Codex Security，开源了！",
-              "summary": "现在用 AI 半天搓个产品上线，已经不稀奇了，但最容易被忽略的往往是安全：权限没收紧、数据库没校验、接口没防护，前期看不出问题，真有流量后就可能变成事故。OpenAI 开源的Codex Security可以直接装成npm包，在项目里扫描漏洞，还会先验证风险、给出位置和修复建议，支持日常检查和深度扫描，也能对比修复前后的结果。产品上线前用它跑一遍，至少能少踩几个安全坑。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "WayToAGI 精选 8/11",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260811"
-                },
-                {
-                  "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/Kgu3wTyD3inmRwkmbufcaLzWnWd"
-                }
-              ]
-            },
-            {
-              "text": "硅谷观察日记｜AI恐慌退潮，分享我走访多所大学后的四点观察",
-              "summary": "作者在走访纽约大学、卡内基梅隆、南加大、UCLA、ACCD后发现，美国高校的 AI 恐慌正在退潮，老师们更关心一项作业里哪些步骤能交给 AI，哪些必须学生亲手完成。AI 让答案变便宜了，人的判断、过程和责任反而更值钱。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "WayToAGI 精选 8/11",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260811"
-                },
-                {
-                  "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/FR2WwcGY2iJ0qRkbldLcGokOnxf"
-                }
-              ]
-            },
-            {
-              "text": "AI 工程师必备的 7 条自改进智能体循环规则",
-              "summary": "智能体会自己写代码、自己改提示词、自己跑循环，看起来越来越聪明；但如果你没先定义什么叫“好”，它很可能只是把分数刷漂亮，真实效果反而变差。来一起看看Google官方的自改进智能体循环是如何避免这一问题的！",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "WayToAGI 精选 8/11",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260811"
-                },
-                {
-                  "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/ENInwjmnViH3I4knMO2cmO1PnVg"
-                }
-              ]
-            },
-            {
-              "text": "从 RAG 到上下文图：9 步路线图",
-              "summary": "这篇文章把从RAG到上下文图的路线拆成 9 步：先找一个RAG答不好的多跳问题，再抽实体和关系、做实体规范化、建正反向边、给边加权并保留来源，最后按路径检索并带引用生成答案。适合做企业知识库、GraphRAG、Agent上下文工程的人看。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "WayToAGI 精选 8/11",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260811"
-                },
-                {
-                  "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/XZvOwM99nivQSAkHzsJc261xnhh"
-                }
-              ]
-            }
-          ],
-          "note": "WayToAGI 上游最新可用一期为 8/11，已完整同步 6 条；内容同时按原文日期归档。"
         }
       ],
       "rich": true,
@@ -5364,6 +5418,480 @@
       "seq": 1,
       "slug": "2026-08-14--1",
       "weekday": "周五"
+    },
+    {
+      "date": "2026-08-16",
+      "generatedAt": "2026-08-16T11:45:00+08:00",
+      "oneLiner": "📌 今日一句话：阿里把「Opus 级 agent」压进一张消费级显卡（Qwen3.8-27B，Apache 2.0），SpaceX 用 600 亿美元把 Cursor 装进 Grok——开源与整合同一天加速，留给中间层的窗口在缩小；本周动作：用 Qwen3.8-27B 跑通一条本地 agent 流水线做成本基线，并在 DeepSeek Harness 或 Cursor 插件生态里抢发一个细分插件。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "阿里开源 Qwen3.8-27B：Apache 2.0、原生 262K 上下文，消费级显卡跑出「Opus 级」agent",
+              "summary": "8/14 深夜 Qwen 团队放出 Qwen3.8-27B 权重：27B 多模态 dense 模型，官方称在编程与办公任务上反超自家更大的 Qwen3.7-Plus，agent 能力明显增强——规划更自主、任务完成更可靠；原生支持 262,000 token 上下文，YaRN 可扩展至 100 万，能处理图片与视频（含图表、文档与数小时长视频），思考模式默认开启、可按查询关闭。量子位 8/15 实测称「一张消费级显卡跑 Opus 级 Agent」，多项榜单反超 Claude，推理强度可自定义，权重免费下载部署及商用。模型以 Apache 2.0 上 Hugging Face 与 ModelScope，Qwen Cloud 的 100 万上下文托管版随后上线。对你的映射：这是当前「本地可跑 + 商用无忧 + agent 够强」三要素最均衡的开源档——本周把它接进一条真实 agent 流水线（素材整理或初稿生成）与现用闭源模型对比质量与成本，达标即切换；DeepSeek 涨价之后，本地开源档的性价比窗口正在打开。",
+              "expanded": true,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/"
+                },
+                {
+                  "name": "The Decoder",
+                  "url": "https://the-decoder.com/"
+                }
+              ]
+            },
+            {
+              "text": "SpaceX 周五完成 600 亿美元收购 Cursor：Grok 4.6 低价反超 Fable 5，xAI 的 coding 拼图合拢",
+              "summary": "The Verge 8/14 报道：SpaceX 已于周五正式完成对 AI 编程工具 Cursor 的 600 亿美元收购，Cursor 表示将投入 Grok 的开发，Grok 本周刚新增一项 AI agent 功能。量子位 8/14 晚实测称 Grok 4.6「重回一梯队」，以更低价格反超 Fable 5，直言「这 Cursor 是真没白收购」，并提到「马斯克版 Workbuddy 也来了」；虎嗅 8/15 跟进分析《马斯克的猎物，Cursor的宿命》。火箭公司吃下最炙手可热的 coding 工具，把模型、分发与开发者工作流一次性打包——agentic coding 的整合速度远超预期。对你的映射：如果你正基于 Cursor 生态做产品（插件、工作流模板），现在就要重估平台风险与红利：收购后 Cursor 的开放度与 Grok 绑定深度都会变，今日上榜的 cursor/plugins 官方插件仓是最早的观察窗口；同时关注 Grok 4.6 的 API 定价，低价强模型会拉低整条 coding 工具链的成本基线。",
+              "expanded": true,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "The Verge",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence"
+                },
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/"
+                },
+                {
+                  "name": "虎嗅",
+                  "url": "https://www.huxiu.com/"
+                }
+              ]
+            },
+            {
+              "text": "【进展】谷歌继续「肢解」DeepMind：数个团队划归总部，布林亲自下场督战",
+              "summary": "量子位 8/14 晚报道，谷歌正把 DeepMind 的数个团队划归总部，布林亲自下场督战；The Verge 8/13 已在讨论「这场 DeepMind 动荡是战略还是危机」。相比 8/6 已报的 Hassabis 卸任 CEO 转任 Alphabet 首席科学家，这次动的是组织结构本身——DeepMind 作为独立王国的时代加速落幕，Gemini 各产品线的决策链路会更短。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/"
+                },
+                {
+                  "name": "The Verge",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence"
+                }
+              ]
+            },
+            {
+              "text": "OpenAI 企业收入反超消费收入：CFO 称年初 60-40 的格局已经反转",
+              "summary": "The Verge 8/14 转引 CNBC：OpenAI CFO Sarah Friar 在投资者会议上表示，公司「年初是 60-40，企业端增长远超预期，两条线已经交叉……现在大部分收入来自企业」。ChatGPT 的消费神话之外，OpenAI 的实际营收结构已转向 B 端——这解释了它近期在企业功能与 Daybreak 安全模型上的连续投入。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "The Verge 转引 CNBC",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence"
+                }
+              ]
+            },
+            {
+              "text": "英伟达把对 OpenAI 数据中心担保从 2500 亿美元砍至 1200 亿；Anthropic 单季收入从 47 亿跳至 115 亿美元",
+              "summary": "The Decoder 报道：在投资者施压下，英伟达将其为 OpenAI 俄亥俄州规划数据中心提供的担保从 2500 亿美元削减近半至不足 1200 亿美元；同期 Anthropic 单季收入从 47 亿美元跳升至 115 亿美元，让「AI 泡沫论」更难证伪。虎嗅同题分析「2500 亿美元担保传闻背后，英伟达为何为 AI 基建押上信用」。算力金融化的杠杆在收缩，而模型厂商的现金流在变好——两条曲线共同决定明年算力供需走向。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "The Decoder",
+                  "url": "https://the-decoder.com/"
+                },
+                {
+                  "name": "虎嗅",
+                  "url": "https://www.huxiu.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "国产音乐模型「音潮」正面挑战 Suno：号称根治 AI 音乐通病，API 限时免费开放",
+              "summary": "量子位 8/15 报道，国产音乐模型音潮打出「根治 AI 音乐通病」的旗号正面挑战 Suno，并宣布音潮 API 限时免费开放。对 AI 音乐创作者，多一个可白嫖的高质量 API 意味着编曲/配乐管线边际成本再降一档；建议趁限免期用同一组 prompt 与 Suno 做盲听对比。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/"
+                }
+              ]
+            },
+            {
+              "text": "Google Pomelli 新能力：产品照片一键转短视频与 GIF，小企业营销素材零门槛",
+              "summary": "Google VP Josh Woodward 8/14 宣布：Google Labs 的小企业营销实验 Pomelli 现在能把产品摄影素材直接生成短视频或 GIF。Pomelli 此前已能按品牌调性批量产出营销图，这次补上动态素材——对小商家与个人创作者，「拍一次、全平台发」的素材管线基本闭环；AIMV 创作者也可用它快速出动态海报。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Josh Woodward on X",
+                  "url": "https://x.com/joshwoodward/status/2088261701028503965"
+                },
+                {
+                  "name": "Google Labs on X",
+                  "url": "https://x.com/GoogleLabs/status/2088307370787328223"
+                }
+              ]
+            },
+            {
+              "text": "Twitch 默认用用户内容训练亚马逊生成式 AI：opt-out 制，CPO 称「如果默认不勾选就没人会勾」（8/13 消息）",
+              "summary": "The Verge 8/13 报道，Twitch 已开始默认将用户内容用于训练亚马逊的生成式 AI 模型，用户需手动 opt out；首席产品官 Mike Minton 坦承理由是「几乎全球所有内容服务都在这么做」。继 Spotify 标记 AI Persona、YouTube 提高变现门槛之后，平台与创作者之间的训练数据博弈再添一例——做内容平台或创作者工具时，「默认授权策略」本身就是产品决策。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "The Verge",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Levie 与 Madhu Guru 同评 Cursor 600 亿美元退出：applied AI 教科书，「Cursor for X」已成产品范式",
+              "summary": "Box CEO Aaron Levie 长评：Cursor 完美执行了 applied AI 打法——找准 agentic coding 的产品形态、做模型与工作流之间的中立层、自训练模型降本增效、配套基建与 GTM，「agentic coding 的市场规模远超所有人想象」。Meta AI 高级总监 Madhu Guru 则指出其文化影响：AI 产品一度困在聊天框形态里找 meta，「Cursor for X」直接开出一整类产品范式。对你的映射：拆解「Cursor for X」公式——专业工作流 + agent 循环 + 领域数据装进一个高频工具；你的垂直场景（比如 AIMV 制作）很可能存在一个还没人做的「Cursor」，本周画出它的最小闭环。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Aaron Levie on X",
+                  "url": "https://x.com/levie/status/2088476232933577124"
+                },
+                {
+                  "name": "Madhu Guru on X",
+                  "url": "https://x.com/realmadhuguru/status/2088489059115270532"
+                }
+              ]
+            },
+            {
+              "text": "OpenAI Computer History：把你的点击与键击变成 ChatGPT 可搜索的记忆时间线",
+              "summary": "The Decoder 报道，OpenAI 推出 Computer History：在 Mac 上记录点击、键击与应用切换，生成可搜索时间线供 ChatGPT 与 Codex 调用；数据以未加密 Markdown 存在本地，OpenAI 称不用于训练（但进入对话的记忆仍可能成为训练数据）。OS 级行为记录正在变成 agent 的长期记忆层，本地明文存储的隐私争议不会小。对你的映射：「行为日志→可检索记忆」的架构可以直接抄——先用现成工具把操作日志落成 Markdown 再让 agent 检索，就是低配版 Computer History。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "The Decoder",
+                  "url": "https://the-decoder.com/"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 拆解 X 开源算法：反灌水的 TweetSpamBot 只看行为不读内容，模板化引用帖照样横行",
+              "summary": "Peter Yang 研读 X 开源推荐算法：行为模型 TweetSpamBot 分析账号最近 512 个动作（发帖爆发、引用行为、时间间隔、浏览停留），识别 TWEET_CREATE_BURST、QUOTE_TWEET_SPAMMER 等模式，高分触发账号挑战但并不降权单条灌水帖——因为模型不读内容本身，内容工厂用「hook→数字→故事→结论」模板日更 10+ 条引用帖即可绕过。对你的映射：做内容分发生意要读懂平台风控的真实边界——行为指纹比内容本身更危险，自己的账号矩阵要避免「同一时间、同一模板、同一动作节奏」。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Peter Yang on X",
+                  "url": "https://x.com/petergyang/status/2088261100202868768"
+                }
+              ]
+            },
+            {
+              "text": "Steinberger：团队已全面用 openclaw 开发 openclaw，「agent 会话即 URL」是超能力",
+              "summary": "Peter Steinberger 8/15 连发两条实践：团队已迁移到「用 openclaw 开发 openclaw」，能把 agent 会话作为 URL 分享被他称为超能力；另一条是在团队共享的 AGENTS.md 里加规则——凡改动 UI 状态的 PR 必须上传演示视频。agent 工作流的可追溯性正在从日志走向会话链接与视频。对你的映射：本周可落地的两条团队规范——agent 会话链接化（方便复盘与协作）+ UI 改动强制附视频（让人与 agent 都能「看见」变更）。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Peter Steinberger on X",
+                  "url": "https://x.com/steipete/status/2088473882357530979"
+                },
+                {
+                  "name": "Peter Steinberger on X（AGENTS.md 实践）",
+                  "url": "https://x.com/steipete/status/2088486859244741020"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Moonshot AI 发布 PerceptionBench：前沿多模态模型「看」的能力无一达到 60%，GPT-5.6 Sol 微弱领先",
+              "summary": "The Decoder 报道，Moonshot AI 的 PerceptionBench 把视觉感知与逻辑推理分离测试：没有任何前沿模型达到 60% 正确率，GPT-5.6 Sol 仅微弱领先；很多被归为「推理错误」的问题其实发生在读图阶段。对产品的含义很直接：涉及读图、读屏、读文档的 agent 功能，感知层是短板，验收指标要单独测「看懂没有」而不是只看最终答案。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "The Decoder",
+                  "url": "https://the-decoder.com/"
+                }
+              ]
+            },
+            {
+              "text": "普林斯顿与英国 AISI 研究泼冷水：Opus 4.8 与 GPT-5.6 Sol 独立写论文六天，被原作者评「Reject」",
+              "summary": "The Decoder 报道，一项与普林斯顿大学及英国 AI 安全研究所合作的研究让前沿 agent（Claude Opus 4.8、GPT-5.6 Sol）用六天、3000 美元 API 额度与 GPU 资源独立完成 AI 研究论文，未发表 NeurIPS 论文的原作者评审结果为「Reject」。结论：模型能跑通完整的研究工程流程，但缺研究判断、创造性解题与放弃失败路线的能力——「自主 AI 研究员近在眼前」的说法被证伪。对产品的含义：研究类 agent 卖「全自动」还太早，「加速研究员」才是当前可交付价值。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "The Decoder",
+                  "url": "https://the-decoder.com/"
+                }
+              ]
+            },
+            {
+              "text": "至知研究院提出稀疏权重分解：不训练替代网络也能解释大模型，数据成本不到 1%",
+              "summary": "量子位 8/15 报道，至知创新研究院提出大模型可解释性新路线「稀疏权重分解」：直接拆解模型权重理解内部机制，无需再训练替代网络，数据成本不到传统方法的 1%。可解释性一旦变便宜，模型审计、合规说明与垂直微调的风险控制都会直接受益。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "cursor/plugins：Cursor 官方插件规范与官方插件仓，收购完成同一周上榜",
+              "summary": "Cursor 官方放出的插件规范与插件仓库：开发者可按规范为 Cursor 编写并分发扩展。在 SpaceX 完成收购的同一周冲上趋势榜——coding agent 的插件生态正式开战，类似当年 VS Code extensions 的早期窗口，先发插件有机会成为事实标准。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/cursor/plugins"
+                }
+              ]
+            },
+            {
+              "text": "citrolabs/ego-lite：为 AI agent 打造的最快浏览器，把你已登录的浏览器状态共享给 Codex/Claude Code",
+              "summary": "零成本零配置的 agent 专用浏览器：agent 直接接管你的登录会话做浏览器自动化，且不打扰本人正常使用。登录态共享是 agent 实操网页的最大摩擦点之一，这个项目把它变成可复用基建。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/citrolabs/ego-lite"
+                }
+              ]
+            },
+            {
+              "text": "HKUDS/CLI-Anything：让所有软件 agent-native，把任意软件包成 CLI",
+              "summary": "港大 Data Intelligence 实验室出品，口号「Making ALL Software Agent-Native」，配套 CLI-Hub 站点。agent 最擅长调命令行，把 GUI 软件 CLI 化等于给 agent 解锁全部存量软件——与上周 OpenClaw 的「agent 抢健身房课位」事件互为注脚。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/HKUDS/CLI-Anything"
+                }
+              ]
+            },
+            {
+              "text": "MakazhanAlpamys/Soup：一个 YAML 微调 LLM，layer streaming 让 8B 模型在 4GB 笔记本 GPU 上训练",
+              "summary": "把微调门槛打到消费级：一份 YAML 定义任务，layer streaming 技术让 8B 模型在 4GB 显存笔记本上训练。配合 Qwen3.8-27B 这类新开源权重，一人公司也能做自己的领域微调，不必再为微调租云 GPU。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/MakazhanAlpamys/Soup"
+                }
+              ]
+            },
+            {
+              "text": "sgl-project/sglang-omni：SGLang 出品的 omni serving，TTS/ASR/语音/全模态模型高性能推理",
+              "summary": "SGLang 团队把高性能 serving 扩展到 TTS、ASR、语音与 omni 模型。语音与全模态模型进入生产级部署时代——做 AIMV 配音、实时语音交互的服务端可以直接站在成熟推理栈上，不必自建。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/sgl-project/sglang-omni"
+                }
+              ]
+            },
+            {
+              "text": "whiteguo233/OpenBiliClaw：本地优先的自进化内容发现 agent，主动刷 B站/小红书/抖音/YouTube/X/知乎/Reddit/微博",
+              "summary": "中文平台的「信息雷达」：先理解你的偏好，再主动跨平台找内容，本地私有、开源、自进化，并支持 DeepSeek Harness 插件。对内容创作者是选题雷达，对开发者是 harness 插件生态的中文样本。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/whiteguo233/OpenBiliClaw"
+                }
+              ]
+            }
+          ],
+          "note": "本周期风向：coding agent 的工具链在「插件化」——Cursor 官方插件仓与「万物 CLI 化」同日上榜，agent 专用浏览器把登录态变成可共享基建；另一端，4GB 显存微调 8B、omni 语音 serving 把训练与推理继续往小团队手里塞。回流去重：unsloth、needle、spec-kit、FluidVoice、diagram-design、semantica。"
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "【进展】DeepSeek Harness 插件一夜燃爆 GitHub：长期记忆、电子宠物、4399 小游戏全来了",
+              "summary": "量子位 8/15 报道，8/14 刚以 MIT 开源的 DeepSeek Harness 插件生态爆发：社区一天内做出长期记忆、电子宠物、4399 小游戏等插件，「一切皆插件」的架构让第三方能力以极低摩擦接入 agent 运行时。对你的映射：新平台红利期按天计——Harness 插件市场此刻近乎空白，把你工作流里已验证的某个能力（素材下载、文案审核、发布调度）封装成插件发布，是最低成本的首发卡位。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/"
+                }
+              ]
+            },
+            {
+              "text": "HN 热帖：一人用 Codex 自动研究把 kernel 提速 232 倍，401 分登顶",
+              "summary": "一位开发者发帖详述如何用 Codex 做「自动研究」：让 agent 循环尝试优化方案，最终把 kernel 性能提升 232 倍，登上 HN 热榜第一（401 分）。单人 + agent 正在做出过去需要专家团队的高性能工程。对你的映射：「提出假设→agent 批量实验→保留最优」的循环可以平移到非内核场景——比如让 agent 跑 100 组 prompt/参数组合挑最优，本周选一个质量敏感环节试。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "作者博客",
+                  "url": "https://sankalp.bearblog.dev/"
+                },
+                {
+                  "name": "Hacker News 热榜",
+                  "url": "https://news.ycombinator.com/"
+                }
+              ]
+            },
+            {
+              "text": "Madhu Guru：当人人都能用 AI 做产品，差异化只剩产品 sense、领域知识、分发与执行",
+              "summary": "Meta AI 高级总监 Madhu Guru 8/15：build 门槛被 AI 抹平后，你的差异化是 product sense、domain knowledge、distribution、execution；他另一帖用「蒸汽机越高效、煤需求越大」类比——AI 让软件工程变便宜，只会催生更多软件去解决过去不经济的问题。对你的映射：把本周省下来的 build 时间投到分发侧——选一个渠道（小红书/X/Product Hunt）做连续 7 天发布实验，分发肌肉比技术栈更稀缺。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Madhu Guru on X",
+                  "url": "https://x.com/realmadhuguru/status/2088425380130783287"
+                },
+                {
+                  "name": "Madhu Guru on X（Jevons 类比）",
+                  "url": "https://x.com/realmadhuguru/status/2088294414255112329"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "陈言：分享一下我在小红书做自媒体的选题工作流",
+              "summary": "陈言分享了他在小红书做自媒体的选题工作流，不是那种抄话题和复刻账号的。他靠这个方法获得了稳定的广告客户与合作机会。来一起看看！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/IS1iwIrwriJcqYkrvyacACaUnqg"
+                }
+              ]
+            },
+            {
+              "text": "这个封装了我3年实测经验的AI提示词案例网站，今天正式免费开放",
+              "summary": "卡尔把维护了3年的案例库开放了出来，里面有上千条AI视频、前端、Agent 生成记录，还用Seedance 2.0 Fast、MiniMax H3、Wan 3.0跑了136个case，覆盖多素材 MV、文生视频、图生Vlog等场景。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RJNbw1hDhiZqjIkJGGxcltf3nhe"
+                }
+              ]
+            },
+            {
+              "text": "DeepSeek Harness 上线：一切皆为插件，一切皆是可能",
+              "summary": "DeepSeek Harness 的 开发者预览版上线，并开源。以 “一切皆插件” 为核心设计理念，框架本身不写死能力，模型、工具、调度循环、UI 都可以通过插件自由替换重组。它拥有PTC、创造模式等多种工作范式，可以降低多步任务的上下文消耗，还能直接生成专属的智能体预设。完整会话日志、多级沙箱与权限审批筑牢了安全底线，还兼容MCP和已有的钩子脚本。多套 SDK 覆盖不同开发场景，对想要深度改造、搭建私有 Agent 的开发者极具参考价值。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RO06w0R0Iivq3WkGv0ycIsI1noe"
+                }
+              ]
+            },
+            {
+              "text": "如何让 34 个 AI Agent 主动干活丨Greg Isenberg",
+              "summary": "很多人一听“34 个 AI Agent”，第一反应可能是：这得多会折腾工具啊。其实这篇最值得看的点，反而不是 Agent 数量，而是 Allie K. Miller 怎么把它们变成一支会主动推进工作的“小团队”。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/C9k2wmDY7ip4aMkYC8Zca3pLnYd"
+                }
+              ]
+            },
+            {
+              "text": "保姆级教程，Codex 接入 DeepSeek V4 Pro 和 Grok 4.6，6 种方法全整理",
+              "summary": "DeepSeek V4 Pro 正式版发布了，Grok 4.6 也来了。苍何整理了这篇从 0 到 1 的保姆级教程，把DeepSeek V4 Pro和Grok 4.6接入Codex和WorkBuddy的方法做了个非常细致的分享。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/WZyqwFI5mivtvvkKFWhcZjCfnIu"
+                }
+              ]
+            },
+            {
+              "text": "DeepSeek-V4-Pro 正式版上线",
+              "summary": "DeepSeek V4 Pro 正式版已同步在 APP、网页端和 API 更新上线。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/13",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/CXAGwKXMLi4XNOkE8vSc6vpDnGb"
+                }
+              ]
+            }
+          ],
+          "note": "WayToAGI 上游最新可用一期为 8/13，已完整同步 6 条；内容同时按原文日期归档。"
+        }
+      ],
+      "rich": true,
+      "label": "第十五期",
+      "issue": 24,
+      "seq": 1,
+      "slug": "2026-08-16--1",
+      "weekday": "周日"
     }
   ]
 }

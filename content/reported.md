@@ -347,3 +347,34 @@
 - 2026-08-14 | Garry Tan GBrain v0.45.6.0：17 新 brain skills、兼容 Codex/Claude Code、记忆 agent 应独立运行（X）
 - 2026-08-14 | Launch HN：Bullet（YC S26）更快 coding agent CLI，三档模型路由+定向检索+并行工具调用，免费（codewithbullet.com/HN）
 - 2026-08-14 | 端侧 Agent 芯片 Acrab 融资 4.8 亿美元、首颗芯片量产（量子位，单一来源）
+
+## 2026-08-16（第十五期）
+
+- 2026-08-16 | 阿里开源 Qwen3.8-27B（8/14 晚，Apache 2.0、原生 262K 上下文可 YaRN 至 1M、多模态长视频、消费级显卡跑 agent、多项榜单反超 Claude，量子位/The Decoder）
+- 2026-08-16 | SpaceX 周五完成 600 亿美元收购 Cursor，Cursor 转投 Grok 开发；Grok 4.6 低价反超 Fable 5、新增 agent 功能、马斯克版 Workbuddy（The Verge 8/14/量子位/虎嗅）
+- 2026-08-16 | 进展：谷歌继续肢解 DeepMind——数个团队划归总部、布林亲自督战（量子位 8/14 晚/The Verge）
+- 2026-08-16 | OpenAI 企业收入反超消费收入（CFO Sarah Friar：年初 60-40 已反转，The Verge 转引 CNBC 8/14，单一来源）
+- 2026-08-16 | 英伟达砍 OpenAI 俄亥俄数据中心担保 2500 亿→1200 亿美元；Anthropic 单季收入 47 亿→115 亿美元（The Decoder/虎嗅）
+- 2026-08-16 | 国产音乐模型音潮正面挑战 Suno：称根治 AI 音乐通病、API 限时免费（量子位 8/15，单一来源）
+- 2026-08-16 | Google Pomelli 支持产品照片一键转短视频/GIF（Josh Woodward/Google Labs on X，8/14）
+- 2026-08-16 | Twitch 默认用用户内容训练亚马逊生成式 AI，opt-out 制（The Verge 8/13，单一来源）
+- 2026-08-16 | Levie+Madhu Guru 评 Cursor 收购：applied AI 教科书、agentic coding 市场远超想象、「Cursor for X」产品范式（X）
+- 2026-08-16 | OpenAI Computer History：Mac 点击/键击变 ChatGPT 可搜索时间线，本地明文 Markdown（The Decoder，单一来源）
+- 2026-08-16 | Peter Yang 拆解 X 开源算法 TweetSpamBot：512 行为信号不读内容、模板引用帖可绕过（X）
+- 2026-08-16 | Steinberger：团队用 openclaw 开发 openclaw、agent 会话即 URL；AGENTS.md 强制 UI PR 附视频（X）
+- 2026-08-16 | Moonshot PerceptionBench：前沿多模态模型视觉感知无一达 60%、GPT-5.6 Sol 微弱领先（The Decoder，单一来源）
+- 2026-08-16 | 普林斯顿+英国 AISI：Opus 4.8/GPT-5.6 Sol 六天 3000 美元独立写论文被评 Reject（The Decoder，单一来源）
+- 2026-08-16 | 至知研究院稀疏权重分解：可解释性新路线、数据成本不到 1%（量子位 8/15，单一来源）
+- 2026-08-16 | GitHub Trending：cursor/plugins、citrolabs/ego-lite、HKUDS/CLI-Anything、MakazhanAlpamys/Soup、sgl-project/sglang-omni、whiteguo233/OpenBiliClaw
+- 2026-08-16 | 进展：DeepSeek Harness 插件生态一夜爆发——长期记忆/电子宠物/4399 小游戏（量子位 8/15，单一来源）
+- 2026-08-16 | HN 热帖：一人用 Codex 自动研究把 kernel 提速 232 倍（sankalp.bearblog.dev，HN 401 分，单一来源）
+- 2026-08-16 | Madhu Guru：人人可用 AI 做产品时差异化=产品 sense/领域知识/分发/执行；Jevons 类比（X）
+- 2026-08-16 | WayToAGI 2026-08-12：开源之后，MiniMax H3 拥有了 300 个分身
+- 2026-08-16 | WayToAGI 2026-08-12：Wan3.0众测！一次直出30秒，甩链接也能直接出视频
+- 2026-08-16 | WayToAGI 2026-08-12：Stripe创始人：AI时代，创业还需要“小步快跑”吗？丨YC
+- 2026-08-16 | WayToAGI 2026-08-13：陈言：分享一下我在小红书做自媒体的选题工作流
+- 2026-08-16 | WayToAGI 2026-08-13：这个封装了我3年实测经验的AI提示词案例网站，今天正式免费开放
+- 2026-08-16 | WayToAGI 2026-08-13：DeepSeek Harness 上线：一切皆为插件，一切皆是可能
+- 2026-08-16 | WayToAGI 2026-08-13：如何让 34 个 AI Agent 主动干活丨Greg Isenberg
+- 2026-08-16 | WayToAGI 2026-08-13：保姆级教程，Codex 接入 DeepSeek V4 Pro 和 Grok 4.6，6 种方法全整理
+- 2026-08-16 | WayToAGI 2026-08-13：DeepSeek-V4-Pro 正式版上线
