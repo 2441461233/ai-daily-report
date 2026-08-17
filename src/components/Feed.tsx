@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { site } from '@/config'
 import type { NewsItem, Report } from '@/types/report'
 import { itemCount } from '@/types/report'
@@ -88,8 +88,23 @@ interface Props {
   onNext: () => void
 }
 
+function reportSectionId(reportSlug: string, originalIndex: number) {
+  return `report-${reportSlug}-section-${originalIndex + 1}`
+}
+
+function compactSectionTitle(title: string) {
+  return title.replace(/^[^A-Za-z0-9\u3400-\u9fff]+/u, '').trim() || title
+}
+
 export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, onNext }: Props) {
-  const [tocOpenFor, setTocOpenFor] = useState<string | null>(null)
+  const [tocPinnedFor, setTocPinnedFor] = useState<string | null>(null)
+  const [tocInteracting, setTocInteracting] = useState(false)
+  const [tocAutoVisible, setTocAutoVisible] = useState(false)
+  const [wideToc, setWideToc] = useState(() => window.matchMedia('(min-width: 1400px)').matches)
+  const [activeSectionIndex, setActiveSectionIndex] = useState(0)
+  const [readingProgress, setReadingProgress] = useState(0)
+  const feedShellRef = useRef<HTMLDivElement>(null)
+  const tocHideTimer = useRef<number | null>(null)
   const sections = report.sections
     .map((section, originalIndex) => ({ section, originalIndex }))
     .filter(({ section }) => moduleFilter === null || section.title === moduleFilter)
@@ -102,62 +117,195 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   )
 
   const oneLiner = (report.oneLiner ?? '').replace(/^📌\s*今日一句话[：:]\s*/, '')
-  const tocOpen = tocOpenFor === report.slug
+  const tocPinned = tocPinnedFor === report.slug
+  const tocOpen = tocPinned || tocInteracting || (tocAutoVisible && wideToc)
   const tocPanelId = `report-${report.slug}-toc`
-  const sectionId = (originalIndex: number) =>
-    `report-${report.slug}-section-${originalIndex + 1}`
+  const activeTocIndex = Math.max(
+    0,
+    sections.findIndex(({ originalIndex }) => originalIndex === activeSectionIndex),
+  )
+  const activeTocTitle = compactSectionTitle(
+    sections[activeTocIndex]?.section.title ?? sections[0]?.section.title ?? '',
+  )
+
+  useEffect(() => {
+    const media = window.matchMedia('(min-width: 1400px)')
+    const syncLayout = (event: MediaQueryListEvent) => setWideToc(event.matches)
+    media.addEventListener('change', syncLayout)
+    return () => media.removeEventListener('change', syncLayout)
+  }, [])
+
+  useEffect(() => {
+    if (moduleFilter !== null || report.sections.length < 2) return
+
+    const feedColumn = document.querySelector<HTMLElement>('.feed-col')
+    let animationFrame = 0
+
+    const updateReadingPosition = () => {
+      const readingLine = Math.max(96, Math.min(window.innerHeight * 0.24, 180))
+      const sectionElements = report.sections
+        .map((_, originalIndex) => ({
+          originalIndex,
+          element: document.getElementById(reportSectionId(report.slug, originalIndex)),
+        }))
+        .filter(
+          (entry): entry is { originalIndex: number; element: HTMLElement } =>
+            entry.element !== null,
+        )
+
+      if (sectionElements.length === 0) return
+
+      const desktopScroller = window.matchMedia('(min-width: 900px)').matches && feedColumn
+      const atBottom = desktopScroller
+        ? desktopScroller.scrollTop + desktopScroller.clientHeight >= desktopScroller.scrollHeight - 2
+        : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2
+      let current = sectionElements[0].originalIndex
+      for (const entry of sectionElements) {
+        if (entry.element.getBoundingClientRect().top <= readingLine) {
+          current = entry.originalIndex
+        } else {
+          break
+        }
+      }
+      if (atBottom) current = sectionElements.at(-1)?.originalIndex ?? current
+      setActiveSectionIndex(current)
+
+      const firstTop = sectionElements[0].element.getBoundingClientRect().top
+      const lastBottom = sectionElements.at(-1)?.element.getBoundingClientRect().bottom ?? firstTop
+      const contentHeight = Math.max(lastBottom - firstTop, 1)
+      const readableDistance = Math.max(contentHeight - window.innerHeight * 0.55, 1)
+      const progress = atBottom
+        ? 1
+        : Math.min(1, Math.max(0, (readingLine - firstTop) / readableDistance))
+      setReadingProgress(progress)
+    }
+
+    const schedulePositionUpdate = () => {
+      if (animationFrame) return
+      animationFrame = window.requestAnimationFrame(() => {
+        animationFrame = 0
+        updateReadingPosition()
+      })
+    }
+
+    const resizeObserver = new ResizeObserver(schedulePositionUpdate)
+
+    const showTocWhileReading = () => {
+      schedulePositionUpdate()
+      setTocAutoVisible(true)
+      if (tocHideTimer.current !== null) window.clearTimeout(tocHideTimer.current)
+      tocHideTimer.current = window.setTimeout(() => setTocAutoVisible(false), 1700)
+    }
+
+    schedulePositionUpdate()
+    if (feedShellRef.current) resizeObserver.observe(feedShellRef.current)
+    feedColumn?.addEventListener('scroll', showTocWhileReading, { passive: true })
+    window.addEventListener('scroll', showTocWhileReading, { passive: true })
+    window.addEventListener('resize', schedulePositionUpdate)
+
+    return () => {
+      feedColumn?.removeEventListener('scroll', showTocWhileReading)
+      window.removeEventListener('scroll', showTocWhileReading)
+      window.removeEventListener('resize', schedulePositionUpdate)
+      resizeObserver.disconnect()
+      if (animationFrame) window.cancelAnimationFrame(animationFrame)
+      if (tocHideTimer.current !== null) window.clearTimeout(tocHideTimer.current)
+    }
+  }, [moduleFilter, report.sections, report.slug])
+
   const jumpToSection = (originalIndex: number) => {
-    const id = sectionId(originalIndex)
+    const id = reportSectionId(report.slug, originalIndex)
     const section = document.getElementById(id)
     const heading = document.getElementById(`${id}-heading`)
     section?.scrollIntoView({ block: 'start' })
     heading?.focus({ preventScroll: true })
-    setTocOpenFor(null)
+    setActiveSectionIndex(originalIndex)
+    setTocPinnedFor(null)
+    setTocInteracting(false)
   }
 
   return (
-    <div className="feed-shell">
+    <div ref={feedShellRef} className="feed-shell">
       {moduleFilter === null && sections.length > 1 && (
         <nav
-          className={`article-toc ${tocOpen ? 'is-open' : ''}`}
+          className={`article-toc ${tocOpen ? 'is-open' : ''} ${tocPinned ? 'is-pinned' : ''} ${tocAutoVisible ? 'is-auto-visible' : ''}`}
           aria-label="本期目录"
+          onMouseEnter={() => setTocInteracting(true)}
+          onMouseLeave={() => setTocInteracting(false)}
+          onBlurCapture={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setTocInteracting(false)
+          }}
           onKeyDown={(event) => {
             if (event.key === 'Escape' && tocOpen) {
-              setTocOpenFor(null)
+              setTocPinnedFor(null)
+              setTocInteracting(false)
+              setTocAutoVisible(false)
               document.getElementById(`${tocPanelId}-toggle`)?.focus()
             }
           }}
         >
+          <div className="article-toc-peek" aria-hidden="true">
+            <span className="article-toc-peek-num mono tnum">
+              {String(activeTocIndex + 1).padStart(2, '0')}
+            </span>
+            <span>{activeTocTitle}</span>
+          </div>
+
           <button
             id={`${tocPanelId}-toggle`}
             type="button"
             className="article-toc-toggle"
             aria-expanded={tocOpen}
             aria-controls={tocPanelId}
-            onClick={() => setTocOpenFor(tocOpen ? null : report.slug)}
+            aria-label={`目录，当前在第 ${activeTocIndex + 1} 节：${activeTocTitle}`}
+            onClick={() => setTocPinnedFor(tocPinned ? null : report.slug)}
           >
-            <span>目录</span>
-            <span className="article-toc-toggle-icon mono" aria-hidden="true">
-              {tocOpen ? '×' : '☷'}
+            <span className="article-toc-toggle-label">目录</span>
+            <span className="article-toc-toggle-index mono tnum" aria-hidden="true">
+              {String(activeTocIndex + 1).padStart(2, '0')}
+            </span>
+            <span className="article-toc-progress" aria-hidden="true">
+              <span style={{ height: `${Math.round(readingProgress * 100)}%` }} />
             </span>
           </button>
 
-          <div id={tocPanelId} className="article-toc-panel">
-            <p className="article-toc-label label">本期目录</p>
+          <div id={tocPanelId} className="article-toc-panel" aria-hidden={!tocOpen}>
+            <div className="article-toc-panel-head">
+              <p className="article-toc-label">大纲</p>
+              <span className="article-toc-count mono tnum">{activeTocIndex + 1}/{sections.length}</span>
+              <button
+                type="button"
+                className="article-toc-close"
+                aria-label="收起目录"
+                tabIndex={tocOpen ? 0 : -1}
+                onClick={() => {
+                  setTocPinnedFor(null)
+                  setTocInteracting(false)
+                  setTocAutoVisible(false)
+                  window.requestAnimationFrame(() =>
+                    document.getElementById(`${tocPanelId}-toggle`)?.focus(),
+                  )
+                }}
+              >
+                ×
+              </button>
+            </div>
             <ol className="article-toc-list">
               {sections.map(({ section, originalIndex }, index) => (
                 <li key={section.title}>
                   <button
                     type="button"
-                    className="article-toc-link"
-                    aria-controls={sectionId(originalIndex)}
+                    className={`article-toc-link ${originalIndex === activeSectionIndex ? 'current' : ''}`}
+                    aria-controls={reportSectionId(report.slug, originalIndex)}
+                    aria-current={originalIndex === activeSectionIndex ? 'location' : undefined}
+                    tabIndex={tocOpen ? 0 : -1}
                     title={`跳到：${section.title}`}
                     onClick={() => jumpToSection(originalIndex)}
                   >
                     <span className="article-toc-num mono tnum" aria-hidden="true">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="article-toc-title">{section.title}</span>
+                    <span className="article-toc-title">{compactSectionTitle(section.title)}</span>
                   </button>
                 </li>
               ))}
@@ -198,7 +346,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
         </header>
 
         {sections.map(({ section: sec, originalIndex }, sectionIndex) => {
-          const id = sectionId(originalIndex)
+          const id = reportSectionId(report.slug, originalIndex)
           return (
             <section
               key={sec.title}
