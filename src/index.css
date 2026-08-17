@@ -149,10 +149,78 @@ button:disabled {
     flex: 1;
     height: 100vh;
     overflow-y: auto;
+    scroll-behavior: smooth;
     padding: 0 2rem 6rem;
   }
   .feed {
     padding-top: 2.75rem;
+  }
+}
+
+/* ---------- lightweight article table of contents ---------- */
+.article-toc {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.65rem 1rem;
+  align-items: start;
+  margin-top: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.article-toc-label {
+  padding-top: 0.35rem;
+  color: var(--ink);
+}
+.article-toc-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.15rem 0.8rem;
+  min-width: 0;
+}
+.article-toc-link {
+  display: grid;
+  grid-template-columns: 1.6rem minmax(0, 1fr);
+  align-items: baseline;
+  width: 100%;
+  padding: 0.28rem 0.35rem;
+  border-radius: 2px;
+  text-align: left;
+  color: var(--ink-soft);
+  transition: background 0.2s, color 0.2s;
+}
+.article-toc-link:hover {
+  background: var(--hover);
+  color: var(--ink);
+}
+.article-toc-num {
+  font-size: 0.6rem;
+  color: var(--ink-3);
+}
+.article-toc-title {
+  overflow: hidden;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.article-section {
+  scroll-margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  .article-toc {
+    display: block;
+  }
+  .article-toc-label {
+    margin-bottom: 0.35rem;
+    padding-top: 0;
+  }
+  .article-toc-list {
+    gap: 0.1rem 0.35rem;
+  }
+  .article-toc-link {
+    grid-template-columns: 1.35rem minmax(0, 1fr);
+    padding-inline: 0.15rem;
   }
 }
 
@@ -496,9 +564,13 @@ a.src-chip:hover .src-arrow {
   html {
     scroll-behavior: auto;
   }
+  .feed-col {
+    scroll-behavior: auto;
+  }
   .news-row,
   .mod-row,
   .cal-day,
+  .article-toc-link,
   .src-chip,
   .src-arrow {
     transition: none;

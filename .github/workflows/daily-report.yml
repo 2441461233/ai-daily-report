@@ -27,6 +27,8 @@ jobs:
       collector_now: ${{ steps.prepare.outputs.collector_now }}
       report_date: ${{ steps.prepare.outputs.report_date }}
       priority_sha256: ${{ steps.prepare.outputs.priority_sha256 }}
+      artificial_analysis_sha256: ${{ steps.prepare.outputs.artificial_analysis_sha256 }}
+      artificial_analysis_changed_sha256: ${{ steps.prepare.outputs.artificial_analysis_changed_sha256 }}
       builders_sha256: ${{ steps.prepare.outputs.builders_sha256 }}
       waytoagi_sha256: ${{ steps.prepare.outputs.waytoagi_sha256 }}
       waytoagi_changed_sha256: ${{ steps.prepare.outputs.waytoagi_changed_sha256 }}
@@ -82,6 +84,25 @@ jobs:
             --input-only
           sha256sum /tmp/priority-news.json > /tmp/priority-news.json.sha256
           sha256sum /tmp/report-date >> /tmp/priority-news.json.sha256
+          node scripts/fetch_artificial_analysis.mjs \
+            --now "$collector_now" \
+            --snapshot content/artificial-analysis-snapshot.json \
+            --write-artifact \
+            > /tmp/artificial-analysis.json \
+            2> "$RUNNER_TEMP/daily-diagnostics/artificial-analysis.log"
+          test -s /tmp/artificial-analysis.json
+          git status --porcelain=v1 --untracked-files=all \
+            | sed -nE 's/^.. (content\/artifacts\/artificial-analysis-[0-9]{8}-[0-9]{6}\.json)$/\1/p' \
+            | sort > /tmp/artificial-analysis.changed
+          python3 scripts/validate_artificial_analysis_run.py \
+            --input /tmp/artificial-analysis.json \
+            --changed-manifest /tmp/artificial-analysis.changed \
+            --snapshot content/artificial-analysis-snapshot.json \
+            --snapshot-role previous \
+            --date "$report_date" \
+            --now "$collector_now"
+          sha256sum /tmp/artificial-analysis.json > /tmp/artificial-analysis.json.sha256
+          sha256sum /tmp/artificial-analysis.changed >> /tmp/artificial-analysis.json.sha256
           node scripts/fetch_builders.mjs > /tmp/ai-builders.json
           sha256sum /tmp/ai-builders.json > /tmp/ai-builders.json.sha256
           # Keep the main report running when WayToAGI is unavailable, while
@@ -98,6 +119,8 @@ jobs:
             --changed-manifest /tmp/waytoagi.changed
           sha256sum /tmp/waytoagi.changed >> /tmp/waytoagi.json.sha256
           priority_sha256="$(sha256sum /tmp/priority-news.json | cut -d ' ' -f 1)"
+          artificial_analysis_sha256="$(sha256sum /tmp/artificial-analysis.json | cut -d ' ' -f 1)"
+          artificial_analysis_changed_sha256="$(sha256sum /tmp/artificial-analysis.changed | cut -d ' ' -f 1)"
           builders_sha256="$(sha256sum /tmp/ai-builders.json | cut -d ' ' -f 1)"
           waytoagi_sha256="$(sha256sum /tmp/waytoagi.json | cut -d ' ' -f 1)"
           waytoagi_changed_sha256="$(sha256sum /tmp/waytoagi.changed | cut -d ' ' -f 1)"
@@ -106,6 +129,8 @@ jobs:
             printf 'collector_now=%s\n' "$collector_now"
             printf 'report_date=%s\n' "$report_date"
             printf 'priority_sha256=%s\n' "$priority_sha256"
+            printf 'artificial_analysis_sha256=%s\n' "$artificial_analysis_sha256"
+            printf 'artificial_analysis_changed_sha256=%s\n' "$artificial_analysis_changed_sha256"
             printf 'builders_sha256=%s\n' "$builders_sha256"
             printf 'waytoagi_sha256=%s\n' "$waytoagi_sha256"
             printf 'waytoagi_changed_sha256=%s\n' "$waytoagi_changed_sha256"
@@ -133,7 +158,7 @@ jobs:
         run: |
           set -o pipefail
           kimi \
-            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully Read /tmp/report-date, /tmp/priority-news.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. If /tmp/waytoagi.json has sourceStatus.status=unavailable, continue the main report, do not refetch WayToAGI or modify its artifacts/state, and report the outage in the final run summary. Work autonomously, obey the file scope, cover every required priority candidate, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
+            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully Read /tmp/report-date, /tmp/priority-news.json, /tmp/artificial-analysis.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. If /tmp/waytoagi.json has sourceStatus.status=unavailable, continue the main report, do not refetch WayToAGI or modify its artifacts/state, and report the outage in the final run summary. Work autonomously, obey the file scope, cover every required priority candidate, preserve every deterministic attachment, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
             --output-format stream-json \
             2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/kimi-daily.jsonl"
 
@@ -184,6 +209,10 @@ jobs:
             }
             verify_digest /tmp/priority-news.json \
               "${{ steps.prepare.outputs.priority_sha256 }}" "priority input"
+            verify_digest /tmp/artificial-analysis.json \
+              "${{ steps.prepare.outputs.artificial_analysis_sha256 }}" "Artificial Analysis input"
+            verify_digest /tmp/artificial-analysis.changed \
+              "${{ steps.prepare.outputs.artificial_analysis_changed_sha256 }}" "Artificial Analysis manifest"
             verify_digest /tmp/ai-builders.json \
               "${{ steps.prepare.outputs.builders_sha256 }}" "builders input"
             verify_digest /tmp/waytoagi.json \
@@ -199,15 +228,26 @@ jobs:
               --input /tmp/priority-news.json \
               --date "$report_date" \
               --now "${{ steps.prepare.outputs.collector_now }}"
+            python3 scripts/validate_artificial_analysis_run.py \
+              --input /tmp/artificial-analysis.json \
+              --changed-manifest /tmp/artificial-analysis.changed \
+              --snapshot content/artificial-analysis-snapshot.json \
+              --snapshot-role previous \
+              --date "$report_date" \
+              --now "${{ steps.prepare.outputs.collector_now }}"
             python3 scripts/validate_waytoagi_run.py \
               --input /tmp/waytoagi.json \
               --changed-manifest /tmp/waytoagi.changed
             python3 scripts/sync_waytoagi_state.py
+            python3 scripts/sync_artificial_analysis_state.py \
+              --input /tmp/artificial-analysis.json
             python3 scripts/validate_content.py
             npm run build
             python3 scripts/check_daily_changes.py --date "$report_date"
             mkdir -p "$RUNNER_TEMP/daily-evidence"
             cp /tmp/priority-news.json "$RUNNER_TEMP/daily-evidence/priority-news.json"
+            cp /tmp/artificial-analysis.json "$RUNNER_TEMP/daily-evidence/artificial-analysis.json"
+            cp /tmp/artificial-analysis.changed "$RUNNER_TEMP/daily-evidence/artificial-analysis.changed"
             cp /tmp/waytoagi.json "$RUNNER_TEMP/daily-evidence/waytoagi.json"
             cp /tmp/waytoagi.changed "$RUNNER_TEMP/daily-evidence/waytoagi.changed"
           } 2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/quality-gates.log"
@@ -221,6 +261,7 @@ jobs:
           path: |
             content/artifacts
             content/reported.md
+            content/artificial-analysis-snapshot.json
             content/waytoagi-consumed.txt
             public/data/reports.json
 
@@ -244,6 +285,9 @@ jobs:
           for source in \
             /tmp/priority-news.json \
             /tmp/priority-news.json.sha256 \
+            /tmp/artificial-analysis.json \
+            /tmp/artificial-analysis.json.sha256 \
+            /tmp/artificial-analysis.changed \
             /tmp/report-date \
             /tmp/ai-builders.json \
             /tmp/ai-builders.json.sha256 \
@@ -313,6 +357,8 @@ jobs:
         env:
           COLLECTOR_NOW: ${{ needs.generate.outputs.collector_now }}
           PRIORITY_SHA256: ${{ needs.generate.outputs.priority_sha256 }}
+          ARTIFICIAL_ANALYSIS_SHA256: ${{ needs.generate.outputs.artificial_analysis_sha256 }}
+          ARTIFICIAL_ANALYSIS_CHANGED_SHA256: ${{ needs.generate.outputs.artificial_analysis_changed_sha256 }}
           REPORT_DATE: ${{ needs.generate.outputs.report_date }}
           WAYTOAGI_SHA256: ${{ needs.generate.outputs.waytoagi_sha256 }}
           WAYTOAGI_CHANGED_SHA256: ${{ needs.generate.outputs.waytoagi_changed_sha256 }}
@@ -322,6 +368,16 @@ jobs:
           actual_sha256="$(sha256sum "$evidence" | cut -d ' ' -f 1)"
           if [ "$actual_sha256" != "$PRIORITY_SHA256" ]; then
             echo "::error::Restored priority evidence does not match the trusted prepare digest."
+            exit 1
+          fi
+          artificial_analysis_input="$RUNNER_TEMP/daily-evidence/artificial-analysis.json"
+          artificial_analysis_manifest="$RUNNER_TEMP/daily-evidence/artificial-analysis.changed"
+          if [ "$(sha256sum "$artificial_analysis_input" | cut -d ' ' -f 1)" != "$ARTIFICIAL_ANALYSIS_SHA256" ]; then
+            echo "::error::Restored Artificial Analysis evidence does not match the trusted prepare digest."
+            exit 1
+          fi
+          if [ "$(sha256sum "$artificial_analysis_manifest" | cut -d ' ' -f 1)" != "$ARTIFICIAL_ANALYSIS_CHANGED_SHA256" ]; then
+            echo "::error::Restored Artificial Analysis manifest does not match the trusted prepare digest."
             exit 1
           fi
           waytoagi_input="$RUNNER_TEMP/daily-evidence/waytoagi.json"
@@ -336,14 +392,24 @@ jobs:
           fi
           python3 -m unittest discover -s tests
           node --test tests/fetch_official_priority_sources.test.mjs
+          node --test tests/fetch_artificial_analysis.test.mjs
           python3 scripts/validate_priority_coverage.py \
             --input "$evidence" \
+            --date "$REPORT_DATE" \
+            --now "$COLLECTOR_NOW"
+          python3 scripts/validate_artificial_analysis_run.py \
+            --input "$artificial_analysis_input" \
+            --changed-manifest "$artificial_analysis_manifest" \
+            --snapshot content/artificial-analysis-snapshot.json \
+            --snapshot-role current \
             --date "$REPORT_DATE" \
             --now "$COLLECTOR_NOW"
           python3 scripts/validate_waytoagi_run.py \
             --input "$waytoagi_input" \
             --changed-manifest "$waytoagi_manifest"
           python3 scripts/sync_waytoagi_state.py
+          python3 scripts/sync_artificial_analysis_state.py \
+            --input "$artificial_analysis_input"
           python3 scripts/validate_content.py
           python3 scripts/build_data.py
           python3 scripts/check_daily_changes.py --date "$REPORT_DATE"
@@ -352,7 +418,7 @@ jobs:
         env:
           REPORT_DATE: ${{ needs.generate.outputs.report_date }}
         run: |
-          git add content/artifacts content/reported.md content/waytoagi-consumed.txt public/data/reports.json
+          git add content/artifacts content/reported.md content/artificial-analysis-snapshot.json content/waytoagi-consumed.txt public/data/reports.json
           if git diff --cached --quiet; then
             echo "No report changes; this run was an idempotent no-op."
             exit 0

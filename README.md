@@ -9,11 +9,13 @@ Agent 任务书和自动化工作流全部在同一个仓库内，不依赖 Evan
 每天 10:17（Asia/Shanghai / UTC 02:17）主运行，10:47 幂等兜底
   → GitHub Actions 启动 Kimi Code Agent
   → 直采官方 news/changelog，生成强制重大候选清单
+  → 读取 Artificial Analysis Intelligence Index 前 10，与已验证快照比较
   → 确定性采集 WayToAGI，并直接写入完整 attachment 与 /tmp/waytoagi.json
   → 并行检索、核验主日报并语义去重
   → 写入 content/artifacts/*.json
   → 强制核对每条重大候选的 id + 官方证据 URL + 版本匹配词
-  → 校验结构、WayToAGI 逐条完整性、不可变历史和改动范围
+  → 有榜单变化时逐字核对独立 attachment；通过后才推进排名快照
+  → 校验结构、榜单差异、WayToAGI 逐条完整性、不可变历史和改动范围
   → 生成 public/data/reports.json
   → 自动 commit / push
   → Vercel 收到 push 后构建并发布
@@ -26,13 +28,16 @@ Vercel Serverless 单次执行时长和只读文件系统限制。
 
 ```text
 automation/AGENT_TASK.md              每日选题、核验和输出规范（唯一真源）
-content/artifacts/                    每期完整日报 JSON 与 WayToAGI 补录
+content/artifacts/                    每期完整日报 JSON 与确定性补录
 content/reported.md                   跨期语义去重档案
+content/artificial-analysis-snapshot.json  Artificial Analysis 最近一次已验证榜单快照
 content/waytoagi-consumed.txt         由 WayToAGI attachment 严格派生的消费状态
 scripts/build_data.py                 将仓内内容编译为前端数据
 scripts/validate_content.py           内容 schema / URL / 重复校验
 scripts/fetch_official_priority_sources.mjs  官方重大发布直采与备用路径
+scripts/fetch_artificial_analysis.mjs  官方 Intelligence Index 前 10 与增量比较
 scripts/validate_priority_coverage.py 重大候选的输入与入刊覆盖门禁
+scripts/validate_artificial_analysis_run.py  榜单输入、快照与 attachment 完整性门禁
 scripts/validate_waytoagi_run.py      WayToAGI 源数据与 attachment 逐条完整性门禁
 scripts/check_daily_changes.py        限制云端 Agent 的可写范围
 scripts/fetch_builders.mjs            公共 AI builder / podcast feed
@@ -57,6 +62,11 @@ npm run dev
 ```bash
 npm run check
 ```
+
+Artificial Analysis 监控直接读取官方公开 SSR 榜单与方法页，不需要额外 API key。系统保存 Intelligence
+Index 前 10 的最近一次已验证快照；新进榜、掉榜、名次、显示分数、模型标记或方法版本发生变化时，才生成
+`📊 Artificial Analysis 模型排名` attachment。首次接入只建立基线，抓取或解析失败会终止运行，不会伪装成
+「无变化」。
 
 手动查看 WayToAGI 尚未消费的期次：
 

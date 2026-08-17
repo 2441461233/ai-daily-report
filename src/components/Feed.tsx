@@ -89,11 +89,11 @@ interface Props {
 }
 
 export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, onNext }: Props) {
-  const sections = moduleFilter
-    ? report.sections.filter((s) => s.title === moduleFilter)
-    : report.sections
+  const sections = report.sections
+    .map((section, originalIndex) => ({ section, originalIndex }))
+    .filter(({ section }) => moduleFilter === null || section.title === moduleFilter)
   const sectionOffsets = sections.reduce<number[]>(
-    (offsets, section) => [
+    (offsets, { section }) => [
       ...offsets,
       offsets[offsets.length - 1] + section.items.length,
     ],
@@ -101,6 +101,15 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   )
 
   const oneLiner = (report.oneLiner ?? '').replace(/^📌\s*今日一句话[：:]\s*/, '')
+  const sectionId = (originalIndex: number) =>
+    `report-${report.slug}-section-${originalIndex + 1}`
+  const jumpToSection = (originalIndex: number) => {
+    const id = sectionId(originalIndex)
+    const section = document.getElementById(id)
+    const heading = document.getElementById(`${id}-heading`)
+    section?.scrollIntoView({ block: 'start' })
+    heading?.focus({ preventScroll: true })
+  }
 
   return (
     <div className="feed">
@@ -134,23 +143,60 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
         )}
       </header>
 
-      {sections.map((sec, sectionIndex) => (
-        <section key={sec.title} className="mt-2">
-          <header className="mod-head">
-            <h3 className="serif text-lg font-bold" style={{ letterSpacing: '0.06em' }}>
-              {sec.title}
-            </h3>
-            <span className="cnt mono tnum">{sec.items.length}</span>
-            <span className="rule flex-1 self-center border-t hairline" />
-          </header>
-          {sec.note && <p className="mod-note">{sec.note}</p>}
-          <div>
-            {sec.items.map((item, i) => (
-              <NewsRow key={i} item={item} num={sectionOffsets[sectionIndex] + i + 1} />
+      {moduleFilter === null && sections.length > 1 && (
+        <nav className="article-toc" aria-label="本期目录">
+          <p className="article-toc-label label">目录</p>
+          <ol className="article-toc-list">
+            {sections.map(({ section, originalIndex }, index) => (
+              <li key={section.title}>
+                <button
+                  type="button"
+                  className="article-toc-link"
+                  aria-controls={sectionId(originalIndex)}
+                  title={`跳到：${section.title}`}
+                  onClick={() => jumpToSection(originalIndex)}
+                >
+                  <span className="article-toc-num mono tnum" aria-hidden="true">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span className="article-toc-title">{section.title}</span>
+                </button>
+              </li>
             ))}
-          </div>
-        </section>
-      ))}
+          </ol>
+        </nav>
+      )}
+
+      {sections.map(({ section: sec, originalIndex }, sectionIndex) => {
+        const id = sectionId(originalIndex)
+        return (
+          <section
+            key={sec.title}
+            id={id}
+            className="article-section mt-2"
+            aria-labelledby={`${id}-heading`}
+          >
+            <header className="mod-head">
+              <h3
+                id={`${id}-heading`}
+                className="serif text-lg font-bold"
+                style={{ letterSpacing: '0.06em' }}
+                tabIndex={-1}
+              >
+                {sec.title}
+              </h3>
+              <span className="cnt mono tnum">{sec.items.length}</span>
+              <span className="rule flex-1 self-center border-t hairline" />
+            </header>
+            {sec.note && <p className="mod-note">{sec.note}</p>}
+            <div>
+              {sec.items.map((item, i) => (
+                <NewsRow key={i} item={item} num={sectionOffsets[sectionIndex] + i + 1} />
+              ))}
+            </div>
+          </section>
+        )
+      })}
 
       {sections.length === 0 && (
         <p className="py-16 text-sm text-[var(--ink-3)]">这个模块下没有资讯。</p>

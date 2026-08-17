@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "sourceUrl": "https://artificialanalysis.ai/leaderboards/models/",
+  "metric": "Artificial Analysis Intelligence Index",
+  "methodologyVersion": "4.1.1",
+  "limit": 10,
+  "models": [
+    {
+      "rank": 1,
+      "slug": "claude-opus-5",
+      "name": "Claude Opus 5 (max)",
+      "creator": "Anthropic",
+      "score": 63,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-opus-5"
+    },
+    {
+      "rank": 2,
+      "slug": "claude-opus-5-xhigh",
+      "name": "Claude Opus 5 (xhigh)",
+      "creator": "Anthropic",
+      "score": 63,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-xhigh"
+    },
+    {
+      "rank": 3,
+      "slug": "claude-fable-5",
+      "name": "Claude Fable 5 (with fallback)",
+      "creator": "Anthropic",
+      "score": 62,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5"
+    },
+    {
+      "rank": 4,
+      "slug": "claude-opus-5-high",
+      "name": "Claude Opus 5 (high)",
+      "creator": "Anthropic",
+      "score": 61,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-high"
+    },
+    {
+      "rank": 5,
+      "slug": "gpt-5-6-sol",
+      "name": "GPT-5.6 Sol (max)",
+      "creator": "OpenAI",
+      "score": 61,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/gpt-5-6-sol"
+    },
+    {
+      "rank": 6,
+      "slug": "grok-4-6",
+      "name": "Grok 4.6 (high)",
+      "creator": "SpaceXAI",
+      "score": 61,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/grok-4-6"
+    },
+    {
+      "rank": 7,
+      "slug": "kimi-k3",
+      "name": "Kimi K3 (max)",
+      "creator": "Kimi",
+      "score": 60,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/kimi-k3"
+    },
+    {
+      "rank": 8,
+      "slug": "gpt-5-6-sol-xhigh",
+      "name": "GPT-5.6 Sol (xhigh)",
+      "creator": "OpenAI",
+      "score": 59,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/gpt-5-6-sol-xhigh"
+    },
+    {
+      "rank": 9,
+      "slug": "claude-opus-5-medium",
+      "name": "Claude Opus 5 (medium)",
+      "creator": "Anthropic",
+      "score": 59,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-medium"
+    },
+    {
+      "rank": 10,
+      "slug": "qwen3-8-max",
+      "name": "Qwen3.8 Max",
+      "creator": "Alibaba",
+      "score": 58,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/qwen3-8-max"
+    }
+  ]
+}

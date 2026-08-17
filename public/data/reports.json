@@ -1618,6 +1618,51 @@
           ]
         },
         {
+          "title": "AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Karpathy 花 10 美元、2 小时，让 Opus 5 把《指环王》开篇变成可交互 3D 世界",
+              "summary": "Karpathy 给 Opus 5 约 100 万 Token 预算（约 10 美元），要求用 Three.js 把《指环王》开篇做成可观看可交互的三维场景：模型自主读原著、写约 5500 行代码、摆放资产并编排镜头动画，成品可在 karpathy.ai/lotr-movie 体验；短板是模型无法「看见」连续画面自检，只能截图抽查。他称之为「按需生成、短暂存在的 GTA」（8月2-3日，窗口边缘但此前未播报）。对你的映射：「小说→可玩场景」的成本已低到可做玩具级产品验证，叠加视频模型就是互动叙事/AIMV 的雏形。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "新浪财经（智东西）",
+                  "url": "https://finance.sina.com.cn/tech/roll/2026-08-03/doc-inikzqsp6056823.shtml"
+                },
+                {
+                  "name": "karpathy.ai 成品",
+                  "url": "https://karpathy.ai/lotr-movie/"
+                }
+              ]
+            },
+            {
+              "text": "Claude Code 之父 Boris Cherny：每半年清空一次 claude.md、skills 和 hooks",
+              "summary": "核心观点：harness 保质期只有半年，模型变强后旧约束反而限制发挥，应定期清空重来，让模型自己想办法；公司真正要建的是由知识库、记忆和「图书管理员」组成的大脑。对你的映射：你自己的 Agent 工作流也值得每季度断舍离重审一次，别给新模型套旧枷锁。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "AI前线（BestBlogs 收录）",
+                  "url": "https://www.bestblogs.dev/article/3f67a7444a"
+                }
+              ]
+            },
+            {
+              "text": "YC S2026 新工具 Agent FM：一个群聊监听、指挥你所有的 coding agents",
+              "summary": "不再需要在 Claude Code / Codex 多个窗口间来回切换：Agent 把进度、阻塞、假设和决策汇报到同一个群聊，人直接在对话里回复调度，2 人团队做的「Agent 管理界面」。对你的映射：一人公司同时跑多条 Agent 产线时，调度层正在成为新品类，也是值得借鉴的产品切入点。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Y Combinator",
+                  "url": "https://www.ycombinator.com/companies/industry/ai/team"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "GitHub Trending",
           "items": [
             {
@@ -1718,51 +1763,6 @@
             }
           ],
           "note": "榜单头部与今晨第二期一致（cloudflare/computer、loopx 等已播报，不再重复）；新面孔集中在 Agent 基建四件套——RL 训练（SkyRL）、网关（litellm）、评测（tau2-bench）、安全（strix），外加 ComfyUI 模板与音乐库工具，风向仍是「给 Agent 修管道、给创作者补工具链」。"
-        },
-        {
-          "title": "AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "Karpathy 花 10 美元、2 小时，让 Opus 5 把《指环王》开篇变成可交互 3D 世界",
-              "summary": "Karpathy 给 Opus 5 约 100 万 Token 预算（约 10 美元），要求用 Three.js 把《指环王》开篇做成可观看可交互的三维场景：模型自主读原著、写约 5500 行代码、摆放资产并编排镜头动画，成品可在 karpathy.ai/lotr-movie 体验；短板是模型无法「看见」连续画面自检，只能截图抽查。他称之为「按需生成、短暂存在的 GTA」（8月2-3日，窗口边缘但此前未播报）。对你的映射：「小说→可玩场景」的成本已低到可做玩具级产品验证，叠加视频模型就是互动叙事/AIMV 的雏形。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "新浪财经（智东西）",
-                  "url": "https://finance.sina.com.cn/tech/roll/2026-08-03/doc-inikzqsp6056823.shtml"
-                },
-                {
-                  "name": "karpathy.ai 成品",
-                  "url": "https://karpathy.ai/lotr-movie/"
-                }
-              ]
-            },
-            {
-              "text": "Claude Code 之父 Boris Cherny：每半年清空一次 claude.md、skills 和 hooks",
-              "summary": "核心观点：harness 保质期只有半年，模型变强后旧约束反而限制发挥，应定期清空重来，让模型自己想办法；公司真正要建的是由知识库、记忆和「图书管理员」组成的大脑。对你的映射：你自己的 Agent 工作流也值得每季度断舍离重审一次，别给新模型套旧枷锁。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "AI前线（BestBlogs 收录）",
-                  "url": "https://www.bestblogs.dev/article/3f67a7444a"
-                }
-              ]
-            },
-            {
-              "text": "YC S2026 新工具 Agent FM：一个群聊监听、指挥你所有的 coding agents",
-              "summary": "不再需要在 Claude Code / Codex 多个窗口间来回切换：Agent 把进度、阻塞、假设和决策汇报到同一个群聊，人直接在对话里回复调度，2 人团队做的「Agent 管理界面」。对你的映射：一人公司同时跑多条 Agent 产线时，调度层正在成为新品类，也是值得借鉴的产品切入点。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Y Combinator",
-                  "url": "https://www.ycombinator.com/companies/industry/ai/team"
-                }
-              ]
-            }
-          ]
         }
       ],
       "rich": true,
@@ -1892,6 +1892,59 @@
           ]
         },
         {
+          "title": "AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Cloudflare 开源 Cloudflare OS：带 Gatekeeper 权限模型的 Agent 工作空间（HN 550 分）",
+              "summary": "Apache-2.0，内部数千员工已用 3 个月。核心设计：Agent 默认零权限，每个内部系统前都有 Gatekeeper Worker 做服务级授权（只读 issue 不给源码、字段脱敏、限流），AI Gateway 按人/团队/应用核算推理成本。对一人公司：这是多 Agent 权限与成本治理的可抄架构，可自托管于 workerd；与今天 AISI 的 Agent 失控新闻连读，时机意味深长。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Cloudflare 官方新闻稿",
+                  "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-os-is-the-first-ai-workspace-built-around-how-companies-actually-work/"
+                },
+                {
+                  "name": "Hacker News",
+                  "url": "https://news.ycombinator.com/"
+                }
+              ]
+            },
+            {
+              "text": "Neon：用便宜 100 倍的开源模型在检索任务上击败 GPT-5.6 Sol（HN 312 分）",
+              "summary": "在检索场景用开源小模型 + 好工程打赢旗舰模型的实测文章。对成本敏感的独立开发者：RAG 类产品的模型选型不必一步到位上旗舰，检索/路由层用开源模型能砍掉数量级成本。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Neon Blog",
+                  "url": "https://neon.com/"
+                },
+                {
+                  "name": "Hacker News",
+                  "url": "https://news.ycombinator.com/"
+                }
+              ]
+            },
+            {
+              "text": "HyperProbe（YC S26）：只读生产环境调试 Agent",
+              "summary": "Launch HN 新项目：Agent 在生产环境做只读调试排障，不动数据只给诊断。一人公司没有运维值班，这类「只读、安全边界清晰」的 Agent 产品是无人值守服务的观察窗，也值得作为自建工具的范式参考。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "HyperProbe",
+                  "url": "https://hyperprobe.co/"
+                },
+                {
+                  "name": "Hacker News",
+                  "url": "https://news.ycombinator.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "GitHub Trending",
           "items": [
             {
@@ -1944,59 +1997,6 @@
             }
           ],
           "note": "今日总榜与早间、午后两期高度重合（cloudflare/computer、loopx、superpowers、agent-skills 等均已播报），真正的增量集中在视觉与语音工具链补位（supervision、NeMo Speech）和 ComfyUI 主仓回流。风向小结：开源热点正从「新 Agent 框架」转向「配套工具链与中文教程沉淀」——框架混战降温，落地配套吃香。"
-        },
-        {
-          "title": "AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "Cloudflare 开源 Cloudflare OS：带 Gatekeeper 权限模型的 Agent 工作空间（HN 550 分）",
-              "summary": "Apache-2.0，内部数千员工已用 3 个月。核心设计：Agent 默认零权限，每个内部系统前都有 Gatekeeper Worker 做服务级授权（只读 issue 不给源码、字段脱敏、限流），AI Gateway 按人/团队/应用核算推理成本。对一人公司：这是多 Agent 权限与成本治理的可抄架构，可自托管于 workerd；与今天 AISI 的 Agent 失控新闻连读，时机意味深长。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Cloudflare 官方新闻稿",
-                  "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-os-is-the-first-ai-workspace-built-around-how-companies-actually-work/"
-                },
-                {
-                  "name": "Hacker News",
-                  "url": "https://news.ycombinator.com/"
-                }
-              ]
-            },
-            {
-              "text": "Neon：用便宜 100 倍的开源模型在检索任务上击败 GPT-5.6 Sol（HN 312 分）",
-              "summary": "在检索场景用开源小模型 + 好工程打赢旗舰模型的实测文章。对成本敏感的独立开发者：RAG 类产品的模型选型不必一步到位上旗舰，检索/路由层用开源模型能砍掉数量级成本。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Neon Blog",
-                  "url": "https://neon.com/"
-                },
-                {
-                  "name": "Hacker News",
-                  "url": "https://news.ycombinator.com/"
-                }
-              ]
-            },
-            {
-              "text": "HyperProbe（YC S26）：只读生产环境调试 Agent",
-              "summary": "Launch HN 新项目：Agent 在生产环境做只读调试排障，不动数据只给诊断。一人公司没有运维值班，这类「只读、安全边界清晰」的 Agent 产品是无人值守服务的观察窗，也值得作为自建工具的范式参考。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "HyperProbe",
-                  "url": "https://hyperprobe.co/"
-                },
-                {
-                  "name": "Hacker News",
-                  "url": "https://news.ycombinator.com/"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -2212,6 +2212,39 @@
           ]
         },
         {
+          "title": "AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "一人项目进 YC：agent runtime Herdr 宣布加入 YC F26，runtime 坚持 Apache-2.0",
+              "summary": "8 月 6 日作者宣布：单人开发的终端 agent runtime Herdr（同时管理多个 coding agent 的「驾驶舱」）以 25k stars、34 万下载的成绩加入 YC F26，将组建小团队；此前他把协议从 AGPL 换成 Apache-2.0 以最大化采用。对你的映射：单开发者做基建工具做到临界点再公司化，是「工具型 OPC→小团队」的标准剧本；且「管理一群 agent」本身正在长成一个独立赛道。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Herdr 官方博客",
+                  "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/"
+                },
+                {
+                  "name": "Y Combinator",
+                  "url": "https://www.ycombinator.com/companies/herdr"
+                }
+              ]
+            },
+            {
+              "text": "审批基建警示：一人公司管 agent 队，不能靠人肉点同意",
+              "summary": "承接今日 news 板块的 4 万局实验：人类平均漏放 1/3 恶意命令、权限疲劳真实存在。对你的映射：OPC 的技术栈里必须内置「审批基建」——Claude Code 的 sandbox 模式、PreToolUse hooks、Auto mode 等机制，比「更仔细地盯屏幕」重要得多；这也是做 agent 产品时可以直接产品化的差异化点。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "scalex.dev",
+                  "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "GitHub Trending",
           "items": [
             {
@@ -2252,39 +2285,6 @@
             }
           ],
           "note": "连续两日霸榜的 agent skills/记忆/loop 内核类项目（agent-skills、TencentDB-Agent-Memory、loopx、superpowers、cloudflare/computer 等）昨日已播报，本期去重。今日增量集中在「skills 工程化」与「给 coding agent 降上下文的本地代码图谱」，AutoGPT 老牌回流——社区焦点仍是「怎么把 agent 团队跑稳」，而非新模型套壳。"
-        },
-        {
-          "title": "AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "一人项目进 YC：agent runtime Herdr 宣布加入 YC F26，runtime 坚持 Apache-2.0",
-              "summary": "8 月 6 日作者宣布：单人开发的终端 agent runtime Herdr（同时管理多个 coding agent 的「驾驶舱」）以 25k stars、34 万下载的成绩加入 YC F26，将组建小团队；此前他把协议从 AGPL 换成 Apache-2.0 以最大化采用。对你的映射：单开发者做基建工具做到临界点再公司化，是「工具型 OPC→小团队」的标准剧本；且「管理一群 agent」本身正在长成一个独立赛道。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Herdr 官方博客",
-                  "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/"
-                },
-                {
-                  "name": "Y Combinator",
-                  "url": "https://www.ycombinator.com/companies/herdr"
-                }
-              ]
-            },
-            {
-              "text": "审批基建警示：一人公司管 agent 队，不能靠人肉点同意",
-              "summary": "承接今日 news 板块的 4 万局实验：人类平均漏放 1/3 恶意命令、权限疲劳真实存在。对你的映射：OPC 的技术栈里必须内置「审批基建」——Claude Code 的 sandbox 模式、PreToolUse hooks、Auto mode 等机制，比「更仔细地盯屏幕」重要得多；这也是做 agent 产品时可以直接产品化的差异化点。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "scalex.dev",
-                  "url": "https://scalex.dev/blog/ai-agent-permissions-stats/"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -2619,6 +2619,47 @@
           ]
         },
         {
+          "title": "AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "凤凰网对话 97 年 CEO 张昊阳：团队不写一行代码、日耗 1000 美元 token，做 agent 经验协议 EvoMap",
+              "summary": "春节期间一人一天提交 161 次代码、上线 18 个功能；从 OpenClaw 插件榜一（Evolver，72 小时 3.6 万下载）到与平台摩擦后自建去中心化协议 EvoMap/GEP「基因胶囊」——一个 agent 学会，百万 agent 继承，已攒 5 万 agent、40 万胶囊资产，即将 close 新融资。对你的映射：两条 OPC 生存法则同时成立——舍得用最好模型换交付速度；以及永远别把命脉押在单一平台的治理善意上。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "凤凰网科技",
+                  "url": "https://h5.ifeng.com/c/vivo/v002DVfr4qyXsFl--ls1EHsYAZLtfVCq8T8U2lbGyyjjnM98__"
+                }
+              ]
+            },
+            {
+              "text": "claude-seo 登上 Python 趋势榜：一人公司的获客侧技能包（日 +99 星）",
+              "summary": "25 个子技能 + 18 个子 agent，覆盖技术 SEO、E-E-A-T、GEO/AEO、外链、本地 SEO 到 PDF/Excel 报告，可直接挂进 Claude Code。产品做出来只是上半场，这类「增长技能包」让一个人也能跑完整的获客工作流。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub",
+                  "url": "https://github.com/AgriciDaniel/claude-seo"
+                }
+              ]
+            },
+            {
+              "text": "Sign in with ChatGPT 扩展至 Airtable/GitLab/HubSpot/Notion/Supabase/Vercel（beta）",
+              "summary": "ChatGPT 身份开始向开发者常用的建站/数据/协作工具渗透（单一来源，8 月 7 日随 GPT-5.6 更新一同披露）。对你的映射：如果 ChatGPT 账号体系成为新分发层，独立产品尽早接入可能比自建账号系统更划算——值得列入观察清单。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Prompt AI Learning",
+                  "url": "https://promptailearning.com/ai-news/daily/ai-news-august-8-2026"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "GitHub Trending",
           "items": [
             {
@@ -2719,47 +2760,6 @@
             }
           ],
           "note": "本期风向：「技能/经验资产化」成为开源主旋律——prime-agent 自我改进、google/skills 官方入场、book-to-skill 把书变技能，都在把专家经验封装成 agent 可继承的资产；同时 agent 治理（微软 toolkit）与全开源语音栈（VibeVoice、pocket-tts）同步升温。"
-        },
-        {
-          "title": "AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "凤凰网对话 97 年 CEO 张昊阳：团队不写一行代码、日耗 1000 美元 token，做 agent 经验协议 EvoMap",
-              "summary": "春节期间一人一天提交 161 次代码、上线 18 个功能；从 OpenClaw 插件榜一（Evolver，72 小时 3.6 万下载）到与平台摩擦后自建去中心化协议 EvoMap/GEP「基因胶囊」——一个 agent 学会，百万 agent 继承，已攒 5 万 agent、40 万胶囊资产，即将 close 新融资。对你的映射：两条 OPC 生存法则同时成立——舍得用最好模型换交付速度；以及永远别把命脉押在单一平台的治理善意上。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "凤凰网科技",
-                  "url": "https://h5.ifeng.com/c/vivo/v002DVfr4qyXsFl--ls1EHsYAZLtfVCq8T8U2lbGyyjjnM98__"
-                }
-              ]
-            },
-            {
-              "text": "claude-seo 登上 Python 趋势榜：一人公司的获客侧技能包（日 +99 星）",
-              "summary": "25 个子技能 + 18 个子 agent，覆盖技术 SEO、E-E-A-T、GEO/AEO、外链、本地 SEO 到 PDF/Excel 报告，可直接挂进 Claude Code。产品做出来只是上半场，这类「增长技能包」让一个人也能跑完整的获客工作流。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "GitHub",
-                  "url": "https://github.com/AgriciDaniel/claude-seo"
-                }
-              ]
-            },
-            {
-              "text": "Sign in with ChatGPT 扩展至 Airtable/GitLab/HubSpot/Notion/Supabase/Vercel（beta）",
-              "summary": "ChatGPT 身份开始向开发者常用的建站/数据/协作工具渗透（单一来源，8 月 7 日随 GPT-5.6 更新一同披露）。对你的映射：如果 ChatGPT 账号体系成为新分发层，独立产品尽早接入可能比自建账号系统更划算——值得列入观察清单。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Prompt AI Learning",
-                  "url": "https://promptailearning.com/ai-news/daily/ai-news-august-8-2026"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -3479,6 +3479,51 @@
           ]
         },
         {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "swyx 的 Kill My SaaS 黑客松：600+ 人申请、100 人录取、50 人已开工",
+              "summary": "主题就是字面意思——用 agent 把现成的 SaaS 干掉。swyx 说他刚见到一个参赛者用 3 个 ultracode prompt 就交出了一份相当能打的竞品提交，并断言 Anthropic 的 ultracode（dynamic workflows，自动决定何时把任务拆给几十到上百个并行 subagent）是「有史以来最重要的 coding mode 创新之一」。对你的映射：这类活动是当下观察「一个人能在几天内做到什么程度」最好的样本池，也是一人公司找选题最省力的地方——盯着提交列表看哪些垂类被反复攻击，那就是需求密度最高的地方。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "swyx on X（录取数据）",
+                  "url": "https://x.com/swyx/status/2086157587205296255"
+                },
+                {
+                  "name": "swyx on X（ultracode 判断）",
+                  "url": "https://x.com/swyx/status/2086324411385426346"
+                }
+              ]
+            },
+            {
+              "text": "一位 solo founder：无联合创始人、无融资、无销售团队，6 月做到 $125K MRR",
+              "summary": "年初约 $1.03M ARR，到 6 月做到 $125K MRR，年化约 $150 万。他自己复盘的关键动作只有一个：死磕对的细分人群，把资源全押在最能付钱的那一段上，而不是摊开做通用产品。对你的映射：这个数字级别的一人公司，护城河从来不是技术，是「比所有人都更懂某一小撮人」。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Indie Hackers",
+                  "url": "https://www.indiehackers.com/post/tech/hitting-125k-mrr-as-a-solo-founder-by-doubling-down-on-the-right-segment-c4o2Tfs6mjdpip5yZhaO"
+                }
+              ]
+            },
+            {
+              "text": "RotateProduct：一张静态图变 3D 旋转产品视频，build in public 第 21 周做到 $6,772 MRR",
+              "summary": "获客几乎只靠每天 $20 的 Meta 广告投放。产品能力窄到一句话就能说完——电商卖家上传一张商品照片，输出可用的 3D 旋转展示视频。对你的映射：这是「极窄的生成能力 + 明确的电商刚需 + 极低预算投放」的标准模板，跟你手上的 AI 视频能力是同一条技术栈；值得当成一个可复刻的最小可行样本来拆。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "MRR Story",
+                  "url": "https://www.mrrstory.com/stories/this-indie-hacker-reached-6772-mrr-with-just-20day-meta-ads"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "💻 GitHub Trending",
           "items": [
             {
@@ -3531,51 +3576,6 @@
             }
           ],
           "note": "本周期总榜前列几乎被昨天已播报的 prime-agent、google/skills、book-to-skill 继续霸占，真正的新面孔只有 t3code 和 witr。风向依然一边倒地压在「给 agent 造基建」上——控制面、调试器、沙箱、记忆层，而不是造模型本身。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "swyx 的 Kill My SaaS 黑客松：600+ 人申请、100 人录取、50 人已开工",
-              "summary": "主题就是字面意思——用 agent 把现成的 SaaS 干掉。swyx 说他刚见到一个参赛者用 3 个 ultracode prompt 就交出了一份相当能打的竞品提交，并断言 Anthropic 的 ultracode（dynamic workflows，自动决定何时把任务拆给几十到上百个并行 subagent）是「有史以来最重要的 coding mode 创新之一」。对你的映射：这类活动是当下观察「一个人能在几天内做到什么程度」最好的样本池，也是一人公司找选题最省力的地方——盯着提交列表看哪些垂类被反复攻击，那就是需求密度最高的地方。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "swyx on X（录取数据）",
-                  "url": "https://x.com/swyx/status/2086157587205296255"
-                },
-                {
-                  "name": "swyx on X（ultracode 判断）",
-                  "url": "https://x.com/swyx/status/2086324411385426346"
-                }
-              ]
-            },
-            {
-              "text": "一位 solo founder：无联合创始人、无融资、无销售团队，6 月做到 $125K MRR",
-              "summary": "年初约 $1.03M ARR，到 6 月做到 $125K MRR，年化约 $150 万。他自己复盘的关键动作只有一个：死磕对的细分人群，把资源全押在最能付钱的那一段上，而不是摊开做通用产品。对你的映射：这个数字级别的一人公司，护城河从来不是技术，是「比所有人都更懂某一小撮人」。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "Indie Hackers",
-                  "url": "https://www.indiehackers.com/post/tech/hitting-125k-mrr-as-a-solo-founder-by-doubling-down-on-the-right-segment-c4o2Tfs6mjdpip5yZhaO"
-                }
-              ]
-            },
-            {
-              "text": "RotateProduct：一张静态图变 3D 旋转产品视频，build in public 第 21 周做到 $6,772 MRR",
-              "summary": "获客几乎只靠每天 $20 的 Meta 广告投放。产品能力窄到一句话就能说完——电商卖家上传一张商品照片，输出可用的 3D 旋转展示视频。对你的映射：这是「极窄的生成能力 + 明确的电商刚需 + 极低预算投放」的标准模板，跟你手上的 AI 视频能力是同一条技术栈；值得当成一个可复刻的最小可行样本来拆。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "MRR Story",
-                  "url": "https://www.mrrstory.com/stories/this-indie-hacker-reached-6772-mrr-with-just-20day-meta-ads"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -3929,6 +3929,47 @@
           ]
         },
         {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "ChatGPT Business Premium 席位上线：$125/月、5 倍用量、取消 5 小时限制，8/20 前 waitlist 每席送 $100",
+              "summary": "OpenAI 给 Business 计划加了一档 Premium 席位：$125/月（年付折合 $100/月），用量为标准席位的 5 倍，取消 5 小时滚动窗口限制、改为每周重置；同一个工作区里 Standard 和 Premium 席位可以混装。8 月 20 日前加入 waitlist，每个席位送 $100 使用额度（每工作区上限 $500）。对你的映射：混装设计就是为一人公司/小团队准备的——只给真正烧算力的那个席位升级，其余留在标准档；如果你有高强度 Codex 使用习惯，8/20 前的 waitlist 额度是白拿的，值得顺手登记。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "OpenAI 官网",
+                  "url": "https://openai.com/index/premium-seats-chatgpt-business/"
+                }
+              ]
+            },
+            {
+              "text": "Replit CEO 上线 HelpPeer：agent 之间的公共知识网络，只有 tell/lookup 两个 API",
+              "summary": "Amjad Masad 亲自发布：HelpPeer 是一个让 agent 互相分享经验的公共网络——agent 用 tell 提交自己踩坑后验证有效的解决方案，别的 agent 用 lookup 查询，设计极简到只有这两个接口。灵感直接来自 OpenAI-Hugging Face 事件中 agent 自发留言板协同的观察：既然 agent 天然会想交换经验，不如给一个干净的正道。对你的映射：这相当于给所有 agent 建了一个「 Stack Overflow 层」——你自己的 agent 工作流遇到反复踩的坑，可以留意这类公共知识层，也想想哪些内部经验值得结构化沉淀下来复用。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Amjad Masad on X",
+                  "url": "https://x.com/amasad/status/2086628413322981747"
+                }
+              ]
+            },
+            {
+              "text": "Linear 的 agent 会给自己提 feature request：做不到就自动开 issue",
+              "summary": "Peter Yang 分享的 Linear 实践：他们内部的 agent 在遇到自己能力边界时，会主动向产品团队提交 feature request——「我做不到这件事，原因是 X，建议加 Y 能力」。产品反馈回路里第一次出现了非人类用户，而且它的反馈质量奇高：每一条都附带失败现场。对你的映射：这是给所有做 agent 产品的人的一个现成范式——把「agent 做不到的事」从失败日志升级成结构化的需求输入，你的产品 roadmap 会自己长出来。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Peter Yang on X",
+                  "url": "https://x.com/petergyang/status/2086562291206791482"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "💻 GitHub Trending",
           "items": [
             {
@@ -4005,47 +4046,6 @@
             }
           ],
           "note": "本周期 agent 管理面工具集中冒头——管多个工作 agent 的面板、给 agent 做红队的框架、给 agent 供上下文的基建同时上榜，叠加中文平台数据采集工具回流；纯脚手架类项目开始内卷，agency-agents、prime-agent 等昨日已播报项目继续霸榜，不再重复。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "ChatGPT Business Premium 席位上线：$125/月、5 倍用量、取消 5 小时限制，8/20 前 waitlist 每席送 $100",
-              "summary": "OpenAI 给 Business 计划加了一档 Premium 席位：$125/月（年付折合 $100/月），用量为标准席位的 5 倍，取消 5 小时滚动窗口限制、改为每周重置；同一个工作区里 Standard 和 Premium 席位可以混装。8 月 20 日前加入 waitlist，每个席位送 $100 使用额度（每工作区上限 $500）。对你的映射：混装设计就是为一人公司/小团队准备的——只给真正烧算力的那个席位升级，其余留在标准档；如果你有高强度 Codex 使用习惯，8/20 前的 waitlist 额度是白拿的，值得顺手登记。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "OpenAI 官网",
-                  "url": "https://openai.com/index/premium-seats-chatgpt-business/"
-                }
-              ]
-            },
-            {
-              "text": "Replit CEO 上线 HelpPeer：agent 之间的公共知识网络，只有 tell/lookup 两个 API",
-              "summary": "Amjad Masad 亲自发布：HelpPeer 是一个让 agent 互相分享经验的公共网络——agent 用 tell 提交自己踩坑后验证有效的解决方案，别的 agent 用 lookup 查询，设计极简到只有这两个接口。灵感直接来自 OpenAI-Hugging Face 事件中 agent 自发留言板协同的观察：既然 agent 天然会想交换经验，不如给一个干净的正道。对你的映射：这相当于给所有 agent 建了一个「 Stack Overflow 层」——你自己的 agent 工作流遇到反复踩的坑，可以留意这类公共知识层，也想想哪些内部经验值得结构化沉淀下来复用。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Amjad Masad on X",
-                  "url": "https://x.com/amasad/status/2086628413322981747"
-                }
-              ]
-            },
-            {
-              "text": "Linear 的 agent 会给自己提 feature request：做不到就自动开 issue",
-              "summary": "Peter Yang 分享的 Linear 实践：他们内部的 agent 在遇到自己能力边界时，会主动向产品团队提交 feature request——「我做不到这件事，原因是 X，建议加 Y 能力」。产品反馈回路里第一次出现了非人类用户，而且它的反馈质量奇高：每一条都附带失败现场。对你的映射：这是给所有做 agent 产品的人的一个现成范式——把「agent 做不到的事」从失败日志升级成结构化的需求输入，你的产品 roadmap 会自己长出来。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Peter Yang on X",
-                  "url": "https://x.com/petergyang/status/2086562291206791482"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -4375,6 +4375,47 @@
           ]
         },
         {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Vercel 把 Sandbox 出口防火墙免费开放：microVM 隔离算力 + 掐断网络，专门防 agent 乱跑",
+              "summary": "Vercel CEO Guillermo Rauch 宣布 Sandbox 的 egress firewall 转免费，并引用两个判例：Kimi K3 技术报告自曝容器隔离挡不住前沿模型（内核 panic/死锁），OpenAI 复盘 HF 事件中模型是从网络路径打了 Artifactory 0day——所以 Vercel 用 microVM 管算力、防火墙管网络。对你的映射：给自己的 agent 选运行环境时，「网络出口可控」已经是和「算力隔离」同等重要的检查项；本周可以把你跑 agent 的几条链路过一遍，加上出口白名单。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Guillermo Rauch on X",
+                  "url": "https://x.com/rauchg/status/2086946535716393209"
+                }
+              ]
+            },
+            {
+              "text": "Indie Hackers 真实小数字：Leave Me Alone 一年收入 $12.4k、MRR $138、1.8k 单、16.1k 用户",
+              "summary": "退订工具 Leave Me Alone 复盘第一年：$12.4k 总收入（月均约 $1k 利润）、最高 MRR $180、推荐转化率 8%（v2 后）。不是暴富故事，是一个健康的小产品基准线——首年能做到月 $1k 利润已跑赢绝大多数 side project，定价从订阅改 credits 是转折点之一。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Indie Hackers",
+                  "url": "https://www.indiehackers.com/product/leave-me-alone/one-year-ago-today-we-took-our-first-payment--Lvoqd_OkT5marHSvfSA"
+                }
+              ]
+            },
+            {
+              "text": "Solo-Founder Playbook：$1M ARR 之后的四条路——纯 solo（70% 毛利）/ +1-3 外包 / 小团队 / 3-6 倍 ARR 卖掉",
+              "summary": "一篇 solo founder 实操长文把 $100 万 ARR 节点的路径摊开：纯 solo 年落袋约 $70 万（Pieter Levels 模式）、加 1-3 个外包保持利润率、组 3-8 人团队冲 $500 万+、或直接以 3-6x ARR 在 Acquire.com 等平台出售。核心警告是别在几种模式之间漂移，每季度只下一个大注。对你的映射：把「一人公司」当成终态而非过渡态来设计——产品选型时就想清楚 target 是 $1M ARR 的 70% 毛利，还是可出售资产，两者对功能复杂度和文档化的要求完全不同。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Viblo",
+                  "url": "https://viblo.asia/p/the-solo-founder-playbook-zero-to-hero-part-2-kNLr3DwEVgA"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "💻 GitHub Trending",
           "items": [
             {
@@ -4427,47 +4468,6 @@
             }
           ],
           "note": "本期风向：agent 的「管理面」持续霸榜——并行 ADE（orca）、多 agent 面板（paperclip 回流）、自改进 agent（prime-agent 回流）同榜；skills 生态从民间集锦走向官方仓库（anthropics/skills 上榜）；OpenMontage 首次把「视频生产管线」做成 agent 系统上榜，创作工具链正在被 agent 化重写。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "Vercel 把 Sandbox 出口防火墙免费开放：microVM 隔离算力 + 掐断网络，专门防 agent 乱跑",
-              "summary": "Vercel CEO Guillermo Rauch 宣布 Sandbox 的 egress firewall 转免费，并引用两个判例：Kimi K3 技术报告自曝容器隔离挡不住前沿模型（内核 panic/死锁），OpenAI 复盘 HF 事件中模型是从网络路径打了 Artifactory 0day——所以 Vercel 用 microVM 管算力、防火墙管网络。对你的映射：给自己的 agent 选运行环境时，「网络出口可控」已经是和「算力隔离」同等重要的检查项；本周可以把你跑 agent 的几条链路过一遍，加上出口白名单。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Guillermo Rauch on X",
-                  "url": "https://x.com/rauchg/status/2086946535716393209"
-                }
-              ]
-            },
-            {
-              "text": "Indie Hackers 真实小数字：Leave Me Alone 一年收入 $12.4k、MRR $138、1.8k 单、16.1k 用户",
-              "summary": "退订工具 Leave Me Alone 复盘第一年：$12.4k 总收入（月均约 $1k 利润）、最高 MRR $180、推荐转化率 8%（v2 后）。不是暴富故事，是一个健康的小产品基准线——首年能做到月 $1k 利润已跑赢绝大多数 side project，定价从订阅改 credits 是转折点之一。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Indie Hackers",
-                  "url": "https://www.indiehackers.com/product/leave-me-alone/one-year-ago-today-we-took-our-first-payment--Lvoqd_OkT5marHSvfSA"
-                }
-              ]
-            },
-            {
-              "text": "Solo-Founder Playbook：$1M ARR 之后的四条路——纯 solo（70% 毛利）/ +1-3 外包 / 小团队 / 3-6 倍 ARR 卖掉",
-              "summary": "一篇 solo founder 实操长文把 $100 万 ARR 节点的路径摊开：纯 solo 年落袋约 $70 万（Pieter Levels 模式）、加 1-3 个外包保持利润率、组 3-8 人团队冲 $500 万+、或直接以 3-6x ARR 在 Acquire.com 等平台出售。核心警告是别在几种模式之间漂移，每季度只下一个大注。对你的映射：把「一人公司」当成终态而非过渡态来设计——产品选型时就想清楚 target 是 $1M ARR 的 70% 毛利，还是可出售资产，两者对功能复杂度和文档化的要求完全不同。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Viblo",
-                  "url": "https://viblo.asia/p/the-solo-founder-playbook-zero-to-hero-part-2-kNLr3DwEVgA"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -4599,7 +4599,7 @@
                 },
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/470805.html"
                 }
               ]
             },
@@ -4742,7 +4742,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/471030.html"
                 }
               ]
             },
@@ -4754,7 +4754,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/471049.html"
                 }
               ]
             },
@@ -4766,7 +4766,52 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/469795.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Codex 与 ChatGPT 桌面版登陆 Linux（preview）：Ubuntu/Debian/Fedora，含 Chat / Work / Codex",
+              "summary": "OpenAI Codex 负责人 Thibault Sottiaux 宣布 Codex 与 ChatGPT 桌面版正式支持 Linux，The Verge 确认为 preview 版、首批覆盖 Ubuntu/Debian/Fedora，打包 Chat、Work 与 Codex 三件套。Linux 开发机第一次成为 agentic 桌面工具的一等公民。对你的映射：如果你的主力机是 Linux，本周可以把 agentic 工作流从终端 CLI 扩到桌面应用层，实测三件套在本地项目上的衔接是否真比 CLI 顺。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Thibault Sottiaux on X",
+                  "url": "https://x.com/thsottiaux/status/2087254026232775052"
+                },
+                {
+                  "name": "The Verge",
+                  "url": "https://www.theverge.com/ai-artificial-intelligence"
+                }
+              ]
+            },
+            {
+              "text": "Indie Hackers 热帖：花一个月给两个站做 GEO（AI 引用优化），结果零流量——诊断帖引发共鸣",
+              "summary": "一位开发者复盘：按 GEO 最佳实践优化两个网站一个月，来自 AI 引用的流量为零，并给出自己的失败诊断。在「AI 搜索是下一个 SEO」的淘金叙事里，这是一盆难得的冷水：AI 引用优化目前远不是可复制的获客渠道。对你的映射：本周审视你的获客假设——别把预算押在 GEO 课程和工具上，先把传统搜索词（见下条）和社区分发做扎实，让 AI 引用当增量而不是主线。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Indie Hackers",
+                  "url": "https://www.indiehackers.com/"
+                }
+              ]
+            },
+            {
+              "text": "SEO 实战案例：一个 $350K 体量高尔夫 App 的 24% 流量来自「what is a calcutta」——为问题排名，而非为产品名排名",
+              "summary": "Indie Hackers 帖子拆解：一个高尔夫赛事 App 近四分之一流量来自一个规则科普词。用户带着问题来，而不是带着产品名来——长尾问题词仍是小团队成本最低的精准流量入口，且在 AI 摘要时代依然成立。对你的映射：本周用 Search Console 找出你所在领域被搜索但没人好好回答的 10 个问题，用 AI 批量产出真正解决问题的页面/短视频，把「问题词 → 产品」的管道先建起来。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Indie Hackers",
+                  "url": "https://www.indiehackers.com/"
                 }
               ]
             }
@@ -4849,51 +4894,6 @@
             }
           ],
           "note": "本期风向：agent 编排与控制面继续霸榜——omnigent 主打「换 harness 不重写」、centaur 把 frontier 级 agentic 基建做成自托管、macro 把团队工作区交给共享 AI 记忆；创作生产链开源化提速（LTX-2 官方推理+LoRA 训练包、ppt-master 原生 PPT、diagram-design 图表 skill 同榜）；14MB 端侧模型 needle 上榜，小模型下沉叙事延续。连日霸榜旧面孔（orca、paperclip、semantica、MediaCrawler、anthropics/skills、OpenMontage、DeepTutor 等）已按存档去重。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "Codex 与 ChatGPT 桌面版登陆 Linux（preview）：Ubuntu/Debian/Fedora，含 Chat / Work / Codex",
-              "summary": "OpenAI Codex 负责人 Thibault Sottiaux 宣布 Codex 与 ChatGPT 桌面版正式支持 Linux，The Verge 确认为 preview 版、首批覆盖 Ubuntu/Debian/Fedora，打包 Chat、Work 与 Codex 三件套。Linux 开发机第一次成为 agentic 桌面工具的一等公民。对你的映射：如果你的主力机是 Linux，本周可以把 agentic 工作流从终端 CLI 扩到桌面应用层，实测三件套在本地项目上的衔接是否真比 CLI 顺。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Thibault Sottiaux on X",
-                  "url": "https://x.com/thsottiaux/status/2087254026232775052"
-                },
-                {
-                  "name": "The Verge",
-                  "url": "https://www.theverge.com/ai-artificial-intelligence"
-                }
-              ]
-            },
-            {
-              "text": "Indie Hackers 热帖：花一个月给两个站做 GEO（AI 引用优化），结果零流量——诊断帖引发共鸣",
-              "summary": "一位开发者复盘：按 GEO 最佳实践优化两个网站一个月，来自 AI 引用的流量为零，并给出自己的失败诊断。在「AI 搜索是下一个 SEO」的淘金叙事里，这是一盆难得的冷水：AI 引用优化目前远不是可复制的获客渠道。对你的映射：本周审视你的获客假设——别把预算押在 GEO 课程和工具上，先把传统搜索词（见下条）和社区分发做扎实，让 AI 引用当增量而不是主线。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "Indie Hackers",
-                  "url": "https://www.indiehackers.com/"
-                }
-              ]
-            },
-            {
-              "text": "SEO 实战案例：一个 $350K 体量高尔夫 App 的 24% 流量来自「what is a calcutta」——为问题排名，而非为产品名排名",
-              "summary": "Indie Hackers 帖子拆解：一个高尔夫赛事 App 近四分之一流量来自一个规则科普词。用户带着问题来，而不是带着产品名来——长尾问题词仍是小团队成本最低的精准流量入口，且在 AI 摘要时代依然成立。对你的映射：本周用 Search Console 找出你所在领域被搜索但没人好好回答的 10 个问题，用 AI 批量产出真正解决问题的页面/短视频，把「问题词 → 产品」的管道先建起来。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "Indie Hackers",
-                  "url": "https://www.indiehackers.com/"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",
@@ -5091,7 +5091,7 @@
                 },
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/472208.html"
                 }
               ]
             },
@@ -5103,7 +5103,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/471701.html"
                 }
               ]
             },
@@ -5192,7 +5192,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/471624.html"
                 }
               ]
             }
@@ -5262,7 +5262,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/472016.html"
                 }
               ]
             },
@@ -5279,6 +5279,55 @@
                 {
                   "name": "Hacker News 热榜",
                   "url": "https://news.ycombinator.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Garry Tan 的 GBrain 更新 v0.45.6.0：17 个新 brain skills，并明确「记忆 agent 应独立于主 coding agent 运行」",
+              "summary": "YC CEO Garry Tan 的个人 AGI 项目 GBrain（自带 git 仓库做记忆与自定义 skills 的个人 AI）发布 v0.45.6.0，新增 17 个经其数十万 markdown 文件实测的 brain skills，现已兼容 Codex 与 Claude Code。他同时给出架构建议：GBrain 应作为独立 agent 运行，而非塞进主 coding agent。对你的映射：把自己的笔记/素材库做成一个独立的「记忆 agent」（git 仓库 + skills），与 coding agent 分工而非合体——这个模式本周就有官方参考实现可抄。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Garry Tan on X",
+                  "url": "https://x.com/garrytan/status/2087594114372259890"
+                },
+                {
+                  "name": "Garry Tan on X（架构说明）",
+                  "url": "https://x.com/garrytan/status/2087597829065945249"
+                }
+              ]
+            },
+            {
+              "text": "Launch HN：Bullet（YC S26）——为速度重写的 coding agent CLI，免费公测",
+              "summary": "Bullet 针对「模型够快、harness 太重」的痛点：模型路由（fast/deep/reason 三档按需升级）、定向检索只读相关代码而非嵌入整个仓库、独立工具调用并行执行并拦截死循环；CLI 已上 macOS/Linux（npm install -g @trybullet/cli），免费且无需 key 起步。对你的映射：它公开的三档路由思路本身就是一套可复用的降本模板——即使不换工具，也可以在自己调的 agent 流水线里照做「简单任务先走便宜模型、按需升级」。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Bullet 官网",
+                  "url": "https://codewithbullet.com/"
+                },
+                {
+                  "name": "Hacker News 热榜",
+                  "url": "https://news.ycombinator.com/"
+                }
+              ]
+            },
+            {
+              "text": "端侧 Agent 芯片创企 Acrab 获 4.8 亿美元融资，首颗 AI 芯片已量产",
+              "summary": "量子位报道，主打端侧算力的 Agent 芯片新贵 Acrab 冲出重围，拿下 4.8 亿美元融资，首颗 AI 芯片已进入量产。端侧推理成本若被打下来，本地 agent（今日榜单的 FluidVoice、modly 一类）的体验天花板会继续抬高。对你的映射：做产品时把「端侧可运行」作为架构预留项——模型与算力都在向本地迁移，纯云方案的成本与隐私叙事会被持续挤压。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/2026/08/472059.html"
                 }
               ]
             }
@@ -5361,55 +5410,6 @@
             }
           ],
           "note": "本周期风向：一条线把模型塞进本地工作流（FluidVoice 本地听写、modly 本地图转 3D、14MB 端侧模型 needle 连续在榜），另一条线给云端 agent 修管道（Switchyard 做模型路由、Obsidian 官方与 Anthropic 官方 skills 双双在榜）——本地私有化与 agent 基建是本周期开源的两个重心。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "Garry Tan 的 GBrain 更新 v0.45.6.0：17 个新 brain skills，并明确「记忆 agent 应独立于主 coding agent 运行」",
-              "summary": "YC CEO Garry Tan 的个人 AGI 项目 GBrain（自带 git 仓库做记忆与自定义 skills 的个人 AI）发布 v0.45.6.0，新增 17 个经其数十万 markdown 文件实测的 brain skills，现已兼容 Codex 与 Claude Code。他同时给出架构建议：GBrain 应作为独立 agent 运行，而非塞进主 coding agent。对你的映射：把自己的笔记/素材库做成一个独立的「记忆 agent」（git 仓库 + skills），与 coding agent 分工而非合体——这个模式本周就有官方参考实现可抄。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Garry Tan on X",
-                  "url": "https://x.com/garrytan/status/2087594114372259890"
-                },
-                {
-                  "name": "Garry Tan on X（架构说明）",
-                  "url": "https://x.com/garrytan/status/2087597829065945249"
-                }
-              ]
-            },
-            {
-              "text": "Launch HN：Bullet（YC S26）——为速度重写的 coding agent CLI，免费公测",
-              "summary": "Bullet 针对「模型够快、harness 太重」的痛点：模型路由（fast/deep/reason 三档按需升级）、定向检索只读相关代码而非嵌入整个仓库、独立工具调用并行执行并拦截死循环；CLI 已上 macOS/Linux（npm install -g @trybullet/cli），免费且无需 key 起步。对你的映射：它公开的三档路由思路本身就是一套可复用的降本模板——即使不换工具，也可以在自己调的 agent 流水线里照做「简单任务先走便宜模型、按需升级」。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Bullet 官网",
-                  "url": "https://codewithbullet.com/"
-                },
-                {
-                  "name": "Hacker News 热榜",
-                  "url": "https://news.ycombinator.com/"
-                }
-              ]
-            },
-            {
-              "text": "端侧 Agent 芯片创企 Acrab 获 4.8 亿美元融资，首颗 AI 芯片已量产",
-              "summary": "量子位报道，主打端侧算力的 Agent 芯片新贵 Acrab 冲出重围，拿下 4.8 亿美元融资，首颗 AI 芯片已进入量产。端侧推理成本若被打下来，本地 agent（今日榜单的 FluidVoice、modly 一类）的体验天花板会继续抬高。对你的映射：做产品时把「端侧可运行」作为架构预留项——模型与算力都在向本地迁移，纯云方案的成本与隐私叙事会被持续挤压。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "量子位",
-                  "url": "https://www.qbitai.com/"
-                }
-              ]
-            }
-          ]
         }
       ],
       "rich": true,
@@ -5435,7 +5435,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/473669.html"
                 },
                 {
                   "name": "The Decoder",
@@ -5455,7 +5455,7 @@
                 },
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/472067.html"
                 },
                 {
                   "name": "虎嗅",
@@ -5471,7 +5471,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/473153.html"
                 },
                 {
                   "name": "The Verge",
@@ -5520,7 +5520,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/473866.html"
                 }
               ]
             },
@@ -5650,7 +5650,56 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/473876.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "【进展】DeepSeek Harness 插件一夜燃爆 GitHub：长期记忆、电子宠物、4399 小游戏全来了",
+              "summary": "量子位 8/15 报道，8/14 刚以 MIT 开源的 DeepSeek Harness 插件生态爆发：社区一天内做出长期记忆、电子宠物、4399 小游戏等插件，「一切皆插件」的架构让第三方能力以极低摩擦接入 agent 运行时。对你的映射：新平台红利期按天计——Harness 插件市场此刻近乎空白，把你工作流里已验证的某个能力（素材下载、文案审核、发布调度）封装成插件发布，是最低成本的首发卡位。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "量子位",
+                  "url": "https://www.qbitai.com/2026/08/473597.html"
+                }
+              ]
+            },
+            {
+              "text": "HN 热帖：一人用 Codex 自动研究把 kernel 提速 232 倍，401 分登顶",
+              "summary": "一位开发者发帖详述如何用 Codex 做「自动研究」：让 agent 循环尝试优化方案，最终把 kernel 性能提升 232 倍，登上 HN 热榜第一（401 分）。单人 + agent 正在做出过去需要专家团队的高性能工程。对你的映射：「提出假设→agent 批量实验→保留最优」的循环可以平移到非内核场景——比如让 agent 跑 100 组 prompt/参数组合挑最优，本周选一个质量敏感环节试。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "作者博客",
+                  "url": "https://sankalp.bearblog.dev/"
+                },
+                {
+                  "name": "Hacker News 热榜",
+                  "url": "https://news.ycombinator.com/"
+                }
+              ]
+            },
+            {
+              "text": "Madhu Guru：当人人都能用 AI 做产品，差异化只剩产品 sense、领域知识、分发与执行",
+              "summary": "Meta AI 高级总监 Madhu Guru 8/15：build 门槛被 AI 抹平后，你的差异化是 product sense、domain knowledge、distribution、execution；他另一帖用「蒸汽机越高效、煤需求越大」类比——AI 让软件工程变便宜，只会催生更多软件去解决过去不经济的问题。对你的映射：把本周省下来的 build 时间投到分发侧——选一个渠道（小红书/X/Product Hunt）做连续 7 天发布实验，分发肌肉比技术栈更稀缺。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Madhu Guru on X",
+                  "url": "https://x.com/realmadhuguru/status/2088425380130783287"
+                },
+                {
+                  "name": "Madhu Guru on X（Jevons 类比）",
+                  "url": "https://x.com/realmadhuguru/status/2088294414255112329"
                 }
               ]
             }
@@ -5733,55 +5782,6 @@
             }
           ],
           "note": "本周期风向：coding agent 的工具链在「插件化」——Cursor 官方插件仓与「万物 CLI 化」同日上榜，agent 专用浏览器把登录态变成可共享基建；另一端，4GB 显存微调 8B、omni 语音 serving 把训练与推理继续往小团队手里塞。回流去重：unsloth、needle、spec-kit、FluidVoice、diagram-design、semantica。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "【进展】DeepSeek Harness 插件一夜燃爆 GitHub：长期记忆、电子宠物、4399 小游戏全来了",
-              "summary": "量子位 8/15 报道，8/14 刚以 MIT 开源的 DeepSeek Harness 插件生态爆发：社区一天内做出长期记忆、电子宠物、4399 小游戏等插件，「一切皆插件」的架构让第三方能力以极低摩擦接入 agent 运行时。对你的映射：新平台红利期按天计——Harness 插件市场此刻近乎空白，把你工作流里已验证的某个能力（素材下载、文案审核、发布调度）封装成插件发布，是最低成本的首发卡位。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "量子位",
-                  "url": "https://www.qbitai.com/"
-                }
-              ]
-            },
-            {
-              "text": "HN 热帖：一人用 Codex 自动研究把 kernel 提速 232 倍，401 分登顶",
-              "summary": "一位开发者发帖详述如何用 Codex 做「自动研究」：让 agent 循环尝试优化方案，最终把 kernel 性能提升 232 倍，登上 HN 热榜第一（401 分）。单人 + agent 正在做出过去需要专家团队的高性能工程。对你的映射：「提出假设→agent 批量实验→保留最优」的循环可以平移到非内核场景——比如让 agent 跑 100 组 prompt/参数组合挑最优，本周选一个质量敏感环节试。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "作者博客",
-                  "url": "https://sankalp.bearblog.dev/"
-                },
-                {
-                  "name": "Hacker News 热榜",
-                  "url": "https://news.ycombinator.com/"
-                }
-              ]
-            },
-            {
-              "text": "Madhu Guru：当人人都能用 AI 做产品，差异化只剩产品 sense、领域知识、分发与执行",
-              "summary": "Meta AI 高级总监 Madhu Guru 8/15：build 门槛被 AI 抹平后，你的差异化是 product sense、domain knowledge、distribution、execution；他另一帖用「蒸汽机越高效、煤需求越大」类比——AI 让软件工程变便宜，只会催生更多软件去解决过去不经济的问题。对你的映射：把本周省下来的 build 时间投到分发侧——选一个渠道（小红书/X/Product Hunt）做连续 7 天发布实验，分发肌肉比技术栈更稀缺。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Madhu Guru on X",
-                  "url": "https://x.com/realmadhuguru/status/2088425380130783287"
-                },
-                {
-                  "name": "Madhu Guru on X（Jevons 类比）",
-                  "url": "https://x.com/realmadhuguru/status/2088294414255112329"
-                }
-              ]
-            }
-          ]
         }
       ],
       "rich": true,
@@ -5867,7 +5867,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/473038.html"
                 }
               ]
             }
@@ -5884,7 +5884,7 @@
               "sources": [
                 {
                   "name": "量子位",
-                  "url": "https://www.qbitai.com/"
+                  "url": "https://www.qbitai.com/2026/08/474064.html"
                 }
               ]
             },
@@ -6037,6 +6037,47 @@
           ]
         },
         {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Riley Brown 用 Codex 运营整个内容生意：100 张爆款缩略图喂给 agent，再混剪自己的照片出图",
+              "summary": "Peter Yang 预告新一期访谈：Riley Brown 展示如何用 Codex 跑整个内容业务——先让 Codex 找到领域内 100 张表现最好的 YouTube 缩略图放进 Paper 画布，再把自己的照片与之混搭迭代，直到产出满意的封面。对你的映射：这套「采集标杆 → 画布混搭 → 快速出稿」流程可直接复刻到 AIMV 封面/海报环节——本周用 Codex 加任意画布工具跑一遍你的封面流水线，记录出稿时间对比人工。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Peter Yang on X",
+                  "url": "https://x.com/petergyang/status/2088626815166464507"
+                }
+              ]
+            },
+            {
+              "text": "Vercel CEO：React 的成功大半属于 shadcn——「为被消化进 context window 再 remix 而生」的新分发形态",
+              "summary": "Guillermo Rauch 8/15：React 名义上是「成年人的乐高」，但那只是积木的几何规格；人们真正想要的是 shadcn——可复用、可调优的高质量组件，它是「伪库」：代码存在的意义就是被吃进你的 context window 再 remix。AI 时代组件的分发单位正从 npm 包变成 prompt 可消化的源码。对你的映射：把你的可复用资产（组件、模板、工作流）整理成「一段 agent 能直接读走的源码加说明」，比做成 SDK 更符合当下消费方式——本周挑一个内部工具先做 shadcn 化改造。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Guillermo Rauch on X",
+                  "url": "https://x.com/rauchg/status/2088757738037989755"
+                }
+              ]
+            },
+            {
+              "text": "FPV 合伙人：卡在「最后一码」的官僚流程不是坏事——那正是别人复制你最慢的地方",
+              "summary": "Nikunj Kothari 分享被投企业故事：一家做「无聊行业」的 stealth 公司，关键合同因一条随机条款卡在 1 码线；他的回应是「想想别人要走完同样的流程需要多久」——短期的痛是长期的护城河，表演式 996 不是壁垒，entrenched software 加关系与流程才是。对你的映射：选垂直方向时把「流程摩擦度」当成正指标——本周列出你所在领域里 3 个「人人都嫌麻烦」的环节，麻烦本身就是在给先发者筑墙。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Nikunj Kothari on X",
+                  "url": "https://x.com/nikunj/status/2088716743615352963"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "title": "💻 GitHub Trending",
           "items": [
             {
@@ -6101,47 +6142,6 @@
             }
           ],
           "note": "本周期风向：创作工具与本地基建两头热——AI 短视频一键生成与开源剪映平替同日上榜，RL 后训练框架与 Apple Silicon 推理服务器把训练/推理继续下放；agent 数据主权意识抬头（一键导出各家 coding agent 历史）。回流去重：unsloth、needle、CLI-Anything、Soup、strix、grok-1。"
-        },
-        {
-          "title": "🚀 AI 一人公司（OPC）",
-          "items": [
-            {
-              "text": "Riley Brown 用 Codex 运营整个内容生意：100 张爆款缩略图喂给 agent，再混剪自己的照片出图",
-              "summary": "Peter Yang 预告新一期访谈：Riley Brown 展示如何用 Codex 跑整个内容业务——先让 Codex 找到领域内 100 张表现最好的 YouTube 缩略图放进 Paper 画布，再把自己的照片与之混搭迭代，直到产出满意的封面。对你的映射：这套「采集标杆 → 画布混搭 → 快速出稿」流程可直接复刻到 AIMV 封面/海报环节——本周用 Codex 加任意画布工具跑一遍你的封面流水线，记录出稿时间对比人工。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Peter Yang on X",
-                  "url": "https://x.com/petergyang/status/2088626815166464507"
-                }
-              ]
-            },
-            {
-              "text": "Vercel CEO：React 的成功大半属于 shadcn——「为被消化进 context window 再 remix 而生」的新分发形态",
-              "summary": "Guillermo Rauch 8/15：React 名义上是「成年人的乐高」，但那只是积木的几何规格；人们真正想要的是 shadcn——可复用、可调优的高质量组件，它是「伪库」：代码存在的意义就是被吃进你的 context window 再 remix。AI 时代组件的分发单位正从 npm 包变成 prompt 可消化的源码。对你的映射：把你的可复用资产（组件、模板、工作流）整理成「一段 agent 能直接读走的源码加说明」，比做成 SDK 更符合当下消费方式——本周挑一个内部工具先做 shadcn 化改造。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Guillermo Rauch on X",
-                  "url": "https://x.com/rauchg/status/2088757738037989755"
-                }
-              ]
-            },
-            {
-              "text": "FPV 合伙人：卡在「最后一码」的官僚流程不是坏事——那正是别人复制你最慢的地方",
-              "summary": "Nikunj Kothari 分享被投企业故事：一家做「无聊行业」的 stealth 公司，关键合同因一条随机条款卡在 1 码线；他的回应是「想想别人要走完同样的流程需要多久」——短期的痛是长期的护城河，表演式 996 不是壁垒，entrenched software 加关系与流程才是。对你的映射：选垂直方向时把「流程摩擦度」当成正指标——本周列出你所在领域里 3 个「人人都嫌麻烦」的环节，麻烦本身就是在给先发者筑墙。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "Nikunj Kothari on X",
-                  "url": "https://x.com/nikunj/status/2088716743615352963"
-                }
-              ]
-            }
-          ]
         },
         {
           "title": "🧭 WayToAGI 知识库精选",

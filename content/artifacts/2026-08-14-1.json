@@ -23,7 +23,7 @@
           "sources": [
             { "name": "DeepSeek Harness 官方仓库", "url": "https://github.com/deepseek-ai/deepseek-harness" },
             { "name": "The Decoder", "url": "https://the-decoder.com/" },
-            { "name": "量子位", "url": "https://www.qbitai.com/" }
+            { "name": "量子位", "url": "https://www.qbitai.com/2026/08/472208.html" }
           ]
         },
         {
@@ -31,7 +31,7 @@
           "summary": "量子位 8/13 晚以「刚刚！Ilya首个模型曝光了」报道：SSI 成立后的首个模型浮出水面，首剑劈向持续学习（continual learning）。官方尚未放出完整技术细节，持续学习若被突破，意味着模型可在部署后持续吸收新知而非冻结于训练截止日——这是当前所有大模型的硬约束之一。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/471701.html" }
           ]
         },
         {
@@ -87,7 +87,7 @@
           "summary": "量子位报道，360 科技集团与《知识就是力量》杂志社发布「知力·纳米」科普科幻 AI 大片创作平台，并同步举行 AI 创作交流活动。传统科普出版机构开始把 AI 视频流水线引入内容生产，科普/科幻短片是 AI 影视落地阻力较小的切口。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/471624.html" }
           ]
         }
       ]
@@ -137,7 +137,7 @@
           "summary": "量子位报道，Claude 一举解决了 2000 阶以下的哈达玛矩阵（Hadamard matrix）存在性问题，评论称「AI 开始清空数学待解列表」。继上周 Anthropic 研究版 Claude 攻黎曼猜想零点下界（8/11 已报）之后，AI-for-math 正从单点突破走向批量清扫；对产品的意义在于：组合设计、编码理论等依赖此类构造的工程领域，可能很快能直接调用「AI 数学构造器」。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/472016.html" }
           ]
         },
         {
@@ -231,7 +231,7 @@
           "summary": "量子位报道，主打端侧算力的 Agent 芯片新贵 Acrab 冲出重围，拿下 4.8 亿美元融资，首颗 AI 芯片已进入量产。端侧推理成本若被打下来，本地 agent（今日榜单的 FluidVoice、modly 一类）的体验天花板会继续抬高。对你的映射：做产品时把「端侧可运行」作为架构预留项——模型与算力都在向本地迁移，纯云方案的成本与隐私叙事会被持续挤压。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/472059.html" }
           ]
         }
       ]

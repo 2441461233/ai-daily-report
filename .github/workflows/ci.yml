@@ -30,6 +30,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tests
           node --test tests/fetch_official_priority_sources.test.mjs
+          node --test tests/fetch_artificial_analysis.test.mjs
 
       - name: Lint
         run: npm run lint

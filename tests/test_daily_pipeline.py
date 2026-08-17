@@ -57,6 +57,59 @@ def addendum(date: str, sequence: int, label: str = "补刊 1") -> dict:
     }
 
 
+class SourceValidationTests(unittest.TestCase):
+    def validate(self, sources: list[dict]) -> list[str]:
+        errors = validate_content.Errors()
+        validate_content.validate_sources(
+            sources, Path("report.json"), "$.sources", errors
+        )
+        return errors.messages
+
+    def test_accepts_qbitai_item_specific_article_url(self) -> None:
+        messages = self.validate(
+            [
+                {
+                    "name": "量子位（单一来源）",
+                    "url": "https://www.qbitai.com/2026/08/467877.html",
+                }
+            ]
+        )
+        self.assertEqual(messages, [])
+
+    def test_rejects_qbitai_home_and_channel_pages(self) -> None:
+        invalid_urls = (
+            "https://www.qbitai.com/",
+            "https://qbitai.com",
+            "https://www.qbitai.com/category/ai",
+            "https://www.qbitai.com/2026/08/",
+            "https://www.qbitai.com/2026/08/not-an-id.html",
+        )
+        for url in invalid_urls:
+            with self.subTest(url=url):
+                messages = self.validate(
+                    [{"name": "量子位（单一来源）", "url": url}]
+                )
+                self.assertTrue(
+                    any("item-specific article URLs" in message for message in messages),
+                    messages,
+                )
+
+    def test_does_not_reject_qbitai_reposts_on_other_hosts(self) -> None:
+        messages = self.validate(
+            [
+                {
+                    "name": "量子位（网易号）",
+                    "url": "https://c.m.163.com/news/a/L3JN1GJL0511DSSR.html",
+                },
+                {
+                    "name": "量子位（搜狐转载）",
+                    "url": "https://m.sohu.com/a/1059462178_610300",
+                },
+            ]
+        )
+        self.assertEqual(messages, [])
+
+
 class BuildDataAddendumTests(unittest.TestCase):
     def test_build_preserves_main_and_addendum_in_filename_sequence(self) -> None:
         date = "2099-01-02"
@@ -151,6 +204,84 @@ class BuildDataAddendumTests(unittest.TestCase):
             [section["title"] for section in issues[1]["sections"]],
             ["🔥 AI 重要事件"],
         )
+
+
+class BuildDataSectionOrderTests(unittest.TestCase):
+    def test_places_opc_before_github_for_rich_and_legacy_titles(self) -> None:
+        for github_title, opc_title in (
+            ("💻 GitHub Trending", "🚀 AI 一人公司（OPC）"),
+            ("GitHub Trending", "AI 一人公司（OPC）"),
+        ):
+            with self.subTest(github_title=github_title):
+                sections = [
+                    {"title": "🔥 AI 重要事件"},
+                    {"title": github_title},
+                    {"title": "🧭 WayToAGI 知识库精选"},
+                    {"title": opc_title},
+                    {"title": "📊 Artificial Analysis 模型排名"},
+                ]
+
+                ordered = build_data.normalize_section_order(sections)
+
+                self.assertEqual(
+                    [section["title"] for section in ordered],
+                    [
+                        "🔥 AI 重要事件",
+                        opc_title,
+                        "🧭 WayToAGI 知识库精选",
+                        github_title,
+                        "📊 Artificial Analysis 模型排名",
+                    ],
+                )
+                self.assertEqual(
+                    build_data.normalize_section_order(ordered),
+                    ordered,
+                )
+
+
+class ValidateMainSectionOrderTests(unittest.TestCase):
+    @staticmethod
+    def artifact(date: str, policy: tuple) -> dict:
+        sections = []
+        for title, _minimum, maximum in policy:
+            sections.append(
+                {
+                    "title": title,
+                    "items": [{"expanded": False} for _ in range(maximum)],
+                }
+            )
+        sections[0]["items"][0]["expanded"] = True
+        return {
+            "date": date,
+            "oneLiner": "📌 今日一句话：保持新的板块顺序。",
+            "sections": sections,
+        }
+
+    def validate(self, artifact: dict) -> list[str]:
+        errors = validate_content.Errors()
+        validate_content.validate_current_main_policy(
+            artifact, Path("report.json"), "$", errors
+        )
+        return errors.messages
+
+    def test_keeps_legacy_order_before_cutover(self) -> None:
+        artifact = self.artifact(
+            "2026-08-17 星期一", validate_content.LEGACY_MAIN_SECTION_POLICY
+        )
+        self.assertEqual(self.validate(artifact), [])
+
+    def test_requires_opc_before_github_from_cutover(self) -> None:
+        artifact = self.artifact(
+            "2026-08-18 星期二", validate_content.MAIN_SECTION_POLICY
+        )
+        self.assertEqual(self.validate(artifact), [])
+
+        artifact["sections"][-2], artifact["sections"][-1] = (
+            artifact["sections"][-1],
+            artifact["sections"][-2],
+        )
+        messages = self.validate(artifact)
+        self.assertTrue(any("canonical order" in message for message in messages), messages)
 
 
 class ValidateAddendumTests(unittest.TestCase):
@@ -401,6 +532,163 @@ class DailyChangeGuardFirstRunTests(unittest.TestCase):
 
         self.assertEqual(result, 1)
         self.assertIn("contiguous", output)
+
+
+class ArtificialAnalysisAttachmentTests(unittest.TestCase):
+    def artifact(
+        self, date: str = "2099-01-02", generated_time: str = "10:17:00"
+    ) -> dict:
+        return {
+            "date": date,
+            "attachTo": date,
+            "label": "Artificial Analysis 排名变化",
+            "generatedAt": f"{date}T{generated_time}+08:00",
+            "sections": [
+                {
+                    "title": "📊 Artificial Analysis 模型排名",
+                    "items": [
+                        {
+                            "headline": "Artificial Analysis Intelligence Index 前 10 名发生变化",
+                            "summary": "模型 A 升至第 1，模型 B 掉出前 10。",
+                            "expanded": False,
+                            "sources": [
+                                {
+                                    "name": "Artificial Analysis 官方榜单（单一来源）",
+                                    "url": "https://artificialanalysis.ai/leaderboards/models/",
+                                }
+                            ],
+                        }
+                    ],
+                }
+            ],
+        }
+
+    def validate(self, artifact: dict) -> list[str]:
+        with tempfile.TemporaryDirectory() as temporary:
+            file = Path(temporary) / "artificial-analysis-20990102-101700.json"
+            file.write_text(json.dumps(artifact, ensure_ascii=False), "utf-8")
+            errors = validate_content.Errors()
+            stats = validate_content.Stats()
+            record = validate_content.validate_artifact_file(file, [], errors, stats)
+            self.assertIsNone(record)
+            return errors.messages
+
+    def test_accepts_deterministic_leaderboard_attachment(self) -> None:
+        self.assertEqual(self.validate(self.artifact()), [])
+
+    def test_accepts_official_methodology_source(self) -> None:
+        artifact = self.artifact()
+        item = artifact["sections"][0]["items"][0]
+        item["headline"] = "评测方法升级：Intelligence Index v4.1 → v4.1.1"
+        item["sources"][0]["url"] = (
+            "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+        )
+        self.assertEqual(self.validate(artifact), [])
+
+    def test_rejects_a_filename_that_does_not_match_collection_time(self) -> None:
+        messages = self.validate(self.artifact(generated_time="10:18:00"))
+        self.assertTrue(any("filename timestamp" in item for item in messages))
+
+    def test_rejects_wrong_section_or_non_official_source(self) -> None:
+        artifact = self.artifact()
+        artifact["sections"][0]["title"] = "模型榜单"
+        artifact["sections"][0]["items"][0]["sources"][0]["url"] = (
+            "https://example.invalid/models"
+        )
+        messages = self.validate(artifact)
+        self.assertTrue(any("Artificial Analysis 模型排名" in item for item in messages))
+        self.assertTrue(any("official Artificial Analysis" in item for item in messages))
+
+
+class ArtificialAnalysisChangeGuardTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temp = tempfile.TemporaryDirectory()
+        self.root = Path(self.temp.name)
+        self.today = datetime.now(ZoneInfo("Asia/Shanghai")).date().isoformat()
+        (self.root / "content" / "artifacts").mkdir(parents=True)
+        (self.root / "public" / "data").mkdir(parents=True)
+        (self.root / "content" / "reported.md").write_text("存档\n", "utf-8")
+        (self.root / "content" / "artificial-analysis-snapshot.json").write_text(
+            '{"schemaVersion": 1, "rankings": []}\n', "utf-8"
+        )
+        (self.root / "public" / "data" / "reports.json").write_text("{}\n", "utf-8")
+        main = {"date": self.today, "label": "主刊", "sections": [{"items": [1]}]}
+        (self.root / "content" / "artifacts" / f"{self.today}-1.json").write_text(
+            json.dumps(main, ensure_ascii=False), "utf-8"
+        )
+        self.git("init", "-q")
+        self.git("config", "user.email", "test@example.com")
+        self.git("config", "user.name", "Test")
+        self.git("add", ".")
+        self.git("commit", "-qm", "base")
+        self.old_root = check_daily_changes.ROOT
+        check_daily_changes.ROOT = self.root
+
+    def tearDown(self) -> None:
+        check_daily_changes.ROOT = self.old_root
+        self.temp.cleanup()
+
+    def git(self, *arguments: str) -> None:
+        subprocess.run(["git", *arguments], cwd=self.root, check=True)
+
+    def write_change(
+        self, *, sync_snapshot: bool = True, generated_time: str = "10:17:00"
+    ) -> None:
+        stamp = self.today.replace("-", "")
+        time_stamp = generated_time.replace(":", "")
+        artifact = ArtificialAnalysisAttachmentTests().artifact(
+            self.today, generated_time
+        )
+        (self.root / "content" / "artifacts" / f"artificial-analysis-{stamp}-{time_stamp}.json").write_text(
+            json.dumps(artifact, ensure_ascii=False), "utf-8"
+        )
+        (self.root / "public" / "data" / "reports.json").write_text(
+            '{"rebuilt": true}\n', "utf-8"
+        )
+        if sync_snapshot:
+            (self.root / "content" / "artificial-analysis-snapshot.json").write_text(
+                '{"schemaVersion": 1, "rankings": [{"rank": 1}]}\n', "utf-8"
+            )
+
+    def run_guard(self) -> tuple[int, str]:
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output), contextlib.redirect_stderr(output):
+            result = check_daily_changes.main(["--date", self.today])
+        return result, output.getvalue()
+
+    def test_allows_attachment_with_synchronized_snapshot(self) -> None:
+        self.write_change()
+        result, output = self.run_guard()
+        self.assertEqual(result, 0, output)
+
+    def test_allows_multiple_immutable_changes_on_the_same_day(self) -> None:
+        self.write_change(generated_time="10:17:00")
+        self.write_change(generated_time="10:47:00")
+        result, output = self.run_guard()
+        self.assertEqual(result, 0, output)
+
+    def test_rejects_attachment_without_snapshot_progress(self) -> None:
+        self.write_change(sync_snapshot=False)
+        result, output = self.run_guard()
+        self.assertEqual(result, 1)
+        self.assertIn("synchronized ranking snapshot", output)
+
+    def test_rejects_snapshot_progress_without_attachment(self) -> None:
+        snapshot = self.root / "content" / "artificial-analysis-snapshot.json"
+        snapshot.write_text('{"schemaVersion": 1, "rankings": [{"rank": 1}]}\n', "utf-8")
+        result, output = self.run_guard()
+        self.assertEqual(result, 1)
+        self.assertIn("only change with a validated ranking attachment", output)
+
+    def test_allows_first_baseline_snapshot_without_an_attachment(self) -> None:
+        snapshot = self.root / "content" / "artificial-analysis-snapshot.json"
+        snapshot.unlink()
+        self.git("add", "-u")
+        self.git("commit", "-qm", "remove pre-existing snapshot")
+        snapshot.write_text('{"schemaVersion": 1, "rankings": []}\n', "utf-8")
+
+        result, output = self.run_guard()
+        self.assertEqual(result, 0, output)
 
 
 if __name__ == "__main__":

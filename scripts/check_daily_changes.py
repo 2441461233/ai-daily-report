@@ -2,7 +2,7 @@
 """Guard the file changes made by the headless daily-report agent.
 
 The agent may add an immutable daily main report, append sequential same-day
-addenda, add or source-sync validated WayToAGI attachments, and update the three
+addenda, add or source-sync validated deterministic attachments, and update the
 derived/state files. Anything else fails before GitHub Actions can commit it.
 """
 
@@ -20,9 +20,13 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 MAIN_NAME = re.compile(r"^(\d{4}-\d{2}-\d{2})-(\d+)\.json$")
 WAYTOAGI_NAME = re.compile(r"^waytoagi-(\d{8})\.json$")
+ARTIFICIAL_ANALYSIS_NAME = re.compile(
+    r"^artificial-analysis-(\d{8})-(\d{6})\.json$"
+)
 ADDENDUM_KIND = "addendum"
 ALLOWED_FILES = {
     "content/reported.md",
+    "content/artificial-analysis-snapshot.json",
     "content/waytoagi-consumed.txt",
     "public/data/reports.json",
 }
@@ -101,16 +105,46 @@ def main(argv: list[str] | None = None) -> int:
         elif "D" in status:
             errors.append(f"state/derived file may not be deleted: {status} {path}")
 
-    if entries and not changed_artifacts:
-        errors.append("a non-clean run must add or update at least one artifact")
     new_artifact_paths = {
         path for status, path in entries
         if status == "??" and path.startswith("content/artifacts/") and path.endswith(".json")
     }
-    if new_artifact_paths and "content/reported.md" not in changed:
+    new_archive_artifact_paths = {
+        path
+        for path in new_artifact_paths
+        if ARTIFICIAL_ANALYSIS_NAME.fullmatch(Path(path).name) is None
+    }
+    if new_archive_artifact_paths and "content/reported.md" not in changed:
         errors.append("new artifacts require a matching content/reported.md update")
     if changed_artifacts and "public/data/reports.json" not in changed:
         errors.append("artifact changes require a rebuilt public/data/reports.json")
+    changed_artificial_analysis = [
+        path
+        for path in changed_artifacts
+        if ARTIFICIAL_ANALYSIS_NAME.fullmatch(path.name) is not None
+    ]
+    snapshot_path = "content/artificial-analysis-snapshot.json"
+    snapshot_status = next(
+        (status for status, path in entries if path == snapshot_path), None
+    )
+    is_new_baseline_snapshot = (
+        snapshot_status == "??" and not changed_artificial_analysis
+    )
+    if entries and not changed_artifacts:
+        if not is_new_baseline_snapshot or changed != {snapshot_path}:
+            errors.append("a non-clean run must add or update at least one artifact")
+    if changed_artificial_analysis and snapshot_path not in changed:
+        errors.append(
+            "Artificial Analysis attachment changes require a synchronized ranking snapshot"
+        )
+    if (
+        snapshot_path in changed
+        and not changed_artificial_analysis
+        and not is_new_baseline_snapshot
+    ):
+        errors.append(
+            "Artificial Analysis snapshot may only change with a validated ranking attachment"
+        )
     if "content/reported.md" in changed and (ROOT / "content/reported.md").is_file():
         try:
             committed_reported = subprocess.check_output(
@@ -154,6 +188,10 @@ def main(argv: list[str] | None = None) -> int:
             new_daily.append((path, sequence, kind))
         else:
             attachment_match = WAYTOAGI_NAME.fullmatch(path.name)
+            is_artificial_analysis = False
+            if attachment_match is None:
+                attachment_match = ARTIFICIAL_ANALYSIS_NAME.fullmatch(path.name)
+                is_artificial_analysis = attachment_match is not None
             if not attachment_match:
                 errors.append(f"unexpected artifact filename: {path.name}")
                 continue
@@ -164,6 +202,10 @@ def main(argv: list[str] | None = None) -> int:
             if declared != stamp_date or attach_to != stamp_date:
                 errors.append(
                     f"{path.name} must declare date and attachTo as {stamp_date!r}"
+                )
+            if is_artificial_analysis and stamp_date != today:
+                errors.append(
+                    f"Artificial Analysis attachments must use Shanghai date {today}, got {path.name}"
                 )
 
     tracked_today_names = subprocess.check_output(

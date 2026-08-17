@@ -40,7 +40,7 @@
           "expanded": false,
           "sources": [
             { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" },
-            { "name": "量子位", "url": "https://www.qbitai.com/" }
+            { "name": "量子位", "url": "https://www.qbitai.com/2026/08/470805.html" }
           ]
         },
         {
@@ -137,7 +137,7 @@
           "summary": "量子位 8/12 收录：中国科学院自动化研究所紫东太初团队提出 GMC 核心集剪枝方法，免训练、开箱即用，在减少约 80% 视觉 token 的情况下保持多模态理解能力不掉。解决什么问题：多模态模型的推理成本大头在视觉 token；对产品的意义：视频理解、多图 agent 这类吃 token 的场景，成本结构有继续下探的空间。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/471030.html" }
           ]
         },
         {
@@ -145,7 +145,7 @@
           "summary": "量子位 8/12 报道，自变量机器人的具身模型在异形包裹分拣任务中一小时完成 1816 件，号称以 30% 的成本实现比 Figure AI 高 45% 的效率，关键在于「具身大脑」而非本体。模型路线趋同之后，物理 AI 的胜负手转向任务理解与规划层——这一层恰恰也是 agent 软件人够得着的位置。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/471049.html" }
           ]
         },
         {
@@ -153,7 +153,7 @@
           "summary": "量子位 8/11 收录：一项用 AI 系统回扫百年顶刊论文的工作显示，99.2% 的顶刊论文都能被找出问题。对做产品的人：文献审计、引用体检是科研工具里罕见的「供给端无限」场景——大学、出版社、药企都是潜在买单方，且 AI 把单次审计成本打到了接近零。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/469795.html" }
           ]
         }
       ]

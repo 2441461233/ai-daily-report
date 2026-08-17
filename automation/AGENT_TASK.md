@@ -8,7 +8,7 @@
 1. 全程使用 `Asia/Shanghai` 的日期和时间。工作流启动时已将报告日期冻结到
    `/tmp/report-date`；即使运行跨越午夜，文件中的日期仍是本轮唯一标准。开始选题前，必须完整读取
    `content/reported.md`、`/tmp/report-date`、`/tmp/priority-news.json`、`/tmp/ai-builders.json`、
-   `/tmp/waytoagi.json`。任一文件缺失、JSON 损坏或未读完即失败退出。
+   `/tmp/artificial-analysis.json`、`/tmp/waytoagi.json`。任一文件缺失、JSON 损坏或未读完即失败退出。
 2. 只允许修改：
    - `content/artifacts/*.json`
    - `content/reported.md`
@@ -20,13 +20,15 @@
    不得用模型记忆补写新闻，也不得写空日报或推进消费状态。
 6. 每个上海自然日只生成一份主日报。若当天主日报已存在，先逐个核对
    `/tmp/priority-news.json` 的 `required: true` 候选：有未覆盖候选时，必须新建下一个连续序号的
-   `kind: "addendum"` 补刊；全部已覆盖时才可只处理 WayToAGI，若也无补录则幂等结束。
+   `kind: "addendum"` 补刊；全部已覆盖时才可只处理 WayToAGI 或 Artificial Analysis attachment，
+   若两者也都无新增则幂等结束。
    首次生成时文件名为 `content/artifacts/YYYY-MM-DD-1.json`；同日补刊使用
    `YYYY-MM-DD-2.json`、`-3.json` 依次连续编号。不得覆盖任何已提交的主刊或补刊，
    同一事件不得因重跑重复。确定性采集器可能已在本轮开始前为 `/tmp/waytoagi.json`
-   明确列出的期次新建或刷新 attachment；Agent 不得重写这些文件。
-7. 写完日报和 `content/reported.md` 后即可结束。外层工作流会同步 WayToAGI 状态、运行验证和构建；
-   验证失败则整次运行不提交。不能为了通过验证而删除历史内容或放宽规则。
+   明确列出的期次新建或刷新 attachment，或根据 `/tmp/artificial-analysis.json` 新建榜单变化
+   attachment；Agent 不得重写这些文件。
+7. 写完日报和 `content/reported.md` 后即可结束。外层工作流会同步 WayToAGI 与 Artificial Analysis
+   状态、运行验证和构建；验证失败则整次运行不提交。不能为了通过验证而删除历史内容或放宽规则。
 8. WayToAGI 是确定性采集的完整归档，不适用主日报的语义筛选、跨期去重或条数配额。外层质量门会把
    `/tmp/waytoagi.json` 与 attachment 逐期逐条核对；任一期不完整时整次运行失败，且不消费、不提交。
 
@@ -64,6 +66,11 @@ Evan 是 AI 产品经理，会写代码做项目，目标是做**一人公司（
 ## 3. 信息采集
 
 独立搜索必须并行进行。优先读取官方发布和原始材料，关键事实尽量用第二个可靠来源交叉验证。
+每个媒体来源都必须保留支撑该 item 的 item-specific 文章、公告或帖子 URL；严禁用媒体首页、
+频道/栏目页、标签页或站内搜索页冒充原文。找不到具体原文时就不得把该媒体挂在 `sources`；
+如果因此无法留下至少一个可核验来源，则不收录该条。量子位官网直链必须是
+`https://www.qbitai.com/YYYY/MM/<数字>.html`；网易、搜狐等转载必须在来源名中明确标注转载媒体，
+并链接到具体转载文章。
 
 ### 3.0 官方重大候选（强制输入）
 
@@ -149,7 +156,27 @@ metadata 或模型记忆补全。
 不同条目共用同一个飞书 URL；此时仍按两个正文条目分别归档，不能按 URL 去重。不得手工推进、保留
 孤立状态或以 `content/reported.md` 代替 attachment。
 
-### 3.5 GitHub Trending
+### 3.5 Artificial Analysis 模型榜单
+
+外层确定性采集器已从 Artificial Analysis 官方公开 LLM Leaderboard 读取 Intelligence Index 前 10 名，
+并与上一次通过质量门后提交的快照比较，结果写在 `/tmp/artificial-analysis.json`。监控覆盖新进榜、掉出
+前 10、名次变化、显示分数变化与榜单方法版本变化；首次接入只建立 baseline，不把整张榜单误报为变化。
+
+直接用 Read 完整读取该输入：
+
+- `changes` 为空且 `artifact` 为 `null` 时，表示本轮没有榜单变化；不要自行创建榜单条目。
+- `artifact` 非空时，确定性采集器已经把同一份 `document` 写到其 `path`。逐字段核对后保持文件不变，
+  不要把其中 item 重复写进主 artifact 或 `content/reported.md`；榜单快照与 attachment 自身就是去重档案。
+- 不要再次抓榜单、改写标题/摘要、筛选变化或把榜单条目塞进主日报六板块。`previousSnapshot` 只用于说明
+  变化，`currentSnapshot` 要等所有门禁通过后才由外层同步；Agent 不得修改快照文件。
+- 官方榜单抓取或解析失败会在 Agent 启动前 fail closed；失败不得解释成「排名无变化」。
+
+榜单 attachment 使用 `content/artifacts/artificial-analysis-YYYYMMDD-HHMMSS.json`（上海采集时间），
+同日多次真实变化会保留为多份不可变记录。板块标题固定为
+`📊 Artificial Analysis 模型排名`，并通过 `attachTo` 合并到当天主日报。它和 WayToAGI 一样不占主日报
+20–28 条配额；没有变化时不生成空板块。
+
+### 3.6 GitHub Trending
 
 检查 `https://github.com/trending?since=daily` 和
 `https://github.com/trending/python?since=daily`，筛选 AI 项目。每条说明「它是什么 + 为什么值得关注」，
@@ -167,14 +194,15 @@ metadata 或模型记忆补全。
 | 2 | `🎬 AI 创作 · 视频/音乐/媒体娱乐` | 3–4 | AIMV、音乐、影视生态、版权、比赛与变现；兼顾视频与音乐 |
 | 3 | `🌍 海外观察` | 3–4 | builder 原创观点、海外变现案例、产业/版权、播客高信息量判断 |
 | 4 | `📄 论文与技术前沿` | 2–3 | 说清解决什么问题，以及对产品意味着什么，不堆术语 |
-| 5 | `💻 GitHub Trending` | 4–6 | 总榜 + Python 榜；`note` 用 1–2 句总结本周期开源风向 |
-| 6 | `🚀 AI 一人公司（OPC）` | 2–3 | 独立开发者案例、变现路径、Agent 基建与工具链 |
+| 5 | `🚀 AI 一人公司（OPC）` | 2–3 | 独立开发者案例、变现路径、Agent 基建与工具链 |
+| 6 | `💻 GitHub Trending` | 4–6 | 总榜 + Python 榜；`note` 用 1–2 句总结本周期开源风向 |
 
-WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节单独写。
+WayToAGI 的 `🧭 WayToAGI 知识库精选` 与 Artificial Analysis 的
+`📊 Artificial Analysis 模型排名` 不计入主日报，按确定性 attachment 单独写。
 任何 required 官方候选的优先级高于上表普通条数配额：槽位不足时移出低优先级普通项，
 不得删除 required；单刊容量不足时按每份 1–5 条写连续补刊。
 
-板块 3、6 以及 expanded 分析用一句 `对你的映射：……` 结尾，给本周可执行的动作。`oneLiner`
+板块 3、5 以及 expanded 分析用一句 `对你的映射：……` 结尾，给本周可执行的动作。`oneLiner`
 以 `📌 今日一句话：` 开头，把当天信息浓缩成一个有取舍的行动判断。
 
 ---
@@ -213,9 +241,9 @@ WayToAGI 的 `🧭 WayToAGI 知识库精选` 不计入主日报，按第 6 节�
 
 - `date` 必须是 `YYYY-MM-DD 星期X`；`generatedAt` 必须含 `+08:00`。
 - `label` 沿用全站连续期号。根据 `content/reported.md` 最后一期计算中文期号，不能每天从第一期重置。
-- 每条必须有非空 `headline`、`summary`、布尔值 `expanded` 和至少一个真实可访问的 HTTP(S) URL。
+- 每条必须有非空 `headline`、`summary`、布尔值 `expanded` 和至少一个支撑该条的具体原文 HTTP(S) URL。
 - 单一来源且未交叉验证，在该来源 `name` 后加 `（单一来源）`；传闻在 headline 明写「未经证实」。
-- 不得拼 URL、引用搜索结果页或把模型记忆当来源。
+- 不得拼 URL、引用搜索结果页、媒体首页或频道页，也不得把模型记忆当来源。
 - `priorityIds` 只用于声明官方优先候选；普通条目可省略，声明后必须通过 id + 精确证据 URL + 全部匹配词的覆盖门禁。
 
 ### 5.1 同日补刊 artifact
@@ -323,6 +351,7 @@ attachment 的 `items` 数量严格等于 `sourceItemCount`，且顺序、标题
 - 任何来源失败都要在最终运行摘要中说明；全部核心源失败则让任务失败，不推进状态。
 - 收尾前逐个列出 priority `required` 候选的 `covered_today` / `already_covered` 状态；任一 `missing` 都必须失败，不得静默跳过。
 - WayToAGI 输入与 attachment 必须逐期逐条一对一完整匹配；完整性门禁失败时不消费、不提交任何本轮改动。
+- Artificial Analysis 输入、差异、榜单 attachment 与当前快照必须逐字匹配；门禁失败时不推进快照。
 - 你结束时的 `git diff` 中不得出现第 0 节允许范围以外的文件。
 - 写入完成后只输出：新增期号、条数、priority required/covered/missing 数、
-  WayToAGI 补录日期、失败来源；不要复述全文。
+  Artificial Analysis 榜单是否变化、WayToAGI 补录日期、失败来源；不要复述全文。

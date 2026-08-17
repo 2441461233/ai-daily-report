@@ -44,8 +44,13 @@ LATIN_TOKEN_RE = re.compile(r"[A-Za-z][A-Za-z0-9.+-]{2,}")
 WEEKDAYS = "一二三四五六日"
 PLACEHOLDER_HOSTS = {"example.com", "example.net", "example.org", "localhost"}
 PLACEHOLDER_SUFFIXES = (".example", ".invalid", ".localhost", ".test")
+QBITAI_HOSTS = frozenset({"qbitai.com", "www.qbitai.com"})
+QBITAI_ARTICLE_PATH_RE = re.compile(r"^/\d{4}/\d{2}/\d+\.html$")
 MAIN_FILENAME_RE = re.compile(r"^(?P<date>\d{4}-\d{2}-\d{2})-(?P<sequence>[1-9]\d*)\.json$")
 WAYTOAGI_FILENAME_RE = re.compile(r"^waytoagi-(?P<stamp>\d{8})\.json$")
+ARTIFICIAL_ANALYSIS_FILENAME_RE = re.compile(
+    r"^artificial-analysis-(?P<stamp>\d{8})-(?P<time>\d{6})\.json$"
+)
 WAYTOAGI_LABEL = "WayToAGI 精选"
 WAYTOAGI_SECTION_TITLE = "🧭 WayToAGI 知识库精选"
 WAYTOAGI_MIRROR_TEMPLATE = "https://www.waytoagi.com/zh/blog/news-{}"
@@ -56,7 +61,21 @@ WAYTOAGI_WIKI_URL_RE = re.compile(
 WAYTOAGI_ROLLING_LOG_URL = (
     "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e"
 )
+ARTIFICIAL_ANALYSIS_LABEL = "Artificial Analysis 排名变化"
+ARTIFICIAL_ANALYSIS_SECTION_TITLE = "📊 Artificial Analysis 模型排名"
+ARTIFICIAL_ANALYSIS_SOURCE_URL = "https://artificialanalysis.ai/leaderboards/models/"
+ARTIFICIAL_ANALYSIS_METHODOLOGY_URL = (
+    "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+)
 MAIN_SECTION_POLICY = (
+    ("🔥 AI 重要事件", 3, 5),
+    ("🎬 AI 创作 · 视频/音乐/媒体娱乐", 3, 4),
+    ("🌍 海外观察", 3, 4),
+    ("📄 论文与技术前沿", 2, 3),
+    ("🚀 AI 一人公司（OPC）", 2, 3),
+    ("💻 GitHub Trending", 4, 6),
+)
+LEGACY_MAIN_SECTION_POLICY = (
     ("🔥 AI 重要事件", 3, 5),
     ("🎬 AI 创作 · 视频/音乐/媒体娱乐", 3, 4),
     ("🌍 海外观察", 3, 4),
@@ -64,6 +83,7 @@ MAIN_SECTION_POLICY = (
     ("💻 GitHub Trending", 4, 6),
     ("🚀 AI 一人公司（OPC）", 2, 3),
 )
+MAIN_SECTION_ORDER_CUTOVER = "2026-08-18"
 ADDENDUM_KIND = "addendum"
 ADDENDUM_SECTION_TITLE = MAIN_SECTION_POLICY[0][0]
 
@@ -223,14 +243,30 @@ def validate_sources(
             # Name-only secondary citations are accepted, provided this item has
             # at least one other source carrying a usable URL.
             continue
-        if is_real_http_url(source.get("url")):
-            valid_urls += 1
-        else:
+        source_url = source.get("url")
+        if not is_real_http_url(source_url):
             errors.add(
                 file,
                 f"{source_location}.url",
                 "must be a real http:// or https:// URL with a valid host",
             )
+            continue
+
+        parsed_source_url = urlsplit(source_url)
+        source_host = (parsed_source_url.hostname or "").rstrip(".").lower()
+        if (
+            source_host in QBITAI_HOSTS
+            and QBITAI_ARTICLE_PATH_RE.fullmatch(parsed_source_url.path) is None
+        ):
+            errors.add(
+                file,
+                f"{source_location}.url",
+                "qbitai.com sources must be item-specific article URLs matching "
+                "/YYYY/MM/<numeric-id>.html; home and channel pages are not allowed",
+            )
+            continue
+
+        valid_urls += 1
 
     if valid_urls == 0:
         errors.add(
@@ -438,22 +474,120 @@ def validate_waytoagi_artifact(
             )
 
 
+def validate_artificial_analysis_artifact(
+    artifact: dict[str, Any],
+    file: Path,
+    base: str,
+    stamp: str,
+    time_stamp: str,
+    errors: Errors,
+) -> None:
+    """Apply the source contract for deterministic leaderboard attachments."""
+    expected_date = datetime.strptime(stamp, "%Y%m%d").date().isoformat()
+    if artifact.get("date") != expected_date:
+        errors.add(file, f"{base}.date", f"must be exactly {expected_date!r}")
+    if artifact.get("attachTo") != expected_date:
+        errors.add(file, f"{base}.attachTo", f"must be exactly {expected_date!r}")
+    generated_at = artifact.get("generatedAt")
+    if isinstance(generated_at, str):
+        try:
+            generated_stamp = datetime.fromisoformat(generated_at).strftime(
+                "%Y%m%d-%H%M%S"
+            )
+        except ValueError:
+            generated_stamp = None
+        expected_stamp = f"{stamp}-{time_stamp}"
+        if generated_stamp is not None and generated_stamp != expected_stamp:
+            errors.add(
+                file,
+                f"{base}.generatedAt",
+                f"must match filename timestamp {expected_stamp}",
+            )
+    if artifact.get("label") != ARTIFICIAL_ANALYSIS_LABEL:
+        errors.add(
+            file,
+            f"{base}.label",
+            f"must be exactly {ARTIFICIAL_ANALYSIS_LABEL!r}",
+        )
+
+    sections = artifact.get("sections")
+    if not isinstance(sections, list) or len(sections) != 1:
+        errors.add(
+            file,
+            f"{base}.sections",
+            "Artificial Analysis artifact must contain exactly one section",
+        )
+        return
+    section = sections[0]
+    if not isinstance(section, dict):
+        return
+    if section.get("title") != ARTIFICIAL_ANALYSIS_SECTION_TITLE:
+        errors.add(
+            file,
+            f"{base}.sections[0].title",
+            f"must be exactly {ARTIFICIAL_ANALYSIS_SECTION_TITLE!r}",
+        )
+
+    items = section.get("items")
+    if not isinstance(items, list):
+        return
+    for item_index, item in enumerate(items):
+        if not isinstance(item, dict):
+            continue
+        sources = item.get("sources")
+        location = f"{base}.sections[0].items[{item_index}].sources"
+        if not isinstance(sources, list) or len(sources) != 1:
+            errors.add(
+                file,
+                location,
+                "must contain exactly one Artificial Analysis official leaderboard source",
+            )
+            continue
+        source = sources[0]
+        if not isinstance(source, dict):
+            continue
+        source_url = source.get("url")
+        allowed_source_urls = {
+            ARTIFICIAL_ANALYSIS_SOURCE_URL.rstrip("/"),
+            ARTIFICIAL_ANALYSIS_METHODOLOGY_URL.rstrip("/"),
+        }
+        if not isinstance(source_url, str) or source_url.rstrip("/") not in allowed_source_urls:
+            errors.add(
+                file,
+                f"{location}[0].url",
+                "must be an official Artificial Analysis leaderboard or methodology URL",
+            )
+        source_name = source.get("name")
+        if not isinstance(source_name, str) or "Artificial Analysis" not in source_name:
+            errors.add(
+                file,
+                f"{location}[0].name",
+                "must attribute Artificial Analysis",
+            )
+
+
 def validate_current_main_policy(
     artifact: dict[str, Any], file: Path, base: str, errors: Errors
 ) -> None:
     sections = artifact.get("sections")
     if not isinstance(sections, list):
         return
-    if len(sections) != len(MAIN_SECTION_POLICY):
+    artifact_date = str(artifact.get("date", "")).split()[0]
+    policy = (
+        LEGACY_MAIN_SECTION_POLICY
+        if artifact_date < MAIN_SECTION_ORDER_CUTOVER
+        else MAIN_SECTION_POLICY
+    )
+    if len(sections) != len(policy):
         errors.add(
             file,
             f"{base}.sections",
-            f"current main report must contain exactly {len(MAIN_SECTION_POLICY)} sections",
+            f"current main report must contain exactly {len(policy)} sections",
         )
 
     total_items = 0
     expanded_items = 0
-    for index, (expected_title, minimum, maximum) in enumerate(MAIN_SECTION_POLICY):
+    for index, (expected_title, minimum, maximum) in enumerate(policy):
         if index >= len(sections) or not isinstance(sections[index], dict):
             continue
         section = sections[index]
@@ -461,7 +595,9 @@ def validate_current_main_policy(
             errors.add(
                 file,
                 f"{base}.sections[{index}].title",
-                f"must be {expected_title!r} and remain in the canonical order",
+                f"must be {expected_title!r} and remain in the canonical order "
+                f"for reports {'before' if policy is LEGACY_MAIN_SECTION_POLICY else 'from'} "
+                f"{MAIN_SECTION_ORDER_CUTOVER}",
             )
         items = section.get("items")
         if not isinstance(items, list):
@@ -755,24 +891,39 @@ def validate_artifact_file(
     if not legacy:
         validate_generated_at(artifact.get("generatedAt"), file, f"{base}.generatedAt", errors)
         if has_attach_to:
-            match = WAYTOAGI_FILENAME_RE.fullmatch(file.name)
-            if match is None:
+            waytoagi_match = WAYTOAGI_FILENAME_RE.fullmatch(file.name)
+            artificial_analysis_match = ARTIFICIAL_ANALYSIS_FILENAME_RE.fullmatch(file.name)
+            if waytoagi_match is None and artificial_analysis_match is None:
                 errors.add(
                     file,
                     "$filename",
-                    "attachment filename must be waytoagi-YYYYMMDD.json",
+                    "attachment filename must be waytoagi-YYYYMMDD.json or artificial-analysis-YYYYMMDD-HHMMSS.json",
                 )
-            elif attach_to is not None and match.group("stamp") != attach_to.replace("-", ""):
+            match = waytoagi_match or artificial_analysis_match
+            if (
+                match is not None
+                and attach_to is not None
+                and match.group("stamp") != attach_to.replace("-", "")
+            ):
                 errors.add(
                     file,
                     "$filename",
                     f"filename date does not match attachTo {attach_to}",
                 )
             if date is not None and attach_to is not None and date != attach_to:
-                errors.add(file, f"{base}.date", "must match attachTo for WayToAGI artifacts")
-            if match is not None:
+                errors.add(file, f"{base}.date", "must match attachTo for attachment artifacts")
+            if waytoagi_match is not None:
                 validate_waytoagi_artifact(
-                    artifact, file, base, match.group("stamp"), errors
+                    artifact, file, base, waytoagi_match.group("stamp"), errors
+                )
+            if artificial_analysis_match is not None:
+                validate_artificial_analysis_artifact(
+                    artifact,
+                    file,
+                    base,
+                    artificial_analysis_match.group("stamp"),
+                    artificial_analysis_match.group("time"),
+                    errors,
                 )
         else:
             match = MAIN_FILENAME_RE.fullmatch(file.name)

@@ -12,7 +12,7 @@
           "summary": "8/14 深夜 Qwen 团队放出 Qwen3.8-27B 权重：27B 多模态 dense 模型，官方称在编程与办公任务上反超自家更大的 Qwen3.7-Plus，agent 能力明显增强——规划更自主、任务完成更可靠；原生支持 262,000 token 上下文，YaRN 可扩展至 100 万，能处理图片与视频（含图表、文档与数小时长视频），思考模式默认开启、可按查询关闭。量子位 8/15 实测称「一张消费级显卡跑 Opus 级 Agent」，多项榜单反超 Claude，推理强度可自定义，权重免费下载部署及商用。模型以 Apache 2.0 上 Hugging Face 与 ModelScope，Qwen Cloud 的 100 万上下文托管版随后上线。对你的映射：这是当前「本地可跑 + 商用无忧 + agent 够强」三要素最均衡的开源档——本周把它接进一条真实 agent 流水线（素材整理或初稿生成）与现用闭源模型对比质量与成本，达标即切换；DeepSeek 涨价之后，本地开源档的性价比窗口正在打开。",
           "expanded": true,
           "sources": [
-            { "name": "量子位", "url": "https://www.qbitai.com/" },
+            { "name": "量子位", "url": "https://www.qbitai.com/2026/08/473669.html" },
             { "name": "The Decoder", "url": "https://the-decoder.com/" }
           ]
         },
@@ -22,7 +22,7 @@
           "expanded": true,
           "sources": [
             { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" },
-            { "name": "量子位", "url": "https://www.qbitai.com/" },
+            { "name": "量子位", "url": "https://www.qbitai.com/2026/08/472067.html" },
             { "name": "虎嗅", "url": "https://www.huxiu.com/" }
           ]
         },
@@ -31,7 +31,7 @@
           "summary": "量子位 8/14 晚报道，谷歌正把 DeepMind 的数个团队划归总部，布林亲自下场督战；The Verge 8/13 已在讨论「这场 DeepMind 动荡是战略还是危机」。相比 8/6 已报的 Hassabis 卸任 CEO 转任 Alphabet 首席科学家，这次动的是组织结构本身——DeepMind 作为独立王国的时代加速落幕，Gemini 各产品线的决策链路会更短。",
           "expanded": false,
           "sources": [
-            { "name": "量子位", "url": "https://www.qbitai.com/" },
+            { "name": "量子位", "url": "https://www.qbitai.com/2026/08/473153.html" },
             { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" }
           ]
         },
@@ -62,7 +62,7 @@
           "summary": "量子位 8/15 报道，国产音乐模型音潮打出「根治 AI 音乐通病」的旗号正面挑战 Suno，并宣布音潮 API 限时免费开放。对 AI 音乐创作者，多一个可白嫖的高质量 API 意味着编曲/配乐管线边际成本再降一档；建议趁限免期用同一组 prompt 与 Suno 做盲听对比。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/473866.html" }
           ]
         },
         {
@@ -147,7 +147,7 @@
           "summary": "量子位 8/15 报道，至知创新研究院提出大模型可解释性新路线「稀疏权重分解」：直接拆解模型权重理解内部机制，无需再训练替代网络，数据成本不到传统方法的 1%。可解释性一旦变便宜，模型审计、合规说明与垂直微调的风险控制都会直接受益。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/473876.html" }
           ]
         }
       ]
@@ -214,7 +214,7 @@
           "summary": "量子位 8/15 报道，8/14 刚以 MIT 开源的 DeepSeek Harness 插件生态爆发：社区一天内做出长期记忆、电子宠物、4399 小游戏等插件，「一切皆插件」的架构让第三方能力以极低摩擦接入 agent 运行时。对你的映射：新平台红利期按天计——Harness 插件市场此刻近乎空白，把你工作流里已验证的某个能力（素材下载、文案审核、发布调度）封装成插件发布，是最低成本的首发卡位。",
           "expanded": false,
           "sources": [
-            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/2026/08/473597.html" }
           ]
         },
         {

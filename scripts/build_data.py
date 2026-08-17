@@ -65,6 +65,8 @@ RULES = [
 ]
 FALLBACK = "其他动态"
 WAYTOAGI_SECTION = "🧭 WayToAGI 知识库精选"
+GITHUB_SECTION_TITLES = frozenset({"GitHub Trending", "💻 GitHub Trending"})
+OPC_SECTION_TITLES = frozenset({"AI 一人公司（OPC）", "🚀 AI 一人公司（OPC）"})
 
 
 def classify(text: str) -> str:
@@ -76,6 +78,39 @@ def classify(text: str) -> str:
 
 def latin_tokens(text: str) -> set:
     return {t.lower() for t in RE_LATIN_TOKEN.findall(text)}
+
+
+def normalize_section_order(sections: list) -> list:
+    """Present OPC before GitHub Trending without rewriting source artifacts.
+
+    Rich artifacts use emoji-prefixed titles, while legacy artifacts use the
+    same titles without emoji. Swapping the two positions (rather than moving
+    either section) leaves every unrelated and attachment section untouched.
+    """
+    ordered = list(sections)
+    github_index = next(
+        (
+            index
+            for index, section in enumerate(ordered)
+            if isinstance(section, dict)
+            and section.get("title") in GITHUB_SECTION_TITLES
+        ),
+        None,
+    )
+    opc_index = next(
+        (
+            index
+            for index, section in enumerate(ordered)
+            if isinstance(section, dict) and section.get("title") in OPC_SECTION_TITLES
+        ),
+        None,
+    )
+    if github_index is not None and opc_index is not None and github_index < opc_index:
+        ordered[github_index], ordered[opc_index] = (
+            ordered[opc_index],
+            ordered[github_index],
+        )
+    return ordered
 
 
 # ---------------------------------------------------------------- basic parse
@@ -411,6 +446,8 @@ def main() -> int:
     issues.sort(key=issue_sort_key)
     issues = apply_attachments(issues, attachments)
     issues = surface_latest_waytoagi(issues, attachments)
+    for issue in issues:
+        issue["sections"] = normalize_section_order(issue.get("sections", []))
 
     # per-day seq, slugs, global issue numbers, weekday
     seen = {}
