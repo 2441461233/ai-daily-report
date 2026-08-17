@@ -23,6 +23,8 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 WIKI_PREFIX = "https://waytoagi.feishu.cn/wiki/"
 WIKI_URL_RE = re.compile(r"^https://waytoagi\.feishu\.cn/wiki/[A-Za-z0-9]+$")
 ROLLING_LOG_URL = "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e"
+REFRESH_ERROR_CODE = "archived_issue_refresh_failed"
+COLLECTION_MODES = {"automatic", "requested", "include_consumed"}
 
 
 @dataclass
@@ -186,6 +188,134 @@ def artifact_contract(
     return len(items), wiki_urls, mirrors, records
 
 
+def validate_head_archive(stamp: str, failures: list[Failure], location: str) -> None:
+    """Require a structurally valid archive from HEAD, never from the worktree."""
+    relative = f"content/artifacts/waytoagi-{stamp}.json"
+    try:
+        raw = subprocess.check_output(
+            ["git", "show", f"HEAD:{relative}"], cwd=ROOT, text=True
+        )
+    except subprocess.CalledProcessError as exc:
+        failures.append(
+            Failure(
+                location,
+                f"refresh error is allowed only for an archive tracked in HEAD; "
+                f"cannot read {relative} (git exit {exc.returncode})",
+            )
+        )
+        return
+    try:
+        artifact = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        failures.append(Failure(location, f"HEAD:{relative} is not valid JSON: {exc}"))
+        return
+    if not isinstance(artifact, dict):
+        failures.append(Failure(location, f"HEAD:{relative} must be a JSON object"))
+        return
+
+    issue_date = datetime.strptime(stamp, "%Y%m%d").date().isoformat()
+    before = len(failures)
+    if artifact.get("date") != issue_date:
+        failures.append(Failure(location, f"HEAD:{relative} date must be {issue_date!r}"))
+    if artifact.get("attachTo") != issue_date:
+        failures.append(Failure(location, f"HEAD:{relative} attachTo must be {issue_date!r}"))
+    if artifact.get("label") != "WayToAGI 精选":
+        failures.append(Failure(location, f"HEAD:{relative} has an invalid label"))
+    sections = artifact.get("sections")
+    if not isinstance(sections, list) or len(sections) != 1 or not isinstance(sections[0], dict):
+        failures.append(Failure(location, f"HEAD:{relative} must contain exactly one section"))
+        return
+    section = sections[0]
+    if section.get("title") != "🧭 WayToAGI 知识库精选":
+        failures.append(Failure(location, f"HEAD:{relative} has an invalid section title"))
+    items = section.get("items")
+    if not isinstance(items, list) or not items:
+        failures.append(Failure(location, f"HEAD:{relative} must contain archived items"))
+        return
+    expected_mirror = f"https://www.waytoagi.com/zh/blog/news-{stamp}"
+    for index, item in enumerate(items):
+        item_location = f"{location} (HEAD:{relative}:item[{index}])"
+        if not isinstance(item, dict):
+            failures.append(Failure(item_location, "must be an object"))
+            continue
+        for field in ("headline", "summary"):
+            if not isinstance(item.get(field), str) or not item[field].strip():
+                failures.append(Failure(item_location, f"{field} must be a non-empty string"))
+        sources = item.get("sources")
+        if not isinstance(sources, list):
+            failures.append(Failure(item_location, "sources must be an array"))
+            continue
+        urls = [
+            source.get("url")
+            for source in sources
+            if isinstance(source, dict) and isinstance(source.get("url"), str)
+        ]
+        specific = [
+            url
+            for url in urls
+            if WIKI_URL_RE.fullmatch(url) is not None and url != ROLLING_LOG_URL
+        ]
+        if len(specific) != 1 or expected_mirror not in urls:
+            failures.append(
+                Failure(
+                    item_location,
+                    "must contain the issue mirror and exactly one item-specific Feishu URL",
+                )
+            )
+    if len(failures) > before:
+        return
+
+
+def validate_refresh_errors(document: dict[str, Any], failures: list[Failure]) -> set[str]:
+    """Validate non-fatal gaps without allowing new issues to disappear silently."""
+    warnings = document.get("refreshErrors", [])
+    if not isinstance(warnings, list):
+        failures.append(Failure("$.refreshErrors", "must be an array when present"))
+        return set()
+
+    seen: set[str] = set()
+    for index, warning in enumerate(warnings):
+        location = f"$.refreshErrors[{index}]"
+        if not isinstance(warning, dict):
+            failures.append(Failure(location, "must be an object"))
+            continue
+        if warning.get("severity") != "warning":
+            failures.append(Failure(f"{location}.severity", "must be exactly 'warning'"))
+        if warning.get("code") != REFRESH_ERROR_CODE:
+            failures.append(
+                Failure(
+                    f"{location}.code",
+                    f"must be exactly {REFRESH_ERROR_CODE!r}",
+                )
+            )
+        if warning.get("stage") != "refresh":
+            failures.append(Failure(f"{location}.stage", "must be exactly 'refresh'"))
+
+        stamp = warning.get("stamp")
+        issue_date = warning.get("date")
+        if not isinstance(stamp, str) or STAMP_RE.fullmatch(stamp) is None:
+            failures.append(Failure(f"{location}.stamp", "must be YYYYMMDD"))
+            continue
+        if stamp in seen:
+            failures.append(Failure(f"{location}.stamp", f"duplicate warning stamp {stamp}"))
+        seen.add(stamp)
+        if not valid_date(issue_date) or issue_date.replace("-", "") != stamp:
+            failures.append(Failure(f"{location}.date", "must match stamp as YYYY-MM-DD"))
+        expected_source_url = f"https://www.waytoagi.com/zh/blog/news-{stamp}"
+        if warning.get("sourceUrl") != expected_source_url:
+            failures.append(
+                Failure(
+                    f"{location}.sourceUrl",
+                    f"must be exactly {expected_source_url!r}",
+                )
+            )
+        if not isinstance(warning.get("message"), str) or not warning["message"].strip():
+            failures.append(Failure(f"{location}.message", "must be a non-empty string"))
+
+        validate_head_archive(stamp, failures, location)
+    return seen
+
+
 def validate_run(
     input_path: Path, changed_manifest: Path = MANIFEST_DEFAULT
 ) -> list[Failure]:
@@ -202,6 +332,18 @@ def validate_run(
                 "must be exactly 'https://www.waytoagi.com/zh/blog'",
             )
         )
+    mode = document.get("mode")
+    if mode not in COLLECTION_MODES:
+        failures.append(
+            Failure("$.mode", f"must be one of {sorted(COLLECTION_MODES)!r}")
+        )
+    refresh_days = document.get("refreshDays")
+    if (
+        not isinstance(refresh_days, int)
+        or isinstance(refresh_days, bool)
+        or not 0 <= refresh_days <= 60
+    ):
+        failures.append(Failure("$.refreshDays", "must be an integer between 0 and 60"))
     if not isinstance(document.get("generatedAt"), str) or not document["generatedAt"].strip():
         failures.append(Failure("$.generatedAt", "must be a non-empty ISO-8601 timestamp"))
     else:
@@ -212,6 +354,15 @@ def validate_run(
         else:
             if generated_at.utcoffset() is None or not document["generatedAt"].endswith("+08:00"):
                 failures.append(Failure("$.generatedAt", "must use an explicit +08:00 offset"))
+
+    warning_stamps = validate_refresh_errors(document, failures)
+    if warning_stamps and mode != "automatic":
+        failures.append(
+            Failure(
+                "$.refreshErrors",
+                "may be non-empty only when $.mode is 'automatic'",
+            )
+        )
 
     issues = document.get("issues")
     if not isinstance(issues, list):
@@ -297,6 +448,15 @@ def validate_run(
                     f"mirror URL set must be exactly {[source_url]!r}, found {sorted(mirror_urls)!r}",
                 )
             )
+
+    overlap = sorted(warning_stamps & seen_stamps)
+    if overlap:
+        failures.append(
+            Failure(
+                "$.refreshErrors",
+                f"refresh warning stamp(s) must not also appear in issues: {overlap}",
+            )
+        )
 
     try:
         status = subprocess.check_output(

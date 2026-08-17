@@ -1,12 +1,18 @@
 from __future__ import annotations
 
 import importlib.util
+import http.client
 import json
+import subprocess
+import sys
 import tempfile
 import unittest
+from contextlib import redirect_stderr
 from datetime import datetime
+from io import StringIO
 from pathlib import Path
 from typing import Optional
+from unittest import mock
 
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "waytoagi.py"
@@ -14,6 +20,13 @@ SPEC = importlib.util.spec_from_file_location("waytoagi", SCRIPT)
 assert SPEC and SPEC.loader
 waytoagi = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(waytoagi)
+
+VALIDATOR_SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "validate_waytoagi_run.py"
+VALIDATOR_SPEC = importlib.util.spec_from_file_location("validate_waytoagi_run", VALIDATOR_SCRIPT)
+assert VALIDATOR_SPEC and VALIDATOR_SPEC.loader
+validate_waytoagi_run = importlib.util.module_from_spec(VALIDATOR_SPEC)
+sys.modules[VALIDATOR_SPEC.name] = validate_waytoagi_run
+VALIDATOR_SPEC.loader.exec_module(validate_waytoagi_run)
 
 
 def item(number: int, title: Optional[str] = None, summary: Optional[str] = None) -> str:
@@ -121,8 +134,134 @@ class CollectionTests(unittest.TestCase):
         self.assertEqual(payload["schemaVersion"], 1)
         self.assertEqual(payload["sourceIndex"], waytoagi.INDEX_URL)
         self.assertEqual(payload["generatedAt"], "2026-08-13T10:00:00+08:00")
+        self.assertEqual(payload["mode"], "automatic")
+        self.assertEqual(payload["refreshDays"], 14)
         self.assertEqual(payload["issues"][0]["sourceItemCount"], 1)
         self.assertEqual(payload["issues"][0]["date"], "2026-08-11")
+        self.assertEqual(payload["refreshErrors"], [])
+
+    def test_archived_refresh_failure_is_recorded_and_new_issue_continues(self) -> None:
+        index = "".join(
+            [
+                '<a href="/blog/news-20260812">new</a>',
+                '<a href="/blog/news-20260811">archived</a>',
+            ]
+        )
+        original_artifacts = waytoagi.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                waytoagi.ARTIFACTS = Path(directory)
+                archived_items = waytoagi.parse_issue(issue_html(item(1)), "20260811")
+                archived = waytoagi.attachment_for(
+                    waytoagi.issue_record("20260811", archived_items),
+                    "2026-08-11T23:59:00+08:00",
+                )
+                (waytoagi.ARTIFACTS / "waytoagi-20260811.json").write_text(
+                    json.dumps(archived, ensure_ascii=False), "utf-8"
+                )
+
+                def fetch(url: str) -> str:
+                    if url == waytoagi.INDEX_URL:
+                        return index
+                    if url.endswith("20260811"):
+                        raise waytoagi.CollectionError(f"GET {url} returned HTTP 500")
+                    return issue_html(item(2))
+
+                stderr = StringIO()
+                with redirect_stderr(stderr):
+                    payload = waytoagi.collect(
+                        fetch=fetch,
+                        now=datetime.fromisoformat("2026-08-13T10:00:00+08:00"),
+                    )
+        finally:
+            waytoagi.ARTIFACTS = original_artifacts
+
+        self.assertEqual([issue["stamp"] for issue in payload["issues"]], ["20260812"])
+        self.assertEqual(
+            payload["refreshErrors"],
+            [
+                {
+                    "severity": "warning",
+                    "code": "archived_issue_refresh_failed",
+                    "stage": "refresh",
+                    "stamp": "20260811",
+                    "date": "2026-08-11",
+                    "sourceUrl": waytoagi.ISSUE_URL.format("20260811"),
+                    "message": (
+                        f"GET {waytoagi.ISSUE_URL.format('20260811')} returned HTTP 500"
+                    ),
+                }
+            ],
+        )
+        self.assertIn("warning: skipped archived issue refresh 20260811", stderr.getvalue())
+
+    def test_unarchived_issue_fetch_failure_remains_fatal(self) -> None:
+        index = '<a href="/blog/news-20260812">new</a>'
+
+        def fetch(url: str) -> str:
+            if url == waytoagi.INDEX_URL:
+                return index
+            raise waytoagi.CollectionError(f"GET {url} timed out")
+
+        original_artifacts = waytoagi.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                waytoagi.ARTIFACTS = Path(directory)
+                with self.assertRaisesRegex(waytoagi.CollectionError, "timed out"):
+                    waytoagi.collect(
+                        fetch=fetch,
+                        now=datetime.fromisoformat("2026-08-13T10:00:00+08:00"),
+                    )
+        finally:
+            waytoagi.ARTIFACTS = original_artifacts
+
+    def test_explicit_archived_refresh_failure_remains_fatal(self) -> None:
+        index = '<a href="/blog/news-20260811">archived</a>'
+        original_artifacts = waytoagi.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                waytoagi.ARTIFACTS = Path(directory)
+                archived_items = waytoagi.parse_issue(issue_html(item(1)), "20260811")
+                archived = waytoagi.attachment_for(
+                    waytoagi.issue_record("20260811", archived_items),
+                    "2026-08-11T23:59:00+08:00",
+                )
+                (waytoagi.ARTIFACTS / "waytoagi-20260811.json").write_text(
+                    json.dumps(archived, ensure_ascii=False), "utf-8"
+                )
+
+                def fetch(url: str) -> str:
+                    if url == waytoagi.INDEX_URL:
+                        return index
+                    raise waytoagi.CollectionError("explicit refresh failed")
+
+                with self.assertRaisesRegex(waytoagi.CollectionError, "explicit refresh failed"):
+                    waytoagi.collect(
+                        fetch=fetch,
+                        requested=["20260811"],
+                        now=datetime.fromisoformat("2026-08-13T10:00:00+08:00"),
+                    )
+        finally:
+            waytoagi.ARTIFACTS = original_artifacts
+
+    def test_index_fetch_failure_remains_fatal(self) -> None:
+        def fetch(_url: str) -> str:
+            raise waytoagi.CollectionError("index unavailable")
+
+        with self.assertRaisesRegex(waytoagi.CollectionError, "index unavailable"):
+            waytoagi.collect(fetch=fetch)
+
+    def test_fetch_html_retries_and_wraps_incomplete_read(self) -> None:
+        failure = http.client.IncompleteRead(b"partial", 100)
+        with (
+            mock.patch.object(waytoagi.urllib.request, "urlopen", side_effect=failure) as urlopen,
+            mock.patch.object(waytoagi, "sleep"),
+        ):
+            with self.assertRaisesRegex(
+                waytoagi.CollectionError, "IncompleteRead"
+            ):
+                waytoagi.fetch_html("https://example.test/issue")
+        self.assertEqual(urlopen.call_count, waytoagi.FETCH_ATTEMPTS)
 
     def test_default_starts_at_project_archive_boundary_and_checks_recent_archive(self) -> None:
         available = ["20260814", "20260811", "20260728", "20260727"]
@@ -252,6 +391,123 @@ class CollectionTests(unittest.TestCase):
             waytoagi.ARTIFACTS = original_artifacts
         self.assertEqual(document["generatedAt"], "2026-08-11T23:59:00+08:00")
         self.assertEqual(document["sections"][0]["items"][0]["headline"], "标题 1")
+
+
+class ValidationCompatibilityTests(unittest.TestCase):
+    def test_validator_accepts_structured_archived_refresh_warning(self) -> None:
+        payload = {
+            "schemaVersion": 1,
+            "sourceIndex": waytoagi.INDEX_URL,
+            "generatedAt": "2026-08-13T10:00:00+08:00",
+            "mode": "automatic",
+            "refreshDays": 14,
+            "issues": [],
+            "refreshErrors": [
+                waytoagi.refresh_error(
+                    "20260811", waytoagi.CollectionError("temporary timeout")
+                )
+            ],
+        }
+        old_root = validate_waytoagi_run.ROOT
+        old_artifacts = validate_waytoagi_run.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                artifacts = root / "content" / "artifacts"
+                artifacts.mkdir(parents=True)
+                head_archive = waytoagi.attachment_for(
+                    waytoagi.issue_record(
+                        "20260811", waytoagi.parse_issue(issue_html(item(1)), "20260811")
+                    ),
+                    "2026-08-11T23:59:00+08:00",
+                )
+                input_path = root / "waytoagi.json"
+                input_path.write_text(json.dumps(payload), "utf-8")
+                manifest = root / "waytoagi.changed"
+                manifest.write_text("", "utf-8")
+                validate_waytoagi_run.ROOT = root
+                validate_waytoagi_run.ARTIFACTS = artifacts
+                def git_output(command: list[str], **_kwargs: object) -> str:
+                    if command[1] == "show":
+                        return json.dumps(head_archive, ensure_ascii=False)
+                    return ""
+
+                with mock.patch.object(
+                    validate_waytoagi_run.subprocess, "check_output", side_effect=git_output
+                ):
+                    failures = validate_waytoagi_run.validate_run(input_path, manifest)
+                    payload["mode"] = "requested"
+                    input_path.write_text(json.dumps(payload), "utf-8")
+                    explicit_failures = validate_waytoagi_run.validate_run(
+                        input_path, manifest
+                    )
+        finally:
+            validate_waytoagi_run.ROOT = old_root
+            validate_waytoagi_run.ARTIFACTS = old_artifacts
+        self.assertEqual(failures, [])
+        self.assertTrue(
+            any(
+                "only when $.mode is 'automatic'" in failure.message
+                for failure in explicit_failures
+            ),
+            explicit_failures,
+        )
+
+    def test_validator_rejects_malformed_archive_from_head(self) -> None:
+        failures: list[validate_waytoagi_run.Failure] = []
+        with mock.patch.object(
+            validate_waytoagi_run.subprocess, "check_output", return_value="{}"
+        ):
+            validate_waytoagi_run.validate_head_archive(
+                "20260811", failures, "$.refreshErrors[0]"
+            )
+        self.assertTrue(
+            any("date must be" in failure.message for failure in failures), failures
+        )
+
+    def test_validator_rejects_warning_for_unarchived_issue(self) -> None:
+        payload = {
+            "schemaVersion": 1,
+            "sourceIndex": waytoagi.INDEX_URL,
+            "generatedAt": "2026-08-13T10:00:00+08:00",
+            "mode": "automatic",
+            "refreshDays": 14,
+            "issues": [],
+            "refreshErrors": [
+                waytoagi.refresh_error(
+                    "20260812", waytoagi.CollectionError("temporary timeout")
+                )
+            ],
+        }
+        old_root = validate_waytoagi_run.ROOT
+        old_artifacts = validate_waytoagi_run.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                artifacts = root / "content" / "artifacts"
+                artifacts.mkdir(parents=True)
+                input_path = root / "waytoagi.json"
+                input_path.write_text(json.dumps(payload), "utf-8")
+                manifest = root / "waytoagi.changed"
+                manifest.write_text("", "utf-8")
+                validate_waytoagi_run.ROOT = root
+                validate_waytoagi_run.ARTIFACTS = artifacts
+                def git_output(command: list[str], **_kwargs: object) -> str:
+                    if command[1] == "show":
+                        raise subprocess.CalledProcessError(128, command)
+                    return ""
+
+                with mock.patch.object(
+                    validate_waytoagi_run.subprocess, "check_output", side_effect=git_output
+                ):
+                    failures = validate_waytoagi_run.validate_run(input_path, manifest)
+        finally:
+            validate_waytoagi_run.ROOT = old_root
+            validate_waytoagi_run.ARTIFACTS = old_artifacts
+        self.assertTrue(
+            any("archive tracked in HEAD" in failure.message for failure in failures),
+            failures,
+        )
 
 
 if __name__ == "__main__":

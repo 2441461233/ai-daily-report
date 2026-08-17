@@ -12,6 +12,7 @@ the result can be consumed directly by the daily-report automation.
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import re
 import sys
@@ -34,7 +35,7 @@ FEISHU_HOST = "waytoagi.feishu.cn"
 ROLLING_LOG_TOKEN = "QPe5w5g7UisbEkkow8XcDmOpn8e"
 TIMEOUT = 20
 FETCH_ATTEMPTS = 3
-RETRYABLE_HTTP = {408, 429, 500, 502, 503, 504}
+RETRYABLE_HTTP = {408, 429, 500, 502, 503, 504, 524}
 SHANGHAI = ZoneInfo("Asia/Shanghai")
 START_STAMP = "20260728"
 ARTIFACT_RE = re.compile(r"^waytoagi-(\d{8})\.json$")
@@ -106,6 +107,9 @@ def fetch_html(url: str) -> str:
                 break
         except urllib.error.URLError as exc:
             last_message = f"GET {url} failed: {exc.reason}"
+            last_error = exc
+        except http.client.HTTPException as exc:
+            last_message = f"GET {url} failed: {type(exc).__name__}: {exc}"
             last_error = exc
         except OSError as exc:
             last_message = f"GET {url} failed: {exc}"
@@ -376,6 +380,20 @@ def issue_record(stamp: str, items: list[dict[str, str]]) -> dict[str, object]:
     }
 
 
+def refresh_error(stamp: str, error: CollectionError) -> dict[str, str]:
+    """Describe a non-fatal refresh failure for an already archived issue."""
+    issue_date = datetime.strptime(stamp, "%Y%m%d").date().isoformat()
+    return {
+        "severity": "warning",
+        "code": "archived_issue_refresh_failed",
+        "stage": "refresh",
+        "stamp": stamp,
+        "date": issue_date,
+        "sourceUrl": ISSUE_URL.format(stamp),
+        "message": str(error),
+    }
+
+
 def attachment_for(issue: dict[str, object], generated_at: str) -> dict[str, object]:
     issue_date = str(issue["date"])
     parsed = date.fromisoformat(issue_date)
@@ -435,15 +453,34 @@ def collect(
     refresh_days: int = 14,
 ) -> dict[str, object]:
     current = now or datetime.now(SHANGHAI)
+    mode = "requested" if requested is not None else (
+        "include_consumed" if include_consumed else "automatic"
+    )
     index_html = fetch(INDEX_URL)
     available = discover_stamps(index_html)
     selected = select_stamps(
         available, requested, include_consumed, current, refresh_days=refresh_days
     )
     issues: list[dict[str, object]] = []
+    refresh_errors: list[dict[str, str]] = []
     for stamp in selected:
-        items = parse_issue(fetch(ISSUE_URL.format(stamp)), stamp)
         archived = artifact_snapshot(stamp)
+        try:
+            items = parse_issue(fetch(ISSUE_URL.format(stamp)), stamp)
+        except CollectionError as exc:
+            if archived is None or mode != "automatic":
+                # A linked but unarchived issue is new source data.  Omitting it
+                # would falsely describe this run as complete. Explicit replay
+                # modes are strict too; only the default automatic refresh of a
+                # committed archive may degrade to a structured error.
+                raise
+            warning = refresh_error(stamp, exc)
+            refresh_errors.append(warning)
+            print(
+                f"warning: skipped archived issue refresh {stamp}: {warning['message']}",
+                file=sys.stderr,
+            )
+            continue
         current_records = [
             (item["title"], item["summary"], item["url"]) for item in items
         ]
@@ -460,7 +497,10 @@ def collect(
         "schemaVersion": 1,
         "sourceIndex": INDEX_URL,
         "generatedAt": current.astimezone(SHANGHAI).isoformat(timespec="seconds"),
+        "mode": mode,
+        "refreshDays": refresh_days,
         "issues": issues,
+        "refreshErrors": refresh_errors,
     }
 
 
