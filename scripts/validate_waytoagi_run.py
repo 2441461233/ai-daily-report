@@ -25,6 +25,7 @@ WIKI_URL_RE = re.compile(r"^https://waytoagi\.feishu\.cn/wiki/[A-Za-z0-9]+$")
 ROLLING_LOG_URL = "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e"
 REFRESH_ERROR_CODE = "archived_issue_refresh_failed"
 COLLECTION_MODES = {"automatic", "requested", "include_consumed"}
+SOURCE_STATUSES = {"ok", "unavailable"}
 
 
 @dataclass
@@ -316,6 +317,49 @@ def validate_refresh_errors(document: dict[str, Any], failures: list[Failure]) -
     return seen
 
 
+def validate_source_status(document: dict[str, Any], failures: list[Failure]) -> str | None:
+    source_status = document.get("sourceStatus")
+    if not isinstance(source_status, dict):
+        failures.append(Failure("$.sourceStatus", "must be an object"))
+        return None
+    status = source_status.get("status")
+    if status not in SOURCE_STATUSES:
+        failures.append(
+            Failure(
+                "$.sourceStatus.status",
+                f"must be one of {sorted(SOURCE_STATUSES)!r}",
+            )
+        )
+        return None
+    if status == "ok":
+        if set(source_status) != {"status"}:
+            failures.append(
+                Failure(
+                    "$.sourceStatus",
+                    "status 'ok' permits only the status field",
+                )
+            )
+    else:
+        if set(source_status) != {"status", "message"}:
+            failures.append(
+                Failure(
+                    "$.sourceStatus",
+                    "status 'unavailable' requires exactly status and message",
+                )
+            )
+        if (
+            not isinstance(source_status.get("message"), str)
+            or not source_status["message"].strip()
+        ):
+            failures.append(
+                Failure(
+                    "$.sourceStatus.message",
+                    "must be a non-empty string when status is 'unavailable'",
+                )
+            )
+    return status
+
+
 def validate_run(
     input_path: Path, changed_manifest: Path = MANIFEST_DEFAULT
 ) -> list[Failure]:
@@ -344,6 +388,7 @@ def validate_run(
         or not 0 <= refresh_days <= 60
     ):
         failures.append(Failure("$.refreshDays", "must be an integer between 0 and 60"))
+    source_status = validate_source_status(document, failures)
     if not isinstance(document.get("generatedAt"), str) or not document["generatedAt"].strip():
         failures.append(Failure("$.generatedAt", "must be a non-empty ISO-8601 timestamp"))
     else:
@@ -368,6 +413,26 @@ def validate_run(
     if not isinstance(issues, list):
         failures.append(Failure("$.issues", "must be an array"))
         return failures
+    source_unavailable = source_status == "unavailable"
+    if source_unavailable:
+        if mode != "automatic":
+            failures.append(
+                Failure(
+                    "$.sourceStatus",
+                    "status 'unavailable' is allowed only in automatic mode",
+                )
+            )
+        if issues:
+            failures.append(
+                Failure("$.issues", "must be empty when sourceStatus is unavailable")
+            )
+        if document.get("refreshErrors") != []:
+            failures.append(
+                Failure(
+                    "$.refreshErrors",
+                    "must be empty when sourceStatus is unavailable",
+                )
+            )
 
     seen_stamps: set[str] = set()
     for index, issue in enumerate(issues):
@@ -486,12 +551,14 @@ def validate_run(
             )
         )
     expected_changed: set[str] = set()
+    manifest_read = False
     try:
         expected_changed = {
             line.strip()
             for line in changed_manifest.read_text("utf-8").splitlines()
             if line.strip()
         }
+        manifest_read = True
     except FileNotFoundError:
         if changed_stamps:
             failures.append(
@@ -502,6 +569,21 @@ def validate_run(
             )
     except (OSError, UnicodeError) as exc:
         failures.append(Failure(str(changed_manifest), f"cannot read changed manifest: {exc}"))
+    if source_unavailable:
+        if not manifest_read:
+            failures.append(
+                Failure(
+                    str(changed_manifest),
+                    "must exist and be empty when sourceStatus is unavailable",
+                )
+            )
+        elif expected_changed:
+            failures.append(
+                Failure(
+                    str(changed_manifest),
+                    "must be empty when sourceStatus is unavailable",
+                )
+            )
     actual_changed = {
         f"content/artifacts/waytoagi-{stamp}.json" for stamp in changed_stamps
     }

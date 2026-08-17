@@ -7,7 +7,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from contextlib import redirect_stderr
+from contextlib import redirect_stderr, redirect_stdout
 from datetime import datetime
 from io import StringIO
 from pathlib import Path
@@ -136,6 +136,7 @@ class CollectionTests(unittest.TestCase):
         self.assertEqual(payload["generatedAt"], "2026-08-13T10:00:00+08:00")
         self.assertEqual(payload["mode"], "automatic")
         self.assertEqual(payload["refreshDays"], 14)
+        self.assertEqual(payload["sourceStatus"], {"status": "ok"})
         self.assertEqual(payload["issues"][0]["sourceItemCount"], 1)
         self.assertEqual(payload["issues"][0]["date"], "2026-08-11")
         self.assertEqual(payload["refreshErrors"], [])
@@ -250,6 +251,80 @@ class CollectionTests(unittest.TestCase):
 
         with self.assertRaisesRegex(waytoagi.CollectionError, "index unavailable"):
             waytoagi.collect(fetch=fetch)
+
+    def test_automatic_source_unavailable_is_explicit_and_empty(self) -> None:
+        def unavailable_index(_url: str) -> str:
+            raise waytoagi.CollectionError("index HTTP 524")
+
+        payload = waytoagi.collect(
+            fetch=unavailable_index,
+            now=datetime.fromisoformat("2026-08-13T10:00:00+08:00"),
+            refresh_days=0,
+            allow_source_unavailable=True,
+        )
+        self.assertEqual(payload["mode"], "automatic")
+        self.assertEqual(payload["refreshDays"], 0)
+        self.assertEqual(
+            payload["sourceStatus"],
+            {"status": "unavailable", "message": "index HTTP 524"},
+        )
+        self.assertEqual(payload["issues"], [])
+        self.assertEqual(payload["refreshErrors"], [])
+
+    def test_cli_source_unavailable_payload_exits_zero(self) -> None:
+        payload = {
+            "schemaVersion": 1,
+            "sourceIndex": waytoagi.INDEX_URL,
+            "generatedAt": "2026-08-13T10:00:00+08:00",
+            "mode": "automatic",
+            "refreshDays": 0,
+            "sourceStatus": {"status": "unavailable", "message": "index HTTP 524"},
+            "issues": [],
+            "refreshErrors": [],
+        }
+        stdout = StringIO()
+        with (
+            mock.patch.object(waytoagi, "collect", return_value=payload) as collect,
+            redirect_stdout(stdout),
+        ):
+            result = waytoagi.main(
+                ["--refresh-days", "0", "--allow-source-unavailable"]
+            )
+        self.assertEqual(result, 0)
+        self.assertEqual(json.loads(stdout.getvalue()), payload)
+        self.assertTrue(collect.call_args.kwargs["allow_source_unavailable"])
+
+    def test_new_issue_unavailable_can_degrade_only_in_automatic_mode(self) -> None:
+        index = '<a href="/blog/news-20260812">new</a>'
+
+        def fetch(url: str) -> str:
+            if url == waytoagi.INDEX_URL:
+                return index
+            raise waytoagi.CollectionError("new issue timed out")
+
+        original_artifacts = waytoagi.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                waytoagi.ARTIFACTS = Path(directory)
+                payload = waytoagi.collect(
+                    fetch=fetch,
+                    now=datetime.fromisoformat("2026-08-13T10:00:00+08:00"),
+                    allow_source_unavailable=True,
+                )
+                with self.assertRaisesRegex(
+                    waytoagi.CollectionError,
+                    "valid only in automatic collection mode",
+                ):
+                    waytoagi.collect(
+                        fetch=fetch,
+                        requested=["20260812"],
+                        now=datetime.fromisoformat("2026-08-13T10:00:00+08:00"),
+                        allow_source_unavailable=True,
+                    )
+        finally:
+            waytoagi.ARTIFACTS = original_artifacts
+        self.assertEqual(payload["sourceStatus"]["status"], "unavailable")
+        self.assertEqual(payload["issues"], [])
 
     def test_fetch_html_retries_and_wraps_incomplete_read(self) -> None:
         failure = http.client.IncompleteRead(b"partial", 100)
@@ -401,6 +476,7 @@ class ValidationCompatibilityTests(unittest.TestCase):
             "generatedAt": "2026-08-13T10:00:00+08:00",
             "mode": "automatic",
             "refreshDays": 14,
+            "sourceStatus": {"status": "ok"},
             "issues": [],
             "refreshErrors": [
                 waytoagi.refresh_error(
@@ -472,6 +548,7 @@ class ValidationCompatibilityTests(unittest.TestCase):
             "generatedAt": "2026-08-13T10:00:00+08:00",
             "mode": "automatic",
             "refreshDays": 14,
+            "sourceStatus": {"status": "ok"},
             "issues": [],
             "refreshErrors": [
                 waytoagi.refresh_error(
@@ -508,6 +585,50 @@ class ValidationCompatibilityTests(unittest.TestCase):
             any("archive tracked in HEAD" in failure.message for failure in failures),
             failures,
         )
+
+    def test_validator_accepts_automatic_source_unavailable_with_empty_manifest(self) -> None:
+        payload = {
+            "schemaVersion": 1,
+            "sourceIndex": waytoagi.INDEX_URL,
+            "generatedAt": "2026-08-13T10:00:00+08:00",
+            "mode": "automatic",
+            "refreshDays": 0,
+            "sourceStatus": {"status": "unavailable", "message": "index HTTP 524"},
+            "issues": [],
+            "refreshErrors": [],
+        }
+        old_root = validate_waytoagi_run.ROOT
+        old_artifacts = validate_waytoagi_run.ARTIFACTS
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                artifacts = root / "content" / "artifacts"
+                artifacts.mkdir(parents=True)
+                input_path = root / "waytoagi.json"
+                input_path.write_text(json.dumps(payload), "utf-8")
+                manifest = root / "waytoagi.changed"
+                manifest.write_text("", "utf-8")
+                validate_waytoagi_run.ROOT = root
+                validate_waytoagi_run.ARTIFACTS = artifacts
+                with mock.patch.object(
+                    validate_waytoagi_run.subprocess,
+                    "check_output",
+                    return_value="",
+                ):
+                    failures = validate_waytoagi_run.validate_run(input_path, manifest)
+                    payload["mode"] = "requested"
+                    payload["issues"] = [{}]
+                    input_path.write_text(json.dumps(payload), "utf-8")
+                    manifest.write_text("content/artifacts/waytoagi-20260812.json\n", "utf-8")
+                    invalid = validate_waytoagi_run.validate_run(input_path, manifest)
+        finally:
+            validate_waytoagi_run.ROOT = old_root
+            validate_waytoagi_run.ARTIFACTS = old_artifacts
+
+        self.assertEqual(failures, [])
+        messages = [failure.message for failure in invalid]
+        self.assertTrue(any("only in automatic mode" in message for message in messages), messages)
+        self.assertTrue(any("must be empty when sourceStatus" in message for message in messages), messages)
 
 
 if __name__ == "__main__":

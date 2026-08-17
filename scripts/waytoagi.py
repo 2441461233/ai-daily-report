@@ -451,13 +451,37 @@ def collect(
     include_consumed: bool = False,
     now: Optional[datetime] = None,
     refresh_days: int = 14,
+    allow_source_unavailable: bool = False,
 ) -> dict[str, object]:
     current = now or datetime.now(SHANGHAI)
     mode = "requested" if requested is not None else (
         "include_consumed" if include_consumed else "automatic"
     )
-    index_html = fetch(INDEX_URL)
-    available = discover_stamps(index_html)
+    if allow_source_unavailable and mode != "automatic":
+        raise CollectionError(
+            "--allow-source-unavailable is valid only in automatic collection mode"
+        )
+
+    def unavailable_payload(error: CollectionError) -> dict[str, object]:
+        print(f"warning: WayToAGI source unavailable: {error}", file=sys.stderr)
+        return {
+            "schemaVersion": 1,
+            "sourceIndex": INDEX_URL,
+            "generatedAt": current.astimezone(SHANGHAI).isoformat(timespec="seconds"),
+            "mode": mode,
+            "refreshDays": refresh_days,
+            "sourceStatus": {"status": "unavailable", "message": str(error)},
+            "issues": [],
+            "refreshErrors": [],
+        }
+
+    try:
+        index_html = fetch(INDEX_URL)
+        available = discover_stamps(index_html)
+    except CollectionError as exc:
+        if allow_source_unavailable:
+            return unavailable_payload(exc)
+        raise
     selected = select_stamps(
         available, requested, include_consumed, current, refresh_days=refresh_days
     )
@@ -468,11 +492,16 @@ def collect(
         try:
             items = parse_issue(fetch(ISSUE_URL.format(stamp)), stamp)
         except CollectionError as exc:
-            if archived is None or mode != "automatic":
+            if archived is None:
                 # A linked but unarchived issue is new source data.  Omitting it
-                # would falsely describe this run as complete. Explicit replay
-                # modes are strict too; only the default automatic refresh of a
-                # committed archive may degrade to a structured error.
+                # would falsely describe this run as complete.  The workflow may
+                # explicitly preserve that outage as sourceStatus=unavailable;
+                # all other callers remain fail-closed.
+                if allow_source_unavailable:
+                    return unavailable_payload(exc)
+                raise
+            if mode != "automatic":
+                # Explicit replay modes remain strict even for archived pages.
                 raise
             warning = refresh_error(stamp, exc)
             refresh_errors.append(warning)
@@ -499,6 +528,7 @@ def collect(
         "generatedAt": current.astimezone(SHANGHAI).isoformat(timespec="seconds"),
         "mode": mode,
         "refreshDays": refresh_days,
+        "sourceStatus": {"status": "ok"},
         "issues": issues,
         "refreshErrors": refresh_errors,
     }
@@ -530,6 +560,14 @@ def main(argv: Optional[list[str]] = None) -> int:
         action="store_true",
         help="write complete content/artifacts/waytoagi-YYYYMMDD.json attachments",
     )
+    parser.add_argument(
+        "--allow-source-unavailable",
+        action="store_true",
+        help=(
+            "in automatic mode, emit an explicit unavailable source status instead "
+            "of failing when the index or a new issue cannot be collected"
+        ),
+    )
     args = parser.parse_args(argv)
     if args.refresh_days < 0 or args.refresh_days > 60:
         parser.error("--refresh-days must be between 0 and 60")
@@ -538,6 +576,7 @@ def main(argv: Optional[list[str]] = None) -> int:
             requested=args.dates,
             include_consumed=args.include_consumed,
             refresh_days=args.refresh_days,
+            allow_source_unavailable=args.allow_source_unavailable,
         )
         issues = payload["issues"]
         assert isinstance(issues, list)
