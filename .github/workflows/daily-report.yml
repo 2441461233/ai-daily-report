@@ -84,7 +84,11 @@ jobs:
           sha256sum /tmp/report-date >> /tmp/priority-news.json.sha256
           node scripts/fetch_builders.mjs > /tmp/ai-builders.json
           sha256sum /tmp/ai-builders.json > /tmp/ai-builders.json.sha256
-          python3 scripts/waytoagi.py --write-artifacts > /tmp/waytoagi.json
+          # Do not let best-effort refreshes of already archived historical pages
+          # block today's main report. Newly linked, unarchived issues are still
+          # collected fail-closed; historical refreshes are handled separately.
+          python3 scripts/waytoagi.py --write-artifacts --refresh-days 0 \
+            > /tmp/waytoagi.json
           sha256sum /tmp/waytoagi.json > /tmp/waytoagi.json.sha256
           git status --porcelain=v1 --untracked-files=all \
             | sed -nE 's/^.. (content\/artifacts\/waytoagi-[0-9]{8}\.json)$/\1/p' \
