@@ -1,0 +1,238 @@
+{
+  "date": "2026-08-17 星期一",
+  "label": "第十六期",
+  "generatedAt": "2026-08-17T12:20:00+08:00",
+  "oneLiner": "📌 今日一句话：DeepSeek 最高 1100% 的调价、Stripe 传超 70 亿美元买下 OpenRouter、GLM-5.3 发布与 Qwen3.8-27B 实测落地挤在同一窗口——「智能」正从补贴品变回工业品，成本竞争的胜负手从选模型转向选路由、选开源、按成功结果计价；本周动作：抽 20 条真实 workload 重算 Top 3 模型的「单次成功交付成本」，并让一条批处理环节跑通本地开源基线。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "【进展】DeepSeek 今日调价最高涨幅达 1100%：国产 API 的「补贴价」时代落幕",
+          "summary": "虎嗅 8/17 报道，DeepSeek 今日正式调价，部分计费项涨幅最高达 1100%——这是 8/6 预告「近期整体上调、预计涨幅较大」、8/14 涨价落地（缓存命中价差 6 倍）后的最新一刀；虎嗅 AI资本观同日评论「DeepSeek 涨价背后：中国正在把智能变成一种工业品」。同一周 OpenAI 官方预览 Ultrafast 模式（8/13），称 GPT-5.6 Sol 最高可提速至 14 倍：一边是中国厂商结束价格补贴，一边是海外厂商用推理工程压单位成本，双向挤压下「按 token 比价」已经不够，要看每次成功交付的总成本。对你的映射：今天就导出你 Top 3 高频调用的月度 token 账单按新价目重算；对价格敏感的批处理环节（素材初筛、文案批量改写），本周用 Qwen3.8-27B 或 GLM-5.3 做本地/开源对照实验并记下单条成本基线，别等下个月账单倒逼。",
+          "expanded": true,
+          "sources": [
+            { "name": "虎嗅（单一来源）", "url": "https://www.huxiu.com/" },
+            { "name": "OpenAI News", "url": "https://openai.com/news/" }
+          ]
+        },
+        {
+          "headline": "OpenAI 解散「灾难性风险」Preparedness 团队：安全工作并入模型开发，IPO 路上再掀治理争议",
+          "summary": "The Decoder 转引 Financial Times：OpenAI 已于 7 月底裁撤负责评估生物/网络等灾难性风险的 Preparedness 团队，工作拆分给现有团队；原负责人 Dylan Scandinaro 转攻「递归自我改进」AI 的安全风险，联创 Greg Brockman 称安全已更紧密织入模型开发流程。近期首席伦理官 Chloé Bakalar、Joshua Achiam 等安全成员接连离开，内部人士形容公司弥漫着「责任感与不安交织的低鸣」；The Verge 8/16 评论这是其迈向 IPO 途中安全团队的最新一次震荡——Hugging Face 自主入侵事件后，有员工公开呼吁把它当作「警告弹」。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder 转引 FT", "url": "https://the-decoder.com/" },
+            { "name": "The Verge", "url": "https://www.theverge.com/ai-artificial-intelligence" }
+          ]
+        },
+        {
+          "headline": "Anthropic 自曝生物武器分类器失效近一年：约 5 万名承包商、1.33 亿次对话未经过滤",
+          "summary": "The Decoder 报道，Anthropic 安全报告披露：2025 年 5 月至 2026 年 4 月，其阻挡生物/化学武器知识提取的分类器对外部众包评测流量处于失效状态——约 5 万名仅经外部供应商审核（且审核常被指不充分）的承包商共产生约 1.33 亿次未过滤对话；公司称内部调查未发现实际滥用，已收紧承包商要求，并在研究者抱怨误伤正当研究后放宽了 Fable 5 的分类器。CEO 一边把 AI 生物武器列为头号威胁、一边自家闸门年久失修——前沿实验室的安全叙事与运营现实之间的缝隙，值得所有做合规产品的团队警惕。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder（单一来源）", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "彭博：Stripe 超 70 亿美元收购 OpenRouter，模型路由层被支付巨头定价（官方尚未公告，细节未经证实）",
+          "summary": "Hacker News 热榜（232 分）转引彭博报道：Stripe 已敲定以超 70 亿美元收购 AI 模型路由平台 OpenRouter；截至发稿 Stripe 与 OpenRouter 官方均未发布公告，交易细节待确认。OpenRouter 用一个 API 聚合数百家模型、按用量结算，本质是把「模型选择」做成了分发与计费生意；Stripe 收下它，等于打通「支付 → 计费 → 模型路由」闭环，与其近半年密集布局的 agentic commerce（AI agent 直接付款）拼图合流——继 SpaceX 600 亿美元收 Cursor 之后，AI 基建层的并购定价再上一个台阶。对你的映射：路由层被巨头收编后，中立性与价格都要重估——本周梳理你的产品对单一路由/API 网关的依赖度，至少备一个直连官方 API 或自托管开源模型（Qwen3.8-27B 档）的降级方案；做 agent 电商方向的，盯紧 Stripe 把支付嵌进 agent 工作流的接口红利。",
+          "expanded": true,
+          "sources": [
+            { "name": "Bloomberg（单一来源）", "url": "https://www.bloomberg.com/" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        },
+        {
+          "headline": "智谱发布 GLM-5.3：Coding 逼近 Fable 5、揪出潜伏 40 年的 bug，号称最强开源安全模型",
+          "summary": "量子位 8/15 报道，智谱发布 GLM-5.3：编程能力更接近 Fable 5，实测中把一个潜伏 40 年的老 bug 都揪了出来，并顺手拿下「最强开源安全模型」。在 DeepSeek 涨价、Qwen3.8-27B 开源的同一周，国产开源档又添一张可本地部署的牌——coding agent 的模型选型本周密集重估。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "「B站教AI」爆火后，北航 90 后副教授何静回应一切：别错过种一棵树最好的时间",
+          "summary": "量子位 8/16 专访：北京航空航天大学 90 后副教授何静在 B 站教 AI 爆火后首次系统回应。高校教师下场做 AI 科普正成为内容蓝海——在教程同质化严重的当下，「专业功底 + 真人表达」的组合反而稀缺，知识型创作者的窗口还没关。",
+          "expanded": false,
+          "sources": [
+            { "name": "量子位（单一来源）", "url": "https://www.qbitai.com/" }
+          ]
+        },
+        {
+          "headline": "Hook CEO：真正的争论不是「AI vs 音乐人」——粉丝二创与 remix 正成为音乐产业下一个主要消费品类",
+          "summary": "MBW 专访粉丝二创平台 Hook 创始人兼 CEO Gaurav Sharma：「真正的争论不是 AI 对艺术家，而是创新与版权方参与能否共存」——社交媒体上的粉丝自制内容与 remix 正在变成音乐产业的下一个主要消费品类。接上 Spotify×Kobalt 的 AI 二创授权（8/14 已报）：「授权型 UGC remix」正从灰色地带变成版权方的新收入线，做二创工具的团队应优先解决授权链路而非生成质量。",
+          "expanded": false,
+          "sources": [
+            { "name": "MBW", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        },
+        {
+          "headline": "腾讯音乐 Q2 营收 13.2 亿美元同比 +5.8%：演唱会增长与喜马拉雅整合成新引擎",
+          "summary": "MBW 报道，腾讯音乐 Q2 营收 13.2 亿美元、同比 +5.8%，其中音乐相关服务收入同比 +11%，增长由演唱会业务与喜马拉雅整合驱动。在线音乐平台的增长故事从订阅转向「现场 + 长音频」——AI 音乐工具要切入的发行与变现链路也在随之改道。",
+          "expanded": false,
+          "sources": [
+            { "name": "MBW（单一来源）", "url": "https://www.musicbusinessworldwide.com/" }
+          ]
+        },
+        {
+          "headline": "Higgsfield 联合乐队 Cully Hill Boys 拍案例：手把手教你「prompt 出自己的电影」（8/13 消息）",
+          "summary": "The Verge 8/13 报道，AI 视频公司 Higgsfield 与乐队 Cully Hill Boys 合作，向用户演示如何为自己的电影写提示词。继 95 分钟 AI 长片《Hell Grind》全套提示词开源（8/10 已报）之后，Higgsfield 持续把「提示词即宣发」做成获客飞轮——AI 视频工具的竞争已从模型质量卷到创作方法论的内容营销。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Verge（单一来源）", "url": "https://www.theverge.com/ai-artificial-intelligence" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "OpenAI Codex 负责人：token 不是标准单位——GPT-5.6 Sol 同文本比 Claude Opus 5 少用约 34.5% token",
+          "summary": "Thibault Sottiaux 8/16 长文：按「每百万 token 价格」比价是误导——同一组英文/技术/多语/数字文本，GPT-5.6 Sol 的分词器用 766 token、Claude Opus 5 估算需 1170 个；真正该比的是「每次成功结果的价格」，benchmark 只是起点，必须在自己的用例上实测。他同时发问「还在用 Opus 而不是 Sol 的公司，什么能说服你切换」。同一周 Artificial Analysis 上线 Optima：让用户用自己的数据与工作流自建 benchmark，按质量、成本、单任务耗时横向比模型。对你的映射：本周抽 20 条真实 workload 在 Sol/Opus/GLM-5.3 上各跑一遍，记录「成功交付一次的总 token × 单价」——那才是你的真实模型成本。",
+          "expanded": false,
+          "sources": [
+            { "name": "Thibault Sottiaux on X", "url": "https://x.com/thsottiaux/status/2088866513008873560" },
+            { "name": "Thibault Sottiaux on X（提问帖）", "url": "https://x.com/thsottiaux/status/2088850995430477882" },
+            { "name": "The Decoder（Optima）", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "Benchmark 合伙人：下一个 AI 爆款将是社交产品——ChatGPT「显然出自一支不社交的天才团队」",
+          "summary": "Every《AI & I》播出 Benchmark 合伙人、Pinterest 早期成员 Sarah 的访谈（8/5 重制精选集）：每轮技术浪潮的赢家都从深度技术团队滑向产品天才（Google → Pinterest/Snap/Instagram）；目前 AI 最大的消费级空白是「多人网络效应」——会有人做出 UGC 社区，让最会玩的人把门槛拉低给所有人。对你的映射：如果你在做 AI 内容或工具，问自己「用户之间能不能互相成就」——multiplayer 不一定一上来就做社区，本周先给产品加一个可分享、可被二次创作的出口（作品页、模板库），先把内容的网络效应做起来。",
+          "expanded": false,
+          "sources": [
+            { "name": "AI & I by Every（播客单集）", "url": "https://www.youtube.com/watch?v=dlI-5W7d7uU" }
+          ]
+        },
+        {
+          "headline": "Simon Willison 实测 Qwen3.8-27B：出色但默认「疯狂过度思考」，M5 MacBook 与 DGX Spark 双端可跑",
+          "summary": "Simon Willison 8/16 实测刚开源的 Qwen3.8-27B（Apache 2.0、支持视觉，HN 133 分）：27B 是「像样笔记本可跑」的黄金尺寸，但默认思考模式会严重过度思考；他顺手用 GPT-5.6-Sol 写了个 OpenAI-Responses 兼容的测试用聊天 UI（LM Studio 与 OpenRouter 均兼容，会话存浏览器、SVG 流式渲染），在 M5 MacBook Pro 与 NVIDIA DGX Spark 上双端验证。对你的映射：本地部署时把「默认思考预算」当作核心调优项——同一模型关掉或调低思考可省大量延迟与电量，本周在你的 agent 流水线里加一档 thinking 开关对比质量变化。",
+          "expanded": false,
+          "sources": [
+            { "name": "Simon Willison's Weblog", "url": "https://simonwillison.net/" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        },
+        {
+          "headline": "「模型正在故意变笨」：推理分在涨、每 token 算力在降，世界知识被有选择地裁掉",
+          "summary": "开发者博客 w4g1 8/17 热文（HN 285 分）：新一代模型推理分数攀升的同时单 token 算力在下降——实验室正把世界知识从模型里剥离，作者认为这是正确的取舍。与 OpenAI 预览 14 倍速 Ultrafast、Anthropic 放宽 Fable 5 分类器同一周出现，行业默契很清晰：通用「百科全书」让位给便宜、快、可外接知识的推理引擎。对你的映射：别再指望模型记住你的领域知识——本周检查你的 prompt 里有多少内容是「替模型补记忆」，那部分应该搬进检索层，知识外置本就是产品该做的层。",
+          "expanded": false,
+          "sources": [
+            { "name": "w4g1 dev blog", "url": "https://w4g1.dev/" },
+            { "name": "Hacker News 热榜", "url": "https://news.ycombinator.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Gowers 与 Sarnak 给 LLM 数学能力定性：强计算器、弱创造性；DeepMind 论文归因「manipulative abduction」缺失",
+          "summary": "The Decoder 报道：菲尔兹奖得主 Timothy Gowers 与 Peter Sarnak 认为 LLM 擅长组合已知方法、并行尝试大量搜索路径，但缺乏在大搜索空间里挑出少数高产路线的直觉；Sarnak 指其能从现有理论推导、却无法从基础问题发展出支撑重大证明的新抽象。DeepMind 研究员 Tom Zahavy 的论文《LLMs Can't Jump》把瓶颈命名为「manipulative abduction」——发明无语言先例的全新基本假设的能力，world model 可能是出路。对产品的含义：需要「真正新解法」的场景（科研、前沿工程）别承诺全自动，「暴力搜索已知组合」才是当前可交付的价值。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder（单一来源）", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "李飞飞 World Labs 发布仿真引擎：一个真实机器人任务裂变出数千训练变体，五个平台无人值守各跑 1 小时",
+          "summary": "The Decoder 报道，World Labs 发布仿真引擎：从单个真实世界任务生成数千个受控变体，完全在虚拟环境中训练机器人控制器；训练后的模型在 5 个不同机器人平台上各无干预运行 1 小时，复杂日常场景的泛化仍待验证。对产品的含义：「一次真实采集 → 千次仿真放大」的数据杠杆同样适用于非机器人场景——agent 的评测集也可以从少量真实 case 生成变体来扩容。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder（单一来源）", "url": "https://the-decoder.com/" }
+          ]
+        },
+        {
+          "headline": "美国原告在诉状里埋隐形提示注入操纵 AI 阅卷：法官视同「操纵陪审团」，吊销电子提交资格",
+          "summary": "The Decoder 报道，康涅狄格州一名原告在法庭文书中以 3 号白色字体在白底上嵌入隐形提示注入，试图影响可能的 AI 审查系统；Spader 法官将其类比「偷偷对陪审团动手脚」，吊销其电子提交资格——尽管该法院并不使用 AI 审文书，意图本身就足以构成制裁理由。对产品的含义：不可信文档中的提示注入已从理论走进法庭案卷——做文档处理 agent（合同、诉状、简历筛选）必须把「文档即攻击面」写进威胁模型。",
+          "expanded": false,
+          "sources": [
+            { "name": "The Decoder（单一来源）", "url": "https://the-decoder.com/" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "note": "本周期风向：创作工具与本地基建两头热——AI 短视频一键生成与开源剪映平替同日上榜，RL 后训练框架与 Apple Silicon 推理服务器把训练/推理继续下放；agent 数据主权意识抬头（一键导出各家 coding agent 历史）。回流去重：unsloth、needle、CLI-Anything、Soup、strix、grok-1。",
+      "items": [
+        {
+          "headline": "harry0703/MoneyPrinterTurbo：主题/关键词一键生成高清短视频，中文「AI 印钞机」回流总榜",
+          "summary": "输入主题或关键词，用大模型加自动化工作流批量产出高清短视频的中文开源项目。对做 AIMV/短视频矩阵的创作者，它是「选题→成片」流水线的现成起点，配合本地素材库可改造成垂直内容工厂。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/harry0703/MoneyPrinterTurbo" }
+          ]
+        },
+        {
+          "headline": "OpenCut-app/OpenCut：开源版 CapCut 平替，剪辑工具链也进入「可自建」时代",
+          "summary": "开源的 CapCut（剪映海外版）替代品。AI 视频生成再强，最后一公里仍是时间线剪辑——开源剪辑器加生成模型的组合，意味着一人工作室可以不碰订阅费搭出完整后期栈。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/OpenCut-app/OpenCut" }
+          ]
+        },
+        {
+          "headline": "THUDM/slime：智谱 GLM 团队的 RL 后训练框架，为 RL Scaling 而生",
+          "summary": "清华系 THUDM（智谱）出品的 LLM 后训练框架，主打 RL Scaling，GLM-5.3 发布同一周上榜。想复刻「GLM 味」的强化学习管线，这是官方同款工具链的开源入口。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/THUDM/slime" }
+          ]
+        },
+        {
+          "headline": "jundot/omlx：Apple Silicon 专属 LLM 推理服务器——连续批处理 + SSD 缓存，住在 macOS 菜单栏",
+          "summary": "为 Apple Silicon 做的本地推理服务器：continuous batching 提升吞吐、SSD 缓存省内存，从菜单栏统一管理。配合 Qwen3.8-27B 这类新权重，一台 M 系列 Mac 就是低成本 agent 节点，本地跑模型的体验继续接近开箱即用。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/jundot/omlx" }
+          ]
+        },
+        {
+          "headline": "0xSero/ai-data-extraction：一键导出你在 Cursor/Codex/Claude Code/Windsurf/Trae 的全部历史数据",
+          "summary": "把散落在五家 coding agent 里的个人数据历史统一提取导出。agent 会话正成为开发者最重要的生产资料之一，「数据可携带」会催生一批二次开发工具：复盘分析、私有知识库、微调语料。",
+          "expanded": false,
+          "sources": [
+            { "name": "GitHub 仓库", "url": "https://github.com/0xSero/ai-data-extraction" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Riley Brown 用 Codex 运营整个内容生意：100 张爆款缩略图喂给 agent，再混剪自己的照片出图",
+          "summary": "Peter Yang 预告新一期访谈：Riley Brown 展示如何用 Codex 跑整个内容业务——先让 Codex 找到领域内 100 张表现最好的 YouTube 缩略图放进 Paper 画布，再把自己的照片与之混搭迭代，直到产出满意的封面。对你的映射：这套「采集标杆 → 画布混搭 → 快速出稿」流程可直接复刻到 AIMV 封面/海报环节——本周用 Codex 加任意画布工具跑一遍你的封面流水线，记录出稿时间对比人工。",
+          "expanded": false,
+          "sources": [
+            { "name": "Peter Yang on X", "url": "https://x.com/petergyang/status/2088626815166464507" }
+          ]
+        },
+        {
+          "headline": "Vercel CEO：React 的成功大半属于 shadcn——「为被消化进 context window 再 remix 而生」的新分发形态",
+          "summary": "Guillermo Rauch 8/15：React 名义上是「成年人的乐高」，但那只是积木的几何规格；人们真正想要的是 shadcn——可复用、可调优的高质量组件，它是「伪库」：代码存在的意义就是被吃进你的 context window 再 remix。AI 时代组件的分发单位正从 npm 包变成 prompt 可消化的源码。对你的映射：把你的可复用资产（组件、模板、工作流）整理成「一段 agent 能直接读走的源码加说明」，比做成 SDK 更符合当下消费方式——本周挑一个内部工具先做 shadcn 化改造。",
+          "expanded": false,
+          "sources": [
+            { "name": "Guillermo Rauch on X", "url": "https://x.com/rauchg/status/2088757738037989755" }
+          ]
+        },
+        {
+          "headline": "FPV 合伙人：卡在「最后一码」的官僚流程不是坏事——那正是别人复制你最慢的地方",
+          "summary": "Nikunj Kothari 分享被投企业故事：一家做「无聊行业」的 stealth 公司，关键合同因一条随机条款卡在 1 码线；他的回应是「想想别人要走完同样的流程需要多久」——短期的痛是长期的护城河，表演式 996 不是壁垒，entrenched software 加关系与流程才是。对你的映射：选垂直方向时把「流程摩擦度」当成正指标——本周列出你所在领域里 3 个「人人都嫌麻烦」的环节，麻烦本身就是在给先发者筑墙。",
+          "expanded": false,
+          "sources": [
+            { "name": "Nikunj Kothari on X", "url": "https://x.com/nikunj/status/2088716743615352963" }
+          ]
+        }
+      ]
+    }
+  ]
+}

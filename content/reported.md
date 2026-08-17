@@ -378,3 +378,26 @@
 - 2026-08-16 | WayToAGI 2026-08-13：如何让 34 个 AI Agent 主动干活丨Greg Isenberg
 - 2026-08-16 | WayToAGI 2026-08-13：保姆级教程，Codex 接入 DeepSeek V4 Pro 和 Grok 4.6，6 种方法全整理
 - 2026-08-16 | WayToAGI 2026-08-13：DeepSeek-V4-Pro 正式版上线
+
+## 2026-08-17（第十六期）
+
+- 2026-08-17 | 进展：DeepSeek 今日调价涨幅最高达 1100%（虎嗅）；OpenAI 官方预览 Ultrafast 模式：GPT-5.6 Sol 最高提速 14 倍（8/13）
+- 2026-08-17 | OpenAI 7 月底解散 Preparedness 灾难性风险团队，安全成员接连离职（FT via The Decoder；The Verge 8/16）
+- 2026-08-17 | Anthropic 自曝生物武器分类器 2025/5-2026/4 失效：约 5 万承包商、1.33 亿次对话未过滤（The Decoder，单一来源）
+- 2026-08-17 | 彭博：Stripe 超 70 亿美元收购 OpenRouter，官方尚未公告、细节未经证实（Bloomberg/HN 热榜 232 分）
+- 2026-08-17 | 智谱发布 GLM-5.3：Coding 逼近 Fable 5、揪出潜伏 40 年 bug、最强开源安全模型（量子位 8/15，单一来源）
+- 2026-08-17 | 北航 90 后副教授何静「B站教AI」爆火后受访（量子位 8/16）
+- 2026-08-17 | MBW 专访 Hook CEO Gaurav Sharma：粉丝二创/remix 成音乐产业下一个主要消费品类
+- 2026-08-17 | 腾讯音乐 Q2 营收 13.2 亿美元 +5.8%，音乐相关服务 +11%，演唱会与喜马拉雅驱动（MBW）
+- 2026-08-17 | Higgsfield×Cully Hill Boys 演示「prompt 出自己的电影」，提示词营销获客飞轮（The Verge 8/13）
+- 2026-08-17 | OpenAI Codex 负责人 Sottiaux：token 非标准单位，Sol 同文本比 Opus 5 少用约 34.5% token；Artificial Analysis 上线 Optima 自建 benchmark（X/The Decoder）
+- 2026-08-17 | Benchmark 合伙人 Sarah：下一个 AI 爆款将是社交产品（Every《AI & I》8/5 重制精选集）
+- 2026-08-17 | Simon Willison 实测 Qwen3.8-27B：优秀但默认过度思考，M5 Mac/DGX Spark 双端可跑（HN 133 分）
+- 2026-08-17 | w4g1：模型故意变笨——推理涨分、单 token 算力下降、世界知识外移（HN 285 分）
+- 2026-08-17 | Gowers/Sarnak 评 LLM 数学：强计算弱创造；DeepMind《LLMs Can't Jump》归因 manipulative abduction（The Decoder）
+- 2026-08-17 | 李飞飞 World Labs 仿真引擎：单任务裂变数千训练变体、五机器人平台无人值守各跑 1 小时（The Decoder）
+- 2026-08-17 | 康州原告诉状藏 3 号白字隐形提示注入操纵 AI 阅卷，法官吊销电子提交资格（The Decoder）
+- 2026-08-17 | GitHub Trending：MoneyPrinterTurbo、OpenCut、THUDM/slime、jundot/omlx、0xSero/ai-data-extraction（回流去重 unsloth/needle/CLI-Anything/Soup/strix/grok-1）
+- 2026-08-17 | Peter Yang×Riley Brown：用 Codex 运营整个内容生意，100 张爆款缩略图→Paper 画布混搭出图（X）
+- 2026-08-17 | Rauch：React 的成功大半属于 shadcn，「为 context window 消化再 remix 而生」（X）
+- 2026-08-17 | Nikunj Kothari：无聊行业的官僚摩擦是真正护城河（X）
