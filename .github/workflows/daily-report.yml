@@ -84,15 +84,18 @@ jobs:
           sha256sum /tmp/report-date >> /tmp/priority-news.json.sha256
           node scripts/fetch_builders.mjs > /tmp/ai-builders.json
           sha256sum /tmp/ai-builders.json > /tmp/ai-builders.json.sha256
-          # Do not let best-effort refreshes of already archived historical pages
-          # block today's main report. Newly linked, unarchived issues are still
-          # collected fail-closed; historical refreshes are handled separately.
+          # Keep the main report running when WayToAGI is unavailable, while
+          # preserving a validated outage status and an empty change manifest.
           python3 scripts/waytoagi.py --write-artifacts --refresh-days 0 \
+            --allow-source-unavailable \
             > /tmp/waytoagi.json
           sha256sum /tmp/waytoagi.json > /tmp/waytoagi.json.sha256
           git status --porcelain=v1 --untracked-files=all \
             | sed -nE 's/^.. (content\/artifacts\/waytoagi-[0-9]{8}\.json)$/\1/p' \
             | sort > /tmp/waytoagi.changed
+          python3 scripts/validate_waytoagi_run.py \
+            --input /tmp/waytoagi.json \
+            --changed-manifest /tmp/waytoagi.changed
           sha256sum /tmp/waytoagi.changed >> /tmp/waytoagi.json.sha256
           priority_sha256="$(sha256sum /tmp/priority-news.json | cut -d ' ' -f 1)"
           builders_sha256="$(sha256sum /tmp/ai-builders.json | cut -d ' ' -f 1)"
@@ -130,7 +133,7 @@ jobs:
         run: |
           set -o pipefail
           kimi \
-            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully Read /tmp/report-date, /tmp/priority-news.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. Work autonomously, obey the file scope, cover every required priority candidate, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
+            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully Read /tmp/report-date, /tmp/priority-news.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. If /tmp/waytoagi.json has sourceStatus.status=unavailable, continue the main report, do not refetch WayToAGI or modify its artifacts/state, and report the outage in the final run summary. Work autonomously, obey the file scope, cover every required priority candidate, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
             --output-format stream-json \
             2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/kimi-daily.jsonl"
 
