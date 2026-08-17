@@ -89,6 +89,7 @@ interface Props {
 }
 
 export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, onNext }: Props) {
+  const [tocOpenFor, setTocOpenFor] = useState<string | null>(null)
   const sections = report.sections
     .map((section, originalIndex) => ({ section, originalIndex }))
     .filter(({ section }) => moduleFilter === null || section.title === moduleFilter)
@@ -101,6 +102,8 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   )
 
   const oneLiner = (report.oneLiner ?? '').replace(/^📌\s*今日一句话[：:]\s*/, '')
+  const tocOpen = tocOpenFor === report.slug
+  const tocPanelId = `report-${report.slug}-toc`
   const sectionId = (originalIndex: number) =>
     `report-${report.slug}-section-${originalIndex + 1}`
   const jumpToSection = (originalIndex: number) => {
@@ -109,100 +112,128 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
     const heading = document.getElementById(`${id}-heading`)
     section?.scrollIntoView({ block: 'start' })
     heading?.focus({ preventScroll: true })
+    setTocOpenFor(null)
   }
 
   return (
-    <div className="feed">
-      <header className="border-b hairline pb-6">
-        <div className="flex items-baseline justify-between">
-          <p className="label">AI Daily · {report.label}</p>
-          <p className="mono tnum text-xs text-[var(--ink-3)]">
-            NO.{String(report.issue).padStart(3, '0')}
-          </p>
-        </div>
-        <div className="mt-3 flex items-baseline justify-between gap-4">
-          <h2 className="serif tnum text-4xl font-bold">{report.date}</h2>
-          <span className="mono tnum shrink-0 text-xs text-[var(--ink-3)]">
-            <button className="cal-nav" disabled={!hasPrev} onClick={onPrev} aria-label="上一期">
-              ‹
-            </button>
-            <span className="mx-1">
-              {report.weekday} · {itemCount(report)} 条
-            </span>
-            <button className="cal-nav" disabled={!hasNext} onClick={onNext} aria-label="下一期">
-              ›
-            </button>
-          </span>
-        </div>
-
-        {oneLiner && (
-          <p className="oneliner">
-            <span className="mono mr-2 text-[var(--ink-3)]">📌</span>
-            {oneLiner}
-          </p>
-        )}
-      </header>
-
+    <div className="feed-shell">
       {moduleFilter === null && sections.length > 1 && (
-        <nav className="article-toc" aria-label="本期目录">
-          <p className="article-toc-label label">目录</p>
-          <ol className="article-toc-list">
-            {sections.map(({ section, originalIndex }, index) => (
-              <li key={section.title}>
-                <button
-                  type="button"
-                  className="article-toc-link"
-                  aria-controls={sectionId(originalIndex)}
-                  title={`跳到：${section.title}`}
-                  onClick={() => jumpToSection(originalIndex)}
-                >
-                  <span className="article-toc-num mono tnum" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <span className="article-toc-title">{section.title}</span>
-                </button>
-              </li>
-            ))}
-          </ol>
+        <nav
+          className={`article-toc ${tocOpen ? 'is-open' : ''}`}
+          aria-label="本期目录"
+          onKeyDown={(event) => {
+            if (event.key === 'Escape' && tocOpen) {
+              setTocOpenFor(null)
+              document.getElementById(`${tocPanelId}-toggle`)?.focus()
+            }
+          }}
+        >
+          <button
+            id={`${tocPanelId}-toggle`}
+            type="button"
+            className="article-toc-toggle"
+            aria-expanded={tocOpen}
+            aria-controls={tocPanelId}
+            onClick={() => setTocOpenFor(tocOpen ? null : report.slug)}
+          >
+            <span>目录</span>
+            <span className="article-toc-toggle-icon mono" aria-hidden="true">
+              {tocOpen ? '×' : '☷'}
+            </span>
+          </button>
+
+          <div id={tocPanelId} className="article-toc-panel">
+            <p className="article-toc-label label">本期目录</p>
+            <ol className="article-toc-list">
+              {sections.map(({ section, originalIndex }, index) => (
+                <li key={section.title}>
+                  <button
+                    type="button"
+                    className="article-toc-link"
+                    aria-controls={sectionId(originalIndex)}
+                    title={`跳到：${section.title}`}
+                    onClick={() => jumpToSection(originalIndex)}
+                  >
+                    <span className="article-toc-num mono tnum" aria-hidden="true">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <span className="article-toc-title">{section.title}</span>
+                  </button>
+                </li>
+              ))}
+            </ol>
+          </div>
         </nav>
       )}
 
-      {sections.map(({ section: sec, originalIndex }, sectionIndex) => {
-        const id = sectionId(originalIndex)
-        return (
-          <section
-            key={sec.title}
-            id={id}
-            className="article-section mt-2"
-            aria-labelledby={`${id}-heading`}
-          >
-            <header className="mod-head">
-              <h3
-                id={`${id}-heading`}
-                className="serif text-lg font-bold"
-                style={{ letterSpacing: '0.06em' }}
-                tabIndex={-1}
-              >
-                {sec.title}
-              </h3>
-              <span className="cnt mono tnum">{sec.items.length}</span>
-              <span className="rule flex-1 self-center border-t hairline" />
-            </header>
-            {sec.note && <p className="mod-note">{sec.note}</p>}
-            <div>
-              {sec.items.map((item, i) => (
-                <NewsRow key={i} item={item} num={sectionOffsets[sectionIndex] + i + 1} />
-              ))}
-            </div>
-          </section>
-        )
-      })}
+      <div className="feed">
+        <header className="border-b hairline pb-6">
+          <div className="flex items-baseline justify-between">
+            <p className="label">AI Daily · {report.label}</p>
+            <p className="mono tnum text-xs text-[var(--ink-3)]">
+              NO.{String(report.issue).padStart(3, '0')}
+            </p>
+          </div>
+          <div className="mt-3 flex items-baseline justify-between gap-4">
+            <h2 className="serif tnum text-4xl font-bold">{report.date}</h2>
+            <span className="mono tnum shrink-0 text-xs text-[var(--ink-3)]">
+              <button className="cal-nav" disabled={!hasPrev} onClick={onPrev} aria-label="上一期">
+                ‹
+              </button>
+              <span className="mx-1">
+                {report.weekday} · {itemCount(report)} 条
+              </span>
+              <button className="cal-nav" disabled={!hasNext} onClick={onNext} aria-label="下一期">
+                ›
+              </button>
+            </span>
+          </div>
 
-      {sections.length === 0 && (
-        <p className="py-16 text-sm text-[var(--ink-3)]">这个模块下没有资讯。</p>
-      )}
+          {oneLiner && (
+            <p className="oneliner">
+              <span className="mono mr-2 text-[var(--ink-3)]">📌</span>
+              {oneLiner}
+            </p>
+          )}
+        </header>
 
-      <p className="feed-copy label">© 2026 {site.author}</p>
+        {sections.map(({ section: sec, originalIndex }, sectionIndex) => {
+          const id = sectionId(originalIndex)
+          return (
+            <section
+              key={sec.title}
+              id={id}
+              className="article-section mt-2"
+              aria-labelledby={`${id}-heading`}
+            >
+              <header className="mod-head">
+                <h3
+                  id={`${id}-heading`}
+                  className="serif text-lg font-bold"
+                  style={{ letterSpacing: '0.06em' }}
+                  tabIndex={-1}
+                >
+                  {sec.title}
+                </h3>
+                <span className="cnt mono tnum">{sec.items.length}</span>
+                <span className="rule flex-1 self-center border-t hairline" />
+              </header>
+              {sec.note && <p className="mod-note">{sec.note}</p>}
+              <div>
+                {sec.items.map((item, i) => (
+                  <NewsRow key={i} item={item} num={sectionOffsets[sectionIndex] + i + 1} />
+                ))}
+              </div>
+            </section>
+          )
+        })}
+
+        {sections.length === 0 && (
+          <p className="py-16 text-sm text-[var(--ink-3)]">这个模块下没有资讯。</p>
+        )}
+
+        <p className="feed-copy label">© 2026 {site.author}</p>
+      </div>
     </div>
   )
 }

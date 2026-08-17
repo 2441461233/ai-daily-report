@@ -138,6 +138,7 @@ export default function Home() {
       />
       <main className="feed-col">
         <Feed
+          key={`${report.slug}:${moduleFilter ?? 'all'}`}
           report={report}
           moduleFilter={moduleFilter}
           hasPrev={index > 0}
