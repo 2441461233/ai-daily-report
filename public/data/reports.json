@@ -6154,7 +6154,7 @@
     {
       "date": "2026-08-18",
       "generatedAt": "2026-08-18T11:55:00+08:00",
-      "oneLiner": "📌 今日一句话：OpenRouter 的 Sol 路线五折、AI 自动修复反而打开 Snowflake 内部 Jira、HelixWorld 把世界模型带进实时声画联动——今天最值得做的不是再加一个 AI 功能，而是把成本、权限边界和可验证交付一起当作生产约束。",
+      "oneLiner": "📌 今日一句话：OpenRouter 的 Sol 路线五折、Copilot 共同署名且审查漏报的 PR 打开 Snowflake 内部 Jira、HelixWorld 把世界模型带进实时声画联动——今天最值得做的不是再加一个 AI 功能，而是把成本、权限边界和可验证交付一起当作生产约束。",
       "sections": [
         {
           "title": "🔥 AI 重要事件",
@@ -6176,8 +6176,8 @@
               ]
             },
             {
-              "text": "Wiz：GitHub Copilot Autofix 引入 CI 注入漏洞，Red Agent 五天后打进 Snowflake 内部 Jira",
-              "summary": "Wiz 8 月 17 日披露，其自主 Red Agent 发现并利用了一个由 GitHub Copilot 辅助修复 PR 引入的 GitHub Actions 注入问题，在漏洞上线五天后取得 Snowflake 内部 Jira 的访问并验证了敏感数据暴露面，全程无需人工接管。案例把“AI 写出的修复也要走威胁建模与最小权限复核”从原则变成了真实事故链。",
+              "text": "Wiz：署名 Copilot 共同作者且经其审查的 PR 引入 CI 注入，Red Agent 五天后打进 Snowflake Jira",
+              "summary": "Wiz 8 月 17 日披露，其自主 Red Agent 发现并利用了一个 GitHub Actions 注入问题；相关 PR 的合并提交署名 Copilot 为共同作者，后续 Copilot 辅助安全审查又判定 all-clear。Wiz 更正称无法确认代码改动是否由 AI 生成。漏洞上线五天后，Red Agent 取得 Snowflake 内部 Jira 的访问并验证了敏感数据暴露面。",
               "expanded": false,
               "flag": true,
               "sources": [

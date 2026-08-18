@@ -405,7 +405,7 @@
 ## 2026-08-18（第十七期）
 
 - 2026-08-18 | OpenRouter 的 GPT-5.6 Sol 路线五折：输入/输出降至每百万 token 2.5/15 美元；OpenAI 官方仍为 5/30 美元
-- 2026-08-18 | Wiz Red Agent：Copilot 辅助修复引入 GitHub Actions 注入，五天后取得 Snowflake 内部 Jira 访问
+- 2026-08-18 | Wiz Red Agent：署名 Copilot 共同作者且经其审查的 PR 引入 GitHub Actions 注入，五天后取得 Snowflake 内部 Jira 访问；无法确认代码是否由 AI 生成
 - 2026-08-18 | 彭博：美国司法部调查 a16z 合伙人在竞合 AI 公司交叉任董事，尚未认定违法（Bloomberg/The Verge）
 - 2026-08-18 | Noiz AI 预览 HelixWorld 1.0：24FPS 画面与 48kHz 立体声实时联动，代码/权重待开放（GitHub/量子位）
 - 2026-08-18 | Jamendo 起诉 Suno 六周后撤诉且保留再诉权；其他主流版权诉讼仍在推进（MBW/法院文件）
