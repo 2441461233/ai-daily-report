@@ -100,7 +100,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   const [tocPinnedFor, setTocPinnedFor] = useState<string | null>(null)
   const [tocInteracting, setTocInteracting] = useState(false)
   const [tocAutoVisible, setTocAutoVisible] = useState(false)
-  const [wideToc, setWideToc] = useState(() => window.matchMedia('(min-width: 1400px)').matches)
+  const [wideToc, setWideToc] = useState(() => window.matchMedia('(min-width: 1440px)').matches)
   const [activeSectionIndex, setActiveSectionIndex] = useState(0)
   const [readingProgress, setReadingProgress] = useState(0)
   const feedShellRef = useRef<HTMLDivElement>(null)
@@ -108,6 +108,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   const sections = report.sections
     .map((section, originalIndex) => ({ section, originalIndex }))
     .filter(({ section }) => moduleFilter === null || section.title === moduleFilter)
+  const showToc = moduleFilter === null && sections.length > 1
   const sectionOffsets = sections.reduce<number[]>(
     (offsets, { section }) => [
       ...offsets,
@@ -118,7 +119,13 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
 
   const oneLiner = (report.oneLiner ?? '').replace(/^📌\s*今日一句话[：:]\s*/, '')
   const tocPinned = tocPinnedFor === report.slug
-  const tocOpen = tocPinned || tocInteracting || (tocAutoVisible && wideToc)
+  /* wide screens (≥1440px) have a real gutter lane left of the article: the
+     outline lives there permanently as a quiet scroll-spy list — the
+     Feishu/Notion/Stripe-docs pattern. no auto-hide (it would vanish under
+     the reader's cursor), no panel chrome, no click required. narrower
+     screens keep click-to-pin so the panel never covers the text. */
+  const tocOpen = tocPinned || wideToc
+  const tocAwake = tocOpen || tocInteracting || tocAutoVisible
   const tocPanelId = `report-${report.slug}-toc`
   const activeTocIndex = Math.max(
     0,
@@ -129,7 +136,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   )
 
   useEffect(() => {
-    const media = window.matchMedia('(min-width: 1400px)')
+    const media = window.matchMedia('(min-width: 1440px)')
     const syncLayout = (event: MediaQueryListEvent) => setWideToc(event.matches)
     media.addEventListener('change', syncLayout)
     return () => media.removeEventListener('change', syncLayout)
@@ -226,95 +233,125 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
 
   return (
     <div ref={feedShellRef} className="feed-shell">
-      {moduleFilter === null && sections.length > 1 && (
-        <nav
-          className={`article-toc ${tocOpen ? 'is-open' : ''} ${tocPinned ? 'is-pinned' : ''} ${tocAutoVisible ? 'is-auto-visible' : ''}`}
-          aria-label="本期目录"
-          onMouseEnter={() => setTocInteracting(true)}
-          onMouseLeave={() => setTocInteracting(false)}
-          onBlurCapture={(event) => {
-            if (!event.currentTarget.contains(event.relatedTarget)) setTocInteracting(false)
-          }}
-          onKeyDown={(event) => {
-            if (event.key === 'Escape' && tocOpen) {
-              setTocPinnedFor(null)
-              setTocInteracting(false)
-              setTocAutoVisible(false)
-              document.getElementById(`${tocPanelId}-toggle`)?.focus()
-            }
-          }}
-        >
-          <div className="article-toc-peek" aria-hidden="true">
-            <span className="article-toc-peek-num mono tnum">
-              {String(activeTocIndex + 1).padStart(2, '0')}
-            </span>
-            <span>{activeTocTitle}</span>
-          </div>
-
-          <button
-            id={`${tocPanelId}-toggle`}
-            type="button"
-            className="article-toc-toggle"
-            aria-expanded={tocOpen}
-            aria-controls={tocPanelId}
-            aria-label={`目录，当前在第 ${activeTocIndex + 1} 节：${activeTocTitle}`}
-            onClick={() => setTocPinnedFor(tocPinned ? null : report.slug)}
-          >
-            <span className="article-toc-toggle-label">目录</span>
-            <span className="article-toc-toggle-index mono tnum" aria-hidden="true">
-              {String(activeTocIndex + 1).padStart(2, '0')}
-            </span>
-            <span className="article-toc-progress" aria-hidden="true">
-              <span style={{ height: `${Math.round(readingProgress * 100)}%` }} />
-            </span>
-          </button>
-
-          <div id={tocPanelId} className="article-toc-panel" aria-hidden={!tocOpen}>
-            <div className="article-toc-panel-head">
-              <p className="article-toc-label">大纲</p>
-              <span className="article-toc-count mono tnum">{activeTocIndex + 1}/{sections.length}</span>
-              <button
-                type="button"
-                className="article-toc-close"
-                aria-label="收起目录"
-                tabIndex={tocOpen ? 0 : -1}
-                onClick={() => {
+      <div className={`feed ${tocOpen ? 'toc-open' : ''}`}>
+        {showToc && (
+          <div className="toc-dock">
+            <nav
+              className={`article-toc ${tocOpen ? 'is-open' : ''} ${tocPinned ? 'is-pinned' : ''} ${tocAwake ? 'is-awake' : ''}`}
+              aria-label="本期目录"
+              onMouseEnter={() => setTocInteracting(true)}
+              onMouseLeave={() => setTocInteracting(false)}
+              onBlurCapture={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget)) setTocInteracting(false)
+              }}
+              onKeyDown={(event) => {
+                if (event.key === 'Escape' && tocOpen) {
                   setTocPinnedFor(null)
                   setTocInteracting(false)
                   setTocAutoVisible(false)
-                  window.requestAnimationFrame(() =>
-                    document.getElementById(`${tocPanelId}-toggle`)?.focus(),
-                  )
+                  document.getElementById(`${tocPanelId}-toggle`)?.focus()
+                }
+              }}
+            >
+              <div className="article-toc-spine" aria-hidden="true">
+                <span style={{ height: `${Math.round(readingProgress * 100)}%` }} />
+              </div>
+
+              <button
+                id={`${tocPanelId}-toggle`}
+                type="button"
+                className="article-toc-toggle"
+                aria-expanded={tocOpen}
+                aria-controls={tocPanelId}
+                aria-label={`目录，当前在第 ${activeTocIndex + 1} 节：${activeTocTitle}`}
+                tabIndex={tocOpen ? -1 : undefined}
+                onClick={() => {
+                  if (tocPinned) {
+                    setTocPinnedFor(null)
+                  } else {
+                    setTocPinnedFor(report.slug)
+                    window.requestAnimationFrame(() =>
+                      document.getElementById(`${tocPanelId}-close`)?.focus(),
+                    )
+                  }
                 }}
               >
-                ×
+                <svg
+                  className="article-toc-icon"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5.5 3.5h8" />
+                  <path d="M5.5 8h8" />
+                  <path d="M5.5 12.5h5" />
+                  <circle cx="2.5" cy="3.5" r="0.9" fill="currentColor" stroke="none" />
+                  <circle cx="2.5" cy="8" r="0.9" fill="currentColor" stroke="none" />
+                  <circle cx="2.5" cy="12.5" r="0.9" fill="currentColor" stroke="none" />
+                </svg>
+                <span className="article-toc-toggle-index mono tnum" aria-hidden="true">
+                  {String(activeTocIndex + 1).padStart(2, '0')}
+                  <span className="article-toc-toggle-total">/{sections.length}</span>
+                </span>
+                <span className="article-toc-progress" aria-hidden="true">
+                  <span style={{ width: `${Math.round(readingProgress * 100)}%` }} />
+                </span>
               </button>
-            </div>
-            <ol className="article-toc-list">
-              {sections.map(({ section, originalIndex }, index) => (
-                <li key={section.title}>
-                  <button
-                    type="button"
-                    className={`article-toc-link ${originalIndex === activeSectionIndex ? 'current' : ''}`}
-                    aria-controls={reportSectionId(report.slug, originalIndex)}
-                    aria-current={originalIndex === activeSectionIndex ? 'location' : undefined}
-                    tabIndex={tocOpen ? 0 : -1}
-                    title={`跳到：${section.title}`}
-                    onClick={() => jumpToSection(originalIndex)}
-                  >
-                    <span className="article-toc-num mono tnum" aria-hidden="true">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <span className="article-toc-title">{compactSectionTitle(section.title)}</span>
-                  </button>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </nav>
-      )}
 
-      <div className="feed">
+              <div id={tocPanelId} className="article-toc-panel" aria-hidden={!tocOpen}>
+                <div className="article-toc-panel-inner">
+                  <div className="article-toc-panel-head">
+                    <p className="article-toc-label">本期目录</p>
+                    <span className="article-toc-count mono tnum">
+                      {activeTocIndex + 1}/{sections.length}
+                    </span>
+                    <button
+                      id={`${tocPanelId}-close`}
+                      type="button"
+                      className="article-toc-close"
+                      aria-label="收起目录"
+                      tabIndex={tocOpen ? 0 : -1}
+                      onClick={() => {
+                        setTocPinnedFor(null)
+                        setTocInteracting(false)
+                        setTocAutoVisible(false)
+                        window.requestAnimationFrame(() =>
+                          document.getElementById(`${tocPanelId}-toggle`)?.focus(),
+                        )
+                      }}
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <ol className="article-toc-list">
+                    {sections.map(({ section, originalIndex }, index) => (
+                      <li key={section.title}>
+                        <button
+                          type="button"
+                          className={`article-toc-link ${originalIndex === activeSectionIndex ? 'current' : ''}`}
+                          aria-controls={reportSectionId(report.slug, originalIndex)}
+                          aria-current={originalIndex === activeSectionIndex ? 'location' : undefined}
+                          tabIndex={tocOpen ? 0 : -1}
+                          title={`跳到：${section.title}`}
+                          onClick={() => jumpToSection(originalIndex)}
+                        >
+                          <span className="article-toc-num mono tnum" aria-hidden="true">
+                            {String(index + 1).padStart(2, '0')}
+                          </span>
+                          <span className="article-toc-title">{compactSectionTitle(section.title)}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </div>
+            </nav>
+          </div>
+        )}
+
         <header className="border-b hairline pb-6">
           <div className="flex items-baseline justify-between">
             <p className="label">AI Daily · {report.label}</p>

@@ -101,6 +101,7 @@ button:disabled {
   margin: 0 auto;
   max-width: 700px;
   padding-top: 2rem;
+  transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* mobile: calendar collapsed behind a toggle so news is first-screen */
@@ -161,142 +162,176 @@ button:disabled {
   }
 }
 
-/* ---------- Feishu-style reading outline ---------- */
-.article-toc {
-  --toc-accent: #3370ff;
-  position: fixed;
-  top: 42vh;
-  right: max(0.75rem, env(safe-area-inset-right));
+/* ---------- reading outline: docked at the article's top-left corner ----------
+   a zero-height sticky dock rides the article's left edge; idle it recedes to a
+   hairline progress spine, scrolling or hovering wakes the pill, clicking pins
+   the full outline panel open over the page (monochrome, one ink accent) */
+.toc-dock {
+  position: sticky;
+  top: 0.75rem;
+  height: 0;
   z-index: 30;
-  transform: translateY(-50%);
 }
-.article-toc-toggle {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto auto;
-  place-items: center;
-  width: 2.55rem;
-  min-height: 5.25rem;
-  padding: 0.62rem 0.45rem;
-  overflow: hidden;
-  border: 1px solid #e5e6eb;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  box-shadow: 0 6px 24px rgb(31 35 41 / 0.08);
-  color: #646a73;
-  backdrop-filter: blur(10px);
-  transition: border-color 0.16s, box-shadow 0.16s, color 0.16s, opacity 0.2s,
-    transform 0.2s;
-}
-.article-toc-toggle:hover,
-.article-toc.is-open .article-toc-toggle {
-  border-color: #c9cdd4;
-  box-shadow: 0 8px 28px rgb(31 35 41 / 0.12);
-  color: var(--toc-accent);
-}
-.article-toc-toggle-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  writing-mode: vertical-rl;
-}
-.article-toc-toggle-index {
-  margin-top: 0.35rem;
-  font-size: 0.58rem;
-  color: var(--toc-accent);
-}
-.article-toc-progress {
+.article-toc {
+  --toc-accent: var(--ink);
   position: absolute;
-  top: 0.68rem;
-  right: 0.25rem;
-  bottom: 0.68rem;
+  top: 0;
+  left: 0;
+  width: fit-content;
+}
+.article-toc-spine {
+  position: absolute;
+  top: 0.15rem;
+  left: -0.55rem;
   width: 2px;
+  height: 3.25rem;
   overflow: hidden;
   border-radius: 999px;
-  background: #dee0e3;
+  background: var(--line);
+  opacity: 0.9;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.article-toc-progress > span {
+.article-toc-spine > span {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 3px;
+  min-height: 4px;
   border-radius: inherit;
   background: var(--toc-accent);
   transition: height 0.15s linear;
 }
-.article-toc-peek {
+.article-toc.is-awake .article-toc-spine {
+  opacity: 0;
+}
+/* narrow screens have no free top-left corner: the pill becomes a
+   bottom-right floating action button (Feishu mobile pattern) so it never
+   sits on the text; the top-left hairline spine keeps the position cue */
+.article-toc-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 2.1rem;
+  padding: 0 0.72rem;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  box-shadow: 0 4px 16px rgb(10 10 10 / 0.06);
+  color: var(--ink-2);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.16s,
+    color 0.16s, box-shadow 0.16s;
+}
+.article-toc.is-awake .article-toc-toggle,
+.article-toc:focus-within .article-toc-toggle {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.article-toc:focus-within .article-toc-spine {
+  opacity: 0;
+}
+.article-toc-toggle:hover,
+.article-toc.is-open .article-toc-toggle {
+  border-color: var(--ink-3);
+  box-shadow: 0 6px 20px rgb(10 10 10 / 0.1);
+  color: var(--ink);
+}
+.article-toc-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  flex: none;
+}
+.article-toc-toggle-index {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.article-toc-toggle-total {
+  color: var(--ink-3);
+  font-weight: 400;
+}
+.article-toc-progress {
   position: absolute;
-  top: 50%;
-  right: calc(100% - 0.08rem);
+  right: 0.65rem;
+  bottom: 0;
+  left: 0.65rem;
+  height: 2px;
+}
+.article-toc-progress > span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--toc-accent);
+  transition: width 0.15s linear;
+}
+/* pinned open: the pill steps aside, the panel owns the corner */
+.article-toc.is-open .article-toc-toggle {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-4px, -4px);
+}
+/* mobile: the outline opens as a bottom sheet so it never covers the
+   top-left text the reader is looking at */
+.article-toc-panel {
+  position: fixed;
+  top: auto;
+  right: 0.75rem;
+  bottom: calc(0.75rem + env(safe-area-inset-bottom));
+  left: 0.75rem;
+  display: grid;
+  grid-template-rows: 0fr;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--paper) 96%, transparent);
+  box-shadow: 0 10px 32px rgb(10 10 10 / 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.65rem);
+  transform-origin: bottom center;
+  visibility: hidden;
+  backdrop-filter: blur(14px);
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+}
+.article-toc.is-open .article-toc-panel {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  visibility: visible;
+}
+.article-toc-panel-inner {
+  min-height: 0;
+  max-height: min(55svh, 24rem);
+  overflow-y: auto;
+  padding: 0.65rem;
+}
+.article-toc-panel-head {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  width: max-content;
-  max-width: min(15rem, calc(100vw - 5rem));
-  padding: 0.48rem 0.65rem;
-  border: 1px solid #e5e6eb;
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--paper) 94%, transparent);
-  box-shadow: 0 6px 24px rgb(31 35 41 / 0.08);
-  color: #646a73;
-  font-size: 0.75rem;
-  line-height: 1.35;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(0.4rem, -50%);
-  transition: opacity 0.2s, transform 0.2s;
-  backdrop-filter: blur(10px);
-}
-.article-toc-peek-num {
-  color: var(--toc-accent);
-  font-size: 0.62rem;
-}
-.article-toc.is-auto-visible:not(.is-open) .article-toc-peek {
-  opacity: 1;
-  transform: translate(0, -50%);
-}
-.article-toc-panel {
-  position: absolute;
-  top: 50%;
-  right: calc(100% - 0.08rem);
-  width: min(13.5rem, calc(100vw - 5rem));
-  max-height: min(70vh, 28rem);
-  overflow-y: auto;
-  padding: 0.7rem;
-  border: 1px solid #e5e6eb;
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--paper) 97%, transparent);
-  box-shadow: 0 6px 24px rgb(31 35 41 / 0.08);
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(0.5rem, -50%) scale(0.98);
-  transform-origin: right center;
-  visibility: hidden;
-  backdrop-filter: blur(12px);
-  transition: opacity 0.16s, transform 0.16s, visibility 0.16s;
-}
-.article-toc.is-open .article-toc-panel {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(0, -50%) scale(1);
-  visibility: visible;
-}
-.article-toc-panel-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
-  align-items: center;
-  gap: 0.5rem;
   min-height: 1.8rem;
-  padding: 0 0.35rem 0.4rem;
+  padding: 0.05rem 0.35rem 0.55rem;
 }
 .article-toc-label {
-  color: #1f2329;
-  font-size: 0.78rem;
+  flex: 1;
+  color: var(--ink);
+  font-size: 0.8rem;
   font-weight: 600;
 }
 .article-toc-count {
-  color: #8f959e;
-  font-size: 0.6rem;
+  color: var(--ink-3);
+  font-size: 0.62rem;
 }
 .article-toc-close {
   display: grid;
@@ -304,13 +339,13 @@ button:disabled {
   width: 1.55rem;
   height: 1.55rem;
   border-radius: 5px;
-  color: #8f959e;
+  color: var(--ink-3);
   font-size: 1rem;
   line-height: 1;
 }
 .article-toc-close:hover {
-  background: #f2f3f5;
-  color: #1f2329;
+  background: var(--hover);
+  color: var(--ink);
 }
 .article-toc-list {
   display: grid;
@@ -320,19 +355,19 @@ button:disabled {
 .article-toc-link {
   position: relative;
   display: grid;
-  grid-template-columns: 1.35rem minmax(0, 1fr);
+  grid-template-columns: 1.4rem minmax(0, 1fr);
   align-items: baseline;
   width: 100%;
-  padding: 0.42rem 0.45rem;
+  padding: 0.44rem 0.5rem;
   border-radius: 6px;
   text-align: left;
-  color: #646a73;
+  color: var(--ink-soft);
   transition: background 0.14s, color 0.14s;
 }
 .article-toc-link::before {
   position: absolute;
   top: 50%;
-  left: -0.15rem;
+  left: -0.1rem;
   width: 2px;
   height: 0.9rem;
   border-radius: 999px;
@@ -343,12 +378,12 @@ button:disabled {
   transition: opacity 0.14s, transform 0.14s;
 }
 .article-toc-link:hover {
-  background: #f2f3f5;
-  color: #1f2329;
+  background: var(--hover);
+  color: var(--ink);
 }
 .article-toc-link.current {
-  background: rgb(51 112 255 / 0.08);
-  color: var(--toc-accent);
+  background: var(--hover);
+  color: var(--ink);
   font-weight: 600;
 }
 .article-toc-link.current::before {
@@ -356,127 +391,133 @@ button:disabled {
   transform: translateY(-50%) scaleY(1);
 }
 .article-toc-num {
-  font-size: 0.58rem;
-  color: #8f959e;
+  font-size: 0.6rem;
+  color: var(--ink-3);
 }
 .article-toc-link.current .article-toc-num {
-  color: var(--toc-accent);
+  color: var(--ink);
 }
 .article-toc-title {
   overflow: hidden;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   line-height: 1.5;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .article-section {
-  scroll-margin-top: 1rem;
+  scroll-margin-top: 3.5rem;
 }
 
-@media (max-width: 767px) {
-  .article-toc {
-    top: calc(40vh - 1.375rem);
-    opacity: 0.28;
-    transform: none;
-    transition: opacity 0.22s;
+@media (min-width: 900px) {
+  .toc-dock {
+    top: clamp(3.5rem, 9vh, 5.5rem);
   }
-  .article-toc.is-auto-visible,
-  .article-toc.is-open,
-  .article-toc:has(:focus-visible) {
-    opacity: 1;
-    pointer-events: auto;
+  .article-toc {
+    left: -0.5rem;
   }
   .article-toc-toggle {
-    grid-template-rows: 1fr;
-    width: 2.75rem;
-    min-height: 2.75rem;
-    padding: 0;
+    position: relative;
+    right: auto;
+    bottom: auto;
   }
-  .article-toc-toggle-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-  .article-toc-toggle-index {
-    margin: 0;
-    font-size: 0.65rem;
-  }
-  .article-toc-progress {
-    top: 0.38rem;
-    right: 0.2rem;
-    bottom: 0.38rem;
+  .article-toc-spine {
+    left: -1.25rem;
   }
   .article-toc-panel {
-    position: fixed;
-    top: auto;
-    right: 0.75rem;
-    bottom: calc(0.75rem + env(safe-area-inset-bottom));
-    left: 0.75rem;
-    width: auto;
-    max-height: min(60svh, 26rem);
-    transform: translateY(0.65rem) scale(0.985);
-    transform-origin: bottom center;
+    position: absolute;
+    top: 0;
+    right: calc(100% + 0.75rem);
+    bottom: auto;
+    left: auto;
+    width: 14rem;
+    transform: translateX(0.4rem);
+    transform-origin: right top;
   }
   .article-toc.is-open .article-toc-panel {
-    transform: translateY(0) scale(1);
+    transform: none;
   }
-  .article-toc-title {
-    white-space: normal;
+  .article-toc-panel-inner {
+    max-height: min(62vh, 26rem);
+  }
+  .article-section {
+    scroll-margin-top: 7.5rem;
   }
 }
 
-@media (min-width: 1400px) {
-  .feed-shell {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 700px) minmax(0, 1fr);
+/* medium widths: no free gutter, so the pinned outline yields a lane by
+   sliding the article right instead of covering it */
+@media (min-width: 900px) and (max-width: 1439.98px) {
+  .feed.toc-open {
+    margin-left: 15.25rem;
   }
-  .feed {
-    grid-column: 2;
-    width: 100%;
-    margin-inline: 0;
-  }
+}
+
+/* wide screens: a real gutter exists left of the article — the outline
+   lives there permanently as a quiet scroll-spy list (Feishu/Notion/
+   Stripe-docs pattern). no panel chrome, no auto-hide, no click needed:
+   a hairline track, mono numbers, and the current section in ink. */
+@media (min-width: 1440px) {
   .article-toc {
-    position: sticky;
-    top: clamp(7.5rem, 18vh, 11rem);
-    right: auto;
-    grid-column: 3;
-    grid-row: 1;
-    align-self: start;
-    justify-self: start;
-    width: calc(100% - 1rem);
-    max-width: 12.5rem;
-    margin-left: 1rem;
-    transform: none;
+    right: calc(100% + 2rem);
+    left: auto;
+    width: 11.5rem;
   }
-  .article-toc-peek {
+  .article-toc-toggle,
+  .article-toc-spine {
     display: none;
   }
   .article-toc-panel {
-    top: 50%;
-    right: auto;
-    left: 0;
-    width: 100%;
-    transform: translate(0.5rem, -50%) scale(0.98);
-    transform-origin: left center;
-  }
-  .article-toc.is-open .article-toc-panel,
-  .article-toc.is-auto-visible .article-toc-panel {
+    position: static;
+    display: block;
+    width: 11.5rem;
+    border: none;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
     opacity: 1;
     pointer-events: auto;
-    transform: translate(0, -50%) scale(1);
+    transform: none;
     visibility: visible;
+    backdrop-filter: none;
+    transition: none;
   }
-  .article-toc.is-open .article-toc-toggle,
-  .article-toc.is-auto-visible .article-toc-toggle {
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(0.92);
+  .article-toc-panel-inner {
+    max-height: calc(100vh - 9rem);
+    padding: 0;
   }
-  .article-toc-title {
-    white-space: normal;
+  .article-toc-panel-head {
+    min-height: 0;
+    padding: 0 0 0.7rem 0.95rem;
+  }
+  .article-toc-label {
+    color: var(--ink-3);
+    font-size: 0.66rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+  }
+  .article-toc-close {
+    display: none;
+  }
+  .article-toc-list {
+    gap: 0;
+    border-left: 1px solid var(--line);
+  }
+  .article-toc-link {
+    grid-template-columns: 1.5rem minmax(0, 1fr);
+    padding: 0.42rem 0 0.42rem 0.95rem;
+    border-radius: 0;
+  }
+  .article-toc-link::before {
+    left: -1px;
+    height: 1.1rem;
+  }
+  .article-toc-link:hover {
+    background: none;
+    color: var(--ink);
+  }
+  .article-toc-link.current {
+    background: none;
+    color: var(--ink);
   }
 }
 
@@ -826,9 +867,10 @@ a.src-chip:hover .src-arrow {
   .news-row,
   .mod-row,
   .cal-day,
+  .feed,
   .article-toc,
   .article-toc-toggle,
-  .article-toc-peek,
+  .article-toc-spine,
   .article-toc-panel,
   .article-toc-progress > span,
   .article-toc-link,
