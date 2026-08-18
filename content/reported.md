@@ -401,3 +401,28 @@
 - 2026-08-17 | Peter Yang×Riley Brown：用 Codex 运营整个内容生意，100 张爆款缩略图→Paper 画布混搭出图（X）
 - 2026-08-17 | Rauch：React 的成功大半属于 shadcn，「为 context window 消化再 remix 而生」（X）
 - 2026-08-17 | Nikunj Kothari：无聊行业的官僚摩擦是真正护城河（X）
+
+## 2026-08-18（第十七期）
+
+- 2026-08-18 | OpenRouter 的 GPT-5.6 Sol 路线五折：输入/输出降至每百万 token 2.5/15 美元；OpenAI 官方仍为 5/30 美元
+- 2026-08-18 | Wiz Red Agent：Copilot 辅助修复引入 GitHub Actions 注入，五天后取得 Snowflake 内部 Jira 访问
+- 2026-08-18 | 彭博：美国司法部调查 a16z 合伙人在竞合 AI 公司交叉任董事，尚未认定违法（Bloomberg/The Verge）
+- 2026-08-18 | Noiz AI 预览 HelixWorld 1.0：24FPS 画面与 48kHz 立体声实时联动，代码/权重待开放（GitHub/量子位）
+- 2026-08-18 | Jamendo 起诉 Suno 六周后撤诉且保留再诉权；其他主流版权诉讼仍在推进（MBW/法院文件）
+- 2026-08-18 | AI 影视规模化：Promise 混合制作估算降本 20%–50%，Netflix 300 部作品使用 AI，Higgsfield 年化收入 7 亿美元/估值 54 亿美元（The Decoder）
+- 2026-08-18 | Saber CEO 向前编剧 Stella Sacco 道歉，《Rideshare》补标语音/本地化/任务/音乐生成式 AI 使用
+- 2026-08-18 | Rauch：GLM-5.3 成开源网络安全前沿，低成本可让防御扫描频率至少提高 3 倍（X）
+- 2026-08-18 | Aaron Levie：Agent 机会在于做完过去有价值但人工永远做不全的漏洞、合同与增购信号工作（X）
+- 2026-08-18 | Amjad Masad：16 个月 intelligence per joule 提升 18 倍（X）
+- 2026-08-18 | Dan Shipper 用 Fable 快速做 Thesis 申请者可视化与自动聚类应用（X）
+- 2026-08-18 | Rust 原生 GPU Offload：多厂商、内存安全，RAJAPerf 性能逼近手写 CUDA/HIP（arXiv 2608.13759）
+- 2026-08-18 | HN 今日再热：LLM 请求双发取最快，完整响应 p99 从 9.8 秒降至 3.5 秒（HOAi 6/10）
+- 2026-08-18 | HN 今日再热：Roboflow 实测 GPT-5.6 Sol 检测升至 46.2 mAP@50，但大图稳定性、延迟与成本仍有短板（7/16）
+- 2026-08-18 | YC S26 Speko：61 个模型、10 种语言，一个 OpenAI 兼容接口路由语音 Agent
+- 2026-08-18 | OpenRouter 图像 API 实战：30+ 模型统一请求格式，Python/JavaScript 可直接落盘
+- 2026-08-18 | AI;DR：未经人工编辑的 AI 长文把核验、删改与思考成本转嫁给读者（Rick Manelius/HN）
+- 2026-08-18 | GitHub Trending：akitaonrails/ai-memory（跨 coding agent 长期记忆与交接）
+- 2026-08-18 | GitHub Trending：mukul975/Anthropic-Cybersecurity-Skills（817 个安全技能映射六套框架）
+- 2026-08-18 | GitHub Trending：AlexsJones/llmfit（按本机硬件筛选数百模型与供应商）
+- 2026-08-18 | GitHub Trending：santifer/career-ops（本地职位扫描、评分、简历与申请流水线）
+- 2026-08-18 | GitHub Trending：volcengine/OpenViking（统一 Memory、RAG 与 Skills 的自演化上下文数据库）
