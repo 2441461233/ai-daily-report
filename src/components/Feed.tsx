@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { site } from '@/config'
 import type { NewsItem, Report } from '@/types/report'
 import { itemCount } from '@/types/report'
@@ -102,9 +102,14 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   const [tocAutoVisible, setTocAutoVisible] = useState(false)
   const [wideToc, setWideToc] = useState(() => window.matchMedia('(min-width: 1440px)').matches)
   const [activeSectionIndex, setActiveSectionIndex] = useState(0)
-  const [readingProgress, setReadingProgress] = useState(0)
   const feedShellRef = useRef<HTMLDivElement>(null)
+  const tocRef = useRef<HTMLElement>(null)
+  const tocToggleRef = useRef<HTMLButtonElement>(null)
+  const activeTocLinkRef = useRef<HTMLButtonElement>(null)
+  const tocFocusIntentRef = useRef<'panel' | 'toggle' | null>(null)
+  const activeSectionRef = useRef(0)
   const tocHideTimer = useRef<number | null>(null)
+  const tocOutsideFocusTimer = useRef<number | null>(null)
   const sections = report.sections
     .map((section, originalIndex) => ({ section, originalIndex }))
     .filter(({ section }) => moduleFilter === null || section.title === moduleFilter)
@@ -135,12 +140,127 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
     sections[activeTocIndex]?.section.title ?? sections[0]?.section.title ?? '',
   )
 
+  const closeToc = useCallback((restoreToggleFocus = false) => {
+    tocFocusIntentRef.current = restoreToggleFocus ? 'toggle' : null
+    setTocPinnedFor(null)
+    setTocInteracting(false)
+    setTocAutoVisible(false)
+  }, [])
+
+  const focusCurrentTocLink = useCallback(() => {
+    const currentLink =
+      activeTocLinkRef.current ??
+      tocRef.current?.querySelector<HTMLButtonElement>('.article-toc-link.current')
+    if (!currentLink) return
+
+    currentLink.focus({ preventScroll: true })
+    const panelScroller = currentLink.closest<HTMLElement>('.article-toc-panel-inner')
+    if (!panelScroller) return
+
+    const linkRect = currentLink.getBoundingClientRect()
+    const scrollerRect = panelScroller.getBoundingClientRect()
+    const panelHeader = panelScroller.querySelector<HTMLElement>('.article-toc-panel-head')
+    const visibleTop = Math.max(
+      scrollerRect.top,
+      panelHeader?.getBoundingClientRect().bottom ?? scrollerRect.top,
+    )
+    if (linkRect.top < visibleTop) {
+      panelScroller.scrollTop -= visibleTop - linkRect.top
+    } else if (linkRect.bottom > scrollerRect.bottom) {
+      panelScroller.scrollTop += linkRect.bottom - scrollerRect.bottom
+    }
+  }, [])
+
   useEffect(() => {
     const media = window.matchMedia('(min-width: 1440px)')
-    const syncLayout = (event: MediaQueryListEvent) => setWideToc(event.matches)
+    let focusTimer = 0
+    const syncLayout = (event: MediaQueryListEvent) => {
+      const focusWasInsideToc = tocRef.current?.contains(document.activeElement) ?? false
+      setWideToc(event.matches)
+      if (event.matches) closeToc(false)
+
+      if (focusWasInsideToc) {
+        window.clearTimeout(focusTimer)
+        focusTimer = window.setTimeout(() => {
+          if (event.matches) {
+            focusCurrentTocLink()
+          } else {
+            tocToggleRef.current?.focus({ preventScroll: true })
+          }
+        }, 80)
+      }
+    }
     media.addEventListener('change', syncLayout)
-    return () => media.removeEventListener('change', syncLayout)
-  }, [])
+    return () => {
+      media.removeEventListener('change', syncLayout)
+      window.clearTimeout(focusTimer)
+    }
+  }, [closeToc, focusCurrentTocLink])
+
+  useEffect(() => {
+    const intent = tocFocusIntentRef.current
+    if (!intent) return
+
+    const focusTimer = window.setTimeout(() => {
+      if (intent === 'panel' && tocPinned) {
+        focusCurrentTocLink()
+        tocFocusIntentRef.current = null
+      } else if (intent === 'toggle' && !tocPinned) {
+        tocToggleRef.current?.focus({ preventScroll: true })
+        tocFocusIntentRef.current = null
+      }
+    }, 80)
+    return () => window.clearTimeout(focusTimer)
+  }, [focusCurrentTocLink, tocPinned])
+
+  useEffect(() => {
+    if (!tocPinned || wideToc) return
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && tocRef.current?.contains(document.activeElement)) {
+        event.preventDefault()
+        closeToc(true)
+      }
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target
+      if (!(target instanceof Node) || tocRef.current?.contains(target)) return
+
+      const focusWasInsideToc = tocRef.current?.contains(document.activeElement) ?? false
+      closeToc(false)
+      if (!focusWasInsideToc) return
+
+      if (tocOutsideFocusTimer.current !== null) {
+        window.clearTimeout(tocOutsideFocusTimer.current)
+      }
+      tocOutsideFocusTimer.current = window.setTimeout(() => {
+        const activeElement = document.activeElement
+        const focusStillInsideToc =
+          activeElement instanceof Node && tocRef.current?.contains(activeElement)
+        if (activeElement === document.body || focusStillInsideToc) {
+          tocToggleRef.current?.focus({ preventScroll: true })
+        }
+        tocOutsideFocusTimer.current = null
+      }, 80)
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('pointerdown', handlePointerDown)
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('pointerdown', handlePointerDown)
+    }
+  }, [closeToc, tocPinned, wideToc])
+
+  useEffect(
+    () => () => {
+      if (tocOutsideFocusTimer.current !== null) {
+        window.clearTimeout(tocOutsideFocusTimer.current)
+      }
+    },
+    [],
+  )
 
   useEffect(() => {
     if (moduleFilter !== null || report.sections.length < 2) return
@@ -175,7 +295,10 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
         }
       }
       if (atBottom) current = sectionElements.at(-1)?.originalIndex ?? current
-      setActiveSectionIndex(current)
+      if (current !== activeSectionRef.current) {
+        activeSectionRef.current = current
+        setActiveSectionIndex(current)
+      }
 
       const firstTop = sectionElements[0].element.getBoundingClientRect().top
       const lastBottom = sectionElements.at(-1)?.element.getBoundingClientRect().bottom ?? firstTop
@@ -184,7 +307,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
       const progress = atBottom
         ? 1
         : Math.min(1, Math.max(0, (readingLine - firstTop) / readableDistance))
-      setReadingProgress(progress)
+      tocRef.current?.style.setProperty('--toc-progress', progress.toFixed(4))
     }
 
     const schedulePositionUpdate = () => {
@@ -226,9 +349,9 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
     const heading = document.getElementById(`${id}-heading`)
     section?.scrollIntoView({ block: 'start' })
     heading?.focus({ preventScroll: true })
+    activeSectionRef.current = originalIndex
     setActiveSectionIndex(originalIndex)
-    setTocPinnedFor(null)
-    setTocInteracting(false)
+    closeToc(false)
   }
 
   return (
@@ -237,6 +360,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
         {showToc && (
           <div className="toc-dock">
             <nav
+              ref={tocRef}
               className={`article-toc ${tocOpen ? 'is-open' : ''} ${tocPinned ? 'is-pinned' : ''} ${tocAwake ? 'is-awake' : ''}`}
               aria-label="本期目录"
               onMouseEnter={() => setTocInteracting(true)}
@@ -244,20 +368,13 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
               onBlurCapture={(event) => {
                 if (!event.currentTarget.contains(event.relatedTarget)) setTocInteracting(false)
               }}
-              onKeyDown={(event) => {
-                if (event.key === 'Escape' && tocOpen) {
-                  setTocPinnedFor(null)
-                  setTocInteracting(false)
-                  setTocAutoVisible(false)
-                  document.getElementById(`${tocPanelId}-toggle`)?.focus()
-                }
-              }}
             >
               <div className="article-toc-spine" aria-hidden="true">
-                <span style={{ height: `${Math.round(readingProgress * 100)}%` }} />
+                <span />
               </div>
 
               <button
+                ref={tocToggleRef}
                 id={`${tocPanelId}-toggle`}
                 type="button"
                 className="article-toc-toggle"
@@ -267,12 +384,10 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
                 tabIndex={tocOpen ? -1 : undefined}
                 onClick={() => {
                   if (tocPinned) {
-                    setTocPinnedFor(null)
+                    closeToc(true)
                   } else {
+                    tocFocusIntentRef.current = 'panel'
                     setTocPinnedFor(report.slug)
-                    window.requestAnimationFrame(() =>
-                      document.getElementById(`${tocPanelId}-close`)?.focus(),
-                    )
                   }
                 }}
               >
@@ -297,7 +412,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
                   <span className="article-toc-toggle-total">/{sections.length}</span>
                 </span>
                 <span className="article-toc-progress" aria-hidden="true">
-                  <span style={{ width: `${Math.round(readingProgress * 100)}%` }} />
+                  <span />
                 </span>
               </button>
 
@@ -314,14 +429,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
                       className="article-toc-close"
                       aria-label="收起目录"
                       tabIndex={tocOpen ? 0 : -1}
-                      onClick={() => {
-                        setTocPinnedFor(null)
-                        setTocInteracting(false)
-                        setTocAutoVisible(false)
-                        window.requestAnimationFrame(() =>
-                          document.getElementById(`${tocPanelId}-toggle`)?.focus(),
-                        )
-                      }}
+                      onClick={() => closeToc(true)}
                     >
                       ×
                     </button>
@@ -335,6 +443,9 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
                           aria-controls={reportSectionId(report.slug, originalIndex)}
                           aria-current={originalIndex === activeSectionIndex ? 'location' : undefined}
                           tabIndex={tocOpen ? 0 : -1}
+                          ref={
+                            originalIndex === activeSectionIndex ? activeTocLinkRef : undefined
+                          }
                           title={`跳到：${section.title}`}
                           onClick={() => jumpToSection(originalIndex)}
                         >
