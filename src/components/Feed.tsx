@@ -1,4 +1,5 @@
 import { memo, useCallback, useEffect, useRef, useState } from 'react'
+import { flushSync } from 'react-dom'
 import { site } from '@/config'
 import type { NewsItem, Report } from '@/types/report'
 import { itemCount } from '@/types/report'
@@ -115,6 +116,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   const tocJumpIdleTimer = useRef<number | null>(null)
   const tocJumpHardTimer = useRef<number | null>(null)
   const tocJumpFocusFrame = useRef<number | null>(null)
+  const tocJumpScrollerRef = useRef<EventTarget | null>(null)
   const tocJumpFinishRef = useRef<(() => void) | null>(null)
   const sections = report.sections
     .map((section, originalIndex) => ({ section, originalIndex }))
@@ -155,6 +157,7 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
 
   const releaseTocJump = useCallback(() => {
     tocJumpTargetRef.current = null
+    tocJumpScrollerRef.current = null
     if (tocJumpIdleTimer.current !== null) {
       window.clearTimeout(tocJumpIdleTimer.current)
       tocJumpIdleTimer.current = null
@@ -357,12 +360,28 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
       tocHideTimer.current = window.setTimeout(() => setTocAutoVisible(false), 1700)
     }
 
+    const finishTocJumpOnScrollEnd = (event: Event) => {
+      if (event.currentTarget !== tocJumpScrollerRef.current) return
+
+      const targetIndex = tocJumpTargetRef.current
+      const target =
+        targetIndex === null
+          ? null
+          : document.getElementById(reportSectionId(report.slug, targetIndex))
+      if (target) {
+        const feedScroller = tocJumpScrollerRef.current === feedColumn ? feedColumn : null
+        const scrollerTop = feedScroller?.getBoundingClientRect().top ?? 0
+        const scrollMarginTop = Number.parseFloat(getComputedStyle(target).scrollMarginTop) || 0
+        const targetIsAligned =
+          Math.abs(target.getBoundingClientRect().top - scrollerTop - scrollMarginTop) <= 4
+        if (!targetIsAligned) return
+      }
+
+      finishTocJump()
+    }
+
     const interruptTocJump = () => {
       if (tocJumpTargetRef.current === null) return
-      if (tocJumpFocusFrame.current !== null) {
-        window.cancelAnimationFrame(tocJumpFocusFrame.current)
-        tocJumpFocusFrame.current = null
-      }
       releaseTocJump()
       schedulePositionUpdate()
     }
@@ -376,7 +395,9 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
     schedulePositionUpdate()
     if (feedShellRef.current) resizeObserver.observe(feedShellRef.current)
     feedColumn?.addEventListener('scroll', showTocWhileReading, { passive: true })
+    feedColumn?.addEventListener('scrollend', finishTocJumpOnScrollEnd)
     window.addEventListener('scroll', showTocWhileReading, { passive: true })
+    document.addEventListener('scrollend', finishTocJumpOnScrollEnd)
     window.addEventListener('wheel', interruptTocJump, { passive: true })
     window.addEventListener('touchstart', interruptTocJump, { passive: true })
     document.addEventListener('pointerdown', interruptTocJump, { passive: true })
@@ -385,7 +406,9 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
 
     return () => {
       feedColumn?.removeEventListener('scroll', showTocWhileReading)
+      feedColumn?.removeEventListener('scrollend', finishTocJumpOnScrollEnd)
       window.removeEventListener('scroll', showTocWhileReading)
+      document.removeEventListener('scrollend', finishTocJumpOnScrollEnd)
       window.removeEventListener('wheel', interruptTocJump)
       window.removeEventListener('touchstart', interruptTocJump)
       document.removeEventListener('pointerdown', interruptTocJump)
@@ -403,13 +426,16 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
     const section = document.getElementById(id)
     const heading = document.getElementById(`${id}-heading`)
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const feedColumn = document.querySelector<HTMLElement>('.feed-col')
 
     releaseTocJump()
     const jumpToken = tocJumpTokenRef.current + 1
     tocJumpTokenRef.current = jumpToken
     tocJumpTargetRef.current = originalIndex
+    tocJumpScrollerRef.current =
+      window.matchMedia('(min-width: 900px)').matches && feedColumn ? feedColumn : document
     activeSectionRef.current = originalIndex
-    setActiveSectionIndex(originalIndex)
+    flushSync(() => setActiveSectionIndex(originalIndex))
     section?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' })
     closeToc(false)
 
@@ -427,8 +453,10 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
       if (finishCurrentJump) finishCurrentJump()
       else releaseTocJump()
     }
-    if (tocJumpIdleTimer.current !== null) window.clearTimeout(tocJumpIdleTimer.current)
-    tocJumpIdleTimer.current = window.setTimeout(finishTocJump, reducedMotion ? 0 : 300)
+    if (reducedMotion) {
+      if (tocJumpIdleTimer.current !== null) window.clearTimeout(tocJumpIdleTimer.current)
+      tocJumpIdleTimer.current = window.setTimeout(finishTocJump, 0)
+    }
     if (!reducedMotion) {
       tocJumpHardTimer.current = window.setTimeout(finishTocJump, 2000)
     }
