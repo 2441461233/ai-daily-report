@@ -108,8 +108,14 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
   const activeTocLinkRef = useRef<HTMLButtonElement>(null)
   const tocFocusIntentRef = useRef<'panel' | 'toggle' | null>(null)
   const activeSectionRef = useRef(0)
+  const tocJumpTargetRef = useRef<number | null>(null)
+  const tocJumpTokenRef = useRef(0)
   const tocHideTimer = useRef<number | null>(null)
   const tocOutsideFocusTimer = useRef<number | null>(null)
+  const tocJumpIdleTimer = useRef<number | null>(null)
+  const tocJumpHardTimer = useRef<number | null>(null)
+  const tocJumpFocusFrame = useRef<number | null>(null)
+  const tocJumpFinishRef = useRef<(() => void) | null>(null)
   const sections = report.sections
     .map((section, originalIndex) => ({ section, originalIndex }))
     .filter(({ section }) => moduleFilter === null || section.title === moduleFilter)
@@ -145,6 +151,18 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
     setTocPinnedFor(null)
     setTocInteracting(false)
     setTocAutoVisible(false)
+  }, [])
+
+  const releaseTocJump = useCallback(() => {
+    tocJumpTargetRef.current = null
+    if (tocJumpIdleTimer.current !== null) {
+      window.clearTimeout(tocJumpIdleTimer.current)
+      tocJumpIdleTimer.current = null
+    }
+    if (tocJumpHardTimer.current !== null) {
+      window.clearTimeout(tocJumpHardTimer.current)
+      tocJumpHardTimer.current = null
+    }
   }, [])
 
   const focusCurrentTocLink = useCallback(() => {
@@ -246,8 +264,12 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
       if (tocOutsideFocusTimer.current !== null) {
         window.clearTimeout(tocOutsideFocusTimer.current)
       }
+      if (tocJumpFocusFrame.current !== null) {
+        window.cancelAnimationFrame(tocJumpFocusFrame.current)
+      }
+      releaseTocJump()
     },
-    [],
+    [releaseTocJump],
   )
 
   useEffect(() => {
@@ -283,7 +305,10 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
         }
       }
       if (atBottom) current = sectionElements.at(-1)?.originalIndex ?? current
-      if (current !== activeSectionRef.current) {
+      /* A directory click selects its destination immediately. While the
+         browser performs the smooth scroll, keep scroll-spy from walking the
+         highlight back through every section on the way to that destination. */
+      if (tocJumpTargetRef.current === null && current !== activeSectionRef.current) {
         activeSectionRef.current = current
         setActiveSectionIndex(current)
       }
@@ -306,40 +331,107 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
       })
     }
 
+    const finishTocJump = () => {
+      if (tocJumpTargetRef.current === null) return
+      releaseTocJump()
+      schedulePositionUpdate()
+    }
+    tocJumpFinishRef.current = finishTocJump
+
+    const scheduleTocJumpIdleFinish = () => {
+      if (tocJumpTargetRef.current === null) return
+      if (tocJumpIdleTimer.current !== null) window.clearTimeout(tocJumpIdleTimer.current)
+      const jumpToken = tocJumpTokenRef.current
+      tocJumpIdleTimer.current = window.setTimeout(() => {
+        if (jumpToken === tocJumpTokenRef.current) finishTocJump()
+      }, 150)
+    }
+
     const resizeObserver = new ResizeObserver(schedulePositionUpdate)
 
     const showTocWhileReading = () => {
       schedulePositionUpdate()
+      scheduleTocJumpIdleFinish()
       setTocAutoVisible(true)
       if (tocHideTimer.current !== null) window.clearTimeout(tocHideTimer.current)
       tocHideTimer.current = window.setTimeout(() => setTocAutoVisible(false), 1700)
+    }
+
+    const interruptTocJump = () => {
+      if (tocJumpTargetRef.current === null) return
+      if (tocJumpFocusFrame.current !== null) {
+        window.cancelAnimationFrame(tocJumpFocusFrame.current)
+        tocJumpFocusFrame.current = null
+      }
+      releaseTocJump()
+      schedulePositionUpdate()
+    }
+
+    const interruptTocJumpWithKeyboard = (event: KeyboardEvent) => {
+      if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) {
+        interruptTocJump()
+      }
     }
 
     schedulePositionUpdate()
     if (feedShellRef.current) resizeObserver.observe(feedShellRef.current)
     feedColumn?.addEventListener('scroll', showTocWhileReading, { passive: true })
     window.addEventListener('scroll', showTocWhileReading, { passive: true })
+    window.addEventListener('wheel', interruptTocJump, { passive: true })
+    window.addEventListener('touchstart', interruptTocJump, { passive: true })
+    document.addEventListener('pointerdown', interruptTocJump, { passive: true })
+    document.addEventListener('keydown', interruptTocJumpWithKeyboard)
     window.addEventListener('resize', schedulePositionUpdate)
 
     return () => {
       feedColumn?.removeEventListener('scroll', showTocWhileReading)
       window.removeEventListener('scroll', showTocWhileReading)
+      window.removeEventListener('wheel', interruptTocJump)
+      window.removeEventListener('touchstart', interruptTocJump)
+      document.removeEventListener('pointerdown', interruptTocJump)
+      document.removeEventListener('keydown', interruptTocJumpWithKeyboard)
       window.removeEventListener('resize', schedulePositionUpdate)
       resizeObserver.disconnect()
+      if (tocJumpFinishRef.current === finishTocJump) tocJumpFinishRef.current = null
       if (animationFrame) window.cancelAnimationFrame(animationFrame)
       if (tocHideTimer.current !== null) window.clearTimeout(tocHideTimer.current)
     }
-  }, [moduleFilter, report.sections, report.slug])
+  }, [moduleFilter, releaseTocJump, report.sections, report.slug])
 
   const jumpToSection = (originalIndex: number) => {
     const id = reportSectionId(report.slug, originalIndex)
     const section = document.getElementById(id)
     const heading = document.getElementById(`${id}-heading`)
-    section?.scrollIntoView({ block: 'start' })
-    heading?.focus({ preventScroll: true })
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    releaseTocJump()
+    const jumpToken = tocJumpTokenRef.current + 1
+    tocJumpTokenRef.current = jumpToken
+    tocJumpTargetRef.current = originalIndex
     activeSectionRef.current = originalIndex
     setActiveSectionIndex(originalIndex)
+    section?.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' })
     closeToc(false)
+
+    if (tocJumpFocusFrame.current !== null) {
+      window.cancelAnimationFrame(tocJumpFocusFrame.current)
+    }
+    tocJumpFocusFrame.current = window.requestAnimationFrame(() => {
+      if (jumpToken === tocJumpTokenRef.current) heading?.focus({ preventScroll: true })
+      tocJumpFocusFrame.current = null
+    })
+
+    const finishTocJump = () => {
+      if (jumpToken !== tocJumpTokenRef.current) return
+      const finishCurrentJump = tocJumpFinishRef.current
+      if (finishCurrentJump) finishCurrentJump()
+      else releaseTocJump()
+    }
+    if (tocJumpIdleTimer.current !== null) window.clearTimeout(tocJumpIdleTimer.current)
+    tocJumpIdleTimer.current = window.setTimeout(finishTocJump, reducedMotion ? 0 : 300)
+    if (!reducedMotion) {
+      tocJumpHardTimer.current = window.setTimeout(finishTocJump, 2000)
+    }
   }
 
   return (
