@@ -297,22 +297,20 @@ button:disabled {
   grid-template-rows: 1fr;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: color-mix(in srgb, var(--paper) 96%, transparent);
+  background: color-mix(in srgb, var(--paper) 98%, transparent);
   box-shadow: 0 10px 32px rgb(10 10 10 / 0.1);
   opacity: 0;
   pointer-events: none;
   transform: translateY(0.65rem);
   transform-origin: bottom center;
-  visibility: hidden;
-  backdrop-filter: blur(14px);
-  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.35s;
+  transition: opacity 0.16s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
 }
 .article-toc.is-open .article-toc-panel {
   opacity: 1;
   pointer-events: auto;
   transform: none;
-  visibility: visible;
 }
 .article-toc-panel-inner {
   min-height: 0;
@@ -456,7 +454,7 @@ button:disabled {
 
 /* compact desktop: keep the same panel, but open it as a temporary bottom
    sheet so the article never reflows or clips at the viewport edge. */
-@media (min-width: 900px) and (max-width: 1279.98px) {
+@media (min-width: 900px) and (max-width: 1439.98px) {
   .article-toc-panel {
     position: fixed;
     top: auto;
@@ -469,15 +467,6 @@ button:disabled {
   }
   .article-toc.is-open .article-toc-panel {
     transform: none;
-  }
-}
-
-/* medium-wide screens can keep the familiar anchored outline. Moving the
-   complete feed as one composited layer avoids the text reflow caused by the
-   previous 15.25rem margin jump. */
-@media (min-width: 1280px) and (max-width: 1439.98px) {
-  .feed.toc-open {
-    transform: translateX(7.25rem);
   }
 }
 
@@ -527,9 +516,9 @@ button:disabled {
     opacity: 1;
     pointer-events: auto;
     transform: none;
-    visibility: visible;
     backdrop-filter: none;
     transition: none;
+    will-change: auto;
   }
   .article-toc-panel-inner {
     max-height: calc(100vh - 9rem);

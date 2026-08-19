@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { memo, useCallback, useEffect, useRef, useState } from 'react'
 import { site } from '@/config'
 import type { NewsItem, Report } from '@/types/report'
 import { itemCount } from '@/types/report'
@@ -54,7 +54,7 @@ function SourceChips({ item }: { item: NewsItem }) {
 
 /* summaries longer than ~2 lines are clamped by default; the reader can
    expand inline — this keeps a 16-item issue scannable */
-function NewsRow({ item, num }: { item: NewsItem; num: number }) {
+const NewsRow = memo(function NewsRow({ item, num }: { item: NewsItem; num: number }) {
   const [open, setOpen] = useState(false)
   const longSummary = (item.summary?.length ?? 0) > 90
   return (
@@ -77,7 +77,7 @@ function NewsRow({ item, num }: { item: NewsItem; num: number }) {
       </div>
     </div>
   )
-}
+})
 
 interface Props {
   report: Report
@@ -173,45 +173,33 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
 
   useEffect(() => {
     const media = window.matchMedia('(min-width: 1440px)')
-    let focusTimer = 0
     const syncLayout = (event: MediaQueryListEvent) => {
       const focusWasInsideToc = tocRef.current?.contains(document.activeElement) ?? false
-      setWideToc(event.matches)
       if (event.matches) closeToc(false)
-
       if (focusWasInsideToc) {
-        window.clearTimeout(focusTimer)
-        focusTimer = window.setTimeout(() => {
-          if (event.matches) {
-            focusCurrentTocLink()
-          } else {
-            tocToggleRef.current?.focus({ preventScroll: true })
-          }
-        }, 80)
+        tocFocusIntentRef.current = event.matches ? 'panel' : 'toggle'
       }
+      setWideToc(event.matches)
     }
     media.addEventListener('change', syncLayout)
-    return () => {
-      media.removeEventListener('change', syncLayout)
-      window.clearTimeout(focusTimer)
-    }
-  }, [closeToc, focusCurrentTocLink])
+    return () => media.removeEventListener('change', syncLayout)
+  }, [closeToc])
 
   useEffect(() => {
     const intent = tocFocusIntentRef.current
     if (!intent) return
 
-    const focusTimer = window.setTimeout(() => {
-      if (intent === 'panel' && tocPinned) {
+    const focusFrame = window.requestAnimationFrame(() => {
+      if (intent === 'panel' && tocOpen) {
         focusCurrentTocLink()
         tocFocusIntentRef.current = null
-      } else if (intent === 'toggle' && !tocPinned) {
+      } else if (intent === 'toggle' && !tocOpen) {
         tocToggleRef.current?.focus({ preventScroll: true })
         tocFocusIntentRef.current = null
       }
-    }, 80)
-    return () => window.clearTimeout(focusTimer)
-  }, [focusCurrentTocLink, tocPinned])
+    })
+    return () => window.cancelAnimationFrame(focusFrame)
+  }, [focusCurrentTocLink, tocOpen, tocPinned, wideToc])
 
   useEffect(() => {
     if (!tocPinned || wideToc) return
@@ -364,9 +352,13 @@ export default function Feed({ report, moduleFilter, hasPrev, hasNext, onPrev, o
               className={`article-toc ${tocOpen ? 'is-open' : ''} ${tocPinned ? 'is-pinned' : ''} ${tocAwake ? 'is-awake' : ''}`}
               aria-label="本期目录"
               onMouseEnter={() => setTocInteracting(true)}
-              onMouseLeave={() => setTocInteracting(false)}
+              onMouseLeave={() => {
+                if (!tocOpen) setTocInteracting(false)
+              }}
               onBlurCapture={(event) => {
-                if (!event.currentTarget.contains(event.relatedTarget)) setTocInteracting(false)
+                if (!tocOpen && !event.currentTarget.contains(event.relatedTarget)) {
+                  setTocInteracting(false)
+                }
               }}
             >
               <div className="article-toc-spine" aria-hidden="true">
