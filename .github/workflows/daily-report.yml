@@ -182,7 +182,7 @@ jobs:
         env:
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
           DAILY_REPORT_MODEL: qwen3.7-plus
-          DAILY_REPORT_COST_CAP_CNY: '1.0'
+          DAILY_REPORT_COST_CAP_CNY: '3.0'
         run: |
           set -euo pipefail
           {

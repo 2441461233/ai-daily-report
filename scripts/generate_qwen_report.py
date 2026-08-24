@@ -56,6 +56,7 @@ QWEN_PLUS_INPUT_CNY_PER_MILLION = 2.0
 QWEN_PLUS_CACHED_INPUT_CNY_PER_MILLION = 0.4
 QWEN_PLUS_OUTPUT_CNY_PER_MILLION = 8.0
 QWEN_WEB_SEARCH_CNY_PER_CALL = 0.004
+QWEN_RESEARCH_REQUEST_MIN_RESERVATION_CNY = 0.50
 PRICING_VERSION = "2026-08-24-cn-beijing"
 
 SECTION_POLICY = (
@@ -630,6 +631,27 @@ def usage_cost_cny(usage: Any) -> float:
         + cached_tokens * QWEN_PLUS_CACHED_INPUT_CNY_PER_MILLION
         + output_tokens * QWEN_PLUS_OUTPUT_CNY_PER_MILLION
     ) / 1_000_000
+
+
+def research_request_reservation_cny(prompt: str) -> float:
+    prompt_upper = (
+        len(prompt.encode("utf-8")) * QWEN_PLUS_INPUT_CNY_PER_MILLION
+        + 6000 * QWEN_PLUS_OUTPUT_CNY_PER_MILLION
+    ) / 1_000_000 + QWEN_WEB_SEARCH_CNY_PER_CALL
+    return max(QWEN_RESEARCH_REQUEST_MIN_RESERVATION_CNY, prompt_upper)
+
+
+def main_research_minimum_reservation_cny() -> float:
+    return len(SECTION_POLICY) * QWEN_RESEARCH_REQUEST_MIN_RESERVATION_CNY
+
+
+def require_main_research_budget(cost_cap_cny: float) -> None:
+    minimum = main_research_minimum_reservation_cny()
+    if minimum > cost_cap_cny:
+        raise QwenReportError(
+            f"main research minimum reservation CNY {minimum:.6f} exceeds cap "
+            f"{cost_cap_cny:.6f}"
+        )
 
 
 def web_search_count(response: dict[str, Any]) -> int:
@@ -2000,6 +2022,7 @@ def research(
         item.get("title", "") for item in attachment_items if isinstance(item, dict)
     ]
     cost_cap_cny = float(getattr(arguments, "cost_cap_cny", 1.0))
+    require_main_research_budget(cost_cap_cny)
 
     progress_lock = threading.Lock()
     progress_calls: list[dict[str, Any]] = []
@@ -2007,11 +2030,7 @@ def research(
 
     def reserve_call(prompt: str) -> float:
         nonlocal active_reservations
-        prompt_upper = (
-            len(prompt.encode("utf-8")) * QWEN_PLUS_INPUT_CNY_PER_MILLION
-            + 6000 * QWEN_PLUS_OUTPUT_CNY_PER_MILLION
-        ) / 1_000_000 + QWEN_WEB_SEARCH_CNY_PER_CALL
-        reservation = max(0.08, prompt_upper)
+        reservation = research_request_reservation_cny(prompt)
         with progress_lock:
             actual = sum(
                 float(item.get("estimatedCostCny") or 0) for item in progress_calls
@@ -2627,7 +2646,7 @@ def validate_factual_audit(
                 raise QwenReportError("factual audit quote is not present in trusted evidence")
             quote_ids.append(evidence_id)
             quote_texts.append(quote)
-        if sorted(quote_ids) != sorted(cited_by_key[finding["key"]]):
+        if set(quote_ids) != set(cited_by_key[finding["key"]]):
             raise QwenReportError("factual audit did not quote every cited evidence card")
         grounding_error = claim_grounding_error(
             claim_by_key[finding["key"]], " ".join(quote_texts)
@@ -2722,6 +2741,7 @@ def run(arguments: argparse.Namespace) -> tuple[Path, dict[str, Any]]:
             "evidenceCardCount": len(cards),
         }
     else:
+        require_main_research_budget(float(arguments.cost_cap_cny))
         if getattr(arguments, "trending_repositories", None) is None:
             arguments.trending_repositories = fetch_github_trending_repositories()
         builder_seed_cards = exclude_previously_sourced_cards(

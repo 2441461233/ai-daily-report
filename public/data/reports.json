@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T11:30:00+08:00",
+  "generatedAt": "2026-08-24T17:05:52+08:00",
   "count": 32,
   "reports": [
     {
@@ -7936,21 +7936,94 @@
     },
     {
       "date": "2026-08-24",
-      "generatedAt": "2026-08-24T11:30:00+08:00",
-      "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 Agent 可靠性与授权研究、Codex 用量复盘、本地视频实测及小团队安全实践。",
+      "generatedAt": "2026-08-24T17:05:52+08:00",
+      "oneLiner": "📌 今日一句话：Wan3.0 当日正式上线，Ox Alpha 以免费匿名预览进入 OpenRouter；最新论文同时提醒，Agent 会放大长期记忆污染与跨工具规格偏差——本周只用公开或脱敏任务试跑，并为记忆写入、迁移规格和输出验收加硬门。",
       "sections": [
         {
-          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "title": "🔥 AI 重要事件",
           "items": [
             {
-              "text": "社区测试 MiniMax H3 在 RTX 5090 上生成 2MP 视频的速度",
-              "summary": "8 月 24 日的一则 ComfyUI 社区帖报告，在 RTX 5090、2MP、20 steps 并启用 Comfy Kitchen 的条件下，MiniMax H3 约为 12 秒每 iteration。该结果来自单台机器和单一工作流，只能作为本地部署参考，不能视为官方基准。",
+              "text": "Ox Alpha 在 OpenRouter 标为免费：匿名第三方提供长上下文预览",
+              "summary": "OpenRouter 将 Ox Alpha 标为 free，并给出 roughly one million-token context window，可处理 text、image 和 video input。OpenRouter 同时说明 Ox Alpha 是 stealth model，由匿名 third-party provider 开发和运营；该 provider 会保留 prompts and completions，但不用于 training。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "straitstimes.com",
+                  "url": "https://www.straitstimes.com/world/united-states/mystery-ai-model-ox-alpha-draws-developers-with-free-access"
+                },
+                {
+                  "name": "openrouter.ai",
+                  "url": "https://openrouter.ai/stealth/ox-alpha"
+                }
+              ]
+            },
+            {
+              "text": "Manus 特定用户数据进入删除窗口，Manus 提供备份与恢复安排",
+              "summary": "Manus 表示，Manus 此次调整只涉及特定司法辖区内的部分用户；受影响数据是这些用户在 December 29, 2025 当日或之后生成的内容。Manus 将在 August 23 8:00 a.m. 至 August 24, 2026 (SGT) 期间删除相关数据，并给出 Manus 的备份与恢复时间。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
-                  "name": "Reddit r/comfyui 社区实测",
-                  "url": "https://www.reddit.com/r/comfyui/comments/1vvoeto/is_this_good_speed_itsec_for_rtx_5090_minimax_h3/"
+                  "name": "manus.im",
+                  "url": "https://manus.im/blog/a-note-to-our-users"
+                }
+              ]
+            },
+            {
+              "text": "Alibaba Group 拟在港配售新股：配售净所得将投向全栈 AI 能力",
+              "summary": "Alibaba Group 拟向美国境外的 non-U.S. persons 配售 newly issued ordinary shares，aggregate placing consideration 为 HK$80 billion。Alibaba 表示，Alibaba 拟将 Equity Placement 的 net proceeds 100% 投资 full stack AI capabilities。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "alibabagroup.com",
+                  "url": "https://www.alibabagroup.com/en-US/document-2028246284372017152"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Wan3.0 正式上线：文档、表格、幻灯片与网页可直接生成视频",
+              "summary": "Reuters 报道 Alibaba 于 August 24 正式推出 Wan3.0。Alibaba Cloud 表示，Wan3.0 可从 documents、spreadsheets、slides 和 web pages 生成 30-second videos；Wan3.0 公测以来已用于 short drama、film production、advertising and marketing、tourism promotion 与 music video creation。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "finance.yahoo.com",
+                  "url": "https://finance.yahoo.com/technology/ai/articles/alibaba-launches-wan3-0-ai-081504479.html"
+                },
+                {
+                  "name": "modelstudio.console.alibabacloud.com",
+                  "url": "https://modelstudio.console.alibabacloud.com/model-releases/wan3.0-video"
+                }
+              ]
+            },
+            {
+              "text": "GoEnhance AI 扩展视频重塑工作流：已有素材可换风格而无需重拍",
+              "summary": "GoEnhance AI 自述 expanded its AI-assisted video restyling workflows，目标是让创作者 reuse footage they have already filmed，而不是 rebuild each project from the ground up。GoEnhance AI 表示 original clip 保留 motion、timing 与 composition，由 AI 生成 different visual interpretation；GoEnhance AI 建议用清晰主体、适度运动与简单背景先做短片测试。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "wboc.com",
+                  "url": "https://www.wboc.com/online_features/press_releases/goenhance-ai-expands-video-restyling-tools-for-creators/article_eeba8ee7-1cb5-51b9-9b80-a737d6201328.html"
+                }
+              ]
+            },
+            {
+              "text": "Higgsfield Adathon 截止时间为 August 24 ET：广告至少 51% AI-generated",
+              "summary": "Higgsfield 将 Adathon 截止时间定为 August 24, 2026 · 11:59 PM ET。参赛对象是 professional teams worldwide，作品需为 real brand 制作 30-60 second ad，且 at least 51% AI-generated；Higgsfield 规定所有 AI video、image 与 audio 必须来自 Higgsfield。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "higgsfield.ai",
+                  "url": "https://higgsfield.ai/contests/adathon"
                 }
               ]
             }
@@ -7960,26 +8033,50 @@
           "title": "🌍 海外观察",
           "items": [
             {
-              "text": "Codex 团队解释近期额度异常并为付费用户补发重置",
-              "summary": "Codex 产品负责人 8 月 23 日表示，近期异常消耗主要与图像输入、超长会话及多次 compaction，以及一个内部 title 功能有关。团队称已修复相关问题并给付费用户补发 reset；这是一则具体故障复盘，不代表所有额度问题都已永久消失。",
+              "text": "Thibault Sottiaux：模型效率与可靠性正成为企业议题",
+              "summary": "Thibault Sottiaux 判断，model efficiency 和 reliability 正随着模型成为 critical infrastructure 而被企业认真对待；Thibault Sottiaux 的单帖属于从业者观点而非行业统计。对你的映射：本周为日报主链统一记录单次成本、成功率与证据门通过率，再按同一模板比较候选模型。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
                   "name": "Thibault Sottiaux 的 X 帖文",
-                  "url": "https://x.com/thsottiaux/status/2091407991736332689"
+                  "url": "https://x.com/thsottiaux/status/2091581575108653374"
                 }
               ]
             },
             {
-              "text": "Generalist GEN-1.5 展示从单次演示学习机器人动作",
-              "summary": "Generalist 近日公布 GEN-1.5，称模型可把 3 至 12 秒的单次演示作为 physical prompt，无需梯度更新即可学习新动作，并输出 100Hz 动作轨迹。官方同时说明当前展示仍以简单、短时程任务为主，泛化边界有待进一步验证。",
+              "text": "Peter Yang：AI evals 要结合 top-down 与 bottom-up",
+              "summary": "Peter Yang 转述 @sh_reya：top-down evals 从 task description 出发，bottom-up evals 则从大量 sample outputs 中把 gut feedback 外化。Peter Yang 同时指出 Claude 擅长 top-down evals，却不擅长替人生成 bottom-up evals。对你的映射：把日报质量按来源覆盖、事实准确、栏目完整和成本分别设置 eval，并保留失败样本反推规则。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
-                  "name": "Generalist AI 官方博客",
-                  "url": "https://generalistai.com/blog/gen-1.5"
+                  "name": "Peter Yang 的 X 帖文",
+                  "url": "https://x.com/petergyang/status/2091586298779955512"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch：开放协议与 Unix 组合是扩展 𝚏𝚡 的路径",
+              "summary": "Guillermo Rauch 列出 MCP、Skills、Plugins 与 Unix；Guillermo Rauch 强调 small programs 应各司其职并通过组合协作，Guillermo Rauch 的 𝚕𝚒𝚋𝚏𝚡 则让能力可嵌入更复杂程序。Guillermo Rauch 设想这些组件可构成 CLI、background agent 或 software factory，运行在 local 或 cloud。对你的映射：让新采集器先暴露稳定输入输出，再通过 MCP 或 CLI 接入主流程，减少与编排层的耦合。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Guillermo Rauch 的 X 帖文",
+                  "url": "https://x.com/rauchg/status/2091583525661384813"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger：CLI 之外，UI visualizations 更适合团队共用",
+              "summary": "Peter Steinberger 的原帖只给出一条偏好：cli is nice, having UI visualizations and your team where you work is nicer。Peter Steinberger 没有提供产品选择或量化对比。对你的映射：先为当前 CLI 增加只读的运行状态、工具调用与失败原因视图，再观察团队排错是否更快。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Peter Steinberger 的 X 帖文",
+                  "url": "https://x.com/steipete/status/2091650136506327253"
                 }
               ]
             }
@@ -7989,46 +8086,38 @@
           "title": "📄 论文与技术前沿",
           "items": [
             {
-              "text": "Thinkingbox 用 507 个有状态业务流程衡量 Agent 的持续可靠性",
-              "summary": "Thinkingbox 提供隔离的 MCP-compatible 工具会话、完整执行轨迹和后端状态校验，基准覆盖零售、酒店、保险、银行 IT 与咨询支持等 507 个流程。最强模型 pass@1 为 65.36%，但 pass^20 仅 25.25%，显示偶尔成功不能代表稳定交付。",
-              "expanded": false,
-              "flag": false,
+              "text": "AI with Authority：proof kernel 让单人指挥 AI agents 实现 RISC-V processor taped out",
+              "summary": "论文 AI with Authority 报告：在 five weeks 内，one researcher 使用 consumer AI subscriptions 指挥 a small fleet of AI agents，从 application code、verified compiler and executive 一直做到 RISC-V processor taped out。Salt method 让 mathematical claims 以 kernel-checked artifacts 在 agents 间传递，并把 human attention 留给 statements、designs 和 rulings；AI with Authority 作者公布 theorem provenance、pre-registered token meter、human time 与 error ledger。对你的映射：把高风险自动化的验收物改成机器可验证 artifact，让人只审核目标、设计和例外裁决。",
+              "expanded": true,
+              "flag": true,
               "sources": [
                 {
-                  "name": "arXiv",
-                  "url": "https://arxiv.org/abs/2608.19741"
-                },
-                {
-                  "name": "Microsoft Thinkingbox GitHub 仓库",
-                  "url": "https://github.com/microsoft/thinkingbox"
+                  "name": "arxiv.org",
+                  "url": "https://arxiv.org/abs/2608.21356"
                 }
               ]
             },
             {
-              "text": "Bounded Agents 用授权链限制多 Agent 委托中的攻击半径",
-              "summary": "论文提出 Agentic Principal Chain，在模型外执行六项授权检查，并把委托范围与预算沿调用链持续收紧。3154 个评测实例中，AgentDojo 数据外泄降至 0%，且拦截 544 个 InjecAgent 窃取案例；代价是两种设置下效用分别下降 8.6 和 13.9 个百分点。",
-              "expanded": false,
-              "flag": false,
-              "sources": [
-                {
-                  "name": "arXiv",
-                  "url": "https://arxiv.org/abs/2608.15888"
-                },
-                {
-                  "name": "Bounded Agents GitHub 仓库",
-                  "url": "https://github.com/xmuruaga/bounded-agents"
-                }
-              ]
-            },
-            {
-              "text": "Prime Intellect 用 153 次长时运行评测自主 AI 研究能力",
-              "summary": "Prime Intellect 本月对 18 个前沿模型进行了 153 次 nanoGPT 优化实验，单次最长 8 天、使用 8 张 H200。结果显示模型在实验选择、执行和噪声解释上差距明显，但没有一次运行产生根本性的新方法。",
+              "text": "Utility Under Attack：false memory 会显著拖低 Agent 准确率",
+              "summary": "Utility Under Attack 在 LongMemEval 上发现，poisoning 1.2% of corpus 会把 accuracy 从 0.850 降至 0.300。作者的 four-stage write-time screening 对 indirect prompt injection 达到 0.832 recall，却对 360 poisoned memories 的拒绝数为 0；更强的 provenance weight 只有排除 untrusted content 才恢复 utility，并会压掉 legitimate untrusted evidence。Utility Under Attack 作者主张 retrieval 使用 bounded occupancy constraints，而非 additive provenance penalties。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
-                  "name": "Prime Intellect 官方研究博客",
-                  "url": "https://www.primeintellect.ai/blog/measuring-autonomous-research"
+                  "name": "arxiv.org",
+                  "url": "https://arxiv.org/abs/2608.21230"
+                }
+              ]
+            },
+            {
+              "text": "Specification Portability：不同 LLM development agents 不能默认共享中立规格",
+              "summary": "Specification Portability 以 Oracle-to-PostgreSQL migration 做 controlled task，并在 Amazon Kiro、Google Gemini、GitHub Copilot 等 agents 间交换 specifications。结果显示 specification size alone does not predict implementation quality，cross-agent transfer 会产生 agent-dependent degradation；在 tested configuration 中，Gemini 直接消费 Kiro-origin specification 时 Token F1 为 0.035、SQL syntax validity 为 2.33%、AST mean similarity 为 0.015。rewriting 明显改善 Gemini，retrieval-augmented ingestion 是 Gemini 与 Copilot 的 per-agent Pareto frontiers 都出现的 common strategy。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "arxiv.org",
+                  "url": "https://arxiv.org/abs/2608.21208"
                 }
               ]
             }
@@ -8038,38 +8127,38 @@
           "title": "🚀 AI 一人公司（OPC）",
           "items": [
             {
-              "text": "Agent Evals 可先缩小工具面，再逐步优化模型成本",
-              "summary": "AI 产品实践者 Madhu 8 月 23 日建议用 hill-climbing 方式优化 Agent：先把约 20 个工具收敛到 3 至 5 个，建立可重复评测并稳定质量，再切换到成本更低的模型。该方法属于实践建议，不是统一适用的基准结论。",
+              "text": "Peter Yang 展示助理 Char 用 Claude Code 与 Codex 处理播客后期",
+              "summary": "Peter Yang 表示其助理 Char 使用 Claude Code 和 Codex 协助 podcast post-production、draft show notes 和 make clips，并逐步复制和调整 Peter Yang 的 AI skills。Peter Yang 的帖子末尾带有 #sponsored，并引导读者查看 Oceans 的招聘服务；Peter Yang 的 #sponsored 帖应视为带商业合作披露的工作流案例。对你的映射：把可复用技能先写成 SOP，让助理在同一工具链中复制、调整并留痕。",
+              "expanded": true,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Peter Yang 的 X 帖文",
+                  "url": "https://x.com/petergyang/status/2091631590799737306"
+                }
+              ]
+            },
+            {
+              "text": "Madhu Guru：eval 要按 jobs to be done 检查中间输出",
+              "summary": "Madhu Guru 的 Goldilocks principle 要求 eval 衡量 various jobs to be done，而不只看 final answer。Madhu Guru 以 financial analysis agent 为例，把流程分为 understanding the client、gather evidence、analyze the data 和 make a recommendation，并建议每个 stage 的 intermittent output 都有自己的 eval。对你的映射：把日报生产按采集、筛选、写作和审计分别设 eval，让失败能定位到具体阶段。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
                   "name": "Madhu Guru 的 X 帖文",
-                  "url": "https://x.com/realmadhuguru/status/2091278653435072523"
+                  "url": "https://x.com/realmadhuguru/status/2091684812012875981"
                 }
               ]
             },
             {
-              "text": "Instinct 增加删除已接入外部数据的能力",
-              "summary": "Instinct 团队近日在用户提出数据控制疑问后加入外部数据删除入口。该更新改善了小团队使用个人知识 Agent 时的可控性，但新增入口不等于历史数据已经自动清除，用户仍应主动检查授权和删除状态。",
+              "text": "Garry Tan 预测 systems of record 需变成 AI harnesses 以免被 agents 取代",
+              "summary": "Garry Tan 提出这是一项 prediction：systems of record 需要变成 AI harnesses，否则 systems of record 会被 agents 取代。Garry Tan 的单帖没有给出案例或数据，Garry Tan 的单帖应当作方向判断而非已验证结论。对你的映射：选一个 Agent 频繁访问的记录系统，先补稳定读写接口、权限边界和审计日志，再判断是否值得深度改造。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
-                  "name": "Peter Yang 的 X 帖文",
-                  "url": "https://x.com/petergyang/status/2091187611507499321"
-                }
-              ]
-            },
-            {
-              "text": "用 Coding Agent 辅助清理 Google 第三方应用授权",
-              "summary": "Peter Yang 8 月 23 日展示用 Codex 或 Claude Code 的浏览器能力梳理并撤销 Google 账户中的第三方应用访问。这是一个具体的安全卫生用例；涉及 OAuth 权限的最终确认仍应由用户亲自完成。",
-              "expanded": false,
-              "flag": true,
-              "sources": [
-                {
-                  "name": "Peter Yang 的 X 帖文",
-                  "url": "https://x.com/petergyang/status/2091331251211059468"
+                  "name": "Garry Tan 的 X 帖文",
+                  "url": "https://x.com/garrytan/status/2091742825042030681"
                 }
               ]
             }
@@ -8079,14 +8168,50 @@
           "title": "💻 GitHub Trending",
           "items": [
             {
-              "text": "Phi-Bench 开放 85 个 LLM 基础设施工程任务",
-              "summary": "Phi-Bench 仓库近日进入社区讨论，收录 85 个开源 LLM 基础设施工程任务，覆盖 kernel、长时程与端到端场景。每项任务提供独立 Docker 环境、离线评分和参考解，目标是评估前沿模型与 Coding Agent 能否优化真实推理基础设施。",
+              "text": "MiroFish：简洁通用的群体智能引擎，预测万物",
+              "summary": "666ghj/MiroFish: A Simple and Universal Swarm Intelligence Engine, Predicting Anything。简洁通用的群体智能引擎，预测万物。",
               "expanded": false,
               "flag": true,
               "sources": [
                 {
-                  "name": "Phi-Bench GitHub 仓库",
-                  "url": "https://github.com/one2piece2hello/faibench_Frontier_InfraBench/"
+                  "name": "github.com",
+                  "url": "https://github.com/666ghj/MiroFish"
+                }
+              ]
+            },
+            {
+              "text": "NVIDIA-NeMo/Speech：面向 LLM、多模态与语音 AI 的可扩展框架",
+              "summary": "NVIDIA-NeMo/Speech 将项目定位为 scalable generative AI framework，面向从事 Large Language Models、Multimodal 与 Speech AI 的 researchers and developers；Speech AI 范围包括 Automatic Speech Recognition 和 Text-to-Speech。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "github.com",
+                  "url": "https://github.com/NVIDIA-NeMo/Speech"
+                }
+              ]
+            },
+            {
+              "text": "NousResearch/hermes-agent：项目定位是与你一起成长的 Agent",
+              "summary": "NousResearch/hermes-agent 的仓库描述是 The agent that grows with you；本条仅按 hermes-agent 的项目自述记录，hermes-agent 的具体能力、适用场景或性能未在此处外推。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "github.com",
+                  "url": "https://github.com/NousResearch/hermes-agent"
+                }
+              ]
+            },
+            {
+              "text": "awesome-gpt-image-2：Prompt as Code | GPT-Image2 工业级提示词引擎与模板库",
+              "summary": "freestylefly/awesome-gpt-image-2: Prompt as Code | GPT-Image2 工业级提示词引擎与模板库，530+ 个案例逆向工程，20+ 套工业级模板，并提炼出 Skills，持续更新中。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "github.com",
+                  "url": "https://github.com/freestylefly/awesome-gpt-image-2"
                 }
               ]
             }
@@ -8212,7 +8337,7 @@
         }
       ],
       "rich": true,
-      "label": "第二十三期·自动恢复版",
+      "label": "第二十三期",
       "issue": 32,
       "seq": 1,
       "slug": "2026-08-24--1",

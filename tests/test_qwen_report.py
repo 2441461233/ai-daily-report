@@ -291,6 +291,13 @@ class ResponseParsingTests(unittest.TestCase):
                 "qwen3.7-plus",
             )
 
+    def test_research_requests_reserve_at_least_observed_cost_floor(self) -> None:
+        self.assertEqual(qwen.research_request_reservation_cny("short prompt"), 0.50)
+        self.assertEqual(
+            qwen.main_research_minimum_reservation_cny(),
+            len(qwen.SECTION_POLICY) * 0.50,
+        )
+
     def test_numeric_grounding_normalizes_date_leading_zeroes(self) -> None:
         self.assertEqual(
             qwen.normalized_numbers("2026-08-24 与 8 月 24 日，4.60%"),
@@ -531,6 +538,7 @@ class EvidenceTests(unittest.TestCase):
                         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
                         model="qwen3.7-plus",
                         research_timeout=30,
+                        cost_cap_cny=3.0,
                     )
                     with mock.patch.object(qwen, "api_post", side_effect=fake_api_post):
                         with self.assertRaises(qwen.QwenReportError):
@@ -636,6 +644,7 @@ class EvidenceTests(unittest.TestCase):
                 base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
                 model="qwen3.7-plus",
                 research_timeout=30,
+                cost_cap_cny=3.0,
             )
             def fake_fetch(url, _timeout):
                 return {
@@ -743,6 +752,59 @@ class EvidenceTests(unittest.TestCase):
 
 
 class CompilationTests(unittest.TestCase):
+    @staticmethod
+    def valid_factual_audit(cards: list[dict], editor_document: dict) -> dict:
+        keys = qwen.audit_item_keys(editor_document)
+        return {
+            "draftSha256": qwen.editor_document_sha256(editor_document),
+            "findings": [
+                {
+                    "key": key,
+                    "verdict": "supported",
+                    "reason": "证据直接支持。",
+                    "evidenceQuotes": [
+                        {
+                            "evidenceId": card["id"],
+                            "quote": card["facts"],
+                        }
+                    ],
+                }
+                for key, card in zip(keys, cards)
+            ],
+            "oneLiner": {
+                "verdict": "supported",
+                "reason": "只概括已核验条目。",
+                "supportingItemKeys": keys[:3],
+            },
+        }
+
+    def test_factual_audit_allows_two_quotes_from_one_cited_card(self) -> None:
+        cards, editor_document = valid_main()
+        audit = self.valid_factual_audit(cards, editor_document)
+        audit["findings"][1]["evidenceQuotes"] = [
+            {
+                "evidenceId": cards[1]["id"],
+                "quote": "这张证据卡记录了可核验的新进展",
+            },
+            {
+                "evidenceId": cards[1]["id"],
+                "quote": "并明确保留必要限定和适用边界",
+            },
+        ]
+
+        qwen.validate_factual_audit(audit, editor_document, cards)
+
+    def test_factual_audit_still_requires_every_cited_card(self) -> None:
+        cards, editor_document = valid_main()
+        editor_document["sections"][0]["items"][1]["evidenceIds"] = [
+            cards[1]["id"],
+            cards[2]["id"],
+        ]
+        audit = self.valid_factual_audit(cards, editor_document)
+
+        with self.assertRaisesRegex(qwen.QwenReportError, "every cited evidence card"):
+            qwen.validate_factual_audit(audit, editor_document, cards)
+
     def test_factual_audit_requires_one_pass_for_every_item(self) -> None:
         cards, editor_document = valid_main()
         keys = qwen.audit_item_keys(editor_document)
@@ -982,6 +1044,115 @@ class CompilationTests(unittest.TestCase):
                 with self.assertRaises(qwen.QwenReportError):
                     qwen.compile_sections(editor_document, cards, "main")
 
+    def test_main_low_budget_fails_before_any_model_or_trending_request(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            priority = root / "priority.json"
+            builders = root / "builders.json"
+            reported = root / "reported.md"
+            priority.write_text('{"candidates": []}', "utf-8")
+            builders.write_text('{"x": [], "podcasts": []}', "utf-8")
+            reported.write_text("", "utf-8")
+            arguments = SimpleNamespace(
+                date="2026-08-24",
+                generated_at="2026-08-24T02:17:00Z",
+                priority=priority,
+                builders=builders,
+                reported=reported,
+                artifact_dir=root / "artifacts",
+                base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+                model="qwen3.7-plus",
+                research_timeout=30,
+                editor_timeout=30,
+                cost_cap_cny=1.0,
+            )
+            with mock.patch.dict(qwen.os.environ, {"DASHSCOPE_API_KEY": "secret"}):
+                with mock.patch.object(qwen, "api_post") as api_post:
+                    with mock.patch.object(
+                        qwen, "fetch_github_trending_repositories"
+                    ) as fetch_trending:
+                        with mock.patch.object(qwen, "edit") as edit:
+                            with self.assertRaisesRegex(
+                                qwen.QwenReportError,
+                                "main research minimum reservation",
+                            ):
+                                qwen.run(arguments)
+            api_post.assert_not_called()
+            fetch_trending.assert_not_called()
+            edit.assert_not_called()
+
+    def test_addendum_bypasses_main_research_budget_preflight(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            artifact_dir = root / "artifacts"
+            artifact_dir.mkdir()
+            (artifact_dir / "2026-08-24-1.json").write_text(
+                json.dumps(
+                    {
+                        "date": "2026-08-24 星期一",
+                        "label": "第一期",
+                        "generatedAt": "2026-08-24T02:17:00Z",
+                        "oneLiner": "已有主刊。",
+                        "sections": [],
+                    },
+                    ensure_ascii=False,
+                ),
+                "utf-8",
+            )
+            priority = root / "priority.json"
+            builders = root / "builders.json"
+            reported = root / "reported.md"
+            priority.write_text(
+                json.dumps(
+                    {
+                        "candidates": [
+                            {
+                                "id": "vendor:alpha-preview",
+                                "required": True,
+                                "title": "Alpha Preview",
+                                "summary": "官方确认 Alpha Preview 开放了小范围测试。",
+                                "details": "当前仍保留明确的适用范围和必要限制。",
+                                "url": "https://vendor.example/release",
+                                "officialSource": "Vendor",
+                                "publishedAt": "2026-08-24",
+                                "matchTerms": ["Alpha Preview"],
+                            }
+                        ]
+                    },
+                    ensure_ascii=False,
+                ),
+                "utf-8",
+            )
+            builders.write_text('{"x": [], "podcasts": []}', "utf-8")
+            reported.write_text("", "utf-8")
+            arguments = SimpleNamespace(
+                date="2026-08-24",
+                generated_at="2026-08-24T02:17:00Z",
+                priority=priority,
+                builders=builders,
+                reported=reported,
+                artifact_dir=artifact_dir,
+                base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+                model="qwen3.7-plus",
+                research_timeout=30,
+                editor_timeout=30,
+                cost_cap_cny=1.0,
+            )
+            edit = mock.Mock(side_effect=qwen.QwenReportError("addendum editor reached"))
+            with mock.patch.dict(qwen.os.environ, {"DASHSCOPE_API_KEY": "secret"}):
+                with mock.patch.object(qwen, "research") as research:
+                    with mock.patch.object(
+                        qwen, "fetch_github_trending_repositories"
+                    ) as fetch_trending:
+                        with mock.patch.object(qwen, "edit", edit):
+                            with self.assertRaisesRegex(
+                                qwen.QwenReportError, "addendum editor reached"
+                            ):
+                                qwen.run(arguments)
+            research.assert_not_called()
+            fetch_trending.assert_not_called()
+            edit.assert_called_once()
+
     def test_seventeen_section_minimum_cards_never_reach_editor(self) -> None:
         cards: list[dict] = []
         card_number = 1
@@ -1010,7 +1181,7 @@ class CompilationTests(unittest.TestCase):
                 model="qwen3.7-plus",
                 research_timeout=30,
                 editor_timeout=30,
-                cost_cap_cny=1.0,
+                cost_cap_cny=3.0,
                 trending_repositories={"https://github.com/example/repository"},
             )
             research_diagnostics = {
@@ -1132,6 +1303,7 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("secrets.DASHSCOPE_API_KEY", workflow)
         self.assertIn("scripts/generate_qwen_report.py", workflow)
         self.assertIn("qwen3.7-plus", workflow)
+        self.assertIn("DAILY_REPORT_COST_CAP_CNY: '3.0'", workflow)
         self.assertIn("scripts/build_fallback_report.py", workflow)
         self.assertIn("@github/copilot", workflow)
         self.assertIn("steps.qwen.outcome != 'success'", workflow)

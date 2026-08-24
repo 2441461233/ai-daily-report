@@ -522,15 +522,25 @@
 - 2026-08-23 | WayToAGI 2026-08-21：智能体系统设计
 - 2026-08-23 | WayToAGI 2026-08-21：AI 工程技能地图：构建和部署 AI 应用
 
-## 2026-08-24（第二十三期·自动恢复版）
+## 2026-08-24（第二十三期）
 
-- 2026-08-24 | 社区测试 MiniMax H3 在 RTX 5090 上生成 2MP 视频的速度
-- 2026-08-24 | Codex 团队解释近期额度异常并为付费用户补发重置
-- 2026-08-24 | Generalist GEN-1.5 展示从单次演示学习机器人动作
-- 2026-08-24 | Thinkingbox 用 507 个有状态业务流程衡量 Agent 的持续可靠性
-- 2026-08-24 | Bounded Agents 用授权链限制多 Agent 委托中的攻击半径
-- 2026-08-24 | Prime Intellect 用 153 次长时运行评测自主 AI 研究能力
-- 2026-08-24 | Agent Evals 可先缩小工具面，再逐步优化模型成本
-- 2026-08-24 | Instinct 增加删除已接入外部数据的能力
-- 2026-08-24 | 用 Coding Agent 辅助清理 Google 第三方应用授权
-- 2026-08-24 | Phi-Bench 开放 85 个 LLM 基础设施工程任务
+- 2026-08-24 | Ox Alpha 在 OpenRouter 标为免费：匿名第三方提供长上下文预览
+- 2026-08-24 | Manus 特定用户数据进入删除窗口，Manus 提供备份与恢复安排
+- 2026-08-24 | Alibaba Group 拟在港配售新股：配售净所得将投向全栈 AI 能力
+- 2026-08-24 | Wan3.0 正式上线：文档、表格、幻灯片与网页可直接生成视频
+- 2026-08-24 | GoEnhance AI 扩展视频重塑工作流：已有素材可换风格而无需重拍
+- 2026-08-24 | Higgsfield Adathon 截止时间为 August 24 ET：广告至少 51% AI-generated
+- 2026-08-24 | Thibault Sottiaux：模型效率与可靠性正成为企业议题
+- 2026-08-24 | Peter Yang：AI evals 要结合 top-down 与 bottom-up
+- 2026-08-24 | Guillermo Rauch：开放协议与 Unix 组合是扩展 𝚏𝚡 的路径
+- 2026-08-24 | Peter Steinberger：CLI 之外，UI visualizations 更适合团队共用
+- 2026-08-24 | AI with Authority：proof kernel 让单人指挥 AI agents 实现 RISC-V processor taped out
+- 2026-08-24 | Utility Under Attack：false memory 会显著拖低 Agent 准确率
+- 2026-08-24 | Specification Portability：不同 LLM development agents 不能默认共享中立规格
+- 2026-08-24 | Peter Yang 展示助理 Char 用 Claude Code 与 Codex 处理播客后期
+- 2026-08-24 | Madhu Guru：eval 要按 jobs to be done 检查中间输出
+- 2026-08-24 | Garry Tan 预测 systems of record 需变成 AI harnesses 以免被 agents 取代
+- 2026-08-24 | MiroFish：简洁通用的群体智能引擎，预测万物
+- 2026-08-24 | NVIDIA-NeMo/Speech：面向 LLM、多模态与语音 AI 的可扩展框架
+- 2026-08-24 | NousResearch/hermes-agent：项目定位是与你一起成长的 Agent
+- 2026-08-24 | awesome-gpt-image-2：Prompt as Code | GPT-Image2 工业级提示词引擎与模板库
