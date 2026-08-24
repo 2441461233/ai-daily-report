@@ -22,7 +22,7 @@ jobs:
       contents: read
       copilot-requests: write
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     outputs:
       base_sha: ${{ steps.prepare.outputs.base_sha }}
       collector_now: ${{ steps.prepare.outputs.collector_now }}
@@ -35,7 +35,6 @@ jobs:
       waytoagi_changed_sha256: ${{ steps.prepare.outputs.waytoagi_changed_sha256 }}
     env:
       CI: 'true'
-      COPILOT_HOME: /tmp/copilot-cli
       PYTHONDONTWRITEBYTECODE: '1'
 
     steps:
@@ -135,13 +134,13 @@ jobs:
             --generated-at "${{ steps.prepare.outputs.collector_now }}" \
             --archive-only
 
-      - name: Decide whether the research agent is needed
-        id: need_agent
+      - name: Decide whether the Qwen editor is needed
+        id: need_model
         run: |
           set -euo pipefail
           report_date="${{ steps.prepare.outputs.report_date }}"
           report_file="content/artifacts/${report_date}-1.json"
-          coverage_log="$RUNNER_TEMP/daily-diagnostics/pre-agent-priority-coverage.log"
+          coverage_log="$RUNNER_TEMP/daily-diagnostics/pre-model-priority-coverage.log"
           if [ ! -f "$report_file" ]; then
             required=true
             reason="today's main report is missing"
@@ -157,37 +156,144 @@ jobs:
             reason="a required priority candidate needs an addendum"
           fi
           printf 'required=%s\n' "$required" >> "$GITHUB_OUTPUT"
-          printf 'Research agent required: %s (%s)\n' "$required" "$reason"
+          printf 'Qwen editor required: %s (%s)\n' "$required" "$reason"
 
-      - name: Prepare isolated agent workspace
-        id: agent_workspace
-        if: steps.need_agent.outputs.required == 'true'
+      - name: Prepare isolated Qwen workspace
+        id: qwen_workspace
+        if: steps.need_model.outputs.required == 'true'
         continue-on-error: true
         run: |
           set -euo pipefail
-          agent_workspace="$RUNNER_TEMP/copilot-workspace"
-          mkdir -p "$agent_workspace" "$COPILOT_HOME"
+          model_workspace="$RUNNER_TEMP/qwen-workspace"
+          mkdir -p "$model_workspace"
           rsync -a --delete \
             --exclude '.git/' \
             --exclude 'node_modules/' \
             --exclude 'dist/' \
-            ./ "$agent_workspace/"
+            ./ "$model_workspace/"
 
-      - name: Install pinned GitHub Copilot CLI
-        id: copilot_install
-        if: steps.need_agent.outputs.required == 'true'
+      - name: Research and edit with Qwen3.7 Plus
+        id: qwen
+        if: >-
+          steps.need_model.outputs.required == 'true' &&
+          steps.qwen_workspace.outcome == 'success'
+        continue-on-error: true
+        working-directory: ${{ runner.temp }}/qwen-workspace
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DAILY_REPORT_MODEL: qwen3.7-plus
+          DAILY_REPORT_COST_CAP_CNY: '1.0'
+        run: |
+          set -euo pipefail
+          {
+            timeout --signal=TERM --kill-after=30s 35m \
+              python3 scripts/generate_qwen_report.py \
+              --date "${{ steps.prepare.outputs.report_date }}" \
+              --generated-at "${{ steps.prepare.outputs.collector_now }}" \
+              --builders /tmp/ai-builders.json \
+              --priority /tmp/priority-news.json \
+              --artificial-analysis /tmp/artificial-analysis.json \
+              --waytoagi /tmp/waytoagi.json \
+              --research-timeout 420 \
+              --editor-timeout 420 \
+              --diagnostics "$RUNNER_TEMP/daily-diagnostics/qwen-usage.json"
+            unset DASHSCOPE_API_KEY
+            python3 scripts/validate_content.py
+            python3 scripts/validate_priority_coverage.py \
+              --input /tmp/priority-news.json \
+              --date "${{ steps.prepare.outputs.report_date }}" \
+              --now "${{ steps.prepare.outputs.collector_now }}"
+          } 2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/qwen.log"
+
+      - name: Preflight Qwen candidate
+        id: qwen_preflight
+        if: >-
+          always() &&
+          steps.need_model.outputs.required == 'true' &&
+          steps.qwen.outcome == 'success'
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          report_date="${{ steps.prepare.outputs.report_date }}"
+          qwen_workspace="$RUNNER_TEMP/qwen-workspace"
+          candidate_manifest="$RUNNER_TEMP/daily-diagnostics/qwen-candidate-manifest.txt"
+          : > "$candidate_manifest"
+          shopt -s nullglob
+          for candidate in "$qwen_workspace/content/artifacts/${report_date}-"*.json; do
+            if [ ! -f "$candidate" ] || [ -L "$candidate" ]; then
+              echo "::error::Qwen output is not a regular artifact: $candidate"
+              exit 1
+            fi
+            name="${candidate##*/}"
+            if [[ ! "$name" =~ ^${report_date}-[1-9][0-9]*\.json$ ]]; then
+              echo "::error::Unexpected Qwen artifact name: $name"
+              exit 1
+            fi
+            target="content/artifacts/$name"
+            if [ -e "$target" ]; then
+              if ! cmp -s "$candidate" "$target"; then
+                echo "::error::Qwen attempted to overwrite $target"
+                exit 1
+              fi
+            else
+              printf '%s\n' "$candidate" >> "$candidate_manifest"
+            fi
+          done
+          if [ ! -s "$candidate_manifest" ]; then
+            echo "::error::Qwen did not create a new same-day artifact."
+            exit 1
+          fi
+          candidate_reported="$qwen_workspace/content/reported.md"
+          if [ ! -f "$candidate_reported" ] || [ -L "$candidate_reported" ]; then
+            echo "::error::Qwen did not leave a regular reported.md"
+            exit 1
+          fi
+          python3 - content/reported.md "$candidate_reported" <<'PY'
+          import sys
+          from pathlib import Path
+
+          original = Path(sys.argv[1]).read_bytes()
+          candidate = Path(sys.argv[2]).read_bytes()
+          if not candidate.startswith(original):
+              raise SystemExit("Qwen changed the committed reported.md prefix")
+          PY
+
+      - name: Prepare isolated no-key fallback workspace
+        id: fallback_workspace
+        if: >-
+          always() &&
+          steps.need_model.outputs.required == 'true' &&
+          (
+            steps.qwen.outcome != 'success' ||
+            steps.qwen_preflight.outcome != 'success'
+          )
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          fallback_workspace="$RUNNER_TEMP/copilot-fallback-workspace"
+          mkdir -p "$fallback_workspace" /tmp/copilot-cli
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude 'node_modules/' \
+            --exclude 'dist/' \
+            ./ "$fallback_workspace/"
+
+      - name: Install pinned no-key fallback runner
+        id: fallback_install
+        if: always() && steps.fallback_workspace.outcome == 'success'
         continue-on-error: true
         run: timeout --signal=TERM --kill-after=30s 8m npm install --global @github/copilot@1.0.80
 
-      - name: Run the daily-report research agent
-        id: agent
+      - name: Run the previous no-key research workflow
+        id: fallback_agent
         if: >-
-          steps.need_agent.outputs.required == 'true' &&
-          steps.agent_workspace.outcome == 'success' &&
-          steps.copilot_install.outcome == 'success'
+          always() &&
+          steps.fallback_workspace.outcome == 'success' &&
+          steps.fallback_install.outcome == 'success'
         continue-on-error: true
-        working-directory: ${{ runner.temp }}/copilot-workspace
+        working-directory: ${{ runner.temp }}/copilot-fallback-workspace
         env:
+          COPILOT_HOME: /tmp/copilot-cli
           GITHUB_TOKEN: ${{ github.token }}
           REPORT_DATE: ${{ steps.prepare.outputs.report_date }}
         run: |
@@ -202,27 +308,32 @@ jobs:
             --no-auto-update \
             --no-color \
             --output-format=json \
-            --share="$RUNNER_TEMP/daily-diagnostics/copilot-session.md" \
-            2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/copilot-daily.jsonl"
+            --share="$RUNNER_TEMP/daily-diagnostics/copilot-fallback-session.md" \
+            2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/copilot-fallback.jsonl"
 
-      - name: Accept verified agent output or publish a recovery edition
+      - name: Accept verified model output or publish a recovery edition
         id: accept
-        if: always() && steps.need_agent.outputs.required == 'true'
+        if: always() && steps.need_model.outputs.required == 'true'
         env:
-          AGENT_OUTCOME: ${{ steps.agent.outcome }}
+          QWEN_OUTCOME: ${{ steps.qwen.outcome }}
+          QWEN_PREFLIGHT_OUTCOME: ${{ steps.qwen_preflight.outcome }}
+          FALLBACK_AGENT_OUTCOME: ${{ steps.fallback_agent.outcome }}
         run: |
           set -euo pipefail
           report_date="${{ steps.prepare.outputs.report_date }}"
-          agent_workspace="$RUNNER_TEMP/copilot-workspace"
-          new_manifest="/tmp/copilot-new-artifacts"
+          qwen_workspace="$RUNNER_TEMP/qwen-workspace"
+          fallback_workspace="$RUNNER_TEMP/copilot-fallback-workspace"
+          new_manifest="/tmp/qwen-new-artifacts"
           : > "$new_manifest"
 
           collect_new_artifacts() {
+            local workspace="$1"
             local candidate name target
+            : > "$new_manifest"
             shopt -s nullglob
-            for candidate in "$agent_workspace/content/artifacts/${report_date}-"*.json; do
+            for candidate in "$workspace/content/artifacts/${report_date}-"*.json; do
               if [ ! -f "$candidate" ] || [ -L "$candidate" ]; then
-                echo "::error::Agent output is not a regular artifact: $candidate"
+                echo "::error::Model output is not a regular artifact: $candidate"
                 return 1
               fi
               name="${candidate##*/}"
@@ -233,7 +344,7 @@ jobs:
               target="content/artifacts/$name"
               if [ -e "$target" ]; then
                 if ! cmp -s "$candidate" "$target"; then
-                  echo "::error::The agent attempted to overwrite $target"
+                  echo "::error::Model workflow attempted to overwrite $target"
                   return 1
                 fi
               else
@@ -244,9 +355,10 @@ jobs:
           }
 
           validate_reported_prefix() {
-            local candidate="$agent_workspace/content/reported.md"
+            local workspace="$1"
+            local candidate="$workspace/content/reported.md"
             if [ ! -f "$candidate" ] || [ -L "$candidate" ]; then
-              echo "::error::The agent did not leave a regular reported.md"
+              echo "::error::Model workflow did not leave a regular reported.md"
               return 1
             fi
             python3 - "content/reported.md" "$candidate" <<'PY'
@@ -256,13 +368,14 @@ jobs:
           original = Path(sys.argv[1]).read_bytes()
           candidate = Path(sys.argv[2]).read_bytes()
           if not candidate.startswith(original):
-              raise SystemExit("agent changed the committed reported.md prefix")
+              raise SystemExit("model workflow changed the committed reported.md prefix")
           PY
           }
 
           validate_isolated_output() {
+            local workspace="$1"
             (
-              cd "$agent_workspace"
+              cd "$workspace"
               python3 scripts/validate_content.py
               python3 scripts/validate_priority_coverage.py \
                 --input /tmp/priority-news.json \
@@ -272,19 +385,33 @@ jobs:
           }
 
           accepted=false
-          if [ "$AGENT_OUTCOME" = "success" ] \
-            && collect_new_artifacts \
-            && validate_reported_prefix \
-            && validate_isolated_output; then
+          accepted_workspace=""
+          accepted_route=""
+          if [ "$QWEN_OUTCOME" = "success" ] \
+            && [ "$QWEN_PREFLIGHT_OUTCOME" = "success" ] \
+            && collect_new_artifacts "$qwen_workspace" \
+            && validate_reported_prefix "$qwen_workspace" \
+            && validate_isolated_output "$qwen_workspace"; then
+            accepted_workspace="$qwen_workspace"
+            accepted_route="Qwen3.7 Plus"
+          elif [ "$FALLBACK_AGENT_OUTCOME" = "success" ] \
+            && collect_new_artifacts "$fallback_workspace" \
+            && validate_reported_prefix "$fallback_workspace" \
+            && validate_isolated_output "$fallback_workspace"; then
+            accepted_workspace="$fallback_workspace"
+            accepted_route="previous no-key workflow"
+          fi
+
+          if [ -n "$accepted_workspace" ]; then
             while IFS= read -r candidate; do
               cp -- "$candidate" "content/artifacts/${candidate##*/}"
             done < "$new_manifest"
-            cp -- "$agent_workspace/content/reported.md" content/reported.md
+            cp -- "$accepted_workspace/content/reported.md" content/reported.md
             accepted=true
-            printf 'Accepted %s verified artifact(s) from the isolated agent workspace.\n' \
-              "$(wc -l < "$new_manifest")"
+            printf 'Accepted %s verified artifact(s) from %s.\n' \
+              "$(wc -l < "$new_manifest")" "$accepted_route"
           else
-            echo "Research agent output was unavailable or invalid; using the safe fallback."
+            echo "Qwen and the previous no-key workflow both failed; using the deterministic recovery edition."
           fi
 
           if [ ! -f "content/artifacts/${report_date}-1.json" ] \
@@ -297,8 +424,8 @@ jobs:
               --generated-at "${{ steps.prepare.outputs.collector_now }}"
           fi
 
-          # The agent may create a valid main/addendum but omit deterministic
-          # WayToAGI archive lines. Repair those from the frozen trusted input.
+          # Qwen may create a valid main/addendum; repair deterministic
+          # WayToAGI archive lines from the frozen trusted input afterward.
           python3 scripts/build_fallback_report.py \
             --date "$report_date" \
             --builders /tmp/ai-builders.json \
@@ -312,7 +439,7 @@ jobs:
         run: |
           set -euo pipefail
           {
-            unexpected_changes="$RUNNER_TEMP/unexpected-agent-changes.txt"
+            unexpected_changes="$RUNNER_TEMP/unexpected-model-changes.txt"
             : > "$unexpected_changes"
             while IFS= read -r -d '' changed_path; do
               case "$changed_path" in
@@ -336,7 +463,7 @@ jobs:
               fi
             done)
             if [ -s "$unexpected_changes" ]; then
-              echo "::error::Agent modified files outside the report allowlist:"
+              echo "::error::Model processing modified files outside the report allowlist:"
               sort -u "$unexpected_changes"
               exit 1
             fi
@@ -423,10 +550,13 @@ jobs:
         continue-on-error: true
         env:
           PREPARE_OUTCOME: ${{ steps.prepare.outcome }}
-          NEED_AGENT: ${{ steps.need_agent.outputs.required }}
-          AGENT_WORKSPACE_OUTCOME: ${{ steps.agent_workspace.outcome }}
-          COPILOT_INSTALL_OUTCOME: ${{ steps.copilot_install.outcome }}
-          AGENT_OUTCOME: ${{ steps.agent.outcome }}
+          NEED_MODEL: ${{ steps.need_model.outputs.required }}
+          QWEN_WORKSPACE_OUTCOME: ${{ steps.qwen_workspace.outcome }}
+          QWEN_OUTCOME: ${{ steps.qwen.outcome }}
+          QWEN_PREFLIGHT_OUTCOME: ${{ steps.qwen_preflight.outcome }}
+          FALLBACK_WORKSPACE_OUTCOME: ${{ steps.fallback_workspace.outcome }}
+          FALLBACK_INSTALL_OUTCOME: ${{ steps.fallback_install.outcome }}
+          FALLBACK_AGENT_OUTCOME: ${{ steps.fallback_agent.outcome }}
           ACCEPT_OUTCOME: ${{ steps.accept.outcome }}
           GATES_OUTCOME: ${{ steps.gates.outcome }}
         run: |
@@ -453,10 +583,13 @@ jobs:
             printf 'event_sha=%s\n' "$GITHUB_SHA"
             printf 'base_sha=%s\n' "${{ steps.prepare.outputs.base_sha }}"
             printf 'prepare=%s\n' "$PREPARE_OUTCOME"
-            printf 'need_agent=%s\n' "$NEED_AGENT"
-            printf 'agent_workspace=%s\n' "$AGENT_WORKSPACE_OUTCOME"
-            printf 'copilot_install=%s\n' "$COPILOT_INSTALL_OUTCOME"
-            printf 'agent=%s\n' "$AGENT_OUTCOME"
+            printf 'need_model=%s\n' "$NEED_MODEL"
+            printf 'qwen_workspace=%s\n' "$QWEN_WORKSPACE_OUTCOME"
+            printf 'qwen=%s\n' "$QWEN_OUTCOME"
+            printf 'qwen_preflight=%s\n' "$QWEN_PREFLIGHT_OUTCOME"
+            printf 'fallback_workspace=%s\n' "$FALLBACK_WORKSPACE_OUTCOME"
+            printf 'fallback_install=%s\n' "$FALLBACK_INSTALL_OUTCOME"
+            printf 'fallback_agent=%s\n' "$FALLBACK_AGENT_OUTCOME"
             printf 'accept_or_recover=%s\n' "$ACCEPT_OUTCOME"
             printf 'gates=%s\n' "$GATES_OUTCOME"
           } > "$RUNNER_TEMP/daily-diagnostics/manifest.txt"

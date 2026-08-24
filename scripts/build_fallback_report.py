@@ -663,7 +663,7 @@ def write_recovery_addenda(
             "kind": "addendum",
             "label": label,
             "generatedAt": normalize_generated_at(arguments.generated_at),
-            "oneLiner": "📌 补刊：模型通道不可用，自动补录已验证的官方重大发布。",
+            "oneLiner": "📌 补刊：模型稿未通过生产门，自动补录已验证的官方重大发布。",
             "sections": [{"title": SECTION_ORDER[0], "items": items}],
         }
         atomic_write_text(
@@ -756,7 +756,7 @@ def build_report(arguments: argparse.Namespace) -> Optional[Path]:
         "generatedAt": normalize_generated_at(arguments.generated_at),
         "fallback": True,
         "oneLiner": (
-            "📌 今日一句话：模型通道不可用时先保住可核验的一手信号，"
+            "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，"
             "本期为不调用付费 API 的自动恢复版。"
         ),
         "sections": sections,
