@@ -86,6 +86,8 @@ LEGACY_MAIN_SECTION_POLICY = (
 MAIN_SECTION_ORDER_CUTOVER = "2026-08-18"
 ADDENDUM_KIND = "addendum"
 ADDENDUM_SECTION_TITLE = MAIN_SECTION_POLICY[0][0]
+FALLBACK_FLAG = "fallback"
+FALLBACK_LABEL_SUFFIX = "·自动恢复版"
 
 
 class Errors:
@@ -636,6 +638,110 @@ def validate_current_main_policy(
         )
 
 
+def validate_fallback_main_policy(
+    artifact: dict[str, Any], file: Path, base: str, errors: Errors
+) -> None:
+    """Validate the deterministic, no-model recovery edition.
+
+    A recovery edition is intentionally smaller than the researched 20–28 item
+    report.  It may only use canonical sections, keeps their canonical order,
+    and must say so in the issue label.  This prevents the emergency path from
+    silently presenting a source monitor as a full editorial report.
+    """
+    if artifact.get(FALLBACK_FLAG) is not True:
+        errors.add(file, f"{base}.{FALLBACK_FLAG}", "must be exactly true")
+
+    label = artifact.get("label")
+    if not isinstance(label, str) or not label.endswith(FALLBACK_LABEL_SUFFIX):
+        errors.add(
+            file,
+            f"{base}.label",
+            f"fallback report label must end with {FALLBACK_LABEL_SUFFIX!r}",
+        )
+
+    sections = artifact.get("sections")
+    if not isinstance(sections, list):
+        return
+
+    canonical_titles = [title for title, _minimum, _maximum in MAIN_SECTION_POLICY]
+    positions = {title: index for index, title in enumerate(canonical_titles)}
+    seen_titles: set[str] = set()
+    last_position = -1
+    total_items = 0
+    expanded_items = 0
+
+    if not 1 <= len(sections) <= len(MAIN_SECTION_POLICY):
+        errors.add(
+            file,
+            f"{base}.sections",
+            "fallback report must contain 1–6 non-empty canonical sections",
+        )
+
+    for index, section in enumerate(sections):
+        if not isinstance(section, dict):
+            continue
+        title = section.get("title")
+        if title not in positions:
+            errors.add(
+                file,
+                f"{base}.sections[{index}].title",
+                "fallback report may only use canonical main-report sections",
+            )
+            continue
+        if title in seen_titles:
+            errors.add(
+                file,
+                f"{base}.sections[{index}].title",
+                f"duplicate fallback section {title!r}",
+            )
+        seen_titles.add(title)
+        position = positions[title]
+        if position <= last_position:
+            errors.add(
+                file,
+                f"{base}.sections[{index}].title",
+                "fallback sections must remain in canonical order",
+            )
+        last_position = position
+
+        items = section.get("items")
+        if not isinstance(items, list):
+            continue
+        total_items += len(items)
+        expanded_items += sum(
+            1
+            for item in items
+            if isinstance(item, dict) and item.get("expanded") is True
+        )
+
+    if not 3 <= total_items <= 20:
+        errors.add(
+            file,
+            f"{base}.sections",
+            f"fallback report must contain 3–20 items, found {total_items}",
+        )
+    if expanded_items:
+        errors.add(
+            file,
+            f"{base}.sections",
+            f"fallback report may not claim model-expanded analysis, found {expanded_items}",
+        )
+
+    one_liner = artifact.get("oneLiner")
+    if nonempty_string(one_liner) and not one_liner.startswith("📌 今日一句话："):
+        errors.add(
+            file,
+            f"{base}.oneLiner",
+            "must start with '📌 今日一句话：'",
+        )
+    if nonempty_string(one_liner) and "自动恢复版" not in one_liner:
+        errors.add(
+            file,
+            f"{base}.oneLiner",
+            "fallback report oneLiner must disclose that it is an 自动恢复版",
+        )
+
+
 def validate_addendum_policy(
     artifact: dict[str, Any], file: Path, base: str, errors: Errors
 ) -> None:
@@ -891,6 +997,12 @@ def validate_artifact_file(
     if not legacy:
         validate_generated_at(artifact.get("generatedAt"), file, f"{base}.generatedAt", errors)
         if has_attach_to:
+            if FALLBACK_FLAG in artifact:
+                errors.add(
+                    file,
+                    f"{base}.{FALLBACK_FLAG}",
+                    "attachments must not declare the fallback flag",
+                )
             waytoagi_match = WAYTOAGI_FILENAME_RE.fullmatch(file.name)
             artificial_analysis_match = ARTIFICIAL_ANALYSIS_FILENAME_RE.fullmatch(file.name)
             if waytoagi_match is None and artificial_analysis_match is None:
@@ -956,7 +1068,15 @@ def validate_artifact_file(
 
     if not legacy:
         if kind == ADDENDUM_KIND:
+            if FALLBACK_FLAG in artifact:
+                errors.add(
+                    file,
+                    f"{base}.{FALLBACK_FLAG}",
+                    "addenda must not declare the fallback flag",
+                )
             validate_addendum_policy(artifact, file, base, errors)
+        elif artifact.get(FALLBACK_FLAG) is True:
+            validate_fallback_main_policy(artifact, file, base, errors)
         else:
             validate_current_main_policy(artifact, file, base, errors)
 

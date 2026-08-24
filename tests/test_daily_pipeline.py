@@ -284,6 +284,62 @@ class ValidateMainSectionOrderTests(unittest.TestCase):
         self.assertTrue(any("canonical order" in message for message in messages), messages)
 
 
+class ValidateFallbackMainPolicyTests(unittest.TestCase):
+    @staticmethod
+    def artifact() -> dict:
+        return {
+            "date": "2026-08-24 星期一",
+            "label": "第二十三期·自动恢复版",
+            "fallback": True,
+            "oneLiner": "📌 今日一句话：自动恢复版优先保留可核验的一手信号。",
+            "sections": [
+                {
+                    "title": "🔥 AI 重要事件",
+                    "items": [{"expanded": False} for _ in range(3)],
+                },
+                {
+                    "title": "🌍 海外观察",
+                    "items": [{"expanded": False} for _ in range(3)],
+                },
+                {
+                    "title": "🚀 AI 一人公司（OPC）",
+                    "items": [{"expanded": False} for _ in range(2)],
+                },
+            ],
+        }
+
+    def validate(self, artifact: dict) -> list[str]:
+        errors = validate_content.Errors()
+        validate_content.validate_fallback_main_policy(
+            artifact, Path("report.json"), "$", errors
+        )
+        return errors.messages
+
+    def test_accepts_compact_canonical_recovery_edition(self) -> None:
+        self.assertEqual(self.validate(self.artifact()), [])
+
+    def test_rejects_unmarked_or_misordered_recovery_edition(self) -> None:
+        artifact = self.artifact()
+        artifact["label"] = "第二十三期"
+        artifact["sections"][0], artifact["sections"][1] = (
+            artifact["sections"][1],
+            artifact["sections"][0],
+        )
+
+        messages = self.validate(artifact)
+
+        self.assertTrue(any("自动恢复版" in message for message in messages))
+        self.assertTrue(any("canonical order" in message for message in messages))
+
+    def test_rejects_expanded_analysis_in_no_model_edition(self) -> None:
+        artifact = self.artifact()
+        artifact["sections"][0]["items"][0]["expanded"] = True
+
+        messages = self.validate(artifact)
+
+        self.assertTrue(any("model-expanded" in message for message in messages), messages)
+
+
 class ValidateAddendumTests(unittest.TestCase):
     def validate_file(self, artifact: dict, sequence: int = 2):
         errors = validate_content.Errors()

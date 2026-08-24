@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-18T11:55:00+08:00",
-  "count": 26,
+  "generatedAt": "2026-08-24T11:30:00+08:00",
+  "count": 32,
   "reports": [
     {
       "date": "2026-07-28",
@@ -5782,6 +5782,76 @@
             }
           ],
           "note": "本周期风向：coding agent 的工具链在「插件化」——Cursor 官方插件仓与「万物 CLI 化」同日上榜，agent 专用浏览器把登录态变成可共享基建；另一端，4GB 显存微调 8B、omni 语音 serving 把训练与推理继续往小团队手里塞。回流去重：unsloth、needle、spec-kit、FluidVoice、diagram-design、semantica。"
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "8.10—8.16｜本周 AI 论文精选",
+              "summary": "本周AI论文合集直击大模型与Agent落地的各类隐蔽痛点，或许可以帮你规避不少隐藏陷阱。包含修正缩放定律、大幅降低预训练测算成本的新公式，也曝光了推理轨迹窃取、心智病毒传播等新兴的安全风险。此外还解析了提示词恶性膨胀、上下文压缩丢失约束、底层架构暗藏缺陷等工程难题。做Agent、大模型研发的开发者们可以借鉴下！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/16",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260816"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/B0QvwfQdNicPL2krQclc0MF8nCH"
+                }
+              ]
+            },
+            {
+              "text": "万字长文｜GitHub 从入门到精通",
+              "summary": "这篇文章，作者从0到1把Git、GitHub、Commit、分支、PR和常见报错都实操了一遍，带你掌握Github协作与工程化的协作能力！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/16",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260816"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/Nnb6wEwhri3WyZkdMy5cQJxWnAf"
+                }
+              ]
+            },
+            {
+              "text": "如何设计 Agent Harness",
+              "summary": "Agent频繁出现虚假完成、遗忘规则的问题，往往不是模型不行，而是运行框架Harness设计的不足。这篇文章结合DoorDash、OpenAI、Anthropic的实战案例，拆解了循环控制、工具权限、记忆管理、崩溃恢复、安全边界、任务验收六大关键设计维度。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/16",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260816"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/WTWZw8eu7iZ9rckqbSXcGdcgnQh"
+                }
+              ]
+            },
+            {
+              "text": "科罗拉多大学教授：当AI替你完成越来越多工作，怎样保住自己的学习能力？丨EO",
+              "summary": "AI最危险的地方，可能是让你太快拿到答案，然后误把“看懂了解释”当成自己真的会了。Tom Yeh是科罗拉多大学博尔德分校计算机科学副教授，也是AI by Hand的发起人。他这期播客带我们拆解了下怎样才能保住自己的学习能力！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/16",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260816"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/A75Nw8jkmizYBbkXEkOcmyc1nbd"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/16，按原文日期归档。"
         }
       ],
       "rich": true,
@@ -6479,103 +6549,119 @@
           "title": "🧭 WayToAGI 知识库精选",
           "items": [
             {
-              "text": "陈言：分享一下我在小红书做自媒体的选题工作流",
-              "summary": "陈言分享了他在小红书做自媒体的选题工作流，不是那种抄话题和复刻账号的。他靠这个方法获得了稳定的广告客户与合作机会。来一起看看！",
+              "text": "AI视频入门基础——运镜（二）+转场",
+              "summary": "作者整理了12种运镜+8种转场+4套组合连招+5条心法 ，每种都配了通用模板和具体示例，可以直接套用到你自己的AI视频提示词里。",
               "expanded": false,
               "flag": false,
               "sources": [
                 {
-                  "name": "WayToAGI 精选 8/13",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
                 },
                 {
                   "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/IS1iwIrwriJcqYkrvyacACaUnqg"
+                  "url": "https://waytoagi.feishu.cn/wiki/NBQUwfPzQimPITkqf3jc7T9Bnke"
                 }
               ]
             },
             {
-              "text": "这个封装了我3年实测经验的AI提示词案例网站，今天正式免费开放",
-              "summary": "卡尔把维护了3年的案例库开放了出来，里面有上千条AI视频、前端、Agent 生成记录，还用Seedance 2.0 Fast、MiniMax H3、Wan 3.0跑了136个case，覆盖多素材 MV、文生视频、图生Vlog等场景。",
+              "text": "一个极度实用的深度思考Prompt，帮你挖出最本质的答案。",
+              "summary": "卡兹克分享了一个极度实用的深度思考Prompt：双向钢人Prompt。它会先帮你重述真实问题，再分别强化“支持你”和“反对你”的最强理由，接着找出真正分歧和关键变量，只问一个最关键的问题，等你回答后再给判断和行动。适合用来做决策、写方案、复盘项目，尤其适合那些“我好像知道答案，但又说不清为什么”的问题。",
               "expanded": false,
               "flag": false,
               "sources": [
                 {
-                  "name": "WayToAGI 精选 8/13",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
                 },
                 {
                   "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/RJNbw1hDhiZqjIkJGGxcltf3nhe"
+                  "url": "https://waytoagi.feishu.cn/wiki/AUAYwSpRBiQZSxk9XtecEHfZn7d"
                 }
               ]
             },
             {
-              "text": "DeepSeek Harness 上线：一切皆为插件，一切皆是可能",
-              "summary": "DeepSeek Harness 的 开发者预览版上线，并开源。以 “一切皆插件” 为核心设计理念，框架本身不写死能力，模型、工具、调度循环、UI 都可以通过插件自由替换重组。它拥有PTC、创造模式等多种工作范式，可以降低多步任务的上下文消耗，还能直接生成专属的智能体预设。完整会话日志、多级沙箱与权限审批筑牢了安全底线，还兼容MCP和已有的钩子脚本。多套 SDK 覆盖不同开发场景，对想要深度改造、搭建私有 Agent 的开发者极具参考价值。",
+              "text": "告别AI视频反复抽卡，Seedance 2.5 + 3D预演台才是正确的打开方式",
+              "summary": "AI视频最烧钱的地方，常常藏在空间和运镜里：你脑子里很清楚镜头怎么走、人物站哪、谁挡住谁，一写成提示词，模型就开始猜，最后只能反复抽卡。卡尔用Seedance 2.5+updream预演台给了一个更稳的解法：先用参考图生成粗粒度3D白模，再摆人物、画动线、调机位和关键帧，录好白模后交给Seedance去重渲。一起来看看效果如何！",
               "expanded": false,
               "flag": false,
               "sources": [
                 {
-                  "name": "WayToAGI 精选 8/13",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
                 },
                 {
                   "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/RO06w0R0Iivq3WkGv0ycIsI1noe"
+                  "url": "https://waytoagi.feishu.cn/wiki/I2LNwEHl8iZ4mQkr56tcGZ9Nnue"
                 }
               ]
             },
             {
-              "text": "如何让 34 个 AI Agent 主动干活丨Greg Isenberg",
-              "summary": "很多人一听“34 个 AI Agent”，第一反应可能是：这得多会折腾工具啊。其实这篇最值得看的点，反而不是 Agent 数量，而是 Allie K. Miller 怎么把它们变成一支会主动推进工作的“小团队”。",
+              "text": "大模型本地部署完整指南：搭建自己的 Agent 工作流，实现Token自由「新手友好」",
+              "summary": "国产开源大模型百花齐放，这些模型能不能不只停留在网页和 API 里，而是真正装进自己的机器，连接本地文件、工具和工作流？ 作者这篇文章尽可能让任何小白玩家都可以轻松驾驭，实现模型本地部署并搭建一套自己的工作流，快来一起跟着试试！",
               "expanded": false,
               "flag": false,
               "sources": [
                 {
-                  "name": "WayToAGI 精选 8/13",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
                 },
                 {
                   "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/C9k2wmDY7ip4aMkYC8Zca3pLnYd"
+                  "url": "https://waytoagi.feishu.cn/wiki/CyJrwn8abiUUd9kjjeqcZ25En0g"
                 }
               ]
             },
             {
-              "text": "保姆级教程，Codex 接入 DeepSeek V4 Pro 和 Grok 4.6，6 种方法全整理",
-              "summary": "DeepSeek V4 Pro 正式版发布了，Grok 4.6 也来了。苍何整理了这篇从 0 到 1 的保姆级教程，把DeepSeek V4 Pro和Grok 4.6接入Codex和WorkBuddy的方法做了个非常细致的分享。",
+              "text": "万字长文｜知识库从入门到精通",
+              "summary": "知识库这件事可以很小，小到把一份 PDF 丢给 ChatGPT，也可以很大，大到要接身份系统、业务数据库、本地模型、审计日志和权限策略。这篇文章就从一份文件开始，带你从入门到精通！",
               "expanded": false,
               "flag": false,
               "sources": [
                 {
-                  "name": "WayToAGI 精选 8/13",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
                 },
                 {
                   "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/WZyqwFI5mivtvvkKFWhcZjCfnIu"
+                  "url": "https://waytoagi.feishu.cn/wiki/JQsmwC5vYihYNskPkAQcvWRPn2e"
                 }
               ]
             },
             {
-              "text": "DeepSeek-V4-Pro 正式版上线",
-              "summary": "DeepSeek V4 Pro 正式版已同步在 APP、网页端和 API 更新上线。",
+              "text": "一句话直出各种仙境提示词，这个提示词Skill带你修仙！",
+              "summary": "最近很火的天上白玉京，云中仙宫，很多朋友都很感兴趣。阿真手搓了个营造师 Skill，去任意大家熟悉的Agent装上 Skill，然后给到文中的关键词就可以每次直出3套提示词方案了。",
               "expanded": false,
               "flag": false,
               "sources": [
                 {
-                  "name": "WayToAGI 精选 8/13",
-                  "url": "https://www.waytoagi.com/zh/blog/news-20260813"
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
                 },
                 {
                   "name": "原文（飞书）",
-                  "url": "https://waytoagi.feishu.cn/wiki/CXAGwKXMLi4XNOkE8vSc6vpDnGb"
+                  "url": "https://waytoagi.feishu.cn/wiki/Ni5bwUSGTiepHokRF0Qc77tnn1d"
+                }
+              ]
+            },
+            {
+              "text": "Benchmark 合伙人：为什么下一个爆款AI产品将具备社交功能丨Every",
+              "summary": "Benchmark 合伙人Sarah Tavel这篇播客访谈抛出了一个消费级AI的关键创业思路：模型够用之后，产品竞争会转向用户体验、信任和网络效应。未来的爆款AI产品，可能会让你关注靠谱的人、复用他们的方法、看清提示词和资料来源，并在健康、写作、教育、家庭管理等真实任务里自然沉淀社区内容。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/18",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260818"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/PFcywyQoRisrRIkHAtmcVdCMnIg"
                 }
               ]
             }
           ],
-          "note": "WayToAGI 上游最新可用一期为 8/13，已完整同步 6 条；内容同时按原文日期归档。"
+          "note": "来自 WayToAGI 知识库精选 8/18，按原文日期归档。"
         }
       ],
       "rich": true,
@@ -6584,6 +6670,1553 @@
       "seq": 1,
       "slug": "2026-08-18--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-08-19",
+      "generatedAt": "2026-08-19T12:00:00+08:00",
+      "oneLiner": "📌 今日一句话：这是基于已核验公开来源补录的断档自动恢复版，重点保留零数据留存、Agent 企业接口、视频生成研究与开源 Agent 工具链等可直接核验的信号。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "OpenAI 为前沿模型提供 Zero Data Retention，并预告 Private Safety Processing",
+              "summary": "OpenAI 8 月 19 日宣布，符合条件的 API 客户请求处理后不保留提示与模型响应，企业数据也不会在未主动选择的情况下用于训练。其同时预告可在客户控制的基础设施或客户密钥加密存储上识别跨交互风险的 Private Safety Processing，计划 9 月开始推出。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "OpenAI 官方公告",
+                  "url": "https://openai.com/index/our-commitment-to-zero-data-retention/"
+                }
+              ]
+            },
+            {
+              "text": "Google 面向大学生提供一年 Gemini 订阅，并上线新的学习能力",
+              "summary": "Google 8 月 19 日宣布，符合条件的美国大学生可免费使用 Google AI Pro 12 个月，其他 140 多个市场提供 Google AI Plus 学生优惠。同步推出学生中心、学习笔记本、交互式 3D 可视化等学习功能。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Google 官方博客",
+                  "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+                }
+              ]
+            },
+            {
+              "text": "Waymo 将 Gemini 带入 Ojai 无人出租车车厢",
+              "summary": "Gemini 将作为可选语音助手进入 Waymo 的 Ojai 车型，可调节空调并介绍沿途地点。Google 明确说明该助手与负责驾驶的 Waymo Driver 相互独立，只有乘客主动启用后才工作。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Google 官方博客",
+                  "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/"
+                }
+              ]
+            },
+            {
+              "text": "Salesforce 扩展 Headless 360：MCP Server、100+ Skills 与 Slackbot MCP Client 同步落地",
+              "summary": "Salesforce 8 月 19 日宣布扩展 Headless 360，加入 Headless 360 与 Data 360 MCP Server、100 多个可复用 Skills、Slackbot MCP Client 和新的体验层。授权 Agent 可沿用企业既有身份、权限、元数据与业务规则调用 Salesforce 能力。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Salesforce 官方公告",
+                  "url": "https://www.salesforce.com/news/stories/expanding-headless-360-enterprise-capabilities/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Robin Williams 子女恢复其官方 Instagram，以对抗未经授权的 AI 声音与肖像",
+              "summary": "Variety Australia 8 月 19 日报道，Robin Williams 的子女将长期停更的官方账号恢复为可信影像档案，希望真实照片和视频能压过未经授权的 AI 声音、肖像与深伪内容。账号实际恢复动作发生在 8 月 17 日。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Variety Australia",
+                  "url": "https://au.variety.com/2026/film/global/robin-williams-kids-revive-instagram-account-ai-slop-39518/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Demystifying Agent Skills：Skills 主要充当程序锚点，规模扩大后选择精度快速下降",
+              "summary": "论文通过 8,135 次实验发现，Agent Skills 的主要作用是程序性引导而非知识注入；当候选 Skill 池从 5 扩展到 100 时，实际使用精度由 29.6% 降至 3.3%。论文 8 月 14 日提交 arXiv，并于 8 月 19 日进入 Hugging Face Daily Papers。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.14036"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.14036"
+                }
+              ]
+            },
+            {
+              "text": "StartupBench 用市场验证的端到端工作流测试通用 Agent，最强模型完成率仍约 30%",
+              "summary": "ByteDance Seed 从已获市场采用的创业产品中提炼端到端交付任务，结果显示复杂指令遵循与领域知识仍是主要失败来源。论文 8 月 18 日提交 arXiv，8 月 19 日进入 Hugging Face Daily Papers。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.17800"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.17800"
+                }
+              ]
+            },
+            {
+              "text": "V-RAE 重构视频生成潜空间，最佳配置训练收敛最高加速 6 倍",
+              "summary": "V-RAE 在冻结视觉基础模型表征之上构建紧凑视频生成潜空间，最佳变体训练收敛最高加速 6 倍，并提出衡量时间一致性的 tFVD 指标。论文 8 月 13 日提交 arXiv，8 月 19 日进入 Hugging Face Daily Papers。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.13556"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.13556"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Replit Free Mode 由 GPT-5.6 Luna 驱动，让用户不消耗用量完成软件构思",
+              "summary": "Replit Free Mode 使用 GPT-5.6 Luna 处理规划、构思与反馈，复杂推理可转交 Sol 并保留项目上下文。OpenAI 将其描述为模型性价比改善后，把软件创建能力免费扩展到更多用户的案例。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "OpenAI 客户案例",
+                  "url": "https://openai.com/index/replit/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "chaitanyagiri/munder-difflin：把多种终端 Agent 组织成本地协作办公室",
+              "summary": "Munder Difflin 将 Claude Code、Codex、Kimi 等终端 Agent 接入本地多智能体 Harness，并提供共享记忆、邮箱、任务路由和可视化工作区。8 月 19 日快照记录其为 Repository of the Day，共 2,274 Stars、当日新增 306。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/chaitanyagiri/munder-difflin"
+                },
+                {
+                  "name": "RepoRadar 8 月 19 日快照",
+                  "url": "https://reporadar.spreix.com/reports/daily/2026-08-19"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "DeepSeek harness 必装的 7 个插件，让你的使用体感翻倍",
+              "summary": "很多人本地部署了DeepSeek harness，能力还没有体验，就发现连文件都不能上传给AI分析，生成的文件还需要下载到本地预览。作者整理了7个DeepSeek harness必装的插件，可以让你的使用体感翻倍。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/19",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260819"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/PpQzwwRV9iwCC6kpSnOcyT95n4b"
+                }
+              ]
+            },
+            {
+              "text": "猫叔送你一本50万字的RPG游戏设计宝典",
+              "summary": "拥有二十年游戏行业经验的猫叔，结合自身实战的判断力与AI的体系化知识，开源了一个五十多万字的RPG设计宝典。内容覆盖从立项到上线完整环节，还有问题急救附录与AI辅助生产的落地方案。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/19",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260819"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/WVF3wGP61iZDylktkBtcNp9cnsh"
+                }
+              ]
+            },
+            {
+              "text": "不看一行代码！我用AI把爆火的“宝宝三假医院”做成了小程序",
+              "summary": "从梳理需求、产出开发文档、统一视觉，到AI生成代码、素材托管、真机调试，再搞定类目审核卡点完成上线。梦飞把整个小程序的流程都从头走了一遍，还复盘了一些实操过程中的踩坑经验。普通人可以照搬这套思路，快速把想法变成可上线的小程序产品。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/19",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260819"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/Voa1wqJ9LiEHaikYVLbcObMwnsf"
+                }
+              ]
+            },
+            {
+              "text": "本地跑模型、做微调，现在可以用同一套工具完成：Unsloth",
+              "summary": "如果只看本地推理 ， Ollama 、 LM Studio 和 llama.cpp都是比较成熟的方案。它们可以帮助你下载、管理和运行开源模型。但如果后面要基于自己的数据做 LoRA 或 QLoRA 微调，单纯的推理工具就不够了，还需要训练、数据处理和模型导出能力。Unsloth这套开源工具就给出了一体化的解决方案！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/19",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260819"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/ROglwXG4Aix56ukh1OpcQfJYnVg"
+                }
+              ]
+            },
+            {
+              "text": "Mole 出 Mac 版后，用户教会了我做产品",
+              "summary": "最近作者写了不少关于独立开发的思考，想着要汇总一下，就把他的一款产品从开源CLI做到Mac付费软件这一路聊一聊：他当时是怎么想的，哪些事情做下来真的有用，也许能给正在做自己作品的朋友一些输入。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/19",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260819"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/J5GPwplF0iAsj9kL2cucHclQnug"
+                }
+              ]
+            },
+            {
+              "text": "把AI变成工作系统的6个步骤丨Silicon Valley Girl",
+              "summary": "这期播客集合了多位硅谷从业者的实战经验，揭开了拉开AI产出差距的真正根源。这些人的工具清单并不神秘，区别在于使用方式。一起来看看他们都是怎么使用的！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/19",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260819"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/TH0ywLueQiu8MhkNkr2csAMWnBh"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/19，按原文日期归档。"
+        }
+      ],
+      "rich": true,
+      "label": "第十八期·自动恢复版",
+      "issue": 27,
+      "seq": 1,
+      "slug": "2026-08-19--1",
+      "weekday": "周三"
+    },
+    {
+      "date": "2026-08-20",
+      "generatedAt": "2026-08-20T12:00:00+08:00",
+      "oneLiner": "📌 今日一句话：这是基于已核验公开来源补录的断档自动恢复版，集中记录 Claude Agent API 全面 GA、Gemma 下载破十亿、AI 音乐标识与视频生成评测等确定性进展。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "Anthropic 宣布 Computer Use、Skills API 与 Files API 正式 GA",
+              "summary": "Anthropic 8 月 20 日宣布三项能力在 Claude Platform 正式可用。新版 Computer Use 支持单轮多动作并新增结合截图与页面结构的 Browser Use；Files API 提供自动过期、5 倍限流和每组织 1 TB 存储，Computer Use 也可用于符合 HIPAA 要求的工作负载。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Anthropic 官方博客",
+                  "url": "https://claude.com/blog/computer-use-skills-api-files-api"
+                }
+              ]
+            },
+            {
+              "text": "Anthropic 推出 Claude Academy，提供课程、进度与可选学习 Skill",
+              "summary": "Claude Academy 提供个性化课程推荐、学习进度、徽章以及可选的 Academy Skill。Anthropic 将课程重点放在验证、判断和按风险程度调整核验强度等长期 AI 素养上。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Anthropic 官方博客",
+                  "url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai"
+                }
+              ]
+            },
+            {
+              "text": "Gemma 系列累计下载突破 10 亿次，Google 上线官方 Awesome Gemma 目录",
+              "summary": "Google 8 月 20 日宣布 Gemma 系列累计下载超过 10 亿次，开发者两年间发布了超过 10 万个模型变体。官方同时推出 Awesome Gemma GitHub 目录，集中收录社区项目、微调、教程和开发工具。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Google 官方博客",
+                  "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"
+                }
+              ]
+            },
+            {
+              "text": "OpenAI 成立 Strategic Futures 团队并推出 AI Futures",
+              "summary": "OpenAI 8 月 20 日上线 AI Futures，作为新 Strategic Futures 团队研究成果的发布平台，聚焦变革性 AI 对企业、政府、社会组织和权力结构的影响。页面明确说明文章代表作者观点，不必然等同于 OpenAI 的组织立场。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "OpenAI 官方文章",
+                  "url": "https://openai.com/index/introducing-ai-futures/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Runway 披露企业视频生成进展：业务翻倍、NRR 超 300%",
+              "summary": "Runway 称其 2026 年业务规模已翻倍、净收入留存率超过 300%，欧洲占企业客户 20% 以上；Runway Agent 正被用于端到端媒体生产，部分品牌的创意产量提升至约 10 倍。上述经营和效率数字均为公司自报。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Runway 官方文章",
+                  "url": "https://runway.com/news/company-news%2Fthe-next-phase-of-enterprise-video-generation"
+                }
+              ]
+            },
+            {
+              "text": "Apple Music 计划向听众展示 Made With AI 标签",
+              "summary": "Apple 8 月 20 日向行业伙伴表示，年内将把 AI Transparency Tags 以 Made With AI 标签展示给 Apple Music 听众，可标记音轨、作曲、封面和音乐视频。标签依赖唱片公司及发行商提交元数据，并非 Apple 自动检测。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Music Business Worldwide",
+                  "url": "https://www.musicbusinessworldwide.com/apple-music-to-slap-on-suno/"
+                }
+              ]
+            },
+            {
+              "text": "美国联邦法官拒绝驳回针对 Suno 的主要版权与 DMCA 诉求",
+              "summary": "8 月 20 日的程序性裁定保留了 Anthony Justice 等人针对 Suno 提出的联邦版权法与 DMCA 诉求，仅驳回田纳西州消费者保护法诉求。裁定只意味着案件可以继续审理，并非已认定 Suno 构成侵权。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Bloomberg Law",
+                  "url": "https://news.bloomberglaw.com/ip-law/suno-fails-to-shake-musicians-copyright-suit-over-ai-training"
+                },
+                {
+                  "name": "Justia 案件页",
+                  "url": "https://dockets.justia.com/docket/massachusetts/madce/1%3A2025cv11739/285975"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "SemComp-Bench 开始衡量生成视频是否真正完成任务，而非只看画面质量",
+              "summary": "SemComp-Bench 同时检查生成视频是否达成目标，以及是否保留参考图中与任务相关的高层语义，并用六个领域的数据集给出 OA 与 GR 指标。实验显示代表性视频模型在结果达成和语义落地上仍有明显困难。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.17426"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.17426"
+                }
+              ]
+            },
+            {
+              "text": "VA-Judger 用统一奖励模型评价联合视频音频生成",
+              "summary": "研究构建约 9,000 条提示和 10,300 对人类偏好数据，让一个推理型全模态奖励模型同时评价视觉、音频、文本、同步和连贯性。作者用它缓解多个分散指标被模型钻空子的 Reward Hacking 问题。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.18607"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.18607"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Serval 的自动化生成 Agent Catalyst 正式 GA 并默认启用",
+              "summary": "Catalyst 可从工单历史、自然语言说明、SOP 或表格生成工作流、Skills、表单、权限管理和后台巡检 Agent。Serval 称超过 90% 的测试客户已把 Catalyst 作为自动化起点，所有生成内容先以草稿形式等待人工发布。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Serval 官方公告",
+                  "url": "https://www.serval.com/serval-news/catalyst-general-availability"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "ATH-MaaS/Pixelle-Video：从主题到成片的全自动 AI 短视频引擎",
+              "summary": "Pixelle-Video 以 Apache-2.0 开源，覆盖主题生成脚本、视觉与视频素材、TTS、BGM 和最终渲染，并可接入多种模型与 ComfyUI。8 月 20 日 RepoRadar 将其列为 Star Jump 项目，当日新增 123 Stars；它未进入当天主 Trending 榜。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/ATH-MaaS/Pixelle-Video"
+                },
+                {
+                  "name": "RepoRadar 8 月 20 日快照",
+                  "url": "https://reporadar.spreix.com/reports/daily/2026-08-20"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "DAN KOE：给我 20 分钟，让你变得无法被操控",
+              "summary": "如果你经常刷完信息更焦虑，也说不清自己到底获得了什么，这篇很适合你看。Dan Koe把“被操控”拆成三个思维层级：NPC只会按脚本反应，主角开始质疑和选择，程序员能观察自己的思考，并主动切换视角。或许能帮你把注意力从反应模式里拽回来，重新变成自己的操作系统。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/20",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260820"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/QtPdwqNPGiVJ82kPRCOcBPQYneg"
+                }
+              ]
+            },
+            {
+              "text": "《100 个问题》系列丛书》这份《DeepSeek Harness的100 个问题",
+              "summary": "适合刚刷到Harness但看不懂的人，也适合已经在用Agent干活、想搞清楚“为什么别人用同一个模型更稳”的开发者。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/20",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260820"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/YTt3wPPIeixEK5kbJPnc0YL7nTf"
+                }
+              ]
+            },
+            {
+              "text": "全球AI创造力发展报告2026-AI教育.pdf",
+              "summary": "全球AI创造力发展报告【AI+教育专项】梳理了全球AI+教育从政策驱动、技术突破到应用涌现的十年变化，还有中小学、高校、终身学习、教育产品和人机共生等具体场景。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/20",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260820"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/P4ilw4bWhifrRjkhSvec6mLDnNd"
+                }
+              ]
+            },
+            {
+              "text": "2026 年 成为Agent工程师的12 步路线图—— Loops，Graphs，Evals，Context，Harness",
+              "summary": "这是完整的 12 步路线图，涵盖真正决定智能体能否工作的七大支柱：上下文、工具、记忆、循环、图、开发框架、评估——每一步都有验证其有效性的 Claude 工作流。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/20",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260820"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/DlHIwfDqoiylXSktdSccaB0Gnwe"
+                }
+              ]
+            },
+            {
+              "text": "YC前负责人：如何找到 to C 的创业点子丨Dalton + Michael",
+              "summary": "Dalton Caldwell 和 Michael Seibel 都做过消费互联网公司，也在 Y Combinator 看过上千个创业项目。这次两人讨论了一个更难的问题：今天的消费级 AI 创业者，去哪里找值得做很多年的点子？一起来看看他们的见解！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/20",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260820"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/AVKNweCR5i1mOPkUE9NcRo1mnxc"
+                }
+              ]
+            },
+            {
+              "text": "MiniMax Design：从操作像素，到操作语义和表达意图",
+              "summary": "MiniMax Design发布，是一款把多模态模型能力变成真实可用的生产力的Harness。H3负责提供视频理解、生成、编辑和参考控制能力，MiniMax Design则把这些能力组织成可执行的创作链路，尤其适合视频编辑、商业内容生产这类既要理解素材、又要精准修改和交付的场景。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/20",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260820"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/NohjwrL5OiP0xfkgXRccUASBnOf"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/20，按原文日期归档。"
+        }
+      ],
+      "rich": true,
+      "label": "第十九期·自动恢复版",
+      "issue": 28,
+      "seq": 1,
+      "slug": "2026-08-20--1",
+      "weekday": "周四"
+    },
+    {
+      "date": "2026-08-21",
+      "generatedAt": "2026-08-21T12:00:00+08:00",
+      "oneLiner": "📌 今日一句话：这是基于已核验公开来源补录的断档自动恢复版，保留 Slack 多人 Agent Coding、Mythos 防御能力、低成本模型路由与 4D 视频研究等可复核事件。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "Slack Code 上线：团队与 Coding Agent 在专属频道共同规划、审查和交付代码",
+              "summary": "Slack Code 会为项目自动创建代码频道，让成员共同查看对话、计划、代码 Diff 和实时预览，并在高风险交付前保留人工批准。官方首批支持 Claude、Devin、GitHub Copilot 与 Vercel，ChatGPT 标注为即将提供；发布报道时间换算为上海 8 月 21 日 08:00。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "Slack 官方博客",
+                  "url": "https://slack.com/blog/news/slack-code-channels-for-agents"
+                },
+                {
+                  "name": "VentureBeat",
+                  "url": "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat"
+                }
+              ]
+            },
+            {
+              "text": "Claude Security 开始使用 Mythos 5 扫描代码，Anthropic 设立 3500 万美元开源防御基金",
+              "summary": "Anthropic 8 月 21 日宣布，Claude Enterprise 客户可在 Claude Security 中使用 Mythos 5 扫描代码库、发现漏洞并提出补丁建议。新的 Defender Advantage Fund 将提供 3,500 万美元 Claude credits，用于开源漏洞修复、自动化扫描与新的防御方法。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Anthropic 官方博客",
+                  "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+                }
+              ]
+            },
+            {
+              "text": "OpenAI 将 GPT-5.6 Sol 的 API 与 credit 价格临时下调超过 20%",
+              "summary": "OpenAI 在 GPT-5.6 页面新增 8 月 21 日更新，宣布 Sol 的 API 与 credit 价格未来三个月下调超过 20%。页面当前列示 Sol 每百万 Token 输入 5 美元、输出 30 美元。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "OpenAI 官方页面",
+                  "url": "https://openai.com/index/gpt-5-6/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Meta 将可用提示词生成和 Remix 小游戏的 Pocket 推向美国用户",
+              "summary": "Pocket 允许用户用 AI 提示生成小型互动游戏，作品可响应触摸与手机倾斜、播放音效和歌曲片段，也能使用相册或相机素材并在信息流中分享、保存或 Remix。报道时间为 8 月 20 日 09:07 PDT，即上海 8 月 21 日 00:07。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "TechCrunch",
+                  "url": "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "EnvHarness 用可编程插件让静态 Agent 训练环境针对策略弱点持续变化",
+              "summary": "EnvHarness 在不修改底层验证器的前提下，用插件重塑静态环境；EnvRigger 观察 Agent 轨迹后自动生成针对失败模式的组件。论文在五个基准、四个领域上最高提升 9.0 分，同时执行步骤减少 9.8%，并于 8 月 21 日进入 Hugging Face Daily Papers。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.19880"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.19880"
+                }
+              ]
+            },
+            {
+              "text": "4DAnyone 可从普通单目视频重建动态 4D 人体",
+              "summary": "4DAnyone 先生成重建级、多视角一致的视频，再提升为 4D Gaussian Splatting。Reference Context Packing 与 Target Context Routing 用固定长度参考上下文和跨组信息交换抑制外观及结构漂移；论文提交时间换算为上海 8 月 21 日 01:59。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.20335"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.20335"
+                }
+              ]
+            },
+            {
+              "text": "SWE-bench Science：最强 Coding Agent 在科学软件修复上的 pass@1 仍低于 50%",
+              "summary": "基准包含 20 个科学领域、98 个 GitHub 仓库的 119 项工程任务。作者发现即使 Claude Code 搭配 Opus 5 max，pass@1 仍低于 50%，常见失败来自科学知识不足、错误探索、不完整修复和系统集成；论文于 8 月 21 日进入 Hugging Face Daily Papers。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.19799"
+                },
+                {
+                  "name": "Hugging Face Daily Papers",
+                  "url": "https://huggingface.co/papers/2608.19799"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Ramp 推出 Router.com，用统一 API 按成本、难度和基准切换模型",
+              "summary": "Router.com 接入 OpenAI、Anthropic、DeepSeek、Moonshot、MiniMax 等模型，并提供按成本层级、任务难度和用户指定基准路由的策略与用量面板。目前只在美国开放，2026 年内路由服务免费，但模型推理费用仍由用户承担；报道时间换算为上海 8 月 21 日 00:46。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "TechCrunch",
+                  "url": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/"
+                }
+              ]
+            },
+            {
+              "text": "NanoClaw 进入 Slack：一个 Agent 可按自然语言创建带独立身份的 Agent 团队",
+              "summary": "用户连接 Slack 工作区后，可让现有 NanoClaw Agent 创建拥有独立名称、头像、角色和权限的新 Agent，并在频道与 Canvas 中协作。Agent 运行时和 Token 留在客户基础设施，敏感动作走人工批准；发布时间换算为上海 8 月 21 日 01:25。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "VentureBeat",
+                  "url": "https://venturebeat.com/orchestration/nanoclaw-comes-to-slack-letting-you-create-persistent-ai-agent-teams-and-colleagues-from-a-single-message"
+                },
+                {
+                  "name": "Slack Marketplace",
+                  "url": "https://slack.com/marketplace/A0BLUA9S4JW-nanoclaw"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "Tencent/AI-Infra-Guard：覆盖 Agent、Skills、MCP 与越狱评估的全栈红队平台",
+              "summary": "腾讯朱雀实验室的 AI-Infra-Guard 集成 Agent Scan、Skills Scan、MCP 扫描、AI 基础设施漏洞检测和大模型越狱评估。8 月 21 日快照中进入 Trending 第 11，并被列入 New on the Radar。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "GitHub 仓库",
+                  "url": "https://github.com/Tencent/AI-Infra-Guard"
+                },
+                {
+                  "name": "RepoRadar 8 月 21 日快照",
+                  "url": "https://reporadar.spreix.com/reports/daily/2026-08-21"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "模型来源已不再重要，FDE已经在日本普及？｜Linkloud 东京沙龙实录（一）",
+              "summary": "Linkloud 在东京沙龙的这场对话涵盖了五个层层递进的问题：过去一年 AI 真正跨过了什么门槛、日本企业的态度如何转变、中国开源模型的接受度、PoC 到规模化落地之间的鸿沟在哪里、企业最终在为什么买单？一起来看看具体都输出了哪些见解！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/GlQWweMDDiTDICkaUHjcRHqfn6c"
+                }
+              ]
+            },
+            {
+              "text": "为压进我十年设计经验的 PPT Skill 更新了演讲者视图",
+              "summary": "臧师傅的PPT Skill上线了演讲者视图，无需插件，按下P键即可开启双窗口模式。AI自动生成每页口述备注，把大纲要点、案例、转场单独留存，不会污染演示页面。除此之外，还自带计时与排练统计，可以快速定位超时页面。同时还具备屏幕同步校验、黑屏冻结、激光笔标记等功能，可以有效规避线下分享的临场失误。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/MhYvwqpaQiWQfFkRGdycpoFTnmf"
+                }
+              ]
+            },
+            {
+              "text": "都Agent时代了，我还是想分享给你这12个我最常用的Prompt。",
+              "summary": "卡兹克筛选了12个实战提示词，覆盖提问、高效学习、难题拆解、理性决策、自我洞察五大场景，包含苏格拉底问诊、双层学习解释、横纵分析、专家会诊、双向钢人论证、天赋挖掘、人生设计等模板。能够帮你辨别信息幻觉，推演多元方案，完成深度的自我梳理，快速拉高日常和工作里的AI协作质量。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/UbVKwWbnviXI4CkmCMncdNgJnBf"
+                }
+              ]
+            },
+            {
+              "text": "V4-Flash-Vision-Exp 上线，开启多模态 API 服务",
+              "summary": "全新的多模态视觉理解模型 DeepSeek-V4-Flash-Vision-Exp 上线 DeepSeek API 平台！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/TIjUwTuTrilyllklzYYcNLwin3b"
+                }
+              ]
+            },
+            {
+              "text": "AI 硬件产品上市认证与合规指南",
+              "summary": "这份AI硬件上市合规指南拆解了国内、欧盟、美国三大主流市场的准入规则，覆盖无线、电池安全、数据隐私、AI监管等各类风险点。结合硬件功能、销售地域给出判定逻辑，搭配真实产品案例、研发各阶段时间线、申请材料清单与高频踩坑误区。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/BuImwAAYMiqAN8kRoV3crmwRnHd"
+                }
+              ]
+            },
+            {
+              "text": "智能体系统设计",
+              "summary": "很多人把Agent的成败全部押在模型能力上，真正的瓶颈其实在harness。这份实战指南从工具定义、提示词架构、双层记忆、编排策略到人机回环给出了一套可落地的设计范式。可以试试！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/IxpKwTTtei4H47kVNiic1pSznaf"
+                }
+              ]
+            },
+            {
+              "text": "AI 工程技能地图：构建和部署 AI 应用",
+              "summary": "吴恩达梳理出一个搭建生产级AI应用的核心能力框架。从大模型底层原理、数据上下文供给、智能体系统设计，到评估驱动开发、线上运维、机器学习基础都给出了完整指引。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RIiEwOam7ie5oLkKpVjcyap2nfd"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/21，按原文日期归档。"
+        }
+      ],
+      "rich": true,
+      "label": "第二十期·自动恢复版",
+      "issue": 29,
+      "seq": 1,
+      "slug": "2026-08-21--1",
+      "weekday": "周五"
+    },
+    {
+      "date": "2026-08-22",
+      "generatedAt": "2026-08-22T12:00:00+08:00",
+      "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 AVO 长程 Agent、AI 音视频创作更新与可复用开发工作流。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "NVIDIA AVO 系统在 ARC-AGI-3 长程交互评测中完成全部关卡",
+              "summary": "NVIDIA 8 月 21 日公布，AVO 系统在 ARC-AGI-3 的 25 个环境、183 个关卡上达到 100% RHAE，而其所用 Claude Opus 5 基线约为 30%。该成绩来自模型、规划、记忆和验证组件组成的完整 Agent 架构，不代表裸模型单独得分。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "NVIDIA Technical Blog",
+                  "url": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Runway API 增加 Ruby SDR 转 HDR 视频工作流",
+              "summary": "Runway 8 月 20 日更新 API changelog，新增 `/v1/video_to_hdr`，可把最长 40 秒的 SDR 视频转换为 HDR10、HLG、ProRes 或 OpenEXR，而无需重新生成原内容。Gen-4.5 同时支持直接输出 HDR。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Runway API Changelog",
+                  "url": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+                }
+              ]
+            },
+            {
+              "text": "Adobe Premiere Beta 上线由 Firefly Music 驱动的 Generate Music",
+              "summary": "Adobe 8 月 20 日宣布在 Premiere Beta 27.0 中加入 Generate Music，创作者可直接在时间线内按文字生成背景音乐。该功能也支持从选定视频片段生成配乐提示，以及制作可无缝重复的音乐循环。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Adobe Community 官方公告",
+                  "url": "https://community.adobe.com/announcements-732/now-in-beta-generate-music-in-premiere-1637080"
+                }
+              ]
+            },
+            {
+              "text": "GPT-Image-2 在 ChatGPT 与 API 中支持透明背景图像",
+              "summary": "OpenAI 产品负责人 8 月 21 日披露，GPT-Image-2 已可在 ChatGPT 和 API 中生成带透明通道的图像。该能力适合制作 logo、贴纸、图标和后续合成素材；具体可用范围以对应产品界面和 API 文档为准。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Thibault Sottiaux 的 X 帖文",
+                  "url": "https://x.com/thsottiaux/status/2090631723302469995"
+                }
+              ]
+            },
+            {
+              "text": "DeepSeek 文档出现 V4 Flash Vision 实验模型",
+              "summary": "36Kr 8 月 21 日援引 DeepSeek 文档称，`deepseek-v4-flash-vision-exp` 可接收 JPEG、PNG、GIF 和 WebP 图像输入，文本能力与 V4 Flash 对齐。现阶段应视为实验模型与文档更新，不宜扩写为正式旗舰版本发布。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "36Kr",
+                  "url": "https://ad.36kr.com/p/3949138682379651"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Google DeepMind 与多家游戏工作室拓展复杂虚拟世界中的 Agent 研究",
+              "summary": "Google DeepMind 8 月 21 日介绍其与 EVE Online、Coffee Stain、Hello Games 等开发者的合作，继续把持续变化的游戏世界用作规划、适应和交互研究环境。项目目标是验证可迁移的通用 Agent 能力，而不是发布面向玩家的新模型。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Google DeepMind 官方博客",
+                  "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
+                }
+              ]
+            },
+            {
+              "text": "Anthropic 聘请 Google TPU 项目创始人 Amir Salek 加入计算团队",
+              "summary": "Bloomberg 的转引报道 8 月 21 日称，曾负责前七代 TPU 的 Amir Salek 将加入 Anthropic compute 团队。这是 Anthropic 加强芯片和计算基础设施人才储备的明确信号，但报道未宣布已经推出自研芯片。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Bloomberg 经 Yahoo 新闻转引",
+                  "url": "https://hk.news.yahoo.com/anthropic%E8%81%98%E8%AB%8B%E8%B0%B7%E6%AD%8C%E6%99%B6%E7%89%87%E5%AE%9A%E5%88%B6%E6%99%B6%E7%89%87%E9%A0%85%E7%9B%AE%E5%89%B5%E5%A7%8B%E4%BA%BA-%E7%82%BA%E9%80%B2%E8%BB%8D%E8%87%AA%E7%A0%94%E5%8D%8A%E5%B0%8E%E9%AB%94%E5%81%9A%E6%BA%96%E5%82%99-205148035.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Anthropic 发布 AI-Native SDLC Playbook，给出六阶段 Agent 开发方法",
+              "summary": "Anthropic 8 月 21 日发布的 playbook 把意图、规格、计划、实现、验证和交付串成六阶段流程，并建议版本化维护 `intent.md`、`spec.md`、`plan.md` 与 `CLAUDE.md`。对小团队而言，Skills、Hooks、Evals 和 CI/CD 的组合提供了一套可复用且可审计的工程模板。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Anthropic 官方博客",
+                  "url": "https://claude.com/blog/the-ai-native-sdlc-playbook"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "llm-openrouter 0.7 接入 OpenRouter Responses API 与服务端工具",
+              "summary": "Simon Willison 于 8 月 21 日发布 `llm-openrouter` 0.7，版本兼容 LLM 0.32，并支持 OpenRouter Responses API。新版还加入服务端 Shell、WebFetch 和 WebSearch，便于在同一插件中调用模型与远程工具。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "GitHub Release",
+                  "url": "https://github.com/simonw/llm-openrouter/releases/tag/0.7"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第二十一期·自动恢复版",
+      "issue": 30,
+      "seq": 1,
+      "slug": "2026-08-22--1",
+      "weekday": "周六"
+    },
+    {
+      "date": "2026-08-23",
+      "generatedAt": "2026-08-23T12:00:00+08:00",
+      "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 MCP 路线图、开放多模态权重、仓库级验证与本地 MoE 推理等本周进展。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "Model Context Protocol 发布新版路线图",
+              "summary": "MCP 官方博客 8 月 22 日公布新路线图，优先事项包括 agentic messaging、HTTP 原生传输的统一与加固、Agent identity 与安全、核心 primitives，以及 SDK 开发体验。路线图描述的是后续工作方向，不等同于所有能力已经稳定发布。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Model Context Protocol 官方博客",
+                  "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
+                }
+              ]
+            },
+            {
+              "text": "Guidelight 发布前沿 AI 公司控制能力评估",
+              "summary": "Guidelight 本周发布的公开材料评估将 Anthropic 与 OpenAI 评为 C+、Google 评为 D+、xAI 评为 D−、Meta 评为 F，并称没有任何单项实践超过 3/5。这是一家标准组织基于公开信息的第三方评分，应作为治理观察而非监管结论。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Guidelight AI Standards",
+                  "url": "https://guidelight.ai/blog/control-assessment-august-2026"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "SenseNova-U1.5-8B-MoT 开放完整权重与 8-step LoRA",
+              "summary": "SenseNova 近日开放 U1.5-8B-MoT，重点提升中英文字与版式、原生 4K、图像编辑保真、复杂指令和区域控制，并提供更快的 8-step LoRA。模型以 Apache-2.0 发布，官方也明确提示密集文字、精确布局和复杂编辑仍可能出现误差或漂移。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "SenseNova Hugging Face 模型卡",
+                  "url": "https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT"
+                },
+                {
+                  "name": "OpenSenseNova GitHub 仓库",
+                  "url": "https://github.com/OpenSenseNova/SenseNova-U1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Hugging Face Hub 公共模型数量突破 300 万",
+              "summary": "一篇 8 月 21 日发布的 Hugging Face 社区数据文章显示，Hub 公共模型数在 8 月中旬越过 300 万，并于 8 月 22 日达到 3,012,377。该数据反映开放模型生态的增长速度，但文章由社区作者发布，不是 Hugging Face 财务或使用量报告。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Hugging Face 社区文章",
+                  "url": "https://huggingface.co/blog/ivanfioravanti/three-million-models-and-counting"
+                }
+              ]
+            },
+            {
+              "text": "Grok Bot 扩大至更多 SuperGrok 与 Cursor 订阅计划",
+              "summary": "SpaceXAI 8 月 21 日宣布，Grok Bot 现纳入 SuperGrok Plus、Cursor Pro+ 和全部 Cursor Teams 计划。官方将其定位为运行在持续云电脑上的 AI 队友，可跨应用和邮箱执行多步骤工作，并在需要判断时请求人工批准。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "SpaceXAI 官方公告",
+                  "url": "https://x.ai/news/grok-bot-more-plans"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Vero 用真实多模块仓库评测 AI 同时编写实现与形式化证明",
+              "summary": "Vero 包含 43 个多模块 Lean 4 实例，来源覆盖 Python、Dafny、Verus 和 Coq 仓库，并同时评估代码与证明。论文报告最强 Agent 仅完整解决 27/43，且在最难仓库上没有完成任何规格，显示仓库级验证软件合成仍有明显缺口。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.13522"
+                },
+                {
+                  "name": "Vero GitHub 仓库",
+                  "url": "https://github.com/sunblaze-ucb/vero"
+                }
+              ]
+            },
+            {
+              "text": "FreeToken 让异构消费级设备动态承载更大规模 MoE 模型",
+              "summary": "FreeToken 按实时可用的 CPU、GPU、内存与带宽动态映射计算和模型状态，并支持 20 多个 MoE 模型及真实 Coding Agent。论文展示的部署范围从笔记本上的 35B、游戏台式机上的 284B，到单工作站 GPU 上的 753B GLM-5.2。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.16157"
+                },
+                {
+                  "name": "FreeToken GitHub 仓库",
+                  "url": "https://github.com/FlashML-org/FreeToken"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "OpenSandbox 增加 Grok 与 Codex 订阅接入方式",
+              "summary": "Vercel 负责人 8 月 22 日介绍，OpenSandbox 可用 Grok 与 Codex subscription 驱动隔离执行环境。对小团队而言，这提供了复用现有订阅进行 Agent 实验的路径；支持范围、费用和使用限制仍应以项目文档及各服务条款为准。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Guillermo Rauch 的 X 帖文",
+                  "url": "https://x.com/rauchg/status/2090953806624489501"
+                }
+              ]
+            },
+            {
+              "text": "Anthropic 工程师公开用于代码讲解的 ELI5 Skill",
+              "summary": "Anthropic 工程师 8 月 22 日分享了团队内部使用的 ELI5 Skill 及社区插件安装入口，用渐进式通俗解释帮助读者理解代码和技术概念。它适合 codebase onboarding 与教学，但效果仍取决于输入上下文和人工复核。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Thariq Shihipar 的 X 帖文",
+                  "url": "https://x.com/trq212/status/2090884854590382515"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "Marin 社区规划 535B 总参数、23B 激活参数的 Hero Run",
+              "summary": "Marin 社区本周公开的训练计划采用约 18.75T tokens、11 套 GB200 NVL72，预计运行约 100 天。项目承诺公开配置、loss、scaling 与运行过程；这些数字仍是执行计划，最终训练结果需等待后续记录。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Marin GitHub Issue",
+                  "url": "https://github.com/marin-community/marin/issues/8435"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Grok 4.6 (xhigh) 升至第 7 名",
+              "summary": "Grok 4.6 (xhigh) 新进入 Artificial Analysis Intelligence Index 前十，当前第 7 名，得分 60。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：GLM-5.3 (max) 升至第 9 名",
+              "summary": "GLM-5.3 (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 9 名，得分 60。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Opus 5 (medium)",
+              "summary": "Claude Opus 5 (medium) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 59。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Qwen3.8 Max",
+              "summary": "Qwen3.8 Max 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 58。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Kimi K3 (max) 第 7 → 8 名",
+              "summary": "Kimi K3 (max) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 7 名变为第 8 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-5.6 Sol (xhigh) 第 8 → 10 名",
+              "summary": "GPT-5.6 Sol (xhigh) 在 Artificial Analysis Intelligence Index 中下降 2 位，由第 8 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 6 项变化；当前榜首为 Claude Opus 5 (max)（63 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第二十二期·自动恢复版",
+      "issue": 31,
+      "seq": 1,
+      "slug": "2026-08-23--1",
+      "weekday": "周日"
+    },
+    {
+      "date": "2026-08-24",
+      "generatedAt": "2026-08-24T11:30:00+08:00",
+      "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 Agent 可靠性与授权研究、Codex 用量复盘、本地视频实测及小团队安全实践。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "社区测试 MiniMax H3 在 RTX 5090 上生成 2MP 视频的速度",
+              "summary": "8 月 24 日的一则 ComfyUI 社区帖报告，在 RTX 5090、2MP、20 steps 并启用 Comfy Kitchen 的条件下，MiniMax H3 约为 12 秒每 iteration。该结果来自单台机器和单一工作流，只能作为本地部署参考，不能视为官方基准。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Reddit r/comfyui 社区实测",
+                  "url": "https://www.reddit.com/r/comfyui/comments/1vvoeto/is_this_good_speed_itsec_for_rtx_5090_minimax_h3/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Codex 团队解释近期额度异常并为付费用户补发重置",
+              "summary": "Codex 产品负责人 8 月 23 日表示，近期异常消耗主要与图像输入、超长会话及多次 compaction，以及一个内部 title 功能有关。团队称已修复相关问题并给付费用户补发 reset；这是一则具体故障复盘，不代表所有额度问题都已永久消失。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Thibault Sottiaux 的 X 帖文",
+                  "url": "https://x.com/thsottiaux/status/2091407991736332689"
+                }
+              ]
+            },
+            {
+              "text": "Generalist GEN-1.5 展示从单次演示学习机器人动作",
+              "summary": "Generalist 近日公布 GEN-1.5，称模型可把 3 至 12 秒的单次演示作为 physical prompt，无需梯度更新即可学习新动作，并输出 100Hz 动作轨迹。官方同时说明当前展示仍以简单、短时程任务为主，泛化边界有待进一步验证。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Generalist AI 官方博客",
+                  "url": "https://generalistai.com/blog/gen-1.5"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thinkingbox 用 507 个有状态业务流程衡量 Agent 的持续可靠性",
+              "summary": "Thinkingbox 提供隔离的 MCP-compatible 工具会话、完整执行轨迹和后端状态校验，基准覆盖零售、酒店、保险、银行 IT 与咨询支持等 507 个流程。最强模型 pass@1 为 65.36%，但 pass^20 仅 25.25%，显示偶尔成功不能代表稳定交付。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.19741"
+                },
+                {
+                  "name": "Microsoft Thinkingbox GitHub 仓库",
+                  "url": "https://github.com/microsoft/thinkingbox"
+                }
+              ]
+            },
+            {
+              "text": "Bounded Agents 用授权链限制多 Agent 委托中的攻击半径",
+              "summary": "论文提出 Agentic Principal Chain，在模型外执行六项授权检查，并把委托范围与预算沿调用链持续收紧。3154 个评测实例中，AgentDojo 数据外泄降至 0%，且拦截 544 个 InjecAgent 窃取案例；代价是两种设置下效用分别下降 8.6 和 13.9 个百分点。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "arXiv",
+                  "url": "https://arxiv.org/abs/2608.15888"
+                },
+                {
+                  "name": "Bounded Agents GitHub 仓库",
+                  "url": "https://github.com/xmuruaga/bounded-agents"
+                }
+              ]
+            },
+            {
+              "text": "Prime Intellect 用 153 次长时运行评测自主 AI 研究能力",
+              "summary": "Prime Intellect 本月对 18 个前沿模型进行了 153 次 nanoGPT 优化实验，单次最长 8 天、使用 8 张 H200。结果显示模型在实验选择、执行和噪声解释上差距明显，但没有一次运行产生根本性的新方法。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Prime Intellect 官方研究博客",
+                  "url": "https://www.primeintellect.ai/blog/measuring-autonomous-research"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Agent Evals 可先缩小工具面，再逐步优化模型成本",
+              "summary": "AI 产品实践者 Madhu 8 月 23 日建议用 hill-climbing 方式优化 Agent：先把约 20 个工具收敛到 3 至 5 个，建立可重复评测并稳定质量，再切换到成本更低的模型。该方法属于实践建议，不是统一适用的基准结论。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Madhu Guru 的 X 帖文",
+                  "url": "https://x.com/realmadhuguru/status/2091278653435072523"
+                }
+              ]
+            },
+            {
+              "text": "Instinct 增加删除已接入外部数据的能力",
+              "summary": "Instinct 团队近日在用户提出数据控制疑问后加入外部数据删除入口。该更新改善了小团队使用个人知识 Agent 时的可控性，但新增入口不等于历史数据已经自动清除，用户仍应主动检查授权和删除状态。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Peter Yang 的 X 帖文",
+                  "url": "https://x.com/petergyang/status/2091187611507499321"
+                }
+              ]
+            },
+            {
+              "text": "用 Coding Agent 辅助清理 Google 第三方应用授权",
+              "summary": "Peter Yang 8 月 23 日展示用 Codex 或 Claude Code 的浏览器能力梳理并撤销 Google 账户中的第三方应用访问。这是一个具体的安全卫生用例；涉及 OAuth 权限的最终确认仍应由用户亲自完成。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Peter Yang 的 X 帖文",
+                  "url": "https://x.com/petergyang/status/2091331251211059468"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "💻 GitHub Trending",
+          "items": [
+            {
+              "text": "Phi-Bench 开放 85 个 LLM 基础设施工程任务",
+              "summary": "Phi-Bench 仓库近日进入社区讨论，收录 85 个开源 LLM 基础设施工程任务，覆盖 kernel、长时程与端到端场景。每项任务提供独立 Docker 环境、离线评分和参考解，目标是评估前沿模型与 Coding Agent 能否优化真实推理基础设施。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Phi-Bench GitHub 仓库",
+                  "url": "https://github.com/one2piece2hello/faibench_Frontier_InfraBench/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "模型来源已不再重要，FDE已经在日本普及？｜Linkloud 东京沙龙实录（一）",
+              "summary": "Linkloud 在东京沙龙的这场对话涵盖了五个层层递进的问题：过去一年 AI 真正跨过了什么门槛、日本企业的态度如何转变、中国开源模型的接受度、PoC 到规模化落地之间的鸿沟在哪里、企业最终在为什么买单？一起来看看具体都输出了哪些见解！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/GlQWweMDDiTDICkaUHjcRHqfn6c"
+                }
+              ]
+            },
+            {
+              "text": "为压进我十年设计经验的 PPT Skill 更新了演讲者视图",
+              "summary": "臧师傅的PPT Skill上线了演讲者视图，无需插件，按下P键即可开启双窗口模式。AI自动生成每页口述备注，把大纲要点、案例、转场单独留存，不会污染演示页面。除此之外，还自带计时与排练统计，可以快速定位超时页面。同时还具备屏幕同步校验、黑屏冻结、激光笔标记等功能，可以有效规避线下分享的临场失误。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/MhYvwqpaQiWQfFkRGdycpoFTnmf"
+                }
+              ]
+            },
+            {
+              "text": "都Agent时代了，我还是想分享给你这12个我最常用的Prompt。",
+              "summary": "卡兹克筛选了12个实战提示词，覆盖提问、高效学习、难题拆解、理性决策、自我洞察五大场景，包含苏格拉底问诊、双层学习解释、横纵分析、专家会诊、双向钢人论证、天赋挖掘、人生设计等模板。能够帮你辨别信息幻觉，推演多元方案，完成深度的自我梳理，快速拉高日常和工作里的AI协作质量。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/UbVKwWbnviXI4CkmCMncdNgJnBf"
+                }
+              ]
+            },
+            {
+              "text": "V4-Flash-Vision-Exp 上线，开启多模态 API 服务",
+              "summary": "全新的多模态视觉理解模型 DeepSeek-V4-Flash-Vision-Exp 上线 DeepSeek API 平台！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/TIjUwTuTrilyllklzYYcNLwin3b"
+                }
+              ]
+            },
+            {
+              "text": "AI 硬件产品上市认证与合规指南",
+              "summary": "这份AI硬件上市合规指南拆解了国内、欧盟、美国三大主流市场的准入规则，覆盖无线、电池安全、数据隐私、AI监管等各类风险点。结合硬件功能、销售地域给出判定逻辑，搭配真实产品案例、研发各阶段时间线、申请材料清单与高频踩坑误区。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/BuImwAAYMiqAN8kRoV3crmwRnHd"
+                }
+              ]
+            },
+            {
+              "text": "智能体系统设计",
+              "summary": "很多人把Agent的成败全部押在模型能力上，真正的瓶颈其实在harness。这份实战指南从工具定义、提示词架构、双层记忆、编排策略到人机回环给出了一套可落地的设计范式。可以试试！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/IxpKwTTtei4H47kVNiic1pSznaf"
+                }
+              ]
+            },
+            {
+              "text": "AI 工程技能地图：构建和部署 AI 应用",
+              "summary": "吴恩达梳理出一个搭建生产级AI应用的核心能力框架。从大模型底层原理、数据上下文供给、智能体系统设计，到评估驱动开发、线上运维、机器学习基础都给出了完整指引。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/21",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260821"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RIiEwOam7ie5oLkKpVjcyap2nfd"
+                }
+              ]
+            }
+          ],
+          "note": "WayToAGI 上游最新可用一期为 8/21，已完整同步 7 条；内容同时按原文日期归档。"
+        }
+      ],
+      "rich": true,
+      "label": "第二十三期·自动恢复版",
+      "issue": 32,
+      "seq": 1,
+      "slug": "2026-08-24--1",
+      "weekday": "周一"
     }
   ]
 }

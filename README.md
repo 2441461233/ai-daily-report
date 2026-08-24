@@ -7,11 +7,12 @@ Agent 任务书和自动化工作流全部在同一个仓库内，不依赖 Evan
 
 ```text
 每天 10:17（Asia/Shanghai / UTC 02:17）主运行，10:47 幂等兜底
-  → GitHub Actions 启动 Kimi Code Agent
+  → GitHub Actions 在隔离副本中启动 GitHub Copilot CLI 研究 Agent
   → 直采官方 news/changelog，生成强制重大候选清单
   → 读取 Artificial Analysis Intelligence Index 前 10，与已验证快照比较
   → 确定性采集 WayToAGI，并直接写入完整 attachment 与 /tmp/waytoagi.json
   → 并行检索、核验主日报并语义去重
+  → Copilot 不可用或产物未通过验证时，生成有明确标识的“自动恢复版”
   → 写入 content/artifacts/*.json
   → 强制核对每条重大候选的 id + 官方证据 URL + 版本匹配词
   → 有榜单变化时逐字核对独立 attachment；通过后才推进排名快照
@@ -33,6 +34,7 @@ content/reported.md                   跨期语义去重档案
 content/artificial-analysis-snapshot.json  Artificial Analysis 最近一次已验证榜单快照
 content/waytoagi-consumed.txt         由 WayToAGI attachment 严格派生的消费状态
 scripts/build_data.py                 将仓内内容编译为前端数据
+scripts/build_fallback_report.py      无模型/API 的确定性自动恢复版生成器
 scripts/validate_content.py           内容 schema / URL / 重复校验
 scripts/fetch_official_priority_sources.mjs  官方重大发布直采与备用路径
 scripts/fetch_artificial_analysis.mjs  官方 Intelligence Index 前 10 与增量比较
@@ -90,7 +92,9 @@ required candidate。任一 required 候选未在当日主刊或补刊中完整�
 
 ## 首次上线
 
-仓库推到 GitHub 后，还需要一次性添加 Kimi Secret 并连接 Vercel。完整步骤见 [DEPLOY.md](DEPLOY.md)。
+仓库推到 GitHub 后，不再需要配置模型 API Key；连接 Vercel 并确认 GitHub Copilot/Actions 权限即可。
+即使 Copilot 当天不可用，工作流仍会用已验证的公开 feed 发布“自动恢复版”。完整步骤见
+[DEPLOY.md](DEPLOY.md)。
 
 自动任务也可以在 GitHub 的 **Actions → Daily AI report → Run workflow** 手动补跑。若发现未覆盖的强制候选，
 同日重跑会新建连续编号的小型补刊；若候选均已覆盖，才保持幂等。主刊与已提交补刊均不可覆盖。

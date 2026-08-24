@@ -1,0 +1,152 @@
+{
+  "date": "2026-08-24 星期一",
+  "label": "第二十三期·自动恢复版",
+  "fallback": true,
+  "generatedAt": "2026-08-24T11:30:00+08:00",
+  "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 Agent 可靠性与授权研究、Codex 用量复盘、本地视频实测及小团队安全实践。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "社区测试 MiniMax H3 在 RTX 5090 上生成 2MP 视频的速度",
+          "summary": "8 月 24 日的一则 ComfyUI 社区帖报告，在 RTX 5090、2MP、20 steps 并启用 Comfy Kitchen 的条件下，MiniMax H3 约为 12 秒每 iteration。该结果来自单台机器和单一工作流，只能作为本地部署参考，不能视为官方基准。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Reddit r/comfyui 社区实测（单一来源）",
+              "url": "https://www.reddit.com/r/comfyui/comments/1vvoeto/is_this_good_speed_itsec_for_rtx_5090_minimax_h3/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Codex 团队解释近期额度异常并为付费用户补发重置",
+          "summary": "Codex 产品负责人 8 月 23 日表示，近期异常消耗主要与图像输入、超长会话及多次 compaction，以及一个内部 title 功能有关。团队称已修复相关问题并给付费用户补发 reset；这是一则具体故障复盘，不代表所有额度问题都已永久消失。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Thibault Sottiaux 的 X 帖文（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2091407991736332689"
+            }
+          ]
+        },
+        {
+          "headline": "Generalist GEN-1.5 展示从单次演示学习机器人动作",
+          "summary": "Generalist 近日公布 GEN-1.5，称模型可把 3 至 12 秒的单次演示作为 physical prompt，无需梯度更新即可学习新动作，并输出 100Hz 动作轨迹。官方同时说明当前展示仍以简单、短时程任务为主，泛化边界有待进一步验证。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Generalist AI 官方博客（单一来源）",
+              "url": "https://generalistai.com/blog/gen-1.5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thinkingbox 用 507 个有状态业务流程衡量 Agent 的持续可靠性",
+          "summary": "Thinkingbox 提供隔离的 MCP-compatible 工具会话、完整执行轨迹和后端状态校验，基准覆盖零售、酒店、保险、银行 IT 与咨询支持等 507 个流程。最强模型 pass@1 为 65.36%，但 pass^20 仅 25.25%，显示偶尔成功不能代表稳定交付。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.19741"
+            },
+            {
+              "name": "Microsoft Thinkingbox GitHub 仓库",
+              "url": "https://github.com/microsoft/thinkingbox"
+            }
+          ]
+        },
+        {
+          "headline": "Bounded Agents 用授权链限制多 Agent 委托中的攻击半径",
+          "summary": "论文提出 Agentic Principal Chain，在模型外执行六项授权检查，并把委托范围与预算沿调用链持续收紧。3154 个评测实例中，AgentDojo 数据外泄降至 0%，且拦截 544 个 InjecAgent 窃取案例；代价是两种设置下效用分别下降 8.6 和 13.9 个百分点。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.15888"
+            },
+            {
+              "name": "Bounded Agents GitHub 仓库",
+              "url": "https://github.com/xmuruaga/bounded-agents"
+            }
+          ]
+        },
+        {
+          "headline": "Prime Intellect 用 153 次长时运行评测自主 AI 研究能力",
+          "summary": "Prime Intellect 本月对 18 个前沿模型进行了 153 次 nanoGPT 优化实验，单次最长 8 天、使用 8 张 H200。结果显示模型在实验选择、执行和噪声解释上差距明显，但没有一次运行产生根本性的新方法。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Prime Intellect 官方研究博客（单一来源）",
+              "url": "https://www.primeintellect.ai/blog/measuring-autonomous-research"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Agent Evals 可先缩小工具面，再逐步优化模型成本",
+          "summary": "AI 产品实践者 Madhu 8 月 23 日建议用 hill-climbing 方式优化 Agent：先把约 20 个工具收敛到 3 至 5 个，建立可重复评测并稳定质量，再切换到成本更低的模型。该方法属于实践建议，不是统一适用的基准结论。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Madhu Guru 的 X 帖文（单一来源）",
+              "url": "https://x.com/realmadhuguru/status/2091278653435072523"
+            }
+          ]
+        },
+        {
+          "headline": "Instinct 增加删除已接入外部数据的能力",
+          "summary": "Instinct 团队近日在用户提出数据控制疑问后加入外部数据删除入口。该更新改善了小团队使用个人知识 Agent 时的可控性，但新增入口不等于历史数据已经自动清除，用户仍应主动检查授权和删除状态。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Peter Yang 的 X 帖文（单一来源）",
+              "url": "https://x.com/petergyang/status/2091187611507499321"
+            }
+          ]
+        },
+        {
+          "headline": "用 Coding Agent 辅助清理 Google 第三方应用授权",
+          "summary": "Peter Yang 8 月 23 日展示用 Codex 或 Claude Code 的浏览器能力梳理并撤销 Google 账户中的第三方应用访问。这是一个具体的安全卫生用例；涉及 OAuth 权限的最终确认仍应由用户亲自完成。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Peter Yang 的 X 帖文（单一来源）",
+              "url": "https://x.com/petergyang/status/2091331251211059468"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "items": [
+        {
+          "headline": "Phi-Bench 开放 85 个 LLM 基础设施工程任务",
+          "summary": "Phi-Bench 仓库近日进入社区讨论，收录 85 个开源 LLM 基础设施工程任务，覆盖 kernel、长时程与端到端场景。每项任务提供独立 Docker 环境、离线评分和参考解，目标是评估前沿模型与 Coding Agent 能否优化真实推理基础设施。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Phi-Bench GitHub 仓库（单一来源）",
+              "url": "https://github.com/one2piece2hello/faibench_Frontier_InfraBench/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

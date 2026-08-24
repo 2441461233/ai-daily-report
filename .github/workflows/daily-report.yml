@@ -20,6 +20,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
     permissions:
       contents: read
+      copilot-requests: write
     runs-on: ubuntu-latest
     timeout-minutes: 90
     outputs:
@@ -34,8 +35,7 @@ jobs:
       waytoagi_changed_sha256: ${{ steps.prepare.outputs.waytoagi_changed_sha256 }}
     env:
       CI: 'true'
-      KIMI_DISABLE_TELEMETRY: '1'
-      KIMI_CODE_HOME: /tmp/kimi-code
+      COPILOT_HOME: /tmp/copilot-cli
       PYTHONDONTWRITEBYTECODE: '1'
 
     steps:
@@ -49,20 +49,8 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Require Kimi API secret
-        env:
-          KIMI_MODEL_API_KEY: ${{ secrets.KIMI_API_KEY }}
-        run: |
-          if [ -z "$KIMI_MODEL_API_KEY" ]; then
-            echo "::error::Add KIMI_API_KEY in repository Settings > Secrets and variables > Actions."
-            exit 1
-          fi
-
       - name: Install site dependencies
         run: npm ci
-
-      - name: Install pinned Kimi Code CLI
-        run: npm install --global @moonshot-ai/kimi-code@0.34.0
 
       - name: Prepare deterministic research inputs
         id: prepare
@@ -135,32 +123,189 @@ jobs:
             printf 'waytoagi_sha256=%s\n' "$waytoagi_sha256"
             printf 'waytoagi_changed_sha256=%s\n' "$waytoagi_changed_sha256"
           } >> "$GITHUB_OUTPUT"
-          mkdir -p "$KIMI_CODE_HOME"
-          cp automation/kimi-ci-config.toml "$KIMI_CODE_HOME/config.toml"
 
-      - name: Run the daily-report agent
+      - name: Archive validated deterministic items
+        run: |
+          set -euo pipefail
+          python3 scripts/build_fallback_report.py \
+            --date "${{ steps.prepare.outputs.report_date }}" \
+            --builders /tmp/ai-builders.json \
+            --priority /tmp/priority-news.json \
+            --waytoagi /tmp/waytoagi.json \
+            --generated-at "${{ steps.prepare.outputs.collector_now }}" \
+            --archive-only
+
+      - name: Decide whether the research agent is needed
+        id: need_agent
+        run: |
+          set -euo pipefail
+          report_date="${{ steps.prepare.outputs.report_date }}"
+          report_file="content/artifacts/${report_date}-1.json"
+          coverage_log="$RUNNER_TEMP/daily-diagnostics/pre-agent-priority-coverage.log"
+          if [ ! -f "$report_file" ]; then
+            required=true
+            reason="today's main report is missing"
+          elif python3 scripts/validate_priority_coverage.py \
+            --input /tmp/priority-news.json \
+            --date "$report_date" \
+            --now "${{ steps.prepare.outputs.collector_now }}" \
+            > "$coverage_log" 2>&1; then
+            required=false
+            reason="today's report already covers every required candidate"
+          else
+            required=true
+            reason="a required priority candidate needs an addendum"
+          fi
+          printf 'required=%s\n' "$required" >> "$GITHUB_OUTPUT"
+          printf 'Research agent required: %s (%s)\n' "$required" "$reason"
+
+      - name: Prepare isolated agent workspace
+        id: agent_workspace
+        if: steps.need_agent.outputs.required == 'true'
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          agent_workspace="$RUNNER_TEMP/copilot-workspace"
+          mkdir -p "$agent_workspace" "$COPILOT_HOME"
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude 'node_modules/' \
+            --exclude 'dist/' \
+            ./ "$agent_workspace/"
+
+      - name: Install pinned GitHub Copilot CLI
+        id: copilot_install
+        if: steps.need_agent.outputs.required == 'true'
+        continue-on-error: true
+        run: timeout --signal=TERM --kill-after=30s 8m npm install --global @github/copilot@1.0.80
+
+      - name: Run the daily-report research agent
         id: agent
+        if: >-
+          steps.need_agent.outputs.required == 'true' &&
+          steps.agent_workspace.outcome == 'success' &&
+          steps.copilot_install.outcome == 'success'
+        continue-on-error: true
+        working-directory: ${{ runner.temp }}/copilot-workspace
         env:
-          KIMI_MODEL_NAME: ${{ vars.KIMI_MODEL || 'kimi-k3' }}
-          KIMI_MODEL_PROVIDER_TYPE: kimi
-          KIMI_MODEL_API_KEY: ${{ secrets.KIMI_API_KEY }}
-          KIMI_MODEL_BASE_URL: ${{ vars.KIMI_BASE_URL || 'https://api.moonshot.ai/v1' }}
-          KIMI_MODEL_MAX_CONTEXT_SIZE: ${{ vars.KIMI_CONTEXT_SIZE || '1048576' }}
-          KIMI_MODEL_CAPABILITIES: thinking,always_thinking,image_in,video_in,tool_use
-          KIMI_MODEL_THINKING_EFFORT: max
-          KIMI_MODEL_THINKING_KEEP: all
-          KIMI_WEB_SEARCH_BASE_URL: ${{ vars.KIMI_WEB_SEARCH_BASE_URL || 'https://api.moonshot.ai/v1/search' }}
-          KIMI_WEB_SEARCH_API_KEY: ${{ secrets.KIMI_WEB_SEARCH_API_KEY || secrets.KIMI_API_KEY }}
-          KIMI_WEB_FETCH_BASE_URL: ${{ vars.KIMI_WEB_FETCH_BASE_URL || 'https://api.moonshot.ai/v1/fetch' }}
-          KIMI_WEB_FETCH_API_KEY: ${{ secrets.KIMI_WEB_FETCH_API_KEY || secrets.KIMI_API_KEY }}
-          KIMI_LOOP_MAX_STEPS_PER_TURN: '240'
+          GITHUB_TOKEN: ${{ github.token }}
           REPORT_DATE: ${{ steps.prepare.outputs.report_date }}
         run: |
           set -o pipefail
-          kimi \
-            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully Read /tmp/report-date, /tmp/priority-news.json, /tmp/artificial-analysis.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. If /tmp/waytoagi.json has sourceStatus.status=unavailable, continue the main report, do not refetch WayToAGI or modify its artifacts/state, and report the outage in the final run summary. Work autonomously, obey the file scope, cover every required priority candidate, preserve every deterministic attachment, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
-            --output-format stream-json \
-            2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/kimi-daily.jsonl"
+          timeout --signal=TERM --kill-after=30s 45m copilot \
+            --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully read /tmp/report-date, /tmp/priority-news.json, /tmp/artificial-analysis.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. If /tmp/waytoagi.json has sourceStatus.status=unavailable, continue the main report, do not refetch WayToAGI or modify its artifacts/state, and report the outage in the final run summary. Work autonomously, obey the file scope, cover every required priority candidate, preserve every deterministic attachment, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
+            --allow-tool='read,write,url' \
+            --allow-all-urls \
+            --deny-tool='shell' \
+            --excluded-tools='task,write_agent' \
+            --no-ask-user \
+            --no-auto-update \
+            --no-color \
+            --output-format=json \
+            --share="$RUNNER_TEMP/daily-diagnostics/copilot-session.md" \
+            2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/copilot-daily.jsonl"
+
+      - name: Accept verified agent output or publish a recovery edition
+        id: accept
+        if: always() && steps.need_agent.outputs.required == 'true'
+        env:
+          AGENT_OUTCOME: ${{ steps.agent.outcome }}
+        run: |
+          set -euo pipefail
+          report_date="${{ steps.prepare.outputs.report_date }}"
+          agent_workspace="$RUNNER_TEMP/copilot-workspace"
+          new_manifest="/tmp/copilot-new-artifacts"
+          : > "$new_manifest"
+
+          collect_new_artifacts() {
+            local candidate name target
+            shopt -s nullglob
+            for candidate in "$agent_workspace/content/artifacts/${report_date}-"*.json; do
+              if [ ! -f "$candidate" ] || [ -L "$candidate" ]; then
+                echo "::error::Agent output is not a regular artifact: $candidate"
+                return 1
+              fi
+              name="${candidate##*/}"
+              if [[ ! "$name" =~ ^${report_date}-[1-9][0-9]*\.json$ ]]; then
+                echo "::error::Unexpected same-day artifact name: $name"
+                return 1
+              fi
+              target="content/artifacts/$name"
+              if [ -e "$target" ]; then
+                if ! cmp -s "$candidate" "$target"; then
+                  echo "::error::The agent attempted to overwrite $target"
+                  return 1
+                fi
+              else
+                printf '%s\n' "$candidate" >> "$new_manifest"
+              fi
+            done
+            test -s "$new_manifest"
+          }
+
+          validate_reported_prefix() {
+            local candidate="$agent_workspace/content/reported.md"
+            if [ ! -f "$candidate" ] || [ -L "$candidate" ]; then
+              echo "::error::The agent did not leave a regular reported.md"
+              return 1
+            fi
+            python3 - "content/reported.md" "$candidate" <<'PY'
+          import sys
+          from pathlib import Path
+
+          original = Path(sys.argv[1]).read_bytes()
+          candidate = Path(sys.argv[2]).read_bytes()
+          if not candidate.startswith(original):
+              raise SystemExit("agent changed the committed reported.md prefix")
+          PY
+          }
+
+          validate_isolated_output() {
+            (
+              cd "$agent_workspace"
+              python3 scripts/validate_content.py
+              python3 scripts/validate_priority_coverage.py \
+                --input /tmp/priority-news.json \
+                --date "$report_date" \
+                --now "${{ steps.prepare.outputs.collector_now }}"
+            )
+          }
+
+          accepted=false
+          if [ "$AGENT_OUTCOME" = "success" ] \
+            && collect_new_artifacts \
+            && validate_reported_prefix \
+            && validate_isolated_output; then
+            while IFS= read -r candidate; do
+              cp -- "$candidate" "content/artifacts/${candidate##*/}"
+            done < "$new_manifest"
+            cp -- "$agent_workspace/content/reported.md" content/reported.md
+            accepted=true
+            printf 'Accepted %s verified artifact(s) from the isolated agent workspace.\n' \
+              "$(wc -l < "$new_manifest")"
+          else
+            echo "Research agent output was unavailable or invalid; using the safe fallback."
+          fi
+
+          if [ ! -f "content/artifacts/${report_date}-1.json" ] \
+            || [ "$accepted" != "true" ]; then
+            python3 scripts/build_fallback_report.py \
+              --date "$report_date" \
+              --builders /tmp/ai-builders.json \
+              --priority /tmp/priority-news.json \
+              --waytoagi /tmp/waytoagi.json \
+              --generated-at "${{ steps.prepare.outputs.collector_now }}"
+          fi
+
+          # The agent may create a valid main/addendum but omit deterministic
+          # WayToAGI archive lines. Repair those from the frozen trusted input.
+          python3 scripts/build_fallback_report.py \
+            --date "$report_date" \
+            --builders /tmp/ai-builders.json \
+            --priority /tmp/priority-news.json \
+            --waytoagi /tmp/waytoagi.json \
+            --generated-at "${{ steps.prepare.outputs.collector_now }}" \
+            --archive-only
 
       - name: Re-run deterministic quality gates
         id: gates
@@ -278,7 +423,11 @@ jobs:
         continue-on-error: true
         env:
           PREPARE_OUTCOME: ${{ steps.prepare.outcome }}
+          NEED_AGENT: ${{ steps.need_agent.outputs.required }}
+          AGENT_WORKSPACE_OUTCOME: ${{ steps.agent_workspace.outcome }}
+          COPILOT_INSTALL_OUTCOME: ${{ steps.copilot_install.outcome }}
           AGENT_OUTCOME: ${{ steps.agent.outcome }}
+          ACCEPT_OUTCOME: ${{ steps.accept.outcome }}
           GATES_OUTCOME: ${{ steps.gates.outcome }}
         run: |
           mkdir -p "$RUNNER_TEMP/daily-diagnostics"
@@ -304,7 +453,11 @@ jobs:
             printf 'event_sha=%s\n' "$GITHUB_SHA"
             printf 'base_sha=%s\n' "${{ steps.prepare.outputs.base_sha }}"
             printf 'prepare=%s\n' "$PREPARE_OUTCOME"
+            printf 'need_agent=%s\n' "$NEED_AGENT"
+            printf 'agent_workspace=%s\n' "$AGENT_WORKSPACE_OUTCOME"
+            printf 'copilot_install=%s\n' "$COPILOT_INSTALL_OUTCOME"
             printf 'agent=%s\n' "$AGENT_OUTCOME"
+            printf 'accept_or_recover=%s\n' "$ACCEPT_OUTCOME"
             printf 'gates=%s\n' "$GATES_OUTCOME"
           } > "$RUNNER_TEMP/daily-diagnostics/manifest.txt"
           git status --porcelain=v1 --untracked-files=all \

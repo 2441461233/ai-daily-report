@@ -1,0 +1,133 @@
+{
+  "date": "2026-08-22 星期六",
+  "label": "第二十一期·自动恢复版",
+  "fallback": true,
+  "generatedAt": "2026-08-22T12:00:00+08:00",
+  "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 AVO 长程 Agent、AI 音视频创作更新与可复用开发工作流。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "NVIDIA AVO 系统在 ARC-AGI-3 长程交互评测中完成全部关卡",
+          "summary": "NVIDIA 8 月 21 日公布，AVO 系统在 ARC-AGI-3 的 25 个环境、183 个关卡上达到 100% RHAE，而其所用 Claude Opus 5 基线约为 30%。该成绩来自模型、规划、记忆和验证组件组成的完整 Agent 架构，不代表裸模型单独得分。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "NVIDIA Technical Blog（单一来源）",
+              "url": "https://developer.nvidia.com/blog/nvidia-avo-reaches-100-on-arc-agi-3-demonstrating-a-frontier-level-general-purpose-architecture-for-long-horizon-autonomous-agents/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Runway API 增加 Ruby SDR 转 HDR 视频工作流",
+          "summary": "Runway 8 月 20 日更新 API changelog，新增 `/v1/video_to_hdr`，可把最长 40 秒的 SDR 视频转换为 HDR10、HLG、ProRes 或 OpenEXR，而无需重新生成原内容。Gen-4.5 同时支持直接输出 HDR。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Runway API Changelog（单一来源）",
+              "url": "https://docs.dev.runwayml.com/api-details/api_changelog/"
+            }
+          ]
+        },
+        {
+          "headline": "Adobe Premiere Beta 上线由 Firefly Music 驱动的 Generate Music",
+          "summary": "Adobe 8 月 20 日宣布在 Premiere Beta 27.0 中加入 Generate Music，创作者可直接在时间线内按文字生成背景音乐。该功能也支持从选定视频片段生成配乐提示，以及制作可无缝重复的音乐循环。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Adobe Community 官方公告（单一来源）",
+              "url": "https://community.adobe.com/announcements-732/now-in-beta-generate-music-in-premiere-1637080"
+            }
+          ]
+        },
+        {
+          "headline": "GPT-Image-2 在 ChatGPT 与 API 中支持透明背景图像",
+          "summary": "OpenAI 产品负责人 8 月 21 日披露，GPT-Image-2 已可在 ChatGPT 和 API 中生成带透明通道的图像。该能力适合制作 logo、贴纸、图标和后续合成素材；具体可用范围以对应产品界面和 API 文档为准。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Thibault Sottiaux 的 X 帖文（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2090631723302469995"
+            }
+          ]
+        },
+        {
+          "headline": "DeepSeek 文档出现 V4 Flash Vision 实验模型",
+          "summary": "36Kr 8 月 21 日援引 DeepSeek 文档称，`deepseek-v4-flash-vision-exp` 可接收 JPEG、PNG、GIF 和 WebP 图像输入，文本能力与 V4 Flash 对齐。现阶段应视为实验模型与文档更新，不宜扩写为正式旗舰版本发布。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "36Kr（单一来源）",
+              "url": "https://ad.36kr.com/p/3949138682379651"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Google DeepMind 与多家游戏工作室拓展复杂虚拟世界中的 Agent 研究",
+          "summary": "Google DeepMind 8 月 21 日介绍其与 EVE Online、Coffee Stain、Hello Games 等开发者的合作，继续把持续变化的游戏世界用作规划、适应和交互研究环境。项目目标是验证可迁移的通用 Agent 能力，而不是发布面向玩家的新模型。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Google DeepMind 官方博客（单一来源）",
+              "url": "https://deepmind.google/blog/from-atari-to-eve-online-building-on-15-years-of-ai-research-in-games/"
+            }
+          ]
+        },
+        {
+          "headline": "Anthropic 聘请 Google TPU 项目创始人 Amir Salek 加入计算团队",
+          "summary": "Bloomberg 的转引报道 8 月 21 日称，曾负责前七代 TPU 的 Amir Salek 将加入 Anthropic compute 团队。这是 Anthropic 加强芯片和计算基础设施人才储备的明确信号，但报道未宣布已经推出自研芯片。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Bloomberg 经 Yahoo 新闻转引（单一来源）",
+              "url": "https://hk.news.yahoo.com/anthropic%E8%81%98%E8%AB%8B%E8%B0%B7%E6%AD%8C%E6%99%B6%E7%89%87%E5%AE%9A%E5%88%B6%E6%99%B6%E7%89%87%E9%A0%85%E7%9B%AE%E5%89%B5%E5%A7%8B%E4%BA%BA-%E7%82%BA%E9%80%B2%E8%BB%8D%E8%87%AA%E7%A0%94%E5%8D%8A%E5%B0%8E%E9%AB%94%E5%81%9A%E6%BA%96%E5%82%99-205148035.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Anthropic 发布 AI-Native SDLC Playbook，给出六阶段 Agent 开发方法",
+          "summary": "Anthropic 8 月 21 日发布的 playbook 把意图、规格、计划、实现、验证和交付串成六阶段流程，并建议版本化维护 `intent.md`、`spec.md`、`plan.md` 与 `CLAUDE.md`。对小团队而言，Skills、Hooks、Evals 和 CI/CD 的组合提供了一套可复用且可审计的工程模板。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Anthropic 官方博客（单一来源）",
+              "url": "https://claude.com/blog/the-ai-native-sdlc-playbook"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "items": [
+        {
+          "headline": "llm-openrouter 0.7 接入 OpenRouter Responses API 与服务端工具",
+          "summary": "Simon Willison 于 8 月 21 日发布 `llm-openrouter` 0.7，版本兼容 LLM 0.32，并支持 OpenRouter Responses API。新版还加入服务端 Shell、WebFetch 和 WebSearch，便于在同一插件中调用模型与远程工具。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub Release（单一来源）",
+              "url": "https://github.com/simonw/llm-openrouter/releases/tag/0.7"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

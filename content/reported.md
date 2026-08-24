@@ -426,3 +426,111 @@
 - 2026-08-18 | GitHub Trending：AlexsJones/llmfit（按本机硬件筛选数百模型与供应商）
 - 2026-08-18 | GitHub Trending：santifer/career-ops（本地职位扫描、评分、简历与申请流水线）
 - 2026-08-18 | GitHub Trending：volcengine/OpenViking（统一 Memory、RAG 与 Skills 的自演化上下文数据库）
+
+## 2026-08-19（第十八期·自动恢复版）
+
+- 2026-08-19 | OpenAI 为前沿模型提供 Zero Data Retention，并预告 Private Safety Processing
+- 2026-08-19 | Google 面向大学生提供一年 Gemini 订阅，并上线新的学习能力
+- 2026-08-19 | Waymo 将 Gemini 带入 Ojai 无人出租车车厢
+- 2026-08-19 | Salesforce 扩展 Headless 360：MCP Server、100+ Skills 与 Slackbot MCP Client 同步落地
+- 2026-08-19 | Robin Williams 子女恢复其官方 Instagram，以对抗未经授权的 AI 声音与肖像
+- 2026-08-19 | Demystifying Agent Skills：Skills 主要充当程序锚点，规模扩大后选择精度快速下降
+- 2026-08-19 | StartupBench 用市场验证的端到端工作流测试通用 Agent，最强模型完成率仍约 30%
+- 2026-08-19 | V-RAE 重构视频生成潜空间，最佳配置训练收敛最高加速 6 倍
+- 2026-08-19 | Replit Free Mode 由 GPT-5.6 Luna 驱动，让用户不消耗用量完成软件构思
+- 2026-08-19 | chaitanyagiri/munder-difflin：把多种终端 Agent 组织成本地协作办公室
+
+## 2026-08-20（第十九期·自动恢复版）
+
+- 2026-08-20 | Anthropic 宣布 Computer Use、Skills API 与 Files API 正式 GA
+- 2026-08-20 | Anthropic 推出 Claude Academy，提供课程、进度与可选学习 Skill
+- 2026-08-20 | Gemma 系列累计下载突破 10 亿次，Google 上线官方 Awesome Gemma 目录
+- 2026-08-20 | OpenAI 成立 Strategic Futures 团队并推出 AI Futures
+- 2026-08-20 | Runway 披露企业视频生成进展：业务翻倍、NRR 超 300%
+- 2026-08-20 | Apple Music 计划向听众展示 Made With AI 标签
+- 2026-08-20 | 美国联邦法官拒绝驳回针对 Suno 的主要版权与 DMCA 诉求
+- 2026-08-20 | SemComp-Bench 开始衡量生成视频是否真正完成任务，而非只看画面质量
+- 2026-08-20 | VA-Judger 用统一奖励模型评价联合视频音频生成
+- 2026-08-20 | Serval 的自动化生成 Agent Catalyst 正式 GA 并默认启用
+- 2026-08-20 | ATH-MaaS/Pixelle-Video：从主题到成片的全自动 AI 短视频引擎
+- 2026-08-20 | WayToAGI 2026-08-16：8.10—8.16｜本周 AI 论文精选
+- 2026-08-20 | WayToAGI 2026-08-16：万字长文｜GitHub 从入门到精通
+- 2026-08-20 | WayToAGI 2026-08-16：如何设计 Agent Harness
+- 2026-08-20 | WayToAGI 2026-08-16：科罗拉多大学教授：当AI替你完成越来越多工作，怎样保住自己的学习能力？丨EO
+- 2026-08-20 | WayToAGI 2026-08-18：AI视频入门基础——运镜（二）+转场
+- 2026-08-20 | WayToAGI 2026-08-18：一个极度实用的深度思考Prompt，帮你挖出最本质的答案。
+- 2026-08-20 | WayToAGI 2026-08-18：告别AI视频反复抽卡，Seedance 2.5 + 3D预演台才是正确的打开方式
+- 2026-08-20 | WayToAGI 2026-08-18：大模型本地部署完整指南：搭建自己的 Agent 工作流，实现Token自由「新手友好」
+- 2026-08-20 | WayToAGI 2026-08-18：万字长文｜知识库从入门到精通
+- 2026-08-20 | WayToAGI 2026-08-18：一句话直出各种仙境提示词，这个提示词Skill带你修仙！
+- 2026-08-20 | WayToAGI 2026-08-18：Benchmark 合伙人：为什么下一个爆款AI产品将具备社交功能丨Every
+- 2026-08-20 | WayToAGI 2026-08-19：DeepSeek harness 必装的 7 个插件，让你的使用体感翻倍
+- 2026-08-20 | WayToAGI 2026-08-19：猫叔送你一本50万字的RPG游戏设计宝典
+- 2026-08-20 | WayToAGI 2026-08-19：不看一行代码！我用AI把爆火的“宝宝三假医院”做成了小程序
+- 2026-08-20 | WayToAGI 2026-08-19：本地跑模型、做微调，现在可以用同一套工具完成：Unsloth
+- 2026-08-20 | WayToAGI 2026-08-19：Mole 出 Mac 版后，用户教会了我做产品
+- 2026-08-20 | WayToAGI 2026-08-19：把AI变成工作系统的6个步骤丨Silicon Valley Girl
+
+## 2026-08-21（第二十期·自动恢复版）
+
+- 2026-08-21 | Slack Code 上线：团队与 Coding Agent 在专属频道共同规划、审查和交付代码
+- 2026-08-21 | Claude Security 开始使用 Mythos 5 扫描代码，Anthropic 设立 3500 万美元开源防御基金
+- 2026-08-21 | OpenAI 将 GPT-5.6 Sol 的 API 与 credit 价格临时下调超过 20%
+- 2026-08-21 | Meta 将可用提示词生成和 Remix 小游戏的 Pocket 推向美国用户
+- 2026-08-21 | EnvHarness 用可编程插件让静态 Agent 训练环境针对策略弱点持续变化
+- 2026-08-21 | 4DAnyone 可从普通单目视频重建动态 4D 人体
+- 2026-08-21 | SWE-bench Science：最强 Coding Agent 在科学软件修复上的 pass@1 仍低于 50%
+- 2026-08-21 | Ramp 推出 Router.com，用统一 API 按成本、难度和基准切换模型
+- 2026-08-21 | NanoClaw 进入 Slack：一个 Agent 可按自然语言创建带独立身份的 Agent 团队
+- 2026-08-21 | Tencent/AI-Infra-Guard：覆盖 Agent、Skills、MCP 与越狱评估的全栈红队平台
+
+## 2026-08-22（第二十一期·自动恢复版）
+
+- 2026-08-22 | NVIDIA AVO 系统在 ARC-AGI-3 长程交互评测中完成全部关卡
+- 2026-08-22 | Runway API 增加 Ruby SDR 转 HDR 视频工作流
+- 2026-08-22 | Adobe Premiere Beta 上线由 Firefly Music 驱动的 Generate Music
+- 2026-08-22 | GPT-Image-2 在 ChatGPT 与 API 中支持透明背景图像
+- 2026-08-22 | DeepSeek 文档出现 V4 Flash Vision 实验模型
+- 2026-08-22 | Google DeepMind 与多家游戏工作室拓展复杂虚拟世界中的 Agent 研究
+- 2026-08-22 | Anthropic 聘请 Google TPU 项目创始人 Amir Salek 加入计算团队
+- 2026-08-22 | Anthropic 发布 AI-Native SDLC Playbook，给出六阶段 Agent 开发方法
+- 2026-08-22 | llm-openrouter 0.7 接入 OpenRouter Responses API 与服务端工具
+
+## 2026-08-23（第二十二期·自动恢复版）
+
+- 2026-08-23 | Model Context Protocol 发布新版路线图
+- 2026-08-23 | Guidelight 发布前沿 AI 公司控制能力评估
+- 2026-08-23 | SenseNova-U1.5-8B-MoT 开放完整权重与 8-step LoRA
+- 2026-08-23 | Hugging Face Hub 公共模型数量突破 300 万
+- 2026-08-23 | Grok Bot 扩大至更多 SuperGrok 与 Cursor 订阅计划
+- 2026-08-23 | Vero 用真实多模块仓库评测 AI 同时编写实现与形式化证明
+- 2026-08-23 | FreeToken 让异构消费级设备动态承载更大规模 MoE 模型
+- 2026-08-23 | OpenSandbox 增加 Grok 与 Codex 订阅接入方式
+- 2026-08-23 | Anthropic 工程师公开用于代码讲解的 ELI5 Skill
+- 2026-08-23 | Marin 社区规划 535B 总参数、23B 激活参数的 Hero Run
+- 2026-08-23 | WayToAGI 2026-08-20：DAN KOE：给我 20 分钟，让你变得无法被操控
+- 2026-08-23 | WayToAGI 2026-08-20：《100 个问题》系列丛书》这份《DeepSeek Harness的100 个问题
+- 2026-08-23 | WayToAGI 2026-08-20：全球AI创造力发展报告2026-AI教育.pdf
+- 2026-08-23 | WayToAGI 2026-08-20：2026 年 成为Agent工程师的12 步路线图—— Loops，Graphs，Evals，Context，Harness
+- 2026-08-23 | WayToAGI 2026-08-20：YC前负责人：如何找到 to C 的创业点子丨Dalton + Michael
+- 2026-08-23 | WayToAGI 2026-08-20：MiniMax Design：从操作像素，到操作语义和表达意图
+- 2026-08-23 | WayToAGI 2026-08-21：模型来源已不再重要，FDE已经在日本普及？｜Linkloud 东京沙龙实录（一）
+- 2026-08-23 | WayToAGI 2026-08-21：为压进我十年设计经验的 PPT Skill 更新了演讲者视图
+- 2026-08-23 | WayToAGI 2026-08-21：都Agent时代了，我还是想分享给你这12个我最常用的Prompt。
+- 2026-08-23 | WayToAGI 2026-08-21：V4-Flash-Vision-Exp 上线，开启多模态 API 服务
+- 2026-08-23 | WayToAGI 2026-08-21：AI 硬件产品上市认证与合规指南
+- 2026-08-23 | WayToAGI 2026-08-21：智能体系统设计
+- 2026-08-23 | WayToAGI 2026-08-21：AI 工程技能地图：构建和部署 AI 应用
+
+## 2026-08-24（第二十三期·自动恢复版）
+
+- 2026-08-24 | 社区测试 MiniMax H3 在 RTX 5090 上生成 2MP 视频的速度
+- 2026-08-24 | Codex 团队解释近期额度异常并为付费用户补发重置
+- 2026-08-24 | Generalist GEN-1.5 展示从单次演示学习机器人动作
+- 2026-08-24 | Thinkingbox 用 507 个有状态业务流程衡量 Agent 的持续可靠性
+- 2026-08-24 | Bounded Agents 用授权链限制多 Agent 委托中的攻击半径
+- 2026-08-24 | Prime Intellect 用 153 次长时运行评测自主 AI 研究能力
+- 2026-08-24 | Agent Evals 可先缩小工具面，再逐步优化模型成本
+- 2026-08-24 | Instinct 增加删除已接入外部数据的能力
+- 2026-08-24 | 用 Coding Agent 辅助清理 Google 第三方应用授权
+- 2026-08-24 | Phi-Bench 开放 85 个 LLM 基础设施工程任务

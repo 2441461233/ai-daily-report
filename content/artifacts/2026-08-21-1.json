@@ -1,0 +1,168 @@
+{
+  "date": "2026-08-21 星期五",
+  "label": "第二十期·自动恢复版",
+  "fallback": true,
+  "generatedAt": "2026-08-21T12:00:00+08:00",
+  "oneLiner": "📌 今日一句话：这是基于已核验公开来源补录的断档自动恢复版，保留 Slack 多人 Agent Coding、Mythos 防御能力、低成本模型路由与 4D 视频研究等可复核事件。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "Slack Code 上线：团队与 Coding Agent 在专属频道共同规划、审查和交付代码",
+          "summary": "Slack Code 会为项目自动创建代码频道，让成员共同查看对话、计划、代码 Diff 和实时预览，并在高风险交付前保留人工批准。官方首批支持 Claude、Devin、GitHub Copilot 与 Vercel，ChatGPT 标注为即将提供；发布报道时间换算为上海 8 月 21 日 08:00。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Slack 官方博客",
+              "url": "https://slack.com/blog/news/slack-code-channels-for-agents"
+            },
+            {
+              "name": "VentureBeat",
+              "url": "https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat"
+            }
+          ]
+        },
+        {
+          "headline": "Claude Security 开始使用 Mythos 5 扫描代码，Anthropic 设立 3500 万美元开源防御基金",
+          "summary": "Anthropic 8 月 21 日宣布，Claude Enterprise 客户可在 Claude Security 中使用 Mythos 5 扫描代码库、发现漏洞并提出补丁建议。新的 Defender Advantage Fund 将提供 3,500 万美元 Claude credits，用于开源漏洞修复、自动化扫描与新的防御方法。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Anthropic 官方博客（单一来源）",
+              "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders"
+            }
+          ]
+        },
+        {
+          "headline": "OpenAI 将 GPT-5.6 Sol 的 API 与 credit 价格临时下调超过 20%",
+          "summary": "OpenAI 在 GPT-5.6 页面新增 8 月 21 日更新，宣布 Sol 的 API 与 credit 价格未来三个月下调超过 20%。页面当前列示 Sol 每百万 Token 输入 5 美元、输出 30 美元。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "OpenAI 官方页面（单一来源）",
+              "url": "https://openai.com/index/gpt-5-6/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Meta 将可用提示词生成和 Remix 小游戏的 Pocket 推向美国用户",
+          "summary": "Pocket 允许用户用 AI 提示生成小型互动游戏，作品可响应触摸与手机倾斜、播放音效和歌曲片段，也能使用相册或相机素材并在信息流中分享、保存或 Remix。报道时间为 8 月 20 日 09:07 PDT，即上海 8 月 21 日 00:07。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "TechCrunch（单一来源）",
+              "url": "https://techcrunch.com/2026/08/20/meta-brings-pocket-an-app-that-lets-you-vibe-code-and-share-games-to-us-users/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "EnvHarness 用可编程插件让静态 Agent 训练环境针对策略弱点持续变化",
+          "summary": "EnvHarness 在不修改底层验证器的前提下，用插件重塑静态环境；EnvRigger 观察 Agent 轨迹后自动生成针对失败模式的组件。论文在五个基准、四个领域上最高提升 9.0 分，同时执行步骤减少 9.8%，并于 8 月 21 日进入 Hugging Face Daily Papers。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.19880"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.19880"
+            }
+          ]
+        },
+        {
+          "headline": "4DAnyone 可从普通单目视频重建动态 4D 人体",
+          "summary": "4DAnyone 先生成重建级、多视角一致的视频，再提升为 4D Gaussian Splatting。Reference Context Packing 与 Target Context Routing 用固定长度参考上下文和跨组信息交换抑制外观及结构漂移；论文提交时间换算为上海 8 月 21 日 01:59。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.20335"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.20335"
+            }
+          ]
+        },
+        {
+          "headline": "SWE-bench Science：最强 Coding Agent 在科学软件修复上的 pass@1 仍低于 50%",
+          "summary": "基准包含 20 个科学领域、98 个 GitHub 仓库的 119 项工程任务。作者发现即使 Claude Code 搭配 Opus 5 max，pass@1 仍低于 50%，常见失败来自科学知识不足、错误探索、不完整修复和系统集成；论文于 8 月 21 日进入 Hugging Face Daily Papers。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.19799"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.19799"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Ramp 推出 Router.com，用统一 API 按成本、难度和基准切换模型",
+          "summary": "Router.com 接入 OpenAI、Anthropic、DeepSeek、Moonshot、MiniMax 等模型，并提供按成本层级、任务难度和用户指定基准路由的策略与用量面板。目前只在美国开放，2026 年内路由服务免费，但模型推理费用仍由用户承担；报道时间换算为上海 8 月 21 日 00:46。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "TechCrunch（单一来源）",
+              "url": "https://techcrunch.com/2026/08/20/ramp-launches-its-own-ai-model-router-called-router/"
+            }
+          ]
+        },
+        {
+          "headline": "NanoClaw 进入 Slack：一个 Agent 可按自然语言创建带独立身份的 Agent 团队",
+          "summary": "用户连接 Slack 工作区后，可让现有 NanoClaw Agent 创建拥有独立名称、头像、角色和权限的新 Agent，并在频道与 Canvas 中协作。Agent 运行时和 Token 留在客户基础设施，敏感动作走人工批准；发布时间换算为上海 8 月 21 日 01:25。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "VentureBeat",
+              "url": "https://venturebeat.com/orchestration/nanoclaw-comes-to-slack-letting-you-create-persistent-ai-agent-teams-and-colleagues-from-a-single-message"
+            },
+            {
+              "name": "Slack Marketplace",
+              "url": "https://slack.com/marketplace/A0BLUA9S4JW-nanoclaw"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "items": [
+        {
+          "headline": "Tencent/AI-Infra-Guard：覆盖 Agent、Skills、MCP 与越狱评估的全栈红队平台",
+          "summary": "腾讯朱雀实验室的 AI-Infra-Guard 集成 Agent Scan、Skills Scan、MCP 扫描、AI 基础设施漏洞检测和大模型越狱评估。8 月 21 日快照中进入 Trending 第 11，并被列入 New on the Radar。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub 仓库",
+              "url": "https://github.com/Tencent/AI-Infra-Guard"
+            },
+            {
+              "name": "RepoRadar 8 月 21 日快照",
+              "url": "https://reporadar.spreix.com/reports/daily/2026-08-21"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "date": "2026-08-20 星期四",
+  "label": "第十九期·自动恢复版",
+  "fallback": true,
+  "generatedAt": "2026-08-20T12:00:00+08:00",
+  "oneLiner": "📌 今日一句话：这是基于已核验公开来源补录的断档自动恢复版，集中记录 Claude Agent API 全面 GA、Gemma 下载破十亿、AI 音乐标识与视频生成评测等确定性进展。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "Anthropic 宣布 Computer Use、Skills API 与 Files API 正式 GA",
+          "summary": "Anthropic 8 月 20 日宣布三项能力在 Claude Platform 正式可用。新版 Computer Use 支持单轮多动作并新增结合截图与页面结构的 Browser Use；Files API 提供自动过期、5 倍限流和每组织 1 TB 存储，Computer Use 也可用于符合 HIPAA 要求的工作负载。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Anthropic 官方博客（单一来源）",
+              "url": "https://claude.com/blog/computer-use-skills-api-files-api"
+            }
+          ]
+        },
+        {
+          "headline": "Anthropic 推出 Claude Academy，提供课程、进度与可选学习 Skill",
+          "summary": "Claude Academy 提供个性化课程推荐、学习进度、徽章以及可选的 Academy Skill。Anthropic 将课程重点放在验证、判断和按风险程度调整核验强度等长期 AI 素养上。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Anthropic 官方博客（单一来源）",
+              "url": "https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai"
+            }
+          ]
+        },
+        {
+          "headline": "Gemma 系列累计下载突破 10 亿次，Google 上线官方 Awesome Gemma 目录",
+          "summary": "Google 8 月 20 日宣布 Gemma 系列累计下载超过 10 亿次，开发者两年间发布了超过 10 万个模型变体。官方同时推出 Awesome Gemma GitHub 目录，集中收录社区项目、微调、教程和开发工具。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Google 官方博客（单一来源）",
+              "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-one-billion-downloads/"
+            }
+          ]
+        },
+        {
+          "headline": "OpenAI 成立 Strategic Futures 团队并推出 AI Futures",
+          "summary": "OpenAI 8 月 20 日上线 AI Futures，作为新 Strategic Futures 团队研究成果的发布平台，聚焦变革性 AI 对企业、政府、社会组织和权力结构的影响。页面明确说明文章代表作者观点，不必然等同于 OpenAI 的组织立场。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "OpenAI 官方文章（单一来源）",
+              "url": "https://openai.com/index/introducing-ai-futures/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Runway 披露企业视频生成进展：业务翻倍、NRR 超 300%",
+          "summary": "Runway 称其 2026 年业务规模已翻倍、净收入留存率超过 300%，欧洲占企业客户 20% 以上；Runway Agent 正被用于端到端媒体生产，部分品牌的创意产量提升至约 10 倍。上述经营和效率数字均为公司自报。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Runway 官方文章（单一来源）",
+              "url": "https://runway.com/news/company-news%2Fthe-next-phase-of-enterprise-video-generation"
+            }
+          ]
+        },
+        {
+          "headline": "Apple Music 计划向听众展示 Made With AI 标签",
+          "summary": "Apple 8 月 20 日向行业伙伴表示，年内将把 AI Transparency Tags 以 Made With AI 标签展示给 Apple Music 听众，可标记音轨、作曲、封面和音乐视频。标签依赖唱片公司及发行商提交元数据，并非 Apple 自动检测。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Music Business Worldwide（单一来源）",
+              "url": "https://www.musicbusinessworldwide.com/apple-music-to-slap-on-suno/"
+            }
+          ]
+        },
+        {
+          "headline": "美国联邦法官拒绝驳回针对 Suno 的主要版权与 DMCA 诉求",
+          "summary": "8 月 20 日的程序性裁定保留了 Anthony Justice 等人针对 Suno 提出的联邦版权法与 DMCA 诉求，仅驳回田纳西州消费者保护法诉求。裁定只意味着案件可以继续审理，并非已认定 Suno 构成侵权。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Bloomberg Law",
+              "url": "https://news.bloomberglaw.com/ip-law/suno-fails-to-shake-musicians-copyright-suit-over-ai-training"
+            },
+            {
+              "name": "Justia 案件页",
+              "url": "https://dockets.justia.com/docket/massachusetts/madce/1%3A2025cv11739/285975"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "SemComp-Bench 开始衡量生成视频是否真正完成任务，而非只看画面质量",
+          "summary": "SemComp-Bench 同时检查生成视频是否达成目标，以及是否保留参考图中与任务相关的高层语义，并用六个领域的数据集给出 OA 与 GR 指标。实验显示代表性视频模型在结果达成和语义落地上仍有明显困难。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.17426"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.17426"
+            }
+          ]
+        },
+        {
+          "headline": "VA-Judger 用统一奖励模型评价联合视频音频生成",
+          "summary": "研究构建约 9,000 条提示和 10,300 对人类偏好数据，让一个推理型全模态奖励模型同时评价视觉、音频、文本、同步和连贯性。作者用它缓解多个分散指标被模型钻空子的 Reward Hacking 问题。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.18607"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.18607"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Serval 的自动化生成 Agent Catalyst 正式 GA 并默认启用",
+          "summary": "Catalyst 可从工单历史、自然语言说明、SOP 或表格生成工作流、Skills、表单、权限管理和后台巡检 Agent。Serval 称超过 90% 的测试客户已把 Catalyst 作为自动化起点，所有生成内容先以草稿形式等待人工发布。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Serval 官方公告（单一来源）",
+              "url": "https://www.serval.com/serval-news/catalyst-general-availability"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "items": [
+        {
+          "headline": "ATH-MaaS/Pixelle-Video：从主题到成片的全自动 AI 短视频引擎",
+          "summary": "Pixelle-Video 以 Apache-2.0 开源，覆盖主题生成脚本、视觉与视频素材、TTS、BGM 和最终渲染，并可接入多种模型与 ComfyUI。8 月 20 日 RepoRadar 将其列为 Star Jump 项目，当日新增 123 Stars；它未进入当天主 Trending 榜。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub 仓库",
+              "url": "https://github.com/ATH-MaaS/Pixelle-Video"
+            },
+            {
+              "name": "RepoRadar 8 月 20 日快照",
+              "url": "https://reporadar.spreix.com/reports/daily/2026-08-20"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

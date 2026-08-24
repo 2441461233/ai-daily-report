@@ -1,0 +1,160 @@
+{
+  "date": "2026-08-19 星期三",
+  "label": "第十八期·自动恢复版",
+  "fallback": true,
+  "generatedAt": "2026-08-19T12:00:00+08:00",
+  "oneLiner": "📌 今日一句话：这是基于已核验公开来源补录的断档自动恢复版，重点保留零数据留存、Agent 企业接口、视频生成研究与开源 Agent 工具链等可直接核验的信号。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "OpenAI 为前沿模型提供 Zero Data Retention，并预告 Private Safety Processing",
+          "summary": "OpenAI 8 月 19 日宣布，符合条件的 API 客户请求处理后不保留提示与模型响应，企业数据也不会在未主动选择的情况下用于训练。其同时预告可在客户控制的基础设施或客户密钥加密存储上识别跨交互风险的 Private Safety Processing，计划 9 月开始推出。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "OpenAI 官方公告（单一来源）",
+              "url": "https://openai.com/index/our-commitment-to-zero-data-retention/"
+            }
+          ]
+        },
+        {
+          "headline": "Google 面向大学生提供一年 Gemini 订阅，并上线新的学习能力",
+          "summary": "Google 8 月 19 日宣布，符合条件的美国大学生可免费使用 Google AI Pro 12 个月，其他 140 多个市场提供 Google AI Plus 学生优惠。同步推出学生中心、学习笔记本、交互式 3D 可视化等学习功能。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Google 官方博客（单一来源）",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/student-offer-google-ai/"
+            }
+          ]
+        },
+        {
+          "headline": "Waymo 将 Gemini 带入 Ojai 无人出租车车厢",
+          "summary": "Gemini 将作为可选语音助手进入 Waymo 的 Ojai 车型，可调节空调并介绍沿途地点。Google 明确说明该助手与负责驾驶的 Waymo Driver 相互独立，只有乘客主动启用后才工作。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Google 官方博客（单一来源）",
+              "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-waymo/"
+            }
+          ]
+        },
+        {
+          "headline": "Salesforce 扩展 Headless 360：MCP Server、100+ Skills 与 Slackbot MCP Client 同步落地",
+          "summary": "Salesforce 8 月 19 日宣布扩展 Headless 360，加入 Headless 360 与 Data 360 MCP Server、100 多个可复用 Skills、Slackbot MCP Client 和新的体验层。授权 Agent 可沿用企业既有身份、权限、元数据与业务规则调用 Salesforce 能力。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Salesforce 官方公告（单一来源）",
+              "url": "https://www.salesforce.com/news/stories/expanding-headless-360-enterprise-capabilities/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Robin Williams 子女恢复其官方 Instagram，以对抗未经授权的 AI 声音与肖像",
+          "summary": "Variety Australia 8 月 19 日报道，Robin Williams 的子女将长期停更的官方账号恢复为可信影像档案，希望真实照片和视频能压过未经授权的 AI 声音、肖像与深伪内容。账号实际恢复动作发生在 8 月 17 日。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Variety Australia（单一来源）",
+              "url": "https://au.variety.com/2026/film/global/robin-williams-kids-revive-instagram-account-ai-slop-39518/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Demystifying Agent Skills：Skills 主要充当程序锚点，规模扩大后选择精度快速下降",
+          "summary": "论文通过 8,135 次实验发现，Agent Skills 的主要作用是程序性引导而非知识注入；当候选 Skill 池从 5 扩展到 100 时，实际使用精度由 29.6% 降至 3.3%。论文 8 月 14 日提交 arXiv，并于 8 月 19 日进入 Hugging Face Daily Papers。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.14036"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.14036"
+            }
+          ]
+        },
+        {
+          "headline": "StartupBench 用市场验证的端到端工作流测试通用 Agent，最强模型完成率仍约 30%",
+          "summary": "ByteDance Seed 从已获市场采用的创业产品中提炼端到端交付任务，结果显示复杂指令遵循与领域知识仍是主要失败来源。论文 8 月 18 日提交 arXiv，8 月 19 日进入 Hugging Face Daily Papers。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.17800"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.17800"
+            }
+          ]
+        },
+        {
+          "headline": "V-RAE 重构视频生成潜空间，最佳配置训练收敛最高加速 6 倍",
+          "summary": "V-RAE 在冻结视觉基础模型表征之上构建紧凑视频生成潜空间，最佳变体训练收敛最高加速 6 倍，并提出衡量时间一致性的 tFVD 指标。论文 8 月 13 日提交 arXiv，8 月 19 日进入 Hugging Face Daily Papers。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.13556"
+            },
+            {
+              "name": "Hugging Face Daily Papers",
+              "url": "https://huggingface.co/papers/2608.13556"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Replit Free Mode 由 GPT-5.6 Luna 驱动，让用户不消耗用量完成软件构思",
+          "summary": "Replit Free Mode 使用 GPT-5.6 Luna 处理规划、构思与反馈，复杂推理可转交 Sol 并保留项目上下文。OpenAI 将其描述为模型性价比改善后，把软件创建能力免费扩展到更多用户的案例。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "OpenAI 客户案例（单一来源）",
+              "url": "https://openai.com/index/replit/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "items": [
+        {
+          "headline": "chaitanyagiri/munder-difflin：把多种终端 Agent 组织成本地协作办公室",
+          "summary": "Munder Difflin 将 Claude Code、Codex、Kimi 等终端 Agent 接入本地多智能体 Harness，并提供共享记忆、邮箱、任务路由和可视化工作区。8 月 19 日快照记录其为 Repository of the Day，共 2,274 Stars、当日新增 306。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "GitHub 仓库",
+              "url": "https://github.com/chaitanyagiri/munder-difflin"
+            },
+            {
+              "name": "RepoRadar 8 月 19 日快照",
+              "url": "https://reporadar.spreix.com/reports/daily/2026-08-19"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

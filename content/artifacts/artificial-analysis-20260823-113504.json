@@ -1,0 +1,80 @@
+{
+  "date": "2026-08-23",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-08-23",
+  "generatedAt": "2026-08-23T11:35:04+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 6 项变化；当前榜首为 Claude Opus 5 (max)（63 分）。",
+      "items": [
+        {
+          "headline": "新进 Top 10：Grok 4.6 (xhigh) 升至第 7 名",
+          "summary": "Grok 4.6 (xhigh) 新进入 Artificial Analysis Intelligence Index 前十，当前第 7 名，得分 60。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：GLM-5.3 (max) 升至第 9 名",
+          "summary": "GLM-5.3 (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 9 名，得分 60。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Claude Opus 5 (medium)",
+          "summary": "Claude Opus 5 (medium) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 59。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Qwen3.8 Max",
+          "summary": "Qwen3.8 Max 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 58。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Kimi K3 (max) 第 7 → 8 名",
+          "summary": "Kimi K3 (max) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 7 名变为第 8 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-5.6 Sol (xhigh) 第 8 → 10 名",
+          "summary": "GPT-5.6 Sol (xhigh) 在 Artificial Analysis Intelligence Index 中下降 2 位，由第 8 名变为第 10 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

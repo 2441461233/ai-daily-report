@@ -61,6 +61,15 @@
     },
     {
       "rank": 7,
+      "slug": "grok-4-6-xhigh",
+      "name": "Grok 4.6 (xhigh)",
+      "creator": "SpaceXAI",
+      "score": 60,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/grok-4-6-xhigh"
+    },
+    {
+      "rank": 8,
       "slug": "kimi-k3",
       "name": "Kimi K3 (max)",
       "creator": "Kimi",
@@ -69,31 +78,22 @@
       "url": "https://artificialanalysis.ai/models/kimi-k3"
     },
     {
-      "rank": 8,
+      "rank": 9,
+      "slug": "glm-5-3",
+      "name": "GLM-5.3 (max)",
+      "creator": "Z AI",
+      "score": 60,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/glm-5-3"
+    },
+    {
+      "rank": 10,
       "slug": "gpt-5-6-sol-xhigh",
       "name": "GPT-5.6 Sol (xhigh)",
       "creator": "OpenAI",
       "score": 59,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/gpt-5-6-sol-xhigh"
-    },
-    {
-      "rank": 9,
-      "slug": "claude-opus-5-medium",
-      "name": "Claude Opus 5 (medium)",
-      "creator": "Anthropic",
-      "score": 59,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/claude-opus-5-medium"
-    },
-    {
-      "rank": 10,
-      "slug": "qwen3-8-max",
-      "name": "Qwen3.8 Max",
-      "creator": "Alibaba",
-      "score": 58,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/qwen3-8-max"
     }
   ]
 }

@@ -1,0 +1,161 @@
+{
+  "date": "2026-08-23 星期日",
+  "label": "第二十二期·自动恢复版",
+  "fallback": true,
+  "generatedAt": "2026-08-23T12:00:00+08:00",
+  "oneLiner": "📌 今日一句话：本期自动恢复版依据已核验公开来源，补录 MCP 路线图、开放多模态权重、仓库级验证与本地 MoE 推理等本周进展。",
+  "sections": [
+    {
+      "title": "🔥 AI 重要事件",
+      "items": [
+        {
+          "headline": "Model Context Protocol 发布新版路线图",
+          "summary": "MCP 官方博客 8 月 22 日公布新路线图，优先事项包括 agentic messaging、HTTP 原生传输的统一与加固、Agent identity 与安全、核心 primitives，以及 SDK 开发体验。路线图描述的是后续工作方向，不等同于所有能力已经稳定发布。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Model Context Protocol 官方博客（单一来源）",
+              "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/"
+            }
+          ]
+        },
+        {
+          "headline": "Guidelight 发布前沿 AI 公司控制能力评估",
+          "summary": "Guidelight 本周发布的公开材料评估将 Anthropic 与 OpenAI 评为 C+、Google 评为 D+、xAI 评为 D−、Meta 评为 F，并称没有任何单项实践超过 3/5。这是一家标准组织基于公开信息的第三方评分，应作为治理观察而非监管结论。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Guidelight AI Standards（单一来源）",
+              "url": "https://guidelight.ai/blog/control-assessment-august-2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "SenseNova-U1.5-8B-MoT 开放完整权重与 8-step LoRA",
+          "summary": "SenseNova 近日开放 U1.5-8B-MoT，重点提升中英文字与版式、原生 4K、图像编辑保真、复杂指令和区域控制，并提供更快的 8-step LoRA。模型以 Apache-2.0 发布，官方也明确提示密集文字、精确布局和复杂编辑仍可能出现误差或漂移。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "SenseNova Hugging Face 模型卡",
+              "url": "https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT"
+            },
+            {
+              "name": "OpenSenseNova GitHub 仓库",
+              "url": "https://github.com/OpenSenseNova/SenseNova-U1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Hugging Face Hub 公共模型数量突破 300 万",
+          "summary": "一篇 8 月 21 日发布的 Hugging Face 社区数据文章显示，Hub 公共模型数在 8 月中旬越过 300 万，并于 8 月 22 日达到 3,012,377。该数据反映开放模型生态的增长速度，但文章由社区作者发布，不是 Hugging Face 财务或使用量报告。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Hugging Face 社区文章（单一来源）",
+              "url": "https://huggingface.co/blog/ivanfioravanti/three-million-models-and-counting"
+            }
+          ]
+        },
+        {
+          "headline": "Grok Bot 扩大至更多 SuperGrok 与 Cursor 订阅计划",
+          "summary": "SpaceXAI 8 月 21 日宣布，Grok Bot 现纳入 SuperGrok Plus、Cursor Pro+ 和全部 Cursor Teams 计划。官方将其定位为运行在持续云电脑上的 AI 队友，可跨应用和邮箱执行多步骤工作，并在需要判断时请求人工批准。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "SpaceXAI 官方公告（单一来源）",
+              "url": "https://x.ai/news/grok-bot-more-plans"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Vero 用真实多模块仓库评测 AI 同时编写实现与形式化证明",
+          "summary": "Vero 包含 43 个多模块 Lean 4 实例，来源覆盖 Python、Dafny、Verus 和 Coq 仓库，并同时评估代码与证明。论文报告最强 Agent 仅完整解决 27/43，且在最难仓库上没有完成任何规格，显示仓库级验证软件合成仍有明显缺口。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.13522"
+            },
+            {
+              "name": "Vero GitHub 仓库",
+              "url": "https://github.com/sunblaze-ucb/vero"
+            }
+          ]
+        },
+        {
+          "headline": "FreeToken 让异构消费级设备动态承载更大规模 MoE 模型",
+          "summary": "FreeToken 按实时可用的 CPU、GPU、内存与带宽动态映射计算和模型状态，并支持 20 多个 MoE 模型及真实 Coding Agent。论文展示的部署范围从笔记本上的 35B、游戏台式机上的 284B，到单工作站 GPU 上的 753B GLM-5.2。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "arXiv",
+              "url": "https://arxiv.org/abs/2608.16157"
+            },
+            {
+              "name": "FreeToken GitHub 仓库",
+              "url": "https://github.com/FlashML-org/FreeToken"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "OpenSandbox 增加 Grok 与 Codex 订阅接入方式",
+          "summary": "Vercel 负责人 8 月 22 日介绍，OpenSandbox 可用 Grok 与 Codex subscription 驱动隔离执行环境。对小团队而言，这提供了复用现有订阅进行 Agent 实验的路径；支持范围、费用和使用限制仍应以项目文档及各服务条款为准。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Guillermo Rauch 的 X 帖文（单一来源）",
+              "url": "https://x.com/rauchg/status/2090953806624489501"
+            }
+          ]
+        },
+        {
+          "headline": "Anthropic 工程师公开用于代码讲解的 ELI5 Skill",
+          "summary": "Anthropic 工程师 8 月 22 日分享了团队内部使用的 ELI5 Skill 及社区插件安装入口，用渐进式通俗解释帮助读者理解代码和技术概念。它适合 codebase onboarding 与教学，但效果仍取决于输入上下文和人工复核。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Thariq Shihipar 的 X 帖文（单一来源）",
+              "url": "https://x.com/trq212/status/2090884854590382515"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "💻 GitHub Trending",
+      "items": [
+        {
+          "headline": "Marin 社区规划 535B 总参数、23B 激活参数的 Hero Run",
+          "summary": "Marin 社区本周公开的训练计划采用约 18.75T tokens、11 套 GB200 NVL72，预计运行约 100 天。项目承诺公开配置、loss、scaling 与运行过程；这些数字仍是执行计划，最终训练结果需等待后续记录。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Marin GitHub Issue（单一来源）",
+              "url": "https://github.com/marin-community/marin/issues/8435"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
