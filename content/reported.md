@@ -544,3 +544,26 @@
 - 2026-08-24 | NVIDIA-NeMo/Speech：面向 LLM、多模态与语音 AI 的可扩展框架
 - 2026-08-24 | NousResearch/hermes-agent：项目定位是与你一起成长的 Agent
 - 2026-08-24 | awesome-gpt-image-2：Prompt as Code | GPT-Image2 工业级提示词引擎与模板库
+
+
+## 2026-08-25（第二十四期·自动恢复版）
+
+- 2026-08-25 | Thibault Sottiaux 公开动态：Good Sunday. Reset has been propagated to accounts and we landed some fixes to usage…
+- 2026-08-25 | Peter Steinberger 公开动态：I added the rotation USB protocol to and told my claw to look around- now it's having…
+- 2026-08-25 | Nan Yu 公开动态：Also every other category of software
+- 2026-08-25 | Guillermo Rauch 公开动态：Intelligence is getting cheaper. @OpenAI Sol's price reductions & discounts on Vercel…
+- 2026-08-25 | Peter Yang 公开动态：If you enjoyed this episode, I highly recommend Shreya and Hamel's industry-leading A…
+- 2026-08-25 | Ryo Lu 公开动态：leaving leaving is the process from fullness into emptiness from the familiar circle…
+- 2026-08-25 | Nikunj Kothari 公开动态：Mother in law is visiting from India.. Wants to do serendipitous date night with her…
+- 2026-08-25 | WayToAGI 2026-08-22：什么他妈的叫他妈的人味
+- 2026-08-25 | WayToAGI 2026-08-22：DSH：Minke v0.2.0 发布了
+- 2026-08-25 | WayToAGI 2026-08-22：贾栾：DeepSeek Harness 到底是什么，为什么它说“一切皆插件”
+- 2026-08-25 | WayToAGI 2026-08-22：Agent 自进化：从经验到可验证的能力增长
+- 2026-08-25 | WayToAGI 2026-08-22：深度｜对话 Anthropic 产品负责人：不懂评测的 AI 产品负责人，只是在假装做产品
+- 2026-08-25 | WayToAGI 2026-08-23：8.17—8.23｜本周AI 论文精选
+- 2026-08-25 | WayToAGI 2026-08-23：万字长文｜Codex 从入门到精通
+- 2026-08-25 | WayToAGI 2026-08-23：Codex 斜杠命令完全指南：别再只会 /model 和 /status
+- 2026-08-25 | WayToAGI 2026-08-23：给我 10 分钟，我教你掌握 Claude Code 的 80%。
+- 2026-08-25 | WayToAGI 2026-08-23：从零开发一个 DeepSeek Harness 插件
+- 2026-08-25 | WayToAGI 2026-08-23：从零开始，搭建你的 Harness，定制化懂你的 Agent
+- 2026-08-25 | WayToAGI 2026-08-23：第一性原理拆解：生图提示词究竟该怎么写？

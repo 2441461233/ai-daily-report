@@ -1,0 +1,101 @@
+{
+  "date": "2026-08-25 星期二",
+  "label": "第二十四期·自动恢复版",
+  "generatedAt": "2026-08-25T11:13:19+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Good Sunday. Reset has been propagated to accounts and we landed some fixes to usage…",
+          "summary": "自动恢复版一手信号，发布于 08/24 08:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2091688655828246890"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：I added the rotation USB protocol to and told my claw to look around- now it's having…",
+          "summary": "自动恢复版一手信号，发布于 08/24 05:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2091639468935831910"
+            }
+          ]
+        },
+        {
+          "headline": "Nan Yu 公开动态：Also every other category of software",
+          "summary": "自动恢复版一手信号，发布于 08/24 00:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nan Yu（单一来源）",
+              "url": "https://x.com/thenanyu/status/2091559951739277451"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Intelligence is getting cheaper. @OpenAI Sol's price reductions & discounts on Vercel…",
+          "summary": "自动恢复版一手信号，发布于 08/24 07:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2091671326897713424"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：If you enjoyed this episode, I highly recommend Shreya and Hamel's industry-leading A…",
+          "summary": "自动恢复版一手信号，发布于 08/23 22:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2091529714104168870"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Ryo Lu 公开动态：leaving leaving is the process from fullness into emptiness from the familiar circle…",
+          "summary": "自动恢复版一手信号，发布于 08/24 02:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Ryo Lu（单一来源）",
+              "url": "https://x.com/ryolu_/status/2091596272654582062"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：Mother in law is visiting from India.. Wants to do serendipitous date night with her…",
+          "summary": "自动恢复版一手信号，发布于 08/24 09:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2091696412744700268"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
