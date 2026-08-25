@@ -205,6 +205,84 @@ class BuildDataAddendumTests(unittest.TestCase):
             ["🔥 AI 重要事件"],
         )
 
+    def test_stale_waytoagi_issue_is_never_copied_to_the_latest_report(self) -> None:
+        source_date = "2099-01-01"
+        latest_date = "2099-01-02"
+        latest = {
+            "date": latest_date,
+            "label": "当日主刊",
+            "generatedAt": f"{latest_date}T10:00:00+08:00",
+            "oneLiner": "📌 今日一句话：不把过期上游内容伪装成今日更新。",
+            "sections": [
+                {"title": "🔥 AI 重要事件", "items": [news_item("当日新闻")]}
+            ],
+        }
+        stale_attachment = {
+            "date": source_date,
+            "label": "WayToAGI 精选",
+            "attachTo": source_date,
+            "generatedAt": f"{source_date}T23:59:00+08:00",
+            "sections": [
+                {
+                    "title": "🧭 WayToAGI 知识库精选",
+                    "items": [
+                        {
+                            "headline": "过期精选",
+                            "summary": "这条内容只属于它的原始发布日。",
+                            "expanded": False,
+                            "sources": [
+                                {
+                                    "name": "WayToAGI 精选 1/1",
+                                    "url": "https://www.waytoagi.com/zh/blog/news-20990101",
+                                }
+                            ],
+                        }
+                    ],
+                }
+            ],
+        }
+
+        old_values = {
+            name: getattr(build_data, name)
+            for name in ("ARTIFACT_DIR", "LINKS_FILE", "REPORTED_FILE", "OUT_FILE")
+        }
+        try:
+            with tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                artifacts = root / "content" / "artifacts"
+                artifacts.mkdir(parents=True)
+                (artifacts / f"{latest_date}-1.json").write_text(
+                    json.dumps(latest, ensure_ascii=False), "utf-8"
+                )
+                (artifacts / "waytoagi-20990101.json").write_text(
+                    json.dumps(stale_attachment, ensure_ascii=False), "utf-8"
+                )
+                reported_file = root / "content" / "reported.md"
+                reported_file.write_text("", "utf-8")
+                links_file = root / "content" / "links.json"
+                links_file.write_text("{}", "utf-8")
+                output = root / "public" / "data" / "reports.json"
+
+                build_data.ARTIFACT_DIR = artifacts
+                build_data.LINKS_FILE = links_file
+                build_data.REPORTED_FILE = reported_file
+                build_data.OUT_FILE = output
+                self.assertEqual(build_data.main(), 0)
+                payload = json.loads(output.read_text("utf-8"))
+        finally:
+            for name, value in old_values.items():
+                setattr(build_data, name, value)
+
+        reports = {report["date"]: report for report in payload["reports"]}
+        self.assertIn(
+            "🧭 WayToAGI 知识库精选",
+            [section["title"] for section in reports[source_date]["sections"]],
+        )
+        self.assertNotIn(
+            "🧭 WayToAGI 知识库精选",
+            [section["title"] for section in reports[latest_date]["sections"]],
+        )
+
 
 class BuildDataSectionOrderTests(unittest.TestCase):
     def test_places_opc_before_github_for_rich_and_legacy_titles(self) -> None:

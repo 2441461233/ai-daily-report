@@ -88,6 +88,8 @@ WayToAGI 官方镜像期次页是 SSR HTML。云端采集器会把每期完整�
 调用前直接写好 attachment；每个 item 都保留标题、摘要和专属飞书原文 URL。确定性归档器把标题登记到
 `reported.md`，模型不得改写采集结果。质量门会逐字核对源条数、顺序、标题、摘要和链接；任何不完整或被改写的
 attachment 都不会被消费或提交。
+期次只会显示在 WayToAGI 自身的原始发布日；如果官方当天未发布，当日日报不显示 WayToAGI 板块，
+不会把数日前的“最新可用一期”复制成今日更新。
 上游若让两个不同条目共用同一个飞书链接，仍会按两个正文条目分别保存，不会按 URL 错删。
 若上游后来补充或修正旧期条目，结构化输入会重新列出该期，并只重写对应 WayToAGI attachment；主日报仍
 不可覆盖。`content/waytoagi-consumed.txt` 只由已验证的 `waytoagi-YYYYMMDD.json` 派生，不能手工推进。
