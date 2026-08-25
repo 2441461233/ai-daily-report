@@ -1315,8 +1315,41 @@ class WorkflowContractTests(unittest.TestCase):
             workflow.index("scripts/generate_qwen_report.py"),
             workflow.index("@github/copilot"),
         )
+        self.assertIn("cron: '17 23 * * *'", workflow)
+        self.assertIn("cron: '47 23 * * *'", workflow)
+        self.assertIn("cron: '47 0 * * *'", workflow)
+        self.assertIn("cron: '17 1 * * *'", workflow)
         self.assertIn("cron: '17 2 * * *'", workflow)
-        self.assertIn("cron: '47 2 * * *'", workflow)
+
+    def test_deadline_route_skips_models_and_has_an_independent_watchdog(self) -> None:
+        workflow = (ROOT / ".github" / "workflows" / "daily-report.yml").read_text(
+            "utf-8"
+        )
+        watchdog = (
+            ROOT / ".github" / "workflows" / "daily-report-watchdog.yml"
+        ).read_text("utf-8")
+        route_selector = workflow.index(
+            "      - name: Select deadline-aware production route"
+        )
+        qwen_workspace = workflow.index(
+            "      - name: Prepare isolated Qwen workspace", route_selector
+        )
+        fallback_workspace = workflow.index(
+            "      - name: Prepare isolated no-key fallback workspace", qwen_workspace
+        )
+        qwen_condition = workflow[route_selector:qwen_workspace + 400]
+        fallback_condition = workflow[fallback_workspace:fallback_workspace + 500]
+        self.assertIn("steps.route.outputs.selected == 'quality'", qwen_condition)
+        self.assertIn("steps.route.outputs.selected == 'quality'", fallback_condition)
+        self.assertIn('route_now="$(date -u +%Y-%m-%dT%H:%M:%SZ)"', workflow)
+        self.assertIn("daily-ai-report-deadline-watchdog", watchdog)
+        self.assertNotIn("daily-ai-report-deadline-watchdog", workflow)
+        self.assertIn("cancel-in-progress: true", watchdog)
+        self.assertIn("09:40 Asia/Shanghai", watchdog)
+        self.assertIn("gh workflow run daily-report.yml", watchdog)
+        self.assertIn("-f route=deadline", watchdog)
+        self.assertIn("actions: write", watchdog)
+        self.assertIn("inputs.route == 'deadline'", workflow)
 
     def test_qwen_failure_is_not_masked_by_tee_or_later_validators(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "daily-report.yml").read_text(

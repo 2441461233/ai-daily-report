@@ -1,0 +1,54 @@
+name: Daily AI report deadline watchdog
+
+on:
+  # This workflow is deliberately independent from daily-report.yml concurrency.
+  # It starts very early, then waits on an already allocated runner instead of
+  # trusting GitHub to deliver a new schedule event close to the deadline.
+  schedule:
+    - cron: '47 22 * * *' # 06:47 Asia/Shanghai
+    - cron: '17 23 * * *' # 07:17 Asia/Shanghai retry
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: daily-ai-report-deadline-watchdog
+  # The later early-morning event takes over the same 09:40 check instead of
+  # queuing a second dispatch behind the first sleeper.
+  cancel-in-progress: true
+
+jobs:
+  enforce_deadline:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 200
+    steps:
+      - name: Guarantee a deadline-safe run by 09:40 Shanghai time
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          report_date="$(TZ=Asia/Shanghai date +%F)"
+          deadline_epoch="$(TZ=Asia/Shanghai date --date="$report_date 09:40:00" +%s)"
+          now_epoch="$(date +%s)"
+          wait_seconds=$((deadline_epoch - now_epoch))
+          if [ "$wait_seconds" -gt 0 ]; then
+            sleep "$wait_seconds"
+          fi
+
+          artifact_path="content/artifacts/${report_date}-1.json"
+          if gh api \
+            -H 'Accept: application/vnd.github.raw+json' \
+            "repos/${GITHUB_REPOSITORY}/contents/${artifact_path}?ref=main" \
+            >/dev/null 2>&1; then
+            printf '%s already exists on origin/main; no recovery dispatch is needed.\n' "$artifact_path"
+            exit 0
+          fi
+
+          printf '%s is still missing at 09:40 Asia/Shanghai; dispatching deadline recovery.\n' "$artifact_path"
+          gh workflow run daily-report.yml \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref main \
+            -f route=deadline

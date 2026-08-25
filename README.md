@@ -6,7 +6,7 @@
 ## 工作方式
 
 ```text
-每天 10:17（Asia/Shanghai / UTC 02:17）主运行，10:47 幂等兜底
+每天 07:17 和 07:47（Asia/Shanghai）提前启动高质量主运行
   → 直采官方 news/changelog，生成强制重大候选清单
   → 读取 Artificial Analysis Intelligence Index 前 10，与已验证快照比较
   → 确定性采集 WayToAGI，并直接写入完整 attachment 与 /tmp/waytoagi.json
@@ -17,6 +17,9 @@
   → 生成完成后移除 DashScope 密钥，再检查新 artifact manifest 和 reported.md 追加边界
   → Qwen 调用、硬门或候选预检失败时，运行此前不需要模型 API Key 的 Copilot 研究流程
   → 两条研究路径都失败时，才生成完全确定性的“自动恢复版”
+在 08:47、09:17 安排独立确定性恢复检查；另一条不受生产并发取消影响的 watchdog 会在 09:40 检查远端主刊
+  → 若当日主刊仍缺失，取消耗时的模型路径，立即采集并发布确定性恢复版
+10:17 仅作为刊后新鲜度、重大候选与 Artificial Analysis 排名复查
   → 写入 content/artifacts/*.json
   → 强制核对每条重大候选的 id + 官方证据 URL + 版本匹配词
   → 有榜单变化时逐字核对独立 attachment；通过后才推进排名快照
@@ -26,7 +29,7 @@
   → Vercel 收到 push 后构建并发布
 ```
 
-职责划分：GitHub Actions 负责研究任务（Qwen 三阶段主链最长 35 分钟，整个生成 job 最长 120 分钟），Vercel 只负责静态站构建和托管。这样不会受
+职责划分：GitHub Actions 负责研究任务（Qwen 三阶段主链最长 25 分钟，整个生成 job 最长 60 分钟），Vercel 只负责静态站构建和托管。这样不会受
 Vercel Serverless 单次执行时长和只读文件系统限制。
 
 ## 目录
@@ -102,5 +105,6 @@ Qwen API 不可用或稿件未通过生产门时，工作流先运行此前的�
 再用已验证的公开 feed 发布“自动恢复版”。完整步骤见
 [DEPLOY.md](DEPLOY.md)。
 
-自动任务也可以在 GitHub 的 **Actions → Daily AI report → Run workflow** 手动补跑。若发现未覆盖的强制候选，
+自动任务也可以在 GitHub 的 **Actions → Daily AI report → Run workflow** 手动补跑。`quality`
+会保留 Qwen 与无 Key 研究链，`deadline` 则直接走确定性恢复版。若发现未覆盖的强制候选，
 同日重跑会新建连续编号的小型补刊；若候选均已覆盖，才保持幂等。主刊与已提交补刊均不可覆盖。

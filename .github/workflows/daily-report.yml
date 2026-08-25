@@ -2,18 +2,38 @@ name: Daily AI report
 
 on:
   # GitHub schedules use UTC. Avoid the top-of-hour congestion window.
-  # The second run is an idempotent fallback if GitHub drops the first event.
+  # Quality runs start early enough to absorb GitHub's observed schedule delay.
+  # Recovery runs never wait for a paid or agentic model.
   schedule:
-    - cron: '17 2 * * *' # 10:17 Asia/Shanghai
-    - cron: '47 2 * * *' # 10:47 Asia/Shanghai fallback
+    - cron: '17 23 * * *' # 07:17 Asia/Shanghai quality run
+    - cron: '47 23 * * *' # 07:47 Asia/Shanghai quality retry
+    - cron: '47 0 * * *' # 08:47 Asia/Shanghai deterministic recovery
+    - cron: '17 1 * * *' # 09:17 Asia/Shanghai deterministic recovery
+    - cron: '17 2 * * *' # 10:17 Asia/Shanghai freshness/addendum check
   workflow_dispatch:
+    inputs:
+      route:
+        description: Production route
+        required: true
+        default: quality
+        type: choice
+        options:
+          - quality
+          - deadline
 
 permissions:
   contents: read
 
 concurrency:
   group: daily-ai-report
-  cancel-in-progress: false
+  # Deadline runs preempt a model run. Quality retries remain serialized.
+  cancel-in-progress: >-
+    ${{
+      (github.event_name == 'workflow_dispatch' && inputs.route == 'deadline') ||
+      github.event.schedule == '47 0 * * *' ||
+      github.event.schedule == '17 1 * * *' ||
+      github.event.schedule == '17 2 * * *'
+    }}
 
 jobs:
   generate:
@@ -22,7 +42,7 @@ jobs:
       contents: read
       copilot-requests: write
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 60
     outputs:
       base_sha: ${{ steps.prepare.outputs.base_sha }}
       collector_now: ${{ steps.prepare.outputs.collector_now }}
@@ -158,9 +178,28 @@ jobs:
           printf 'required=%s\n' "$required" >> "$GITHUB_OUTPUT"
           printf 'Qwen editor required: %s (%s)\n' "$required" "$reason"
 
+      - name: Select deadline-aware production route
+        id: route
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_SCHEDULE: ${{ github.event.schedule }}
+          REQUESTED_ROUTE: ${{ inputs.route || 'quality' }}
+        run: |
+          set -euo pipefail
+          route_now="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          selected="$(python3 scripts/select_daily_route.py \
+            --now "$route_now" \
+            --event-name "$EVENT_NAME" \
+            --event-schedule "$EVENT_SCHEDULE" \
+            --requested-route "$REQUESTED_ROUTE")"
+          printf 'selected=%s\n' "$selected" >> "$GITHUB_OUTPUT"
+          printf 'Selected production route: %s\n' "$selected"
+
       - name: Prepare isolated Qwen workspace
         id: qwen_workspace
-        if: steps.need_model.outputs.required == 'true'
+        if: >-
+          steps.need_model.outputs.required == 'true' &&
+          steps.route.outputs.selected == 'quality'
         continue-on-error: true
         run: |
           set -euo pipefail
@@ -186,7 +225,7 @@ jobs:
         run: |
           set -euo pipefail
           {
-            timeout --signal=TERM --kill-after=30s 35m \
+            timeout --signal=TERM --kill-after=30s 25m \
               python3 scripts/generate_qwen_report.py \
               --date "${{ steps.prepare.outputs.report_date }}" \
               --generated-at "${{ steps.prepare.outputs.collector_now }}" \
@@ -194,8 +233,8 @@ jobs:
               --priority /tmp/priority-news.json \
               --artificial-analysis /tmp/artificial-analysis.json \
               --waytoagi /tmp/waytoagi.json \
-              --research-timeout 420 \
-              --editor-timeout 420 \
+              --research-timeout 360 \
+              --editor-timeout 360 \
               --diagnostics "$RUNNER_TEMP/daily-diagnostics/qwen-usage.json"
             unset DASHSCOPE_API_KEY
             python3 scripts/validate_content.py
@@ -263,6 +302,7 @@ jobs:
         if: >-
           always() &&
           steps.need_model.outputs.required == 'true' &&
+          steps.route.outputs.selected == 'quality' &&
           (
             steps.qwen.outcome != 'success' ||
             steps.qwen_preflight.outcome != 'success'
@@ -282,7 +322,7 @@ jobs:
         id: fallback_install
         if: always() && steps.fallback_workspace.outcome == 'success'
         continue-on-error: true
-        run: timeout --signal=TERM --kill-after=30s 8m npm install --global @github/copilot@1.0.80
+        run: timeout --signal=TERM --kill-after=30s 5m npm install --global @github/copilot@1.0.80
 
       - name: Run the previous no-key research workflow
         id: fallback_agent
@@ -298,7 +338,7 @@ jobs:
           REPORT_DATE: ${{ steps.prepare.outputs.report_date }}
         run: |
           set -o pipefail
-          timeout --signal=TERM --kill-after=30s 45m copilot \
+          timeout --signal=TERM --kill-after=30s 20m copilot \
             --prompt "Read automation/AGENT_TASK.md completely and execute it now. The frozen Asia/Shanghai report date is ${REPORT_DATE}; /tmp/report-date is canonical even if the run crosses midnight. You must fully read /tmp/report-date, /tmp/priority-news.json, /tmp/artificial-analysis.json, /tmp/ai-builders.json, and /tmp/waytoagi.json before selecting or writing anything. If /tmp/waytoagi.json has sourceStatus.status=unavailable, continue the main report, do not refetch WayToAGI or modify its artifacts/state, and report the outage in the final run summary. Work autonomously, obey the file scope, cover every required priority candidate, preserve every deterministic attachment, finish all required artifact/archive writes, then report the concise run summary requested. The outer workflow will validate and build after you finish." \
             --allow-tool='read,write,url' \
             --allow-all-urls \
@@ -315,6 +355,7 @@ jobs:
         id: accept
         if: always() && steps.need_model.outputs.required == 'true'
         env:
+          SELECTED_ROUTE: ${{ steps.route.outputs.selected }}
           QWEN_OUTCOME: ${{ steps.qwen.outcome }}
           QWEN_PREFLIGHT_OUTCOME: ${{ steps.qwen_preflight.outcome }}
           FALLBACK_AGENT_OUTCOME: ${{ steps.fallback_agent.outcome }}
@@ -411,7 +452,7 @@ jobs:
             printf 'Accepted %s verified artifact(s) from %s.\n' \
               "$(wc -l < "$new_manifest")" "$accepted_route"
           else
-            echo "Qwen and the previous no-key workflow both failed; using the deterministic recovery edition."
+            printf 'Using the deterministic recovery edition (selected route: %s).\n' "$SELECTED_ROUTE"
           fi
 
           if [ ! -f "content/artifacts/${report_date}-1.json" ] \
@@ -551,6 +592,7 @@ jobs:
         env:
           PREPARE_OUTCOME: ${{ steps.prepare.outcome }}
           NEED_MODEL: ${{ steps.need_model.outputs.required }}
+          SELECTED_ROUTE: ${{ steps.route.outputs.selected }}
           QWEN_WORKSPACE_OUTCOME: ${{ steps.qwen_workspace.outcome }}
           QWEN_OUTCOME: ${{ steps.qwen.outcome }}
           QWEN_PREFLIGHT_OUTCOME: ${{ steps.qwen_preflight.outcome }}
@@ -584,6 +626,7 @@ jobs:
             printf 'base_sha=%s\n' "${{ steps.prepare.outputs.base_sha }}"
             printf 'prepare=%s\n' "$PREPARE_OUTCOME"
             printf 'need_model=%s\n' "$NEED_MODEL"
+            printf 'selected_route=%s\n' "$SELECTED_ROUTE"
             printf 'qwen_workspace=%s\n' "$QWEN_WORKSPACE_OUTCOME"
             printf 'qwen=%s\n' "$QWEN_OUTCOME"
             printf 'qwen_preflight=%s\n' "$QWEN_PREFLIGHT_OUTCOME"
