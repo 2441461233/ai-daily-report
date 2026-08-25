@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-26 星期三",
+  "label": "第二十五期·自动恢复版",
+  "generatedAt": "2026-08-26T07:39:40+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：If your terminal ever gets into a 'bad state', like garbled outputs, you run 𝚛𝚎𝚜𝚎𝚝. I…",
+          "summary": "自动恢复版一手信号，发布于 08/25 02:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2091957823945216474"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：so it looks @google disabled the @youtube account for @every with 0 notice and no rea…",
+          "summary": "自动恢复版一手信号，发布于 08/25 07:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2092026065644335446"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Tomorrow we will bring back the 5h limit for Plus accounts across ChatGPT Work and Co…",
+          "summary": "自动恢复版一手信号，发布于 08/25 09:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2092058556707344708"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：We need to get away from software that we can’t change with a prompt.",
+          "summary": "自动恢复版一手信号，发布于 08/25 00:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2091923535513928015"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：OpenAI DevDay 2026 will be our best DevDay in the history of the company. It will not…",
+          "summary": "自动恢复版一手信号，发布于 08/25 13:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2092117461646856505"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Datacenters create jobs and prosperity, actually",
+          "summary": "自动恢复版一手信号，发布于 08/25 09:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2092062820229890209"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Peter Yang 公开动态：I got 3 AI chief of staffs now, clearly the next step is to add one more",
+          "summary": "自动恢复版一手信号，发布于 08/25 08:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2092048940732682395"
+            }
+          ]
+        },
+        {
+          "headline": "Aditya Agarwal 公开动态：Hans Robertson was early at @VMware, co-founded @meraki and sold it to Cisco for $1.2…",
+          "summary": "自动恢复版一手信号，发布于 08/25 02:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2091958074827313523"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：Systems of record have never been more important than in a world where you have AI ag…",
+          "summary": "自动恢复版一手信号，发布于 08/25 11:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2092087679240569126"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Conductor Cloud has made me so much more productive and I don't have to keep my Macbo…",
+          "summary": "自动恢复版一手信号，发布于 08/25 09:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2092062231488061584"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：It’s not fully appreciated that ZDR is responsible for a substantial amount of the gr…",
+          "summary": "自动恢复版一手信号，发布于 08/24 23:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2091909170308296950"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
