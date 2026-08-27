@@ -609,3 +609,10 @@
 - 2026-08-27 | WayToAGI 2026-08-25：《100 个问题》系列丛书
 - 2026-08-27 | WayToAGI 2026-08-25：什么是Harness工程，为什么我要关心？
 - 2026-08-27 | WayToAGI 2026-08-25：OpenClaw创始人：“乐趣就是速度”丨Y Combinator
+- 2026-08-27 | WayToAGI 2026-08-26：Tutti · VM 首发 ｜多人、多 Agents 协作的 Google docs 时刻
+- 2026-08-27 | WayToAGI 2026-08-26：这9个Skill，把我的图像审美拉到了一个新高度
+- 2026-08-27 | WayToAGI 2026-08-26：一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制
+- 2026-08-27 | WayToAGI 2026-08-26：万字长文：Deepseek Harness 一文全看懂！！
+- 2026-08-27 | WayToAGI 2026-08-26：Anthropic 官方指南：AI Native 开发手册
+- 2026-08-27 | WayToAGI 2026-08-26：GLM-5.3-Flash：前沿智能进入普惠时代
+- 2026-08-27 | WayToAGI 2026-08-26：Hello Plugin：我把 DeepSeek Harness 插件开发全链路跑了一遍

@@ -8901,6 +8901,124 @@
               ]
             }
           ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "Tutti · VM 首发 ｜多人、多 Agents 协作的 Google docs 时刻",
+              "summary": "Tutti· VM是行业首个【实况级】多人多agent并行协作空间，在不迁移现有工具和使用习惯的前提下，将个人、临时的 Agent 运行环境，升级为持续存在的团队共享工作现场；并且把串行交接变成实时并行协作。文中附有内测邀请码，感兴趣的小伙伴儿可以来体验下！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/H5s7w5iD8i4IsdkgZrJcn75ZnCf"
+                }
+              ]
+            },
+            {
+              "text": "这9个Skill，把我的图像审美拉到了一个新高度",
+              "summary": "作者整理了下面这9个Skill，带你一次性理解图像背后的审美逻辑：哪些适合一句话出海报，哪些必须上传原图；纸刊、像素、低饱和、解构、手绘、抽象、旅行手账各自怎么选。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RpAHwVbImi6Q2HkvZ9qcPRMWnHg"
+                }
+              ]
+            },
+            {
+              "text": "一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制",
+              "summary": "2026 年Agent自进化开始从论文和框架走向工程现场，但很多团队还在把评测、记忆、Skill更新拆开做，结果就是Agent 用了半年还像新手。作者这篇文章基于对 Anthropic 递归自改进报告、斯坦福 CS329A 课程、EvoAgentX 等开源框架的深度研读，结合业界多个团队已验证的优秀实践，提炼出一个完整的、可落地的、经过验证的工程闭环。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/RAmOw0hiqikA9ukMTxOcvv2Vnhf"
+                }
+              ]
+            },
+            {
+              "text": "万字长文：Deepseek Harness 一文全看懂！！",
+              "summary": "本文附有很多名词解释与图片表达，可以让想学AI但苦于不懂术语、基础不好的人或懂技术但不太了解DSH的人，都能获得对Deepseek Harness的深度认知！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/Aj1rw6AyWiqFPGkEdTFcJglwnId"
+                }
+              ]
+            },
+            {
+              "text": "Anthropic 官方指南：AI Native 开发手册",
+              "summary": "Anthropic 官方发布的AI Native 开发手册，适合研发团队、技术负责人和正在把Claude/Codex接进工作流的人看。他们把软件从一个想法变成线上产品的完整过程：规划、设计、构建、测试、部署、运维 详细拆解了下。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/Epowwhkb2i0M5pkJ3HJcXCqZnHf"
+                }
+              ]
+            },
+            {
+              "text": "GLM-5.3-Flash：前沿智能进入普惠时代",
+              "summary": "GLM-5系列的首个原生多模态模型：GLM-5.3-Flash (320B-A18B)正式上线并开源。320B 总参数、18B激活，编程体感对齐Claude Opus 4.8，价格却压到Opus 4.8 的1/40。更值得关注的是背后的工程路线：混合注意力机制降低成本，视觉反馈进入代码循环，还跑在国产芯片集群上。一起来测试下真实效果如何？",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/Bdx6wt9VziLbqIkM1L8cMDSJnXd"
+                }
+              ]
+            },
+            {
+              "text": "Hello Plugin：我把 DeepSeek Harness 插件开发全链路跑了一遍",
+              "summary": "或许大家也看过不少 DeepSeek Harness 的分析文章和架构介绍，但只要没有亲手把插件跑起来，对它的理解就总像隔着一层皮。作者沿着官方文档亲手做了一个Hello Plugin：从最小插件、工具注册和配置校验，到组合包安装、profile 加载、发布与卸载，把插件开发的完整链路实操了一遍。快一起上手实操试试！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/26",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260826"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/H3OMwxGJZiKB0HksfGBcfTgVndg"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/26，按原文日期归档。"
         }
       ],
       "rich": true,
