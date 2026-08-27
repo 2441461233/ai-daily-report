@@ -1,0 +1,150 @@
+{
+  "date": "2026-08-27 星期四",
+  "label": "第二十六期·自动恢复版",
+  "generatedAt": "2026-08-27T12:03:34+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：So much demand for this one. Works similar to the Pro $100 plan but designed for team…",
+          "summary": "自动恢复版一手信号，发布于 08/26 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2092345330272780499"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：Originally inspired by the @TheStalwart’s Odd Lots episode. Built using @ChatGPT code…",
+          "summary": "自动恢复版一手信号，发布于 08/26 06:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2092384774459674957"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Claude now has one memory across chat and Claude Cowork, and you decide what's in it…",
+          "summary": "自动恢复版一手信号，发布于 08/26 01:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2092299704864284888"
+            }
+          ]
+        },
+        {
+          "headline": "Google Labs 公开动态：🚨 NEW LABS EXPERIMENT 🚨 Great minds t̵h̵i̵n̵k̵ play alike! Play with Putty is a colla…",
+          "summary": "自动恢复版一手信号，发布于 08/26 00:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Google Labs（单一来源）",
+              "url": "https://x.com/GoogleLabs/status/2092293667688173593"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：A small improvement: memory is now simpler and more powerful. Enjoy!",
+          "summary": "自动恢复版一手信号，发布于 08/26 04:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2092355642363453943"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：excited to share more on how we’re making Claude Code more hackable soon",
+          "summary": "自动恢复版一手信号，发布于 08/26 01:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2092303682616627311"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Cat Wu 公开动态：Thanks to your feedback, we’ve unified memory across Chat and Cowork. Now, you can te…",
+          "summary": "自动恢复版一手信号，发布于 08/26 03:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Cat Wu（单一来源）",
+              "url": "https://x.com/_catwu/status/2092337156455051345"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：We're introducing Run SDK: secure 𝚎𝚟𝚊𝚕 for dynamic Code Mode execution. When agents w…",
+          "summary": "自动恢复版一手信号，发布于 08/26 06:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2092382653161107534"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Good products take time. At least 34 days.",
+          "summary": "自动恢复版一手信号，发布于 08/26 13:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2092487667426738179"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Today, I’m open-sourcing /fuck-cancer, an AI skill that helps patients and caregivers…",
+          "summary": "自动恢复版一手信号，发布于 08/25 21:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2092249012913258946"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：Good post on what the applied AI strategy looks like at scale. It’s clear that there’…",
+          "summary": "自动恢复版一手信号，发布于 08/26 12:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2092466424694649066"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

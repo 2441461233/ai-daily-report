@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-26T07:39:40+08:00",
-  "count": 34,
+  "generatedAt": "2026-08-27T12:03:34+08:00",
+  "count": 35,
   "reports": [
     {
       "date": "2026-07-28",
@@ -8420,6 +8420,92 @@
               ]
             }
           ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "Fish Audio,Trans-n与PnP日本：日本AI是本地化与速度的接力赛｜Linkloud 东京沙龙实录（二）",
+              "summary": "Fish Audio联合创始人Rissa、Trans-N 创始人Harry，以及来自Plug and Play Japan的投资人 Rebecca。三位分别代表了 AI 语音平台、企业级 Agent 产品、国际投资机构的本地分支三种视角。这次沙龙的话题从为什么选择日本市场、如何进入市场、护城河在哪里来切入，一起看看他们具体都聊了什么？",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/24",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260824"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/HlYnwNs2Oir8hrkN5oJc0K86nAb"
+                }
+              ]
+            },
+            {
+              "text": "AI音乐周刊 W.A 042",
+              "summary": "AI 音乐这周最值得盯的，已经从“谁的生成效果更像歌”，走到了版权、分发、标识、生产工具一起重构。环球音乐推出单曲级二创权限、输出 AI 专利，Apple Music 即将增设 AI 生成音乐标签，行业版权规范正在加速成型。多款实用创作工具迎来重磅更新，覆盖 DAW 插件、音频转 MIDI、离线歌单、开源歌唱合成。还有五篇前沿论文覆盖模型评估、唱跳视频、符号音乐分词等方向。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/24",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260824"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/MuEYwFlKfinkHmkbsd4caLgKnfd"
+                }
+              ]
+            },
+            {
+              "text": "出门不带电脑，也能随时调用家里的知识库：MacBook + Mac mini + iPhone 协同保姆级教程",
+              "summary": "出门还得背电脑，或者让笔记本在家常亮，其实很别扭。更理想的状态是：家里的Mac mini当主脑，MacBook负责深度创作和开发，iPhone 变成随时下指令的遥控器。这篇文章作者把完整的配置过程写了出来，包括踩过的每一个坑。步骤会写得很细，新手照着做就能跑通。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/24",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260824"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/FdpgwFD4FiYtoSk9Y6ycKGs6nQd"
+                }
+              ]
+            },
+            {
+              "text": "一条可用视频到底要抽几次？我用3款模型对比了7组案例（附提示词）",
+              "summary": "小歪用Seedance 2.0 fast、MiniMax H3、Wan 3.0跑了7组真实案例：晨起Vlog、古装微表情、豪门短剧、情侣对峙、女团舞、四人运镜、史前灾难片。不只是单纯地看画质，还对比了短剧节奏、人物表情、动作卡点、多人物稳定性、大场景融合度，以及API和本地部署怎么选。来看看最近更新的这几个视频模型，哪个更适合你？",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/24",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260824"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/JkmnwcuzQiKXshkdhi4cWIl1nqe"
+                }
+              ]
+            },
+            {
+              "text": "有趣的小红书图文自动排版Skill，使用教程来喽！",
+              "summary": "很多做小红书/小绿书图文的人，最耗时间的往往不是写内容，而是排版、配图、改字、对齐，还要保持自己的IP风格稳定。阿真这篇把“小红书图文自动排版 Skill”的搭建流程拆解了下，后面只要丢文章或飞书链接，就能自动拆页、渲染、导出2K图片。内容创作者们可以上手试试！",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/24",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260824"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/FQCHw2MzPidJsSkpijYclsSenre"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/24，按原文日期归档。"
         }
       ],
       "rich": true,
@@ -8532,6 +8618,124 @@
               ]
             }
           ]
+        },
+        {
+          "title": "🧭 WayToAGI 知识库精选",
+          "items": [
+            {
+              "text": "「豆包工作」+ 飞书完全指南",
+              "summary": "豆包工作这次把入口直接放进飞书：云文档、多维表格、群聊、会议纪要，都能在权限范围内被调用起来。这篇文章把豆包工作怎么访问、飞书登录后能做什么、隐私边界和套餐额度讲得很清楚。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/XFzXweH7Biu9KKk7dWocZZNgnzO"
+                }
+              ]
+            },
+            {
+              "text": "AI 做海报、HTML构图手册：16 种控制焦点与动势的海报构图——上册（附样图和提示词）",
+              "summary": "这篇文章适合三类人：经常用 AI 生海报的人、要让 AI 写 HTML 落地页的人，以及不会专业设计软件，但需要把视觉需求讲清楚的人。读完以后，你会知道该选哪种构图，也知道怎么把它写进提示词。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/U6C3wpb9OiwXn9kngvkcwluGnSb"
+                }
+              ]
+            },
+            {
+              "text": "我扒完了 GitHub 上 55 个 AI 成片产线，得出一个结论",
+              "summary": "作者最近在做 skill/agent 驱动的 AI 成片产线，顺手把 GitHub 同赛道全扒了一遍，分成视频 Skill、一站式成片平台、分镜/导演画布三类，总共55个。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/ZEonw9QWdidPU4kcnP1cH1XpnTB"
+                }
+              ]
+            },
+            {
+              "text": "我的 AI 原生开发流程：一个真实案例的完整复盘",
+              "summary": "代码已经越来越像最容易交给Agent的环节，真正考验人的是做不做、怎么做、做完好不好用。宝玉这篇文章从BaoCut的远程转录功能出发，复盘了一套 AI 原生开发流程：可行性分析、设计文档、高精度原型、Agent 实现、自验证，再由人像普通用户一样黑盒测试。适合开发者、产品读，能帮你把 AI 从“写代码助手”变成完整开发协作系统。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/XJEzwR5FGi60fuk9kVBcXeTOnah"
+                }
+              ]
+            },
+            {
+              "text": "《100 个问题》系列丛书",
+              "summary": "都说提示词已死，AI 越聊越笨。作者整理了《关于提示工程的100个问题》，带你看清提示工程当下真实面貌。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/YTt3wPPIeixEK5kbJPnc0YL7nTf"
+                }
+              ]
+            },
+            {
+              "text": "什么是Harness工程，为什么我要关心？",
+              "summary": "“零行手写代码也能发布软件”，听起来很厉害，但关键其实在 Harness：给Agent配好沙箱、权限边界、测试反馈和急停机制，让它写完代码后能自己跑测试、看报错、再修复。谷歌官方的这篇文章详细拆解了下Harness到底是什么？",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/MXIzwnvSaipysMkxX79crgfen3q"
+                }
+              ]
+            },
+            {
+              "text": "OpenClaw创始人：“乐趣就是速度”丨Y Combinator",
+              "summary": "这期对话复盘了OpenClaw从一小时做出的WhatsApp中继，到周下载量 470万、社区PR爆炸、配置项堆到9500个的全过程。里面最值得开发者和 AI 创业者看的，是Peter对增长、依赖平台、安全边界和产品失焦的反思：热度会来会走，真正要守住的是你自己的判断、使用频率和创造乐趣。",
+              "expanded": false,
+              "flag": false,
+              "sources": [
+                {
+                  "name": "WayToAGI 精选 8/25",
+                  "url": "https://www.waytoagi.com/zh/blog/news-20260825"
+                },
+                {
+                  "name": "原文（飞书）",
+                  "url": "https://waytoagi.feishu.cn/wiki/UNB4wK4XkiuChHksIBFcSZiBnNf"
+                }
+              ]
+            }
+          ],
+          "note": "来自 WayToAGI 知识库精选 8/25，按原文日期归档。"
         }
       ],
       "rich": true,
@@ -8705,6 +8909,171 @@
       "seq": 1,
       "slug": "2026-08-26--1",
       "weekday": "周三"
+    },
+    {
+      "date": "2026-08-27",
+      "generatedAt": "2026-08-27T12:03:34+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：So much demand for this one. Works similar to the Pro $100 plan but designed for team…",
+              "summary": "自动恢复版一手信号，发布于 08/26 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2092345330272780499"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：Originally inspired by the @TheStalwart’s Odd Lots episode. Built using @ChatGPT code…",
+              "summary": "自动恢复版一手信号，发布于 08/26 06:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2092384774459674957"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Claude 公开动态：Claude now has one memory across chat and Claude Cowork, and you decide what's in it…",
+              "summary": "自动恢复版一手信号，发布于 08/26 01:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2092299704864284888"
+                }
+              ]
+            },
+            {
+              "text": "Google Labs 公开动态：🚨 NEW LABS EXPERIMENT 🚨 Great minds t̵h̵i̵n̵k̵ play alike! Play with Putty is a colla…",
+              "summary": "自动恢复版一手信号，发布于 08/26 00:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Google Labs",
+                  "url": "https://x.com/GoogleLabs/status/2092293667688173593"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：A small improvement: memory is now simpler and more powerful. Enjoy!",
+              "summary": "自动恢复版一手信号，发布于 08/26 04:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2092355642363453943"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：excited to share more on how we’re making Claude Code more hackable soon",
+              "summary": "自动恢复版一手信号，发布于 08/26 01:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2092303682616627311"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Cat Wu 公开动态：Thanks to your feedback, we’ve unified memory across Chat and Cowork. Now, you can te…",
+              "summary": "自动恢复版一手信号，发布于 08/26 03:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Cat Wu",
+                  "url": "https://x.com/_catwu/status/2092337156455051345"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：We're introducing Run SDK: secure 𝚎𝚟𝚊𝚕 for dynamic Code Mode execution. When agents w…",
+              "summary": "自动恢复版一手信号，发布于 08/26 06:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2092382653161107534"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Good products take time. At least 34 days.",
+              "summary": "自动恢复版一手信号，发布于 08/26 13:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2092487667426738179"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Today, I’m open-sourcing /fuck-cancer, an AI skill that helps patients and caregivers…",
+              "summary": "自动恢复版一手信号，发布于 08/25 21:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2092249012913258946"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：Good post on what the applied AI strategy looks like at scale. It’s clear that there’…",
+              "summary": "自动恢复版一手信号，发布于 08/26 12:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2092466424694649066"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第二十六期·自动恢复版",
+      "issue": 35,
+      "seq": 1,
+      "slug": "2026-08-27--1",
+      "weekday": "周四"
     }
   ]
 }
