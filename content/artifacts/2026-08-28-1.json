@@ -1,0 +1,139 @@
+{
+  "date": "2026-08-28 星期五",
+  "label": "第二十七期·自动恢复版",
+  "generatedAt": "2026-08-28T14:22:25+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Zara Zhang 公开动态：Most PR teams at large companies exist in order to block real marketing and branding…",
+          "summary": "自动恢复版一手信号，发布于 08/27 08:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2092774923320369394"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：A few weeks at OpenAI feel like years at other companies in terms of how much gets do…",
+          "summary": "自动恢复版一手信号，发布于 08/27 07:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2092756702349398036"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Claude now has its own built-in browser in Cowork. When your task involves a website…",
+          "summary": "自动恢复版一手信号，发布于 08/27 07:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2092755571455758427"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：A good thing about having aged is that I feel that it’s been 20 years since I’ve pres…",
+          "summary": "自动恢复版一手信号，发布于 08/27 14:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2092862554632826968"
+            }
+          ]
+        },
+        {
+          "headline": "Sam Altman 公开动态：this is a good report about a bad thing:",
+          "summary": "自动恢复版一手信号，发布于 08/27 04:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2092712656096358527"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：i think we should do another party for our next model release, the 5.5 party was a lo…",
+          "summary": "自动恢复版一手信号，发布于 08/27 05:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2092733018838290817"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：Fun to be in the guest chair (vs host), for once. Chatted with Dan Nathan about: * wh…",
+          "summary": "自动恢复版一手信号，发布于 08/27 03:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2092688916969095587"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：We're seeing several of our customers be targeted by fraudulent requests and glad for…",
+          "summary": "自动恢复版一手信号，发布于 08/27 05:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2092729394565657010"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：We're shipping a cool security dashboard, but also the 𝚟𝚎𝚛𝚌𝚎𝚕 𝚜𝚎𝚌𝚞𝚛𝚒𝚝𝚢 𝚌𝚑𝚎𝚌𝚔 CLI. Muc…",
+          "summary": "自动恢复版一手信号，发布于 08/26 22:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2092621371914482026"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：Yesterday, at Box we reported our Q2 results with revenue of $321.1 million for the q…",
+          "summary": "自动恢复版一手信号，发布于 08/27 03:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2092702955292230100"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
