@@ -1,0 +1,139 @@
+{
+  "date": "2026-08-29 星期六",
+  "label": "第二十八期·自动恢复版",
+  "generatedAt": "2026-08-29T11:53:51+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Starting today, 10,000 scientists across every field, from math to chemistry to physi…",
+          "summary": "自动恢复版一手信号，发布于 08/28 03:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2093059087298601113"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Our best products have been exports of internal technology we gain strong conviction…",
+          "summary": "自动恢复版一手信号，发布于 08/28 00:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2093019310725951683"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：this is a critically important moment for cyber defense with AI; there is not much ti…",
+          "summary": "自动恢复版一手信号，发布于 08/28 03:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2093060670472241368"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：ChatGPT can now do your groceries, book an Uber, get you that haircut appointment (hi…",
+          "summary": "自动恢复版一手信号，发布于 08/28 04:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2093074717590921245"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Starting to see more and more Codex users on airplanes and in cafés. Underdog energy…",
+          "summary": "自动恢复版一手信号，发布于 08/28 13:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2093207246977318928"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：But flying close to Sol doesn't make it faster, sorry.",
+          "summary": "自动恢复版一手信号，发布于 08/28 13:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2093207264194892263"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：and shaders are further proof that “everything is computer”. 2D, 3D, geometry, light…",
+          "summary": "自动恢复版一手信号，发布于 08/28 07:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2093119693846630842"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Peter Yang 公开动态：I receive around 3-5 requests to test a new AI product daily. Almost all of them requ…",
+          "summary": "自动恢复版一手信号，发布于 08/28 08:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2093126719888916616"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Seems likely that on a long enough time frame, AI will generate cash flows faster tha…",
+          "summary": "自动恢复版一手信号，发布于 08/28 03:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2093056910631293063"
+            }
+          ]
+        },
+        {
+          "headline": "Madhu Guru 公开动态：If you lead AI for an enterprise, the highest leverage thing you can do is to make yo…",
+          "summary": "自动恢复版一手信号，发布于 08/28 09:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Madhu Guru（单一来源）",
+              "url": "https://x.com/realmadhuguru/status/2093143877087879377"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
