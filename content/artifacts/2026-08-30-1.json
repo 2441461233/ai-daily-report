@@ -1,0 +1,123 @@
+{
+  "date": "2026-08-30 星期日",
+  "label": "第二十九期·自动恢复版",
+  "generatedAt": "2026-08-30T09:16:04+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：What is the most ambitious task you’ve given ChatGPT Work?",
+          "summary": "自动恢复版一手信号，发布于 08/28 23:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2093354037198696932"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Looking at the dashboard we might hit a new milestone to celebrate tomorrow. Hold on…",
+          "summary": "自动恢复版一手信号，发布于 08/29 13:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2093573991965557198"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Datacenters create prosperity and good jobs",
+          "summary": "自动恢复版一手信号，发布于 08/29 08:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2093500353849544842"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：MCP is growing explosively. And it's not just Vercel MCP… Look at 𝚖𝚌𝚙-𝚑𝚊𝚗𝚍𝚕𝚎𝚛 npm dow…",
+          "summary": "自动恢复版一手信号，发布于 08/29 06:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2093463771071336497"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Aditya Agarwal 公开动态：It's interesting to me to see a lot of people comment on visa stuff without actually…",
+          "summary": "自动恢复版一手信号，发布于 08/29 06:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2093468512459321512"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：I see the web evolving in two extremes: 1️⃣ ultra-fancy human experiences, in the ser…",
+          "summary": "自动恢复版一手信号，发布于 08/29 07:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2093482695838007318"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：We unfortunately have decided that we cannot continue providing access to our models…",
+          "summary": "自动恢复版一手信号，发布于 08/29 09:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2093515916076343774"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：Long-time admirer of the Cursor team, few have done more to bring AI coding to the wo…",
+          "summary": "自动恢复版一手信号，发布于 08/29 11:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2093541555068182781"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：You can access OpenAI models on Replit for free. Our router also makes high-end model…",
+          "summary": "自动恢复版一手信号，发布于 08/29 10:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2093533378880667787"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
