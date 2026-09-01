@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T09:23:14+08:00",
-  "count": 39,
+  "generatedAt": "2026-09-01T09:40:18+08:00",
+  "count": 40,
   "reports": [
     {
       "date": "2026-07-28",
@@ -9787,6 +9787,130 @@
       "seq": 1,
       "slug": "2026-08-31--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-09-01",
+      "generatedAt": "2026-09-01T09:40:18+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：What I wanted to say yesterday is that we hit 25M active users and to celebrate we ha…",
+              "summary": "自动恢复版一手信号，发布于 08/31 10:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2094252447271366730"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：For clarity, while both are called 20X, in Codex they apply specifically to weekly us…",
+              "summary": "自动恢复版一手信号，发布于 08/31 10:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2094254532020818191"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：Two months ago, we started the mission to “build OpenClaw with OpenClaw,” and bit by…",
+              "summary": "自动恢复版一手信号，发布于 08/31 13:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2094290652649636173"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：California high speed rail is pretty obviously hijacked by public sector unions bilki…",
+              "summary": "自动恢复版一手信号，发布于 08/30 21:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2094056908462358592"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：The lesson from the Hugging Face Incident should be that RL with verifiable rewards i…",
+              "summary": "自动恢复版一手信号，发布于 08/31 08:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2094215744842248418"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：When something goes viral on the internet, especially on X, it attracts all kinds of…",
+              "summary": "自动恢复版一手信号，发布于 08/31 03:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2094141838055940530"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：Sometimes people don’t have an intuitive sense of what Jevons paradox looks like for…",
+              "summary": "自动恢复版一手信号，发布于 08/31 02:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2094123406811922930"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：glad that the market is finally catching up to how dumb the SaaSpocalypse was 👇",
+              "summary": "自动恢复版一手信号，发布于 08/30 20:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2094044418583986227"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第三十一期·自动恢复版",
+      "issue": 40,
+      "seq": 1,
+      "slug": "2026-09-01--1",
+      "weekday": "周二"
     }
   ]
 }
