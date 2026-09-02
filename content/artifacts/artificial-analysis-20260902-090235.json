@@ -1,0 +1,168 @@
+{
+  "date": "2026-09-02",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-09-02",
+  "generatedAt": "2026-09-02T09:02:35+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 14 项变化；当前榜首为 Claude Fable 5.1 (max with fallback)（66 分）。",
+      "items": [
+        {
+          "headline": "新进 Top 10：Claude Fable 5.1 (max with fallback) 升至第 1 名",
+          "summary": "Claude Fable 5.1 (max with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 1 名，得分 66。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Fable 5.1 (xhigh with fallback) 升至第 2 名",
+          "summary": "Claude Fable 5.1 (xhigh with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 2 名，得分 65。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Fable 5.1 (high with fallback) 升至第 5 名",
+          "summary": "Claude Fable 5.1 (high with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 5 名，得分 62。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Fable 5.1 (medium with fallback) 升至第 10 名",
+          "summary": "Claude Fable 5.1 (medium with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 10 名，得分 60。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Grok 4.6 (xhigh)",
+          "summary": "Grok 4.6 (xhigh) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 7 名，得分 60。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Kimi K3 (max)",
+          "summary": "Kimi K3 (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 8 名，得分 60。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GLM-5.3 (max)",
+          "summary": "GLM-5.3 (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 60。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GPT-5.6 Sol (xhigh)",
+          "summary": "GPT-5.6 Sol (xhigh) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 59。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Opus 5 (max) 第 1 → 3 名",
+          "summary": "Claude Opus 5 (max) 在 Artificial Analysis Intelligence Index 中下降 2 位，由第 1 名变为第 3 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Opus 5 (xhigh) 第 2 → 4 名",
+          "summary": "Claude Opus 5 (xhigh) 在 Artificial Analysis Intelligence Index 中下降 2 位，由第 2 名变为第 4 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Fable 5 (with fallback) 第 3 → 6 名",
+          "summary": "Claude Fable 5 (with fallback) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 3 名变为第 6 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Opus 5 (high) 第 4 → 7 名",
+          "summary": "Claude Opus 5 (high) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 4 名变为第 7 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-5.6 Sol (max) 第 5 → 8 名",
+          "summary": "GPT-5.6 Sol (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 5 名变为第 8 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Grok 4.6 (high) 第 6 → 9 名",
+          "summary": "Grok 4.6 (high) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 6 名变为第 9 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

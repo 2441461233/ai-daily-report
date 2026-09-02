@@ -7,6 +7,24 @@
   "models": [
     {
       "rank": 1,
+      "slug": "claude-fable-5-1",
+      "name": "Claude Fable 5.1 (max with fallback)",
+      "creator": "Anthropic",
+      "score": 66,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-1"
+    },
+    {
+      "rank": 2,
+      "slug": "claude-fable-5-1-xhigh",
+      "name": "Claude Fable 5.1 (xhigh with fallback)",
+      "creator": "Anthropic",
+      "score": 65,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-1-xhigh"
+    },
+    {
+      "rank": 3,
       "slug": "claude-opus-5",
       "name": "Claude Opus 5 (max)",
       "creator": "Anthropic",
@@ -15,7 +33,7 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5"
     },
     {
-      "rank": 2,
+      "rank": 4,
       "slug": "claude-opus-5-xhigh",
       "name": "Claude Opus 5 (xhigh)",
       "creator": "Anthropic",
@@ -24,7 +42,16 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5-xhigh"
     },
     {
-      "rank": 3,
+      "rank": 5,
+      "slug": "claude-fable-5-1-high",
+      "name": "Claude Fable 5.1 (high with fallback)",
+      "creator": "Anthropic",
+      "score": 62,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-1-high"
+    },
+    {
+      "rank": 6,
       "slug": "claude-fable-5",
       "name": "Claude Fable 5 (with fallback)",
       "creator": "Anthropic",
@@ -33,7 +60,7 @@
       "url": "https://artificialanalysis.ai/models/claude-fable-5"
     },
     {
-      "rank": 4,
+      "rank": 7,
       "slug": "claude-opus-5-high",
       "name": "Claude Opus 5 (high)",
       "creator": "Anthropic",
@@ -42,7 +69,7 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5-high"
     },
     {
-      "rank": 5,
+      "rank": 8,
       "slug": "gpt-5-6-sol",
       "name": "GPT-5.6 Sol (max)",
       "creator": "OpenAI",
@@ -51,7 +78,7 @@
       "url": "https://artificialanalysis.ai/models/gpt-5-6-sol"
     },
     {
-      "rank": 6,
+      "rank": 9,
       "slug": "grok-4-6",
       "name": "Grok 4.6 (high)",
       "creator": "SpaceXAI",
@@ -60,40 +87,13 @@
       "url": "https://artificialanalysis.ai/models/grok-4-6"
     },
     {
-      "rank": 7,
-      "slug": "grok-4-6-xhigh",
-      "name": "Grok 4.6 (xhigh)",
-      "creator": "SpaceXAI",
-      "score": 60,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/grok-4-6-xhigh"
-    },
-    {
-      "rank": 8,
-      "slug": "kimi-k3",
-      "name": "Kimi K3 (max)",
-      "creator": "Kimi",
-      "score": 60,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/kimi-k3"
-    },
-    {
-      "rank": 9,
-      "slug": "glm-5-3",
-      "name": "GLM-5.3 (max)",
-      "creator": "Z AI",
-      "score": 60,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/glm-5-3"
-    },
-    {
       "rank": 10,
-      "slug": "gpt-5-6-sol-xhigh",
-      "name": "GPT-5.6 Sol (xhigh)",
-      "creator": "OpenAI",
-      "score": 59,
+      "slug": "claude-fable-5-1-medium",
+      "name": "Claude Fable 5.1 (medium with fallback)",
+      "creator": "Anthropic",
+      "score": 60,
       "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gpt-5-6-sol-xhigh"
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-1-medium"
     }
   ]
 }

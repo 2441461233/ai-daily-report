@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-02 星期三",
+  "label": "第三十二期·自动恢复版",
+  "generatedAt": "2026-09-02T09:02:35+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Your next design system is… Markdown. We wrote about how 𝙳𝙴𝚂𝙸𝙶𝙽.𝚖𝚍 is helping solve t…",
+          "summary": "自动恢复版一手信号，发布于 09/01 05:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2094541309579235680"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Btw @drhoeflinger I just watched your videos and wow they’re so good. Keep going and…",
+          "summary": "自动恢复版一手信号，发布于 09/01 12:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2094648002656993704"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：If you still haven't tried Codex but have considered it in the past, what's the one t…",
+          "summary": "自动恢复版一手信号，发布于 09/01 08:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2094588317245509959"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Circleback is so much better than Granola, it's not even close Granola still doesn't…",
+          "summary": "自动恢复版一手信号，发布于 09/01 00:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2094465505142960443"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：Pragmatists stay winning in the age of AI",
+          "summary": "自动恢复版一手信号，发布于 08/31 20:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2094397684186481057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Garry Tan 公开动态：I just made some new GBrain evals that help prove that my retrieval-for-AI-agent open…",
+          "summary": "自动恢复版一手信号，发布于 09/01 00:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2094462971598754010"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Coding tokens are basically infrastructure. Yet, the way companies have approached th…",
+          "summary": "自动恢复版一手信号，发布于 09/01 04:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2094523399280435630"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Nan Yu 公开动态：Some personal news—I’m joining OpenAI to work on Codex and ChatGPT. I’m grateful to t…",
+          "summary": "自动恢复版一手信号，发布于 08/31 22:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nan Yu（单一来源）",
+              "url": "https://x.com/thenanyu/status/2094427243565269107"
+            }
+          ]
+        },
+        {
+          "headline": "Madhu Guru 公开动态：If you’re a PM, there is immense alpha in understanding the model frontier for your s…",
+          "summary": "自动恢复版一手信号，发布于 09/01 09:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Madhu Guru（单一来源）",
+              "url": "https://x.com/realmadhuguru/status/2094591503981281503"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：Anthropomorphization of AI is good when it serves to help us use (understand, predict…",
+          "summary": "自动恢复版一手信号，发布于 08/31 20:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2094406185109647580"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
