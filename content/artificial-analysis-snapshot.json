@@ -52,6 +52,15 @@
     },
     {
       "rank": 6,
+      "slug": "muse-spark-1-3",
+      "name": "Muse Spark 1.3 (max)",
+      "creator": "Meta",
+      "score": 62,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/muse-spark-1-3"
+    },
+    {
+      "rank": 7,
       "slug": "claude-fable-5",
       "name": "Claude Fable 5 (with fallback)",
       "creator": "Anthropic",
@@ -60,7 +69,7 @@
       "url": "https://artificialanalysis.ai/models/claude-fable-5"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "slug": "claude-opus-5-high",
       "name": "Claude Opus 5 (high)",
       "creator": "Anthropic",
@@ -69,7 +78,7 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5-high"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "slug": "gpt-5-6-sol",
       "name": "GPT-5.6 Sol (max)",
       "creator": "OpenAI",
@@ -78,22 +87,13 @@
       "url": "https://artificialanalysis.ai/models/gpt-5-6-sol"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "slug": "grok-4-6",
       "name": "Grok 4.6 (high)",
       "creator": "SpaceXAI",
       "score": 61,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/grok-4-6"
-    },
-    {
-      "rank": 10,
-      "slug": "claude-fable-5-1-medium",
-      "name": "Claude Fable 5.1 (medium with fallback)",
-      "creator": "Anthropic",
-      "score": 60,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/claude-fable-5-1-medium"
     }
   ]
 }

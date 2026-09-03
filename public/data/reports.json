@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-02T09:02:35+08:00",
-  "count": 41,
+  "generatedAt": "2026-09-03T09:07:25+08:00",
+  "count": 42,
   "reports": [
     {
       "date": "2026-07-28",
@@ -10238,6 +10238,249 @@
       "seq": 1,
       "slug": "2026-09-02--1",
       "weekday": "周三"
+    },
+    {
+      "date": "2026-09-03",
+      "generatedAt": "2026-09-03T09:07:25+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Alex Albert 公开动态：Fable 5.1 is a beast at many things but one thing in particular I have been having a…",
+              "summary": "自动恢复版一手信号，发布于 09/02 02:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Alex Albert",
+                  "url": "https://x.com/alexalbert__/status/2094860187743986169"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：People are still sleeping on WebMCP.. You can now give agents tool calls to interact…",
+              "summary": "自动恢复版一手信号，发布于 09/02 06:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2094922789128196314"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：Last but not least, Fable 5.1 writes better and has better tone. We heard your feedba…",
+              "summary": "自动恢复版一手信号，发布于 09/02 03:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2094864064648536068"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：While I'm cleaning up my AI skills I have a question for the experts here. Sometimes…",
+              "summary": "自动恢复版一手信号，发布于 09/02 11:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2094995775952740795"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：Do you want to grow massively on X? Here are the top hacks, a 🧵 1) Become CEO of Apple",
+              "summary": "自动恢复版一手信号，发布于 09/02 00:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2094829606855462940"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：remember when we used to have to type out low level code like this?",
+              "summary": "自动恢复版一手信号，发布于 09/02 08:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2094942644497457527"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Claude 公开动态：Finally, we’ve improved our safeguards. Our cybersecurity safeguards now flag benign…",
+              "summary": "自动恢复版一手信号，发布于 09/02 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2094848591617483020"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：Claude Fable 5.1 is available everywhere today. Claude Mythos 5.1, our model for cybe…",
+              "summary": "自动恢复版一手信号，发布于 09/02 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2094848592812917122"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：Over the summer, we have been sprinting on safety priorities; it's more important tha…",
+              "summary": "自动恢复版一手信号，发布于 09/02 07:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2094934592062959832"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：We’re also introducing Enterprise Frontier Safeguards (EFS), which give enterprise cu…",
+              "summary": "自动恢复版一手信号，发布于 09/02 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2094848590245965931"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Excited to partner with and support @tannerlinsley and team, champion of React, open…",
+              "summary": "自动恢复版一手信号，发布于 09/02 05:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2094901483414372716"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Muse Spark 1.3 (max) 升至第 6 名",
+              "summary": "Muse Spark 1.3 (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 6 名，得分 62。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Fable 5.1 (medium with fallback)",
+              "summary": "Claude Fable 5.1 (medium with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 60。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Fable 5 (with fallback) 第 6 → 7 名",
+              "summary": "Claude Fable 5 (with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 6 名变为第 7 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5 (high) 第 7 → 8 名",
+              "summary": "Claude Opus 5 (high) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 7 名变为第 8 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-5.6 Sol (max) 第 8 → 9 名",
+              "summary": "GPT-5.6 Sol (max) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Grok 4.6 (high) 第 9 → 10 名",
+              "summary": "Grok 4.6 (high) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 9 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 6 项变化；当前榜首为 Claude Fable 5.1 (max with fallback)（66 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第三十三期·自动恢复版",
+      "issue": 42,
+      "seq": 1,
+      "slug": "2026-09-03--1",
+      "weekday": "周四"
     }
   ]
 }

@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-03 星期四",
+  "label": "第三十三期·自动恢复版",
+  "generatedAt": "2026-09-03T09:07:25+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Alex Albert 公开动态：Fable 5.1 is a beast at many things but one thing in particular I have been having a…",
+          "summary": "自动恢复版一手信号，发布于 09/02 02:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Alex Albert（单一来源）",
+              "url": "https://x.com/alexalbert__/status/2094860187743986169"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：People are still sleeping on WebMCP.. You can now give agents tool calls to interact…",
+          "summary": "自动恢复版一手信号，发布于 09/02 06:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2094922789128196314"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Boris Cherny 公开动态：Last but not least, Fable 5.1 writes better and has better tone. We heard your feedba…",
+          "summary": "自动恢复版一手信号，发布于 09/02 03:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2094864064648536068"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：While I'm cleaning up my AI skills I have a question for the experts here. Sometimes…",
+          "summary": "自动恢复版一手信号，发布于 09/02 11:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2094995775952740795"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：Do you want to grow massively on X? Here are the top hacks, a 🧵 1) Become CEO of Apple",
+          "summary": "自动恢复版一手信号，发布于 09/02 00:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2094829606855462940"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：remember when we used to have to type out low level code like this?",
+          "summary": "自动恢复版一手信号，发布于 09/02 08:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2094942644497457527"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Finally, we’ve improved our safeguards. Our cybersecurity safeguards now flag benign…",
+          "summary": "自动恢复版一手信号，发布于 09/02 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2094848591617483020"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Claude Fable 5.1 is available everywhere today. Claude Mythos 5.1, our model for cybe…",
+          "summary": "自动恢复版一手信号，发布于 09/02 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2094848592812917122"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：Over the summer, we have been sprinting on safety priorities; it's more important tha…",
+          "summary": "自动恢复版一手信号，发布于 09/02 07:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2094934592062959832"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：We’re also introducing Enterprise Frontier Safeguards (EFS), which give enterprise cu…",
+          "summary": "自动恢复版一手信号，发布于 09/02 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2094848590245965931"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Excited to partner with and support @tannerlinsley and team, champion of React, open…",
+          "summary": "自动恢复版一手信号，发布于 09/02 05:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2094901483414372716"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
