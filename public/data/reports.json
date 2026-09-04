@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-03T09:07:25+08:00",
-  "count": 42,
+  "generatedAt": "2026-09-04T08:59:43+08:00",
+  "count": 43,
   "reports": [
     {
       "date": "2026-07-28",
@@ -10481,6 +10481,225 @@
       "seq": 1,
       "slug": "2026-09-03--1",
       "weekday": "周四"
+    },
+    {
+      "date": "2026-09-04",
+      "generatedAt": "2026-09-04T08:59:43+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：Replit is coming to London 🇬🇧 To celebrate Replit’s first international office in Lon…",
+              "summary": "自动恢复版一手信号，发布于 09/03 07:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2095291912706220410"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Product manager = Member of product staff Designer = Member of design staff Engineer…",
+              "summary": "自动恢复版一手信号，发布于 09/03 05:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2095255545594941910"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Claude 公开动态：Claude can now use your computer in the background in Claude Cowork and Claude Code…",
+              "summary": "自动恢复版一手信号，发布于 09/03 03:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2095226833293685100"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：Applications are open for the Claude Campus Ambassadors program. This year, we’re exp…",
+              "summary": "自动恢复版一手信号，发布于 09/02 23:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2095168559873773970"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：Available in beta on Pro and Max plans, in the desktop app on macOS. If you're new to…",
+              "summary": "自动恢复版一手信号，发布于 09/03 03:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2095226835743158320"
+                }
+              ]
+            },
+            {
+              "text": "Josh Woodward 公开动态：3.8 Flash = great quality @ great price",
+              "summary": "自动恢复版一手信号，发布于 09/02 23:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Josh Woodward",
+                  "url": "https://x.com/joshwoodward/status/2095178970912461279"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：This week is absolutely nuts for AI releases, and now a major new model update from M…",
+              "summary": "自动恢复版一手信号，发布于 09/03 03:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2095234253613359200"
+                }
+              ]
+            },
+            {
+              "text": "Aditya Agarwal 公开动态：It's actually really hard to trust these frontier labs when they say \"don't worry, we…",
+              "summary": "自动恢复版一手信号，发布于 09/03 03:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aditya Agarwal",
+                  "url": "https://x.com/adityaag/status/2095227334534041714"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：The ChatGPT desktop app is now my main browser and my productivity has never been hig…",
+              "summary": "自动恢复版一手信号，发布于 09/03 07:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2095288416292487289"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：I think the best way to describe OpenAI's culture is as a mega startup. It's hard to…",
+              "summary": "自动恢复版一手信号，发布于 09/03 12:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2095369901137654271"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Fable 5.1 makes Claude Tag even more useful. Here it builds a last-minute leadership…",
+              "summary": "自动恢复版一手信号，发布于 09/03 06:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2095276133214491086"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：GPT-6 Astra (max) 升至第 9 名",
+              "summary": "GPT-6 Astra (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 9 名，得分 61。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：GPT-6 Astra (xhigh) 升至第 10 名",
+              "summary": "GPT-6 Astra (xhigh) 新进入 Artificial Analysis Intelligence Index 前十，当前第 10 名，得分 61。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-5.6 Sol (max)",
+              "summary": "GPT-5.6 Sol (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 61。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Grok 4.6 (high)",
+              "summary": "Grok 4.6 (high) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 61。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 4 项变化；当前榜首为 Claude Fable 5.1 (max with fallback)（66 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第三十四期·自动恢复版",
+      "issue": 43,
+      "seq": 1,
+      "slug": "2026-09-04--1",
+      "weekday": "周五"
     }
   ]
 }

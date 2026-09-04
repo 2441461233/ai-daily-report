@@ -79,21 +79,21 @@
     },
     {
       "rank": 9,
-      "slug": "gpt-5-6-sol",
-      "name": "GPT-5.6 Sol (max)",
+      "slug": "gpt-6-astra",
+      "name": "GPT-6 Astra (max)",
       "creator": "OpenAI",
       "score": 61,
       "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gpt-5-6-sol"
+      "url": "https://artificialanalysis.ai/models/gpt-6-astra"
     },
     {
       "rank": 10,
-      "slug": "grok-4-6",
-      "name": "Grok 4.6 (high)",
-      "creator": "SpaceXAI",
+      "slug": "gpt-6-astra-xhigh",
+      "name": "GPT-6 Astra (xhigh)",
+      "creator": "OpenAI",
       "score": 61,
       "estimated": false,
-      "url": "https://artificialanalysis.ai/models/grok-4-6"
+      "url": "https://artificialanalysis.ai/models/gpt-6-astra-xhigh"
     }
   ]
 }

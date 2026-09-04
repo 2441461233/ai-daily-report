@@ -1,0 +1,58 @@
+{
+  "date": "2026-09-04",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-09-04",
+  "generatedAt": "2026-09-04T08:59:43+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 4 项变化；当前榜首为 Claude Fable 5.1 (max with fallback)（66 分）。",
+      "items": [
+        {
+          "headline": "新进 Top 10：GPT-6 Astra (max) 升至第 9 名",
+          "summary": "GPT-6 Astra (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 9 名，得分 61。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：GPT-6 Astra (xhigh) 升至第 10 名",
+          "summary": "GPT-6 Astra (xhigh) 新进入 Artificial Analysis Intelligence Index 前十，当前第 10 名，得分 61。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GPT-5.6 Sol (max)",
+          "summary": "GPT-5.6 Sol (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 61。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Grok 4.6 (high)",
+          "summary": "Grok 4.6 (high) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 61。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
