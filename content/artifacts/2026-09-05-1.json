@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-05 星期六",
+  "label": "第三十五期·自动恢复版",
+  "generatedAt": "2026-09-05T08:58:45+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：Also, this is my favorite OpenAI video so far. It makes me excited for the future!",
+          "summary": "自动恢复版一手信号，发布于 09/04 03:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2095601442220638547"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：GPT-6 Astra is out. We've been testing the model in early preview on our enterprise c…",
+          "summary": "自动恢复版一手信号，发布于 09/04 03:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2095598710311067716"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Across the plans Astra will be included in the normal usage allocation and you will b…",
+          "summary": "自动恢复版一手信号，发布于 09/04 03:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2095597659545591917"
+            }
+          ]
+        },
+        {
+          "headline": "Swyx 公开动态：sorry for the radio silence folks - got sucked into extreme LLM psychosis. but i can…",
+          "summary": "自动恢复版一手信号，发布于 09/04 05:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Swyx（单一来源）",
+              "url": "https://x.com/swyx/status/2095621785953984782"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Wait so we don't get to play with Astra today?",
+          "summary": "自动恢复版一手信号，发布于 09/04 03:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2095599352941334772"
+            }
+          ]
+        },
+        {
+          "headline": "Amanda Askell 公开动态：I still don't know how to convey my enthusiasm in a way that Americans will read as e…",
+          "summary": "自动恢复版一手信号，发布于 09/04 07:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amanda Askell（单一来源）",
+              "url": "https://x.com/AmandaAskell/status/2095662935603552337"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：We are going to need a different AGI benchmark. Where is the goalpost moving next?",
+          "summary": "自动恢复版一手信号，发布于 09/04 03:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2095601101701820752"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：Your input needed: would you use this? This is an early look at how we're thinking ab…",
+          "summary": "自动恢复版一手信号，发布于 09/04 03:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2095590515765060076"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：We will give one banked reset for every day you don't have access to Astra on your pa…",
+          "summary": "自动恢复版一手信号，发布于 09/04 07:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2095651088502591861"
+            }
+          ]
+        },
+        {
+          "headline": "Sam Altman 公开动态：first, sorry for the messy rollout. second, when we screw up, we try to make it right…",
+          "summary": "自动恢复版一手信号，发布于 09/04 09:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2095678759651438887"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：GPT-6 is a major jump in capabilities and will unlock new use-cases. Will launch on R…",
+          "summary": "自动恢复版一手信号，发布于 09/04 04:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2095608811868524679"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
