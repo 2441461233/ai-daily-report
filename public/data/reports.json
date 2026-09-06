@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-05T08:58:45+08:00",
-  "count": 44,
+  "generatedAt": "2026-09-06T08:59:50+08:00",
+  "count": 45,
   "reports": [
     {
       "date": "2026-07-28",
@@ -11123,6 +11123,171 @@
       "seq": 1,
       "slug": "2026-09-05--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-09-06",
+      "generatedAt": "2026-09-06T08:59:50+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：OpenAI should ship an app for Apple Watch where I can just voice dictate to my Codex…",
+              "summary": "自动恢复版一手信号，发布于 09/05 12:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2096086845159563476"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：i've got Astra doing film study for our @every fantasy football draft we going to tak…",
+              "summary": "自动恢复版一手信号，发布于 09/04 22:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2095882683729490108"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：AI software factories will yield bug-free, self-improving software",
+              "summary": "自动恢复版一手信号，发布于 09/05 01:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2095926173293572467"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：The singularity is here, it’s just not evenly distributed",
+              "summary": "自动恢复版一手信号，发布于 09/05 07:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2096022087035195647"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Absolutely insane experience using @AsideAI as an AI harness - trying to setup OpenCl…",
+              "summary": "自动恢复版一手信号，发布于 09/05 04:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2095971990645755941"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：GStack now uses @AsideAI browser as it's preferred remote session browser Does your A…",
+              "summary": "自动恢复版一手信号，发布于 09/05 02:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2095948689823121872"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Super bullish on WebMCP. Much like Tesla FSD meets the world where it is (streets, st…",
+              "summary": "自动恢复版一手信号，发布于 09/05 10:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2096065378598441431"
+                }
+              ]
+            },
+            {
+              "text": "Aditya Agarwal 公开动态：Me: I totally understand how RL, inference time scaling, modern data-verification loo…",
+              "summary": "自动恢复版一手信号，发布于 09/05 00:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aditya Agarwal",
+                  "url": "https://x.com/adityaag/status/2095910036652577028"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Because we are beyond happy to have Astra rolled out today ahead of schedule and you…",
+              "summary": "自动恢复版一手信号，发布于 09/05 08:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2096035437299237298"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：GPT-6 Astra is now available to all Pro, Enterprise, and Business Premium users in Wo…",
+              "summary": "自动恢复版一手信号，发布于 09/05 04:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2095973658867171733"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：Now out to all Plus and Business users. Happy building!",
+              "summary": "自动恢复版一手信号，发布于 09/05 06:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2096008528834244741"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第三十六期·自动恢复版",
+      "issue": 45,
+      "seq": 1,
+      "slug": "2026-09-06--1",
+      "weekday": "周日"
     }
   ]
 }
