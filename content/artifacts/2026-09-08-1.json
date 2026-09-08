@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-08 星期二",
+  "label": "第三十八期·自动恢复版",
+  "generatedAt": "2026-09-08T09:13:50+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Zara Zhang 公开动态：One of the biggest crises of our time is the shortening of the human attention span A…",
+          "summary": "自动恢复版一手信号，发布于 09/07 12:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2096824861108928701"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：This man isn't even on Time's 100 Top AI List so why are we listening to him /s",
+          "summary": "自动恢复版一手信号，发布于 09/07 12:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2096815819997204639"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：Fable reviewing literally every Astra code change.. \"this fix is the real deal\" Fable…",
+          "summary": "自动恢复版一手信号，发布于 09/07 11:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2096798671547646134"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：The internet is almost entirely unprepared for a future where everyone’s personal age…",
+          "summary": "自动恢复版一手信号，发布于 09/07 07:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2096735726750908464"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
