@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-09 星期三",
+  "label": "第三十九期·自动恢复版",
+  "generatedAt": "2026-09-09T09:15:45+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Your software factory needs high quality video recording. 𝚊𝚐𝚎𝚗𝚝-𝚋𝚛𝚘𝚠𝚜𝚎𝚛 delivers. We’…",
+          "summary": "自动恢复版一手信号，发布于 09/08 09:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2097134278358548658"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：▲ ~/𝚛𝚊𝚞𝚌𝚑𝚐/𝚘𝚜𝚜-𝚐𝚛𝚊𝚗𝚝𝚜/ 𝚕𝚜▐ (v2) I'm announcing v2 of my open source grants of $1,000U…",
+          "summary": "自动恢复版一手信号，发布于 09/08 08:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2097116011384426516"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：I think I can officially say: we are so back",
+          "summary": "自动恢复版一手信号，发布于 09/08 06:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097088586843816330"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：All reset for everyone. Enjoy the week with Astra.",
+          "summary": "自动恢复版一手信号，发布于 09/08 12:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097174560412246215"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：I don’t think we’ve reached AGI but what we have is functionally indistinguishable fr…",
+          "summary": "自动恢复版一手信号，发布于 09/07 20:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2096936109817135331"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：More and more people are coming to the same conclusion.. As building gets easier, wha…",
+          "summary": "自动恢复版一手信号，发布于 09/07 22:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2096963347359150348"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Amanda Askell 公开动态：It would be cool to set up an email address that autonomous AI models could reach out…",
+          "summary": "自动恢复版一手信号，发布于 09/08 00:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amanda Askell（单一来源）",
+              "url": "https://x.com/AmandaAskell/status/2096995340654444674"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：The AI jobs prediction so far is playing out the opposite of what many thought. The r…",
+          "summary": "自动恢复版一手信号，发布于 09/08 00:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2097004960307449937"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Looking at this 28 page deck right now where Codex is keeping track of all the indivi…",
+          "summary": "自动恢复版一手信号，发布于 09/08 13:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097193293532848288"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：Did a PR to one of our upstream projects and they requested some minor changes. What’…",
+          "summary": "自动恢复版一手信号，发布于 09/08 06:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2097091456234111377"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：It’s fair to say RFS are just hunches on what might be next, and conversation starter…",
+          "summary": "自动恢复版一手信号，发布于 09/07 23:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2096985239319105559"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
