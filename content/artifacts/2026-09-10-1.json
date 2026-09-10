@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-10 星期四",
+  "label": "第四十期·自动恢复版",
+  "generatedAt": "2026-09-10T09:05:36+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：Images 2.5 is here. I don't think it can solve super difficult math problems, but it…",
+          "summary": "自动恢复版一手信号，发布于 09/09 03:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2097410967978324010"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：Personal assistant agents are going to be a very exciting AI category. It’s the first…",
+          "summary": "自动恢复版一手信号，发布于 09/09 03:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2097412556893852154"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：See you at the Astra party. Excited to meet some of you",
+          "summary": "自动恢复版一手信号，发布于 09/09 09:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097492424474165293"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Chat has won. It's all chat + computer from this point on",
+          "summary": "自动恢复版一手信号，发布于 09/09 03:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2097408592290971956"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：I didn’t understand what was happening with the agent wikis until reading this, chill…",
+          "summary": "自动恢复版一手信号，发布于 09/09 11:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2097522305916395786"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：To all: this came out sassier than I wanted it to. I meant this post earnestly - this…",
+          "summary": "自动恢复版一手信号，发布于 09/09 00:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2097368503624085773"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：We want to celebrate with people using GPT-6. We did this for GPT-5.5 and it was real…",
+          "summary": "自动恢复版一手信号，发布于 09/09 03:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2097404861642137851"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：Also note that well aligned models are not sufficient to solve prompt injection by th…",
+          "summary": "自动恢复版一手信号，发布于 09/09 13:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2097557079762624563"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Demand for Astra is really unprecedented. We're pulling all the levers possible to su…",
+          "summary": "自动恢复版一手信号，发布于 09/09 13:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097559315150426222"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：I am pleased to see that Ant’s new Claude Code has a version of background computer u…",
+          "summary": "自动恢复版一手信号，发布于 09/09 08:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097482341916852719"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Token volume on @vercel AI Gateway has averaged double-digit weekly growth for 8 stra…",
+          "summary": "自动恢复版一手信号，发布于 09/09 11:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2097531548555997459"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
