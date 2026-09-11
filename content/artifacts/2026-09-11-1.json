@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-11 星期五",
+  "label": "第四十一期·自动恢复版",
+  "generatedAt": "2026-09-11T09:07:08+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：The way to the reconcile capability level of AI vs. GDP impact is that the diffusion…",
+          "summary": "自动恢复版一手信号，发布于 09/10 01:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2097738533297689012"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：this is a very good and well designed report however, two impt assumptions in it that…",
+          "summary": "自动恢复版一手信号，发布于 09/10 02:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2097758891270697101"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：ocarina of time remake is the best news in a long time. i will be unavailable novembe…",
+          "summary": "自动恢复版一手信号，发布于 09/09 22:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2097696043492143157"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：There was a bit of a kerfuffle this morning with some banked resets not fully applyin…",
+          "summary": "自动恢复版一手信号，发布于 09/10 02:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097752790177370535"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Happy to be building here with you all. Lots to explore",
+          "summary": "自动恢复版一手信号，发布于 09/10 07:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097829053147582782"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Jane Kim: Big Talk, little respect for facts, outright falsehoods Jane Kim is a NIMBY…",
+          "summary": "自动恢复版一手信号，发布于 09/10 00:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2097728692596486487"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：Welcome, Paul. Grateful you are doing this, and all you have done for AI safety. Exci…",
+          "summary": "自动恢复版一手信号，发布于 09/10 03:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2097776310940569783"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：One of the greatest joys is debating new model names with researchers. They come up w…",
+          "summary": "自动恢复版一手信号，发布于 09/10 12:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2097912273264095536"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：This would suck, but we will prioritize great service for customers until we can get…",
+          "summary": "自动恢复版一手信号，发布于 09/09 22:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2097695001341829212"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：New on Claude Marketplace: @CrowdStrike, @cursor_ai, @FactoryAI, @GammaApp, and @verc…",
+          "summary": "自动恢复版一手信号，发布于 09/10 00:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2097718980437831935"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：If you're building on the Claude Platform, get listed and make it easier for our cust…",
+          "summary": "自动恢复版一手信号，发布于 09/10 00:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2097718982920855834"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
