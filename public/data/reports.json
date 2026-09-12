@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-11T09:07:08+08:00",
-  "count": 50,
+  "generatedAt": "2026-09-12T09:07:55+08:00",
+  "count": 51,
   "reports": [
     {
       "date": "2026-07-28",
@@ -12314,6 +12314,171 @@
       "seq": 1,
       "slug": "2026-09-11--1",
       "weekday": "周五"
+    },
+    {
+      "date": "2026-09-12",
+      "generatedAt": "2026-09-12T09:07:55+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：Some more tales from the road. Met with a couple dozen technology leaders this week a…",
+              "summary": "自动恢复版一手信号，发布于 09/11 09:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2098218284139311615"
+                }
+              ]
+            },
+            {
+              "text": "Madhu Guru 公开动态：How to build great evals - part 10 Measure the steps, not just the result. Much like…",
+              "summary": "自动恢复版一手信号，发布于 09/10 23:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Madhu Guru",
+                  "url": "https://x.com/realmadhuguru/status/2098064969464217720"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：To make sure our current users have an incredible experience and continued access to…",
+              "summary": "自动恢复版一手信号，发布于 09/11 02:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2098113585683808624"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Scaled agents on demand. This is pretty much the infrastructure that runs under the h…",
+              "summary": "自动恢复版一手信号，发布于 09/11 10:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2098238138334548260"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：This makes a lot of sense. Duplicating logic is no longer painful. Abstractions still…",
+              "summary": "自动恢复版一手信号，发布于 09/11 00:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2098089196800098798"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Every day, I get a lot of of emails and messages like this one. I try to respond to a…",
+              "summary": "自动恢复版一手信号，发布于 09/11 09:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2098217571153838124"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Claude 公开动态：Fable 5.1 Build Days start this week. The Claude community is hosting buildathons in…",
+              "summary": "自动恢复版一手信号，发布于 09/11 03:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2098138736642933143"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：Try this prompt in Claude chat to give it more context about yourself: Interview me i…",
+              "summary": "自动恢复版一手信号，发布于 09/11 05:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2098157600361861579"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Do you pronounce it data or data? This is the way everyone makes dashboards and learn…",
+              "summary": "自动恢复版一手信号，发布于 09/11 05:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2098165551554240764"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Hey ████, I think there is room for both. 1. Prototypes and other throw-away code can…",
+              "summary": "自动恢复版一手信号，发布于 09/11 09:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2098217573276131577"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Each day ~10 million deployments are made on Vercel, with 2.35 billion made to date…",
+              "summary": "自动恢复版一手信号，发布于 09/11 00:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2098091056302833837"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第四十二期·自动恢复版",
+      "issue": 51,
+      "seq": 1,
+      "slug": "2026-09-12--1",
+      "weekday": "周六"
     }
   ]
 }
