@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-12T09:07:55+08:00",
-  "count": 51,
+  "generatedAt": "2026-09-13T09:02:05+08:00",
+  "count": 52,
   "reports": [
     {
       "date": "2026-07-28",
@@ -12479,6 +12479,171 @@
       "seq": 1,
       "slug": "2026-09-12--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-09-13",
+      "generatedAt": "2026-09-13T09:02:05+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Astra powered ships this week - Images 2.5 - GPT-Live-1 - Agents API - Data Agent - C…",
+              "summary": "自动恢复版一手信号，发布于 09/12 13:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2098639827084480864"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：My 9/11 story (lightly updated version of a blog post I wrote in 2016 for the 15th an…",
+              "summary": "自动恢复版一手信号，发布于 09/12 05:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2098517022049190227"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Ryo Lu 公开动态：i emptied my house said goodbyes and moved to taipei so far so great! 💛",
+              "summary": "自动恢复版一手信号，发布于 09/12 11:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2098612137321201942"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：I think the idea of a \"one-person company\" is overrated Yes, a person can do a lot mo…",
+              "summary": "自动恢复版一手信号，发布于 09/12 02:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2098483800456179923"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：TBH once you score 1600 you should unlock a second harder test that gives you a secon…",
+              "summary": "自动恢复版一手信号，发布于 09/12 11:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2098615692425851205"
+                }
+              ]
+            },
+            {
+              "text": "Ryo Lu 公开动态：long-lived agents for your big ideas now in Cursor",
+              "summary": "自动恢复版一手信号，发布于 09/11 16:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2098324260867772806"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Hi Astra users. A reset and a quick update on quality issues that have been posted ar…",
+              "summary": "自动恢复版一手信号，发布于 09/12 11:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2098612714704891959"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：it's basically impossible to interpret evals by looking at just at the pass/fail scor…",
+              "summary": "自动恢复版一手信号，发布于 09/12 03:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2098490139798655427"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Excited to welcome Aidan & @ Sasha from the Git AI team to OpenAI! They are building…",
+              "summary": "自动恢复版一手信号，发布于 09/12 08:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2098569976143806918"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：Replit acquires a business entirely built on Replit. I expect first of many to come.",
+              "summary": "自动恢复版一手信号，发布于 09/12 07:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2098548464452055437"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：I am skeptical of \"software factories.\" Other than for verification & testing, I don'…",
+              "summary": "自动恢复版一手信号，发布于 09/12 08:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2098565668241334366"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第四十三期·自动恢复版",
+      "issue": 52,
+      "seq": 1,
+      "slug": "2026-09-13--1",
+      "weekday": "周日"
     }
   ]
 }
