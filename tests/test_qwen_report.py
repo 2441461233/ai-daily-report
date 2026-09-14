@@ -1296,14 +1296,14 @@ class CompilationTests(unittest.TestCase):
 
 
 class WorkflowContractTests(unittest.TestCase):
-    def test_qwen_is_primary_and_deterministic_builder_is_fallback(self) -> None:
+    def test_deepseek_is_primary_and_deterministic_builder_is_fallback(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "daily-report.yml").read_text(
             "utf-8"
         )
-        self.assertIn("secrets.DASHSCOPE_API_KEY", workflow)
-        self.assertIn("scripts/generate_qwen_report.py", workflow)
-        self.assertIn("qwen3.7-plus", workflow)
-        self.assertIn("DAILY_REPORT_COST_CAP_CNY: '3.0'", workflow)
+        self.assertIn("secrets.DEEPSEEK_API_KEY", workflow)
+        self.assertIn("scripts/generate_deepseek_report.py", workflow)
+        self.assertIn("deepseek-flash", workflow)
+        self.assertIn("DEEPSEEK_COST_CAP_USD: '0.45'", workflow)
         self.assertIn("scripts/build_fallback_report.py", workflow)
         self.assertIn("@github/copilot", workflow)
         self.assertIn("steps.qwen.outcome != 'success'", workflow)
@@ -1312,7 +1312,7 @@ class WorkflowContractTests(unittest.TestCase):
             workflow,
         )
         self.assertLess(
-            workflow.index("scripts/generate_qwen_report.py"),
+            workflow.index("scripts/generate_deepseek_report.py"),
             workflow.index("@github/copilot"),
         )
         self.assertIn("cron: '17 23 * * *'", workflow)
@@ -1332,7 +1332,7 @@ class WorkflowContractTests(unittest.TestCase):
             "      - name: Select deadline-aware production route"
         )
         qwen_workspace = workflow.index(
-            "      - name: Prepare isolated Qwen workspace", route_selector
+            "      - name: Prepare isolated DeepSeek workspace", route_selector
         )
         fallback_workspace = workflow.index(
             "      - name: Prepare isolated no-key fallback workspace", qwen_workspace
@@ -1351,15 +1351,15 @@ class WorkflowContractTests(unittest.TestCase):
         self.assertIn("actions: write", watchdog)
         self.assertIn("inputs.route == 'deadline'", workflow)
 
-    def test_qwen_failure_is_not_masked_by_tee_or_later_validators(self) -> None:
+    def test_deepseek_failure_is_not_masked_by_tee_or_later_validators(self) -> None:
         workflow = (ROOT / ".github" / "workflows" / "daily-report.yml").read_text(
             "utf-8"
         )
-        start = workflow.index("      - name: Research and edit with Qwen3.7 Plus")
-        end = workflow.index("      - name: Preflight Qwen candidate", start)
+        start = workflow.index("      - name: Research and edit with DeepSeek V4.1 Flash")
+        end = workflow.index("      - name: Preflight DeepSeek candidate", start)
         qwen_step = workflow[start:end]
         self.assertIn("run: |\n          set -euo pipefail", qwen_step)
-        self.assertIn("scripts/generate_qwen_report.py", qwen_step)
+        self.assertIn("scripts/generate_deepseek_report.py", qwen_step)
         self.assertIn("} 2>&1 | tee", qwen_step)
 
     def test_acceptance_route_is_qwen_then_no_key_then_deterministic(self) -> None:

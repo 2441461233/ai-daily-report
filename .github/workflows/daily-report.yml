@@ -12,6 +12,10 @@ on:
     - cron: '17 2 * * *' # 10:17 Asia/Shanghai freshness/addendum check
   workflow_dispatch:
     inputs:
+      preview:
+        description: Generate an isolated review copy without publishing
+        type: boolean
+        default: false
       route:
         description: Production route
         required: true
@@ -25,7 +29,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: daily-ai-report
+  group: daily-ai-report${{ inputs.preview && format('-preview-{0}', github.ref) || '' }}
   # Deadline runs preempt a model run. Quality retries remain serialized.
   cancel-in-progress: >-
     ${{
@@ -36,8 +40,73 @@ concurrency:
     }}
 
 jobs:
+  preview:
+    if: github.event_name == 'workflow_dispatch' && inputs.preview == true
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
+        with:
+          node-version: 22
+      - name: Freeze today's trial inputs
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/deepseek-preview"
+          collector_now="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          report_date="$(TZ=Asia/Shanghai date +%F)"
+          printf 'REPORT_DATE=%s\nCOLLECTOR_NOW=%s\n' "$report_date" "$collector_now" >> "$GITHUB_ENV"
+          # Only this disposable checkout loses today's copy; no commit job runs.
+          python3 - "$report_date" <<'PYCODE'
+          import pathlib,re,sys
+          date=sys.argv[1]
+          for path in pathlib.Path('content/artifacts').glob(date+'-*.json'):
+              path.unlink()
+          history=pathlib.Path('content/reported.md')
+          text=history.read_text()
+          text=re.sub(r'^## '+re.escape(date)+r'[^\n]*\n[\s\S]*?(?=^## |\Z)','',text,flags=re.M)
+          history.write_text(text)
+          PYCODE
+          node scripts/fetch_builders.mjs > /tmp/ai-builders.json
+          node scripts/fetch_official_priority_sources.mjs --now "$collector_now" > /tmp/priority-news.json
+          python3 scripts/validate_priority_coverage.py --input /tmp/priority-news.json --date "$report_date" --now "$collector_now" --input-only
+          node scripts/fetch_artificial_analysis.mjs --now "$collector_now" --snapshot content/artificial-analysis-snapshot.json > /tmp/artificial-analysis.json
+          python3 scripts/waytoagi.py --refresh-days 0 --allow-source-unavailable > /tmp/waytoagi.json
+      - name: Generate and independently audit the trial edition
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DAILY_REPORT_MODEL: deepseek-flash
+          DEEPSEEK_COST_CAP_USD: '0.45'
+        run: |
+          set -euo pipefail
+          python3 scripts/generate_deepseek_report.py \
+            --date "$REPORT_DATE" --generated-at "$COLLECTOR_NOW" \
+            --builders /tmp/ai-builders.json --priority /tmp/priority-news.json \
+            --artificial-analysis /tmp/artificial-analysis.json --waytoagi /tmp/waytoagi.json \
+            --diagnostics "$RUNNER_TEMP/deepseek-preview/deepseek-usage.json"
+      - name: Validate and package the review copy
+        run: |
+          set -euo pipefail
+          python3 scripts/validate_content.py
+          cp "content/artifacts/$REPORT_DATE-1.json" "$RUNNER_TEMP/deepseek-preview/report.json"
+          python3 scripts/render_report_preview.py \
+            "$RUNNER_TEMP/deepseek-preview/report.json" \
+            "$RUNNER_TEMP/deepseek-preview"
+      - name: Upload trial report and source evidence
+        if: always()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: deepseek-preview-${{ github.run_id }}
+          path: ${{ runner.temp }}/deepseek-preview
+          retention-days: 7
+          if-no-files-found: error
+
   generate:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && inputs.preview != true
     permissions:
       contents: read
       copilot-requests: write
@@ -195,7 +264,7 @@ jobs:
           printf 'selected=%s\n' "$selected" >> "$GITHUB_OUTPUT"
           printf 'Selected production route: %s\n' "$selected"
 
-      - name: Prepare isolated Qwen workspace
+      - name: Prepare isolated DeepSeek workspace
         id: qwen_workspace
         if: >-
           steps.need_model.outputs.required == 'true' &&
@@ -211,7 +280,7 @@ jobs:
             --exclude 'dist/' \
             ./ "$model_workspace/"
 
-      - name: Research and edit with Qwen3.7 Plus
+      - name: Research and edit with DeepSeek V4.1 Flash
         id: qwen
         if: >-
           steps.need_model.outputs.required == 'true' &&
@@ -219,14 +288,14 @@ jobs:
         continue-on-error: true
         working-directory: ${{ runner.temp }}/qwen-workspace
         env:
-          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
-          DAILY_REPORT_MODEL: qwen3.7-plus
-          DAILY_REPORT_COST_CAP_CNY: '3.0'
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DAILY_REPORT_MODEL: deepseek-flash
+          DEEPSEEK_COST_CAP_USD: '0.45'
         run: |
           set -euo pipefail
           {
             timeout --signal=TERM --kill-after=30s 25m \
-              python3 scripts/generate_qwen_report.py \
+              python3 scripts/generate_deepseek_report.py \
               --date "${{ steps.prepare.outputs.report_date }}" \
               --generated-at "${{ steps.prepare.outputs.collector_now }}" \
               --builders /tmp/ai-builders.json \
@@ -235,8 +304,8 @@ jobs:
               --waytoagi /tmp/waytoagi.json \
               --research-timeout 360 \
               --editor-timeout 360 \
-              --diagnostics "$RUNNER_TEMP/daily-diagnostics/qwen-usage.json"
-            unset DASHSCOPE_API_KEY
+              --diagnostics "$RUNNER_TEMP/daily-diagnostics/deepseek-usage.json"
+            unset DEEPSEEK_API_KEY
             python3 scripts/validate_content.py
             python3 scripts/validate_priority_coverage.py \
               --input /tmp/priority-news.json \
@@ -244,7 +313,7 @@ jobs:
               --now "${{ steps.prepare.outputs.collector_now }}"
           } 2>&1 | tee "$RUNNER_TEMP/daily-diagnostics/qwen.log"
 
-      - name: Preflight Qwen candidate
+      - name: Preflight DeepSeek candidate
         id: qwen_preflight
         if: >-
           always() &&
@@ -656,7 +725,7 @@ jobs:
           path: ${{ runner.temp }}/daily-diagnostics
 
   commit:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && inputs.preview != true
     needs: generate
     permissions:
       contents: write
