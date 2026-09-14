@@ -9,11 +9,13 @@ checks. API errors never count as a successful model edition.
 
 from __future__ import annotations
 import hashlib
+import http.client
 import json
 import math
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -201,7 +203,7 @@ class Client:
             raise shared.QwenReportError(
                 f"DeepSeek {endpoint}: HTTP {exc.code}"
             ) from None
-        except (OSError, TimeoutError, json.JSONDecodeError):
+        except (OSError, TimeoutError, http.client.HTTPException, json.JSONDecodeError):
             raise shared.QwenRequestOutcomeUnknown(
                 f"DeepSeek {endpoint}: response unavailable or invalid"
             ) from None
@@ -218,6 +220,27 @@ class Client:
         self.save(balanceAvailable=True)
 
     def call(self, stage, system, user, schema, max_tokens=12000):
+        for attempt in range(2):
+            try:
+                return self._call_once(
+                    stage if attempt == 0 else stage + "-network-retry",
+                    system,
+                    user,
+                    schema,
+                    max_tokens,
+                )
+            except shared.QwenRequestOutcomeUnknown:
+                if attempt:
+                    raise
+                # A lost response may have been billed. _call_once retains its
+                # full reservation before checking the budget for this retry.
+                print(
+                    f"deepseek report: {stage} connection lost; retrying once",
+                    flush=True,
+                )
+                time.sleep(2)
+
+    def _call_once(self, stage, system, user, schema, max_tokens=12000):
         user += "\n\nReturn one JSON object matching this schema:\n" + json.dumps(
             schema, ensure_ascii=False
         )

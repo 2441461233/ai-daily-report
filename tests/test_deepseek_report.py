@@ -77,6 +77,38 @@ class DeepSeekTests(unittest.TestCase):
                 client.call("test", "system", "user", {}, 1000)
         self.assertGreater(client.spent, 0)
 
+    def test_partial_http_response_is_sanitized_as_unknown(self):
+        client = ds.Client("private-test-secret", None)
+        opener = mock.MagicMock()
+        opener.open.return_value.__enter__.return_value.read.side_effect = (
+            ds.http.client.IncompleteRead(b"private-test-secret")
+        )
+        with mock.patch.object(ds.urllib.request, "build_opener", return_value=opener):
+            with self.assertRaises(ds.shared.QwenRequestOutcomeUnknown) as raised:
+                client.request("chat/completions", {})
+        self.assertNotIn("private-test-secret", str(raised.exception))
+
+    def test_lost_response_retries_identical_payload_and_retains_reservation(self):
+        client = ds.Client("test-key", None)
+        response = {
+            "model": ds.MODEL,
+            "usage": {"prompt_tokens": 10, "completion_tokens": 2},
+            "choices": [{"finish_reason": "stop", "message": {"content": "{}"}}],
+        }
+        with (
+            mock.patch.object(
+                client,
+                "request",
+                side_effect=[ds.shared.QwenRequestOutcomeUnknown("partial"), response],
+            ) as request,
+            mock.patch.object(ds.time, "sleep"),
+        ):
+            self.assertEqual(client.call("test", "system", "user", {}, 1000), {})
+        self.assertEqual(request.call_args_list[0], request.call_args_list[1])
+        self.assertEqual(len(client.calls), 2)
+        self.assertEqual(client.calls[0]["status"], "outcome-unknown")
+        self.assertGreater(client.spent, client.calls[1]["estimatedCostUsd"])
+
     def test_research_cannot_invent_a_source(self):
         with self.assertRaisesRegex(ds.shared.QwenReportError, "unknown"):
             ds.source_cards(
