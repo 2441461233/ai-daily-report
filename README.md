@@ -5,7 +5,6 @@
 
 主生成器已切换为 **DeepSeek V4.1 Flash**（`deepseek-flash`），使用 `DEEPSEEK_API_KEY`。
 当前接入、试刊、费用与故障状态说明见 [DeepSeek 运行说明](automation/DEEPSEEK.md)。
-下文 Qwen 三阶段描述保留为原有证据校验链的背景；实际工作流由独立采集器和 DeepSeek 生成器执行。
 
 ## 工作方式
 
@@ -15,11 +14,11 @@
   → 读取 Artificial Analysis Intelligence Index 前 10，与已验证快照比较
   → 确定性采集 WayToAGI，并直接写入完整 attachment 与 /tmp/waytoagi.json
   → 将已校验的官方候选、Artificial Analysis 与 WayToAGI 输入一起冻结后传入隔离副本
-  → Qwen3.7 Plus 联网发现候选，程序再直取模型选中的精确公开原文
-  → 第二次严格 JSON Schema 调用只按证据卡编辑主日报
-  → 第三次独立审稿逐条对照冻结原文，任一事实不受支持则整稿退回
-  → 生成完成后移除 DashScope 密钥，再检查新 artifact manifest 和 reported.md 追加边界
-  → Qwen 调用、硬门或候选预检失败时，运行此前不需要模型 API Key 的 Copilot 研究流程
+  → 程序独立采集官方 RSS、原文、arXiv、GitHub Trending 和作者动态
+  → DeepSeek V4.1 Flash 按冻结来源 ID 选题，再编辑结构化主日报
+  → 独立审稿逐条对照原文；最多三轮修订，每轮重新校验与审稿
+  → 生成完成后移除 DeepSeek 密钥，再检查新 artifact manifest 和 reported.md 追加边界
+  → DeepSeek 调用、硬门或候选预检失败时，运行此前不需要模型 API Key 的 Copilot 研究流程
   → 两条研究路径都失败时，才生成完全确定性的“自动恢复版”
 在 08:47、09:17 安排独立确定性恢复检查；另一条不受生产并发取消影响的 watchdog 会在 09:40 检查远端主刊
   → 若当日主刊仍缺失，取消耗时的模型路径，立即采集并发布确定性恢复版
@@ -33,7 +32,7 @@
   → Vercel 收到 push 后构建并发布
 ```
 
-职责划分：GitHub Actions 负责研究任务（Qwen 三阶段主链最长 25 分钟，整个生成 job 最长 60 分钟），Vercel 只负责静态站构建和托管。这样不会受
+职责划分：GitHub Actions 负责研究任务（DeepSeek 主链最长 25 分钟，整个生成 job 最长 60 分钟），Vercel 只负责静态站构建和托管。这样不会受
 Vercel Serverless 单次执行时长和只读文件系统限制。
 
 ## 目录
@@ -46,7 +45,9 @@ content/artificial-analysis-snapshot.json  Artificial Analysis 最近一次已�
 content/waytoagi-consumed.txt         由 WayToAGI attachment 严格派生的消费状态
 scripts/build_data.py                 将仓内内容编译为前端数据
 scripts/build_fallback_report.py      无模型/API 的确定性自动恢复版生成器
-scripts/generate_qwen_report.py       Qwen 联网研究、证据冻结与严格结构化编辑器
+scripts/collect_daily_evidence.py      与模型独立的公开原文采集器
+scripts/generate_deepseek_report.py   DeepSeek V4.1 Flash 选题、编辑与审稿
+scripts/generate_qwen_report.py       共享证据门禁与保留的旧 Qwen 实现
 scripts/validate_content.py           内容 schema / URL / 重复校验
 scripts/fetch_official_priority_sources.mjs  官方重大发布直采与备用路径
 scripts/fetch_artificial_analysis.mjs  官方 Intelligence Index 前 10 与增量比较
@@ -106,11 +107,11 @@ required candidate。任一 required 候选未在当日主刊或补刊中完整�
 
 ## 首次上线
 
-仓库推到 GitHub 后，在 Actions Repository secrets 中配置 `DASHSCOPE_API_KEY`；Vercel 不需要该密钥。
-Qwen API 不可用或稿件未通过生产门时，工作流先运行此前的无模型 API Key 研究流程；若它也失败，
+仓库推到 GitHub 后，在 Actions Repository secrets 中配置 `DEEPSEEK_API_KEY`；Vercel 不需要该密钥。
+DeepSeek API 不可用或稿件未通过生产门时，工作流先运行此前的无模型 API Key 研究流程；若它也失败，
 再用已验证的公开 feed 发布“自动恢复版”。完整步骤见
 [DEPLOY.md](DEPLOY.md)。
 
 自动任务也可以在 GitHub 的 **Actions → Daily AI report → Run workflow** 手动补跑。`quality`
-会保留 Qwen 与无 Key 研究链，`deadline` 则直接走确定性恢复版。若发现未覆盖的强制候选，
+会保留 DeepSeek 与无 Key 研究链，`deadline` 则直接走确定性恢复版。若发现未覆盖的强制候选，
 同日重跑会新建连续编号的小型补刊；若候选均已覆盖，才保持幂等。主刊与已提交补刊均不可覆盖。

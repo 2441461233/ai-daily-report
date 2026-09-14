@@ -1844,7 +1844,8 @@ def validate_editor_shape(document: dict[str, Any], mode: str) -> None:
 
 
 def compile_sections(
-    editor_document: dict[str, Any], cards: list[dict[str, Any]], mode: str
+    editor_document: dict[str, Any], cards: list[dict[str, Any]], mode: str,
+    *, claim_validator=None,
 ) -> list[dict[str, Any]]:
     validate_editor_shape(editor_document, mode)
     card_by_id = {card["id"]: card for card in cards}
@@ -1883,29 +1884,32 @@ def compile_sections(
             if len(headline) < 8 or len(summary) < 28 or not isinstance(expanded, bool):
                 raise QwenReportError("editor item has empty or malformed fields")
             evidence_text = " ".join(evidence_card_text(card) for card in cited)
-            unsupported_numbers = normalized_numbers(f"{headline} {summary}") - normalized_numbers(
-                evidence_text
-            )
-            if unsupported_numbers:
-                raise QwenReportError(
-                    f"item {headline!r} introduced unsupported numbers: "
-                    + ", ".join(sorted(unsupported_numbers))
+            if claim_validator is not None:
+                claim_validator(headline, summary, evidence_text)
+            else:
+                unsupported_numbers = normalized_numbers(f"{headline} {summary}") - normalized_numbers(
+                    evidence_text
                 )
-            unsupported_markers = unsupported_claim_markers(
-                f"{headline} {summary}", evidence_text
-            )
-            if unsupported_markers:
-                raise QwenReportError(
-                    f"item {headline!r} introduced unsupported claim markers: "
-                    + ", ".join(unsupported_markers)
+                if unsupported_numbers:
+                    raise QwenReportError(
+                        f"item {headline!r} introduced unsupported numbers: "
+                        + ", ".join(sorted(unsupported_numbers))
+                    )
+                unsupported_markers = unsupported_claim_markers(
+                    f"{headline} {summary}", evidence_text
                 )
-            grounding_error = claim_grounding_error(
-                f"{headline}\n{summary}", evidence_text
-            )
-            if grounding_error:
-                raise QwenReportError(
-                    f"item {headline!r} is not topically grounded: {grounding_error}"
+                if unsupported_markers:
+                    raise QwenReportError(
+                        f"item {headline!r} introduced unsupported claim markers: "
+                        + ", ".join(unsupported_markers)
+                    )
+                grounding_error = claim_grounding_error(
+                    f"{headline}\n{summary}", evidence_text
                 )
+                if grounding_error:
+                    raise QwenReportError(
+                        f"item {headline!r} is not topically grounded: {grounding_error}"
+                    )
             if (title in MAPPING_SECTIONS or expanded) and "对你的映射：" not in summary:
                 raise QwenReportError(
                     f"item {headline!r} is missing its required action mapping"
@@ -1952,6 +1956,7 @@ def build_artifact(
     editor_document: dict[str, Any],
     cards: list[dict[str, Any]],
     mode: str,
+    *, claim_validator=None,
 ) -> Path:
     try:
         report_day = datetime.strptime(arguments.date, "%Y-%m-%d")
@@ -1971,7 +1976,7 @@ def build_artifact(
         sequence = same_day[-1][0] + 1
         issue_number = fallback.next_issue_number(arguments.artifact_dir)
         label = f"第{fallback.int_to_chinese(issue_number)}期·补刊"
-    sections = compile_sections(editor_document, cards, mode)
+    sections = compile_sections(editor_document, cards, mode, claim_validator=claim_validator)
     unsupported_one_liner_numbers = normalized_numbers(
         editor_document["oneLiner"]
     ) - normalized_numbers(" ".join(evidence_card_text(card) for card in cards))
@@ -2591,6 +2596,7 @@ def validate_factual_audit(
     audit_document: dict[str, Any],
     editor_document: dict[str, Any],
     cards: list[dict[str, Any]],
+    *, grounding_checker=None,
 ) -> None:
     if set(audit_document) != {"draftSha256", "findings", "oneLiner"}:
         raise QwenReportError("factual audit has an invalid top-level shape")
@@ -2648,7 +2654,7 @@ def validate_factual_audit(
             quote_texts.append(quote)
         if set(quote_ids) != set(cited_by_key[finding["key"]]):
             raise QwenReportError("factual audit did not quote every cited evidence card")
-        grounding_error = claim_grounding_error(
+        grounding_error = (grounding_checker or claim_grounding_error)(
             claim_by_key[finding["key"]], " ".join(quote_texts)
         )
         if grounding_error:

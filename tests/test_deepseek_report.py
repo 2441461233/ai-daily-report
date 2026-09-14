@@ -1,4 +1,6 @@
 import sys
+import io
+import json
 import unittest
 from datetime import datetime,timezone
 from pathlib import Path
@@ -46,5 +48,39 @@ class DeepSeekTests(unittest.TestCase):
         self.assertEqual(parser.dates,['2026-09-14'])
     def test_source_url_with_credentials_is_rejected(self):
         with self.assertRaisesRegex(ValueError,'credentials'):collector.fetch('https://user:pass@example.com/')
+    def test_provider_errors_never_echo_the_secret(self):
+        client=ds.Client('private-test-secret',None)
+        error=ds.urllib.error.HTTPError(ds.BASE_URL,401,'error',{},io.BytesIO(b'private-test-secret'))
+        opener=mock.Mock()
+        opener.open.side_effect=error
+        with mock.patch.object(ds.urllib.request,'build_opener',return_value=opener):
+            with self.assertRaises(ds.shared.QwenReportError) as raised:
+                client.request('models')
+        self.assertNotIn('private-test-secret',str(raised.exception))
+        self.assertIn('HTTP 401',str(raised.exception))
+    def test_feed_rejects_old_and_future_items(self):
+        xml=b'<rss><channel><item><title>old</title><link>https://example.com/old</link><pubDate>Mon, 07 Sep 2026 01:00:00 GMT</pubDate></item><item><title>future</title><link>https://example.com/future</link><pubDate>Tue, 15 Sep 2026 01:00:00 GMT</pubDate></item></channel></rss>'
+        with mock.patch.object(collector,'fetch',return_value=('https://example.com/rss',xml,'application/rss+xml')):
+            self.assertEqual(collector.feed_entries('Example','https://example.com/rss',datetime(2026,9,14,1,tzinfo=timezone.utc)),[])
+    def test_natural_chinese_translation_does_not_need_english_in_every_clause(self):
+        ds.validate_translated_claim('ExampleCloud 新增批处理功能','ExampleCloud 支持批量处理任务，用户可以集中查看结果。','ExampleCloud supports batch processing and lets users view results together.')
+    def test_translated_numbers_and_invented_entities_are_rejected(self):
+        for headline in ('ExampleCloud 支持 900 个任务','ImaginaryVendor 推出新功能'):
+            with self.assertRaises(ds.shared.QwenReportError):
+                ds.validate_translated_claim(headline,'ExampleCloud 可以批量处理任务。','ExampleCloud supports 9 tasks.')
+    def test_audit_override_still_rejects_forged_quotes_and_hashes(self):
+        text='ExampleCloud supports batch processing and lets users view results together.'
+        cards=[{'id':'S001','title':'ExampleCloud','facts':text,'publishedAt':'2026-09-14','sources':[],'priorityIds':[],'matchTerms':[]}]
+        draft={'oneLiner':'ExampleCloud 支持批处理。','sections':[{'title':'Test','items':[{'headline':'ExampleCloud 新增批处理','summary':'ExampleCloud 可以批量处理任务并查看结果。','evidenceIds':['S001'],'expanded':False}]}]}
+        key=ds.shared.audit_item_keys(draft)[0]
+        good={'draftSha256':ds.shared.editor_document_sha256(draft),'findings':[{'key':key,'verdict':'supported','reason':'Supported by the quoted source.','evidenceQuotes':[{'evidenceId':'S001','quote':text}]}],'oneLiner':{'verdict':'supported','reason':'Supported by the item.','supportingItemKeys':[key]}}
+        ds.shared.validate_factual_audit(good,draft,cards,grounding_checker=ds.semantic_grounding_error)
+        for mutation in ('hash','quote','verdict'):
+            bad=json.loads(json.dumps(good))
+            if mutation=='hash':bad['draftSha256']='0'*64
+            if mutation=='quote':bad['findings'][0]['evidenceQuotes'][0]['quote']='ExampleCloud supports a fabricated capability.'
+            if mutation=='verdict':bad['findings'][0]['verdict']='unsupported'
+            with self.assertRaises(ds.shared.QwenReportError):
+                ds.shared.validate_factual_audit(bad,draft,cards,grounding_checker=ds.semantic_grounding_error)
 
 if __name__=='__main__':unittest.main()
