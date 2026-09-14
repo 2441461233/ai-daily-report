@@ -27,6 +27,10 @@ PRICING_URL = "https://api-docs.deepseek.com/quick_start/pricing/"
 PRICING_VERSION = "2026-09-14-v4.1-flash-usd"
 
 
+class IncompleteResponse(shared.QwenReportError):
+    """A billed response that cannot be parsed or accepted as a finished draft."""
+
+
 def peak_multiplier(now):
     now = now.astimezone(timezone.utc)
     return (
@@ -237,7 +241,7 @@ class Client:
                     ],
                     "response_format": {"type": "json_object"},
                     "thinking": {"type": "enabled"},
-                    "reasoning_effort": "high" if stage.startswith("audit") else "low",
+                    "reasoning_effort": "low",
                     "max_tokens": max_tokens,
                 },
             )
@@ -275,7 +279,7 @@ class Client:
             )
         choices = response.get("choices") or []
         if not choices or choices[0].get("finish_reason") != "stop":
-            raise shared.QwenReportError(
+            raise IncompleteResponse(
                 f"DeepSeek {stage} response was truncated or incomplete"
             )
         return shared.parse_json_object(shared.editor_content(response))
@@ -546,13 +550,23 @@ def run(arguments):
                 audit_system, audit_user, keys, _ = shared.factual_audit_prompt(
                     draft, cards
                 )
-                audit = client.call(
-                    f"audit-{attempt}",
-                    audit_system,
-                    audit_user,
-                    shared.factual_audit_schema(keys),
-                    16000,
-                )
+                try:
+                    audit = client.call(
+                        f"audit-{attempt}",
+                        audit_system,
+                        audit_user,
+                        shared.factual_audit_schema(keys),
+                        24000,
+                    )
+                except IncompleteResponse:
+                    # Retry the identical audit, not the already-valid editor.
+                    audit = client.call(
+                        f"audit-{attempt}-extended",
+                        audit_system,
+                        audit_user,
+                        shared.factual_audit_schema(keys),
+                        40000,
+                    )
                 shared.write_diagnostics(
                     diag_dir / f"deepseek-audit-{attempt}.json", audit
                 )
