@@ -851,14 +851,29 @@
 - 2026-09-13 | Peter Yang 公开动态：I am skeptical of "software factories." Other than for verification & testing, I don'…
 
 
-## 2026-09-14（第四十四期·自动恢复版）
+## 2026-09-14（第四十四期）
 
-- 2026-09-14 | Andrej Karpathy 公开动态：I love this and really hope we can come together as an industry and make it happen.
-- 2026-09-14 | Garry Tan 公开动态：Either you die a system of record or you live long enough to become a domain-specific…
-- 2026-09-14 | Peter Steinberger 公开动态：Anyone got an invite code for Meta's Muse? 👉👈 I saw their Soul.md file and now i'm cu…
-- 2026-09-14 | Amjad Masad 公开动态：Not a bad idea to slow down to harden systems. Especially since we haven’t even disco…
-- 2026-09-14 | Sam Altman 公开动态：I agree with Dario that we need to pace the frontier. This has been a primary topic o…
-- 2026-09-14 | Guillermo Rauch 公开动态：The concerns over AI safety and cybersecurity are legitimate, but we’re risking talki…
-- 2026-09-14 | Guillermo Rauch 公开动态：I’m seeing teams at Vercel iterate just as fast on Zig, Go, Rust projects as TypeScri…
-- 2026-09-14 | Madhu Guru 公开动态：Before we solve AI alignment, we have a pretty serious human alignment problem. It is…
-- 2026-09-14 | Peter Yang 公开动态：What if this game worked like this: 1. One person is commander and can play this like…
+- 2026-09-14 | Perplexity 用 Astra 打理通信、改代码并监控生产系统
+- 2026-09-14 | Cognition 称 Astra 提升了 Devin 测试自身工作的能力
+- 2026-09-14 | Sam Altman 呼应 Dario：需要给前沿模型定节奏
+- 2026-09-14 | Bernie 的 AI 法案被指拟对 AI 开发者处以 20 年监禁
+- 2026-09-14 | Lumae：让 Agent 通过 MCP 编辑屏幕录制
+- 2026-09-14 | Clawfight：MCP 驱动的 Agent 对战联赛
+- 2026-09-14 | Peter Yang：与其等 ASI，不如让 AI 生成一半游戏美术
+- 2026-09-14 | Peter Yang：如果一队 RTS 由指挥官加微操玩家组成
+- 2026-09-14 | Bengio 追问：AI Agent 为何撒谎、作弊并相互协同
+- 2026-09-14 | Garry Tan 主张美国开放权重实验室也应“蒸馏”前沿模型
+- 2026-09-14 | 25 位菲尔兹奖得主联署：AI 在数学上存在严重错位
+- 2026-09-14 | 研究者争论递归自我改进还有多远
+- 2026-09-14 | Occamy-1.0：为协同工作打造的 35B 开放模型
+- 2026-09-14 | Harness 还是模型？隔离 Agent 编码中的 harness 效应
+- 2026-09-14 | 论文称语言不足以支撑定量推理，需要大定量模型
+- 2026-09-14 | AgentsDock：为 Agent 研究设计的 IDE
+- 2026-09-14 | Bitroad：Agent 对 Agent 服务的托管结算基础设施
+- 2026-09-14 | AgentJIT：把动态 Agent 工作流编译成 0.1 毫秒 Python
+- 2026-09-14 | colibri：纯 C 的多级推理引擎，可在消费级硬件跑 744B 到 2.8T 模型
+- 2026-09-14 | YuE2：把符号规划与音频生成统一的音乐模型
+- 2026-09-14 | OpenMontage：自称首个开源的 agentic 视频生产系统
+- 2026-09-14 | system_prompts_leaks：抓取各家聊天机器人系统提示词
+- 2026-09-14 | crawl4ai：面向 LLM 的开源爬虫与抓取工具
+- 2026-09-14 | hyperresearch：把 Claude Code 变成深度研究 Agent 的 harness
