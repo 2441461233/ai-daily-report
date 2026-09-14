@@ -1,0 +1,123 @@
+{
+  "date": "2026-09-14 星期一",
+  "label": "第四十四期·自动恢复版",
+  "generatedAt": "2026-09-14T09:06:36+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Andrej Karpathy 公开动态：I love this and really hope we can come together as an industry and make it happen.",
+          "summary": "自动恢复版一手信号，发布于 09/13 00:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Andrej Karpathy（单一来源）",
+              "url": "https://x.com/karpathy/status/2098811935114551617"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Either you die a system of record or you live long enough to become a domain-specific…",
+          "summary": "自动恢复版一手信号，发布于 09/12 14:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2098666551629267324"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：Anyone got an invite code for Meta's Muse? 👉👈 I saw their Soul.md file and now i'm cu…",
+          "summary": "自动恢复版一手信号，发布于 09/13 08:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2098931686042210381"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：Not a bad idea to slow down to harden systems. Especially since we haven’t even disco…",
+          "summary": "自动恢复版一手信号，发布于 09/13 01:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2098828265800835310"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：I agree with Dario that we need to pace the frontier. This has been a primary topic o…",
+          "summary": "自动恢复版一手信号，发布于 09/13 00:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2098811563415150910"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：The concerns over AI safety and cybersecurity are legitimate, but we’re risking talki…",
+          "summary": "自动恢复版一手信号，发布于 09/12 22:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2098787667030712757"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：I’m seeing teams at Vercel iterate just as fast on Zig, Go, Rust projects as TypeScri…",
+          "summary": "自动恢复版一手信号，发布于 09/13 01:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2098833404707922239"
+            }
+          ]
+        },
+        {
+          "headline": "Madhu Guru 公开动态：Before we solve AI alignment, we have a pretty serious human alignment problem. It is…",
+          "summary": "自动恢复版一手信号，发布于 09/12 23:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Madhu Guru（单一来源）",
+              "url": "https://x.com/realmadhuguru/status/2098803717432860987"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：What if this game worked like this: 1. One person is commander and can play this like…",
+          "summary": "自动恢复版一手信号，发布于 09/13 09:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2098945475038912741"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
