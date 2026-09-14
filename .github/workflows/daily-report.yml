@@ -113,6 +113,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     outputs:
+      model_required: ${{ steps.need_model.outputs.required }}
+      selected_route: ${{ steps.route.outputs.selected }}
+      model_outcome: ${{ steps.qwen.outcome }}
+      model_preflight: ${{ steps.qwen_preflight.outcome }}
       base_sha: ${{ steps.prepare.outputs.base_sha }}
       collector_now: ${{ steps.prepare.outputs.collector_now }}
       report_date: ${{ steps.prepare.outputs.report_date }}
@@ -825,3 +829,20 @@ jobs:
           git config user.email "2441461233+ai-daily-report[bot]@users.noreply.github.com"
           git commit -m "日报更新 ${REPORT_DATE}"
           git push origin HEAD:main
+
+  model-health:
+    needs: [generate, commit]
+    if: >-
+      always() && needs.generate.result == 'success' &&
+      needs.generate.outputs.model_required == 'true' &&
+      needs.generate.outputs.selected_route == 'quality' &&
+      (needs.generate.outputs.model_outcome != 'success' ||
+       needs.generate.outputs.model_preflight != 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions: {}
+    steps:
+      - name: Surface degraded model generation after the publishing attempt
+        run: |
+          echo '::error::DeepSeek quality generation was not accepted. See deepseek-usage.json; a recovery edition does not resolve this failure.'
+          exit 1

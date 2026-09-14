@@ -3,6 +3,10 @@
 一个自动研究、归档并发布的个人 AI 行业日报。网站使用 React + TypeScript + Vite；日报内容、去重状态、
 生成器和自动化工作流全部在同一个仓库内，不依赖 Evan 的 Mac、Kimi Desktop 或本机绝对路径。
 
+主生成器已切换为 **DeepSeek V4.1 Flash**（`deepseek-flash`），使用 `DEEPSEEK_API_KEY`。
+当前接入、试刊、费用与故障状态说明见 [DeepSeek 运行说明](automation/DEEPSEEK.md)。
+下文 Qwen 三阶段描述保留为原有证据校验链的背景；实际工作流由独立采集器和 DeepSeek 生成器执行。
+
 ## 工作方式
 
 ```text

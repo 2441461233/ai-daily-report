@@ -78,7 +78,7 @@ class Client:
             raise shared.QwenReportError('DeepSeek worst-case reservation exceeds run cost cap')
         now=datetime.now(timezone.utc)
         try:
-            response=self.request('chat/completions',{'model':MODEL,'messages':[{'role':'system','content':system},{'role':'user','content':user}],'response_format':{'type':'json_object'},'thinking':{'type':'disabled' if stage=='research-selection' else 'enabled'},'reasoning_effort':'high' if stage.startswith('audit') else 'low','max_tokens':max_tokens})
+            response=self.request('chat/completions',{'model':MODEL,'messages':[{'role':'system','content':system},{'role':'user','content':user}],'response_format':{'type':'json_object'},'thinking':{'type':'enabled'},'reasoning_effort':'high' if stage.startswith('audit') else 'low','max_tokens':max_tokens})
         except shared.QwenRequestOutcomeUnknown:
             self.calls.append({'stage':stage,'status':'outcome-unknown','estimatedCostUsd':reservation,'reservedAtPeakRate':True})
             self.save(status='failed')
@@ -102,8 +102,8 @@ def source_cards(selection,sources,priorities,exclusions):
         if source_id not in by_id or source_id in used or section not in shared.SECTION_TITLES:
             raise shared.QwenReportError('research selected an unknown, duplicate, or invalid source')
         source=by_id[source_id]
-        if source.get('section') and source['section']!=section:
-            raise shared.QwenReportError('research moved a fixed source into the wrong section')
+        # The collector's fixed section is authoritative (e.g. arXiv/Trending).
+        section=source.get('section') or section
         if section==shared.SECTION_TITLES[5] and source['dateBasis']!='trending-observation':
             raise shared.QwenReportError('GitHub section requires observed daily Trending membership')
         if source['dateBasis']=='community-discussion' and section == shared.SECTION_TITLES[0]:
@@ -131,8 +131,19 @@ def select_sources(client,document,priorities,exclusions):
 发布日期窗口由采集器核验。community-discussion 只是最近被讨论，不能选到 AI 重要事件，可归创作实践、海外观察或 OPC，并且不能描述为刚发布。trending-observation 必须属于 GitHub Trending；publisher-abstract 必须属于论文板块。可按内容重分作者动态；AI 视频、游戏美术、图像、音乐和影视观点可以归创作板块；创始人对产品开发与自动化的具体实践可归 OPC。公司官方产品、政策与重大案例可归 AI 重要事件。每个 sourceId 仅选一次。优先填满每个板块，但不要为了凑数错误分类。
 已强制入选的优先候选：'''+json.dumps(priorities,ensure_ascii=False)+'\n附件排除事件：'+json.dumps(exclusions,ensure_ascii=False)+'\n来源原文：'+json.dumps([{k:(v[:1600] if k=='text' else v) for k,v in item.items() if k in {'id','title','publisher','text','publishedAt','dateBasis','section'}} for item in document['sources']],ensure_ascii=False,separators=(',',':'))
     schema={'type':'object','properties':{'selections':{'type':'array','items':{'type':'object','properties':{'sourceId':{'type':'string'},'section':{'type':'string','enum':list(shared.SECTION_TITLES)}},'required':['sourceId','section'],'additionalProperties':False}}},'required':['selections'],'additionalProperties':False}
-    selection=client.call('research-selection',system,user,schema,5000)
-    return source_cards(selection,document['sources'],priorities,exclusions)
+    schema['properties']['selections']['minItems']=26
+    schema['properties']['selections']['maxItems']=38
+    schema['properties']['selections']['items']['properties']['sourceId']['enum']=[s['id'] for s in document['sources']]
+    correction=''
+    for attempt in range(1,3):
+        selection=client.call(f'research-selection-{attempt}',system,user+correction,schema,10000)
+        if client.path:
+            shared.write_diagnostics(client.path.parent/f'deepseek-selection-{attempt}.json',selection)
+        try:
+            return source_cards(selection,document['sources'],priorities,exclusions)
+        except shared.QwenReportError as exc:
+            if attempt==2:raise
+            correction='\n请修正上一轮选题后输出完整 selections。采集器固定 section 的原文按其固定板块入选。问题：'+str(exc)+'\n上一轮：'+json.dumps(selection,ensure_ascii=False)
 
 
 def run(arguments):

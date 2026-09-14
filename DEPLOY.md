@@ -3,6 +3,9 @@
 本项目只需一次配置，之后每天自动研究、提交和发布。定时研究在 GitHub Actions 运行；Vercel 监听
 `main` 分支并发布网站。
 
+**当前生产接入为 DeepSeek V4.1 Flash。** 请配置 `DEEPSEEK_API_KEY`，并按
+[DeepSeek 运行说明](automation/DEEPSEEK.md) 进行试刊与费用检查。下文 Qwen 配置是历史实现参考。
+
 ## 1. GitHub Actions 与 Qwen 密钥
 
 日报主刊使用阿里云百炼 `qwen3.7-plus`。在仓库 **Settings → Secrets and variables → Actions** 创建
