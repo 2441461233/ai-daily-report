@@ -109,6 +109,26 @@ class DeepSeekTests(unittest.TestCase):
         self.assertEqual(client.calls[0]["status"], "outcome-unknown")
         self.assertGreater(client.spent, client.calls[1]["estimatedCostUsd"])
 
+    def test_audit_source_spans_are_exact_and_cannot_cross_cards(self):
+        text = "ExampleCloud supports batching. " * 70
+        cards = [{"id": "S001", "title": "", "facts": text, "extractorOutputs": []}]
+        spans = ds.audit_spans(cards)
+        self.assertTrue(all(piece in text for piece in spans["S001"].values()))
+        audit = {
+            "findings": [
+                {"evidenceQuotes": [{"evidenceId": "S001", "spanIds": ["S001:1"]}]}
+            ]
+        }
+        result = ds.resolve_audit_spans(audit, spans)
+        self.assertEqual(
+            result["findings"][0]["evidenceQuotes"][0]["quote"], spans["S001"]["S001:1"]
+        )
+        self.assertIn("spanIds", audit["findings"][0]["evidenceQuotes"][0])
+        for invalid_id in ("invented", "S002:1"):
+            audit["findings"][0]["evidenceQuotes"][0]["spanIds"] = [invalid_id]
+            with self.assertRaisesRegex(ds.shared.QwenReportError, "source span"):
+                ds.resolve_audit_spans(audit, spans)
+
     def test_research_cannot_invent_a_source(self):
         with self.assertRaisesRegex(ds.shared.QwenReportError, "unknown"):
             ds.source_cards(

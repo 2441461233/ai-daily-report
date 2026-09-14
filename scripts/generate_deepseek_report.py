@@ -486,6 +486,93 @@ def select_sources(client, document, priorities, exclusions, history=()):
             )
 
 
+def audit_spans(cards):
+    """Provide exact, bounded source slices for citation by ID."""
+    result = {}
+    for card in cards:
+        text = shared.trusted_audit_text(card)
+        pieces = re.findall(r".{1,650}(?:\s+|$)|.{1,650}", text, re.S)
+        result[card["id"]] = {
+            f"{card['id']}:{index}": piece.strip()
+            for index, piece in enumerate(pieces, 1)
+            if piece.strip()
+        }
+    return result
+
+
+def resolve_audit_spans(audit, spans):
+    resolved = json.loads(json.dumps(audit))
+    try:
+        for finding in resolved["findings"]:
+            quotes = []
+            for citation in finding["evidenceQuotes"]:
+                if set(citation) != {"evidenceId", "spanIds"}:
+                    raise ValueError("invalid citation shape")
+                evidence_id = citation["evidenceId"]
+                ids = citation["spanIds"]
+                if not isinstance(ids, list) or not ids or len(ids) > 3:
+                    raise ValueError("invalid source span list")
+                for span_id in ids:
+                    quotes.append(
+                        {
+                            "evidenceId": evidence_id,
+                            "quote": spans[evidence_id][span_id],
+                        }
+                    )
+            finding["evidenceQuotes"] = quotes
+    except (KeyError, TypeError, ValueError):
+        raise shared.QwenReportError(
+            "factual audit selected an invalid or foreign source span"
+        ) from None
+    return resolved
+
+
+def audit_draft(client, draft, cards, stage):
+    system, user, keys, _ = shared.factual_audit_prompt(draft, cards)
+    spans = audit_spans(cards)
+    prefix, serialized = user.split("\n\nauditItems:\n", 1)
+    items = json.loads(serialized)
+    for item in items:
+        for evidence in item["evidence"]:
+            del evidence["trustedText"]
+            evidence["trustedTextSpans"] = spans[evidence["id"]]
+    system = system.replace(
+        "每个 supported 条目必须对其每个引用 evidenceId 返回一段从该 trustedText 逐字复制的 evidenceQuotes.quote；不能改写，且引文本身必须包含标题/摘要的关键主体和行为，不得用与结论无关的真句子充数。",
+        "trustedTextSpans 是冻结原文的逐字段落切片。每个条目必须对每个引用 evidenceId 返回 1–3 个支持审稿判断的 spanIds；只能选该证据中存在的 ID。所选切片合起来必须覆盖标题/摘要的关键主体与行为。程序将直接截取原文作为引文，你无需抄录或改写引文。仍需比较所有事实，不能仅凭主题接近判 supported。",
+    )
+    user = (
+        prefix
+        + "\n\nauditItems:\n"
+        + json.dumps(items, ensure_ascii=False, separators=(",", ":"))
+    )
+    schema = shared.factual_audit_schema(keys)
+    schema["properties"]["findings"]["items"]["properties"]["evidenceQuotes"][
+        "items"
+    ] = {
+        "type": "object",
+        "properties": {
+            "evidenceId": {"type": "string"},
+            "spanIds": {
+                "type": "array",
+                "items": {"type": "string"},
+                "minItems": 1,
+                "maxItems": 3,
+            },
+        },
+        "required": ["evidenceId", "spanIds"],
+        "additionalProperties": False,
+    }
+    try:
+        raw = client.call(stage, system, user, schema, 24000)
+    except IncompleteResponse:
+        raw = client.call(stage + "-extended", system, user, schema, 40000)
+    if client.path:
+        shared.write_diagnostics(
+            client.path.parent / f"deepseek-{stage}-spans.json", raw
+        )
+    return resolve_audit_spans(raw, spans)
+
+
 def run(arguments):
     client = Client(
         os.environ.get("DEEPSEEK_API_KEY", "").strip(),
@@ -556,7 +643,7 @@ def run(arguments):
         # each statement to the underlying English entity or Chinese quotation.
         user += "\n写作提示：每条保留对应的英文实体名即可，不需要每个分句重复。摘要普通条目控制在 100–180 个中文字符，展开条目控制在 250–350 字。不要用未证明的宣传形容词，只使用原文明示的数字，不自行数作者人数或推算比例。建议动作与事实用“对你的映射：”区分。数据不足的地方直接说明，不要把内部卡片、门禁、检索术语写进正文。"
         repair = ""
-        for attempt in range(1, 4):
+        for attempt in range(1, 7):
             print(
                 f"deepseek report: editing and validating attempt {attempt}", flush=True
             )
@@ -570,26 +657,7 @@ def run(arguments):
             shared.write_diagnostics(diag_dir / f"deepseek-draft-{attempt}.json", draft)
             try:
                 validate_draft(draft, cards, mode)
-                audit_system, audit_user, keys, _ = shared.factual_audit_prompt(
-                    draft, cards
-                )
-                try:
-                    audit = client.call(
-                        f"audit-{attempt}",
-                        audit_system,
-                        audit_user,
-                        shared.factual_audit_schema(keys),
-                        24000,
-                    )
-                except IncompleteResponse:
-                    # Retry the identical audit, not the already-valid editor.
-                    audit = client.call(
-                        f"audit-{attempt}-extended",
-                        audit_system,
-                        audit_user,
-                        shared.factual_audit_schema(keys),
-                        40000,
-                    )
+                audit = audit_draft(client, draft, cards, f"audit-{attempt}")
                 shared.write_diagnostics(
                     diag_dir / f"deepseek-audit-{attempt}.json", audit
                 )
@@ -617,7 +685,7 @@ def run(arguments):
                 return output
             except shared.QwenReportError as exc:
                 client.save(lastValidationError=str(exc), validationAttempt=attempt)
-                if attempt == 3:
+                if attempt == 6:
                     raise
                 repair = (
                     "\n\n上一版未通过校验，请重新输出完整 JSON。只修复有问题的事实表达，并保留其余已选证据。错误："
