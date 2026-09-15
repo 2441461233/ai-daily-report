@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-14T12:42:33+08:00",
-  "count": 53,
+  "generatedAt": "2026-09-15T09:29:35+08:00",
+  "count": 54,
   "reports": [
     {
       "date": "2026-07-28",
@@ -13015,6 +13015,142 @@
       "seq": 1,
       "slug": "2026-09-14--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-09-15",
+      "generatedAt": "2026-09-15T09:29:35+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：You don't get it, I build software to relax",
+              "summary": "自动恢复版一手信号，发布于 09/14 05:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2099248037507797164"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Fable solved the Cyphral Distich (a 370 year old cypher). Super cool way to use Claude",
+              "summary": "自动恢复版一手信号，发布于 09/14 10:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2099322487603634395"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：Next release (or dev channel) does worktrees ~80% faster via apfs/brtfs/xfs/ReFS fold…",
+              "summary": "自动恢复版一手信号，发布于 09/14 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2099197266636783989"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：Seed investor when a company he forgot about years ago gets acquired out of nowhere",
+              "summary": "自动恢复版一手信号，发布于 09/14 06:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2099257395708879286"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：The world deserves confidence that American companies developing increasingly capable…",
+              "summary": "自动恢复版一手信号，发布于 09/14 12:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2099348812305473766"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：Anyone else notices this problem with Astra? Astra: I have done X Me: This is wrong…",
+              "summary": "自动恢复版一手信号，发布于 09/14 12:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2099348631291883945"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：There are two ways AI progress could go very badly and that we must avoid. First, we…",
+              "summary": "自动恢复版一手信号，发布于 09/14 12:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2099352016988614852"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：“Pacing” can be somewhat of a trigger word because it sounds like an arbitrary slow d…",
+              "summary": "自动恢复版一手信号，发布于 09/14 00:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2099167992835924301"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：The content about startups we do is merely the teaser for the specific advice we give…",
+              "summary": "自动恢复版一手信号，发布于 09/14 01:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2099181676039704870"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第四十五期·自动恢复版",
+      "issue": 54,
+      "seq": 1,
+      "slug": "2026-09-15--1",
+      "weekday": "周二"
     }
   ]
 }
