@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-16 星期三",
+  "label": "第四十六期·自动恢复版",
+  "generatedAt": "2026-09-16T09:27:21+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Welcoming Steren, creator of Google Cloud Run, to Vercel. He will lead the Fluid fami…",
+          "summary": "自动恢复版一手信号，发布于 09/14 23:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2099514906366328902"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Agents are only as good as the proof-checkers, compilers, type systems, and linters y…",
+          "summary": "自动恢复版一手信号，发布于 09/15 00:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2099540886409695346"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：What’s a feature we should remove from Codex that isn’t useful anymore?",
+          "summary": "自动恢复版一手信号，发布于 09/14 15:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2099393115241300166"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：Claude Mods are landing now. Someone already built a Tetris-in-Claude mod 🤯 See issue…",
+          "summary": "自动恢复版一手信号，发布于 09/15 01:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2099551291601248485"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：This is so useful. pushing to add this to codex as well.",
+          "summary": "自动恢复版一手信号，发布于 09/15 02:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2099571935495827761"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：just finished recording on latent space I’m excited about this one- we get very techn…",
+          "summary": "自动恢复版一手信号，发布于 09/15 09:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2099671266068496802"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：I talked to Sid &amp; Robert about building Claude Code: how much things have changed…",
+          "summary": "自动恢复版一手信号，发布于 09/15 01:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2099551141621329994"
+            }
+          ]
+        },
+        {
+          "headline": "Aditya Agarwal 公开动态：This is an incredible demo. AI can be human. That is the ultimate goal. So proud to h…",
+          "summary": "自动恢复版一手信号，发布于 09/15 00:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2099529959262019887"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：This week will also be a level of ships that you could have expected for DevDay 2025…",
+          "summary": "自动恢复版一手信号，发布于 09/15 14:19；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2099744972195131850"
+            }
+          ]
+        },
+        {
+          "headline": "Josh Woodward 公开动态：2 months ago, we launched a Gemini power user group to test early features in the app…",
+          "summary": "自动恢复版一手信号，发布于 09/15 01:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Josh Woodward（单一来源）",
+              "url": "https://x.com/joshwoodward/status/2099558443078365287"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：We probably need to all update our sense of what’s coming in terms of agentic workloa…",
+          "summary": "自动恢复版一手信号，发布于 09/15 13:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2099739019517235618"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
