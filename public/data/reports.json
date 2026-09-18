@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-17T09:26:55+08:00",
-  "count": 56,
+  "generatedAt": "2026-09-18T09:17:33+08:00",
+  "count": 57,
   "reports": [
     {
       "date": "2026-07-28",
@@ -13535,6 +13535,171 @@
       "seq": 1,
       "slug": "2026-09-17--1",
       "weekday": "周四"
+    },
+    {
+      "date": "2026-09-18",
+      "generatedAt": "2026-09-18T09:17:33+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Claude 公开动态：You can also now make decks, docs, and designs in your conversation. Draft the one-pa…",
+              "summary": "自动恢复版一手信号，发布于 09/17 00:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2100258492590207079"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Also today: Claude Docs, Claude Slides, and Claude Design are in every conversation…",
+              "summary": "自动恢复版一手信号，发布于 09/17 00:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2100260544087535639"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Astra ✅ Fast ✅ Frontier ✅ Efficient ✅ For everyone",
+              "summary": "自动恢复版一手信号，发布于 09/17 02:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2100297380968997327"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：I find myself using Claude less these days because the way it speaks has just become…",
+              "summary": "自动恢复版一手信号，发布于 09/17 01:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2100278750776824115"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：THEY DID IT THE END OF THE TABS ERA IS UPON US",
+              "summary": "自动恢复版一手信号，发布于 09/17 01:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2100269017977987341"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：Fix a line in the doc yourself, leave a comment for Claude on a slide, or select an e…",
+              "summary": "自动恢复版一手信号，发布于 09/17 00:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2100258494221812123"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：We're seeing extraordinary results from @typesafeai. Default mode in 𝚏𝚡 is auto, with…",
+              "summary": "自动恢复版一手信号，发布于 09/17 03:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2100307962262872105"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：Been tinkering with a “Home” @NousResearch agent for a few months and it’s finally go…",
+              "summary": "自动恢复版一手信号，发布于 09/16 21:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2100212813625196917"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：the main thing i was excited about launching this week will be next week instead, but…",
+              "summary": "自动恢复版一手信号，发布于 09/17 06:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2100351958167220547"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Claude Code showed that AI could do real work, not just answer questions. Developers…",
+              "summary": "自动恢复版一手信号，发布于 09/17 00:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2100259951398789487"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：Incredibly exciting that there are entire universes of AI innovation that still exist…",
+              "summary": "自动恢复版一手信号，发布于 09/17 12:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2100448648672993540"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第四十八期·自动恢复版",
+      "issue": 57,
+      "seq": 1,
+      "slug": "2026-09-18--1",
+      "weekday": "周五"
     }
   ]
 }
