@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-18T09:17:33+08:00",
-  "count": 57,
+  "generatedAt": "2026-09-19T09:11:39+08:00",
+  "count": 58,
   "reports": [
     {
       "date": "2026-07-28",
@@ -13802,6 +13802,142 @@
       "seq": 1,
       "slug": "2026-09-18--1",
       "weekday": "周五"
+    },
+    {
+      "date": "2026-09-19",
+      "generatedAt": "2026-09-19T09:11:39+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Has anyone yet tried to get Astra and Fable to agree on the perfect styleguide? And t…",
+              "summary": "自动恢复版一手信号，发布于 09/18 01:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2100645454245720513"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Projects have changed not only how I interact with Claude but how I code. I stopped m…",
+              "summary": "自动恢复版一手信号，发布于 09/18 03:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2100669598995816511"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Projects are how I write a lot of my code these days. Really excited for everyone to…",
+              "summary": "自动恢复版一手信号，发布于 09/18 01:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2100639991244427490"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：The future is already here We just have to choose it and spread it faster",
+              "summary": "自动恢复版一手信号，发布于 09/17 23:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2100612808568172830"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：It's likely that more software will be produced next year than in all of the history…",
+              "summary": "自动恢复版一手信号，发布于 09/18 05:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2100698591417499972"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：Existing projects on Pro and Max plans keep working as they do today. We'll upgrade t…",
+              "summary": "自动恢复版一手信号，发布于 09/18 01:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2100632688625348890"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：Agents already make up the majority of inference. This will quickly trend toward near…",
+              "summary": "自动恢复版一手信号，发布于 09/18 12:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2100799668573946191"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：I have been obsessed with self driving companies for more than a year now.. tried a L…",
+              "summary": "自动恢复版一手信号，发布于 09/18 06:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2100714665571737885"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：This is really cool. When you pressure your agent to ship a hotfix really fast, it ca…",
+              "summary": "自动恢复版一手信号，发布于 09/18 04:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2100682030170489160"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第四十九期·自动恢复版",
+      "issue": 58,
+      "seq": 1,
+      "slug": "2026-09-19--1",
+      "weekday": "周六"
     }
   ]
 }
