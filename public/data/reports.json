@@ -13930,6 +13930,60 @@
               ]
             }
           ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Claude Fable 5 (with fallback) 升至第 8 名",
+              "summary": "Claude Fable 5 (with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 8 名，得分 50。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Fable 5.1 (medium with fallback)",
+              "summary": "Claude Fable 5.1 (medium with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 49。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (medium) 第 8 → 9 名",
+              "summary": "GPT-6 Astra (medium) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5 (xhigh) 第 9 → 10 名",
+              "summary": "Claude Opus 5 (xhigh) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 9 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 4 项变化；当前榜首为 Claude Fable 5.1 (max with fallback)（53 分）。"
         }
       ],
       "rich": true,

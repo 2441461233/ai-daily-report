@@ -70,6 +70,15 @@
     },
     {
       "rank": 8,
+      "slug": "claude-fable-5",
+      "name": "Claude Fable 5 (with fallback)",
+      "creator": "Anthropic",
+      "score": 50,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5"
+    },
+    {
+      "rank": 9,
       "slug": "gpt-6-astra-medium",
       "name": "GPT-6 Astra (medium)",
       "creator": "OpenAI",
@@ -78,22 +87,13 @@
       "url": "https://artificialanalysis.ai/models/gpt-6-astra-medium"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "slug": "claude-opus-5-xhigh",
       "name": "Claude Opus 5 (xhigh)",
       "creator": "Anthropic",
       "score": 50,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/claude-opus-5-xhigh"
-    },
-    {
-      "rank": 10,
-      "slug": "claude-fable-5-1-medium",
-      "name": "Claude Fable 5.1 (medium with fallback)",
-      "creator": "Anthropic",
-      "score": 49,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/claude-fable-5-1-medium"
     }
   ]
 }
