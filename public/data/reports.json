@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-19T09:11:39+08:00",
-  "count": 58,
+  "generatedAt": "2026-09-20T09:39:27+08:00",
+  "count": 59,
   "reports": [
     {
       "date": "2026-07-28",
@@ -14040,6 +14040,184 @@
       "seq": 1,
       "slug": "2026-09-19--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-09-20",
+      "generatedAt": "2026-09-20T09:39:27+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：Meta's @Muse is the best personal agent I've tried to date. It actually save me $800+…",
+              "summary": "自动恢复版一手信号，发布于 09/19 03:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2101033599319613533"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thariq 公开动态：We're adding support for AGENTS.md to Claude Code. Starting today in version 2.1.277…",
+              "summary": "自动恢复版一手信号，发布于 09/19 02:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2101009392611278961"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：We were working on the keynote today with @romainhuet and @sama and most of the fun w…",
+              "summary": "自动恢复版一手信号，发布于 09/19 11:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2101157729037586694"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Free Jev on Vercel I know what I’m doing this weekend 😁",
+              "summary": "自动恢复版一手信号，发布于 09/19 09:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2101116978677285241"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：AGENTS.md support is built off of Claude Code mods, our upcoming way to customize the…",
+              "summary": "自动恢复版一手信号，发布于 09/19 02:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2101009393731223817"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：The data and the anecdata on Jev's adoption are shocking. Everyone is adopting it. I…",
+              "summary": "自动恢复版一手信号，发布于 09/19 06:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2101079472732848510"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：Jev will be super helpful for agents to make split second decisions in workflows, dat…",
+              "summary": "自动恢复版一手信号，发布于 09/19 01:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2101007708044574906"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：I find this phone transcript from @Muse on how it negotiated $288 in annual savings f…",
+              "summary": "自动恢复版一手信号，发布于 09/19 07:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2101083891507593576"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "评测方法更新：Intelligence Index v4.3 → v4.3.2",
+              "summary": "Artificial Analysis Intelligence Index 的公开方法版本由 v4.3 更新为 v4.3.2；跨版本分数和名次需结合方法调整解读。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+                }
+              ]
+            },
+            {
+              "text": "排名上升：Claude Opus 5 (xhigh) 第 9 → 8 名",
+              "summary": "Claude Opus 5 (xhigh) 在 Artificial Analysis Intelligence Index 中上升 1 位，由第 9 名变为第 8 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (medium) 第 8 → 9 名",
+              "summary": "GPT-6 Astra (medium) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "分数变化：GPT-6 Astra (xhigh) 53 → 52",
+              "summary": "GPT-6 Astra (xhigh) 当前位列第 4，Intelligence Index 得分变化 -1，由 53 变为 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 4 项变化；当前榜首为 Claude Fable 5.1 (max with fallback)（53 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第五十期·自动恢复版",
+      "issue": 59,
+      "seq": 1,
+      "slug": "2026-09-20--1",
+      "weekday": "周日"
     }
   ]
 }

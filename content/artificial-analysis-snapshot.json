@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "sourceUrl": "https://artificialanalysis.ai/leaderboards/models/",
   "metric": "Artificial Analysis Intelligence Index",
-  "methodologyVersion": "4.3",
+  "methodologyVersion": "4.3.2",
   "limit": 10,
   "models": [
     {
@@ -37,7 +37,7 @@
       "slug": "gpt-6-astra-xhigh",
       "name": "GPT-6 Astra (xhigh)",
       "creator": "OpenAI",
-      "score": 53,
+      "score": 52,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/gpt-6-astra-xhigh"
     },
@@ -70,21 +70,21 @@
     },
     {
       "rank": 8,
-      "slug": "gpt-6-astra-medium",
-      "name": "GPT-6 Astra (medium)",
-      "creator": "OpenAI",
-      "score": 50,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gpt-6-astra-medium"
-    },
-    {
-      "rank": 9,
       "slug": "claude-opus-5-xhigh",
       "name": "Claude Opus 5 (xhigh)",
       "creator": "Anthropic",
       "score": 50,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/claude-opus-5-xhigh"
+    },
+    {
+      "rank": 9,
+      "slug": "gpt-6-astra-medium",
+      "name": "GPT-6 Astra (medium)",
+      "creator": "OpenAI",
+      "score": 50,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/gpt-6-astra-medium"
     },
     {
       "rank": 10,
