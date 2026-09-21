@@ -1,0 +1,112 @@
+{
+  "date": "2026-09-21 星期一",
+  "label": "第五十一期·自动恢复版",
+  "generatedAt": "2026-09-21T09:07:36+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Peter Yang 公开动态：I have a simple markdown file and a /tastemaker skill that I use to add ratings for m…",
+          "summary": "自动恢复版一手信号，发布于 09/20 10:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2101503916743749878"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Peter Yang 公开动态：Apple TV is full of bangers, canceled my Netflix. Widow's Peak, 9.5/10 Silo season 3…",
+          "summary": "自动恢复版一手信号，发布于 09/20 10:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2101497327861248090"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Stop racial discrimination in the University of California system",
+          "summary": "自动恢复版一手信号，发布于 09/20 07:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2101456284482441656"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：“I've spoken of the shining city […] a tall, proud city built on rocks stronger than…",
+          "summary": "自动恢复版一手信号，发布于 09/20 05:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2101420720807100855"
+            }
+          ]
+        },
+        {
+          "headline": "Aditya Agarwal 公开动态：After seeing the rush of announcements by Gemini (Google), OpenAi and Anthropic about…",
+          "summary": "自动恢复版一手信号，发布于 09/20 05:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2101426570850451914"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：The coolest thing about the recent wave of AI is that everyone is excited about build…",
+          "summary": "自动恢复版一手信号，发布于 09/20 03:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2101397206595231765"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：Personal agents are the ultimate manifestation of “build something that agents want”…",
+          "summary": "自动恢复版一手信号，发布于 09/20 05:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2101427997597446636"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：I spend ~2 hours a day programming, building side projects, tinkering obsessively, tr…",
+          "summary": "自动恢复版一手信号，发布于 09/19 23:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2101340098356990058"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
