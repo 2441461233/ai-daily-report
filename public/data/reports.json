@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-21T09:07:36+08:00",
-  "count": 60,
+  "generatedAt": "2026-09-22T09:37:01+08:00",
+  "count": 61,
   "reports": [
     {
       "date": "2026-07-28",
@@ -14342,6 +14342,138 @@
       "seq": 1,
       "slug": "2026-09-21--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-09-22",
+      "generatedAt": "2026-09-22T09:37:01+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🔥 AI 重要事件",
+          "items": [
+            {
+              "text": "Introducing Grok 4.7",
+              "summary": "Grok 4.7, SpaceXAI's frontier model for coding, agentic tasks, and knowledge work, is now available on the xAI API as grok-4.7. It has a 500k context window, text and image inputs with text-only output, and no text output limit.",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "SpaceXAI",
+                  "url": "https://x.ai/news/grok-4-7"
+                }
+              ],
+              "priorityIds": [
+                "spacexai:grok-4-7"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：My “armchair” thoughts on the personal agent race: 1. Muse is poised to become the le…",
+              "summary": "自动恢复版一手信号，发布于 09/21 10:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2101862331345154469"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：there is something about video games that give high stakes and responsibilities to yo…",
+              "summary": "自动恢复版一手信号，发布于 09/21 09:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2101844435353145452"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：Literally impenetrable from agent swarms",
+              "summary": "自动恢复版一手信号，发布于 09/21 01:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2101731574668747081"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：The thoroughness with which agents can test and QA software is unrivaled. I pointed o…",
+              "summary": "自动恢复版一手信号，发布于 09/21 09:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2101846262840799251"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：Jokingly thinking of starting a new cloud kitchen called “next day curry”.. Where I o…",
+              "summary": "自动恢复版一手信号，发布于 09/21 02:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2101742225906655315"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：Everyone is obsessed with Jev now, but I'm old enough to remember when people couldn'…",
+              "summary": "自动恢复版一手信号，发布于 09/21 07:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2101820308009206077"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：If you enjoyed this, sign up for free to my newsletter to get my best AI and product…",
+              "summary": "自动恢复版一手信号，发布于 09/21 14:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2101917073081598255"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第五十二期·自动恢复版",
+      "issue": 61,
+      "seq": 1,
+      "slug": "2026-09-22--1",
+      "weekday": "周二"
     }
   ]
 }
