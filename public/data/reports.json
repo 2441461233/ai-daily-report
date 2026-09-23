@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-22T09:37:01+08:00",
-  "count": 61,
+  "generatedAt": "2026-09-23T09:31:03+08:00",
+  "count": 62,
   "reports": [
     {
       "date": "2026-07-28",
@@ -14474,6 +14474,304 @@
       "seq": 1,
       "slug": "2026-09-22--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-09-23",
+      "generatedAt": "2026-09-23T09:31:03+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Ladies and gentlemen... start... your... ENGINES. We are almost Tuesday and I promise…",
+              "summary": "自动恢复版一手信号，发布于 09/22 12:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2102254445082116335"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：I just gave Grok 4.7 a pretty hard problem, involving reverse-engineering a running b…",
+              "summary": "自动恢复版一手信号，发布于 09/22 01:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2102089968860721335"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：I now type \"use big pictures and few words\" several times a day",
+              "summary": "自动恢复版一手信号，发布于 09/22 08:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2102186805034635576"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：The beauty of running a claw yourself: they cannot block you.",
+              "summary": "自动恢复版一手信号，发布于 09/21 22:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2102044040397238286"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Garry Tan 公开动态：If you really think about it Cluely as a realtime thought helper and semi-adversarial…",
+              "summary": "自动恢复版一手信号，发布于 09/22 11:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2102233173833007536"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Peter Steinberger 公开动态：Because this “Meta uses OpenClaw” story is going around. They built their own agent…",
+              "summary": "自动恢复版一手信号，发布于 09/22 03:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2102116206371315854"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：I think we're in for a rude awakening in the ad markets: If a huge part of your busin…",
+              "summary": "自动恢复版一手信号，发布于 09/22 09:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2102215701255844074"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Not really sure how @capydotai does it, but it really is able to track multi-step wor…",
+              "summary": "自动恢复版一手信号，发布于 09/22 02:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2102095924893827501"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Claude Opus 5.5 (max with fallback) 升至第 1 名",
+              "summary": "Claude Opus 5.5 (max with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 1 名，得分 58。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Claude Opus 5.5 (xhigh with fallback) 升至第 2 名",
+              "summary": "Claude Opus 5.5 (xhigh with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 2 名，得分 56。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Claude Opus 5.5 (high with fallback) 升至第 3 名",
+              "summary": "Claude Opus 5.5 (high with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 3 名，得分 54。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Claude Opus 5.5 (medium with fallback) 升至第 8 名",
+              "summary": "Claude Opus 5.5 (medium with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 8 名，得分 51。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Opus 5 (max)",
+              "summary": "Claude Opus 5 (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 7 名，得分 51。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Opus 5 (xhigh)",
+              "summary": "Claude Opus 5 (xhigh) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 8 名，得分 50。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-6 Astra (medium)",
+              "summary": "GPT-6 Astra (medium) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 50。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Fable 5.1 (medium with fallback)",
+              "summary": "Claude Fable 5.1 (medium with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 49。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Fable 5.1 (max with fallback) 第 1 → 4 名",
+              "summary": "Claude Fable 5.1 (max with fallback) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 1 名变为第 4 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Fable 5.1 (xhigh with fallback) 第 2 → 5 名",
+              "summary": "Claude Fable 5.1 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 2 名变为第 5 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (max) 第 3 → 6 名",
+              "summary": "GPT-6 Astra (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 3 名变为第 6 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (xhigh) 第 4 → 7 名",
+              "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 4 名变为第 7 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Fable 5.1 (high with fallback) 第 5 → 9 名",
+              "summary": "Claude Fable 5.1 (high with fallback) 在 Artificial Analysis Intelligence Index 中下降 4 位，由第 5 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (high) 第 6 → 10 名",
+              "summary": "GPT-6 Astra (high) 在 Artificial Analysis Intelligence Index 中下降 4 位，由第 6 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 14 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第五十三期·自动恢复版",
+      "issue": 62,
+      "seq": 1,
+      "slug": "2026-09-23--1",
+      "weekday": "周三"
     }
   ]
 }

@@ -1,0 +1,168 @@
+{
+  "date": "2026-09-23",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-09-23",
+  "generatedAt": "2026-09-23T09:31:03+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 14 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。",
+      "items": [
+        {
+          "headline": "新进 Top 10：Claude Opus 5.5 (max with fallback) 升至第 1 名",
+          "summary": "Claude Opus 5.5 (max with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 1 名，得分 58。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Opus 5.5 (xhigh with fallback) 升至第 2 名",
+          "summary": "Claude Opus 5.5 (xhigh with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 2 名，得分 56。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Opus 5.5 (high with fallback) 升至第 3 名",
+          "summary": "Claude Opus 5.5 (high with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 3 名，得分 54。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Opus 5.5 (medium with fallback) 升至第 8 名",
+          "summary": "Claude Opus 5.5 (medium with fallback) 新进入 Artificial Analysis Intelligence Index 前十，当前第 8 名，得分 51。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Claude Opus 5 (max)",
+          "summary": "Claude Opus 5 (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 7 名，得分 51。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Claude Opus 5 (xhigh)",
+          "summary": "Claude Opus 5 (xhigh) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 8 名，得分 50。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GPT-6 Astra (medium)",
+          "summary": "GPT-6 Astra (medium) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 50。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Claude Fable 5.1 (medium with fallback)",
+          "summary": "Claude Fable 5.1 (medium with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 49。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Fable 5.1 (max with fallback) 第 1 → 4 名",
+          "summary": "Claude Fable 5.1 (max with fallback) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 1 名变为第 4 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Fable 5.1 (xhigh with fallback) 第 2 → 5 名",
+          "summary": "Claude Fable 5.1 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 2 名变为第 5 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-6 Astra (max) 第 3 → 6 名",
+          "summary": "GPT-6 Astra (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 3 名变为第 6 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-6 Astra (xhigh) 第 4 → 7 名",
+          "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 4 名变为第 7 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Fable 5.1 (high with fallback) 第 5 → 9 名",
+          "summary": "Claude Fable 5.1 (high with fallback) 在 Artificial Analysis Intelligence Index 中下降 4 位，由第 5 名变为第 9 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-6 Astra (high) 第 6 → 10 名",
+          "summary": "GPT-6 Astra (high) 在 Artificial Analysis Intelligence Index 中下降 4 位，由第 6 名变为第 10 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
