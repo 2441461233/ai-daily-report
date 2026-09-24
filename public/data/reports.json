@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-23T09:31:03+08:00",
-  "count": 62,
+  "generatedAt": "2026-09-24T09:25:40+08:00",
+  "count": 63,
   "reports": [
     {
       "date": "2026-07-28",
@@ -14772,6 +14772,171 @@
       "seq": 1,
       "slug": "2026-09-23--1",
       "weekday": "周三"
+    },
+    {
+      "date": "2026-09-24",
+      "generatedAt": "2026-09-24T09:25:40+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：I used Opus 5.5 to formally verify the Claude Agent SDK using Lean. A couple short pr…",
+              "summary": "自动恢复版一手信号，发布于 09/23 07:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2102543349102338309"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Love the tastefulness with which anthropic ships. Main reason I got excited about 'he…",
+              "summary": "自动恢复版一手信号，发布于 09/23 00:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2102438365455167883"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Software will never die again. You liked Google Reader? Cool, you can generate and de…",
+              "summary": "自动恢复版一手信号，发布于 09/23 11:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2102594015669756323"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：Your intelligence is fake. It’s artificial. Mine? It’s super. Super Intelligence. Aka…",
+              "summary": "自动恢复版一手信号，发布于 09/23 04:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2102489320766800002"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：Had ChatGPT sometimes crashing on me after updating to macOS 27 and... Astra found a…",
+              "summary": "自动恢复版一手信号，发布于 09/23 04:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2102501642176528743"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：An algorithmic drawing program created by @kevin_t_ngo. Every drawing is based on a d…",
+              "summary": "自动恢复版一手信号，发布于 09/23 02:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2102471889092276516"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：Opus 5.5 is a really good model. It's been my daily driver the last few weeks. We had…",
+              "summary": "自动恢复版一手信号，发布于 09/23 00:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2102439069053747549"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：We ran fresh Next.js evals. The tally: ① Opus 5.5 [𝟿𝟽%] ② GPT 6 Sol [𝟿𝟽%] ③ Fable 5.1…",
+              "summary": "自动恢复版一手信号，发布于 09/23 06:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2102519097770885231"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：GPT-6 Sol and Luna are out. Not only are they a very significant improvement across t…",
+              "summary": "自动恢复版一手信号，发布于 09/23 02:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2102463847714247142"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：We have been focusing on efficiency and intelligence for all. Very proud of the team…",
+              "summary": "自动恢复版一手信号，发布于 09/23 00:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2102440619616682120"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Maybe our cutest launch so far. But still packing the biggest punch.",
+              "summary": "自动恢复版一手信号，发布于 09/23 05:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2102509507415048245"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第五十四期·自动恢复版",
+      "issue": 63,
+      "seq": 1,
+      "slug": "2026-09-24--1",
+      "weekday": "周四"
     }
   ]
 }
