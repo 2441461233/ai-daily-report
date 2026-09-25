@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-25 星期五",
+  "label": "第五十五期·自动恢复版",
+  "generatedAt": "2026-09-25T09:32:18+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Voice! I've gotten so used to just call ChatGPT and talk about all the work, check on…",
+          "summary": "自动恢复版一手信号，发布于 09/24 01:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2102814202117411196"
+            }
+          ]
+        },
+        {
+          "headline": "Ryo Lu 公开动态：efficiency, productivity, speed we keep worshipping these words like they are what we…",
+          "summary": "自动恢复版一手信号，发布于 09/24 09:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Ryo Lu（单一来源）",
+              "url": "https://x.com/ryolu_/status/2102933485795369213"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Can't wait for DevDay next Tuesday. Some really fun stuff, but also many many things…",
+          "summary": "自动恢复版一手信号，发布于 09/24 13:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2102996313780736363"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：If you've noticed how fast and the Desktop app have become in the last few weeks, her…",
+          "summary": "自动恢复版一手信号，发布于 09/24 04:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2102854267782705648"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：this is a new type of post we're trying where we share in-depth about how we do work…",
+          "summary": "自动恢复版一手信号，发布于 09/24 04:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2102857025206255902"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：It was an honor to meet Donald Knuth at the Computer History Museum today",
+          "summary": "自动恢复版一手信号，发布于 09/24 11:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2102971275543216623"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Swyx 公开动态：can confirm. ran @latentspacepod AINews side by side with 6 Sol and the difference wa…",
+          "summary": "自动恢复版一手信号，发布于 09/23 14:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Swyx（单一来源）",
+              "url": "https://x.com/swyx/status/2102650014552182920"
+            }
+          ]
+        },
+        {
+          "headline": "Boris Cherny 公开动态：More details for the formal methods people -- what's happening is Claude is doing som…",
+          "summary": "自动恢复版一手信号，发布于 09/24 07:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Boris Cherny（单一来源）",
+              "url": "https://x.com/bcherny/status/2102898067133595992"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Claude 公开动态：You can now discover tools, agents and expert partners on Claude Marketplace. Use it…",
+          "summary": "自动恢复版一手信号，发布于 09/24 03:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2102840851538080172"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Muse, Instinct, OpenClaw, Claude Code… All successful agents have 3 key components: 🧠…",
+          "summary": "自动恢复版一手信号，发布于 09/24 01:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2102820148629614685"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Two important simultaneous important trends in how startups get customers: Make softw…",
+          "summary": "自动恢复版一手信号，发布于 09/24 10:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2102955139875397806"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
