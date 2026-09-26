@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-25T09:32:18+08:00",
-  "count": 64,
+  "generatedAt": "2026-09-26T09:35:44+08:00",
+  "count": 65,
   "reports": [
     {
       "date": "2026-07-28",
@@ -15102,6 +15102,171 @@
       "seq": 1,
       "slug": "2026-09-25--1",
       "weekday": "周五"
+    },
+    {
+      "date": "2026-09-26",
+      "generatedAt": "2026-09-26T09:35:44+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Spend of OpenAI vs Anthropic vs Open (Vercel AI Gateway, last 2 months) • Anthropic s…",
+              "summary": "自动恢复版一手信号，发布于 09/25 04:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2103216656747262419"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：incredibly thoughtful piece on AI and creativity hopefully we can make our producst b…",
+              "summary": "自动恢复版一手信号，发布于 09/25 07:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2103259550325575806"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thariq 公开动态：lots feedback here, many of you are planning yourself &amp; don't need plan mode othe…",
+              "summary": "自动恢复版一手信号，发布于 09/25 03:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2103212051065921632"
+                }
+              ]
+            },
+            {
+              "text": "Swyx 公开动态：more conferences could implement this. so much high value time wasted without thought",
+              "summary": "自动恢复版一手信号，发布于 09/25 04:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Swyx",
+                  "url": "https://x.com/swyx/status/2103223477130129726"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：Afghanistan is more excited about AI than we are?",
+              "summary": "自动恢复版一手信号，发布于 09/24 23:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2103150483062014436"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：this should let you customize the plan mode prompt, create + share your own modes or…",
+              "summary": "自动恢复版一手信号，发布于 09/25 03:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2103212052391354794"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Peter Steinberger 公开动态：If you just tell the agent to clean up, it will stop far too early. Give it an ambiti…",
+              "summary": "自动恢复版一手信号，发布于 09/24 23:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2103148444701610233"
+                }
+              ]
+            },
+            {
+              "text": "Josh Woodward 公开动态：Dreambeans is one of our newer experiments in @GoogleLabs. It has a growing cult foll…",
+              "summary": "自动恢复版一手信号，发布于 09/25 01:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Josh Woodward",
+                  "url": "https://x.com/joshwoodward/status/2103182635992514569"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Matt Turck 公开动态：In Jensen's 5 layer cake analogy for AI (energy, chips, infrastructure, models, appli…",
+              "summary": "自动恢复版一手信号，发布于 09/25 00:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2103167531917721866"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：“we believe that every small business owner, specifically for us in the trades, will…",
+              "summary": "自动恢复版一手信号，发布于 09/25 13:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2103360292973633770"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：We are in that stage of the \"revenue\" lifecycle..",
+              "summary": "自动恢复版一手信号，发布于 09/25 04:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2103218709234172252"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第五十六期·自动恢复版",
+      "issue": 65,
+      "seq": 1,
+      "slug": "2026-09-26--1",
+      "weekday": "周六"
     }
   ]
 }
