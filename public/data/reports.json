@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-26T09:35:44+08:00",
-  "count": 65,
+  "generatedAt": "2026-09-27T09:28:48+08:00",
+  "count": 66,
   "reports": [
     {
       "date": "2026-07-28",
@@ -15267,6 +15267,159 @@
       "seq": 1,
       "slug": "2026-09-26--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-09-27",
+      "generatedAt": "2026-09-27T09:28:48+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Steinberger 公开动态：The biggest design mistake I made when we moved OC to sqlite: using sync db access. W…",
+              "summary": "自动恢复版一手信号，发布于 09/26 08:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2103648679169257737"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：o yes… we’re back in action and we’ll reset usage limits for all paid users across co…",
+              "summary": "自动恢复版一手信号，发布于 09/26 08:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2103637477760311522"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：We are aware that codex is down and are working hard to bring back normal service.",
+              "summary": "自动恢复版一手信号，发布于 09/26 06:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2103620061156290622"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：What are you going to explore with Opus 5.5 this weekend?",
+              "summary": "自动恢复版一手信号，发布于 09/26 00:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2103515672777290083"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Ok all memes aside I had Grok @bot and Muse track the same Japan flight itinerary and…",
+              "summary": "自动恢复版一手信号，发布于 09/26 11:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2103693608729932025"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：There is an extensive and ongoing review related to our agents’ use of internet acces…",
+              "summary": "自动恢复版一手信号，发布于 09/26 03:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2103567198690349362"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：What is effort really? When do you change it it and why not just use max effort for e…",
+              "summary": "自动恢复版一手信号，发布于 09/26 04:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2103576349499855160"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：Tag writes >50% of my PRs every day. It also does ~100% of my data analysis, and fixe…",
+              "summary": "自动恢复版一手信号，发布于 09/26 01:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2103538666597691552"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：The growth of has been mind-boggling. I watched it grow from idea, to first ship, to…",
+              "summary": "自动恢复版一手信号，发布于 09/26 01:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2103543983557517340"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：We’ve been thinking a lot about what it means to build the self-driving company. A bi…",
+              "summary": "自动恢复版一手信号，发布于 09/26 07:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2103632415185133992"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第五十七期·自动恢复版",
+      "issue": 66,
+      "seq": 1,
+      "slug": "2026-09-27--1",
+      "weekday": "周日"
     }
   ]
 }
