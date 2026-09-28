@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-27T09:28:48+08:00",
-  "count": 66,
+  "generatedAt": "2026-09-28T09:40:16+08:00",
+  "count": 67,
   "reports": [
     {
       "date": "2026-07-28",
@@ -15420,6 +15420,135 @@
       "seq": 1,
       "slug": "2026-09-27--1",
       "weekday": "周日"
+    },
+    {
+      "date": "2026-09-28",
+      "generatedAt": "2026-09-28T09:40:16+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Thariq 公开动态：Just about 1 year ago I posted one of the first posts about using Claude Code to make…",
+              "summary": "自动恢复版一手信号，发布于 09/27 01:19；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2103897226154328502"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：I am using @antigravity for the first time (to try Google's new audio APIs) and who d…",
+              "summary": "自动恢复版一手信号，发布于 09/27 08:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2104003094615052443"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Resets all propagated. That will be all. Have a fantastic weekend.",
+              "summary": "自动恢复版一手信号，发布于 09/27 02:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2103911959544610829"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Reject non-understanding. Slop grenades are not just code and PRs. We run a real risk…",
+              "summary": "自动恢复版一手信号，发布于 09/27 04:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2103939888513274147"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：Now I see why some people talk about AGI. This is so clever!",
+              "summary": "自动恢复版一手信号，发布于 09/27 00:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2103883264054505493"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Not sure what happened to Claude limits they went from barely usable to basically unl…",
+              "summary": "自动恢复版一手信号，发布于 09/27 12:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2104066667361992892"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Hello world, Lisa Rauch 👧. What an amazing and beautiful world to be born in.",
+              "summary": "自动恢复版一手信号，发布于 09/27 04:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2103951116648280266"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Garry Tan 公开动态：This is my favorite way to fix bugs now @capydotai with GStack /autoplan on a product…",
+              "summary": "自动恢复版一手信号，发布于 09/27 07:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2103989902476259702"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第五十八期·自动恢复版",
+      "issue": 67,
+      "seq": 1,
+      "slug": "2026-09-28--1",
+      "weekday": "周一"
     }
   ]
 }
