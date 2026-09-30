@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T10:20:08+08:00",
-  "count": 68,
+  "generatedAt": "2026-09-30T09:40:34+08:00",
+  "count": 69,
   "reports": [
     {
       "date": "2026-07-28",
@@ -15828,6 +15828,201 @@
       "seq": 1,
       "slug": "2026-09-29--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-09-30",
+      "generatedAt": "2026-09-30T09:40:34+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Dan Shipper 公开动态：SONNET 5.5 IS OUT! It has dramatically improved writing even versus Opus 5.5 in my te…",
+              "summary": "自动恢复版一手信号，发布于 09/29 02:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2104636728992776510"
+                }
+              ]
+            },
+            {
+              "text": "Swyx 公开动态：oai designers have to be trolling us",
+              "summary": "自动恢复版一手信号，发布于 09/29 09:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Swyx",
+                  "url": "https://x.com/swyx/status/2104741800393253322"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：Pretty excited for DevDay tomorrow. We have found a new thing.",
+              "summary": "自动恢复版一手信号，发布于 09/29 03:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2104661956879913457"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Sonnet 5.5 fixing a bug with Claude Code. 30% faster and 30% less usage.",
+              "summary": "自动恢复版一手信号，发布于 09/29 02:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2104638725317923228"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：it's basically impossible for someone to just \"show you their prompt\" now, because ev…",
+              "summary": "自动恢复版一手信号，发布于 09/29 00:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2104608785696440510"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Sunday vibes. See you at Fort Mason soon 🎮👩‍💻",
+              "summary": "自动恢复版一手信号，发布于 09/28 14:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2104465709384491519"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Hi, Tomorrow we are re-opening the Pro $200 subscriptions to new subscribers, but tog…",
+              "summary": "自动恢复版一手信号，发布于 09/29 14:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2104823812042940713"
+                }
+              ]
+            },
+            {
+              "text": "Alex Albert 公开动态：Sonnet 5.5 has the same feel I liked about Opus 5.5. It writes clearly, it's very fas…",
+              "summary": "自动恢复版一手信号，发布于 09/29 02:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Alex Albert",
+                  "url": "https://x.com/alexalbert__/status/2104633937280811010"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thariq 公开动态：A lot of times when I talk about higher level abstractions like projects, claude tag…",
+              "summary": "自动恢复版一手信号，发布于 09/29 03:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2104660926373023830"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：We migrated with as little intervention as possible, setting out to prove just how mu…",
+              "summary": "自动恢复版一手信号，发布于 09/29 03:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2104660502723072281"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：At Box, we've been testing Sonnet 5.5 in early access on our complex work eval with t…",
+              "summary": "自动恢复版一手信号，发布于 09/29 03:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2104648654074343480"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：GPT-6.1 Sol (max) 升至第 10 名",
+              "summary": "GPT-6.1 Sol (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 10 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Opus 5.5 (medium with fallback)",
+              "summary": "Claude Opus 5.5 (medium with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 51。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 2 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第六十期·自动恢复版",
+      "issue": 69,
+      "seq": 1,
+      "slug": "2026-09-30--1",
+      "weekday": "周三"
     }
   ]
 }
