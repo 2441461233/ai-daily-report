@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T09:40:34+08:00",
-  "count": 69,
+  "generatedAt": "2026-10-01T09:40:22+08:00",
+  "count": 70,
   "reports": [
     {
       "date": "2026-07-28",
@@ -16023,6 +16023,225 @@
       "seq": 1,
       "slug": "2026-09-30--1",
       "weekday": "周三"
+    },
+    {
+      "date": "2026-10-01",
+      "generatedAt": "2026-10-01T09:40:22+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：How to design and build a harness to reach frontier performance at a fraction of the…",
+              "summary": "自动恢复版一手信号，发布于 09/30 02:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2104996638817386820"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：AI SDK has hit 30M weekly downloads. One-shotted this video in fframes + + opus. I as…",
+              "summary": "自动恢复版一手信号，发布于 09/30 05:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2105043144975011982"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：Dots are here! A new way to use AI that works 24/7 for you; get more of your time and…",
+              "summary": "自动恢复版一手信号，发布于 09/30 02:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2104995014208258235"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：Ultrafast is so fast I do not ever want to go back",
+              "summary": "自动恢复版一手信号，发布于 09/30 01:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2104994601140711896"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：have you tried telling Claude \"we have the power to do anything, please be braver\" al…",
+              "summary": "自动恢复版一手信号，发布于 09/30 06:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2105065127892734076"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：It was so nice to connect with so many of you in person at DevDay. Immaculate vibes f…",
+              "summary": "自动恢复版一手信号，发布于 09/30 09:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2105102820706058498"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：6.1 Sol at 1/5th of the price of Astra, and 95% cache read discount! Extremely capabl…",
+              "summary": "自动恢复版一手信号，发布于 09/30 01:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2104994395980533804"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：It’s entirely plausible that the AI industry can deal with safety and security throug…",
+              "summary": "自动恢复版一手信号，发布于 09/30 09:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2105111520913039530"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：We will have a few million dots online within days, working on all sorts of things ac…",
+              "summary": "自动恢复版一手信号，发布于 09/30 09:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2105105086506840421"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：Two random honest thoughts on the market right now.. First is on people: It's harder…",
+              "summary": "自动恢复版一手信号，发布于 09/30 12:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2105148927599423752"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：im biased but im insanely proud of @every's dev day coverage - two vibe checks - live…",
+              "summary": "自动恢复版一手信号，发布于 09/30 06:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2105066959822114972"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Gemini 4 Argon (high) 升至第 8 名",
+              "summary": "Gemini 4 Argon (high) 新进入 Artificial Analysis Intelligence Index 前十，当前第 8 名，得分 53。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-6.1 Sol (max)",
+              "summary": "GPT-6.1 Sol (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (xhigh) 第 8 → 9 名",
+              "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Sonnet 5.5 (xhigh with fallback) 第 9 → 10 名",
+              "summary": "Claude Sonnet 5.5 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 9 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 4 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第六十一期·自动恢复版",
+      "issue": 70,
+      "seq": 1,
+      "slug": "2026-10-01--1",
+      "weekday": "周四"
     }
   ]
 }

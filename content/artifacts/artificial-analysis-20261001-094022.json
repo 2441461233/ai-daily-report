@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-01",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-10-01",
+  "generatedAt": "2026-10-01T09:40:22+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 4 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。",
+      "items": [
+        {
+          "headline": "新进 Top 10：Gemini 4 Argon (high) 升至第 8 名",
+          "summary": "Gemini 4 Argon (high) 新进入 Artificial Analysis Intelligence Index 前十，当前第 8 名，得分 53。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GPT-6.1 Sol (max)",
+          "summary": "GPT-6.1 Sol (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 52。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-6 Astra (xhigh) 第 8 → 9 名",
+          "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Sonnet 5.5 (xhigh with fallback) 第 9 → 10 名",
+          "summary": "Claude Sonnet 5.5 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 9 名变为第 10 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
