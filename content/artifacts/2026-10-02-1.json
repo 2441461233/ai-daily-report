@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-02 星期五",
+  "label": "第六十二期·自动恢复版",
+  "generatedAt": "2026-10-02T09:49:49+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Asked my dot to paint me. After sending me something cartoonish, I asked it to try a…",
+          "summary": "自动恢复版一手信号，发布于 10/01 04:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2105395200248156556"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：While prototypes are fun, I think ideally I'd work on this with a small group of 2-3…",
+          "summary": "自动恢复版一手信号，发布于 10/01 00:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2105333509246386546"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Register for San Francisco: Register for Stockholm:",
+          "summary": "自动恢复版一手信号，发布于 10/01 02:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2105370681613672773"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：It’s a fierce fight between CI and GitHub on what slows me down. Time to rethink how…",
+          "summary": "自动恢复版一手信号，发布于 10/01 00:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2105341288958869952"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：I'm finding inter-agent communication in the chat stream increasingly irritating. Cha…",
+          "summary": "自动恢复版一手信号，发布于 10/01 02:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2105362785534361996"
+            }
+          ]
+        },
+        {
+          "headline": "Nan Yu 公开动态：It’s interesting to contrast, what different companies take for granted in their inte…",
+          "summary": "自动恢复版一手信号，发布于 09/30 23:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nan Yu（单一来源）",
+              "url": "https://x.com/thenanyu/status/2105316751802348005"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：GPT-6.1 Sol is our most demanded model pretty much ever both across both the API and…",
+          "summary": "自动恢复版一手信号，发布于 10/01 09:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2105464274747527543"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：One more thing, you can now build and deploy MCP servers right through ChatGPT. And r…",
+          "summary": "自动恢复版一手信号，发布于 10/01 12:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2105519215092584786"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Claude Founder House is coming to SF Tech Week (Oct 6–8) and Stockholm (Oct 14). Come…",
+          "summary": "自动恢复版一手信号，发布于 10/01 02:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2105370680485417401"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：There's a huge opportunity right now in being the deployment layer for AI into the ec…",
+          "summary": "自动恢复版一手信号，发布于 10/01 01:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2105354449795621179"
+            }
+          ]
+        },
+        {
+          "headline": "Google Labs 公开动态：💠 Opal shines on in Skills! 💠 When we launched Opal in Google Labs, it was an experim…",
+          "summary": "自动恢复版一手信号，发布于 10/01 01:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Google Labs（单一来源）",
+              "url": "https://x.com/GoogleLabs/status/2105352889665564838"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
