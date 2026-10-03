@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-02T09:49:49+08:00",
-  "count": 71,
+  "generatedAt": "2026-10-03T09:40:16+08:00",
+  "count": 72,
   "reports": [
     {
       "date": "2026-07-28",
@@ -16407,6 +16407,201 @@
       "seq": 1,
       "slug": "2026-10-02--1",
       "weekday": "周五"
+    },
+    {
+      "date": "2026-10-03",
+      "generatedAt": "2026-10-03T09:40:16+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Andrej Karpathy 公开动态：We'll be spending a lot more time trying to understand the outputs of language models…",
+              "summary": "自动恢复版一手信号，发布于 10/02 08:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Andrej Karpathy",
+                  "url": "https://x.com/karpathy/status/2105819303471976479"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：For two weeks, start a design, deck, or doc in the Claude app, and the work that foll…",
+              "summary": "自动恢复版一手信号，发布于 10/02 02:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2105721630051692804"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Global reset landing tomorrow 10am PST for all paid ChatGPT accounts. Apologies for t…",
+              "summary": "自动恢复版一手信号，发布于 10/02 10:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2105843926221660585"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：You should be able to use your AI subscription wherever you need:",
+              "summary": "自动恢复版一手信号，发布于 10/02 03:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2105739098640298253"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Mods are absolutely insane. You can now customize Claude to work and look the way you…",
+              "summary": "自动恢复版一手信号，发布于 10/02 04:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2105756563302723721"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：I think there is much more potential energy in Sign In With ChatGPT/Plugin Extensions…",
+              "summary": "自动恢复版一手信号，发布于 10/01 23:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2105687922234237364"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：Also, 6.1 Sol was our fastest-growing model ever, and was a bit slow under load. Shou…",
+              "summary": "自动恢复版一手信号，发布于 10/01 23:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2105688354834756036"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：The future is verification-engineering. Proofs, (e2e) tests, benchmarks, linters… Som…",
+              "summary": "自动恢复版一手信号，发布于 10/02 02:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2105723481413550427"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Nan Yu 公开动态：There is only One True SaaS Layout. You may not like it, but this is what peak usabil…",
+              "summary": "自动恢复版一手信号，发布于 10/02 01:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nan Yu",
+                  "url": "https://x.com/thenanyu/status/2105704619704029435"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：SvelteKit 3 is a wonder. Congrats to the team. So excited for Async Svelte &amp; Remo…",
+              "summary": "自动恢复版一手信号，发布于 10/02 09:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2105837842362732965"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：Frontend code is probably the most expressive medium for storytelling of our times ye…",
+              "summary": "自动恢复版一手信号，发布于 10/02 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2105753728183828692"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "排名上升：Claude Sonnet 5.5 (max with fallback) 第 3 → 2 名",
+              "summary": "Claude Sonnet 5.5 (max with fallback) 在 Artificial Analysis Intelligence Index 中上升 1 位，由第 3 名变为第 2 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5.5 (xhigh with fallback) 第 2 → 3 名",
+              "summary": "Claude Opus 5.5 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 2 名变为第 3 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 2 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第六十三期·自动恢复版",
+      "issue": 72,
+      "seq": 1,
+      "slug": "2026-10-03--1",
+      "weekday": "周六"
     }
   ]
 }

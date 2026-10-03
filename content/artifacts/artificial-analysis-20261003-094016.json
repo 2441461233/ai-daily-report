@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-03",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-10-03",
+  "generatedAt": "2026-10-03T09:40:16+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 2 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。",
+      "items": [
+        {
+          "headline": "排名上升：Claude Sonnet 5.5 (max with fallback) 第 3 → 2 名",
+          "summary": "Claude Sonnet 5.5 (max with fallback) 在 Artificial Analysis Intelligence Index 中上升 1 位，由第 3 名变为第 2 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Opus 5.5 (xhigh with fallback) 第 2 → 3 名",
+          "summary": "Claude Opus 5.5 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 2 名变为第 3 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

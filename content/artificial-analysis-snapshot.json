@@ -16,21 +16,21 @@
     },
     {
       "rank": 2,
-      "slug": "claude-opus-5-5-xhigh",
-      "name": "Claude Opus 5.5 (xhigh with fallback)",
-      "creator": "Anthropic",
-      "score": 56,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/claude-opus-5-5-xhigh"
-    },
-    {
-      "rank": 3,
       "slug": "claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5 (max with fallback)",
       "creator": "Anthropic",
       "score": 56,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5"
+    },
+    {
+      "rank": 3,
+      "slug": "claude-opus-5-5-xhigh",
+      "name": "Claude Opus 5.5 (xhigh with fallback)",
+      "creator": "Anthropic",
+      "score": 56,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-opus-5-5-xhigh"
     },
     {
       "rank": 4,
