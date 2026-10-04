@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-03T09:40:16+08:00",
-  "count": 72,
+  "generatedAt": "2026-10-04T10:00:30+08:00",
+  "count": 73,
   "reports": [
     {
       "date": "2026-07-28",
@@ -16602,6 +16602,159 @@
       "seq": 1,
       "slug": "2026-10-03--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-10-04",
+      "generatedAt": "2026-10-04T10:00:30+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：I was paying almost $300/year for a YouTube research tool that shall go unnamed. The…",
+              "summary": "自动恢复版一手信号，发布于 10/03 01:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2106072698564874410"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：The contrast between hanging up the last phone call of the day of high-stakes decisio…",
+              "summary": "自动恢复版一手信号，发布于 10/03 09:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2106189841813934140"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：All fixed. Surprising number of Pro 500 users on here.",
+              "summary": "自动恢复版一手信号，发布于 10/03 12:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2106239435461579088"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：\"You should know\" is a great way of staying on top of what's possible with Claude and…",
+              "summary": "自动恢复版一手信号，发布于 10/03 04:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2106119299484221762"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：A jet engine in interactive 3D you can cut away and pull apart, made with Opus 5.5.",
+              "summary": "自动恢复版一手信号，发布于 10/03 04:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2106125478956507480"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Fortunately our future models will be much better at code deletion and simplification…",
+              "summary": "自动恢复版一手信号，发布于 10/03 13:19；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2106252868307271752"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Seeing some reports that the Pro 500 didn’t get the reset as expected earlier. Invest…",
+              "summary": "自动恢复版一手信号，发布于 10/03 12:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2106233145163141249"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：dot is my favorite openai product so far! it is amazing to me that each day it feels…",
+              "summary": "自动恢复版一手信号，发布于 10/03 02:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2106085986606403684"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：There is some speculation about our partnership with Cerebras. Cerebras is a close pa…",
+              "summary": "自动恢复版一手信号，发布于 10/03 06:19；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2106147184693620924"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：This was by far my favorite slide at DevDay. Kudos to the team!",
+              "summary": "自动恢复版一手信号，发布于 10/03 01:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2106076508020506722"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第六十四期·自动恢复版",
+      "issue": 73,
+      "seq": 1,
+      "slug": "2026-10-04--1",
+      "weekday": "周日"
     }
   ]
 }
