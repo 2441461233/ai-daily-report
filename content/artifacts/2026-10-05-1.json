@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-05 星期一",
+  "label": "第六十五期·自动恢复版",
+  "generatedAt": "2026-10-05T09:40:17+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Ryo Lu 公开动态：convergence to the mean when everyone looks at everyone else to decide what to make…",
+          "summary": "自动恢复版一手信号，发布于 10/03 18:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Ryo Lu（单一来源）",
+              "url": "https://x.com/ryolu_/status/2106337039201505453"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Google CEO actually uses this app and replies to feedback while YouTube CEO only uses…",
+          "summary": "自动恢复版一手信号，发布于 10/04 06:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2106505635017986394"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Peter Steinberger 公开动态：Do I know anyone at Google who could help? We're now over a week in review limbo for…",
+          "summary": "自动恢复版一手信号，发布于 10/04 02:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2106446147791597774"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：AI will make everything free, including itself. The last domino to fall will be free…",
+          "summary": "自动恢复版一手信号，发布于 10/04 05:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2106503460384538793"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：I have never in my life achieved inbox zero until I just made it an active goal for m…",
+          "summary": "自动恢复版一手信号，发布于 10/04 12:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2106602729875685780"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：laughing about how we all are building the same thing.",
+          "summary": "自动恢复版一手信号，发布于 10/04 04:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2106489264443981978"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Sam Altman 公开动态：I am very uncomfortable about people trying to ascribe religious force or a surrender…",
+          "summary": "自动恢复版一手信号，发布于 10/03 22:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2106388373221118198"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：All right, we’re locking in. Only things being worked on are simplifications, more ef…",
+          "summary": "自动恢复版一手信号，发布于 10/04 12:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2106610099720720811"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Security will become a larger and larger function in software companies. Security is…",
+          "summary": "自动恢复版一手信号，发布于 10/04 06:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2106516538836856945"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：AI agent adoption is still very bimodal right now. You have coding and coding adjacen…",
+          "summary": "自动恢复版一手信号，发布于 10/04 11:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2106583814709633413"
+            }
+          ]
+        },
+        {
+          "headline": "Madhu Guru 公开动态：AI adoption is largely a product problem today. Even among the 2% that are paying for…",
+          "summary": "自动恢复版一手信号，发布于 10/04 02:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Madhu Guru（单一来源）",
+              "url": "https://x.com/realmadhuguru/status/2106450089938157720"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
