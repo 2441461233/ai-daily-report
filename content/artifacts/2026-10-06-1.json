@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-06 星期二",
+  "label": "第六十六期·自动恢复版",
+  "generatedAt": "2026-10-06T10:32:02+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：DHH is fundamentally right about Rust. For context, Vercel has been undergoing a Rust…",
+          "summary": "自动恢复版一手信号，发布于 10/05 05:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2106863842450133114"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：I asked Sam, co-founder of @meetgranola, how he feels about people skipping his UI an…",
+          "summary": "自动恢复版一手信号，发布于 10/05 08:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2106897211766530299"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Zara Zhang 公开动态：The way Opus 5.5 just silently goes off to make something for 20+ minutes and comes b…",
+          "summary": "自动恢复版一手信号，发布于 10/05 06:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2106876921082712250"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：bug fixes &amp; performance improvements",
+          "summary": "自动恢复版一手信号，发布于 10/05 01:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2106796559400882209"
+            }
+          ]
+        },
+        {
+          "headline": "Ryo Lu 公开动态：a bit more work later… full bleed desktop + side dock lil computer in your pocket",
+          "summary": "自动恢复版一手信号，发布于 10/05 00:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Ryo Lu（单一来源）",
+              "url": "https://x.com/ryolu_/status/2106777615801713054"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：When everyone is building the same primitives it does speak to needs that will only i…",
+          "summary": "自动恢复版一手信号，发布于 10/05 08:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2106901111106097210"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Working on a new little project. The 𝚁𝙴𝙰𝙳𝙼𝙴 is fully written by hand, because it's fo…",
+          "summary": "自动恢复版一手信号，发布于 10/05 04:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2106848085267902815"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：It’s hard to fathom getting even faster, but it’s now… much faster 😂 As models speed…",
+          "summary": "自动恢复版一手信号，发布于 10/05 07:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2106885457212825983"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Over the next 28 days, each day we’ll either ship one thing that is a clear improveme…",
+          "summary": "自动恢复版一手信号，发布于 10/05 04:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2106845241357824205"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：We’re already starting to see what kind of new jobs AI is creating. AI requires signi…",
+          "summary": "自动恢复版一手信号，发布于 10/05 07:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2106893015063421357"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：This metric may tell us more about the business model of consumer AI than the state o…",
+          "summary": "自动恢复版一手信号，发布于 10/05 01:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2106802940879192260"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
