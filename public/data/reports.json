@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-06T10:32:02+08:00",
-  "count": 75,
+  "generatedAt": "2026-10-07T09:50:04+08:00",
+  "count": 76,
   "reports": [
     {
       "date": "2026-07-28",
@@ -17085,6 +17085,171 @@
       "seq": 1,
       "slug": "2026-10-06--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-10-07",
+      "generatedAt": "2026-10-07T09:50:04+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Introducing gdp-ts: Ghosts of Departed Proofs for TypeScript. gdp-ts is a library, li…",
+              "summary": "自动恢复版一手信号，发布于 10/05 22:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2107119811444748555"
+                }
+              ]
+            },
+            {
+              "text": "Ryo Lu 公开动态：remembering Steve i grew up with beige boxes. then i moved to Canada and saw the iMac…",
+              "summary": "自动恢复版一手信号，发布于 10/06 07:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2107246891977335049"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：This might have been my best day so far at oai. Ridiculous amounts of fun and intensi…",
+              "summary": "自动恢复版一手信号，发布于 10/06 11:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2107311729768353844"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Sergio is cooking up magic with collaborative space right in ChatGPT. Improving leaps…",
+              "summary": "自动恢复版一手信号，发布于 10/06 04:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2107200530477101461"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：my favorite name for this pattern is \"local hands\", Claude runs in the cloud but can…",
+              "summary": "自动恢复版一手信号，发布于 10/06 06:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2107229483015258493"
+                }
+              ]
+            },
+            {
+              "text": "Ryo Lu 公开动态：made a lil thing for language learners: watch Netflix with subtitles in any two langu…",
+              "summary": "自动恢复版一手信号，发布于 10/06 00:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2107146629338042853"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thariq 公开动态：a big advantage of doing planning like this is that it’s a lot more token efficient c…",
+              "summary": "自动恢复版一手信号，发布于 10/06 10:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2107294499282293017"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：The US is catching up on open-weights models.",
+              "summary": "自动恢复版一手信号，发布于 10/06 05:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2107222388429766970"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Garry Tan 公开动态：Harnesses from labs have an incentive to burn tokens, which means harnesses from star…",
+              "summary": "自动恢复版一手信号，发布于 10/05 23:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2107129959550685660"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：A decent amount of agent adoption and deployment is bottlenecked by being able to tes…",
+              "summary": "自动恢复版一手信号，发布于 10/06 09:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2107283615247999257"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：We should have competence and good outcomes but we can’t do that without leadership a…",
+              "summary": "自动恢复版一手信号，发布于 10/05 23:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2107127940635070905"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第六十七期·自动恢复版",
+      "issue": 76,
+      "seq": 1,
+      "slug": "2026-10-07--1",
+      "weekday": "周三"
     }
   ]
 }
