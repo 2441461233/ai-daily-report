@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-07T09:50:04+08:00",
-  "count": 76,
+  "generatedAt": "2026-10-08T10:17:41+08:00",
+  "count": 77,
   "reports": [
     {
       "date": "2026-07-28",
@@ -17250,6 +17250,159 @@
       "seq": 1,
       "slug": "2026-10-07--1",
       "weekday": "周三"
+    },
+    {
+      "date": "2026-10-08",
+      "generatedAt": "2026-10-08T10:17:41+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Nikunj Kothari 公开动态：Coming to New York next week for a board meeting.. who should I meet? 👋 Prioritizing…",
+              "summary": "自动恢复版一手信号，发布于 10/06 21:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2107468543373832463"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Do I know anyone at @Fourthwall or a related platform? My 8-year-old and I want to us…",
+              "summary": "自动恢复版一手信号，发布于 10/07 11:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2107669485549400474"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：At this rate AI will get us GTA 7 before GTA 6",
+              "summary": "自动恢复版一手信号，发布于 10/06 20:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2107449561451274688"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：looking up at the stars with extra awe tonight. \"thy sea is so great and my boat is s…",
+              "summary": "自动恢复版一手信号，发布于 10/07 12:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2107691261776052633"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：working at a higher level of abstraction has always required understanding the lower…",
+              "summary": "自动恢复版一手信号，发布于 10/07 00:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2107504677143368163"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：What’s happening in the AI-powered reverse engineering and decompilation is absolutel…",
+              "summary": "自动恢复版一手信号，发布于 10/07 11:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2107671204639465961"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：I am surprised that people are surprised this is how I prompt Claude. Talk to Claude…",
+              "summary": "自动恢复版一手信号，发布于 10/07 04:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2107565388250874193"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：We shipped four things that were deemed good to great and some math proofs, but the v…",
+              "summary": "自动恢复版一手信号，发布于 10/07 11:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2107676072871600470"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：The Every team runs as much work as possible through agents. To help the whole team s…",
+              "summary": "自动恢复版一手信号，发布于 10/07 04:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2107574195978641911"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：And we won't unship the improvements. You get to have your cake and eat it too. See y…",
+              "summary": "自动恢复版一手信号，发布于 10/07 11:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2107676261099426030"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第六十八期·自动恢复版",
+      "issue": 77,
+      "seq": 1,
+      "slug": "2026-10-08--1",
+      "weekday": "周四"
     }
   ]
 }
