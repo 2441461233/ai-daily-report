@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-09 星期五",
+  "label": "第六十九期·自动恢复版",
+  "generatedAt": "2026-10-09T10:35:21+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Dan Shipper 公开动态：OpenAI’s Dots launched last week and they've taken over @every. A few things that sta…",
+          "summary": "自动恢复版一手信号，发布于 10/08 01:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2107890633486582208"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：AI already solved images, music, and video. It’s going to solve gaming soon",
+          "summary": "自动恢复版一手信号，发布于 10/08 11:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2108032922527862851"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Google Labs 公开动态：🚨NEW EXPERIMENT 🚨 Playground is an experimental gaming platform that lets you create…",
+          "summary": "自动恢复版一手信号，发布于 10/07 19:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Google Labs（单一来源）",
+              "url": "https://x.com/GoogleLabs/status/2107800195748737042"
+            }
+          ]
+        },
+        {
+          "headline": "Sam Altman 公开动态：ChatGPT can now generate a custom UI for you!",
+          "summary": "自动恢复版一手信号，发布于 10/08 04:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Sam Altman（单一来源）",
+              "url": "https://x.com/sama/status/2107924408597950702"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Confirmed landed across all accounts. How are we doing so far?",
+          "summary": "自动恢复版一手信号，发布于 10/08 11:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2108040921044639779"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Haiku 5.5 is available now on all platforms, including Amazon Web Services, Google Cl…",
+          "summary": "自动恢复版一手信号，发布于 10/08 02:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2107894057615987198"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Claude 公开动态：One more thing: we’re halving the price of cache reads on Claude Sonnet 5.5, to $0.10…",
+          "summary": "自动恢复版一手信号，发布于 10/08 02:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2107894060229034197"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Haiku 5.5 shows major improvements across almost all of our alignment evaluations rel…",
+          "summary": "自动恢复版一手信号，发布于 10/08 02:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2107894054142787877"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：The compute needed for the stage of AI we’re about to enter is going to be insane. Pe…",
+          "summary": "自动恢复版一手信号，发布于 10/08 12:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2108056577697882402"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：While everyone's talking about agents, I've been exploring how teams can use them to…",
+          "summary": "自动恢复版一手信号，发布于 10/08 03:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2107911769767440832"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：That’s because Replit is not a consumer app. Most of our creators are building busine…",
+          "summary": "自动恢复版一手信号，发布于 10/08 04:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2107927076926038273"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
