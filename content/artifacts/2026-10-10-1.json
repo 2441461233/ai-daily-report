@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-10 星期六",
+  "label": "第七十期·自动恢复版",
+  "generatedAt": "2026-10-10T09:56:11+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Starting today, Claude Docs, Slides, and Design are out of beta and available on ever…",
+          "summary": "自动恢复版一手信号，发布于 10/09 03:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2108271559928389679"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：When a question needs deeper analysis, send the dashboard to your analytics tool. Whe…",
+          "summary": "自动恢复版一手信号，发布于 10/09 03:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2108271561337606300"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Today, we are announcing ChatGPT. It is here:",
+          "summary": "自动恢复版一手信号，发布于 10/09 08:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2108349826727588000"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：whoops I hit send and went to a meeting, didn't realize the repo wasnt public- it is…",
+          "summary": "自动恢复版一手信号，发布于 10/09 05:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2108312534222778407"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Few things more enjoyable in work and life than discovering new talent. Seeing greatn…",
+          "summary": "自动恢复版一手信号，发布于 10/09 11:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2108399406009798764"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：We built Box Mount to allow developers to mount Box as a file system directly in any…",
+          "summary": "自动恢复版一手信号，发布于 10/09 03:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2108279490510193078"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Day 4/ We have improved steering to be instant, leading to the model now reacting muc…",
+          "summary": "自动恢复版一手信号，发布于 10/09 03:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2108275041276420573"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：This sounds weird, but it is actually probably a good policy. Even if you don’t belie…",
+          "summary": "自动恢复版一手信号，发布于 10/09 13:17；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2108426594054533545"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Claude 公开动态：We’ve loved seeing so many founders join the Claude Startups program. Unfortunately…",
+          "summary": "自动恢复版一手信号，发布于 10/09 11:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2108404561413349695"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：Met a close friend who’s also a seed stage founder today.. They have been growing but…",
+          "summary": "自动恢复版一手信号，发布于 10/09 12:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2108410378233549106"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：Special treat for the @andy_pavlo fans out there: an in-depth discussion about what h…",
+          "summary": "自动恢复版一手信号，发布于 10/08 23:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2108223135673696504"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
