@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-11 星期日",
+  "label": "第七十一期·自动恢复版",
+  "generatedAt": "2026-10-11T09:40:25+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Garry Tan 公开动态：Only Nancy Tung has done anything to prevent ongoing misconduct and now the hard left…",
+          "summary": "自动恢复版一手信号，发布于 10/10 11:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2108756019132379586"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：One prompt to build a professional-level video for your company or product, in your s…",
+          "summary": "自动恢复版一手信号，发布于 10/09 22:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2108561284635480443"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Your ChatGPT subscription is now also a Devin subscription",
+          "summary": "自动恢复版一手信号，发布于 10/10 12:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2108777962053292398"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：before I joined Anthropic, I spent about 2 weeks hacking on this as a side project wi…",
+          "summary": "自动恢复版一手信号，发布于 10/10 06:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2108689101503566319"
+            }
+          ]
+        },
+        {
+          "headline": "Zara Zhang 公开动态：This thread is GOLD Never underestimate people’s creativity",
+          "summary": "自动恢复版一手信号，发布于 10/09 23:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2108584212660129820"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：Some communities are excited by AI’s impact on their field. Others are petrified. Wha…",
+          "summary": "自动恢复版一手信号，发布于 10/10 00:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2108597112707686552"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Madhu Guru 公开动态：Open-weight models did not start the drop in price per unit of intelligence. They are…",
+          "summary": "自动恢复版一手信号，发布于 10/10 01:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Madhu Guru（单一来源）",
+              "url": "https://x.com/realmadhuguru/status/2108618266776387886"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：Agents spawning other agents, agents operating in the background on every task, and a…",
+          "summary": "自动恢复版一手信号，发布于 10/10 10:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2108750943680630893"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：It's incredible to watch a new kind of economy be born. Agents purchasing infrastruct…",
+          "summary": "自动恢复版一手信号，发布于 10/10 05:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2108669027363295323"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：How about let's stop building more personal assistants to manage our emails and more…",
+          "summary": "自动恢复版一手信号，发布于 10/10 06:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2108679515681722787"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
