@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-11T09:40:25+08:00",
-  "count": 80,
+  "generatedAt": "2026-10-12T09:48:49+08:00",
+  "count": 81,
   "reports": [
     {
       "date": "2026-07-28",
@@ -17886,6 +17886,147 @@
       "seq": 1,
       "slug": "2026-10-11--1",
       "weekday": "周日"
+    },
+    {
+      "date": "2026-10-12",
+      "generatedAt": "2026-10-12T09:48:49+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Zara Zhang 公开动态：Code is the new medium for creative self-expression",
+              "summary": "自动恢复版一手信号，发布于 10/11 09:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2109087739287384387"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Put the reset in the bag. All propagated.",
+              "summary": "自动恢复版一手信号，发布于 10/11 12:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2109132167112782291"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：The day we reach perfection it will be resets from there onwards",
+              "summary": "自动恢复版一手信号，发布于 10/11 09:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2109090080497508356"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：All plausible science fiction will be realized within our lifetime. If you’re reading…",
+              "summary": "自动恢复版一手信号，发布于 10/11 05:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2109038632518782989"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：yup if your company slack is not a constant source of wonder and inspiration right no…",
+              "summary": "自动恢复版一手信号，发布于 10/10 23:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2108941466785439796"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：If you want to know where all the tokens will get consumed in the future, here it is…",
+              "summary": "自动恢复版一手信号，发布于 10/11 08:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2109079686286565378"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：Good post to start thinking through the long term safety approaches to managing intel…",
+              "summary": "自动恢复版一手信号，发布于 10/11 00:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2108952226714865966"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Nan Yu 公开动态：Yeah, I’ve been feeling this too. Agents make engineers extremely powerful, but PMs a…",
+              "summary": "自动恢复版一手信号，发布于 10/11 01:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nan Yu",
+                  "url": "https://x.com/thenanyu/status/2108976262698115550"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：Ignoring the actors in the latest debacle of VC, “philosophically” you can’t have bot…",
+              "summary": "自动恢复版一手信号，发布于 10/11 05:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2109038632975876395"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第七十二期·自动恢复版",
+      "issue": 81,
+      "seq": 1,
+      "slug": "2026-10-12--1",
+      "weekday": "周一"
     }
   ]
 }
