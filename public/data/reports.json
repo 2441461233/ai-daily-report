@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-12T09:48:49+08:00",
-  "count": 81,
+  "generatedAt": "2026-10-13T11:12:20+08:00",
+  "count": 82,
   "reports": [
     {
       "date": "2026-07-28",
@@ -18027,6 +18027,285 @@
       "seq": 1,
       "slug": "2026-10-12--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-10-13",
+      "generatedAt": "2026-10-13T11:12:20+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Thariq 公开动态：I think Terrence Tao is directionally correct, we shouldn’t settle for a super intell…",
+              "summary": "自动恢复版一手信号，发布于 10/12 01:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2109329495341867391"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：YouTube comments undefeated the disrespect to @Rasmic 😭",
+              "summary": "自动恢复版一手信号，发布于 10/12 08:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2109435203269878242"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：The results of this poll has gotten me confused. I definitely thought it would sway m…",
+              "summary": "自动恢复版一手信号，发布于 10/12 08:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2109439315570999598"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Replacing LLM calls with deterministic code is a no brainer and also results in bette…",
+              "summary": "自动恢复版一手信号，发布于 10/12 06:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2109410082769482174"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：If you wonder what an SF Public Bank will do for the city… For you? Absolutely nothin…",
+              "summary": "自动恢复版一手信号，发布于 10/12 06:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2109417956929327510"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：The only place where I use Gemini these days is in Chrome",
+              "summary": "自动恢复版一手信号，发布于 10/12 11:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2109483079106740500"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Day 7/ We have increased default context length for GPT-6.1 Sol to 500k when used thr…",
+              "summary": "自动恢复版一手信号，发布于 10/12 07:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2109430343346581527"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：With this change, we are not charging long context fees for GPT-6.1 Sol when drawing…",
+              "summary": "自动恢复版一手信号，发布于 10/12 07:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2109430894604026039"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Andrej Karpathy 公开动态：Dusting off this tweet from April because this gap in shared understanding of LLM cap…",
+              "summary": "自动恢复版一手信号，发布于 10/12 03:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Andrej Karpathy",
+                  "url": "https://x.com/karpathy/status/2109361546505966046"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：This is a good way to understand how early we actually are in AI diffusion right now…",
+              "summary": "自动恢复版一手信号，发布于 10/12 10:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2109467575025578330"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：\"I'm not at a point where I trust the agent, especially with stuff that people are us…",
+              "summary": "自动恢复版一手信号，发布于 10/12 08:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2109433961223180517"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Muse Wonder Full (max) 升至第 4 名",
+              "summary": "Muse Wonder Full (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 4 名，得分 56。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Muse Wonder (max) 升至第 10 名",
+              "summary": "Muse Wonder (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 10 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-6 Astra (xhigh)",
+              "summary": "GPT-6 Astra (xhigh) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Sonnet 5.5 (xhigh with fallback)",
+              "summary": "Claude Sonnet 5.5 (xhigh with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5.5 (high with fallback) 第 4 → 5 名",
+              "summary": "Claude Opus 5.5 (high with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 4 名变为第 5 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Fable 5.1 (max with fallback) 第 5 → 6 名",
+              "summary": "Claude Fable 5.1 (max with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 5 名变为第 6 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Fable 5.1 (xhigh with fallback) 第 6 → 7 名",
+              "summary": "Claude Fable 5.1 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 6 名变为第 7 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (max) 第 7 → 8 名",
+              "summary": "GPT-6 Astra (max) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 7 名变为第 8 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Gemini 4 Argon (high) 第 8 → 9 名",
+              "summary": "Gemini 4 Argon (high) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 9 项变化；当前榜首为 Claude Opus 5.5 (max with fallback)（58 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第七十三期·自动恢复版",
+      "issue": 82,
+      "seq": 1,
+      "slug": "2026-10-13--1",
+      "weekday": "周二"
     }
   ]
 }

@@ -34,6 +34,15 @@
     },
     {
       "rank": 4,
+      "slug": "muse-wonder-full",
+      "name": "Muse Wonder Full (max)",
+      "creator": "Meta",
+      "score": 56,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/muse-wonder-full"
+    },
+    {
+      "rank": 5,
       "slug": "claude-opus-5-5-high",
       "name": "Claude Opus 5.5 (high with fallback)",
       "creator": "Anthropic",
@@ -42,7 +51,7 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5-5-high"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "slug": "claude-fable-5-1",
       "name": "Claude Fable 5.1 (max with fallback)",
       "creator": "Anthropic",
@@ -51,7 +60,7 @@
       "url": "https://artificialanalysis.ai/models/claude-fable-5-1"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "slug": "claude-fable-5-1-xhigh",
       "name": "Claude Fable 5.1 (xhigh with fallback)",
       "creator": "Anthropic",
@@ -60,7 +69,7 @@
       "url": "https://artificialanalysis.ai/models/claude-fable-5-1-xhigh"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "slug": "gpt-6-astra",
       "name": "GPT-6 Astra (max)",
       "creator": "OpenAI",
@@ -69,7 +78,7 @@
       "url": "https://artificialanalysis.ai/models/gpt-6-astra"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "slug": "gemini-4-argon",
       "name": "Gemini 4 Argon (high)",
       "creator": "Google",
@@ -78,22 +87,13 @@
       "url": "https://artificialanalysis.ai/models/gemini-4-argon"
     },
     {
-      "rank": 9,
-      "slug": "gpt-6-astra-xhigh",
-      "name": "GPT-6 Astra (xhigh)",
-      "creator": "OpenAI",
-      "score": 52,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gpt-6-astra-xhigh"
-    },
-    {
       "rank": 10,
-      "slug": "claude-sonnet-5-5-xhigh",
-      "name": "Claude Sonnet 5.5 (xhigh with fallback)",
-      "creator": "Anthropic",
+      "slug": "muse-wonder",
+      "name": "Muse Wonder (max)",
+      "creator": "Meta",
       "score": 52,
       "estimated": false,
-      "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5-xhigh"
+      "url": "https://artificialanalysis.ai/models/muse-wonder"
     }
   ]
 }
