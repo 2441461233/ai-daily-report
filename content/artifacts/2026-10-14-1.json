@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-14 星期三",
+  "label": "第七十四期·自动恢复版",
+  "generatedAt": "2026-10-14T09:40:19+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Peter Yang 公开动态：Here's a clip of me explaining why Grok @bot is my favorite agent right now. tl;dr It…",
+          "summary": "自动恢复版一手信号，发布于 10/13 08:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2109803399332213090"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：So many people’s childhoods were defined by StarCraft even Ben. Still can’t believe t…",
+          "summary": "自动恢复版一手信号，发布于 10/13 09:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2109820627561676970"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：What would you like with your side of reset? It's done.",
+          "summary": "自动恢复版一手信号，发布于 10/13 13:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2109873287853707513"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Good plans are simple. I have one that should result in significantly more usage for…",
+          "summary": "自动恢复版一手信号，发布于 10/13 14:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2109892247580000595"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：6.1 Sol ultrafast &gt;&gt;&gt; 6 Astra ~ same cost but whole different game with 250…",
+          "summary": "自动恢复版一手信号，发布于 10/13 03:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2109730774593487009"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：said that last year, saying it again. vibes coding is a slur.",
+          "summary": "自动恢复版一手信号，发布于 10/13 03:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2109724776168300631"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Coding CLIs keep getting more complicated. Daemons, 3 layers of TUIs, client-server a…",
+          "summary": "自动恢复版一手信号，发布于 10/13 03:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2109734766107099312"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：What a crazy time in AI with Meta now jumping fully into the frontier. Now that there…",
+          "summary": "自动恢复版一手信号，发布于 10/13 02:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2109711062757216738"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：Agent swarms are going to be a core part of many enterprise workflows in the future…",
+          "summary": "自动恢复版一手信号，发布于 10/13 00:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2109682812811137061"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
