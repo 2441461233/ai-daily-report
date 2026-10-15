@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-15 星期四",
+  "label": "第七十五期·自动恢复版",
+  "generatedAt": "2026-10-15T09:29:53+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Josh Woodward 公开动态：Gemini 4 Argon: How a 24-word prompt built a custom synthesizer that turns galloping…",
+          "summary": "自动恢复版一手信号，发布于 10/14 09:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Josh Woodward（单一来源）",
+              "url": "https://x.com/joshwoodward/status/2110179883045560674"
+            }
+          ]
+        },
+        {
+          "headline": "Zara Zhang 公开动态：Asking for a friend: who is the most cracked brand designer you know?",
+          "summary": "自动恢复版一手信号，发布于 10/14 14:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2110254654412218553"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Josh Woodward 公开动态：Gemini 4 Argon: At 96 millimeters wide, the hardest part of manufacturing this custom…",
+          "summary": "自动恢复版一手信号，发布于 10/14 03:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Josh Woodward（单一来源）",
+              "url": "https://x.com/joshwoodward/status/2110089824573272547"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Giving your harnesses access to a real browser with your real credentials is a real u…",
+          "summary": "自动恢复版一手信号，发布于 10/14 01:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2110053836945756234"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Owning a house in the Bay Area is fun because you can just randomly spend five-figure…",
+          "summary": "自动恢复版一手信号，发布于 10/14 05:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2110120062908862517"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：All my priors get shattered when I chat with @JustJake every month.. &gt; how to scal…",
+          "summary": "自动恢复版一手信号，发布于 10/14 06:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2110137649168281871"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Dan Shipper 公开动态：gemini 4 argon really struggles on our senior engineer benchmark task comes in at 21%…",
+          "summary": "自动恢复版一手信号，发布于 10/14 01:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2110056016872427944"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Connie Chan wants China to win the AI race She also has done so much to make San Fran…",
+          "summary": "自动恢复版一手信号，发布于 10/14 05:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2110115691684925777"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Day 9/ We've rolled out optimizations to how we store state on disk for the chatgpt &…",
+          "summary": "自动恢复版一手信号，发布于 10/14 07:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2110151780478927344"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Congrats Gemini team. Never bet against Google, the company that brought us Transform…",
+          "summary": "自动恢复版一手信号，发布于 10/14 00:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2110044152482365747"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：At Box, we've been testing Gemini 4 Argon on our Box AI Complex Work eval for the pas…",
+          "summary": "自动恢复版一手信号，发布于 10/14 00:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2110046686198550539"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
