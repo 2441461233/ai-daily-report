@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-16 星期五",
+  "label": "第七十六期·自动恢复版",
+  "generatedAt": "2026-10-16T09:22:37+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Zara Zhang 公开动态：Play with it: Design inspired by: DM me if you wanna learn how to make something like…",
+          "summary": "自动恢复版一手信号，发布于 10/14 14:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2110262217493143639"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：The reports of my reset button being lost are greatly exaggerated Day 10/ Reset",
+          "summary": "自动恢复版一手信号，发布于 10/15 12:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2110595484180214059"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：Twitter: “Europe is done. No AI there” Jensen:",
+          "summary": "自动恢复版一手信号，发布于 10/15 02:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2110441018113904772"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：See you tomorrow at Back to where it all began",
+          "summary": "自动恢复版一手信号，发布于 10/15 11:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2110567790776320288"
+            }
+          ]
+        },
+        {
+          "headline": "Zara Zhang 公开动态：Made a playful website for the things on my wishlist! Your next wedding/baby/birthday…",
+          "summary": "自动恢复版一手信号，发布于 10/14 14:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2110262048819208642"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Nikunj Kothari 公开动态：Astra at 7 pm not following instructions clearly 🤝 Toddler at 7 pm not following inst…",
+          "summary": "自动恢复版一手信号，发布于 10/15 09:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2110546229549797693"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Garry Tan 公开动态：The academics think the founder who raised at $2B valuation can pay but they can’t Yo…",
+          "summary": "自动恢复版一手信号，发布于 10/14 22:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2110372513792577971"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：This is one of the most exhilarating times in technology, and this challenge was yet…",
+          "summary": "自动恢复版一手信号，发布于 10/15 07:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2110514201559228606"
+            }
+          ]
+        },
+        {
+          "headline": "Aditya Agarwal 公开动态：At @spc, we are trying to reconcile two things: 1. We have never seen technological p…",
+          "summary": "自动恢复版一手信号，发布于 10/15 01:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2110422584357478530"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
