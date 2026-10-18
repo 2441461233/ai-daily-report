@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T09:20:04+08:00",
-  "count": 86,
+  "generatedAt": "2026-10-18T09:04:09+08:00",
+  "count": 87,
   "reports": [
     {
       "date": "2026-07-28",
@@ -18918,6 +18918,159 @@
       "seq": 1,
       "slug": "2026-10-17--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-10-18",
+      "generatedAt": "2026-10-18T09:04:09+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：Your data belongs to you! We’ll deploy Replit to your cloud and data never leaves hom…",
+              "summary": "自动恢复版一手信号，发布于 10/17 09:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2111267314012496121"
+                }
+              ]
+            },
+            {
+              "text": "Ryo Lu 公开动态：feelings light piercing through the blinds birdsongs by the window coffee grounds, bl…",
+              "summary": "自动恢复版一手信号，发布于 10/17 12:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2111312957439086777"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：Wow the new roadster looks quite amazing, good job @elonmusk",
+              "summary": "自动恢复版一手信号，发布于 10/17 00:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2111131677351432197"
+                }
+              ]
+            },
+            {
+              "text": "Sam Altman 公开动态：The back of the Navier-Stokes milestone shirt is the last line of the chain-of-though…",
+              "summary": "自动恢复版一手信号，发布于 10/17 00:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2111139227761266699"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Don't sleep on Claude Slides. This is how I make slide decks now -- no more googling…",
+              "summary": "自动恢复版一手信号，发布于 10/17 02:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2111158659971699136"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：A cardiology fellow built a 3D tool to help trainees learn to read coronary angiogram…",
+              "summary": "自动恢复版一手信号，发布于 10/17 03:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2111177843413807120"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Rebuilt the Roadster demo in a playable, highly accurate simulation that retains a lo…",
+              "summary": "自动恢复版一手信号，发布于 10/17 12:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2111313462987231519"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：I could not imagine being productive without Claude Code Review. It runs on all of my…",
+              "summary": "自动恢复版一手信号，发布于 10/17 02:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2111158313463525518"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：What is ChatGPT Space, that is the question. Endearingly awkward at times because it'…",
+              "summary": "自动恢复版一手信号，发布于 10/17 08:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2111249534072529256"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Also we just added slides support yesterday, try it out. Currently available in Pro…",
+              "summary": "自动恢复版一手信号，发布于 10/17 08:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2111249810502353152"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第七十八期·自动恢复版",
+      "issue": 87,
+      "seq": 1,
+      "slug": "2026-10-18--1",
+      "weekday": "周日"
     }
   ]
 }
