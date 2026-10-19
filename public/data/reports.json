@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-18T09:04:09+08:00",
-  "count": 87,
+  "generatedAt": "2026-10-19T09:17:53+08:00",
+  "count": 88,
   "reports": [
     {
       "date": "2026-07-28",
@@ -19071,6 +19071,123 @@
       "seq": 1,
       "slug": "2026-10-18--1",
       "weekday": "周日"
+    },
+    {
+      "date": "2026-10-19",
+      "generatedAt": "2026-10-19T09:17:53+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：Have to give credit to @amorriscode and team - the Claude Code app is much faster now…",
+              "summary": "自动恢复版一手信号，发布于 10/18 00:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2111496600522805624"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Nikunj Kothari 公开动态：introducing the modern venture capital stack (2026): - pre-pre-seed - pre-seed - post…",
+              "summary": "自动恢复版一手信号，发布于 10/18 04:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2111558586421920134"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：My work dot \"Burger\" coordinated with my personal dot \"Dorito\" over email at my perso…",
+              "summary": "自动恢复版一手信号，发布于 10/18 00:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2111495392559067199"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：The biggest misread of anyone predicting the end of software engineering was imaginin…",
+              "summary": "自动恢复版一手信号，发布于 10/18 02:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2111525362446520466"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：To clarify: Replit remains model agnostic. Our users can choose Anthropic models as w…",
+              "summary": "自动恢复版一手信号，发布于 10/18 00:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2111494912562888939"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：“What matters is the end product, whether it's a game or an engine”. Well said!",
+              "summary": "自动恢复版一手信号，发布于 10/18 10:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2111643672274165938"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Tim is so right. Hope the devs building StarCraft 3 sees this tweet and embrace AI to…",
+              "summary": "自动恢复版一手信号，发布于 10/18 11:38；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2111663267995361287"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第七十九期·自动恢复版",
+      "issue": 88,
+      "seq": 1,
+      "slug": "2026-10-19--1",
+      "weekday": "周一"
     }
   ]
 }
