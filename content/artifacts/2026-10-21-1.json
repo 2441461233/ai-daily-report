@@ -1,0 +1,123 @@
+{
+  "date": "2026-10-21 星期三",
+  "label": "第八十一期·自动恢复版",
+  "generatedAt": "2026-10-21T09:36:46+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Nikunj Kothari 公开动态：A few weeks ago, I was ranting about multiplayer AI experiences and that's when @ekuy…",
+          "summary": "自动恢复版一手信号，发布于 10/20 00:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2112219327881761008"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Very interesting insight into why alot of Netflix original movies and TV shows are sl…",
+          "summary": "自动恢复版一手信号，发布于 10/20 04:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2112280969382437076"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：I think most people multi-tasking with agents could benefit from slowing down most of…",
+          "summary": "自动恢复版一手信号，发布于 10/20 00:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2112219173288120531"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：We open sourced a *really fast* HTML artifact builder. It's powered by libfx, making…",
+          "summary": "自动恢复版一手信号，发布于 10/20 02:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2112247046082363821"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Day 15/ Nevermind, we're still cooking... and reset. Enjoy.",
+          "summary": "自动恢复版一手信号，发布于 10/20 14:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2112432076767289678"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：Multiplayer agents as group chat seems quite inevitable and Wabi's built it",
+          "summary": "自动恢复版一手信号，发布于 10/20 04:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2112278352514162834"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：The big bitter lesson question in the applied AI layer is that as models get better a…",
+          "summary": "自动恢复版一手信号，发布于 10/20 12:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2112404676436222170"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：so proud of Quinten + Ajay and team! they've been pushing the boundaries of creativit…",
+          "summary": "自动恢复版一手信号，发布于 10/20 01:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2112230653924192274"
+            }
+          ]
+        },
+        {
+          "headline": "Aditya Agarwal 公开动态：Early @PalantirTech. Cofounder of @anduriltech. GP at @foundersfund. Last time @traes…",
+          "summary": "自动恢复版一手信号，发布于 10/20 04:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2112276231731466420"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
