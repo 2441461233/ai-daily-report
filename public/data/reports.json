@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-22T09:32:39+08:00",
-  "count": 91,
+  "generatedAt": "2026-10-23T09:32:34+08:00",
+  "count": 92,
   "reports": [
     {
       "date": "2026-07-28",
@@ -19625,6 +19625,171 @@
       "seq": 1,
       "slug": "2026-10-22--1",
       "weekday": "周四"
+    },
+    {
+      "date": "2026-10-23",
+      "generatedAt": "2026-10-23T09:32:34+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Claude 公开动态：We designed Claude Duet around Claude Opus 5.5, which gives it the judgment to decide…",
+              "summary": "自动恢复版一手信号，发布于 10/22 03:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2112984666437546104"
+                }
+              ]
+            },
+            {
+              "text": "Dan Shipper 公开动态：BREAKING: @AnthropicAI just launched Duet, its always-on personal agent. It’s the fir…",
+              "summary": "自动恢复版一手信号，发布于 10/22 04:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2112997559463506059"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Peter Steinberger 公开动态：That PHP vulnerability that’s gonna cause havoc this week was found with… GPT‑5.6 Sol.",
+              "summary": "自动恢复版一手信号，发布于 10/21 22:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2112913060709228764"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Fully included in the Pro plan, doesn't draw on your weekly usage.",
+              "summary": "自动恢复版一手信号，发布于 10/22 06:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2113029854417600834"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Vercel has proactively rolled out Firewall-level mitigations for today's Node.js RCE…",
+              "summary": "自动恢复版一手信号，发布于 10/22 07:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2113050053724221732"
+                }
+              ]
+            },
+            {
+              "text": "Cat Wu 公开动态：We heard your feedback that you want Claude to proactively take more off your plate…",
+              "summary": "自动恢复版一手信号，发布于 10/22 03:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Cat Wu",
+                  "url": "https://x.com/_catwu/status/2112988751576330487"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Claude 公开动态：Claude Duet is an early research preview, available through a waitlist on Pro and Max…",
+              "summary": "自动恢复版一手信号，发布于 10/22 03:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2112984669943968099"
+                }
+              ]
+            },
+            {
+              "text": "Claude 公开动态：Claude Duet draws on years of our safety and security work on agents. It never direct…",
+              "summary": "自动恢复版一手信号，发布于 10/22 03:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2112984667758510197"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Garry Tan 公开动态：Gabriel Zucman is currently employed by the University of California at Berkeley, a p…",
+              "summary": "自动恢复版一手信号，发布于 10/22 13:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2113143993026617832"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：In an era of tokens, APIs and agents, the world is shifting towards continuous financ…",
+              "summary": "自动恢复版一手信号，发布于 10/21 23:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2112927524321726921"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Gabriel Zucman is an economic adviser to the union sponsoring California’s Prop. 40…",
+              "summary": "自动恢复版一手信号，发布于 10/22 13:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2113144583429521578"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第八十三期·自动恢复版",
+      "issue": 92,
+      "seq": 1,
+      "slug": "2026-10-23--1",
+      "weekday": "周五"
     }
   ]
 }
