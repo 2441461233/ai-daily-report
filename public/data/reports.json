@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-24T09:36:03+08:00",
-  "count": 93,
+  "generatedAt": "2026-10-25T09:11:39+08:00",
+  "count": 94,
   "reports": [
     {
       "date": "2026-07-28",
@@ -20045,6 +20045,159 @@
       "seq": 1,
       "slug": "2026-10-24--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-10-25",
+      "generatedAt": "2026-10-25T09:11:39+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Zara Zhang 公开动态：I'm hosting an event in the Bay Area (San Mateo) on Nov 7 (Saturday) where you can co…",
+              "summary": "自动恢复版一手信号，发布于 10/24 01:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2113676956885807406"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：The difference between having a tool and being a tool is subtle these days and it’s e…",
+              "summary": "自动恢复版一手信号，发布于 10/24 11:41；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2113838156193894447"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：also can someone at gmail make it so you can't scan for deactivated email addresses 🫩…",
+              "summary": "自动恢复版一手信号，发布于 10/24 12:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2113844560074019213"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：I’ll wait a bit before thinking about a new phone.",
+              "summary": "自动恢复版一手信号，发布于 10/24 08:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2113788999303385180"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Horseshoe theory is real The NIMBY left (nonprofit extractors) and the NIMBY right (b…",
+              "summary": "自动恢复版一手信号，发布于 10/24 01:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2113683853156192695"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Day 19/ Small updates. Calls connect much faster for dots, changing reasoning in code…",
+              "summary": "自动恢复版一手信号，发布于 10/24 07:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2113770573994299544"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：On codex cli updates. We've added reusable prompt presets, inline model and permissio…",
+              "summary": "自动恢复版一手信号，发布于 10/24 07:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2113770862860222611"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thariq 公开动态：I’ve left Anthropic after more than a year of working on Claude Code and seeing it sc…",
+              "summary": "自动恢复版一手信号，发布于 10/24 12:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2113844051938054167"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：Thrilled to welcome Jeff and the Chroma team to Replit! They’re pioneers in AI. They…",
+              "summary": "自动恢复版一手信号，发布于 10/24 04:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2113736007111827606"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Agents can play \"Ouija\" in the cloud. This class of timing attacks on shared-host VMs…",
+              "summary": "自动恢复版一手信号，发布于 10/24 06:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2113759533801877920"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第八十五期·自动恢复版",
+      "issue": 94,
+      "seq": 1,
+      "slug": "2026-10-25--1",
+      "weekday": "周日"
     }
   ]
 }
