@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-25T09:11:39+08:00",
-  "count": 94,
+  "generatedAt": "2026-10-26T09:12:27+08:00",
+  "count": 95,
   "reports": [
     {
       "date": "2026-07-28",
@@ -20198,6 +20198,171 @@
       "seq": 1,
       "slug": "2026-10-25--1",
       "weekday": "周日"
+    },
+    {
+      "date": "2026-10-26",
+      "generatedAt": "2026-10-26T09:12:27+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Ryo Lu 公开动态：struggle together i learned programming and design by trying, failing, and trying aga…",
+              "summary": "自动恢复版一手信号，发布于 10/25 10:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2114187405251219954"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Of all the learning apps that my 4-year-old and I have tried, @once_reading is the on…",
+              "summary": "自动恢复版一手信号，发布于 10/25 01:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2114042708105060501"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：It is all propagated. Enjoy some mad codexing tomorrow. Fun week ahead too.",
+              "summary": "自动恢复版一手信号，发布于 10/25 14:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2114237083652882932"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：I had trouble believing this is true but shouldn’t have doubted @ArfurGrok Huge bumme…",
+              "summary": "自动恢复版一手信号，发布于 10/24 22:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2114001125636768121"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：It is so much easier to give advice to other people than to apply the same advice to…",
+              "summary": "自动恢复版一手信号，发布于 10/25 13:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2114225607022412049"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：If you are a helpful angel that would invest in an infra series A and we don’t know e…",
+              "summary": "自动恢复版一手信号，发布于 10/25 04:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2114095315271942176"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：There’ll be times where you over-guide the AI. It knows better than you and is more i…",
+              "summary": "自动恢复版一手信号，发布于 10/25 04:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2114085432749347086"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：We’ll likely have 1,000X more tokens flowing through cyber agents soon than we do tod…",
+              "summary": "自动恢复版一手信号，发布于 10/25 10:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2114187326406766604"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：I oddly love the models' engineering vernacular: gate, evidence, culprit, durable, pr…",
+              "summary": "自动恢复版一手信号，发布于 10/25 09:19；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2114164830403989880"
+                }
+              ]
+            },
+            {
+              "text": "Swyx 公开动态：we are hiring writers, reviewers and reporters for the new @latentspacepod editorial…",
+              "summary": "自动恢复版一手信号，发布于 10/25 08:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Swyx",
+                  "url": "https://x.com/swyx/status/2114145315196711194"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：This describes much more eloquently what I meant what evolving from context -&gt; har…",
+              "summary": "自动恢复版一手信号，发布于 10/24 22:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2113994081345126486"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第八十六期·自动恢复版",
+      "issue": 95,
+      "seq": 1,
+      "slug": "2026-10-26--1",
+      "weekday": "周一"
     }
   ]
 }
