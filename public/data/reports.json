@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-26T09:12:27+08:00",
-  "count": 95,
+  "generatedAt": "2026-10-27T09:40:18+08:00",
+  "count": 96,
   "reports": [
     {
       "date": "2026-07-28",
@@ -20363,6 +20363,118 @@
       "seq": 1,
       "slug": "2026-10-26--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-10-27",
+      "generatedAt": "2026-10-27T09:40:18+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Peter Yang 公开动态：Here’s how to use Claude to copy any video shorts style in a few minutes. From @jake1…",
+              "summary": "自动恢复版一手信号，发布于 10/26 08:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2114507378532229214"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：Great interview. Most people overestimate the importance of one huge launch and under…",
+              "summary": "自动恢复版一手信号，发布于 10/25 15:19；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2114255477907570865"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Day 21/ Wonder what happens the remaining seven days. But today is a reset.",
+              "summary": "自动恢复版一手信号，发布于 10/26 13:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2114588174249071102"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Reminder you can customize the appearance of chatgpt on web and make it soothing",
+              "summary": "自动恢复版一手信号，发布于 10/26 13:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2114595002210783279"
+                }
+              ]
+            },
+            {
+              "text": "Nan Yu 公开动态：By the time it shows up in the data or UXR interviews it’s too late. The damage has b…",
+              "summary": "自动恢复版一手信号，发布于 10/26 02:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nan Yu",
+                  "url": "https://x.com/thenanyu/status/2114427877240488442"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：Rare footage of how VCs turned their 2021 bets in metaverse, gaming and crypto mining…",
+              "summary": "自动恢复版一手信号，发布于 10/26 08:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2114507945585328606"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：Good assessment of the on the ground reality for security in most large enterprises r…",
+              "summary": "自动恢复版一手信号，发布于 10/26 00:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2114391265655816315"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第八十七期·自动恢复版",
+      "issue": 96,
+      "seq": 1,
+      "slug": "2026-10-27--1",
+      "weekday": "周二"
     }
   ]
 }
