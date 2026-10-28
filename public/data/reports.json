@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-27T09:40:18+08:00",
-  "count": 96,
+  "generatedAt": "2026-10-28T09:47:38+08:00",
+  "count": 97,
   "reports": [
     {
       "date": "2026-07-28",
@@ -20475,6 +20475,171 @@
       "seq": 1,
       "slug": "2026-10-27--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-10-28",
+      "generatedAt": "2026-10-28T09:47:38+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Matt Turck 公开动态：Particularly evil of Anthropic to file their S-1 on a Monday morning when all VCs are…",
+              "summary": "自动恢复版一手信号，发布于 10/27 00:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2114755282181955616"
+                }
+              ]
+            },
+            {
+              "text": "Josh Woodward 公开动态：🇺🇸 For a deployed service member, missing family moments adds up. Baby’s first step…",
+              "summary": "自动恢复版一手信号，发布于 10/27 06:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Josh Woodward",
+                  "url": "https://x.com/joshwoodward/status/2114840668296409568"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：6.1 Terra is here! It is good at a lot of things, but we are especially excited for t…",
+              "summary": "自动恢复版一手信号，发布于 10/27 04:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2114818620782248024"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：going to be sharing my WoW forever shaman build at the AIE Code closing keynote",
+              "summary": "自动恢复版一手信号，发布于 10/27 03:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2114796261362835842"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：OpenAI asked three scientific communities how to release its discoveries and got thre…",
+              "summary": "自动恢复版一手信号，发布于 10/27 09:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2114890745471545419"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：I spent some time on the weekend to test bun's AOT compiler and results are nothing s…",
+              "summary": "自动恢复版一手信号，发布于 10/27 08:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2114879798434758905"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Day 22/ Terra is back! Our first model that is significantly better at writing, perso…",
+              "summary": "自动恢复版一手信号，发布于 10/27 03:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2114800277677092936"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：Software ate the world, now it's learning to run it.",
+              "summary": "自动恢复版一手信号，发布于 10/27 01:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2114769129282601053"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Claude 公开动态：More than 25,000 nonprofits now use Claude. Most are small, local teams. We’re expand…",
+              "summary": "自动恢复版一手信号，发布于 10/27 02:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2114780227465338985"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：I built 𝚌𝚙𝚞-𝚌𝚑𝚊𝚝, a reproduction of @openai's findings of covert communication using…",
+              "summary": "自动恢复版一手信号，发布于 10/27 01:27；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2114770919436808572"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：For centuries, the architecture of the firm has barely changed: hierarchies of people…",
+              "summary": "自动恢复版一手信号，发布于 10/27 00:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2114760898225299721"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第八十八期·自动恢复版",
+      "issue": 97,
+      "seq": 1,
+      "slug": "2026-10-28--1",
+      "weekday": "周三"
     }
   ]
 }
