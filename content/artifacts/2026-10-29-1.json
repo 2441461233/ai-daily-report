@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-29 星期四",
+  "label": "第八十九期·自动恢复版",
+  "generatedAt": "2026-10-29T09:57:21+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Amjad Masad 公开动态：Designers’ contribution to the codebase.",
+          "summary": "自动恢复版一手信号，发布于 10/28 02:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2115150680977715419"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：video creation and game making are going to become widely distributed foundations of…",
+          "summary": "自动恢复版一手信号，发布于 10/27 22:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2115093098816745910"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：experimenting with a lil personal project: an AI-native macOS dock with custom modes…",
+          "summary": "自动恢复版一手信号，发布于 10/28 01:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2115135857669881939"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：feels like there needs to be a new way to distribute opensource software such that pe…",
+          "summary": "自动恢复版一手信号，发布于 10/28 05:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2115188992861970693"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：this is the kind of HCI work I've been wanting to do for a while, but messing with OS…",
+          "summary": "自动恢复版一手信号，发布于 10/28 01:37；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2115135859075015137"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：And it's done. See you tomorrow for some good news.",
+          "summary": "自动恢复版一手信号，发布于 10/28 14:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2115330127886463244"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Swyx 公开动态：at spacex ipo everyone was posting their cursor bag fumble. kid stuff. my turn. i est…",
+          "summary": "自动恢复版一手信号，发布于 10/27 22:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Swyx（单一来源）",
+              "url": "https://x.com/swyx/status/2115089887959359988"
+            }
+          ]
+        },
+        {
+          "headline": "Amjad Masad 公开动态：If I’m investing in frontier AI I would underwrite it mostly on new discovery and its…",
+          "summary": "自动恢复版一手信号，发布于 10/28 06:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2115207856496480261"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：This is correct. The vast majority of enterprise workflows have not actually had agen…",
+          "summary": "自动恢复版一手信号，发布于 10/28 12:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2115305369799110905"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：Usual startup advice: too many co-founders is bad!!! Too much dilution! Founder frict…",
+          "summary": "自动恢复版一手信号，发布于 10/28 01:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2115132327131328806"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：VCs love talking about the number of cofounders and how sometimes there’s too many…",
+          "summary": "自动恢复版一手信号，发布于 10/28 03:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2115157188704612735"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
