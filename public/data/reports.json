@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-29T09:57:21+08:00",
-  "count": 98,
+  "generatedAt": "2026-10-30T10:10:13+08:00",
+  "count": 99,
   "reports": [
     {
       "date": "2026-07-28",
@@ -21177,6 +21177,171 @@
       "seq": 1,
       "slug": "2026-10-29--1",
       "weekday": "周四"
+    },
+    {
+      "date": "2026-10-30",
+      "generatedAt": "2026-10-30T10:10:13+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Day 24/ Text your dot just like anyone else. Makes it super easy to share/forward thi…",
+              "summary": "自动恢复版一手信号，发布于 10/29 09:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2115622002581188681"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：I think the same is true of creative fields, like I see artists really worrying about…",
+              "summary": "自动恢复版一手信号，发布于 10/29 11:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2115641110710419752"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thariq 公开动态：very weird thing happening rn technical people are sad, they think their skills are n…",
+              "summary": "自动恢复版一手信号，发布于 10/29 04:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2115544056038350960"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：courage in shorter supply than genius",
+              "summary": "自动恢复版一手信号，发布于 10/29 01:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2115493334324310463"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Pretty wild that this site got 3M views.",
+              "summary": "自动恢复版一手信号，发布于 10/28 23:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2115473170279080149"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Utah gave Claude Code to 34 developers across 10 state agencies. 80% had a working en…",
+              "summary": "自动恢复版一手信号，发布于 10/29 01:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2115491259381072269"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Josh Woodward 公开动态：2 weeks ago: Gemini 4 Argon Today: Gemini 4 Carbon The frontier is fast, and the inte…",
+              "summary": "自动恢复版一手信号，发布于 10/29 01:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Josh Woodward",
+                  "url": "https://x.com/joshwoodward/status/2115495943948902517"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Particle will be on the frontier for smartest model at lowest dollar per unit of inte…",
+              "summary": "自动恢复版一手信号，发布于 10/29 02:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2115517748860375286"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Claude 公开动态：New in Claude for Legal: a gallery of ready-made artifacts for contract review, regul…",
+              "summary": "自动恢复版一手信号，发布于 10/28 23:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2115467192276025500"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Team is working on this but it's not rolling out just yet, sorry for any confusion. P…",
+              "summary": "自动恢复版一手信号，发布于 10/29 07:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2115588390414581916"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：Agents are going to consume 1,000X more tokens than we consume today. Because they’re…",
+              "summary": "自动恢复版一手信号，发布于 10/29 02:49；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2115516370695987435"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第九十期·自动恢复版",
+      "issue": 99,
+      "seq": 1,
+      "slug": "2026-10-30--1",
+      "weekday": "周五"
     }
   ]
 }
