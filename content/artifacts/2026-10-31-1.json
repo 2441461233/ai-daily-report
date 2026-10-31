@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-31 星期六",
+  "label": "第九十一期·自动恢复版",
+  "generatedAt": "2026-10-31T09:52:19+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Claude 公开动态：On iPhone, voice mode now works with Apple CarPlay. Ask Claude something on the drive…",
+          "summary": "自动恢复版一手信号，发布于 10/30 01:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2115859388191912193"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：This great conversation with @nathanbenaich is also available on Spotify, Apple Podca…",
+          "summary": "自动恢复版一手信号，发布于 10/30 01:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2115852319942205489"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：There’s 100% a kind of mania you can get into with coding agents, where it feels like…",
+          "summary": "自动恢复版一手信号，发布于 10/30 06:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2115937378674372783"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Send your kind feedback to this person",
+          "summary": "自动恢复版一手信号，发布于 10/30 03:35；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2115890336107233347"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Coming soon on iPhone and iPad: pull down to search. Find a past chat or project, jum…",
+          "summary": "自动恢复版一手信号，发布于 10/30 01:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2115859390075113836"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：The future of software engineering is agents talking to other agents. Even across dif…",
+          "summary": "自动恢复版一手信号，发布于 10/30 02:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2115874115118834153"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Graduating from The Reset Company to The Token Company.",
+          "summary": "自动恢复版一手信号，发布于 10/30 01:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2115851621137784832"
+            }
+          ]
+        },
+        {
+          "headline": "Josh Woodward 公开动态：Notebook has just unlocked over 700 textbooks from the world’s leading publishers. Ev…",
+          "summary": "自动恢复版一手信号，发布于 10/30 07:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Josh Woodward（单一来源）",
+              "url": "https://x.com/joshwoodward/status/2115953461108023400"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：Day 25/ We are doubling all usage limits for all Pro 100/200/500 tiers and Business P…",
+          "summary": "自动恢复版一手信号，发布于 10/30 00:56；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2115850175868727621"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：It’s almost incomprehensible how wide the distance is between someone who’s working a…",
+          "summary": "自动恢复版一手信号，发布于 10/30 12:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2116029912243184006"
+            }
+          ]
+        },
+        {
+          "headline": "Google Labs 公开动态：It's been incredible watching you build, automate, and ship faster with @julesagent…",
+          "summary": "自动恢复版一手信号，发布于 10/30 03:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Google Labs（单一来源）",
+              "url": "https://x.com/GoogleLabs/status/2115884247504625669"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
