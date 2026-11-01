@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-31T09:52:19+08:00",
-  "count": 100,
+  "generatedAt": "2026-11-01T09:40:52+08:00",
+  "count": 101,
   "reports": [
     {
       "date": "2026-07-28",
@@ -21507,6 +21507,171 @@
       "seq": 1,
       "slug": "2026-10-31--1",
       "weekday": "周六"
+    },
+    {
+      "date": "2026-11-01",
+      "generatedAt": "2026-11-01T09:40:52+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Zara Zhang 公开动态：Video essay: how to create tasteful things with AI without being a designer",
+              "summary": "自动恢复版一手信号，发布于 10/31 05:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2116281211962454056"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：Video editing was done with just 1 prompt (a very long one) by a coding agent",
+              "summary": "自动恢复版一手信号，发布于 10/31 05:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2116283023415287932"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Claude 公开动态：We’re renaming our Max plans: Max 5x → Max Max 20x → Ultra Max is still $100/month, a…",
+              "summary": "自动恢复版一手信号，发布于 10/31 01:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2116220869479428500"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：We're removing the 5-hour limit for verified Ultra accounts.",
+              "summary": "自动恢复版一手信号，发布于 10/31 01:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2116222842413142111"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：Another reason why you wanna use your own harness and not one where companies change…",
+              "summary": "自动恢复版一手信号，发布于 10/30 21:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2116153238563242385"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Day 26/ You can now easily switch between multiple accounts on mobile, and coming soo…",
+              "summary": "自动恢复版一手信号，发布于 10/31 13:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2116405414921384099"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Peter Steinberger 公开动态：This is smart. Wild that this wasn’t the default. Unpredictable inference quality was…",
+              "summary": "自动恢复版一手信号，发布于 10/30 22:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2116183103530217488"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：GBrain Cloud is the fastest way to get GBrain going across all your agents. Every har…",
+              "summary": "自动恢复版一手信号，发布于 10/31 06:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2116303457774899251"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Peter Steinberger 公开动态：Bullish on Andy Yen and Proton. He gets it. The culture war, or rather the loss of id…",
+              "summary": "自动恢复版一手信号，发布于 10/30 18:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2116121832919122164"
+                }
+              ]
+            },
+            {
+              "text": "Matt Turck 公开动态：Not to spoil the French jokes, but: * This is NOT law * This has zero chance of becom…",
+              "summary": "自动恢复版一手信号，发布于 10/31 09:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2116335155535052951"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：We wrote a whitepaper on how to properly sandbox agents to maximize productivity and…",
+              "summary": "自动恢复版一手信号，发布于 10/30 22:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2116183233784394039"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第九十二期·自动恢复版",
+      "issue": 101,
+      "seq": 1,
+      "slug": "2026-11-01--1",
+      "weekday": "周日"
     }
   ]
 }
