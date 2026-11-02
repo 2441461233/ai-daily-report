@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-02 星期一",
+  "label": "第九十三期·自动恢复版",
+  "generatedAt": "2026-11-02T09:52:19+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Swyx 公开动态：join me all the way on the light side guys low effort + critique loop &gt; superultra…",
+          "summary": "自动恢复版一手信号，发布于 11/01 05:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Swyx（单一来源）",
+              "url": "https://x.com/swyx/status/2116642586387730593"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：> Why does the worst rise to the top in a society rife with broken politics? “When th…",
+          "summary": "自动恢复版一手信号，发布于 11/01 05:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2116640529232609515"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Halloween is honestly the best holiday and should be held every quarter",
+          "summary": "自动恢复版一手信号，发布于 11/01 11:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2116732887265656978"
+            }
+          ]
+        },
+        {
+          "headline": "Matt Turck 公开动态：A classic that never goes out of style 🎃👻",
+          "summary": "自动恢复版一手信号，发布于 11/01 06:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2116653171741470990"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Peter Yang 公开动态：Don't particularly care about the trick or treat part, just being able to dress up as…",
+          "summary": "自动恢复版一手信号，发布于 11/01 11:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2116733034926100841"
+            }
+          ]
+        },
+        {
+          "headline": "Nikunj Kothari 公开动态：what do you mean you dressed up as cybersecurity awareness month for halloween i hate…",
+          "summary": "自动恢复版一手信号，发布于 10/31 23:36；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2116554844207198501"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：This is one of the better litmus tests for whether you’re pushing your use of AI enou…",
+          "summary": "自动恢复版一手信号，发布于 11/01 06:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2116652002830963114"
+            }
+          ]
+        },
+        {
+          "headline": "Swyx 公开动态：btw @karpathy uses medium on opus 5.5 on his latest project (Hackertube launched toda…",
+          "summary": "自动恢复版一手信号，发布于 11/01 14:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Swyx（单一来源）",
+              "url": "https://x.com/swyx/status/2116773135668404286"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
