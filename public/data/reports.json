@@ -21788,6 +21788,120 @@
               ]
             }
           ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Gemini 4 Carbon (medium) 升至第 3 名",
+              "summary": "Gemini 4 Carbon (medium) 新进入 Artificial Analysis Intelligence Index 前十，当前第 3 名，得分 58。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Opus 5.5 (high with fallback)",
+              "summary": "Claude Opus 5.5 (high with fallback) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5.5 (xhigh with fallback) 第 3 → 4 名",
+              "summary": "Claude Opus 5.5 (xhigh with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 3 名变为第 4 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (max) 第 4 → 5 名",
+              "summary": "GPT-6 Astra (max) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 4 名变为第 5 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (xhigh) 第 5 → 6 名",
+              "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 5 名变为第 6 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (high) 第 6 → 7 名",
+              "summary": "GPT-6 Astra (high) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 6 名变为第 7 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6.1 Sol (max) 第 7 → 8 名",
+              "summary": "GPT-6.1 Sol (max) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 7 名变为第 8 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Sonnet 5.5 (max with fallback) 第 8 → 9 名",
+              "summary": "Claude Sonnet 5.5 (max with fallback) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 8 名变为第 9 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6.1 Sol (xhigh) 第 9 → 10 名",
+              "summary": "GPT-6.1 Sol (xhigh) 在 Artificial Analysis Intelligence Index 中下降 1 位，由第 9 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 9 项变化；当前榜首为 Gemini 4 Carbon (high)（59 分）。"
         }
       ],
       "rich": true,
