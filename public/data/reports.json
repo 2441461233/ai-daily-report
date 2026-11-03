@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-02T09:52:19+08:00",
-  "count": 102,
+  "generatedAt": "2026-11-03T11:44:23+08:00",
+  "count": 103,
   "reports": [
     {
       "date": "2026-07-28",
@@ -21910,6 +21910,189 @@
       "seq": 1,
       "slug": "2026-11-02--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-11-03",
+      "generatedAt": "2026-11-03T11:44:23+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Andrej Karpathy 公开动态：Weekend hack: HackerTube. I was annoyed with YouTube's recommendations so I had Claud…",
+              "summary": "自动恢复版一手信号，发布于 11/02 02:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Andrej Karpathy",
+                  "url": "https://x.com/karpathy/status/2116957135661945283"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：I wish I could just use one AI tool but right now there are clear winners in each cat…",
+              "summary": "自动恢复版一手信号，发布于 11/02 01:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2116946320674152810"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：If you’re enjoying a subsidized AI subscription get ready to get rug pulled.",
+              "summary": "自动恢复版一手信号，发布于 11/02 05:48；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2117010858845089805"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：F1 is basically the perfect competition for our times. The celebration of extraordina…",
+              "summary": "自动恢复版一手信号，发布于 11/02 07:43；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2117039740096847920"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：My dog just patched that bug we couldn’t find for two weeks. Clever dog",
+              "summary": "自动恢复版一手信号，发布于 11/02 00:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2116936205623611781"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Working with Gemini on is hilarious 😂😂 Other than being SUPER EXCITED!, I've been tes…",
+              "summary": "自动恢复版一手信号，发布于 11/02 04:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2116988333096370443"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Own your intelligence. Anyone that opposes this has something to sell you (perhaps yo…",
+              "summary": "自动恢复版一手信号，发布于 11/02 05:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2117000819623243925"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：adding a new character: a taekwondo master that fights with fire I also updated the a…",
+              "summary": "自动恢复版一手信号，发布于 11/02 03:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2116976789046350040"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：Increasingly this will be the new job description for a lot of roles, not just coding…",
+              "summary": "自动恢复版一手信号，发布于 11/02 14:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2117134917847093491"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：\"It really makes you question, why do you want a person in your product? Is your prod…",
+              "summary": "自动恢复版一手信号，发布于 11/02 04:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2116987415319740756"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Gemini 4 Carbon (low) 升至第 10 名",
+              "summary": "Gemini 4 Carbon (low) 新进入 Artificial Analysis Intelligence Index 前十，当前第 10 名，得分 54。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-6.1 Sol (xhigh)",
+              "summary": "GPT-6.1 Sol (xhigh) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 52。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 2 项变化；当前榜首为 Gemini 4 Carbon (high)（59 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第九十四期·自动恢复版",
+      "issue": 103,
+      "seq": 1,
+      "slug": "2026-11-03--1",
+      "weekday": "周二"
     }
   ]
 }
