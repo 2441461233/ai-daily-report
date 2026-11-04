@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "sourceUrl": "https://artificialanalysis.ai/leaderboards/models/",
   "metric": "Artificial Analysis Intelligence Index",
-  "methodologyVersion": "5.0",
+  "methodologyVersion": "5.0.1",
   "limit": 10,
   "models": [
     {
@@ -10,7 +10,7 @@
       "slug": "gemini-4-carbon",
       "name": "Gemini 4 Carbon (high)",
       "creator": "Google",
-      "score": 59,
+      "score": 60,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/gemini-4-carbon"
     },
@@ -19,7 +19,7 @@
       "slug": "claude-opus-5-5",
       "name": "Claude Opus 5.5 (max with fallback)",
       "creator": "Anthropic",
-      "score": 58,
+      "score": 59,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/claude-opus-5-5"
     },
@@ -82,7 +82,7 @@
       "slug": "claude-sonnet-5-5",
       "name": "Claude Sonnet 5.5 (max with fallback)",
       "creator": "Anthropic",
-      "score": 54,
+      "score": 55,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5"
     },

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T11:44:23+08:00",
-  "count": 103,
+  "generatedAt": "2026-11-04T10:45:47+08:00",
+  "count": 104,
   "reports": [
     {
       "date": "2026-07-28",
@@ -22093,6 +22093,196 @@
       "seq": 1,
       "slug": "2026-11-03--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-11-04",
+      "generatedAt": "2026-11-04T10:45:47+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：This is widespread in finance. The ban hammer is coming down.",
+              "summary": "自动恢复版一手信号，发布于 11/03 12:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2117481616943820843"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Repeal CEQA, the primary NIMBY tool to prevent building anything Hospitals, high spee…",
+              "summary": "自动恢复版一手信号，发布于 11/02 23:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2117274654981452000"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Capy Captains increased my issue fixing throughput by about 5X overnight Being able t…",
+              "summary": "自动恢复版一手信号，发布于 11/03 08:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2117410016730964358"
+                }
+              ]
+            },
+            {
+              "text": "Nan Yu 公开动态：Except for rare circumstances, group chat is a terrible multiplayer AI experience. Li…",
+              "summary": "自动恢复版一手信号，发布于 11/03 09:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nan Yu",
+                  "url": "https://x.com/thenanyu/status/2117432599559716940"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thariq 公开动态：one week in my takeaway is that you don't need unlimited tokens to do great work, the…",
+              "summary": "自动恢复版一手信号，发布于 11/03 01:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2117305792923889731"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Your dot will choose the best model for the task, drawing on different models for dif…",
+              "summary": "自动恢复版一手信号，发布于 11/02 23:51；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2117283355427495983"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：We know some Git-fu. Excited the team is finally able to talk about it a bit. Massive…",
+              "summary": "自动恢复版一手信号，发布于 11/03 08:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2117412956950638872"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：Stateless sandboxes are the wrong benchmark. Agents are only useful if they have thei…",
+              "summary": "自动恢复版一手信号，发布于 11/03 03:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2117338179535810957"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：If anyone is guessing, the pipeline of a startup (or ceo) vague posting revenue numbe…",
+              "summary": "自动恢复版一手信号，发布于 11/03 05:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2117362283223687621"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "评测方法更新：Intelligence Index v5.0 → v5.0.1",
+              "summary": "Artificial Analysis Intelligence Index 的公开方法版本由 v5.0 更新为 v5.0.1；跨版本分数和名次需结合方法调整解读。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking"
+                }
+              ]
+            },
+            {
+              "text": "分数变化：Gemini 4 Carbon (high) 59 → 60",
+              "summary": "Gemini 4 Carbon (high) 当前位列第 1，Intelligence Index 得分变化 +1，由 59 变为 60。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "分数变化：Claude Opus 5.5 (max with fallback) 58 → 59",
+              "summary": "Claude Opus 5.5 (max with fallback) 当前位列第 2，Intelligence Index 得分变化 +1，由 58 变为 59。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "分数变化：Claude Sonnet 5.5 (max with fallback) 54 → 55",
+              "summary": "Claude Sonnet 5.5 (max with fallback) 当前位列第 9，Intelligence Index 得分变化 +1，由 54 变为 55。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 4 项变化；当前榜首为 Gemini 4 Carbon (high)（60 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第九十五期·自动恢复版",
+      "issue": 104,
+      "seq": 1,
+      "slug": "2026-11-04--1",
+      "weekday": "周三"
     }
   ]
 }
