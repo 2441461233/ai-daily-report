@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-04T10:45:47+08:00",
-  "count": 104,
+  "generatedAt": "2026-11-05T10:51:41+08:00",
+  "count": 105,
   "reports": [
     {
       "date": "2026-07-28",
@@ -22283,6 +22283,213 @@
       "seq": 1,
       "slug": "2026-11-04--1",
       "weekday": "周三"
+    },
+    {
+      "date": "2026-11-05",
+      "generatedAt": "2026-11-05T10:51:41+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Swyx 公开动态：As part of the most insane AIE lineup to end 2026, we're also excited to announce our…",
+              "summary": "自动恢复版一手信号，发布于 11/04 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Swyx",
+                  "url": "https://x.com/swyx/status/2117679157035602065"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Think about how much time we all waste waiting on hold or trying to navigate legacy p…",
+              "summary": "自动恢复版一手信号，发布于 11/04 09:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2117783921748558185"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Sam Altman 公开动态：People should always be in control of the future. OpenAI is against the notion that i…",
+              "summary": "自动恢复版一手信号，发布于 11/04 09:40；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Sam Altman",
+                  "url": "https://x.com/sama/status/2117794005165748448"
+                }
+              ]
+            },
+            {
+              "text": "Google Labs 公开动态：We've been dreaming about this for a long time... So excited to hear what our new Ind…",
+              "summary": "自动恢复版一手信号，发布于 11/04 02:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Google Labs",
+                  "url": "https://x.com/GoogleLabs/status/2117689420744991161"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：We’re deep in the chaotic phase of enterprise adoption of agents and vibe coding.",
+              "summary": "自动恢复版一手信号，发布于 11/04 07:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2117761721750475146"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：Case study in how blue states self-immolate There's national and there's local. How a…",
+              "summary": "自动恢复版一手信号，发布于 11/04 05:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2117728932183351646"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Things will change again and again and again. We’re still very early and agents today…",
+              "summary": "自动恢复版一手信号，发布于 11/04 06:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2117746467058405665"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：this is basically the bitter lesson at work the smartest models will need fewer and f…",
+              "summary": "自动恢复版一手信号，发布于 11/04 01:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2117670540148347273"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Cat Wu 公开动态：Friday was my last day at Anthropic. Two years ago, when Claude Code was a small inte…",
+              "summary": "自动恢复版一手信号，发布于 11/04 05:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Cat Wu",
+                  "url": "https://x.com/_catwu/status/2117731934340337676"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Signing in to your company's plugins one by one is annoying, so we let Claude auto-co…",
+              "summary": "自动恢复版一手信号，发布于 11/04 02:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2117693181651542387"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：I've been looking forward to this day, because Vercel has an internal security agent…",
+              "summary": "自动恢复版一手信号，发布于 11/04 05:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2117734833824948373"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "榜单信息更新：Claude Opus 5.5 (max)",
+              "summary": "Claude Opus 5.5 (max) 当前位列第 2，官方榜单元数据更新：名称“Claude Opus 5.5 (max with fallback)”→“Claude Opus 5.5 (max)”。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "榜单信息更新：Claude Opus 5.5 (xhigh)",
+              "summary": "Claude Opus 5.5 (xhigh) 当前位列第 4，官方榜单元数据更新：名称“Claude Opus 5.5 (xhigh with fallback)”→“Claude Opus 5.5 (xhigh)”。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "榜单信息更新：Claude Sonnet 5.5 (max)",
+              "summary": "Claude Sonnet 5.5 (max) 当前位列第 9，官方榜单元数据更新：名称“Claude Sonnet 5.5 (max with fallback)”→“Claude Sonnet 5.5 (max)”。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 3 项变化；当前榜首为 Gemini 4 Carbon (high)（60 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第九十六期·自动恢复版",
+      "issue": 105,
+      "seq": 1,
+      "slug": "2026-11-05--1",
+      "weekday": "周四"
     }
   ]
 }

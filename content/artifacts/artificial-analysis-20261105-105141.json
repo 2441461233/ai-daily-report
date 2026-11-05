@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-05",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-11-05",
+  "generatedAt": "2026-11-05T10:51:41+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 3 项变化；当前榜首为 Gemini 4 Carbon (high)（60 分）。",
+      "items": [
+        {
+          "headline": "榜单信息更新：Claude Opus 5.5 (max)",
+          "summary": "Claude Opus 5.5 (max) 当前位列第 2，官方榜单元数据更新：名称“Claude Opus 5.5 (max with fallback)”→“Claude Opus 5.5 (max)”。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "榜单信息更新：Claude Opus 5.5 (xhigh)",
+          "summary": "Claude Opus 5.5 (xhigh) 当前位列第 4，官方榜单元数据更新：名称“Claude Opus 5.5 (xhigh with fallback)”→“Claude Opus 5.5 (xhigh)”。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "榜单信息更新：Claude Sonnet 5.5 (max)",
+          "summary": "Claude Sonnet 5.5 (max) 当前位列第 9，官方榜单元数据更新：名称“Claude Sonnet 5.5 (max with fallback)”→“Claude Sonnet 5.5 (max)”。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
