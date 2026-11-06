@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-05T10:51:41+08:00",
-  "count": 105,
+  "generatedAt": "2026-11-06T10:51:39+08:00",
+  "count": 106,
   "reports": [
     {
       "date": "2026-07-28",
@@ -22490,6 +22490,159 @@
       "seq": 1,
       "slug": "2026-11-05--1",
       "weekday": "周四"
+    },
+    {
+      "date": "2026-11-06",
+      "generatedAt": "2026-11-06T10:51:39+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Zara Zhang 公开动态：One thing I noticed: the vast majority of people who shared their personal websites i…",
+              "summary": "自动恢复版一手信号，发布于 11/04 14:39；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2117869262505427072"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：Wow can’t believe Michigan is under Shawerma law now",
+              "summary": "自动恢复版一手信号，发布于 11/04 17:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2117904733658845218"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：manifesting ⠀⠀⠀⠀ 🕯️🕯️🕯️🕯️🕯️ ⠀⠀🕯️⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀🕯️ 🕯️⠀⠀Apple lets apps⠀ 🕯️ 🕯️⠀⠀⠀build Shor…",
+              "summary": "自动恢复版一手信号，发布于 11/05 07:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2118124218839859700"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：We did it guys Connie Chan is a private citizen",
+              "summary": "自动恢复版一手信号，发布于 11/05 09:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2118154891176857608"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：We dodged a bullet on this asset seizure tax. With any luck Prop 42 will pass. Builde…",
+              "summary": "自动恢复版一手信号，发布于 11/05 03:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2118058438714650985"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：We will all be learning in coming weeks & months, that most human-made software: ▫️ W…",
+              "summary": "自动恢复版一手信号，发布于 11/05 10:22；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2118166970273292299"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：In just 24 hours 🤯 ✓ 𝟲,𝟴𝟭𝟳 vulnerabilities identified ✓ 𝟱𝟴𝟬 critical or high ✓ 𝟭,𝟰𝟭𝟭…",
+              "summary": "自动恢复版一手信号，发布于 11/05 09:23；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2118152230260092940"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Cat Wu 公开动态：Some news: I’m joining OpenAI to lead product management for Core Products! I have a…",
+              "summary": "自动恢复版一手信号，发布于 11/05 08:25；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Cat Wu",
+                  "url": "https://x.com/_catwu/status/2118137612577968402"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：We’ve assembled a world class cyber team and I’m excited for us to share more about o…",
+              "summary": "自动恢复版一手信号，发布于 11/05 09:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2118146794362405231"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：It’s so inspiring to work with people who care so much about building quality product…",
+              "summary": "自动恢复版一手信号，发布于 11/05 04:20；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2118075898830463048"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第九十七期·自动恢复版",
+      "issue": 106,
+      "seq": 1,
+      "slug": "2026-11-06--1",
+      "weekday": "周五"
     }
   ]
 }
