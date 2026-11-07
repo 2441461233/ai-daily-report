@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-07 星期六",
+  "label": "第九十八期·自动恢复版",
+  "generatedAt": "2026-11-07T10:24:01+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Like the rest of Claude, Personal Finance has no ads or sponsored recommendations. It…",
+          "summary": "自动恢复版一手信号，发布于 11/06 02:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2118403117779988744"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Formal proofs of tens of millions of lines of code are not a ridiculous thing anymore…",
+          "summary": "自动恢复版一手信号，发布于 11/06 13:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2118569441860723112"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Introducing Personal Finance in Claude, in beta in the US. Connect the accounts you c…",
+          "summary": "自动恢复版一手信号，发布于 11/06 02:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2118403114890137895"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：I can confidently say that humans were not very good at writing secure infrastructure…",
+          "summary": "自动恢复版一手信号，发布于 11/06 13:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2118569235953893573"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：one of my favorite prompts for agents like Instinct is location based reminders e.g…",
+          "summary": "自动恢复版一手信号，发布于 11/06 01:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2118399561324699655"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：SpaceXSI 🤝 Vercel Grok and Cursor can now build, deploy, and scale",
+          "summary": "自动恢复版一手信号，发布于 11/06 06:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2118464177211940997"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Garry Tan 公开动态：This is the first long horizon benchmark for PE/IB work Solving high finance is on th…",
+          "summary": "自动恢复版一手信号，发布于 11/06 10:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2118527182092071179"
+            }
+          ]
+        },
+        {
+          "headline": "Swyx 公开动态：ok guys pitchforks down pls we chatted and i learned a lot about why i had been missi…",
+          "summary": "自动恢复版一手信号，发布于 11/06 11:00；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Swyx（单一来源）",
+              "url": "https://x.com/swyx/status/2118538896434999759"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：① Get an X sub ② Build with Bot / Cursor ③ Deploy to Vercel, scales from 0 to 🌙 ④ Lau…",
+          "summary": "自动恢复版一手信号，发布于 11/06 06:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2118474519925158186"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：This week's results make me optimistic. We have an unprecedented bipartisan opportuni…",
+          "summary": "自动恢复版一手信号，发布于 11/06 12:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2118557763156733984"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
