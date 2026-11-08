@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-08 星期日",
+  "label": "第九十九期·自动恢复版",
+  "generatedAt": "2026-11-08T09:53:03+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Nikunj Kothari 公开动态：ok so here's how we get to building a 100M company in two weeks before thanksgiving…",
+          "summary": "自动恢复版一手信号，发布于 11/07 01:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nikunj Kothari（单一来源）",
+              "url": "https://x.com/nikunj/status/2118758688567792008"
+            }
+          ]
+        },
+        {
+          "headline": "Zara Zhang 公开动态：As I've said before, your personal website is the new resume LinkedIn shows a list of…",
+          "summary": "自动恢复版一手信号，发布于 11/07 13:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2118939184841052386"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：too many people building agents and not enough people using software to improve the q…",
+          "summary": "自动恢复版一手信号，发布于 11/07 08:13；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2118859267314958761"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：feels like it's really coming together",
+          "summary": "自动恢复版一手信号，发布于 11/07 03:31；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2118788283564179513"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：Quite cool what you can do with a single prompt these days 👀",
+          "summary": "自动恢复版一手信号，发布于 11/07 13:30；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2118939076791546000"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Somewhere, something incredible is waiting to be known",
+          "summary": "自动恢复版一手信号，发布于 11/07 11:58；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2118916001152803057"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Garry Tan 公开动态：Eval-driven development loops for agent skills is necessary. Every new model gets bet…",
+          "summary": "自动恢复版一手信号，发布于 11/07 12:14；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2118920030243139596"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Feels like all the apps that can use models from different labs like @conductor_build…",
+          "summary": "自动恢复版一手信号，发布于 11/07 05:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2118811231545122998"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Generative UI for conversational agents. Combining @aisdk with Chat SDK and 𝚓𝚜𝚘𝚗-𝚛𝚎𝚗𝚍…",
+          "summary": "自动恢复版一手信号，发布于 11/07 08:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2118856239719608353"
+            }
+          ]
+        },
+        {
+          "headline": "Thariq 公开动态：a pattern I’m liking: creator apps like Instagram Edits and Roblox Studio shipping wi…",
+          "summary": "自动恢复版一手信号，发布于 11/07 05:46；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2118822238262853904"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：the @every team, nov 2026 so proud of this crew!",
+          "summary": "自动恢复版一手信号，发布于 11/07 01:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2118757047026028939"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
