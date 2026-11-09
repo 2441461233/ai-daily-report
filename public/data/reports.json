@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-08T09:53:03+08:00",
-  "count": 108,
+  "generatedAt": "2026-11-09T10:01:48+08:00",
+  "count": 109,
   "reports": [
     {
       "date": "2026-07-28",
@@ -22961,6 +22961,171 @@
       "seq": 1,
       "slug": "2026-11-08--1",
       "weekday": "周日"
+    },
+    {
+      "date": "2026-11-09",
+      "generatedAt": "2026-11-09T10:01:48+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Andrej Karpathy 公开动态：Earlier this week Tristan published his top YouTube channels: Which looked excellent…",
+              "summary": "自动恢复版一手信号，发布于 11/08 01:07；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Andrej Karpathy",
+                  "url": "https://x.com/karpathy/status/2119114537442189652"
+                }
+              ]
+            },
+            {
+              "text": "Nikunj Kothari 公开动态：ok here’s how we get investors to fomo our series A and get seven term sheets.. first…",
+              "summary": "自动恢复版一手信号，发布于 11/08 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nikunj Kothari",
+                  "url": "https://x.com/nikunj/status/2119162212044742938"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：Saw some confusions, but all Pro plans have no 5-hour limits, and give the following…",
+              "summary": "自动恢复版一手信号，发布于 11/08 13:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2119296267545419987"
+                }
+              ]
+            },
+            {
+              "text": "Peter Steinberger 公开动态：The Asahi project was all about taking something closed and restricted and opening it…",
+              "summary": "自动恢复版一手信号，发布于 11/08 11:02；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Steinberger",
+                  "url": "https://x.com/steipete/status/2119264334627090514"
+                }
+              ]
+            },
+            {
+              "text": "Amjad Masad 公开动态：Really enjoyed Kazakhstan — super AI pilled government. And a great place for the Net…",
+              "summary": "自动恢复版一手信号，发布于 11/08 01:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2119126064815608270"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：We could have abundance This is going to be the defining political issue of the next…",
+              "summary": "自动恢复版一手信号，发布于 11/08 03:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2119146939514278238"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：The interesting thing about AI agents is that as a theoretical matter, their inferenc…",
+              "summary": "自动恢复版一手信号，发布于 11/07 14:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2118953909524050288"
+                }
+              ]
+            },
+            {
+              "text": "Aditya Agarwal 公开动态：If building datacenters becomes harder, it is obvious that you should be super long a…",
+              "summary": "自动恢复版一手信号，发布于 11/08 03:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aditya Agarwal",
+                  "url": "https://x.com/adityaag/status/2119157297167372646"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：This sounds extreme and I wouldn’t have believed it even a year ago, but we’re starti…",
+              "summary": "自动恢复版一手信号，发布于 11/08 00:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2119111328099168409"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：So many people speak of startup as if their fates are predestined: X idea will never…",
+              "summary": "自动恢复版一手信号，发布于 11/07 15:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2118968862557475298"
+                }
+              ]
+            },
+            {
+              "text": "Swyx 公开动态：just arrived… best swag game in the business. u guys are in for a treat next week",
+              "summary": "自动恢复版一手信号，发布于 11/08 07:29；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Swyx",
+                  "url": "https://x.com/swyx/status/2119210582654210255"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第一百期·自动恢复版",
+      "issue": 109,
+      "seq": 1,
+      "slug": "2026-11-09--1",
+      "weekday": "周一"
     }
   ]
 }
