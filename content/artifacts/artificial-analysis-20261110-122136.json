@@ -1,0 +1,168 @@
+{
+  "date": "2026-11-10",
+  "label": "Artificial Analysis 排名变化",
+  "attachTo": "2026-11-10",
+  "generatedAt": "2026-11-10T12:21:36+08:00",
+  "sections": [
+    {
+      "title": "📊 Artificial Analysis 模型排名",
+      "note": "与上一份快照相比发现 14 项变化；当前榜首为 Claude Fable 5.2 (max)（65 分）。",
+      "items": [
+        {
+          "headline": "新进 Top 10：Claude Fable 5.2 (max) 升至第 1 名",
+          "summary": "Claude Fable 5.2 (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 1 名，得分 65。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Fable 5.2 (xhigh) 升至第 2 名",
+          "summary": "Claude Fable 5.2 (xhigh) 新进入 Artificial Analysis Intelligence Index 前十，当前第 2 名，得分 62。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Fable 5.2 (high) 升至第 3 名",
+          "summary": "Claude Fable 5.2 (high) 新进入 Artificial Analysis Intelligence Index 前十，当前第 3 名，得分 62。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "新进 Top 10：Claude Fable 5.2 (medium) 升至第 9 名",
+          "summary": "Claude Fable 5.2 (medium) 新进入 Artificial Analysis Intelligence Index 前十，当前第 9 名，得分 56。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GPT-6 Astra (high)",
+          "summary": "GPT-6 Astra (high) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 7 名，得分 55。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：GPT-6.1 Sol (max)",
+          "summary": "GPT-6.1 Sol (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 8 名，得分 55。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Claude Sonnet 5.5 (max)",
+          "summary": "Claude Sonnet 5.5 (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 55。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "退出 Top 10：Gemini 4 Carbon (low)",
+          "summary": "Gemini 4 Carbon (low) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 54。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Gemini 4 Carbon (high) 第 1 → 4 名",
+          "summary": "Gemini 4 Carbon (high) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 1 名变为第 4 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Opus 5.5 (max) 第 2 → 5 名",
+          "summary": "Claude Opus 5.5 (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 2 名变为第 5 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Gemini 4 Carbon (medium) 第 3 → 6 名",
+          "summary": "Gemini 4 Carbon (medium) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 3 名变为第 6 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：Claude Opus 5.5 (xhigh) 第 4 → 7 名",
+          "summary": "Claude Opus 5.5 (xhigh) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 4 名变为第 7 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-6 Astra (max) 第 5 → 8 名",
+          "summary": "GPT-6 Astra (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 5 名变为第 8 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        },
+        {
+          "headline": "排名下降：GPT-6 Astra (xhigh) 第 6 → 10 名",
+          "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 4 位，由第 6 名变为第 10 名。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "Artificial Analysis（单一来源）",
+              "url": "https://artificialanalysis.ai/leaderboards/models/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

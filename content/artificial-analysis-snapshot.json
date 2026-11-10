@@ -7,6 +7,33 @@
   "models": [
     {
       "rank": 1,
+      "slug": "claude-fable-5-2",
+      "name": "Claude Fable 5.2 (max)",
+      "creator": "Anthropic",
+      "score": 65,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2"
+    },
+    {
+      "rank": 2,
+      "slug": "claude-fable-5-2-xhigh",
+      "name": "Claude Fable 5.2 (xhigh)",
+      "creator": "Anthropic",
+      "score": 62,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2-xhigh"
+    },
+    {
+      "rank": 3,
+      "slug": "claude-fable-5-2-high",
+      "name": "Claude Fable 5.2 (high)",
+      "creator": "Anthropic",
+      "score": 62,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2-high"
+    },
+    {
+      "rank": 4,
       "slug": "gemini-4-carbon",
       "name": "Gemini 4 Carbon (high)",
       "creator": "Google",
@@ -15,7 +42,7 @@
       "url": "https://artificialanalysis.ai/models/gemini-4-carbon"
     },
     {
-      "rank": 2,
+      "rank": 5,
       "slug": "claude-opus-5-5",
       "name": "Claude Opus 5.5 (max)",
       "creator": "Anthropic",
@@ -24,7 +51,7 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5-5"
     },
     {
-      "rank": 3,
+      "rank": 6,
       "slug": "gemini-4-carbon-medium",
       "name": "Gemini 4 Carbon (medium)",
       "creator": "Google",
@@ -33,7 +60,7 @@
       "url": "https://artificialanalysis.ai/models/gemini-4-carbon-medium"
     },
     {
-      "rank": 4,
+      "rank": 7,
       "slug": "claude-opus-5-5-xhigh",
       "name": "Claude Opus 5.5 (xhigh)",
       "creator": "Anthropic",
@@ -42,7 +69,7 @@
       "url": "https://artificialanalysis.ai/models/claude-opus-5-5-xhigh"
     },
     {
-      "rank": 5,
+      "rank": 8,
       "slug": "gpt-6-astra",
       "name": "GPT-6 Astra (max)",
       "creator": "OpenAI",
@@ -51,49 +78,22 @@
       "url": "https://artificialanalysis.ai/models/gpt-6-astra"
     },
     {
-      "rank": 6,
+      "rank": 9,
+      "slug": "claude-fable-5-2-medium",
+      "name": "Claude Fable 5.2 (medium)",
+      "creator": "Anthropic",
+      "score": 56,
+      "estimated": false,
+      "url": "https://artificialanalysis.ai/models/claude-fable-5-2-medium"
+    },
+    {
+      "rank": 10,
       "slug": "gpt-6-astra-xhigh",
       "name": "GPT-6 Astra (xhigh)",
       "creator": "OpenAI",
       "score": 55,
       "estimated": false,
       "url": "https://artificialanalysis.ai/models/gpt-6-astra-xhigh"
-    },
-    {
-      "rank": 7,
-      "slug": "gpt-6-astra-high",
-      "name": "GPT-6 Astra (high)",
-      "creator": "OpenAI",
-      "score": 55,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gpt-6-astra-high"
-    },
-    {
-      "rank": 8,
-      "slug": "gpt-6-1-sol",
-      "name": "GPT-6.1 Sol (max)",
-      "creator": "OpenAI",
-      "score": 55,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gpt-6-1-sol"
-    },
-    {
-      "rank": 9,
-      "slug": "claude-sonnet-5-5",
-      "name": "Claude Sonnet 5.5 (max)",
-      "creator": "Anthropic",
-      "score": 55,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5"
-    },
-    {
-      "rank": 10,
-      "slug": "gemini-4-carbon-low",
-      "name": "Gemini 4 Carbon (low)",
-      "creator": "Google",
-      "score": 54,
-      "estimated": false,
-      "url": "https://artificialanalysis.ai/models/gemini-4-carbon-low"
     }
   ]
 }

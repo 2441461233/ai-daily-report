@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-09T10:01:48+08:00",
-  "count": 109,
+  "generatedAt": "2026-11-10T12:21:36+08:00",
+  "count": 110,
   "reports": [
     {
       "date": "2026-07-28",
@@ -23126,6 +23126,345 @@
       "seq": 1,
       "slug": "2026-11-09--1",
       "weekday": "周一"
+    },
+    {
+      "date": "2026-11-10",
+      "generatedAt": "2026-11-10T12:21:36+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：Built a physical simulation of a record player with WebGL2 and Web Audio. It's *shock…",
+              "summary": "自动恢复版一手信号，发布于 11/09 05:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2119536313712230802"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：A good lesson in AI is that you need to check back in on the latest with every 3 to 6…",
+              "summary": "自动恢复版一手信号，发布于 11/09 02:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2119502716770902234"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Ryo Lu 公开动态：when we can do anything, do we still know what we want? the full talk from @aiDotEngi…",
+              "summary": "自动恢复版一手信号，发布于 11/09 08:24；保留原文措辞，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Ryo Lu",
+                  "url": "https://x.com/ryolu_/status/2119586846657454152"
+                }
+              ]
+            },
+            {
+              "text": "Zara Zhang 公开动态：I’ve almost stopped using the term “vibe coding” because there’s a negative connotati…",
+              "summary": "自动恢复版一手信号，发布于 11/09 08:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Zara Zhang",
+                  "url": "https://x.com/zarazhangrui/status/2119592080318341128"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：You're really going to want your own software factory",
+              "summary": "自动恢复版一手信号，发布于 11/09 10:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2119615647592395037"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：This affair is going to destroy billions in shareholder value isn’t it",
+              "summary": "自动恢复版一手信号，发布于 11/09 13:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2119657833516171384"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Matt Turck 公开动态：Lol not Elon now, after nailing the Tucker Carlson impersonation 😂Absolutely epic run…",
+              "summary": "自动恢复版一手信号，发布于 11/08 23:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Matt Turck",
+                  "url": "https://x.com/mattturck/status/2119457959625498698"
+                }
+              ]
+            },
+            {
+              "text": "Garry Tan 公开动态：My gstack-evals project took a look at this Jev Engineering article and tried to repl…",
+              "summary": "自动恢复版一手信号，发布于 11/09 10:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Garry Tan",
+                  "url": "https://x.com/garrytan/status/2119624260675350605"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Aaron Levie 公开动态：We’re moving from an era of AI where the output comes roughly at the rate that you ca…",
+              "summary": "自动恢复版一手信号，发布于 11/09 08:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2119592025440092192"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Anecdotally, I think cheating is far more common in Asia. Plenty of guys who have the…",
+              "summary": "自动恢复版一手信号，发布于 11/09 06:24；保留原文措辞，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2119556651636441416"
+                }
+              ]
+            },
+            {
+              "text": "Nan Yu 公开动态：Software got a lot easier if you know what you wanna build, and a lot harder if you d…",
+              "summary": "自动恢复版一手信号，发布于 11/09 00:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Nan Yu",
+                  "url": "https://x.com/thenanyu/status/2119462224721002560"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📊 Artificial Analysis 模型排名",
+          "items": [
+            {
+              "text": "新进 Top 10：Claude Fable 5.2 (max) 升至第 1 名",
+              "summary": "Claude Fable 5.2 (max) 新进入 Artificial Analysis Intelligence Index 前十，当前第 1 名，得分 65。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Claude Fable 5.2 (xhigh) 升至第 2 名",
+              "summary": "Claude Fable 5.2 (xhigh) 新进入 Artificial Analysis Intelligence Index 前十，当前第 2 名，得分 62。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Claude Fable 5.2 (high) 升至第 3 名",
+              "summary": "Claude Fable 5.2 (high) 新进入 Artificial Analysis Intelligence Index 前十，当前第 3 名，得分 62。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "新进 Top 10：Claude Fable 5.2 (medium) 升至第 9 名",
+              "summary": "Claude Fable 5.2 (medium) 新进入 Artificial Analysis Intelligence Index 前十，当前第 9 名，得分 56。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-6 Astra (high)",
+              "summary": "GPT-6 Astra (high) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 7 名，得分 55。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：GPT-6.1 Sol (max)",
+              "summary": "GPT-6.1 Sol (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 8 名，得分 55。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Claude Sonnet 5.5 (max)",
+              "summary": "Claude Sonnet 5.5 (max) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 9 名，得分 55。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "退出 Top 10：Gemini 4 Carbon (low)",
+              "summary": "Gemini 4 Carbon (low) 退出 Artificial Analysis Intelligence Index 前十；上一快照为第 10 名，得分 54。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Gemini 4 Carbon (high) 第 1 → 4 名",
+              "summary": "Gemini 4 Carbon (high) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 1 名变为第 4 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5.5 (max) 第 2 → 5 名",
+              "summary": "Claude Opus 5.5 (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 2 名变为第 5 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Gemini 4 Carbon (medium) 第 3 → 6 名",
+              "summary": "Gemini 4 Carbon (medium) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 3 名变为第 6 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：Claude Opus 5.5 (xhigh) 第 4 → 7 名",
+              "summary": "Claude Opus 5.5 (xhigh) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 4 名变为第 7 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (max) 第 5 → 8 名",
+              "summary": "GPT-6 Astra (max) 在 Artificial Analysis Intelligence Index 中下降 3 位，由第 5 名变为第 8 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            },
+            {
+              "text": "排名下降：GPT-6 Astra (xhigh) 第 6 → 10 名",
+              "summary": "GPT-6 Astra (xhigh) 在 Artificial Analysis Intelligence Index 中下降 4 位，由第 6 名变为第 10 名。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "Artificial Analysis",
+                  "url": "https://artificialanalysis.ai/leaderboards/models/"
+                }
+              ]
+            }
+          ],
+          "note": "与上一份快照相比发现 14 项变化；当前榜首为 Claude Fable 5.2 (max)（65 分）。"
+        }
+      ],
+      "rich": true,
+      "label": "第一百零一期·自动恢复版",
+      "issue": 110,
+      "seq": 1,
+      "slug": "2026-11-10--1",
+      "weekday": "周二"
     }
   ]
 }

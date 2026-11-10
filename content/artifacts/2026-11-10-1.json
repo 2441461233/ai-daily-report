@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-10 星期二",
+  "label": "第一百零一期·自动恢复版",
+  "generatedAt": "2026-11-10T12:21:36+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Guillermo Rauch 公开动态：Built a physical simulation of a record player with WebGL2 and Web Audio. It's *shock…",
+          "summary": "自动恢复版一手信号，发布于 11/09 05:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2119536313712230802"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：A good lesson in AI is that you need to check back in on the latest with every 3 to 6…",
+          "summary": "自动恢复版一手信号，发布于 11/09 02:50；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2119502716770902234"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Ryo Lu 公开动态：when we can do anything, do we still know what we want? the full talk from @aiDotEngi…",
+          "summary": "自动恢复版一手信号，发布于 11/09 08:24；保留原文措辞，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Ryo Lu（单一来源）",
+              "url": "https://x.com/ryolu_/status/2119586846657454152"
+            }
+          ]
+        },
+        {
+          "headline": "Zara Zhang 公开动态：I’ve almost stopped using the term “vibe coding” because there’s a negative connotati…",
+          "summary": "自动恢复版一手信号，发布于 11/09 08:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Zara Zhang（单一来源）",
+              "url": "https://x.com/zarazhangrui/status/2119592080318341128"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：You're really going to want your own software factory",
+          "summary": "自动恢复版一手信号，发布于 11/09 10:18；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2119615647592395037"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：This affair is going to destroy billions in shareholder value isn’t it",
+          "summary": "自动恢复版一手信号，发布于 11/09 13:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2119657833516171384"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Matt Turck 公开动态：Lol not Elon now, after nailing the Tucker Carlson impersonation 😂Absolutely epic run…",
+          "summary": "自动恢复版一手信号，发布于 11/08 23:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Matt Turck（单一来源）",
+              "url": "https://x.com/mattturck/status/2119457959625498698"
+            }
+          ]
+        },
+        {
+          "headline": "Garry Tan 公开动态：My gstack-evals project took a look at this Jev Engineering article and tried to repl…",
+          "summary": "自动恢复版一手信号，发布于 11/09 10:52；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Garry Tan（单一来源）",
+              "url": "https://x.com/garrytan/status/2119624260675350605"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Aaron Levie 公开动态：We’re moving from an era of AI where the output comes roughly at the rate that you ca…",
+          "summary": "自动恢复版一手信号，发布于 11/09 08:44；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2119592025440092192"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：Anecdotally, I think cheating is far more common in Asia. Plenty of guys who have the…",
+          "summary": "自动恢复版一手信号，发布于 11/09 06:24；保留原文措辞，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2119556651636441416"
+            }
+          ]
+        },
+        {
+          "headline": "Nan Yu 公开动态：Software got a lot easier if you know what you wanna build, and a lot harder if you d…",
+          "summary": "自动恢复版一手信号，发布于 11/09 00:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Nan Yu（单一来源）",
+              "url": "https://x.com/thenanyu/status/2119462224721002560"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
