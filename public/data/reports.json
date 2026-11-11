@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-10T12:21:36+08:00",
-  "count": 110,
+  "generatedAt": "2026-11-11T10:17:33+08:00",
+  "count": 111,
   "reports": [
     {
       "date": "2026-07-28",
@@ -23465,6 +23465,171 @@
       "seq": 1,
       "slug": "2026-11-10--1",
       "weekday": "周二"
+    },
+    {
+      "date": "2026-11-11",
+      "generatedAt": "2026-11-11T10:17:33+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Dan Shipper 公开动态：BREAKING: @AnthropicAI just dropped Claude Fable 5.2. It’s a paradigm-shifting model…",
+              "summary": "自动恢复版一手信号，发布于 11/10 03:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Dan Shipper",
+                  "url": "https://x.com/danshipper/status/2119869228207546638"
+                }
+              ]
+            },
+            {
+              "text": "Aaron Levie 公开动态：It turns out the advancements we’re getting in coding and computer use, combined with…",
+              "summary": "自动恢复版一手信号，发布于 11/10 10:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aaron Levie",
+                  "url": "https://x.com/levie/status/2119987129204047894"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Boris Cherny 公开动态：We wanted to do more for the people who’ve been with us the longest. So with Fable 5…",
+              "summary": "自动恢复版一手信号，发布于 11/10 03:21；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2119873095129550880"
+                }
+              ]
+            },
+            {
+              "text": "Alex Albert 公开动态：btw robotics will fall to the bitter lesson too",
+              "summary": "自动恢复版一手信号，发布于 11/10 03:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Alex Albert",
+                  "url": "https://x.com/alexalbert__/status/2119869925288558799"
+                }
+              ]
+            },
+            {
+              "text": "Alex Albert 公开动态：I gave Fable 5.2 a PDF of one of Leonardo da Vinci’s 500-year-old notebooks and it ma…",
+              "summary": "自动恢复版一手信号，发布于 11/10 06:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Alex Albert",
+                  "url": "https://x.com/alexalbert__/status/2119916954337349737"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Dots can now control many machines in addition to its own little cloud computer that…",
+              "summary": "自动恢复版一手信号，发布于 11/10 13:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2120021043876106429"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Alex Albert 公开动态：Every time we have a new model, I run the same simple prompt on all my projects: \"Rea…",
+              "summary": "自动恢复版一手信号，发布于 11/10 04:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Alex Albert",
+                  "url": "https://x.com/alexalbert__/status/2119884951550386671"
+                }
+              ]
+            },
+            {
+              "text": "Guillermo Rauch 公开动态：At @vercel we got to test this model before release. Best way to summarize it: astoni…",
+              "summary": "自动恢复版一手信号，发布于 11/10 03:42；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2119878364794372162"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：So bullish on MCP. Its utility exceeds the \"M\" part: even AI aside, it'll be a civili…",
+              "summary": "自动恢复版一手信号，发布于 11/10 04:33；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2119891138450755670"
+                }
+              ]
+            },
+            {
+              "text": "Boris Cherny 公开动态：Pro users get one reset, and Max, Ultra, and Team Premium get up to three, depending…",
+              "summary": "自动恢复版一手信号，发布于 11/10 04:32；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Boris Cherny",
+                  "url": "https://x.com/bcherny/status/2119890820186976763"
+                }
+              ]
+            },
+            {
+              "text": "Swyx 公开动态：bro just proved fermat's last theorem AS A DEMO for the fable 5.2 launch and casually…",
+              "summary": "自动恢复版一手信号，发布于 11/10 07:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Swyx",
+                  "url": "https://x.com/swyx/status/2119935240202539147"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第一百零二期·自动恢复版",
+      "issue": 111,
+      "seq": 1,
+      "slug": "2026-11-11--1",
+      "weekday": "周三"
     }
   ]
 }
