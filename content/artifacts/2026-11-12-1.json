@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-12 星期四",
+  "label": "第一百零三期·自动恢复版",
+  "generatedAt": "2026-11-12T11:24:48+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Claude Data (formerly Dashboards) is now generally available on paid plans. Along wit…",
+          "summary": "自动恢复版一手信号，发布于 11/11 01:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2120206372478566799"
+            }
+          ]
+        },
+        {
+          "headline": "Dan Shipper 公开动态：BREAKING: @Google just dropped Gemini 4 Carbon. It’s a much better coder than Argon—b…",
+          "summary": "自动恢复版一手信号，发布于 11/11 00:11；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Dan Shipper（单一来源）",
+              "url": "https://x.com/danshipper/status/2120187507396530309"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Also new: with interactive connectors, you can now open the full version of a tool in…",
+          "summary": "自动恢复版一手信号，发布于 11/11 01:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2120206375137484875"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：These updates are starting to roll out today, so you may not see them all right away…",
+          "summary": "自动恢复版一手信号，发布于 11/11 01:26；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2120206379315261702"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Rust is a superb language and ecosystem, especially given it was invented pre agentic…",
+          "summary": "自动恢复版一手信号，发布于 11/11 10:06；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2120337388178379178"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Yang 公开动态：I don't really care about the stock price but if @AnthropicAI can accelerate cures of…",
+          "summary": "自动恢复版一手信号，发布于 11/11 08:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Yang（单一来源）",
+              "url": "https://x.com/petergyang/status/2120320377163501817"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thariq 公开动态：we need fewer one shot demos and more tools that show how you can collaborate with mo…",
+          "summary": "自动恢复版一手信号，发布于 11/11 02:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thariq（单一来源）",
+              "url": "https://x.com/trq212/status/2120223476279869875"
+            }
+          ]
+        },
+        {
+          "headline": "Peter Steinberger 公开动态：\"When the company ran diagnostics on about 700 systems, it found 10,500 vulnerabiliti…",
+          "summary": "自动恢复版一手信号，发布于 11/11 02:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Peter Steinberger（单一来源）",
+              "url": "https://x.com/steipete/status/2120228665946710248"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：How many of you have a small business?",
+          "summary": "自动恢复版一手信号，发布于 11/11 05:28；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2120267268517249036"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：Vercel Security Review, less than 1 week since launch: ✓ 𝟱𝟳,𝟴𝟵𝟳 vulnerabilities ident…",
+          "summary": "自动恢复版一手信号，发布于 11/11 00:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2120188488628977819"
+            }
+          ]
+        },
+        {
+          "headline": "Aaron Levie 公开动态：Agents are going to work with enterprise files 100X more than people do today. This i…",
+          "summary": "自动恢复版一手信号，发布于 11/11 05:04；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aaron Levie（单一来源）",
+              "url": "https://x.com/levie/status/2120261416733036905"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
