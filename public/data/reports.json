@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-12T11:24:48+08:00",
-  "count": 112,
+  "generatedAt": "2026-11-13T10:57:36+08:00",
+  "count": 113,
   "reports": [
     {
       "date": "2026-07-28",
@@ -23795,6 +23795,171 @@
       "seq": 1,
       "slug": "2026-11-12--1",
       "weekday": "周四"
+    },
+    {
+      "date": "2026-11-13",
+      "generatedAt": "2026-11-13T10:57:36+08:00",
+      "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+      "sections": [
+        {
+          "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+          "items": [
+            {
+              "text": "Claude 公开动态：Mariko Mori has pushed the boundaries of art for three decades. For her retrospective…",
+              "summary": "自动恢复版一手信号，发布于 11/12 08:05；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Claude",
+                  "url": "https://x.com/claudeai/status/2120669165316915259"
+                }
+              ]
+            },
+            {
+              "text": "Aditya Agarwal 公开动态：There are basically two kinds of companies to build right now. 1. Diffusion of AI Thi…",
+              "summary": "自动恢复版一手信号，发布于 11/12 02:03；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Aditya Agarwal",
+                  "url": "https://x.com/adityaag/status/2120578134177464356"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🌍 海外观察",
+          "items": [
+            {
+              "text": "Thibault Sottiaux 公开动态：It’s been a while without resets. Maybe I should come back out of the basement",
+              "summary": "自动恢复版一手信号，发布于 11/11 14:55；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2120410006273380750"
+                }
+              ]
+            },
+            {
+              "text": "Thibault Sottiaux 公开动态：Thursday is feeling codexy to me. Perhaps also a good time for a banked reset.",
+              "summary": "自动恢复版一手信号，发布于 11/11 14:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thibault Sottiaux",
+                  "url": "https://x.com/thsottiaux/status/2120410480204525936"
+                }
+              ]
+            },
+            {
+              "text": "Google Labs 公开动态：🚨 NEW LABS EXPERIMENT 🚨 Introducing Tabletop 🎲— our newest experiment built to get yo…",
+              "summary": "自动恢复版一手信号，发布于 11/12 00:08；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Google Labs",
+                  "url": "https://x.com/GoogleLabs/status/2120549258692882702"
+                }
+              ]
+            },
+            {
+              "text": "Thariq 公开动态：Swyx gave me the “closing keynote” of AIE code, aka everyone is tired or flying out s…",
+              "summary": "自动恢复版一手信号，发布于 11/12 04:53；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Thariq",
+                  "url": "https://x.com/trq212/status/2120620900785820143"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "📄 论文与技术前沿",
+          "items": [
+            {
+              "text": "Amjad Masad 公开动态：Why are old stories that were not even covered up all that well become sudden interna…",
+              "summary": "自动恢复版一手信号，发布于 11/12 08:15；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Amjad Masad",
+                  "url": "https://x.com/amasad/status/2120671838909194695"
+                }
+              ]
+            },
+            {
+              "text": "Josh Woodward 公开动态：We love this and build with it regularly ♥️ It makes our apps faster and smarter",
+              "summary": "自动恢复版一手信号，发布于 11/12 05:01；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Josh Woodward",
+                  "url": "https://x.com/joshwoodward/status/2120622974277734716"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "🚀 AI 一人公司（OPC）",
+          "items": [
+            {
+              "text": "Guillermo Rauch 公开动态：PSA: creating wonderful products still requires extraordinary amounts of human focus…",
+              "summary": "自动恢复版一手信号，发布于 11/12 03:34；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Guillermo Rauch",
+                  "url": "https://x.com/rauchg/status/2120601000176439478"
+                }
+              ]
+            },
+            {
+              "text": "Peter Yang 公开动态：Man I am so disappointed in Jensen. So many people looked up to him including me. The…",
+              "summary": "自动恢复版一手信号，发布于 11/12 06:45；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Peter Yang",
+                  "url": "https://x.com/petergyang/status/2120649149389627493"
+                }
+              ]
+            },
+            {
+              "text": "Google Labs 公开动态：Want to see how our team actually uses Tabletop? 👀 Founding engineer @romannurik gave…",
+              "summary": "自动恢复版一手信号，发布于 11/12 03:12；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+              "expanded": false,
+              "flag": true,
+              "sources": [
+                {
+                  "name": "X / Google Labs",
+                  "url": "https://x.com/GoogleLabs/status/2120595442782368240"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rich": true,
+      "label": "第一百零四期·自动恢复版",
+      "issue": 113,
+      "seq": 1,
+      "slug": "2026-11-13--1",
+      "weekday": "周五"
     }
   ]
 }
