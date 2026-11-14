@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-14 星期六",
+  "label": "第一百零五期·自动恢复版",
+  "generatedAt": "2026-11-14T10:42:58+08:00",
+  "fallback": true,
+  "oneLiner": "📌 今日一句话：模型稿未通过生产门时先保住可核验的一手信号，本期为不调用付费 API 的自动恢复版。",
+  "sections": [
+    {
+      "title": "🎬 AI 创作 · 视频/音乐/媒体娱乐",
+      "items": [
+        {
+          "headline": "Claude 公开动态：Claude Meetings is starting with Google Meet, with support for other video conferenci…",
+          "summary": "自动恢复版一手信号，发布于 11/13 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2120974000746582357"
+            }
+          ]
+        },
+        {
+          "headline": "Guillermo Rauch 公开动态：What happens to frameworks in the agents era? to component libraries? to @shadcn? The…",
+          "summary": "自动恢复版一手信号，发布于 11/13 03:47；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Guillermo Rauch（单一来源）",
+              "url": "https://x.com/rauchg/status/2120966768483262648"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🌍 海外观察",
+      "items": [
+        {
+          "headline": "Amjad Masad 公开动态：Makes total sense that congressman leading the inquiry into Jensen’s alleged foreign…",
+          "summary": "自动恢复版一手信号，发布于 11/13 11:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Amjad Masad（单一来源）",
+              "url": "https://x.com/amasad/status/2121081862659739870"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Claude takes the notes, too. After the call, the notes, action items, transcript, and…",
+          "summary": "自动恢复版一手信号，发布于 11/13 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2120973999295643679"
+            }
+          ]
+        },
+        {
+          "headline": "Josh Woodward 公开动态：Introducing Gemini 4 Hydrogen, cutting-edge intelligence for everyone! Now in @Gemini…",
+          "summary": "自动恢复版一手信号，发布于 11/13 02:10；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Josh Woodward（单一来源）",
+              "url": "https://x.com/joshwoodward/status/2120942262054232392"
+            }
+          ]
+        },
+        {
+          "headline": "Aditya Agarwal 公开动态：We would not be where we are today without Jensen. It is viscerally painful to see wh…",
+          "summary": "自动恢复版一手信号，发布于 11/13 00:57；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Aditya Agarwal（单一来源）",
+              "url": "https://x.com/adityaag/status/2120924059709956201"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "📄 论文与技术前沿",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：How can codex be improved? Try not to say model.",
+          "summary": "自动恢复版一手信号，发布于 11/13 10:09；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2121062974161092792"
+            }
+          ]
+        },
+        {
+          "headline": "Alex Albert 公开动态：A lot of getting good work out of Claude now is just finding the context it’s missing…",
+          "summary": "自动恢复版一手信号，发布于 11/13 04:54；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Alex Albert（单一来源）",
+              "url": "https://x.com/alexalbert__/status/2120983722182988206"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🚀 AI 一人公司（OPC）",
+      "items": [
+        {
+          "headline": "Thibault Sottiaux 公开动态：We shipped some good updates to dots today and the banked reset has been activated an…",
+          "summary": "自动恢复版一手信号，发布于 11/13 05:59；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2120999993079451919"
+            }
+          ]
+        },
+        {
+          "headline": "Thibault Sottiaux 公开动态：We announced new tools we're developing for cybersecurity today across automated patc…",
+          "summary": "自动恢复版一手信号，发布于 11/13 08:24；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Thibault Sottiaux（单一来源）",
+              "url": "https://x.com/thsottiaux/status/2121036562058400200"
+            }
+          ]
+        },
+        {
+          "headline": "Claude 公开动态：Claude joins as a visible participant. Ask it a question out loud or in chat, or have…",
+          "summary": "自动恢复版一手信号，发布于 11/13 04:16；原文为英文，未调用付费模型做二次改写。请通过原文链接核对完整上下文。",
+          "expanded": false,
+          "sources": [
+            {
+              "name": "X / Claude（单一来源）",
+              "url": "https://x.com/claudeai/status/2120973996304830859"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
